@@ -164,6 +164,10 @@
   </url>
   
   <url>
+    <loc>https://microsoft.github.io/MLOS/source/Mlos.Notebooks/RustcFlagOptimizationDemo/</loc>
+  </url>
+  
+  <url>
     <loc>https://microsoft.github.io/MLOS/source/Mlos.Python/Docker/</loc>
   </url>
   
