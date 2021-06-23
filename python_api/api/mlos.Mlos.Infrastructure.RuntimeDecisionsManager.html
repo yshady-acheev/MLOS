@@ -128,6 +128,7 @@
 <li class="toctree-l3"><a class="reference internal" href="mlos.Grpc.OptimizerService_pb2_grpc.html">mlos.Grpc.OptimizerService_pb2_grpc</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mlos.Grpc.OptimizerServicesServer.html">mlos.Grpc.OptimizerServicesServer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mlos.Grpc.unit_tests.html">mlos.Grpc.unit_tests</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="mlos.Grpc.unit_tests.TestOptimizerMonitoringServiceEncoderDecoder.html">mlos.Grpc.unit_tests.TestOptimizerMonitoringServiceEncoderDecoder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Grpc.unit_tests.TestOptimizerServiceEncoderDecoder.html">mlos.Grpc.unit_tests.TestOptimizerServiceEncoderDecoder</a></li>
 </ul>
 </li>
@@ -421,7 +422,7 @@
 <span id="mlos-mlos-infrastructure-runtimedecisionsmanager"></span><h1>mlos.Mlos.Infrastructure.RuntimeDecisionsManager<a class="headerlink" href="#module-mlos.Mlos.Infrastructure.RuntimeDecisionsManager" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="mlos.Mlos.Infrastructure.RuntimeDecisionsManager.RuntimeDecisionsManager">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">mlos.Mlos.Infrastructure.RuntimeDecisionsManager.</span></span><span class="sig-name descname"><span class="pre">RuntimeDecisionsManager</span></span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/8f79bfa/source/Mlos.Python/mlos/Mlos/Infrastructure/RuntimeDecisionsManager.py#L5"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.Infrastructure.RuntimeDecisionsManager.RuntimeDecisionsManager" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">mlos.Mlos.Infrastructure.RuntimeDecisionsManager.</span></span><span class="sig-name descname"><span class="pre">RuntimeDecisionsManager</span></span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/0f55811/source/Mlos.Python/mlos/Mlos/Infrastructure/RuntimeDecisionsManager.py#L5"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.Infrastructure.RuntimeDecisionsManager.RuntimeDecisionsManager" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Binds decision makers with decision seekers.</p>
 <p>The job of the RuntimeDecisionManager is to:
@@ -442,12 +443,12 @@
 to the function we want to invoke.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos.Mlos.Infrastructure.RuntimeDecisionsManager.RuntimeDecisionsManager.add_runtime_decision_maker">
-<span class="sig-name descname"><span class="pre">add_runtime_decision_maker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">runtime_decision_maker</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/8f79bfa/source/Mlos.Python/mlos/Mlos/Infrastructure/RuntimeDecisionsManager.py#L25"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.Infrastructure.RuntimeDecisionsManager.RuntimeDecisionsManager.add_runtime_decision_maker" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">add_runtime_decision_maker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">runtime_decision_maker</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/0f55811/source/Mlos.Python/mlos/Mlos/Infrastructure/RuntimeDecisionsManager.py#L25"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.Infrastructure.RuntimeDecisionsManager.RuntimeDecisionsManager.add_runtime_decision_maker" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos.Mlos.Infrastructure.RuntimeDecisionsManager.RuntimeDecisionsManager.make_runtime_decision">
-<span class="sig-name descname"><span class="pre">make_runtime_decision</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mlos_object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_decision_context</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/8f79bfa/source/Mlos.Python/mlos/Mlos/Infrastructure/RuntimeDecisionsManager.py#L36"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.Infrastructure.RuntimeDecisionsManager.RuntimeDecisionsManager.make_runtime_decision" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">make_runtime_decision</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mlos_object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_decision_context</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/0f55811/source/Mlos.Python/mlos/Mlos/Infrastructure/RuntimeDecisionsManager.py#L36"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.Infrastructure.RuntimeDecisionsManager.RuntimeDecisionsManager.make_runtime_decision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Makes a runtime decision based on the decision context.</p>
 <p>If there is a decision maker registered for a given decision (as defined by any active
 experiment), then the context, along with component type and runtime attributes is
@@ -464,7 +465,7 @@ forwarded to the MlosAgent. Otherwise the default decision is returned.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos.Mlos.Infrastructure.RuntimeDecisionsManager.RuntimeDecisionsManager.remove_runtime_decision_maker">
-<span class="sig-name descname"><span class="pre">remove_runtime_decision_maker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">runtime_decision_maker</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/8f79bfa/source/Mlos.Python/mlos/Mlos/Infrastructure/RuntimeDecisionsManager.py#L29"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.Infrastructure.RuntimeDecisionsManager.RuntimeDecisionsManager.remove_runtime_decision_maker" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">remove_runtime_decision_maker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">runtime_decision_maker</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/0f55811/source/Mlos.Python/mlos/Mlos/Infrastructure/RuntimeDecisionsManager.py#L29"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.Infrastructure.RuntimeDecisionsManager.RuntimeDecisionsManager.remove_runtime_decision_maker" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

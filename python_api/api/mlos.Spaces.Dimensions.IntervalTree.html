@@ -128,6 +128,7 @@
 <li class="toctree-l3"><a class="reference internal" href="mlos.Grpc.OptimizerService_pb2_grpc.html">mlos.Grpc.OptimizerService_pb2_grpc</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mlos.Grpc.OptimizerServicesServer.html">mlos.Grpc.OptimizerServicesServer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mlos.Grpc.unit_tests.html">mlos.Grpc.unit_tests</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="mlos.Grpc.unit_tests.TestOptimizerMonitoringServiceEncoderDecoder.html">mlos.Grpc.unit_tests.TestOptimizerMonitoringServiceEncoderDecoder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Grpc.unit_tests.TestOptimizerServiceEncoderDecoder.html">mlos.Grpc.unit_tests.TestOptimizerServiceEncoderDecoder</a></li>
 </ul>
 </li>
@@ -421,7 +422,7 @@
 <span id="mlos-spaces-dimensions-intervaltree"></span><h1>mlos.Spaces.Dimensions.IntervalTree<a class="headerlink" href="#module-mlos.Spaces.Dimensions.IntervalTree" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="mlos.Spaces.Dimensions.IntervalTree.IntervalTree">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">mlos.Spaces.Dimensions.IntervalTree.</span></span><span class="sig-name descname"><span class="pre">IntervalTree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunks_type</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/8f79bfa/source/Mlos.Python/mlos/Spaces/Dimensions/IntervalTree.py#L8"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Spaces.Dimensions.IntervalTree.IntervalTree" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">mlos.Spaces.Dimensions.IntervalTree.</span></span><span class="sig-name descname"><span class="pre">IntervalTree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunks_type</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/0f55811/source/Mlos.Python/mlos/Spaces/Dimensions/IntervalTree.py#L8"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Spaces.Dimensions.IntervalTree.IntervalTree" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Implements efficient algorithms on a sorted interval tree.</p>
 <p>The IntervalTree is a tree of Intervals (Dimensions) constructed in such a way that
@@ -436,22 +437,22 @@
 </div></blockquote>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos.Spaces.Dimensions.IntervalTree.IntervalTree.add">
-<span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chunk</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/8f79bfa/source/Mlos.Python/mlos/Spaces/Dimensions/IntervalTree.py#L48"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Spaces.Dimensions.IntervalTree.IntervalTree.add" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chunk</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/0f55811/source/Mlos.Python/mlos/Spaces/Dimensions/IntervalTree.py#L48"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Spaces.Dimensions.IntervalTree.IntervalTree.add" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos.Spaces.Dimensions.IntervalTree.IntervalTree.copy">
-<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/8f79bfa/source/Mlos.Python/mlos/Spaces/Dimensions/IntervalTree.py#L24"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Spaces.Dimensions.IntervalTree.IntervalTree.copy" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/0f55811/source/Mlos.Python/mlos/Spaces/Dimensions/IntervalTree.py#L24"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Spaces.Dimensions.IntervalTree.IntervalTree.copy" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos.Spaces.Dimensions.IntervalTree.IntervalTree.enumerate">
-<span class="sig-name descname"><span class="pre">enumerate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/8f79bfa/source/Mlos.Python/mlos/Spaces/Dimensions/IntervalTree.py#L45"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Spaces.Dimensions.IntervalTree.IntervalTree.enumerate" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">enumerate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/0f55811/source/Mlos.Python/mlos/Spaces/Dimensions/IntervalTree.py#L45"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Spaces.Dimensions.IntervalTree.IntervalTree.enumerate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos.Spaces.Dimensions.IntervalTree.IntervalTree.pop_adjacent_chunks">
-<span class="sig-name descname"><span class="pre">pop_adjacent_chunks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chunk</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/8f79bfa/source/Mlos.Python/mlos/Spaces/Dimensions/IntervalTree.py#L95"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Spaces.Dimensions.IntervalTree.IntervalTree.pop_adjacent_chunks" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">pop_adjacent_chunks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chunk</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/0f55811/source/Mlos.Python/mlos/Spaces/Dimensions/IntervalTree.py#L95"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Spaces.Dimensions.IntervalTree.IntervalTree.pop_adjacent_chunks" title="Permalink to this definition">¶</a></dt>
 <dd><p>Finds, removes and returns an iterable of chunks adjacent to chunk.</p>
 <p>For example: if our tree contains [0, 1], (2, 4) and we call pop_adjacent_chunks((1, 2]) then this function
 should return both nodes.</p>
@@ -459,7 +460,7 @@ should return both nodes.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos.Spaces.Dimensions.IntervalTree.IntervalTree.pop_overlapping_chunks">
-<span class="sig-name descname"><span class="pre">pop_overlapping_chunks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chunk</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/8f79bfa/source/Mlos.Python/mlos/Spaces/Dimensions/IntervalTree.py#L76"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Spaces.Dimensions.IntervalTree.IntervalTree.pop_overlapping_chunks" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">pop_overlapping_chunks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chunk</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/0f55811/source/Mlos.Python/mlos/Spaces/Dimensions/IntervalTree.py#L76"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Spaces.Dimensions.IntervalTree.IntervalTree.pop_overlapping_chunks" title="Permalink to this definition">¶</a></dt>
 <dd><p>Finds, removes, and returns an iterable of chunks overlapping with chunk.</p>
 <p>The purpose of this function is to make it easier to maintain the invariant
 that no two chunks in the IntervalTree overlap.</p>
@@ -467,7 +468,7 @@ that no two chunks in the IntervalTree overlap.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos.Spaces.Dimensions.IntervalTree.IntervalTree.push">
-<span class="sig-name descname"><span class="pre">push</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chunk</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/8f79bfa/source/Mlos.Python/mlos/Spaces/Dimensions/IntervalTree.py#L56"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Spaces.Dimensions.IntervalTree.IntervalTree.push" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">push</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chunk</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/0f55811/source/Mlos.Python/mlos/Spaces/Dimensions/IntervalTree.py#L56"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Spaces.Dimensions.IntervalTree.IntervalTree.push" title="Permalink to this definition">¶</a></dt>
 <dd><p>Push the chunk onto the tree. Use with caution.</p>
 <p>Users of this method have to be certain that the chunk does not overlap nor is contiguous with any other chunks.
 Otherwise, some of the invariants might be violated and the tree will become corrupt.</p>
@@ -475,7 +476,7 @@ Otherwise, some of the invariants might be violated and the tree will become cor
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos.Spaces.Dimensions.IntervalTree.IntervalTree.remove">
-<span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chunk</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/8f79bfa/source/Mlos.Python/mlos/Spaces/Dimensions/IntervalTree.py#L64"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Spaces.Dimensions.IntervalTree.IntervalTree.remove" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chunk</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/0f55811/source/Mlos.Python/mlos/Spaces/Dimensions/IntervalTree.py#L64"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Spaces.Dimensions.IntervalTree.IntervalTree.remove" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
