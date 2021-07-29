@@ -24,6 +24,7 @@ mlos.Optimizers.RegressionModels
    mlos.Optimizers.RegressionModels.MultiObjectivePrediction
    mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModel
    mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModelFitState
+   mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel
    mlos.Optimizers.RegressionModels.Prediction
    mlos.Optimizers.RegressionModels.RegressionEnhancedRandomForestModel
    mlos.Optimizers.RegressionModels.RegressionModel

@@ -258,6 +258,7 @@
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectivePrediction.html">mlos.Optimizers.RegressionModels.MultiObjectivePrediction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModel.html">mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModel</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModelFitState.html">mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModelFitState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel.html">mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.Prediction.html">mlos.Optimizers.RegressionModels.Prediction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.RegressionEnhancedRandomForestModel.html">mlos.Optimizers.RegressionModels.RegressionEnhancedRandomForestModel</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.RegressionModel.html">mlos.Optimizers.RegressionModels.RegressionModel</a></li>
@@ -313,10 +314,6 @@
 <li class="toctree-l4"><a class="reference internal" href="mlos.Spaces.HypergridAdapters.HierarchicalToFlatHypergridAdapter.html">mlos.Spaces.HypergridAdapters.HierarchicalToFlatHypergridAdapter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Spaces.HypergridAdapters.HypergridAdapter.html">mlos.Spaces.HypergridAdapters.HypergridAdapter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Spaces.HypergridAdapters.unit_tests.html">mlos.Spaces.HypergridAdapters.unit_tests</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="mlos.Spaces.stress_tests.html">mlos.Spaces.stress_tests</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="mlos.Spaces.stress_tests.StressTestIntervalTree.html">mlos.Spaces.stress_tests.StressTestIntervalTree</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="mlos.Spaces.unit_tests.html">mlos.Spaces.unit_tests</a><ul>
@@ -420,12 +417,12 @@
 <span id="mlos-mlosoptimizationservices-distributable"></span><h1>mlos.MlosOptimizationServices.Distributable<a class="headerlink" href="#module-mlos.MlosOptimizationServices.Distributable" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="mlos.MlosOptimizationServices.Distributable.Distributable">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">mlos.MlosOptimizationServices.Distributable.</span></span><span class="sig-name descname"><span class="pre">Distributable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">execute_remotely</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/f828cf2/source/Mlos.Python/mlos/MlosOptimizationServices/Distributable.py#L42"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.MlosOptimizationServices.Distributable.Distributable" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">mlos.MlosOptimizationServices.Distributable.</span></span><span class="sig-name descname"><span class="pre">Distributable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">execute_remotely</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/9065116/source/Mlos.Python/mlos/MlosOptimizationServices/Distributable.py#L42"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.MlosOptimizationServices.Distributable.Distributable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Defines an interface for all classes that support remote execution.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos.MlosOptimizationServices.Distributable.Distributable.get_execution_context">
-<span class="sig-name descname"><span class="pre">get_execution_context</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/f828cf2/source/Mlos.Python/mlos/MlosOptimizationServices/Distributable.py#L52"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.MlosOptimizationServices.Distributable.Distributable.get_execution_context" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_execution_context</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/9065116/source/Mlos.Python/mlos/MlosOptimizationServices/Distributable.py#L52"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.MlosOptimizationServices.Distributable.Distributable.get_execution_context" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -435,14 +432,14 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos.MlosOptimizationServices.Distributable.Distributable.restore_from_execution_context">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">restore_from_execution_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">execution_context</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">models_database</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/f828cf2/source/Mlos.Python/mlos/MlosOptimizationServices/Distributable.py#L55"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.MlosOptimizationServices.Distributable.Distributable.restore_from_execution_context" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">restore_from_execution_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">execution_context</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">models_database</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/9065116/source/Mlos.Python/mlos/MlosOptimizationServices/Distributable.py#L55"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.MlosOptimizationServices.Distributable.Distributable.restore_from_execution_context" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="mlos.MlosOptimizationServices.Distributable.remotely_executable">
-<span class="sig-prename descclassname"><span class="pre">mlos.MlosOptimizationServices.Distributable.</span></span><span class="sig-name descname"><span class="pre">remotely_executable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout_s</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">120</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/f828cf2/source/Mlos.Python/mlos/MlosOptimizationServices/Distributable.py#L13"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.MlosOptimizationServices.Distributable.remotely_executable" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">mlos.MlosOptimizationServices.Distributable.</span></span><span class="sig-name descname"><span class="pre">remotely_executable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout_s</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">120</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/9065116/source/Mlos.Python/mlos/MlosOptimizationServices/Distributable.py#L13"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.MlosOptimizationServices.Distributable.remotely_executable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows a function to execute remotely.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>

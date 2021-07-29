@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>mlos.Spaces.stress_tests &mdash; mlos  documentation</title>
+  <title>mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel &mdash; mlos  documentation</title>
   
 
   
@@ -44,8 +44,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="mlos.Spaces.stress_tests.StressTestIntervalTree" href="mlos.Spaces.stress_tests.StressTestIntervalTree.html" />
-    <link rel="prev" title="mlos.Spaces.HypergridAdapters.unit_tests.TestContinuousToPolynomialBasisHypergridAdapter" href="mlos.Spaces.HypergridAdapters.unit_tests.TestContinuousToPolynomialBasisHypergridAdapter.html" /> 
+    <link rel="next" title="mlos.Optimizers.RegressionModels.Prediction" href="mlos.Optimizers.RegressionModels.Prediction.html" />
+    <link rel="prev" title="mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModelFitState" href="mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModelFitState.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -229,7 +229,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="mlos.Optimizers.html">mlos.Optimizers</a><ul>
+<li class="toctree-l2 current"><a class="reference internal" href="mlos.Optimizers.html">mlos.Optimizers</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="mlos.Optimizers.BayesianOptimizer.html">mlos.Optimizers.BayesianOptimizer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mlos.Optimizers.BayesianOptimizerConfigStore.html">mlos.Optimizers.BayesianOptimizerConfigStore</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mlos.Optimizers.BayesianOptimizerConvergenceState.html">mlos.Optimizers.BayesianOptimizerConvergenceState</a></li>
@@ -244,7 +244,7 @@
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.ExperimentDesigner.UtilityFunctions.html">mlos.Optimizers.ExperimentDesigner.UtilityFunctions</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="mlos.Optimizers.RegressionModels.html">mlos.Optimizers.RegressionModels</a><ul>
+<li class="toctree-l3 current"><a class="reference internal" href="mlos.Optimizers.RegressionModels.html">mlos.Optimizers.RegressionModels</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.DecisionTreeConfigStore.html">mlos.Optimizers.RegressionModels.DecisionTreeConfigStore</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.DecisionTreeRegressionModel.html">mlos.Optimizers.RegressionModels.DecisionTreeRegressionModel</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.GoodnessOfFitMetrics.html">mlos.Optimizers.RegressionModels.GoodnessOfFitMetrics</a></li>
@@ -258,6 +258,7 @@
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectivePrediction.html">mlos.Optimizers.RegressionModels.MultiObjectivePrediction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModel.html">mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModel</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModelFitState.html">mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModelFitState</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.Prediction.html">mlos.Optimizers.RegressionModels.Prediction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.RegressionEnhancedRandomForestModel.html">mlos.Optimizers.RegressionModels.RegressionEnhancedRandomForestModel</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.RegressionModel.html">mlos.Optimizers.RegressionModels.RegressionModel</a></li>
@@ -280,7 +281,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="mlos.Spaces.html">mlos.Spaces</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="mlos.Spaces.html">mlos.Spaces</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="mlos.Spaces.Hypergrid.html">mlos.Spaces.Hypergrid</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mlos.Spaces.HypergridsJsonEncoderDecoder.html">mlos.Spaces.HypergridsJsonEncoderDecoder</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mlos.Spaces.Point.html">mlos.Spaces.Point</a></li>
@@ -313,10 +314,6 @@
 <li class="toctree-l4"><a class="reference internal" href="mlos.Spaces.HypergridAdapters.HierarchicalToFlatHypergridAdapter.html">mlos.Spaces.HypergridAdapters.HierarchicalToFlatHypergridAdapter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Spaces.HypergridAdapters.HypergridAdapter.html">mlos.Spaces.HypergridAdapters.HypergridAdapter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Spaces.HypergridAdapters.unit_tests.html">mlos.Spaces.HypergridAdapters.unit_tests</a></li>
-</ul>
-</li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">mlos.Spaces.stress_tests</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="mlos.Spaces.stress_tests.StressTestIntervalTree.html">mlos.Spaces.stress_tests.StressTestIntervalTree</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="mlos.Spaces.unit_tests.html">mlos.Spaces.unit_tests</a><ul>
@@ -395,15 +392,17 @@
         
           <li><a href="mlos.html">mlos</a> &raquo;</li>
         
-          <li><a href="mlos.Spaces.html">mlos.Spaces</a> &raquo;</li>
+          <li><a href="mlos.Optimizers.html">mlos.Optimizers</a> &raquo;</li>
         
-      <li>mlos.Spaces.stress_tests</li>
+          <li><a href="mlos.Optimizers.RegressionModels.html">mlos.Optimizers.RegressionModels</a> &raquo;</li>
+        
+      <li>mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/api/mlos.Spaces.stress_tests.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/api/mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -416,13 +415,41 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-mlos.Spaces.stress_tests">
-<span id="mlos-spaces-stress-tests"></span><h1>mlos.Spaces.stress_tests<a class="headerlink" href="#module-mlos.Spaces.stress_tests" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="mlos.Spaces.stress_tests.StressTestIntervalTree.html">mlos.Spaces.stress_tests.StressTestIntervalTree</a></li>
-</ul>
-</div>
+  <div class="section" id="module-mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel">
+<span id="mlos-optimizers-regressionmodels-naivemultiobjectiveregressionmodel"></span><h1>mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel<a class="headerlink" href="#module-mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel.NaiveMultiObjectiveRegressionModel">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel.</span></span><span class="sig-name descname"><span class="pre">NaiveMultiObjectiveRegressionModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_type</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.9)"><span class="pre">type</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_config</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="mlos.Spaces.Point.html#mlos.Spaces.Point.Point" title="mlos.Spaces.Point.Point"><span class="pre">mlos.Spaces.Point.Point</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_space</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="mlos.Spaces.Hypergrid.html#mlos.Spaces.Hypergrid.Hypergrid" title="mlos.Spaces.Hypergrid.Hypergrid"><span class="pre">mlos.Spaces.Hypergrid.Hypergrid</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_space</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="mlos.Spaces.Hypergrid.html#mlos.Spaces.Hypergrid.Hypergrid" title="mlos.Spaces.Hypergrid.Hypergrid"><span class="pre">mlos.Spaces.Hypergrid.Hypergrid</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/9065116/source/Mlos.Python/mlos/Optimizers/RegressionModels/NaiveMultiObjectiveRegressionModel.py#L17"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel.NaiveMultiObjectiveRegressionModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModel.html#mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModel.MultiObjectiveRegressionModel" title="mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModel.MultiObjectiveRegressionModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModel.MultiObjectiveRegressionModel</span></code></a></p>
+<p>A base class for naive multi-objective regression models.</p>
+<p>Works by simply combining multiple single objective models.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel.NaiveMultiObjectiveRegressionModel.compute_goodness_of_fit">
+<span class="sig-name descname"><span class="pre">compute_goodness_of_fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targets_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_set_type</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="mlos.Optimizers.RegressionModels.GoodnessOfFitMetrics.html#mlos.Optimizers.RegressionModels.GoodnessOfFitMetrics.DataSetType" title="mlos.Optimizers.RegressionModels.GoodnessOfFitMetrics.DataSetType"><span class="pre">mlos.Optimizers.RegressionModels.GoodnessOfFitMetrics.DataSetType</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectiveGoodnessOfFitMetrics.html#mlos.Optimizers.RegressionModels.MultiObjectiveGoodnessOfFitMetrics.MultiObjectiveGoodnessOfFitMetrics" title="mlos.Optimizers.RegressionModels.MultiObjectiveGoodnessOfFitMetrics.MultiObjectiveGoodnessOfFitMetrics"><span class="pre">mlos.Optimizers.RegressionModels.MultiObjectiveGoodnessOfFitMetrics.MultiObjectiveGoodnessOfFitMetrics</span></a></span></span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/9065116/source/Mlos.Python/mlos/Optimizers/RegressionModels/NaiveMultiObjectiveRegressionModel.py#L83"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel.NaiveMultiObjectiveRegressionModel.compute_goodness_of_fit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel.NaiveMultiObjectiveRegressionModel.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targets_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iteration_number</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a></span></span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/9065116/source/Mlos.Python/mlos/Optimizers/RegressionModels/NaiveMultiObjectiveRegressionModel.py#L56"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel.NaiveMultiObjectiveRegressionModel.fit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel.NaiveMultiObjectiveRegressionModel.fit_state">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">fit_state</span></span><em class="property"><span class="pre">:</span> <span class="pre">mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModelFitState.MultiObjectiveRegressionModelFitState</span></em><a class="headerlink" href="#mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel.NaiveMultiObjectiveRegressionModel.fit_state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel.NaiveMultiObjectiveRegressionModel.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_only_valid_rows</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectivePrediction.html#mlos.Optimizers.RegressionModels.MultiObjectivePrediction.MultiObjectivePrediction" title="mlos.Optimizers.RegressionModels.MultiObjectivePrediction.MultiObjectivePrediction"><span class="pre">mlos.Optimizers.RegressionModels.MultiObjectivePrediction.MultiObjectivePrediction</span></a></span></span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/9065116/source/Mlos.Python/mlos/Optimizers/RegressionModels/NaiveMultiObjectiveRegressionModel.py#L72"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel.NaiveMultiObjectiveRegressionModel.predict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel.NaiveMultiObjectiveRegressionModel.trained">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">trained</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel.NaiveMultiObjectiveRegressionModel.trained" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
 
 
@@ -431,8 +458,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="mlos.Spaces.stress_tests.StressTestIntervalTree.html" class="btn btn-neutral float-right" title="mlos.Spaces.stress_tests.StressTestIntervalTree" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="mlos.Spaces.HypergridAdapters.unit_tests.TestContinuousToPolynomialBasisHypergridAdapter.html" class="btn btn-neutral float-left" title="mlos.Spaces.HypergridAdapters.unit_tests.TestContinuousToPolynomialBasisHypergridAdapter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mlos.Optimizers.RegressionModels.Prediction.html" class="btn btn-neutral float-right" title="mlos.Optimizers.RegressionModels.Prediction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModelFitState.html" class="btn btn-neutral float-left" title="mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModelFitState" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

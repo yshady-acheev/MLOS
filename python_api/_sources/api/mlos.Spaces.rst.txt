@@ -22,5 +22,4 @@ mlos.Spaces
    mlos.Spaces.Configs
    mlos.Spaces.Dimensions
    mlos.Spaces.HypergridAdapters
-   mlos.Spaces.stress_tests
    mlos.Spaces.unit_tests

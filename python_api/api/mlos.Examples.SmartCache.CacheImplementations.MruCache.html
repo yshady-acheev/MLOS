@@ -258,6 +258,7 @@
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectivePrediction.html">mlos.Optimizers.RegressionModels.MultiObjectivePrediction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModel.html">mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModel</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModelFitState.html">mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModelFitState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel.html">mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.Prediction.html">mlos.Optimizers.RegressionModels.Prediction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.RegressionEnhancedRandomForestModel.html">mlos.Optimizers.RegressionModels.RegressionEnhancedRandomForestModel</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.RegressionModel.html">mlos.Optimizers.RegressionModels.RegressionModel</a></li>
@@ -313,10 +314,6 @@
 <li class="toctree-l4"><a class="reference internal" href="mlos.Spaces.HypergridAdapters.HierarchicalToFlatHypergridAdapter.html">mlos.Spaces.HypergridAdapters.HierarchicalToFlatHypergridAdapter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Spaces.HypergridAdapters.HypergridAdapter.html">mlos.Spaces.HypergridAdapters.HypergridAdapter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Spaces.HypergridAdapters.unit_tests.html">mlos.Spaces.HypergridAdapters.unit_tests</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="mlos.Spaces.stress_tests.html">mlos.Spaces.stress_tests</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="mlos.Spaces.stress_tests.StressTestIntervalTree.html">mlos.Spaces.stress_tests.StressTestIntervalTree</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="mlos.Spaces.unit_tests.html">mlos.Spaces.unit_tests</a><ul>
@@ -424,7 +421,7 @@
 <span id="mlos-examples-smartcache-cacheimplementations-mrucache"></span><h1>mlos.Examples.SmartCache.CacheImplementations.MruCache<a class="headerlink" href="#module-mlos.Examples.SmartCache.CacheImplementations.MruCache" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="mlos.Examples.SmartCache.CacheImplementations.MruCache.MruCache">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">mlos.Examples.SmartCache.CacheImplementations.MruCache.</span></span><span class="sig-name descname"><span class="pre">MruCache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/f828cf2/source/Mlos.Python/mlos/Examples/SmartCache/CacheImplementations/MruCache.py#L17"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Examples.SmartCache.CacheImplementations.MruCache.MruCache" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">mlos.Examples.SmartCache.CacheImplementations.MruCache.</span></span><span class="sig-name descname"><span class="pre">MruCache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/9065116/source/Mlos.Python/mlos/Examples/SmartCache/CacheImplementations/MruCache.py#L17"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Examples.SmartCache.CacheImplementations.MruCache.MruCache" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="mlos.Examples.SmartCache.CacheImplementations.XruCache.html#mlos.Examples.SmartCache.CacheImplementations.XruCache.XruCache" title="mlos.Examples.SmartCache.CacheImplementations.XruCache.XruCache"><code class="xref py py-class docutils literal notranslate"><span class="pre">mlos.Examples.SmartCache.CacheImplementations.XruCache.XruCache</span></code></a></p>
 <p>An implementation of a Most Recently Used (MRU) cache.</p>
 <p>Supposedly this type of cache works well in case of:
@@ -434,7 +431,7 @@
 that it will be used again (at least in case of 2).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos.Examples.SmartCache.CacheImplementations.MruCache.MruCache.evict">
-<span class="sig-name descname"><span class="pre">evict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/f828cf2/source/Mlos.Python/mlos/Examples/SmartCache/CacheImplementations/MruCache.py#L32"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Examples.SmartCache.CacheImplementations.MruCache.MruCache.evict" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">evict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/9065116/source/Mlos.Python/mlos/Examples/SmartCache/CacheImplementations/MruCache.py#L32"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Examples.SmartCache.CacheImplementations.MruCache.MruCache.evict" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

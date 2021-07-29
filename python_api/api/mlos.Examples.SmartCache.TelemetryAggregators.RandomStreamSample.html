@@ -258,6 +258,7 @@
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectivePrediction.html">mlos.Optimizers.RegressionModels.MultiObjectivePrediction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModel.html">mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModel</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModelFitState.html">mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModelFitState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel.html">mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.Prediction.html">mlos.Optimizers.RegressionModels.Prediction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.RegressionEnhancedRandomForestModel.html">mlos.Optimizers.RegressionModels.RegressionEnhancedRandomForestModel</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.RegressionModel.html">mlos.Optimizers.RegressionModels.RegressionModel</a></li>
@@ -313,10 +314,6 @@
 <li class="toctree-l4"><a class="reference internal" href="mlos.Spaces.HypergridAdapters.HierarchicalToFlatHypergridAdapter.html">mlos.Spaces.HypergridAdapters.HierarchicalToFlatHypergridAdapter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Spaces.HypergridAdapters.HypergridAdapter.html">mlos.Spaces.HypergridAdapters.HypergridAdapter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Spaces.HypergridAdapters.unit_tests.html">mlos.Spaces.HypergridAdapters.unit_tests</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="mlos.Spaces.stress_tests.html">mlos.Spaces.stress_tests</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="mlos.Spaces.stress_tests.StressTestIntervalTree.html">mlos.Spaces.stress_tests.StressTestIntervalTree</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="mlos.Spaces.unit_tests.html">mlos.Spaces.unit_tests</a><ul>
@@ -424,12 +421,12 @@
 <span id="mlos-examples-smartcache-telemetryaggregators-randomstreamsample"></span><h1>mlos.Examples.SmartCache.TelemetryAggregators.RandomStreamSample<a class="headerlink" href="#module-mlos.Examples.SmartCache.TelemetryAggregators.RandomStreamSample" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="mlos.Examples.SmartCache.TelemetryAggregators.RandomStreamSample.RandomStreamSample">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">mlos.Examples.SmartCache.TelemetryAggregators.RandomStreamSample.</span></span><span class="sig-name descname"><span class="pre">RandomStreamSample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_sample_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_number_generator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_time_horizon</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/f828cf2/source/Mlos.Python/mlos/Examples/SmartCache/TelemetryAggregators/RandomStreamSample.py#L7"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Examples.SmartCache.TelemetryAggregators.RandomStreamSample.RandomStreamSample" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">mlos.Examples.SmartCache.TelemetryAggregators.RandomStreamSample.</span></span><span class="sig-name descname"><span class="pre">RandomStreamSample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_sample_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_number_generator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_time_horizon</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/9065116/source/Mlos.Python/mlos/Examples/SmartCache/TelemetryAggregators/RandomStreamSample.py#L7"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Examples.SmartCache.TelemetryAggregators.RandomStreamSample.RandomStreamSample" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>This class represets a random sample of elements obtained from a stream of unknown length.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos.Examples.SmartCache.TelemetryAggregators.RandomStreamSample.RandomStreamSample.observe">
-<span class="sig-name descname"><span class="pre">observe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/f828cf2/source/Mlos.Python/mlos/Examples/SmartCache/TelemetryAggregators/RandomStreamSample.py#L23"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Examples.SmartCache.TelemetryAggregators.RandomStreamSample.RandomStreamSample.observe" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">observe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/9065116/source/Mlos.Python/mlos/Examples/SmartCache/TelemetryAggregators/RandomStreamSample.py#L23"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Examples.SmartCache.TelemetryAggregators.RandomStreamSample.RandomStreamSample.observe" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
