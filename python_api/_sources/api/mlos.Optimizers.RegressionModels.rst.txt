@@ -26,10 +26,10 @@ mlos.Optimizers.RegressionModels
    mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModelFitState
    mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel
    mlos.Optimizers.RegressionModels.Prediction
+   mlos.Optimizers.RegressionModels.RegressionEnhancedRandomForestConfigStore
    mlos.Optimizers.RegressionModels.RegressionEnhancedRandomForestModel
    mlos.Optimizers.RegressionModels.RegressionModel
    mlos.Optimizers.RegressionModels.RegressionModelFitState
-   mlos.Optimizers.RegressionModels.SklearnLassoRegressionModelConfig
    mlos.Optimizers.RegressionModels.SklearnRandomForestRegressionModelConfig
    mlos.Optimizers.RegressionModels.SklearnRidgeRegressionModelConfig
 

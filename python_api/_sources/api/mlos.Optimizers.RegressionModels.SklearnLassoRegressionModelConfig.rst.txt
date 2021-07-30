@@ -1,7 +1,0 @@
-mlos.Optimizers.RegressionModels.SklearnLassoRegressionModelConfig
-==================================================================
-
-.. automodule:: mlos.Optimizers.RegressionModels.SklearnLassoRegressionModelConfig
-   :members:
-   :undoc-members:
-   :show-inheritance:
