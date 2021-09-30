@@ -15,5 +15,7 @@ mlos.Optimizers.RegressionModels.unit\_tests
    mlos.Optimizers.RegressionModels.unit_tests.TestHomogeneousRandomForestRegressionModel
    mlos.Optimizers.RegressionModels.unit_tests.TestLassoCrossValidatedRegressionModel
    mlos.Optimizers.RegressionModels.unit_tests.TestMultiObjectiveHomogeneousRandomForest
+   mlos.Optimizers.RegressionModels.unit_tests.TestMultiObjectiveLassoCrossValidated
+   mlos.Optimizers.RegressionModels.unit_tests.TestMultiObjectiveRegressionEnhancedRandomForest
    mlos.Optimizers.RegressionModels.unit_tests.TestPrediction
    mlos.Optimizers.RegressionModels.unit_tests.TestRegressionEnhancedRandomForestModel

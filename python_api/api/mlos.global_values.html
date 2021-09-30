@@ -204,7 +204,9 @@
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.LassoCrossValidatedRegressionModel.html">mlos.Optimizers.RegressionModels.LassoCrossValidatedRegressionModel</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectiveGoodnessOfFitMetrics.html">mlos.Optimizers.RegressionModels.MultiObjectiveGoodnessOfFitMetrics</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectiveHomogeneousRandomForest.html">mlos.Optimizers.RegressionModels.MultiObjectiveHomogeneousRandomForest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectiveLassoCrossValidated.html">mlos.Optimizers.RegressionModels.MultiObjectiveLassoCrossValidated</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectivePrediction.html">mlos.Optimizers.RegressionModels.MultiObjectivePrediction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectiveRegressionEnhancedRandomForest.html">mlos.Optimizers.RegressionModels.MultiObjectiveRegressionEnhancedRandomForest</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModel.html">mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModel</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModelFitState.html">mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModelFitState</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel.html">mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel</a></li>
@@ -322,7 +324,7 @@
 <span id="mlos-global-values"></span><h1>mlos.global_values<a class="headerlink" href="#module-mlos.global_values" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="mlos.global_values.declare_singletons">
-<span class="sig-prename descclassname"><span class="pre">mlos.global_values.</span></span><span class="sig-name descname"><span class="pre">declare_singletons</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/bb9d09d/source/Mlos.Python/mlos/global_values.py#L9"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.global_values.declare_singletons" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">mlos.global_values.</span></span><span class="sig-name descname"><span class="pre">declare_singletons</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/global_values.py#L9"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.global_values.declare_singletons" title="Permalink to this definition">¶</a></dt>
 <dd><p>This is a workaround to overcome Python’s default ‘import’ behavior.</p>
 <p>What one would expect is to simply declare a single global value in this file like ml_model_services_proxy
 initialize it to a singleton class and import it into each file.</p>
@@ -355,12 +357,12 @@ import global_values</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="mlos.global_values.deserialize_from_bytes_string">
-<span class="sig-prename descclassname"><span class="pre">mlos.global_values.</span></span><span class="sig-name descname"><span class="pre">deserialize_from_bytes_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bytes_string</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/bb9d09d/source/Mlos.Python/mlos/global_values.py#L62"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.global_values.deserialize_from_bytes_string" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">mlos.global_values.</span></span><span class="sig-name descname"><span class="pre">deserialize_from_bytes_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bytes_string</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/global_values.py#L62"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.global_values.deserialize_from_bytes_string" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="mlos.global_values.serialize_to_bytes_string">
-<span class="sig-prename descclassname"><span class="pre">mlos.global_values.</span></span><span class="sig-name descname"><span class="pre">serialize_to_bytes_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/bb9d09d/source/Mlos.Python/mlos/global_values.py#L59"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.global_values.serialize_to_bytes_string" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">mlos.global_values.</span></span><span class="sig-name descname"><span class="pre">serialize_to_bytes_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/global_values.py#L59"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.global_values.serialize_to_bytes_string" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </section>

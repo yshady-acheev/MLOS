@@ -21,7 +21,9 @@ mlos.Optimizers.RegressionModels
    mlos.Optimizers.RegressionModels.LassoCrossValidatedRegressionModel
    mlos.Optimizers.RegressionModels.MultiObjectiveGoodnessOfFitMetrics
    mlos.Optimizers.RegressionModels.MultiObjectiveHomogeneousRandomForest
+   mlos.Optimizers.RegressionModels.MultiObjectiveLassoCrossValidated
    mlos.Optimizers.RegressionModels.MultiObjectivePrediction
+   mlos.Optimizers.RegressionModels.MultiObjectiveRegressionEnhancedRandomForest
    mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModel
    mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModelFitState
    mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel

@@ -1,0 +1,7 @@
+mlos.Optimizers.RegressionModels.unit\_tests.TestMultiObjectiveRegressionEnhancedRandomForest
+=============================================================================================
+
+.. automodule:: mlos.Optimizers.RegressionModels.unit_tests.TestMultiObjectiveRegressionEnhancedRandomForest
+   :members:
+   :undoc-members:
+   :show-inheritance:

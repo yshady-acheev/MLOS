@@ -21,8 +21,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModel" href="mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModel.html" />
-    <link rel="prev" title="mlos.Optimizers.RegressionModels.MultiObjectiveHomogeneousRandomForest" href="mlos.Optimizers.RegressionModels.MultiObjectiveHomogeneousRandomForest.html" /> 
+    <link rel="next" title="mlos.Optimizers.RegressionModels.MultiObjectiveRegressionEnhancedRandomForest" href="mlos.Optimizers.RegressionModels.MultiObjectiveRegressionEnhancedRandomForest.html" />
+    <link rel="prev" title="mlos.Optimizers.RegressionModels.MultiObjectiveLassoCrossValidated" href="mlos.Optimizers.RegressionModels.MultiObjectiveLassoCrossValidated.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -204,7 +204,9 @@
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.LassoCrossValidatedRegressionModel.html">mlos.Optimizers.RegressionModels.LassoCrossValidatedRegressionModel</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectiveGoodnessOfFitMetrics.html">mlos.Optimizers.RegressionModels.MultiObjectiveGoodnessOfFitMetrics</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectiveHomogeneousRandomForest.html">mlos.Optimizers.RegressionModels.MultiObjectiveHomogeneousRandomForest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectiveLassoCrossValidated.html">mlos.Optimizers.RegressionModels.MultiObjectiveLassoCrossValidated</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">mlos.Optimizers.RegressionModels.MultiObjectivePrediction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectiveRegressionEnhancedRandomForest.html">mlos.Optimizers.RegressionModels.MultiObjectiveRegressionEnhancedRandomForest</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModel.html">mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModel</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModelFitState.html">mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModelFitState</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel.html">mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel</a></li>
@@ -324,7 +326,7 @@
 <span id="mlos-optimizers-regressionmodels-multiobjectiveprediction"></span><h1>mlos.Optimizers.RegressionModels.MultiObjectivePrediction<a class="headerlink" href="#module-mlos.Optimizers.RegressionModels.MultiObjectivePrediction" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="mlos.Optimizers.RegressionModels.MultiObjectivePrediction.MultiObjectivePrediction">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">mlos.Optimizers.RegressionModels.MultiObjectivePrediction.</span></span><span class="sig-name descname"><span class="pre">MultiObjectivePrediction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objective_names</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/bb9d09d/source/Mlos.Python/mlos/Optimizers/RegressionModels/MultiObjectivePrediction.py#L9"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Optimizers.RegressionModels.MultiObjectivePrediction.MultiObjectivePrediction" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">mlos.Optimizers.RegressionModels.MultiObjectivePrediction.</span></span><span class="sig-name descname"><span class="pre">MultiObjectivePrediction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objective_names</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Optimizers/RegressionModels/MultiObjectivePrediction.py#L9"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Optimizers.RegressionModels.MultiObjectivePrediction.MultiObjectivePrediction" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="mlos.Utils.KeyOrderedDict.html#mlos.Utils.KeyOrderedDict.KeyOrderedDict" title="mlos.Utils.KeyOrderedDict.KeyOrderedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">mlos.Utils.KeyOrderedDict.KeyOrderedDict</span></code></a></p>
 <p>A container for multiple predictions.</p>
 <p>This is really just an alias to KeyOrderedDict.</p>
@@ -336,8 +338,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="mlos.Optimizers.RegressionModels.MultiObjectiveHomogeneousRandomForest.html" class="btn btn-neutral float-left" title="mlos.Optimizers.RegressionModels.MultiObjectiveHomogeneousRandomForest" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModel.html" class="btn btn-neutral float-right" title="mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModel" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="mlos.Optimizers.RegressionModels.MultiObjectiveLassoCrossValidated.html" class="btn btn-neutral float-left" title="mlos.Optimizers.RegressionModels.MultiObjectiveLassoCrossValidated" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mlos.Optimizers.RegressionModels.MultiObjectiveRegressionEnhancedRandomForest.html" class="btn btn-neutral float-right" title="mlos.Optimizers.RegressionModels.MultiObjectiveRegressionEnhancedRandomForest" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

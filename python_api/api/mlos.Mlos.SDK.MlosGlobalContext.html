@@ -204,7 +204,9 @@
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.LassoCrossValidatedRegressionModel.html">mlos.Optimizers.RegressionModels.LassoCrossValidatedRegressionModel</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectiveGoodnessOfFitMetrics.html">mlos.Optimizers.RegressionModels.MultiObjectiveGoodnessOfFitMetrics</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectiveHomogeneousRandomForest.html">mlos.Optimizers.RegressionModels.MultiObjectiveHomogeneousRandomForest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectiveLassoCrossValidated.html">mlos.Optimizers.RegressionModels.MultiObjectiveLassoCrossValidated</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectivePrediction.html">mlos.Optimizers.RegressionModels.MultiObjectivePrediction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectiveRegressionEnhancedRandomForest.html">mlos.Optimizers.RegressionModels.MultiObjectiveRegressionEnhancedRandomForest</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModel.html">mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModel</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModelFitState.html">mlos.Optimizers.RegressionModels.MultiObjectiveRegressionModelFitState</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel.html">mlos.Optimizers.RegressionModels.NaiveMultiObjectiveRegressionModel</a></li>
@@ -324,7 +326,7 @@
 <span id="mlos-mlos-sdk-mlosglobalcontext"></span><h1>mlos.Mlos.SDK.MlosGlobalContext<a class="headerlink" href="#module-mlos.Mlos.SDK.MlosGlobalContext" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="mlos.Mlos.SDK.MlosGlobalContext.MlosGlobalContext">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">mlos.Mlos.SDK.MlosGlobalContext.</span></span><span class="sig-name descname"><span class="pre">MlosGlobalContext</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">communication_channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shared_config</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/bb9d09d/source/Mlos.Python/mlos/Mlos/SDK/MlosGlobalContext.py#L8"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.SDK.MlosGlobalContext.MlosGlobalContext" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">mlos.Mlos.SDK.MlosGlobalContext.</span></span><span class="sig-name descname"><span class="pre">MlosGlobalContext</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">communication_channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shared_config</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Mlos/SDK/MlosGlobalContext.py#L8"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.SDK.MlosGlobalContext.MlosGlobalContext" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>A singleton class keeping track of all live smart components, enabled telemetry.</p>
 <p>This object is also the owner of the target-side communication channel.</p>
@@ -366,17 +368,17 @@ to refer to one another.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos.Mlos.SDK.MlosGlobalContext.MlosGlobalContext.get_current_config">
-<span class="sig-name descname"><span class="pre">get_current_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component_type</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/bb9d09d/source/Mlos.Python/mlos/Mlos/SDK/MlosGlobalContext.py#L104"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.SDK.MlosGlobalContext.MlosGlobalContext.get_current_config" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_current_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component_type</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Mlos/SDK/MlosGlobalContext.py#L104"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.SDK.MlosGlobalContext.MlosGlobalContext.get_current_config" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos.Mlos.SDK.MlosGlobalContext.MlosGlobalContext.is_message_type_enabled">
-<span class="sig-name descname"><span class="pre">is_message_type_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_type</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/bb9d09d/source/Mlos.Python/mlos/Mlos/SDK/MlosGlobalContext.py#L98"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.SDK.MlosGlobalContext.MlosGlobalContext.is_message_type_enabled" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">is_message_type_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_type</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Mlos/SDK/MlosGlobalContext.py#L98"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.SDK.MlosGlobalContext.MlosGlobalContext.is_message_type_enabled" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos.Mlos.SDK.MlosGlobalContext.MlosGlobalContext.register_mlos_object">
-<span class="sig-name descname"><span class="pre">register_mlos_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mlos_object</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/bb9d09d/source/Mlos.Python/mlos/Mlos/SDK/MlosGlobalContext.py#L72"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.SDK.MlosGlobalContext.MlosGlobalContext.register_mlos_object" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">register_mlos_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mlos_object</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Mlos/SDK/MlosGlobalContext.py#L72"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.SDK.MlosGlobalContext.MlosGlobalContext.register_mlos_object" title="Permalink to this definition">¶</a></dt>
 <dd><p>Registers the component with the smart component manager.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -390,7 +392,7 @@ to refer to one another.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos.Mlos.SDK.MlosGlobalContext.MlosGlobalContext.send_telemetry_message">
-<span class="sig-name descname"><span class="pre">send_telemetry_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/bb9d09d/source/Mlos.Python/mlos/Mlos/SDK/MlosGlobalContext.py#L101"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.SDK.MlosGlobalContext.MlosGlobalContext.send_telemetry_message" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">send_telemetry_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Mlos/SDK/MlosGlobalContext.py#L101"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.SDK.MlosGlobalContext.MlosGlobalContext.send_telemetry_message" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
@@ -400,17 +402,17 @@ to refer to one another.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos.Mlos.SDK.MlosGlobalContext.MlosGlobalContext.start_clock">
-<span class="sig-name descname"><span class="pre">start_clock</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/bb9d09d/source/Mlos.Python/mlos/Mlos/SDK/MlosGlobalContext.py#L65"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.SDK.MlosGlobalContext.MlosGlobalContext.start_clock" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">start_clock</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Mlos/SDK/MlosGlobalContext.py#L65"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.SDK.MlosGlobalContext.MlosGlobalContext.start_clock" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos.Mlos.SDK.MlosGlobalContext.MlosGlobalContext.stop_clock">
-<span class="sig-name descname"><span class="pre">stop_clock</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/bb9d09d/source/Mlos.Python/mlos/Mlos/SDK/MlosGlobalContext.py#L68"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.SDK.MlosGlobalContext.MlosGlobalContext.stop_clock" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">stop_clock</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Mlos/SDK/MlosGlobalContext.py#L68"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.SDK.MlosGlobalContext.MlosGlobalContext.stop_clock" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos.Mlos.SDK.MlosGlobalContext.MlosGlobalContext.unregister_mlos_object">
-<span class="sig-name descname"><span class="pre">unregister_mlos_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mlos_object</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/bb9d09d/source/Mlos.Python/mlos/Mlos/SDK/MlosGlobalContext.py#L90"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.SDK.MlosGlobalContext.MlosGlobalContext.unregister_mlos_object" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">unregister_mlos_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mlos_object</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Mlos/SDK/MlosGlobalContext.py#L90"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.SDK.MlosGlobalContext.MlosGlobalContext.unregister_mlos_object" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
