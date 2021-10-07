@@ -611,7 +611,7 @@ result, we maintain such a union in an interval tree data structure.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="mlos.Spaces.Dimension">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">mlos.Spaces.</span></span><span class="sig-name descname"><span class="pre">Dimension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Spaces/Dimensions/Dimension.py#L8"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Spaces.Dimension" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/abc.html#abc.ABC" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/abc.html#abc.ABC" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></a></p>
 <p>An abstract class representing a set of values a given parameter can take.</p>
 <p>This is a base class for: EmptyDimension, ContinuousDimension, DiscreteDimension, OrdinalDimension,
 CategoricalDimension, and CompositeDimension.</p>
@@ -638,7 +638,7 @@ a dimension from any given distribution.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos.Spaces.Dimension.flatten_dimension_name">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">flatten_dimension_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dimension_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Spaces/Dimensions/Dimension.py#L25"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Spaces.Dimension.flatten_dimension_name" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">flatten_dimension_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dimension_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Spaces/Dimensions/Dimension.py#L25"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Spaces.Dimension.flatten_dimension_name" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -877,7 +877,7 @@ a dimension from any given distribution.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="mlos.Spaces.Hypergrid">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">mlos.Spaces.</span></span><span class="sig-name descname"><span class="pre">Hypergrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Spaces/Hypergrid.py#L16"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Spaces.Hypergrid" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/abc.html#abc.ABC" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/abc.html#abc.ABC" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></a></p>
 <p>A base class for all search-space-like classes.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="mlos.Spaces.Hypergrid.dimension_names">
@@ -1014,7 +1014,7 @@ If there are additional columns, they will be dropped unless exclude_extra_colum
 <dl class="py class">
 <dt class="sig sig-object py" id="mlos.Spaces.Point">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">mlos.Spaces.</span></span><span class="sig-name descname"><span class="pre">Point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Spaces/Point.py#L12"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Spaces.Point" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Models a point in a Hypergrid.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos.Spaces.Point.copy">
@@ -1083,7 +1083,7 @@ If there are additional columns, they will be dropped unless exclude_extra_colum
 <dl class="py class">
 <dt class="sig sig-object py" id="mlos.Spaces.SimpleHypergrid.JoinedSubgrid">
 <em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">JoinedSubgrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subgrid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">join_dimension</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Spaces/SimpleHypergrid.py#L25"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Spaces.SimpleHypergrid.JoinedSubgrid" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Allows a subgrid to be joined on a dimension that’s not in that subgrid.</p>
 <dl class="simple">
 <dt>Think how in SQL you can do:</dt><dd><p>SELECT * FROM Employee JOIN Employer ON Employee.Name = ‘John’;</p>
