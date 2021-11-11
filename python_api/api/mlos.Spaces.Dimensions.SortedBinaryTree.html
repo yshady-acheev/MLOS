@@ -326,7 +326,7 @@
 <span id="mlos-spaces-dimensions-sortedbinarytree"></span><h1>mlos.Spaces.Dimensions.SortedBinaryTree<a class="headerlink" href="#module-mlos.Spaces.Dimensions.SortedBinaryTree" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="mlos.Spaces.Dimensions.SortedBinaryTree.Node">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">mlos.Spaces.Dimensions.SortedBinaryTree.</span></span><span class="sig-name descname"><span class="pre">Node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">payload</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Spaces/Dimensions/SortedBinaryTree.py#L46"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Spaces.Dimensions.SortedBinaryTree.Node" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos.Spaces.Dimensions.SortedBinaryTree.</span></span><span class="sig-name descname"><span class="pre">Node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">payload</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Spaces/Dimensions/SortedBinaryTree.py#L46"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Spaces.Dimensions.SortedBinaryTree.Node" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Models a node in a binary tree.</p>
 <p>To be able to support all binary tree operations efficiently, we need to keep track of:
@@ -336,17 +336,17 @@ right child
 payload</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlos.Spaces.Dimensions.SortedBinaryTree.Node.IN_ORDER">
-<span class="sig-name descname"><span class="pre">IN_ORDER</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#mlos.Spaces.Dimensions.SortedBinaryTree.Node.IN_ORDER" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">IN_ORDER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#mlos.Spaces.Dimensions.SortedBinaryTree.Node.IN_ORDER" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlos.Spaces.Dimensions.SortedBinaryTree.Node.POST_ORDER">
-<span class="sig-name descname"><span class="pre">POST_ORDER</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#mlos.Spaces.Dimensions.SortedBinaryTree.Node.POST_ORDER" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">POST_ORDER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#mlos.Spaces.Dimensions.SortedBinaryTree.Node.POST_ORDER" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlos.Spaces.Dimensions.SortedBinaryTree.Node.PRE_ORDER">
-<span class="sig-name descname"><span class="pre">PRE_ORDER</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#mlos.Spaces.Dimensions.SortedBinaryTree.Node.PRE_ORDER" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">PRE_ORDER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#mlos.Spaces.Dimensions.SortedBinaryTree.Node.PRE_ORDER" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -393,7 +393,7 @@ payload</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="mlos.Spaces.Dimensions.SortedBinaryTree.SortedBinaryTree">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">mlos.Spaces.Dimensions.SortedBinaryTree.</span></span><span class="sig-name descname"><span class="pre">SortedBinaryTree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Spaces/Dimensions/SortedBinaryTree.py#L114"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Spaces.Dimensions.SortedBinaryTree.SortedBinaryTree" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos.Spaces.Dimensions.SortedBinaryTree.</span></span><span class="sig-name descname"><span class="pre">SortedBinaryTree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Spaces/Dimensions/SortedBinaryTree.py#L114"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Spaces.Dimensions.SortedBinaryTree.SortedBinaryTree" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>A data structure to keep payloads sorted.</p>
 <p>For each node N in the tree the following invariant holds between crud operations:
@@ -421,17 +421,17 @@ this behavior, they will have subtle and annoying bugs.</p></li>
 <p>So let’s go with the first option - an insert of an existing key fails with an exception.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlos.Spaces.Dimensions.SortedBinaryTree.SortedBinaryTree.IN_ORDER">
-<span class="sig-name descname"><span class="pre">IN_ORDER</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#mlos.Spaces.Dimensions.SortedBinaryTree.SortedBinaryTree.IN_ORDER" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">IN_ORDER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#mlos.Spaces.Dimensions.SortedBinaryTree.SortedBinaryTree.IN_ORDER" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlos.Spaces.Dimensions.SortedBinaryTree.SortedBinaryTree.POST_ORDER">
-<span class="sig-name descname"><span class="pre">POST_ORDER</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#mlos.Spaces.Dimensions.SortedBinaryTree.SortedBinaryTree.POST_ORDER" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">POST_ORDER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#mlos.Spaces.Dimensions.SortedBinaryTree.SortedBinaryTree.POST_ORDER" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlos.Spaces.Dimensions.SortedBinaryTree.SortedBinaryTree.PRE_ORDER">
-<span class="sig-name descname"><span class="pre">PRE_ORDER</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#mlos.Spaces.Dimensions.SortedBinaryTree.SortedBinaryTree.PRE_ORDER" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">PRE_ORDER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#mlos.Spaces.Dimensions.SortedBinaryTree.SortedBinaryTree.PRE_ORDER" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -446,7 +446,7 @@ this behavior, they will have subtle and annoying bugs.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos.Spaces.Dimensions.SortedBinaryTree.SortedBinaryTree.assert_node_invariants">
-<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">assert_node_invariants</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Spaces/Dimensions/SortedBinaryTree.py#L193"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Spaces.Dimensions.SortedBinaryTree.SortedBinaryTree.assert_node_invariants" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">assert_node_invariants</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Spaces/Dimensions/SortedBinaryTree.py#L193"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Spaces.Dimensions.SortedBinaryTree.SortedBinaryTree.assert_node_invariants" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -493,11 +493,11 @@ this behavior, they will have subtle and annoying bugs.</p></li>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="mlos.Spaces.Dimensions.SortedBinaryTree.Stack">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">mlos.Spaces.Dimensions.SortedBinaryTree.</span></span><span class="sig-name descname"><span class="pre">Stack</span></span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Spaces/Dimensions/SortedBinaryTree.py#L5"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Spaces.Dimensions.SortedBinaryTree.Stack" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos.Spaces.Dimensions.SortedBinaryTree.</span></span><span class="sig-name descname"><span class="pre">Stack</span></span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Spaces/Dimensions/SortedBinaryTree.py#L5"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Spaces.Dimensions.SortedBinaryTree.Stack" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <dl class="py property">
 <dt class="sig sig-object py" id="mlos.Spaces.Dimensions.SortedBinaryTree.Stack.is_empty">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">is_empty</span></span><a class="headerlink" href="#mlos.Spaces.Dimensions.SortedBinaryTree.Stack.is_empty" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_empty</span></span><a class="headerlink" href="#mlos.Spaces.Dimensions.SortedBinaryTree.Stack.is_empty" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -514,7 +514,7 @@ this behavior, they will have subtle and annoying bugs.</p></li>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="mlos.Spaces.Dimensions.SortedBinaryTree.StackedNode">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">mlos.Spaces.Dimensions.SortedBinaryTree.</span></span><span class="sig-name descname"><span class="pre">StackedNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Spaces/Dimensions/SortedBinaryTree.py#L20"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Spaces.Dimensions.SortedBinaryTree.StackedNode" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos.Spaces.Dimensions.SortedBinaryTree.</span></span><span class="sig-name descname"><span class="pre">StackedNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Spaces/Dimensions/SortedBinaryTree.py#L20"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Spaces.Dimensions.SortedBinaryTree.StackedNode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Wraps a Node and its enumeration state to allow non-recursive enumeration.</p>
 <p>In order to support pre-order, in-order, and post-order enumeration,
