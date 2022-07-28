@@ -16,6 +16,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/js/copybutton.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -321,64 +322,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-mlos.Grpc.OptimizerMonitoringService">
-<span id="mlos-grpc-optimizermonitoringservice"></span><h1>mlos.Grpc.OptimizerMonitoringService<a class="headerlink" href="#module-mlos.Grpc.OptimizerMonitoringService" title="Permalink to this headline">¶</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="mlos.Grpc.OptimizerMonitoringService.OptimizerMonitoringService">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos.Grpc.OptimizerMonitoringService.</span></span><span class="sig-name descname"><span class="pre">OptimizerMonitoringService</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bayesian_optimizer_store</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos.MlosOptimizationServices.BayesianOptimizerStore.BayesianOptimizerStoreBase.html#mlos.MlosOptimizationServices.BayesianOptimizerStore.BayesianOptimizerStoreBase.BayesianOptimizerStoreBase" title="mlos.MlosOptimizationServices.BayesianOptimizerStore.BayesianOptimizerStoreBase.BayesianOptimizerStoreBase"><span class="pre">mlos.MlosOptimizationServices.BayesianOptimizerStore.BayesianOptimizerStoreBase.BayesianOptimizerStoreBase</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Grpc/OptimizerMonitoringService.py#L21"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Grpc.OptimizerMonitoringService.OptimizerMonitoringService" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="mlos.Grpc.OptimizerMonitoringService_pb2_grpc.html#mlos.Grpc.OptimizerMonitoringService_pb2_grpc.OptimizerMonitoringServiceServicer" title="mlos.Grpc.OptimizerMonitoringService_pb2_grpc.OptimizerMonitoringServiceServicer"><code class="xref py py-class docutils literal notranslate"><span class="pre">mlos.Grpc.OptimizerMonitoringService_pb2_grpc.OptimizerMonitoringServiceServicer</span></code></a></p>
-<p>Defines the Optimizer Microservice.</p>
-<p>The state of the microservice will be persisted in a DB. Until then we use local variables.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos.Grpc.OptimizerMonitoringService.OptimizerMonitoringService.ComputeGoodnessOfFitMetrics">
-<span class="sig-name descname"><span class="pre">ComputeGoodnessOfFitMetrics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Grpc/OptimizerMonitoringService.py#L69"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Grpc.OptimizerMonitoringService.OptimizerMonitoringService.ComputeGoodnessOfFitMetrics" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the computed goodness of fit metrics.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos.Grpc.OptimizerMonitoringService.OptimizerMonitoringService.Echo">
-<span class="sig-name descname"><span class="pre">Echo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos.Grpc.OptimizerMonitoringService_pb2.html#mlos.Grpc.OptimizerMonitoringService_pb2.Empty" title="mlos.Grpc.OptimizerMonitoringService_pb2.Empty"><span class="pre">mlos.Grpc.OptimizerMonitoringService_pb2.Empty</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Grpc/OptimizerMonitoringService.py#L102"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Grpc.OptimizerMonitoringService.OptimizerMonitoringService.Echo" title="Permalink to this definition">¶</a></dt>
-<dd><p>Like ping.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos.Grpc.OptimizerMonitoringService.OptimizerMonitoringService.GetAllObservations">
-<span class="sig-name descname"><span class="pre">GetAllObservations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Grpc/OptimizerMonitoringService.py#L74"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Grpc.OptimizerMonitoringService.OptimizerMonitoringService.GetAllObservations" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns all observations registered for a given optimizer.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos.Grpc.OptimizerMonitoringService.OptimizerMonitoringService.GetOptimizerConvergenceState">
-<span class="sig-name descname"><span class="pre">GetOptimizerConvergenceState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Grpc/OptimizerMonitoringService.py#L55"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Grpc.OptimizerMonitoringService.OptimizerMonitoringService.GetOptimizerConvergenceState" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the current optimizer convergence state.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos.Grpc.OptimizerMonitoringService.OptimizerMonitoringService.GetOptimizerInfo">
-<span class="sig-name descname"><span class="pre">GetOptimizerInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos.Grpc.OptimizerMonitoringService_pb2.html#mlos.Grpc.OptimizerMonitoringService_pb2.OptimizerHandle" title="mlos.Grpc.OptimizerMonitoringService_pb2.OptimizerHandle"><span class="pre">mlos.Grpc.OptimizerMonitoringService_pb2.OptimizerHandle</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Grpc/OptimizerMonitoringService.py#L44"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Grpc.OptimizerMonitoringService.OptimizerMonitoringService.GetOptimizerInfo" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns information about optimizers configuration and optimization problem.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos.Grpc.OptimizerMonitoringService.OptimizerMonitoringService.IsTrained">
-<span class="sig-name descname"><span class="pre">IsTrained</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Grpc/OptimizerMonitoringService.py#L64"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Grpc.OptimizerMonitoringService.OptimizerMonitoringService.IsTrained" title="Permalink to this definition">¶</a></dt>
-<dd><p>Check if optimizer has been trained.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos.Grpc.OptimizerMonitoringService.OptimizerMonitoringService.ListExistingOptimizers">
-<span class="sig-name descname"><span class="pre">ListExistingOptimizers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos.Grpc.OptimizerMonitoringService_pb2.html#mlos.Grpc.OptimizerMonitoringService_pb2.Empty" title="mlos.Grpc.OptimizerMonitoringService_pb2.Empty"><span class="pre">mlos.Grpc.OptimizerMonitoringService_pb2.Empty</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Grpc/OptimizerMonitoringService.py#L34"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Grpc.OptimizerMonitoringService.OptimizerMonitoringService.ListExistingOptimizers" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a list of existing optimizer instances.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos.Grpc.OptimizerMonitoringService.OptimizerMonitoringService.Predict">
-<span class="sig-name descname"><span class="pre">Predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Grpc/OptimizerMonitoringService.py#L83"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Grpc.OptimizerMonitoringService.OptimizerMonitoringService.Predict" title="Permalink to this definition">¶</a></dt>
-<dd><p>Produces a prediction for specified features.</p>
-</dd></dl>
-
-</dd></dl>
-
+  <section id="mlos-grpc-optimizermonitoringservice">
+<h1>mlos.Grpc.OptimizerMonitoringService<a class="headerlink" href="#mlos-grpc-optimizermonitoringservice" title="Permalink to this heading">¶</a></h1>
 </section>
 
 

@@ -16,6 +16,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/js/copybutton.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -321,107 +322,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-mlos.Grpc.BayesianOptimizerProxy">
-<span id="mlos-grpc-bayesianoptimizerproxy"></span><h1>mlos.Grpc.BayesianOptimizerProxy<a class="headerlink" href="#module-mlos.Grpc.BayesianOptimizerProxy" title="Permalink to this headline">¶</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="mlos.Grpc.BayesianOptimizerProxy.BayesianOptimizerProxy">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos.Grpc.BayesianOptimizerProxy.</span></span><span class="sig-name descname"><span class="pre">BayesianOptimizerProxy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grpc_channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimization_problem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimizer_config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Grpc/BayesianOptimizerProxy.py#L22"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Grpc.BayesianOptimizerProxy.BayesianOptimizerProxy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="mlos.Optimizers.OptimizerBase.html#mlos.Optimizers.OptimizerBase.OptimizerBase" title="mlos.Optimizers.OptimizerBase.OptimizerBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">mlos.Optimizers.OptimizerBase.OptimizerBase</span></code></a></p>
-<p>Client to remote BayesianOptimizer.</p>
-<p>Wraps all implementation details around communicating with the remote BayesianOptimizer.
-Benefits:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Simpler to use than making gRPC requests</p></li>
-<li><p>We can change the gRPC definition without affecting the user’s code.</p></li>
-<li><p>All logic related to gRPC is in one place</p></li>
-</ul>
-</div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>grpc_channel</strong><span class="classifier">grpc_channel</span></dt><dd><p>GRPC channel to connect to existing remote optimizer.</p>
-</dd>
-<dt><strong>optimization_problem</strong><span class="classifier">OptimizationProblem</span></dt><dd><p>Problem to optimizer.</p>
-</dd>
-<dt><strong>optimizer_config</strong><span class="classifier">Point</span></dt><dd><p>Optimizer Configuation.</p>
-</dd>
-<dt><strong>id</strong><span class="classifier">str</span></dt><dd><p>Unique identifying string.</p>
-</dd>
-<dt><strong>logger</strong><span class="classifier">logger, default=None</span></dt><dd><p>Logger to use. By default, a new logger is created internally.</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos.Grpc.BayesianOptimizerProxy.BayesianOptimizerProxy.compute_surrogate_model_goodness_of_fit">
-<span class="sig-name descname"><span class="pre">compute_surrogate_model_goodness_of_fit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Tracer.py#L86"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Grpc.BayesianOptimizerProxy.BayesianOptimizerProxy.compute_surrogate_model_goodness_of_fit" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos.Grpc.BayesianOptimizerProxy.BayesianOptimizerProxy.get_all_observations">
-<span class="sig-name descname"><span class="pre">get_all_observations</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Tuple" title="(in Python v3.10)"><span class="pre">Tuple</span></a><span class="p"><span class="pre">[</span></span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Tracer.py#L122"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Grpc.BayesianOptimizerProxy.BayesianOptimizerProxy.get_all_observations" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos.Grpc.BayesianOptimizerProxy.BayesianOptimizerProxy.get_optimizer_convergence_state">
-<span class="sig-name descname"><span class="pre">get_optimizer_convergence_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Tracer.py#L79"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Grpc.BayesianOptimizerProxy.BayesianOptimizerProxy.get_optimizer_convergence_state" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="mlos.Grpc.BayesianOptimizerProxy.BayesianOptimizerProxy.optimizer_handle_for_optimizer_monitoring_service">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">optimizer_handle_for_optimizer_monitoring_service</span></span><a class="headerlink" href="#mlos.Grpc.BayesianOptimizerProxy.BayesianOptimizerProxy.optimizer_handle_for_optimizer_monitoring_service" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="mlos.Grpc.BayesianOptimizerProxy.BayesianOptimizerProxy.optimizer_handle_for_optimizer_service">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">optimizer_handle_for_optimizer_service</span></span><a class="headerlink" href="#mlos.Grpc.BayesianOptimizerProxy.BayesianOptimizerProxy.optimizer_handle_for_optimizer_service" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos.Grpc.BayesianOptimizerProxy.BayesianOptimizerProxy.predict">
-<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameter_values_pandas_frame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context_values_pandas_frame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objective_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mlos.Optimizers.RegressionModels.Prediction.html#mlos.Optimizers.RegressionModels.Prediction.Prediction" title="mlos.Optimizers.RegressionModels.Prediction.Prediction"><span class="pre">mlos.Optimizers.RegressionModels.Prediction.Prediction</span></a></span></span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Tracer.py#L130"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Grpc.BayesianOptimizerProxy.BayesianOptimizerProxy.predict" title="Permalink to this definition">¶</a></dt>
-<dd><p>Predict target value based on the parameters supplied.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>params</strong> – </p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos.Grpc.BayesianOptimizerProxy.BayesianOptimizerProxy.register">
-<span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameter_values_pandas_frame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_values_pandas_frame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context_values_pandas_frame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Tracer.py#L105"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Grpc.BayesianOptimizerProxy.BayesianOptimizerProxy.register" title="Permalink to this definition">¶</a></dt>
-<dd><p>Registers a new result with the optimizer.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>params</strong> – </p></li>
-<li><p><strong>target_value</strong> – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos.Grpc.BayesianOptimizerProxy.BayesianOptimizerProxy.suggest">
-<span class="sig-name descname"><span class="pre">suggest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">random</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Tracer.py#L91"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Grpc.BayesianOptimizerProxy.BayesianOptimizerProxy.suggest" title="Permalink to this definition">¶</a></dt>
-<dd><p>Suggest the next set of parameters to try.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="mlos.Grpc.BayesianOptimizerProxy.BayesianOptimizerProxy.trained">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">trained</span></span><a class="headerlink" href="#mlos.Grpc.BayesianOptimizerProxy.BayesianOptimizerProxy.trained" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
+  <section id="mlos-grpc-bayesianoptimizerproxy">
+<h1>mlos.Grpc.BayesianOptimizerProxy<a class="headerlink" href="#mlos-grpc-bayesianoptimizerproxy" title="Permalink to this heading">¶</a></h1>
 </section>
 
 

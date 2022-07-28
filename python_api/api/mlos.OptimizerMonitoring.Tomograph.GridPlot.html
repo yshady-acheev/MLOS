@@ -16,6 +16,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/js/copybutton.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -322,37 +323,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-mlos.OptimizerMonitoring.Tomograph.GridPlot">
-<span id="mlos-optimizermonitoring-tomograph-gridplot"></span><h1>mlos.OptimizerMonitoring.Tomograph.GridPlot<a class="headerlink" href="#module-mlos.OptimizerMonitoring.Tomograph.GridPlot" title="Permalink to this headline">¶</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="mlos.OptimizerMonitoring.Tomograph.GridPlot.GridPlot">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos.OptimizerMonitoring.Tomograph.GridPlot.</span></span><span class="sig-name descname"><span class="pre">GridPlot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optimization_problem</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos.Optimizers.OptimizationProblem.html#mlos.Optimizers.OptimizationProblem.OptimizationProblem" title="mlos.Optimizers.OptimizationProblem.OptimizationProblem"><span class="pre">mlos.Optimizers.OptimizationProblem.OptimizationProblem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">objective_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">observations_data_source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos.OptimizerMonitoring.Tomograph.ObservationsDataSource.html#mlos.OptimizerMonitoring.Tomograph.ObservationsDataSource.ObservationsDataSource" title="mlos.OptimizerMonitoring.Tomograph.ObservationsDataSource.ObservationsDataSource"><span class="pre">mlos.OptimizerMonitoring.Tomograph.ObservationsDataSource.ObservationsDataSource</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/OptimizerMonitoring/Tomograph/GridPlot.py#L19"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.OptimizerMonitoring.Tomograph.GridPlot.GridPlot" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<p>Maintains all data, meta-data and styling information required to produce a grid-plot.</p>
-<p>The grid plot is built based on the OptimizationProblem instance, to find out what objectives and what
-features are to be plotted. We use information contained in the dimensions to compute the ranges for all
-axes/ranges on the plot, as well as to configure the color map.</p>
-<p>If the range is infinite (as can be the case with many objectives) we can use the observed range of values to
-configure the range of values to be plotted.</p>
-<p>Each figure in the grid plot contains:
-* Either a scatter plot of feature vs. feature where the color of each point corresponds to the objective value
-* Or a scatter plot of feature vs. objective (if we are on a diagonal).</p>
-<p>Additionally, we could also plot the predicted values as a background heatmap for the feature vs. feature
-plots, and a predicted value with confidence intervals plot for feature vs. objective plots. This of course introduces a complication
-of needing to query the optimizer for each pixel and so we will add it later.</p>
-<dl class="py property">
-<dt class="sig sig-object py" id="mlos.OptimizerMonitoring.Tomograph.GridPlot.GridPlot.formatted_plots">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">formatted_plots</span></span><a class="headerlink" href="#mlos.OptimizerMonitoring.Tomograph.GridPlot.GridPlot.formatted_plots" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos.OptimizerMonitoring.Tomograph.GridPlot.GridPlot.update_plots">
-<span class="sig-name descname"><span class="pre">update_plots</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/OptimizerMonitoring/Tomograph/GridPlot.py#L94"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.OptimizerMonitoring.Tomograph.GridPlot.GridPlot.update_plots" title="Permalink to this definition">¶</a></dt>
-<dd><p>Updates the plot with observations from data source.</p>
-</dd></dl>
-
-</dd></dl>
-
+  <section id="mlos-optimizermonitoring-tomograph-gridplot">
+<h1>mlos.OptimizerMonitoring.Tomograph.GridPlot<a class="headerlink" href="#mlos-optimizermonitoring-tomograph-gridplot" title="Permalink to this heading">¶</a></h1>
 </section>
 
 

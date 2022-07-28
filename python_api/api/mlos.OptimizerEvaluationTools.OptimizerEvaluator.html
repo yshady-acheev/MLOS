@@ -16,6 +16,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/js/copybutton.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -321,30 +322,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-mlos.OptimizerEvaluationTools.OptimizerEvaluator">
-<span id="mlos-optimizerevaluationtools-optimizerevaluator"></span><h1>mlos.OptimizerEvaluationTools.OptimizerEvaluator<a class="headerlink" href="#module-mlos.OptimizerEvaluationTools.OptimizerEvaluator" title="Permalink to this headline">¶</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="mlos.OptimizerEvaluationTools.OptimizerEvaluator.OptimizerEvaluator">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos.OptimizerEvaluationTools.OptimizerEvaluator.</span></span><span class="sig-name descname"><span class="pre">OptimizerEvaluator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optimizer_evaluator_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos.Spaces.Point.html#mlos.Spaces.Point.Point" title="mlos.Spaces.Point.Point"><span class="pre">mlos.Spaces.Point.Point</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimizer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos.Optimizers.OptimizerBase.html#mlos.Optimizers.OptimizerBase.OptimizerBase" title="mlos.Optimizers.OptimizerBase.OptimizerBase"><span class="pre">mlos.Optimizers.OptimizerBase.OptimizerBase</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimizer_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos.Spaces.Point.html#mlos.Spaces.Point.Point" title="mlos.Spaces.Point.Point"><span class="pre">mlos.Spaces.Point.Point</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objective_function</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos.OptimizerEvaluationTools.ObjectiveFunctionBase.html#mlos.OptimizerEvaluationTools.ObjectiveFunctionBase.ObjectiveFunctionBase" title="mlos.OptimizerEvaluationTools.ObjectiveFunctionBase.ObjectiveFunctionBase"><span class="pre">mlos.OptimizerEvaluationTools.ObjectiveFunctionBase.ObjectiveFunctionBase</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objective_function_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos.Spaces.Point.html#mlos.Spaces.Point.Point" title="mlos.Spaces.Point.Point"><span class="pre">mlos.Spaces.Point.Point</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/OptimizerEvaluationTools/OptimizerEvaluator.py#L27"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.OptimizerEvaluationTools.OptimizerEvaluator.OptimizerEvaluator" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<p>Evaluates optimizers against objective functions.</p>
-<p>This class is responsible for:</p>
-<blockquote>
-<div><ol class="arabic simple">
-<li><p>instantiating an optimizer</p></li>
-<li><p>instantiating an objective function</p></li>
-<li><p>launching an optimizer against that objective function</p></li>
-<li><p>keeping track of the goodness of fit, and of the various optima over time</p></li>
-<li><p>producing an instance of OptimizerEvaluationReport.</p></li>
-</ol>
-</div></blockquote>
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos.OptimizerEvaluationTools.OptimizerEvaluator.OptimizerEvaluator.evaluate_optimizer">
-<span class="sig-name descname"><span class="pre">evaluate_optimizer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mlos.OptimizerEvaluationTools.OptimizerEvaluationReport.html#mlos.OptimizerEvaluationTools.OptimizerEvaluationReport.OptimizerEvaluationReport" title="mlos.OptimizerEvaluationTools.OptimizerEvaluationReport.OptimizerEvaluationReport"><span class="pre">mlos.OptimizerEvaluationTools.OptimizerEvaluationReport.OptimizerEvaluationReport</span></a></span></span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Tracer.py#L104"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.OptimizerEvaluationTools.OptimizerEvaluator.OptimizerEvaluator.evaluate_optimizer" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
+  <section id="mlos-optimizerevaluationtools-optimizerevaluator">
+<h1>mlos.OptimizerEvaluationTools.OptimizerEvaluator<a class="headerlink" href="#mlos-optimizerevaluationtools-optimizerevaluator" title="Permalink to this heading">¶</a></h1>
 </section>
 
 

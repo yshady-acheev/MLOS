@@ -16,6 +16,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/js/copybutton.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -322,93 +323,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-mlos.Optimizers.unit_tests.TestBayesianOptimizer">
-<span id="mlos-optimizers-unit-tests-testbayesianoptimizer"></span><h1>mlos.Optimizers.unit_tests.TestBayesianOptimizer<a class="headerlink" href="#module-mlos.Optimizers.unit_tests.TestBayesianOptimizer" title="Permalink to this headline">¶</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="mlos.Optimizers.unit_tests.TestBayesianOptimizer.TestBayesianOptimizer">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos.Optimizers.unit_tests.TestBayesianOptimizer.</span></span><span class="sig-name descname"><span class="pre">TestBayesianOptimizer</span></span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Optimizers/unit_tests/TestBayesianOptimizer.py#L45"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Optimizers.unit_tests.TestBayesianOptimizer.TestBayesianOptimizer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<p>Tests if the random search optimizer does anything useful at all.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos.Optimizers.unit_tests.TestBayesianOptimizer.TestBayesianOptimizer.setup_class">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">setup_class</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Optimizers/unit_tests/TestBayesianOptimizer.py#L50"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Optimizers.unit_tests.TestBayesianOptimizer.TestBayesianOptimizer.setup_class" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets up all the singletons needed to test the BayesianOptimizer.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos.Optimizers.unit_tests.TestBayesianOptimizer.TestBayesianOptimizer.teardown_class">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">teardown_class</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Optimizers/unit_tests/TestBayesianOptimizer.py#L95"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Optimizers.unit_tests.TestBayesianOptimizer.TestBayesianOptimizer.teardown_class" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos.Optimizers.unit_tests.TestBayesianOptimizer.TestBayesianOptimizer.test_bayesian_optimizer_default_copies_parameters">
-<span class="sig-name descname"><span class="pre">test_bayesian_optimizer_default_copies_parameters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Tracer.py#L449"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Optimizers.unit_tests.TestBayesianOptimizer.TestBayesianOptimizer.test_bayesian_optimizer_default_copies_parameters" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos.Optimizers.unit_tests.TestBayesianOptimizer.TestBayesianOptimizer.test_bayesian_optimizer_on_simple_2d_quadratic_function_cold_start">
-<span class="sig-name descname"><span class="pre">test_bayesian_optimizer_on_simple_2d_quadratic_function_cold_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_remote_optimizer</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Tracer.py#L260"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Optimizers.unit_tests.TestBayesianOptimizer.TestBayesianOptimizer.test_bayesian_optimizer_on_simple_2d_quadratic_function_cold_start" title="Permalink to this definition">¶</a></dt>
-<dd><p>Tests the bayesian optimizer on a simple quadratic function with no prior data.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos.Optimizers.unit_tests.TestBayesianOptimizer.TestBayesianOptimizer.test_bayesian_optimizer_on_simple_2d_quadratic_function_pre_heated">
-<span class="sig-name descname"><span class="pre">test_bayesian_optimizer_on_simple_2d_quadratic_function_pre_heated</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Tracer.py#L105"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Optimizers.unit_tests.TestBayesianOptimizer.TestBayesianOptimizer.test_bayesian_optimizer_on_simple_2d_quadratic_function_pre_heated" title="Permalink to this definition">¶</a></dt>
-<dd><p>Tests the bayesian optimizer on a simple quadratic function first feeding the optimizer a lot of data.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos.Optimizers.unit_tests.TestBayesianOptimizer.TestBayesianOptimizer.test_bayesian_optimizer_with_random_near_incumbent">
-<span class="sig-name descname"><span class="pre">test_bayesian_optimizer_with_random_near_incumbent</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Optimizers/unit_tests/TestBayesianOptimizer.py#L876"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Optimizers.unit_tests.TestBayesianOptimizer.TestBayesianOptimizer.test_bayesian_optimizer_with_random_near_incumbent" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos.Optimizers.unit_tests.TestBayesianOptimizer.TestBayesianOptimizer.test_hierarchical_quadratic_cold_start">
-<span class="sig-name descname"><span class="pre">test_hierarchical_quadratic_cold_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">restart_num</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_remote_optimizer</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Tracer.py#L209"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Optimizers.unit_tests.TestBayesianOptimizer.TestBayesianOptimizer.test_hierarchical_quadratic_cold_start" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos.Optimizers.unit_tests.TestBayesianOptimizer.TestBayesianOptimizer.test_hierarchical_quadratic_cold_start_random_configs">
-<span class="sig-name descname"><span class="pre">test_hierarchical_quadratic_cold_start_random_configs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">restart_num</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_remote_optimizer</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Tracer.py#L348"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Optimizers.unit_tests.TestBayesianOptimizer.TestBayesianOptimizer.test_hierarchical_quadratic_cold_start_random_configs" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos.Optimizers.unit_tests.TestBayesianOptimizer.TestBayesianOptimizer.test_multi_objective_optimization">
-<span class="sig-name descname"><span class="pre">test_multi_objective_optimization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objective_function_implementation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minimize</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_output_dimensions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_points</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Optimizers/unit_tests/TestBayesianOptimizer.py#L460"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Optimizers.unit_tests.TestBayesianOptimizer.TestBayesianOptimizer.test_multi_objective_optimization" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos.Optimizers.unit_tests.TestBayesianOptimizer.TestBayesianOptimizer.test_optimization_with_context">
-<span class="sig-name descname"><span class="pre">test_optimization_with_context</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Optimizers/unit_tests/TestBayesianOptimizer.py#L651"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Optimizers.unit_tests.TestBayesianOptimizer.TestBayesianOptimizer.test_optimization_with_context" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos.Optimizers.unit_tests.TestBayesianOptimizer.TestBayesianOptimizer.test_optimum_before_register_error">
-<span class="sig-name descname"><span class="pre">test_optimum_before_register_error</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Tracer.py#L186"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Optimizers.unit_tests.TestBayesianOptimizer.TestBayesianOptimizer.test_optimum_before_register_error" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos.Optimizers.unit_tests.TestBayesianOptimizer.TestBayesianOptimizer.test_registering_multiple_objectives">
-<span class="sig-name descname"><span class="pre">test_registering_multiple_objectives</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Optimizers/unit_tests/TestBayesianOptimizer.py#L571"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Optimizers.unit_tests.TestBayesianOptimizer.TestBayesianOptimizer.test_registering_multiple_objectives" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos.Optimizers.unit_tests.TestBayesianOptimizer.TestBayesianOptimizer.validate_optima">
-<span class="sig-name descname"><span class="pre">validate_optima</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optimizer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos.Optimizers.OptimizerBase.html#mlos.Optimizers.OptimizerBase.OptimizerBase" title="mlos.Optimizers.OptimizerBase.OptimizerBase"><span class="pre">mlos.Optimizers.OptimizerBase.OptimizerBase</span></a></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Optimizers/unit_tests/TestBayesianOptimizer.py#L792"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Optimizers.unit_tests.TestBayesianOptimizer.TestBayesianOptimizer.validate_optima" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
+  <section id="mlos-optimizers-unit-tests-testbayesianoptimizer">
+<h1>mlos.Optimizers.unit_tests.TestBayesianOptimizer<a class="headerlink" href="#mlos-optimizers-unit-tests-testbayesianoptimizer" title="Permalink to this heading">¶</a></h1>
 </section>
 
 

@@ -16,6 +16,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/js/copybutton.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -323,10 +324,10 @@
            <div itemprop="articleBody">
              
   <section id="module-mlos.Mlos.Infrastructure.TelemetryManager">
-<span id="mlos-mlos-infrastructure-telemetrymanager"></span><h1>mlos.Mlos.Infrastructure.TelemetryManager<a class="headerlink" href="#module-mlos.Mlos.Infrastructure.TelemetryManager" title="Permalink to this headline">¶</a></h1>
+<span id="mlos-mlos-infrastructure-telemetrymanager"></span><h1>mlos.Mlos.Infrastructure.TelemetryManager<a class="headerlink" href="#module-mlos.Mlos.Infrastructure.TelemetryManager" title="Permalink to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="mlos.Mlos.Infrastructure.TelemetryManager.TelemetryManager">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos.Mlos.Infrastructure.TelemetryManager.</span></span><span class="sig-name descname"><span class="pre">TelemetryManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mlos_agent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shared_config</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Mlos/Infrastructure/TelemetryManager.py#L5"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.Infrastructure.TelemetryManager.TelemetryManager" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos.Mlos.Infrastructure.TelemetryManager.</span></span><span class="sig-name descname"><span class="pre">TelemetryManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mlos_agent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shared_config</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/800c16c/source/Mlos.Python/mlos/Mlos/Infrastructure/TelemetryManager.py#L5"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.Infrastructure.TelemetryManager.TelemetryManager" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Keeps track of all telemetry available and enabled in the target process.</p>
 <p>TelemetryManager is responsible for:</p>
@@ -337,17 +338,17 @@
 </ol>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos.Mlos.Infrastructure.TelemetryManager.TelemetryManager.add_allowed_component_type">
-<span class="sig-name descname"><span class="pre">add_allowed_component_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component_type</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Mlos/Infrastructure/TelemetryManager.py#L30"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.Infrastructure.TelemetryManager.TelemetryManager.add_allowed_component_type" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">add_allowed_component_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component_type</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/800c16c/source/Mlos.Python/mlos/Mlos/Infrastructure/TelemetryManager.py#L30"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.Infrastructure.TelemetryManager.TelemetryManager.add_allowed_component_type" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos.Mlos.Infrastructure.TelemetryManager.TelemetryManager.disable_message_types">
-<span class="sig-name descname"><span class="pre">disable_message_types</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_types</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Mlos/Infrastructure/TelemetryManager.py#L60"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.Infrastructure.TelemetryManager.TelemetryManager.disable_message_types" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">disable_message_types</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_types</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/800c16c/source/Mlos.Python/mlos/Mlos/Infrastructure/TelemetryManager.py#L60"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.Infrastructure.TelemetryManager.TelemetryManager.disable_message_types" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos.Mlos.Infrastructure.TelemetryManager.TelemetryManager.enable_message_types">
-<span class="sig-name descname"><span class="pre">enable_message_types</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_types</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Mlos/Infrastructure/TelemetryManager.py#L38"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.Infrastructure.TelemetryManager.TelemetryManager.enable_message_types" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">enable_message_types</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_types</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/800c16c/source/Mlos.Python/mlos/Mlos/Infrastructure/TelemetryManager.py#L38"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.Infrastructure.TelemetryManager.TelemetryManager.enable_message_types" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables telemetry messages of specified types.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -364,7 +365,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos.Mlos.Infrastructure.TelemetryManager.TelemetryManager.enumerate_enabled_telemetry_message_types">
-<span class="sig-name descname"><span class="pre">enumerate_enabled_telemetry_message_types</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/791d670/source/Mlos.Python/mlos/Mlos/Infrastructure/TelemetryManager.py#L80"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.Infrastructure.TelemetryManager.TelemetryManager.enumerate_enabled_telemetry_message_types" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">enumerate_enabled_telemetry_message_types</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Microsoft/MLOS/blob/800c16c/source/Mlos.Python/mlos/Mlos/Infrastructure/TelemetryManager.py#L80"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos.Mlos.Infrastructure.TelemetryManager.TelemetryManager.enumerate_enabled_telemetry_message_types" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
