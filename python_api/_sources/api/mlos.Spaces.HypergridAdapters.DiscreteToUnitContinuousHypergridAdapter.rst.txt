@@ -1,7 +1,0 @@
-mlos.Spaces.HypergridAdapters.DiscreteToUnitContinuousHypergridAdapter
-======================================================================
-
-.. automodule:: mlos.Spaces.HypergridAdapters.DiscreteToUnitContinuousHypergridAdapter
-   :members:
-   :undoc-members:
-   :show-inheritance:

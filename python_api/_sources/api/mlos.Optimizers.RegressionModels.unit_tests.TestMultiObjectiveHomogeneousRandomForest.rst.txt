@@ -1,7 +1,0 @@
-mlos.Optimizers.RegressionModels.unit\_tests.TestMultiObjectiveHomogeneousRandomForest
-======================================================================================
-
-.. automodule:: mlos.Optimizers.RegressionModels.unit_tests.TestMultiObjectiveHomogeneousRandomForest
-   :members:
-   :undoc-members:
-   :show-inheritance:

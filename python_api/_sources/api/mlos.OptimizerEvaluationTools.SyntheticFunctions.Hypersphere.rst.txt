@@ -1,7 +1,0 @@
-mlos.OptimizerEvaluationTools.SyntheticFunctions.Hypersphere
-============================================================
-
-.. automodule:: mlos.OptimizerEvaluationTools.SyntheticFunctions.Hypersphere
-   :members:
-   :undoc-members:
-   :show-inheritance:

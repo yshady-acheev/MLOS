@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mlos_core.spaces.adapters.adapter.BaseSpaceAdapter &mdash; MlosCore 0.0.4 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/plot_directive.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="mlos_core.spaces.adapters.llamatune.LlamaTuneAdapter" href="mlos_core.spaces.adapters.llamatune.LlamaTuneAdapter.html" />
+    <link rel="prev" title="mlos_core.spaces.adapters.SpaceAdapterFactory.create" href="mlos_core.spaces.adapters.SpaceAdapterFactory.create.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MlosCore
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../overview.html">mlos-core API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#optimizers">Optimizers</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../overview.html#spaces">Spaces</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="mlos_core.spaces.configspace_to_emukit_space.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.spaces</span></code>.configspace_to_emukit_space</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_core.spaces.configspace_to_skopt_space.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.spaces</span></code>.configspace_to_skopt_space</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../overview.html#space-adapters">Space Adapters</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="mlos_core.spaces.adapters.SpaceAdapterType.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.spaces.adapters</span></code>.SpaceAdapterType</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_core.spaces.adapters.SpaceAdapterFactory.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.spaces.adapters</span></code>.SpaceAdapterFactory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_core.spaces.adapters.SpaceAdapterFactory.create.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.spaces.adapters</span></code>.SpaceAdapterFactory.create</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.spaces.adapters.adapter</span></code>.BaseSpaceAdapter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_core.spaces.adapters.llamatune.LlamaTuneAdapter.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.spaces.adapters.llamatune</span></code>.LlamaTuneAdapter</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html#mlos-bench-api">mlos-bench API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/mlos_core/modules.html">mlos_core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/mlos_bench/modules.html">mlos_bench</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MlosCore</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../overview.html">mlos-core API</a></li>
+      <li class="breadcrumb-item active"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.spaces.adapters.adapter</span></code>.BaseSpaceAdapter</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/mlos_core.spaces.adapters.adapter.BaseSpaceAdapter.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mlos-core-spaces-adapters-adapter-basespaceadapter">
+<h1><a class="reference internal" href="../api/mlos_core/mlos_core.spaces.adapters.adapter.html#module-mlos_core.spaces.adapters.adapter" title="mlos_core.spaces.adapters.adapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.spaces.adapters.adapter</span></code></a>.BaseSpaceAdapter<a class="headerlink" href="#mlos-core-spaces-adapters-adapter-basespaceadapter" title="Permalink to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="mlos_core.spaces.adapters.adapter.BaseSpaceAdapter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_core.spaces.adapters.adapter.</span></span><span class="sig-name descname"><span class="pre">BaseSpaceAdapter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">orig_parameter_space</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ConfigurationSpace</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_core.spaces.adapters.adapter.BaseSpaceAdapter" title="Permalink to this definition">¶</a></dt>
+<dd><p>SpaceAdapter abstract class defining the basic interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>orig_parameter_space</strong><span class="classifier">ConfigSpace.ConfigurationSpace</span></dt><dd><p>The original parameter space to explore.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Attributes<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><a class="reference internal" href="#mlos_core.spaces.adapters.adapter.BaseSpaceAdapter.orig_parameter_space" title="mlos_core.spaces.adapters.adapter.BaseSpaceAdapter.orig_parameter_space"><code class="xref py py-obj docutils literal notranslate"><span class="pre">orig_parameter_space</span></code></a></dt><dd><p>Original (user-provided) parameter space to explore.</p>
+</dd>
+<dt><a class="reference internal" href="#mlos_core.spaces.adapters.adapter.BaseSpaceAdapter.target_parameter_space" title="mlos_core.spaces.adapters.adapter.BaseSpaceAdapter.target_parameter_space"><code class="xref py py-obj docutils literal notranslate"><span class="pre">target_parameter_space</span></code></a></dt><dd><p>Target parameter space that is fed to the underlying optimizer.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_core.spaces.adapters.adapter.BaseSpaceAdapter.inverse_transform" title="mlos_core.spaces.adapters.adapter.BaseSpaceAdapter.inverse_transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inverse_transform</span></code></a>(configurations)</p></td>
+<td><p>Translates a configuration, which belongs to the original parameter space, to the target parameter space.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_core.spaces.adapters.adapter.BaseSpaceAdapter.transform" title="mlos_core.spaces.adapters.adapter.BaseSpaceAdapter.transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform</span></code></a>(configuration)</p></td>
+<td><p>Translates a configuration, which belongs to the target parameter space, to the original parameter space.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_core.spaces.adapters.adapter.BaseSpaceAdapter.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">orig_parameter_space</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ConfigurationSpace</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_core.spaces.adapters.adapter.BaseSpaceAdapter.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_core.spaces.adapters.adapter.BaseSpaceAdapter.inverse_transform">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">inverse_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">configurations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#mlos_core.spaces.adapters.adapter.BaseSpaceAdapter.inverse_transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Translates a configuration, which belongs to the original parameter space, to the target parameter space.
+This method is called by the <cite>register</cite> method of the <cite>BaseOptimizer</cite> class, and performs the inverse operation
+of <cite>BaseSpaceAdapter.transform</cite> method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>configurations</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Dataframe of configurations / parameters, which belong to the original parameter space.
+The columns are the parameter names the original parameter space and the rows are the configurations.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>configurations</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Dataframe of the translated configurations / parameters.
+The columns are the parameter names of the target parameter space and the rows are the configurations.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="mlos_core.spaces.adapters.adapter.BaseSpaceAdapter.orig_parameter_space">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">orig_parameter_space</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ConfigurationSpace</span></em><a class="headerlink" href="#mlos_core.spaces.adapters.adapter.BaseSpaceAdapter.orig_parameter_space" title="Permalink to this definition">¶</a></dt>
+<dd><p>Original (user-provided) parameter space to explore.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="mlos_core.spaces.adapters.adapter.BaseSpaceAdapter.target_parameter_space">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">target_parameter_space</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ConfigurationSpace</span></em><a class="headerlink" href="#mlos_core.spaces.adapters.adapter.BaseSpaceAdapter.target_parameter_space" title="Permalink to this definition">¶</a></dt>
+<dd><p>Target parameter space that is fed to the underlying optimizer.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_core.spaces.adapters.adapter.BaseSpaceAdapter.transform">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">configuration</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#mlos_core.spaces.adapters.adapter.BaseSpaceAdapter.transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Translates a configuration, which belongs to the target parameter space, to the original parameter space.
+This method is called by the <cite>suggest</cite> method of the <cite>BaseOptimizer</cite> class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>configuration</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Pandas dataframe with a single row. Column names are the parameter names of the target parameter space.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>configuration</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Pandas dataframe with a single row, containing the translated configuration.
+Column names are the parameter names of the original parameter space.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div style='clear:both'></div></section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mlos_core.spaces.adapters.SpaceAdapterFactory.create.html" class="btn btn-neutral float-left" title="mlos_core.spaces.adapters.SpaceAdapterFactory.create" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mlos_core.spaces.adapters.llamatune.LlamaTuneAdapter.html" class="btn btn-neutral float-right" title="mlos_core.spaces.adapters.llamatune.LlamaTuneAdapter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, GSL.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

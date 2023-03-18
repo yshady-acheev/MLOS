@@ -1,7 +1,0 @@
-mlos.Optimizers.ParetoFrontier
-==============================
-
-.. automodule:: mlos.Optimizers.ParetoFrontier
-   :members:
-   :undoc-members:
-   :show-inheritance:

@@ -1,7 +1,0 @@
-mlos.OptimizerMonitoring.Tomograph.ObservationsDataSource
-=========================================================
-
-.. automodule:: mlos.OptimizerMonitoring.Tomograph.ObservationsDataSource
-   :members:
-   :undoc-members:
-   :show-inheritance:

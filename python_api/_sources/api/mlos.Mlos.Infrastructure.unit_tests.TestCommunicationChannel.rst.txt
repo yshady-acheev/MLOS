@@ -1,7 +1,0 @@
-mlos.Mlos.Infrastructure.unit\_tests.TestCommunicationChannel
-=============================================================
-
-.. automodule:: mlos.Mlos.Infrastructure.unit_tests.TestCommunicationChannel
-   :members:
-   :undoc-members:
-   :show-inheritance:

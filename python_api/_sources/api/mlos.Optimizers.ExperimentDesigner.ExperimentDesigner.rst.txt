@@ -1,7 +1,0 @@
-mlos.Optimizers.ExperimentDesigner.ExperimentDesigner
-=====================================================
-
-.. automodule:: mlos.Optimizers.ExperimentDesigner.ExperimentDesigner
-   :members:
-   :undoc-members:
-   :show-inheritance:

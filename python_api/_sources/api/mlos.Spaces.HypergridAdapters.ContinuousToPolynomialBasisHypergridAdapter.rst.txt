@@ -1,7 +1,0 @@
-mlos.Spaces.HypergridAdapters.ContinuousToPolynomialBasisHypergridAdapter
-=========================================================================
-
-.. automodule:: mlos.Spaces.HypergridAdapters.ContinuousToPolynomialBasisHypergridAdapter
-   :members:
-   :undoc-members:
-   :show-inheritance:

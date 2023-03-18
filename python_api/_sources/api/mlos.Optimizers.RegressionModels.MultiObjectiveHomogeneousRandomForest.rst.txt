@@ -1,7 +1,0 @@
-mlos.Optimizers.RegressionModels.MultiObjectiveHomogeneousRandomForest
-======================================================================
-
-.. automodule:: mlos.Optimizers.RegressionModels.MultiObjectiveHomogeneousRandomForest
-   :members:
-   :undoc-members:
-   :show-inheritance:

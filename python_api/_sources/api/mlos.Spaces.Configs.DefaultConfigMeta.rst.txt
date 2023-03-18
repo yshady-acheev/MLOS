@@ -1,7 +1,0 @@
-mlos.Spaces.Configs.DefaultConfigMeta
-=====================================
-
-.. automodule:: mlos.Spaces.Configs.DefaultConfigMeta
-   :members:
-   :undoc-members:
-   :show-inheritance:

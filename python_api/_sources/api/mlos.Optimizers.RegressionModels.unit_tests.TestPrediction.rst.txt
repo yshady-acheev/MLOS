@@ -1,7 +1,0 @@
-mlos.Optimizers.RegressionModels.unit\_tests.TestPrediction
-===========================================================
-
-.. automodule:: mlos.Optimizers.RegressionModels.unit_tests.TestPrediction
-   :members:
-   :undoc-members:
-   :show-inheritance:

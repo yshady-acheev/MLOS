@@ -1,0 +1,16 @@
+﻿:mod:`mlos_core.optimizers.random_optimizer`.RandomOptimizer
+===================================================================
+
+.. currentmodule:: mlos_core.optimizers.random_optimizer
+
+.. autoclass:: RandomOptimizer
+
+   
+   .. automethod:: __init__
+   
+
+.. include:: mlos_core.optimizers.random_optimizer.RandomOptimizer.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

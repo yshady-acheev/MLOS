@@ -1,0 +1,26 @@
+mlos\_bench.service package
+===========================
+
+.. automodule:: mlos_bench.service
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   mlos_bench.service.local
+   mlos_bench.service.remote
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   mlos_bench.service.base_fileshare
+   mlos_bench.service.base_service
+   mlos_bench.service.config_persistence

@@ -1,7 +1,0 @@
-mlos.OptimizerEvaluationTools.SyntheticFunctions.PolynomialObjectiveWrapper
-===========================================================================
-
-.. automodule:: mlos.OptimizerEvaluationTools.SyntheticFunctions.PolynomialObjectiveWrapper
-   :members:
-   :undoc-members:
-   :show-inheritance:

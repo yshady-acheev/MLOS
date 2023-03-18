@@ -1,7 +1,0 @@
-mlos.OptimizerEvaluationTools.unit\_tests.TestObjectiveFunctionFactory
-======================================================================
-
-.. automodule:: mlos.OptimizerEvaluationTools.unit_tests.TestObjectiveFunctionFactory
-   :members:
-   :undoc-members:
-   :show-inheritance:

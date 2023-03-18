@@ -1,7 +1,0 @@
-mlos.Spaces.unit\_tests.TestCategoricalDimension
-================================================
-
-.. automodule:: mlos.Spaces.unit_tests.TestCategoricalDimension
-   :members:
-   :undoc-members:
-   :show-inheritance:

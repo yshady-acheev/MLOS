@@ -1,7 +1,0 @@
-mlos.Spaces.unit\_tests.TestHypergridJsonEncoderDecoderForDimensions
-====================================================================
-
-.. automodule:: mlos.Spaces.unit_tests.TestHypergridJsonEncoderDecoderForDimensions
-   :members:
-   :undoc-members:
-   :show-inheritance:

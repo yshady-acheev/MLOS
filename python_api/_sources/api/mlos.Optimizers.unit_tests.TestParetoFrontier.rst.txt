@@ -1,7 +1,0 @@
-mlos.Optimizers.unit\_tests.TestParetoFrontier
-==============================================
-
-.. automodule:: mlos.Optimizers.unit_tests.TestParetoFrontier
-   :members:
-   :undoc-members:
-   :show-inheritance:

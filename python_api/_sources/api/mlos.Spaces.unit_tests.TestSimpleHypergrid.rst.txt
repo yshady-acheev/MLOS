@@ -1,7 +1,0 @@
-mlos.Spaces.unit\_tests.TestSimpleHypergrid
-===========================================
-
-.. automodule:: mlos.Spaces.unit_tests.TestSimpleHypergrid
-   :members:
-   :undoc-members:
-   :show-inheritance:

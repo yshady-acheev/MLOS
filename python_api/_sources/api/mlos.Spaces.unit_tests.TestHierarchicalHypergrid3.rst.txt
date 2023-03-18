@@ -1,7 +1,0 @@
-mlos.Spaces.unit\_tests.TestHierarchicalHypergrid3
-==================================================
-
-.. automodule:: mlos.Spaces.unit_tests.TestHierarchicalHypergrid3
-   :members:
-   :undoc-members:
-   :show-inheritance:

@@ -1,7 +1,0 @@
-mlos.Spaces.unit\_tests.TestDimensions
-======================================
-
-.. automodule:: mlos.Spaces.unit_tests.TestDimensions
-   :members:
-   :undoc-members:
-   :show-inheritance:

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mlos_bench.tunables.Tunable &mdash; MlosCore 0.0.4 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/plot_directive.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="mlos_bench.tunables.TunableGroups" href="mlos_bench.tunables.TunableGroups.html" />
+    <link rel="prev" title="mlos_bench.environment.remote.VMEnv" href="mlos_bench.environment.remote.VMEnv.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MlosCore
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">mlos-core API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../overview.html#mlos-bench-api">mlos-bench API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#main">Main</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#benchmark-environments">Benchmark Environments</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../overview.html#tunable-parameters">Tunable Parameters</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.tunables</span></code>.Tunable</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#mlos_bench.tunables.Tunable"><code class="docutils literal notranslate"><span class="pre">Tunable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.tunables.TunableGroups.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.tunables</span></code>.TunableGroups</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#service-mix-ins">Service Mix-ins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#optimizer-adapters">Optimizer Adapters</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/mlos_core/modules.html">mlos_core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/mlos_bench/modules.html">mlos_bench</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MlosCore</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../overview.html">mlos-core API</a></li>
+      <li class="breadcrumb-item active"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.tunables</span></code>.Tunable</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/mlos_bench.tunables.Tunable.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mlos-bench-tunables-tunable">
+<h1><a class="reference internal" href="../api/mlos_bench/mlos_bench.tunables.html#module-mlos_bench.tunables" title="mlos_bench.tunables"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.tunables</span></code></a>.Tunable<a class="headerlink" href="#mlos-bench-tunables-tunable" title="Permalink to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="mlos_bench.tunables.Tunable">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.tunables.</span></span><span class="sig-name descname"><span class="pre">Tunable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.tunables.Tunable" title="Permalink to this definition">¶</a></dt>
+<dd><p>A tunable parameter definition and its current value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference internal" href="#mlos_bench.tunables.Tunable.categorical_values" title="mlos_bench.tunables.Tunable.categorical_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">categorical_values</span></code></a></dt><dd><p>Get the list of all possible values of a categorical tunable.</p>
+</dd>
+<dt><a class="reference internal" href="#mlos_bench.tunables.Tunable.name" title="mlos_bench.tunables.Tunable.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></dt><dd><p>Get the name / string ID of the tunable.</p>
+</dd>
+<dt><a class="reference internal" href="#mlos_bench.tunables.Tunable.range" title="mlos_bench.tunables.Tunable.range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">range</span></code></a></dt><dd><p>Get the range of the tunable if it is numerical, None otherwise.</p>
+</dd>
+<dt><a class="reference internal" href="#mlos_bench.tunables.Tunable.type" title="mlos_bench.tunables.Tunable.type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></a></dt><dd><p>Get the data type of the tunable.</p>
+</dd>
+<dt><a class="reference internal" href="#mlos_bench.tunables.Tunable.value" title="mlos_bench.tunables.Tunable.value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">value</span></code></a></dt><dd><p>Get the current value of the tunable.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.tunables.Tunable.copy" title="mlos_bench.tunables.Tunable.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a>()</p></td>
+<td><p>Deep copy of the Tunable object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.tunables.Tunable.is_valid" title="mlos_bench.tunables.Tunable.is_valid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_valid</span></code></a>(value)</p></td>
+<td><p>Check if the value can be assigned to the tunable.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.tunables.Tunable.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.tunables.Tunable.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an instance of a new tunable parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong><span class="classifier">str</span></dt><dd><p>Human-readable identifier of the tunable parameter.</p>
+</dd>
+<dt><strong>config</strong><span class="classifier">dict</span></dt><dd><p>Python dict that represents a Tunable (e.g., deserialized from JSON)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="mlos_bench.tunables.Tunable.categorical_values">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">categorical_values</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#mlos_bench.tunables.Tunable.categorical_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the list of all possible values of a categorical tunable.
+Return None if the tunable is not categorical.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>values</strong><span class="classifier">List[str]</span></dt><dd><p>List of all possible values of a categorical tunable.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.tunables.Tunable.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.tunables.Tunable.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deep copy of the Tunable object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>tunable</strong><span class="classifier">Tunable</span></dt><dd><p>A new Tunable object that is a deep copy of the original one.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.tunables.Tunable.is_valid">
+<span class="sig-name descname"><span class="pre">is_valid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#mlos_bench.tunables.Tunable.is_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the value can be assigned to the tunable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>value</strong><span class="classifier">Any</span></dt><dd><p>Value to validate.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>is_valid</strong><span class="classifier">bool</span></dt><dd><p>True if the value is valid, False otherwise.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="mlos_bench.tunables.Tunable.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#mlos_bench.tunables.Tunable.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the name / string ID of the tunable.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="mlos_bench.tunables.Tunable.range">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">range</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#mlos_bench.tunables.Tunable.range" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the range of the tunable if it is numerical, None otherwise.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>range</strong><span class="classifier">(number, number)</span></dt><dd><p>A 2-tuple of numbers that represents the range of the tunable.
+Numbers can be int or float, depending on the type of the tunable.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="mlos_bench.tunables.Tunable.type">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#mlos_bench.tunables.Tunable.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the data type of the tunable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>type</strong><span class="classifier">str</span></dt><dd><p>Data type of the tunable - one of {‘int’, ‘float’, ‘categorical’}.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="mlos_bench.tunables.Tunable.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#mlos_bench.tunables.Tunable.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current value of the tunable.</p>
+</dd></dl>
+
+</dd></dl>
+
+<div style='clear:both'></div></section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mlos_bench.environment.remote.VMEnv.html" class="btn btn-neutral float-left" title="mlos_bench.environment.remote.VMEnv" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mlos_bench.tunables.TunableGroups.html" class="btn btn-neutral float-right" title="mlos_bench.tunables.TunableGroups" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, GSL.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

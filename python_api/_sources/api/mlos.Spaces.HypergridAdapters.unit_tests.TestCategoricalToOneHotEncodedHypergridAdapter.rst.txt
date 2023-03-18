@@ -1,7 +1,0 @@
-mlos.Spaces.HypergridAdapters.unit\_tests.TestCategoricalToOneHotEncodedHypergridAdapter
-========================================================================================
-
-.. automodule:: mlos.Spaces.HypergridAdapters.unit_tests.TestCategoricalToOneHotEncodedHypergridAdapter
-   :members:
-   :undoc-members:
-   :show-inheritance:

@@ -1,7 +1,0 @@
-mlos.Spaces.Dimensions.EmptyDimension
-=====================================
-
-.. automodule:: mlos.Spaces.Dimensions.EmptyDimension
-   :members:
-   :undoc-members:
-   :show-inheritance:

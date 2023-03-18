@@ -1,0 +1,16 @@
+﻿:mod:`mlos_bench.service.remote.azure`.AzureFileShareService
+===================================================================
+
+.. currentmodule:: mlos_bench.service.remote.azure
+
+.. autoclass:: AzureFileShareService
+
+   
+   .. automethod:: __init__
+   
+
+.. include:: mlos_bench.service.remote.azure.AzureFileShareService.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

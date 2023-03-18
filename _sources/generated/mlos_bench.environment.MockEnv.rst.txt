@@ -1,0 +1,16 @@
+﻿:mod:`mlos_bench.environment`.MockEnv
+============================================
+
+.. currentmodule:: mlos_bench.environment
+
+.. autoclass:: MockEnv
+
+   
+   .. automethod:: __init__
+   
+
+.. include:: mlos_bench.environment.MockEnv.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

@@ -1,7 +1,0 @@
-mlos.Optimizers.ExperimentDesigner.UtilityFunctions.MultiObjectiveProbabilityOfImprovementUtilityFunction
-=========================================================================================================
-
-.. automodule:: mlos.Optimizers.ExperimentDesigner.UtilityFunctions.MultiObjectiveProbabilityOfImprovementUtilityFunction
-   :members:
-   :undoc-members:
-   :show-inheritance:

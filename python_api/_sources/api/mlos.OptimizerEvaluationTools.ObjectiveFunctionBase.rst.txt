@@ -1,7 +1,0 @@
-mlos.OptimizerEvaluationTools.ObjectiveFunctionBase
-===================================================
-
-.. automodule:: mlos.OptimizerEvaluationTools.ObjectiveFunctionBase
-   :members:
-   :undoc-members:
-   :show-inheritance:

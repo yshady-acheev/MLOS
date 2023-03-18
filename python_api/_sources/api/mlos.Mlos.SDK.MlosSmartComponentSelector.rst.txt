@@ -1,7 +1,0 @@
-mlos.Mlos.SDK.MlosSmartComponentSelector
-========================================
-
-.. automodule:: mlos.Mlos.SDK.MlosSmartComponentSelector
-   :members:
-   :undoc-members:
-   :show-inheritance:

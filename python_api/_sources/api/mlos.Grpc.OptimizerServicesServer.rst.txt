@@ -1,7 +1,0 @@
-mlos.Grpc.OptimizerServicesServer
-=================================
-
-.. automodule:: mlos.Grpc.OptimizerServicesServer
-   :members:
-   :undoc-members:
-   :show-inheritance:

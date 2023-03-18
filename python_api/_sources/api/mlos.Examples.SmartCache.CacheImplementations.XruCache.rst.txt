@@ -1,7 +1,0 @@
-mlos.Examples.SmartCache.CacheImplementations.XruCache
-======================================================
-
-.. automodule:: mlos.Examples.SmartCache.CacheImplementations.XruCache
-   :members:
-   :undoc-members:
-   :show-inheritance:

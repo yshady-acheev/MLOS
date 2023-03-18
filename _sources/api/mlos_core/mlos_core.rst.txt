@@ -1,0 +1,16 @@
+mlos\_core package
+==================
+
+.. automodule:: mlos_core
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   mlos_core.optimizers
+   mlos_core.spaces

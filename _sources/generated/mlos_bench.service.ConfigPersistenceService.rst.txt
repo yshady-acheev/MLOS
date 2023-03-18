@@ -1,0 +1,16 @@
+﻿:mod:`mlos_bench.service`.ConfigPersistenceService
+=========================================================
+
+.. currentmodule:: mlos_bench.service
+
+.. autoclass:: ConfigPersistenceService
+
+   
+   .. automethod:: __init__
+   
+
+.. include:: mlos_bench.service.ConfigPersistenceService.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

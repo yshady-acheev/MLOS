@@ -1,7 +1,0 @@
-mlos.Spaces.Dimensions.DiscreteDimension
-========================================
-
-.. automodule:: mlos.Spaces.Dimensions.DiscreteDimension
-   :members:
-   :undoc-members:
-   :show-inheritance:

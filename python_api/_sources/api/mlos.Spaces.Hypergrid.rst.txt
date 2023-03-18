@@ -1,7 +1,0 @@
-mlos.Spaces.Hypergrid
-=====================
-
-.. automodule:: mlos.Spaces.Hypergrid
-   :members:
-   :undoc-members:
-   :show-inheritance:

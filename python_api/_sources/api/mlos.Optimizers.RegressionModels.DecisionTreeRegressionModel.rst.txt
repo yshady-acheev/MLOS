@@ -1,7 +1,0 @@
-mlos.Optimizers.RegressionModels.DecisionTreeRegressionModel
-============================================================
-
-.. automodule:: mlos.Optimizers.RegressionModels.DecisionTreeRegressionModel
-   :members:
-   :undoc-members:
-   :show-inheritance:

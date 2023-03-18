@@ -1,7 +1,0 @@
-mlos.OptimizerMonitoring.Tomograph.ModelTomograph
-=================================================
-
-.. automodule:: mlos.OptimizerMonitoring.Tomograph.ModelTomograph
-   :members:
-   :undoc-members:
-   :show-inheritance:

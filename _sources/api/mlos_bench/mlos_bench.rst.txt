@@ -1,0 +1,29 @@
+mlos\_bench package
+===================
+
+.. automodule:: mlos_bench
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   mlos_bench.environment
+   mlos_bench.optimizer
+   mlos_bench.service
+   mlos_bench.tunables
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   mlos_bench.launcher
+   mlos_bench.run_bench
+   mlos_bench.run_opt
+   mlos_bench.util

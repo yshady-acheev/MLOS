@@ -1,0 +1,7 @@
+mlos\_core.spaces.adapters.adapter module
+=========================================
+
+.. automodule:: mlos_core.spaces.adapters.adapter
+   :members:
+   :undoc-members:
+   :show-inheritance:

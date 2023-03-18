@@ -1,7 +1,0 @@
-mlos.global\_values
-===================
-
-.. automodule:: mlos.global_values
-   :members:
-   :undoc-members:
-   :show-inheritance:

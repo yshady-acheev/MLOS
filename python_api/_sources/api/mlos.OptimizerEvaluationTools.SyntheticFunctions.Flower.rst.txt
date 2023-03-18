@@ -1,7 +1,0 @@
-mlos.OptimizerEvaluationTools.SyntheticFunctions.Flower
-=======================================================
-
-.. automodule:: mlos.OptimizerEvaluationTools.SyntheticFunctions.Flower
-   :members:
-   :undoc-members:
-   :show-inheritance:

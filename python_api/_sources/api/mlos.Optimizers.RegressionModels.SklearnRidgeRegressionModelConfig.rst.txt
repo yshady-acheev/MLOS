@@ -1,7 +1,0 @@
-mlos.Optimizers.RegressionModels.SklearnRidgeRegressionModelConfig
-==================================================================
-
-.. automodule:: mlos.Optimizers.RegressionModels.SklearnRidgeRegressionModelConfig
-   :members:
-   :undoc-members:
-   :show-inheritance:

@@ -1,0 +1,16 @@
+﻿:mod:`mlos_bench.service.local`.LocalExecService
+=======================================================
+
+.. currentmodule:: mlos_bench.service.local
+
+.. autoclass:: LocalExecService
+
+   
+   .. automethod:: __init__
+   
+
+.. include:: mlos_bench.service.local.LocalExecService.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

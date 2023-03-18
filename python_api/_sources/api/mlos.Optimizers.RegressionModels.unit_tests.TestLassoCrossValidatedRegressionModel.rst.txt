@@ -1,7 +1,0 @@
-mlos.Optimizers.RegressionModels.unit\_tests.TestLassoCrossValidatedRegressionModel
-===================================================================================
-
-.. automodule:: mlos.Optimizers.RegressionModels.unit_tests.TestLassoCrossValidatedRegressionModel
-   :members:
-   :undoc-members:
-   :show-inheritance:

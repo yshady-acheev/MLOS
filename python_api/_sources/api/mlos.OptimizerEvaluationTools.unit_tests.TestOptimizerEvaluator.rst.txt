@@ -1,7 +1,0 @@
-mlos.OptimizerEvaluationTools.unit\_tests.TestOptimizerEvaluator
-================================================================
-
-.. automodule:: mlos.OptimizerEvaluationTools.unit_tests.TestOptimizerEvaluator
-   :members:
-   :undoc-members:
-   :show-inheritance:

@@ -1,0 +1,16 @@
+﻿:mod:`mlos_bench.environment.remote`.OSEnv
+=================================================
+
+.. currentmodule:: mlos_bench.environment.remote
+
+.. autoclass:: OSEnv
+
+   
+   .. automethod:: __init__
+   
+
+.. include:: mlos_bench.environment.remote.OSEnv.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

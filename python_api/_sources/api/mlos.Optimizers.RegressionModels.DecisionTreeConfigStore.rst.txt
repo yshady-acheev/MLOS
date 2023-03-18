@@ -1,7 +1,0 @@
-mlos.Optimizers.RegressionModels.DecisionTreeConfigStore
-========================================================
-
-.. automodule:: mlos.Optimizers.RegressionModels.DecisionTreeConfigStore
-   :members:
-   :undoc-members:
-   :show-inheritance:

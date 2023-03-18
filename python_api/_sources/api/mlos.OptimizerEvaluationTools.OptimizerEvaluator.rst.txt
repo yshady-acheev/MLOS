@@ -1,7 +1,0 @@
-mlos.OptimizerEvaluationTools.OptimizerEvaluator
-================================================
-
-.. automodule:: mlos.OptimizerEvaluationTools.OptimizerEvaluator
-   :members:
-   :undoc-members:
-   :show-inheritance:

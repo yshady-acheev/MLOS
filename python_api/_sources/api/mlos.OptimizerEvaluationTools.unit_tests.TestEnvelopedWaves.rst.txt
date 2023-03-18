@@ -1,7 +1,0 @@
-mlos.OptimizerEvaluationTools.unit\_tests.TestEnvelopedWaves
-============================================================
-
-.. automodule:: mlos.OptimizerEvaluationTools.unit_tests.TestEnvelopedWaves
-   :members:
-   :undoc-members:
-   :show-inheritance:

@@ -1,7 +1,0 @@
-mlos.Optimizers.BayesianOptimizerConvergenceState
-=================================================
-
-.. automodule:: mlos.Optimizers.BayesianOptimizerConvergenceState
-   :members:
-   :undoc-members:
-   :show-inheritance:

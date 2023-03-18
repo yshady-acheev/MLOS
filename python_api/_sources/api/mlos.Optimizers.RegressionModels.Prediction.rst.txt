@@ -1,7 +1,0 @@
-mlos.Optimizers.RegressionModels.Prediction
-===========================================
-
-.. automodule:: mlos.Optimizers.RegressionModels.Prediction
-   :members:
-   :undoc-members:
-   :show-inheritance:

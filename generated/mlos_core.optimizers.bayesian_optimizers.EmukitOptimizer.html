@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer &mdash; MlosCore 0.0.4 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/plot_directive.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="mlos_core.optimizers.bayesian_optimizers.SkoptOptimizer" href="mlos_core.optimizers.bayesian_optimizers.SkoptOptimizer.html" />
+    <link rel="prev" title="mlos_core.optimizers.bayesian_optimizers.BaseBayesianOptimizer" href="mlos_core.optimizers.bayesian_optimizers.BaseBayesianOptimizer.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MlosCore
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../overview.html">mlos-core API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../overview.html#optimizers">Optimizers</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="mlos_core.optimizers.OptimizerType.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.optimizers</span></code>.OptimizerType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_core.optimizers.OptimizerFactory.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.optimizers</span></code>.OptimizerFactory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_core.optimizers.OptimizerFactory.create.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.optimizers</span></code>.OptimizerFactory.create</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_core.optimizers.optimizer.BaseOptimizer.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.optimizers.optimizer</span></code>.BaseOptimizer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_core.optimizers.random_optimizer.RandomOptimizer.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.optimizers.random_optimizer</span></code>.RandomOptimizer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_core.optimizers.bayesian_optimizers.BaseBayesianOptimizer.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.optimizers.bayesian_optimizers</span></code>.BaseBayesianOptimizer</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.optimizers.bayesian_optimizers</span></code>.EmukitOptimizer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer"><code class="docutils literal notranslate"><span class="pre">EmukitOptimizer</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_core.optimizers.bayesian_optimizers.SkoptOptimizer.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.optimizers.bayesian_optimizers</span></code>.SkoptOptimizer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#spaces">Spaces</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html#mlos-bench-api">mlos-bench API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/mlos_core/modules.html">mlos_core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/mlos_bench/modules.html">mlos_bench</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MlosCore</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../overview.html">mlos-core API</a></li>
+      <li class="breadcrumb-item active"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.optimizers.bayesian_optimizers</span></code>.EmukitOptimizer</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mlos-core-optimizers-bayesian-optimizers-emukitoptimizer">
+<h1><a class="reference internal" href="../api/mlos_core/mlos_core.optimizers.bayesian_optimizers.html#module-mlos_core.optimizers.bayesian_optimizers" title="mlos_core.optimizers.bayesian_optimizers"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.optimizers.bayesian_optimizers</span></code></a>.EmukitOptimizer<a class="headerlink" href="#mlos-core-optimizers-bayesian-optimizers-emukitoptimizer" title="Permalink to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_core.optimizers.bayesian_optimizers.</span></span><span class="sig-name descname"><span class="pre">EmukitOptimizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameter_space</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ConfigurationSpace</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">space_adapter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_core.spaces.adapters.adapter.BaseSpaceAdapter.html#mlos_core.spaces.adapters.adapter.BaseSpaceAdapter" title="mlos_core.spaces.adapters.adapter.BaseSpaceAdapter"><span class="pre">BaseSpaceAdapter</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper class for Emukit based Bayesian optimization.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>parameter_space</strong><span class="classifier">ConfigSpace.ConfigurationSpace</span></dt><dd><p>The parameter space to optimize.</p>
+</dd>
+<dt><strong>space_adapter</strong><span class="classifier">BaseSpaceAdapter</span></dt><dd><p>The space adapter class to employ for parameter space transformations.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Attributes<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">space_adapter</span></code></dt><dd><p>Get the space adapter instance (if any).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.acquisition_function" title="mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.acquisition_function"><code class="xref py py-obj docutils literal notranslate"><span class="pre">acquisition_function</span></code></a>(configurations[, context])</p></td>
+<td><p>Invokes the acquisition function from this Bayesian optimizer for the given configuration.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_best_observation</span></code>()</p></td>
+<td><p>Returns the best observation so far as a dataframe.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_observations</span></code>()</p></td>
+<td><p>Returns the observations as a dataframe.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code>(configurations, scores[, context])</p></td>
+<td><p>Wrapper method, which employs the space adapter (if any), before registering the configurations and scores.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.register_pending" title="mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.register_pending"><code class="xref py py-obj docutils literal notranslate"><span class="pre">register_pending</span></code></a>(configurations[, context])</p></td>
+<td><p>Registers the given configurations as &quot;pending&quot;.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">suggest</span></code>([context])</p></td>
+<td><p>Wrapper method, which employs the space adapter (if any), after suggesting a new configuration.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.surrogate_predict" title="mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.surrogate_predict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">surrogate_predict</span></code></a>(configurations[, context])</p></td>
+<td><p>Obtain a prediction from this Bayesian optimizer's surrogate model for the given configuration(s).</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameter_space</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ConfigurationSpace</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">space_adapter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_core.spaces.adapters.adapter.BaseSpaceAdapter.html#mlos_core.spaces.adapters.adapter.BaseSpaceAdapter" title="mlos_core.spaces.adapters.adapter.BaseSpaceAdapter"><span class="pre">BaseSpaceAdapter</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.acquisition_function">
+<span class="sig-name descname"><span class="pre">acquisition_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">configurations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.acquisition_function" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invokes the acquisition function from this Bayesian optimizer for the given configuration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>configurations</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Dataframe of configurations / parameters. The columns are parameter names and the rows are the configurations.</p>
+</dd>
+<dt><strong>context</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Not Yet Implemented.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.register_pending">
+<span class="sig-name descname"><span class="pre">register_pending</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">configurations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.register_pending" title="Permalink to this definition">¶</a></dt>
+<dd><p>Registers the given configurations as “pending”.
+That is it say, it has been suggested by the optimizer, and an experiment trial has been started.
+This can be useful for executing multiple trials in parallel, retry logic, etc.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>configurations</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Dataframe of configurations / parameters. The columns are parameter names and the rows are the configurations.</p>
+</dd>
+<dt><strong>context</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Not Yet Implemented.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.surrogate_predict">
+<span class="sig-name descname"><span class="pre">surrogate_predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">configurations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.surrogate_predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtain a prediction from this Bayesian optimizer’s surrogate model for the given configuration(s).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>configurations</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Dataframe of configurations / parameters. The columns are parameter names and the rows are the configurations.</p>
+</dd>
+<dt><strong>context</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Not Yet Implemented.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div style='clear:both'></div></section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mlos_core.optimizers.bayesian_optimizers.BaseBayesianOptimizer.html" class="btn btn-neutral float-left" title="mlos_core.optimizers.bayesian_optimizers.BaseBayesianOptimizer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mlos_core.optimizers.bayesian_optimizers.SkoptOptimizer.html" class="btn btn-neutral float-right" title="mlos_core.optimizers.bayesian_optimizers.SkoptOptimizer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, GSL.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

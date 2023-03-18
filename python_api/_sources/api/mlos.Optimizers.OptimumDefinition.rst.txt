@@ -1,7 +1,0 @@
-mlos.Optimizers.OptimumDefinition
-=================================
-
-.. automodule:: mlos.Optimizers.OptimumDefinition
-   :members:
-   :undoc-members:
-   :show-inheritance:

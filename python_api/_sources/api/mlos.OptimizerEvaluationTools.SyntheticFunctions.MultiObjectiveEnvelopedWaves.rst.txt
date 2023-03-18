@@ -1,7 +1,0 @@
-mlos.OptimizerEvaluationTools.SyntheticFunctions.MultiObjectiveEnvelopedWaves
-=============================================================================
-
-.. automodule:: mlos.OptimizerEvaluationTools.SyntheticFunctions.MultiObjectiveEnvelopedWaves
-   :members:
-   :undoc-members:
-   :show-inheritance:

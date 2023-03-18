@@ -1,7 +1,0 @@
-mlos.Mlos.SDK.unit\_tests.TestMlosObject
-========================================
-
-.. automodule:: mlos.Mlos.SDK.unit_tests.TestMlosObject
-   :members:
-   :undoc-members:
-   :show-inheritance:

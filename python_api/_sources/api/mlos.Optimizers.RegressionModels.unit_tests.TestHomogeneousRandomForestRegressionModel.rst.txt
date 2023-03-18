@@ -1,7 +1,0 @@
-mlos.Optimizers.RegressionModels.unit\_tests.TestHomogeneousRandomForestRegressionModel
-=======================================================================================
-
-.. automodule:: mlos.Optimizers.RegressionModels.unit_tests.TestHomogeneousRandomForestRegressionModel
-   :members:
-   :undoc-members:
-   :show-inheritance:

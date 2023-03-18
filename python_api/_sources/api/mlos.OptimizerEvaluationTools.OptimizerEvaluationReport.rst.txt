@@ -1,7 +1,0 @@
-mlos.OptimizerEvaluationTools.OptimizerEvaluationReport
-=======================================================
-
-.. automodule:: mlos.OptimizerEvaluationTools.OptimizerEvaluationReport
-   :members:
-   :undoc-members:
-   :show-inheritance:

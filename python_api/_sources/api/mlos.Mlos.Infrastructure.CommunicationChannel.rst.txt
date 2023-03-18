@@ -1,7 +1,0 @@
-mlos.Mlos.Infrastructure.CommunicationChannel
-=============================================
-
-.. automodule:: mlos.Mlos.Infrastructure.CommunicationChannel
-   :members:
-   :undoc-members:
-   :show-inheritance:

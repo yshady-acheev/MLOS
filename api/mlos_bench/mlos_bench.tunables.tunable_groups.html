@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mlos_bench.tunables.tunable_groups module &mdash; MlosCore 0.0.4 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="mlos_bench.launcher module" href="mlos_bench.launcher.html" />
+    <link rel="prev" title="mlos_bench.tunables.tunable module" href="mlos_bench.tunables.tunable.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            MlosCore
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html">mlos-core API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html#mlos-bench-api">mlos-bench API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../mlos_core/modules.html">mlos_core</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">mlos_bench</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="mlos_bench.html">mlos_bench package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="mlos_bench.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.environment.html">mlos_bench.environment package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.optimizer.html">mlos_bench.optimizer package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.service.html">mlos_bench.service package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="mlos_bench.tunables.html">mlos_bench.tunables package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.html#submodules">Submodules</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">MlosCore</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">mlos_bench</a></li>
+          <li class="breadcrumb-item"><a href="mlos_bench.html">mlos_bench package</a></li>
+          <li class="breadcrumb-item"><a href="mlos_bench.tunables.html">mlos_bench.tunables package</a></li>
+      <li class="breadcrumb-item active">mlos_bench.tunables.tunable_groups module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/api/mlos_bench/mlos_bench.tunables.tunable_groups.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-mlos_bench.tunables.tunable_groups">
+<span id="mlos-bench-tunables-tunable-groups-module"></span><h1>mlos_bench.tunables.tunable_groups module<a class="headerlink" href="#module-mlos_bench.tunables.tunable_groups" title="Permalink to this heading">¶</a></h1>
+<p>TunableGroups definition.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="mlos_bench.tunables.tunable_groups.TunableGroups">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.tunables.tunable_groups.</span></span><span class="sig-name descname"><span class="pre">TunableGroups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.tunables.tunable_groups.TunableGroups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A collection of covariant groups of tunable parameters.</p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.tunables.tunable_groups.TunableGroups.assign" title="mlos_bench.tunables.tunable_groups.TunableGroups.assign"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assign</span></code></a>(param_values)</p></td>
+<td><p>In-place update the values of the tunables from the dictionary of (key, value) pairs.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.tunables.tunable_groups.TunableGroups.copy" title="mlos_bench.tunables.tunable_groups.TunableGroups.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a>()</p></td>
+<td><p>Deep copy of the TunableGroups object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.tunables.tunable_groups.TunableGroups.get_names" title="mlos_bench.tunables.tunable_groups.TunableGroups.get_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_names</span></code></a>()</p></td>
+<td><p>Get the names of all covariance groups in the collection.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.tunables.tunable_groups.TunableGroups.get_param_values" title="mlos_bench.tunables.tunable_groups.TunableGroups.get_param_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_param_values</span></code></a>([group_names, into_params])</p></td>
+<td><p>Get the current values of the tunables that belong to the specified covariance groups.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.tunables.tunable_groups.TunableGroups.get_tunable" title="mlos_bench.tunables.tunable_groups.TunableGroups.get_tunable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_tunable</span></code></a>(name)</p></td>
+<td><p>Access the entire Tunable (not just its value) and its covariant group.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.tunables.tunable_groups.TunableGroups.is_updated" title="mlos_bench.tunables.tunable_groups.TunableGroups.is_updated"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_updated</span></code></a>([group_names])</p></td>
+<td><p>Check if any of the given covariant tunable groups has been updated.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.tunables.tunable_groups.TunableGroups.reset" title="mlos_bench.tunables.tunable_groups.TunableGroups.reset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset</span></code></a>([group_names])</p></td>
+<td><p>Clear the update flag of given covariant groups.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.tunables.tunable_groups.TunableGroups.subgroup" title="mlos_bench.tunables.tunable_groups.TunableGroups.subgroup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subgroup</span></code></a>(group_names)</p></td>
+<td><p>Select the covariance groups from the current set and create a new TunableGroups object that consists of those covariance groups.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.tunables.tunable_groups.TunableGroups.update" title="mlos_bench.tunables.tunable_groups.TunableGroups.update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update</span></code></a>(tunables)</p></td>
+<td><p>Merge the two collections of covariant tunable groups.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.tunables.tunable_groups.TunableGroups.assign">
+<span class="sig-name descname"><span class="pre">assign</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">param_values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.tunables.tunable_groups.TunableGroups.assign" title="Permalink to this definition">¶</a></dt>
+<dd><p>In-place update the values of the tunables from the dictionary
+of (key, value) pairs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>param_values</strong><span class="classifier">Dict[str, Any]</span></dt><dd><p>Dictionary mapping Tunable parameter names to new values.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>self</strong><span class="classifier">TunableGroups</span></dt><dd><p>Self-reference for chaining.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.tunables.tunable_groups.TunableGroups.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.tunables.tunable_groups.TunableGroups.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deep copy of the TunableGroups object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>tunables</strong><span class="classifier">TunableGroups</span></dt><dd><p>A new instance of the TunableGroups object
+that is a deep copy of the original one.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.tunables.tunable_groups.TunableGroups.get_names">
+<span class="sig-name descname"><span class="pre">get_names</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.tunables.tunable_groups.TunableGroups.get_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the names of all covariance groups in the collection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>group_names</strong><span class="classifier">[str]</span></dt><dd><p>IDs of the covariant tunable groups.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.tunables.tunable_groups.TunableGroups.get_param_values">
+<span class="sig-name descname"><span class="pre">get_param_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group_names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">into_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.tunables.tunable_groups.TunableGroups.get_param_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current values of the tunables that belong to the specified covariance groups.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>group_names</strong><span class="classifier">list of str or None</span></dt><dd><p>IDs of the covariant tunable groups.
+Select parameters from all groups if omitted.</p>
+</dd>
+<dt><strong>into_params</strong><span class="classifier">dict</span></dt><dd><p>An optional dict to copy the parameters and their values into.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>into_params</strong><span class="classifier">dict</span></dt><dd><p>Flat dict of all parameters and their values from given covariance groups.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.tunables.tunable_groups.TunableGroups.get_tunable">
+<span class="sig-name descname"><span class="pre">get_tunable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.tunables.tunable.html#mlos_bench.tunables.tunable.Tunable" title="mlos_bench.tunables.tunable.Tunable"><span class="pre">Tunable</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="mlos_bench.tunables.covariant_group.html#mlos_bench.tunables.covariant_group.CovariantTunableGroup" title="mlos_bench.tunables.covariant_group.CovariantTunableGroup"><span class="pre">CovariantTunableGroup</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.tunables.tunable_groups.TunableGroups.get_tunable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Access the entire Tunable (not just its value) and its covariant group.
+Throw KeyError if the tunable is not found.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong><span class="classifier">str</span></dt><dd><p>Name of the tunable parameter.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>(tunable, group)</strong><span class="classifier">(Tunable, CovariantTunableGroup)</span></dt><dd><p>A 2-tuple of an instance of the Tunable parameter and covariant group it belongs to.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.tunables.tunable_groups.TunableGroups.is_updated">
+<span class="sig-name descname"><span class="pre">is_updated</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group_names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#mlos_bench.tunables.tunable_groups.TunableGroups.is_updated" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if any of the given covariant tunable groups has been updated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>group_names</strong><span class="classifier">list of str or None</span></dt><dd><p>IDs of the (covariant) tunable groups. Check all groups if omitted.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>is_updated</strong><span class="classifier">bool</span></dt><dd><p>True if any of the specified tunable groups has been updated, False otherwise.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.tunables.tunable_groups.TunableGroups.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group_names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.tunables.tunable_groups.TunableGroups.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear the update flag of given covariant groups.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>group_names</strong><span class="classifier">list of str or None</span></dt><dd><p>IDs of the (covariant) tunable groups. Reset all groups if omitted.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>self</strong><span class="classifier">TunableGroups</span></dt><dd><p>Self-reference for chaining.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.tunables.tunable_groups.TunableGroups.subgroup">
+<span class="sig-name descname"><span class="pre">subgroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group_names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.tunables.tunable_groups.TunableGroups.subgroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select the covariance groups from the current set and create a new
+TunableGroups object that consists of those covariance groups.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>group_names</strong><span class="classifier">list of str</span></dt><dd><p>IDs of the covariant tunable groups.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>tunables</strong><span class="classifier">TunableGroups</span></dt><dd><p>A collection of covariant tunable groups.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.tunables.tunable_groups.TunableGroups.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tunables</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.tunables.tunable_groups.TunableGroups.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Merge the two collections of covariant tunable groups.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>tunables</strong><span class="classifier">TunableGroups</span></dt><dd><p>A collection of covariant tunable groups.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>self</strong><span class="classifier">TunableGroups</span></dt><dd><p>Self-reference for chaining.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mlos_bench.tunables.tunable.html" class="btn btn-neutral float-left" title="mlos_bench.tunables.tunable module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mlos_bench.launcher.html" class="btn btn-neutral float-right" title="mlos_bench.launcher module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, GSL.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

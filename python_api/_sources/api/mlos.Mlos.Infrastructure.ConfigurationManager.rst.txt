@@ -1,7 +1,0 @@
-mlos.Mlos.Infrastructure.ConfigurationManager
-=============================================
-
-.. automodule:: mlos.Mlos.Infrastructure.ConfigurationManager
-   :members:
-   :undoc-members:
-   :show-inheritance:

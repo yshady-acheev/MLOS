@@ -1,7 +1,0 @@
-mlos.OptimizerEvaluationTools.SyntheticFunctions.PolynomialObjective
-====================================================================
-
-.. automodule:: mlos.OptimizerEvaluationTools.SyntheticFunctions.PolynomialObjective
-   :members:
-   :undoc-members:
-   :show-inheritance:

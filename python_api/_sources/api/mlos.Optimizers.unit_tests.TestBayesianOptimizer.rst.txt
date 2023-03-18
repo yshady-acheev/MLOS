@@ -1,7 +1,0 @@
-mlos.Optimizers.unit\_tests.TestBayesianOptimizer
-=================================================
-
-.. automodule:: mlos.Optimizers.unit_tests.TestBayesianOptimizer
-   :members:
-   :undoc-members:
-   :show-inheritance:

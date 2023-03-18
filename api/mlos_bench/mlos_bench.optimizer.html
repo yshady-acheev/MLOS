@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mlos_bench.optimizer package &mdash; MlosCore 0.0.4 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="mlos_bench.optimizer.base_optimizer module" href="mlos_bench.optimizer.base_optimizer.html" />
+    <link rel="prev" title="mlos_bench.environment.status module" href="mlos_bench.environment.status.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            MlosCore
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html">mlos-core API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html#mlos-bench-api">mlos-bench API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../mlos_core/modules.html">mlos_core</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">mlos_bench</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="mlos_bench.html">mlos_bench package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="mlos_bench.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.environment.html">mlos_bench.environment package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">mlos_bench.optimizer package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.service.html">mlos_bench.service package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.tunables.html">mlos_bench.tunables package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.html#submodules">Submodules</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">MlosCore</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">mlos_bench</a></li>
+          <li class="breadcrumb-item"><a href="mlos_bench.html">mlos_bench package</a></li>
+      <li class="breadcrumb-item active">mlos_bench.optimizer package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/api/mlos_bench/mlos_bench.optimizer.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-mlos_bench.optimizer">
+<span id="mlos-bench-optimizer-package"></span><h1>mlos_bench.optimizer package<a class="headerlink" href="#module-mlos_bench.optimizer" title="Permalink to this heading">¶</a></h1>
+<p>Interfaces and wrapper classes for optimizers to be used in Autotune.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="mlos_bench.optimizer.MlosCoreOptimizer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.optimizer.</span></span><span class="sig-name descname"><span class="pre">MlosCoreOptimizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.optimizer.MlosCoreOptimizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="mlos_bench.optimizer.base_optimizer.html#mlos_bench.optimizer.base_optimizer.Optimizer" title="mlos_bench.optimizer.base_optimizer.Optimizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Optimizer</span></code></a></p>
+<p>A wrapper class for the mlos_core optimizers.</p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../generated/mlos_bench.optimizer.MlosCoreOptimizer.html#mlos_bench.optimizer.MlosCoreOptimizer.get_best_observation" title="mlos_bench.optimizer.MlosCoreOptimizer.get_best_observation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_best_observation</span></code></a>()</p></td>
+<td><p>Get the best observation so far.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code>(tunables, config[, global_config])</p></td>
+<td><p>Instantiate the Optimizer shim from the configuration.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">new</span></code>(class_name, tunables, config)</p></td>
+<td><p>Factory method for a new optimizer with a given config.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">not_converged</span></code>()</p></td>
+<td><p>Return True if not converged, False otherwise.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../generated/mlos_bench.optimizer.MlosCoreOptimizer.html#mlos_bench.optimizer.MlosCoreOptimizer.register" title="mlos_bench.optimizer.MlosCoreOptimizer.register"><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code></a>(tunables, status[, score])</p></td>
+<td><p>Register the observation for the given configuration.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../generated/mlos_bench.optimizer.MlosCoreOptimizer.html#mlos_bench.optimizer.MlosCoreOptimizer.suggest" title="mlos_bench.optimizer.MlosCoreOptimizer.suggest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">suggest</span></code></a>()</p></td>
+<td><p>Generate the next suggestion.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.optimizer.MlosCoreOptimizer.get_best_observation">
+<span class="sig-name descname"><span class="pre">get_best_observation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.optimizer.MlosCoreOptimizer.get_best_observation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the best observation so far.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>(value, tunables)</strong><span class="classifier">Tuple[float, TunableGroups]</span></dt><dd><p>The best value and the corresponding configuration.
+(None, None) if no successful observation has been registered yet.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.optimizer.MlosCoreOptimizer.register">
+<span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.environment.status.html#mlos_bench.environment.status.Status" title="mlos_bench.environment.status.Status"><span class="pre">Status</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.optimizer.MlosCoreOptimizer.register" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register the observation for the given configuration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>tunables</strong><span class="classifier">TunableGroups</span></dt><dd><p>The configuration that has been benchmarked.
+Usually it’s the same config that the <cite>.suggest()</cite> method returned.</p>
+</dd>
+<dt><strong>status</strong><span class="classifier">Status</span></dt><dd><p>Final status of the experiment (e.g., SUCCEEDED or FAILED).</p>
+</dd>
+<dt><strong>score</strong><span class="classifier">float</span></dt><dd><p>The benchmark result, or None if the experiment was not successful.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.optimizer.MlosCoreOptimizer.suggest">
+<span class="sig-name descname"><span class="pre">suggest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></span><a class="headerlink" href="#mlos_bench.optimizer.MlosCoreOptimizer.suggest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate the next suggestion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>tunables</strong><span class="classifier">TunableGroups</span></dt><dd><p>The next configuration to benchmark.
+These are the same tunables we pass to the constructor,
+but with the values set to the next suggestion.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="mlos_bench.optimizer.MockOptimizer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.optimizer.</span></span><span class="sig-name descname"><span class="pre">MockOptimizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.optimizer.MockOptimizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="mlos_bench.optimizer.base_optimizer.html#mlos_bench.optimizer.base_optimizer.Optimizer" title="mlos_bench.optimizer.base_optimizer.Optimizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Optimizer</span></code></a></p>
+<p>Mock optimizer to test the Environment API.</p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../generated/mlos_bench.optimizer.MockOptimizer.html#mlos_bench.optimizer.MockOptimizer.get_best_observation" title="mlos_bench.optimizer.MockOptimizer.get_best_observation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_best_observation</span></code></a>()</p></td>
+<td><p>Get the best observation so far.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code>(tunables, config[, global_config])</p></td>
+<td><p>Instantiate the Optimizer shim from the configuration.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">new</span></code>(class_name, tunables, config)</p></td>
+<td><p>Factory method for a new optimizer with a given config.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">not_converged</span></code>()</p></td>
+<td><p>Return True if not converged, False otherwise.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../generated/mlos_bench.optimizer.MockOptimizer.html#mlos_bench.optimizer.MockOptimizer.register" title="mlos_bench.optimizer.MockOptimizer.register"><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code></a>(tunables, status[, score])</p></td>
+<td><p>Register the observation for the given configuration.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../generated/mlos_bench.optimizer.MockOptimizer.html#mlos_bench.optimizer.MockOptimizer.suggest" title="mlos_bench.optimizer.MockOptimizer.suggest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">suggest</span></code></a>()</p></td>
+<td><p>Generate the next (random) suggestion.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.optimizer.MockOptimizer.get_best_observation">
+<span class="sig-name descname"><span class="pre">get_best_observation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.optimizer.MockOptimizer.get_best_observation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the best observation so far.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>(value, tunables)</strong><span class="classifier">Tuple[float, TunableGroups]</span></dt><dd><p>The best value and the corresponding configuration.
+(None, None) if no successful observation has been registered yet.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.optimizer.MockOptimizer.register">
+<span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.environment.status.html#mlos_bench.environment.status.Status" title="mlos_bench.environment.status.Status"><span class="pre">Status</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.optimizer.MockOptimizer.register" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register the observation for the given configuration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>tunables</strong><span class="classifier">TunableGroups</span></dt><dd><p>The configuration that has been benchmarked.
+Usually it’s the same config that the <cite>.suggest()</cite> method returned.</p>
+</dd>
+<dt><strong>status</strong><span class="classifier">Status</span></dt><dd><p>Final status of the experiment (e.g., SUCCEEDED or FAILED).</p>
+</dd>
+<dt><strong>score</strong><span class="classifier">float</span></dt><dd><p>The benchmark result, or None if the experiment was not successful.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.optimizer.MockOptimizer.suggest">
+<span class="sig-name descname"><span class="pre">suggest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></span><a class="headerlink" href="#mlos_bench.optimizer.MockOptimizer.suggest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate the next (random) suggestion.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="mlos_bench.optimizer.Optimizer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.optimizer.</span></span><span class="sig-name descname"><span class="pre">Optimizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.optimizer.Optimizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>An abstract interface between the benchmarking framework and mlos_core optimizers.</p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../generated/mlos_bench.optimizer.Optimizer.html#mlos_bench.optimizer.Optimizer.get_best_observation" title="mlos_bench.optimizer.Optimizer.get_best_observation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_best_observation</span></code></a>()</p></td>
+<td><p>Get the best observation so far.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../generated/mlos_bench.optimizer.Optimizer.html#mlos_bench.optimizer.Optimizer.load" title="mlos_bench.optimizer.Optimizer.load"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code></a>(tunables, config[, global_config])</p></td>
+<td><p>Instantiate the Optimizer shim from the configuration.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../generated/mlos_bench.optimizer.Optimizer.html#mlos_bench.optimizer.Optimizer.new" title="mlos_bench.optimizer.Optimizer.new"><code class="xref py py-obj docutils literal notranslate"><span class="pre">new</span></code></a>(class_name, tunables, config)</p></td>
+<td><p>Factory method for a new optimizer with a given config.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../generated/mlos_bench.optimizer.Optimizer.html#mlos_bench.optimizer.Optimizer.not_converged" title="mlos_bench.optimizer.Optimizer.not_converged"><code class="xref py py-obj docutils literal notranslate"><span class="pre">not_converged</span></code></a>()</p></td>
+<td><p>Return True if not converged, False otherwise.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../generated/mlos_bench.optimizer.Optimizer.html#mlos_bench.optimizer.Optimizer.register" title="mlos_bench.optimizer.Optimizer.register"><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code></a>(tunables, status[, score])</p></td>
+<td><p>Register the observation for the given configuration.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../generated/mlos_bench.optimizer.Optimizer.html#mlos_bench.optimizer.Optimizer.suggest" title="mlos_bench.optimizer.Optimizer.suggest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">suggest</span></code></a>()</p></td>
+<td><p>Generate the next suggestion.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.optimizer.Optimizer.get_best_observation">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_best_observation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.optimizer.Optimizer.get_best_observation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the best observation so far.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>(value, tunables)</strong><span class="classifier">Tuple[float, TunableGroups]</span></dt><dd><p>The best value and the corresponding configuration.
+(None, None) if no successful observation has been registered yet.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.optimizer.Optimizer.load">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.optimizer.Optimizer.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiate the Optimizer shim from the configuration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>tunables</strong><span class="classifier">TunableGroups</span></dt><dd><p>Tunable parameters of the environment.</p>
+</dd>
+<dt><strong>config</strong><span class="classifier">dict</span></dt><dd><p>Configuration of the optimizer.</p>
+</dd>
+<dt><strong>global_config</strong><span class="classifier">dict</span></dt><dd><p>Global configuration parameters (optional).</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>opt</strong><span class="classifier">Optimizer</span></dt><dd><p>A new Optimizer instance.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.optimizer.Optimizer.new">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">new</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">class_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.optimizer.Optimizer.new" title="Permalink to this definition">¶</a></dt>
+<dd><p>Factory method for a new optimizer with a given config.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>class_name: str</strong></dt><dd><p>FQN of a Python class to instantiate, e.g.,
+“mlos_bench.optimizer.MlosCoreOptimizer”.
+Must be derived from the <cite>Optimizer</cite> class.</p>
+</dd>
+<dt><strong>tunables</strong><span class="classifier">TunableGroups</span></dt><dd><p>The tunables to optimize.</p>
+</dd>
+<dt><strong>config</strong><span class="classifier">dict</span></dt><dd><p>Free-format dictionary that contains the optimizer configuration.
+It will be passed as a constructor parameter of the class
+specified by <cite>class_name</cite>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>opt</strong><span class="classifier">Optimizer</span></dt><dd><p>An instance of the <cite>Optimizer</cite> class initialized with <cite>config</cite>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.optimizer.Optimizer.not_converged">
+<span class="sig-name descname"><span class="pre">not_converged</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#mlos_bench.optimizer.Optimizer.not_converged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if not converged, False otherwise.
+Base implementation just checks the iteration count.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.optimizer.Optimizer.register">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.environment.status.html#mlos_bench.environment.status.Status" title="mlos_bench.environment.status.Status"><span class="pre">Status</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.optimizer.Optimizer.register" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register the observation for the given configuration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>tunables</strong><span class="classifier">TunableGroups</span></dt><dd><p>The configuration that has been benchmarked.
+Usually it’s the same config that the <cite>.suggest()</cite> method returned.</p>
+</dd>
+<dt><strong>status</strong><span class="classifier">Status</span></dt><dd><p>Final status of the experiment (e.g., SUCCEEDED or FAILED).</p>
+</dd>
+<dt><strong>score</strong><span class="classifier">float</span></dt><dd><p>The benchmark result, or None if the experiment was not successful.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.optimizer.Optimizer.suggest">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">suggest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></span><a class="headerlink" href="#mlos_bench.optimizer.Optimizer.suggest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate the next suggestion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>tunables</strong><span class="classifier">TunableGroups</span></dt><dd><p>The next configuration to benchmark.
+These are the same tunables we pass to the constructor,
+but with the values set to the next suggestion.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mlos_bench.optimizer.base_optimizer.html">mlos_bench.optimizer.base_optimizer module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mlos_bench.optimizer.base_optimizer.html#mlos_bench.optimizer.base_optimizer.Optimizer"><code class="docutils literal notranslate"><span class="pre">Optimizer</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.optimizer.base_optimizer.html#mlos_bench.optimizer.base_optimizer.Optimizer.get_best_observation"><code class="docutils literal notranslate"><span class="pre">Optimizer.get_best_observation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.optimizer.base_optimizer.html#mlos_bench.optimizer.base_optimizer.Optimizer.load"><code class="docutils literal notranslate"><span class="pre">Optimizer.load()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.optimizer.base_optimizer.html#mlos_bench.optimizer.base_optimizer.Optimizer.new"><code class="docutils literal notranslate"><span class="pre">Optimizer.new()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.optimizer.base_optimizer.html#mlos_bench.optimizer.base_optimizer.Optimizer.not_converged"><code class="docutils literal notranslate"><span class="pre">Optimizer.not_converged()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.optimizer.base_optimizer.html#mlos_bench.optimizer.base_optimizer.Optimizer.register"><code class="docutils literal notranslate"><span class="pre">Optimizer.register()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.optimizer.base_optimizer.html#mlos_bench.optimizer.base_optimizer.Optimizer.suggest"><code class="docutils literal notranslate"><span class="pre">Optimizer.suggest()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mlos_bench.optimizer.convert_configspace.html">mlos_bench.optimizer.convert_configspace module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mlos_bench.optimizer.convert_configspace.html#mlos_bench.optimizer.convert_configspace.tunable_groups_to_configspace"><code class="docutils literal notranslate"><span class="pre">tunable_groups_to_configspace()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mlos_bench.optimizer.mlos_core_optimizer.html">mlos_bench.optimizer.mlos_core_optimizer module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mlos_bench.optimizer.mlos_core_optimizer.html#mlos_bench.optimizer.mlos_core_optimizer.MlosCoreOptimizer"><code class="docutils literal notranslate"><span class="pre">MlosCoreOptimizer</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.optimizer.mlos_core_optimizer.html#mlos_bench.optimizer.mlos_core_optimizer.MlosCoreOptimizer.get_best_observation"><code class="docutils literal notranslate"><span class="pre">MlosCoreOptimizer.get_best_observation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.optimizer.mlos_core_optimizer.html#mlos_bench.optimizer.mlos_core_optimizer.MlosCoreOptimizer.register"><code class="docutils literal notranslate"><span class="pre">MlosCoreOptimizer.register()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.optimizer.mlos_core_optimizer.html#mlos_bench.optimizer.mlos_core_optimizer.MlosCoreOptimizer.suggest"><code class="docutils literal notranslate"><span class="pre">MlosCoreOptimizer.suggest()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mlos_bench.optimizer.mock_optimizer.html">mlos_bench.optimizer.mock_optimizer module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mlos_bench.optimizer.mock_optimizer.html#mlos_bench.optimizer.mock_optimizer.MockOptimizer"><code class="docutils literal notranslate"><span class="pre">MockOptimizer</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.optimizer.mock_optimizer.html#mlos_bench.optimizer.mock_optimizer.MockOptimizer.get_best_observation"><code class="docutils literal notranslate"><span class="pre">MockOptimizer.get_best_observation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.optimizer.mock_optimizer.html#mlos_bench.optimizer.mock_optimizer.MockOptimizer.register"><code class="docutils literal notranslate"><span class="pre">MockOptimizer.register()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.optimizer.mock_optimizer.html#mlos_bench.optimizer.mock_optimizer.MockOptimizer.suggest"><code class="docutils literal notranslate"><span class="pre">MockOptimizer.suggest()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mlos_bench.environment.status.html" class="btn btn-neutral float-left" title="mlos_bench.environment.status module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mlos_bench.optimizer.base_optimizer.html" class="btn btn-neutral float-right" title="mlos_bench.optimizer.base_optimizer module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, GSL.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

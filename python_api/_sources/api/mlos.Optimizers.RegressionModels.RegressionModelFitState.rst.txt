@@ -1,7 +1,0 @@
-mlos.Optimizers.RegressionModels.RegressionModelFitState
-========================================================
-
-.. automodule:: mlos.Optimizers.RegressionModels.RegressionModelFitState
-   :members:
-   :undoc-members:
-   :show-inheritance:

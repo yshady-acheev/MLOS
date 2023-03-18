@@ -1,7 +1,0 @@
-mlos.Examples.SmartCache.TelemetryAggregators.HitRateMonitor
-============================================================
-
-.. automodule:: mlos.Examples.SmartCache.TelemetryAggregators.HitRateMonitor
-   :members:
-   :undoc-members:
-   :show-inheritance:

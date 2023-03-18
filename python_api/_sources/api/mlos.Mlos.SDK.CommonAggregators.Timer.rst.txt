@@ -1,7 +1,0 @@
-mlos.Mlos.SDK.CommonAggregators.Timer
-=====================================
-
-.. automodule:: mlos.Mlos.SDK.CommonAggregators.Timer
-   :members:
-   :undoc-members:
-   :show-inheritance:

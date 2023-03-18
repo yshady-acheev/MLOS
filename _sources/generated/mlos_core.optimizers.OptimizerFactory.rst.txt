@@ -1,0 +1,16 @@
+﻿:mod:`mlos_core.optimizers`.OptimizerFactory
+===================================================
+
+.. currentmodule:: mlos_core.optimizers
+
+.. autoclass:: OptimizerFactory
+
+   
+   .. automethod:: __init__
+   
+
+.. include:: mlos_core.optimizers.OptimizerFactory.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

@@ -1,7 +1,0 @@
-mlos.Spaces.unit\_tests.TestIntervalTree
-========================================
-
-.. automodule:: mlos.Spaces.unit_tests.TestIntervalTree
-   :members:
-   :undoc-members:
-   :show-inheritance:

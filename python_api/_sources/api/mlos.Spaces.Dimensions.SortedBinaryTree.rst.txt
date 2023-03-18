@@ -1,7 +1,0 @@
-mlos.Spaces.Dimensions.SortedBinaryTree
-=======================================
-
-.. automodule:: mlos.Spaces.Dimensions.SortedBinaryTree
-   :members:
-   :undoc-members:
-   :show-inheritance:

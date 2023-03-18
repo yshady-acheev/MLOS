@@ -1,0 +1,16 @@
+﻿:mod:`mlos_bench.service`.Service
+========================================
+
+.. currentmodule:: mlos_bench.service
+
+.. autoclass:: Service
+
+   
+   .. automethod:: __init__
+   
+
+.. include:: mlos_bench.service.Service.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

@@ -1,0 +1,9 @@
+mlos\_bench.run\_bench module
+=============================
+
+.. automodule:: mlos_bench.run_bench
+   :members:
+   :undoc-members:
+   :show-inheritance:
+.. literalinclude:: mlos_bench.run_bench.usage.txt
+   :language: none

@@ -1,7 +1,0 @@
-mlos.Spaces.Configs.NamedConfig
-===============================
-
-.. automodule:: mlos.Spaces.Configs.NamedConfig
-   :members:
-   :undoc-members:
-   :show-inheritance:

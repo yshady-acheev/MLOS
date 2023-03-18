@@ -1,7 +1,0 @@
-mlos.Examples.SmartCache.SmartCache
-===================================
-
-.. automodule:: mlos.Examples.SmartCache.SmartCache
-   :members:
-   :undoc-members:
-   :show-inheritance:

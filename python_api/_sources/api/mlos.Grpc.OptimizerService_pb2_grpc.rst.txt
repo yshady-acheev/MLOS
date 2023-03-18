@@ -1,7 +1,0 @@
-mlos.Grpc.OptimizerService\_pb2\_grpc
-=====================================
-
-.. automodule:: mlos.Grpc.OptimizerService_pb2_grpc
-   :members:
-   :undoc-members:
-   :show-inheritance:

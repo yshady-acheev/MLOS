@@ -1,0 +1,16 @@
+mlos\_bench.service.remote package
+==================================
+
+.. automodule:: mlos_bench.service.remote
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   mlos_bench.service.remote.azure
+   mlos_bench.service.remote.ssh

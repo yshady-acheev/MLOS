@@ -1,7 +1,0 @@
-mlos.Optimizers.ExperimentDesigner.UtilityFunctionOptimizers.UtilityFunctionOptimizer
-=====================================================================================
-
-.. automodule:: mlos.Optimizers.ExperimentDesigner.UtilityFunctionOptimizers.UtilityFunctionOptimizer
-   :members:
-   :undoc-members:
-   :show-inheritance:

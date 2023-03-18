@@ -1,7 +1,0 @@
-mlos.Optimizers.RegressionModels.unit\_tests.TestRegressionEnhancedRandomForestModel
-====================================================================================
-
-.. automodule:: mlos.Optimizers.RegressionModels.unit_tests.TestRegressionEnhancedRandomForestModel
-   :members:
-   :undoc-members:
-   :show-inheritance:

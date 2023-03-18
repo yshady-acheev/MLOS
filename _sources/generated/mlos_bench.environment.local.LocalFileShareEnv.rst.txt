@@ -1,0 +1,16 @@
+﻿:mod:`mlos_bench.environment.local`.LocalFileShareEnv
+============================================================
+
+.. currentmodule:: mlos_bench.environment.local
+
+.. autoclass:: LocalFileShareEnv
+
+   
+   .. automethod:: __init__
+   
+
+.. include:: mlos_bench.environment.local.LocalFileShareEnv.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

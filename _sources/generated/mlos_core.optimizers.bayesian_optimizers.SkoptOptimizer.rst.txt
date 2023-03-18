@@ -1,0 +1,16 @@
+﻿:mod:`mlos_core.optimizers.bayesian_optimizers`.SkoptOptimizer
+=====================================================================
+
+.. currentmodule:: mlos_core.optimizers.bayesian_optimizers
+
+.. autoclass:: SkoptOptimizer
+
+   
+   .. automethod:: __init__
+   
+
+.. include:: mlos_core.optimizers.bayesian_optimizers.SkoptOptimizer.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

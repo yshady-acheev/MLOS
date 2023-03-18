@@ -1,0 +1,12 @@
+﻿:mod:`mlos_core.spaces.adapters`.SpaceAdapterFactory.create
+========================================================================
+
+.. currentmodule:: mlos_core.spaces.adapters
+
+.. autofunction:: SpaceAdapterFactory.create
+
+.. include:: mlos_core.spaces.adapters.SpaceAdapterFactory.create.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

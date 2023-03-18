@@ -1,0 +1,16 @@
+﻿:mod:`mlos_bench.environment`.Status
+===========================================
+
+.. currentmodule:: mlos_bench.environment
+
+.. autoclass:: Status
+
+   
+   .. automethod:: __init__
+   
+
+.. include:: mlos_bench.environment.Status.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

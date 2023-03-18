@@ -1,0 +1,16 @@
+﻿:mod:`mlos_bench.service.remote.azure`.AzureVMService
+============================================================
+
+.. currentmodule:: mlos_bench.service.remote.azure
+
+.. autoclass:: AzureVMService
+
+   
+   .. automethod:: __init__
+   
+
+.. include:: mlos_bench.service.remote.azure.AzureVMService.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

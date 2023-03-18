@@ -1,7 +1,0 @@
-mlos.Optimizers.RegressionModels.unit\_tests.TestMultiObjectiveLassoCrossValidated
-==================================================================================
-
-.. automodule:: mlos.Optimizers.RegressionModels.unit_tests.TestMultiObjectiveLassoCrossValidated
-   :members:
-   :undoc-members:
-   :show-inheritance:

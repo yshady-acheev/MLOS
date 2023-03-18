@@ -1,0 +1,16 @@
+﻿:mod:`mlos_bench.environment`.Environment
+================================================
+
+.. currentmodule:: mlos_bench.environment
+
+.. autoclass:: Environment
+
+   
+   .. automethod:: __init__
+   
+
+.. include:: mlos_bench.environment.Environment.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

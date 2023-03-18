@@ -1,7 +1,0 @@
-mlos.Spaces.Dimensions.CompositeDimension
-=========================================
-
-.. automodule:: mlos.Spaces.Dimensions.CompositeDimension
-   :members:
-   :undoc-members:
-   :show-inheritance:

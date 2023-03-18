@@ -1,7 +1,0 @@
-mlos.Optimizers.ExperimentDesigner.UtilityFunctionOptimizers.RandomNearIncumbentOptimizer
-=========================================================================================
-
-.. automodule:: mlos.Optimizers.ExperimentDesigner.UtilityFunctionOptimizers.RandomNearIncumbentOptimizer
-   :members:
-   :undoc-members:
-   :show-inheritance:

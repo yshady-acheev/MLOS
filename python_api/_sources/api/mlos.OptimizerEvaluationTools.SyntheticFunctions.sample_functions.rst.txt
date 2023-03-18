@@ -1,7 +1,0 @@
-mlos.OptimizerEvaluationTools.SyntheticFunctions.sample\_functions
-==================================================================
-
-.. automodule:: mlos.OptimizerEvaluationTools.SyntheticFunctions.sample_functions
-   :members:
-   :undoc-members:
-   :show-inheritance:

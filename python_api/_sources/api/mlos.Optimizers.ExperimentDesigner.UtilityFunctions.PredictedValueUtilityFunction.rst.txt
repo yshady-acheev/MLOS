@@ -1,7 +1,0 @@
-mlos.Optimizers.ExperimentDesigner.UtilityFunctions.PredictedValueUtilityFunction
-=================================================================================
-
-.. automodule:: mlos.Optimizers.ExperimentDesigner.UtilityFunctions.PredictedValueUtilityFunction
-   :members:
-   :undoc-members:
-   :show-inheritance:

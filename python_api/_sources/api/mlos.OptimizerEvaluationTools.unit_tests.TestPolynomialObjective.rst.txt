@@ -1,7 +1,0 @@
-mlos.OptimizerEvaluationTools.unit\_tests.TestPolynomialObjective
-=================================================================
-
-.. automodule:: mlos.OptimizerEvaluationTools.unit_tests.TestPolynomialObjective
-   :members:
-   :undoc-members:
-   :show-inheritance:

@@ -1,7 +1,0 @@
-mlos.Optimizers.BayesianOptimizer
-=================================
-
-.. automodule:: mlos.Optimizers.BayesianOptimizer
-   :members:
-   :undoc-members:
-   :show-inheritance:

@@ -1,7 +1,0 @@
-mlos.Optimizers.RegressionModels.LassoCrossValidatedConfigStore
-===============================================================
-
-.. automodule:: mlos.Optimizers.RegressionModels.LassoCrossValidatedConfigStore
-   :members:
-   :undoc-members:
-   :show-inheritance:

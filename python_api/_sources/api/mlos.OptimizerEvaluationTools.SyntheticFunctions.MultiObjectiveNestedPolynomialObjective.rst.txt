@@ -1,7 +1,0 @@
-mlos.OptimizerEvaluationTools.SyntheticFunctions.MultiObjectiveNestedPolynomialObjective
-========================================================================================
-
-.. automodule:: mlos.OptimizerEvaluationTools.SyntheticFunctions.MultiObjectiveNestedPolynomialObjective
-   :members:
-   :undoc-members:
-   :show-inheritance:

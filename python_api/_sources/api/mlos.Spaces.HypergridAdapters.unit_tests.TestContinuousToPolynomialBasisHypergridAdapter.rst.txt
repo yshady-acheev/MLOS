@@ -1,7 +1,0 @@
-mlos.Spaces.HypergridAdapters.unit\_tests.TestContinuousToPolynomialBasisHypergridAdapter
-=========================================================================================
-
-.. automodule:: mlos.Spaces.HypergridAdapters.unit_tests.TestContinuousToPolynomialBasisHypergridAdapter
-   :members:
-   :undoc-members:
-   :show-inheritance:

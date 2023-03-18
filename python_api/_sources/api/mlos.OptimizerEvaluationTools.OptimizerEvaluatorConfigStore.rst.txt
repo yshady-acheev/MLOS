@@ -1,7 +1,0 @@
-mlos.OptimizerEvaluationTools.OptimizerEvaluatorConfigStore
-===========================================================
-
-.. automodule:: mlos.OptimizerEvaluationTools.OptimizerEvaluatorConfigStore
-   :members:
-   :undoc-members:
-   :show-inheritance:

@@ -1,358 +1,142 @@
 <!DOCTYPE html>
-<html lang="en" dir=>
-
+<html class="writer-html5" lang="en" >
 <head>
-	<meta name="generator" content="Hugo 0.68.3" />
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="DEPRECATION NOTICE  NOTE: this repository is no longer maintained upstream.
-In the future it may be replaced with a streamlined MlosCore python library.
-   
-MLOS: Machine Learning Optimized Systems MLOS: An Infrastructure for Automated Software Performance Engineering  MLOS is an ML-powered infrastructure and methodology to democratize and automate Performance Engineering. MLOS enables continuous, instance-based, robust, and trackable systems optimization.
- From the MLOS paper at DEEM 2020">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://microsoft.github.io/MLOS/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-<title> | MLOS</title>
-<link rel="manifest" href="/MLOS/manifest.json">
-<link rel="icon" href="/MLOS/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/MLOS/book.min.6cd8553a6854f4812343f0f0c8baca31271e686434f381fbe3c7226f66639176.css" integrity="sha256-bNhVOmhU9IEjQ/DwyLrKMSceaGQ084H748cib2ZjkXY=">
-<script defer src="/MLOS/en.search.min.05889b62db70c54832c4afd7e35a708526faafc9d8835030730394c0442a57f6.js" integrity="sha256-BYibYttwxUgyxK/X41pwhSb6r8nYg1AwcwOUwEQqV/Y="></script>
-<link rel="alternate" type="application/rss+xml" href="https://microsoft.github.io/MLOS/index.xml" title="MLOS" />
-<!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
--->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to MlosCore’s documentation! &mdash; MlosCore 0.0.4 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/plot_directive.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="installation.html" /> 
 </head>
 
-<body dir=>
-  <input type="checkbox" class="hidden toggle" id="menu-control" />
-  <input type="checkbox" class="hidden toggle" id="toc-control" />
-  <main class="container flex">
-    <aside class="book-menu">
-      
-  <nav>
-<h2 class="book-brand">
-  <a href="/MLOS"><span>MLOS</span>
-  </a>
-</h2>
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
 
-
-<div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
-  <div class="book-search-spinner hidden"></div>
-  <ul id="book-search-results"></ul>
+          
+          
+          <a href="#" class="icon icon-home">
+            MlosCore
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-  <ul>
-<li>
-<p><a href="/MLOS/documentation/">Documentation</a></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul>
-<li><a href="/MLOS/documentation/01-Prerequisites/">Prerequisites</a></li>
-<li><a href="/MLOS/documentation/02-Build/">Build</a></li>
-<li><a href="/MLOS/documentation/04-Test/">Test</a></li>
-<li><a href="/MLOS/documentation/CodingStandard/">Coding Standard</a></li>
-<li><a href="/MLOS/documentation/MlosArchitecture/">Architecture</a></li>
-<li><a href="/MLOS/documentation/RepoOrganization/">Repo Organization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">mlos-core API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html#mlos-bench-api">mlos-bench API</a></li>
 </ul>
-</li>
-<li>
-<p><a href="/MLOS/notebooks/">Notebooks</a></p>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
 <ul>
-<li><a href="/MLOS/notebooks/BayesianOptimization/">Bayesian Optimization</a></li>
-<li><a href="/MLOS/notebooks/SmartCacheOptimization/">Smart Cache Optimization</a></li>
-<li><a href="/MLOS/notebooks/SmartCacheCPP/">Smart Cache Optimization in C++</a></li>
-<li><a href="/MLOS/notebooks/LevelDbTuning/">LevelDB External Tuning Example</a></li>
-</ul>
-</li>
-<li>
-<p><a href="/MLOS/source/Examples/">E2E Examples</a></p>
-<ul>
-<li><a href="/MLOS/source/Examples/SmartCache/">Smart Cache</a></li>
-</ul>
-</li>
-<li>
-<p>API Documentation</p>
-<ul>
-<li><a href="/MLOS/python_api/">Python</a></li>
-</ul>
-</li>
-<li>
-<p>Component Documentation</p>
-<ul>
-<li><a href="/MLOS/source/Mlos.SettingsSystem.CodeGen/">Mlos Settings System Code Generation System</a></li>
-<li><a href="/MLOS/source/Mlos.Core/doc/">Mlos.Core Shared Memory Communication Channel</a></li>
-<li><a href="/MLOS/source/Mlos.Agent.Server/">Mlos.Agent.Server</a></li>
-</ul>
-</li>
-<li>
-<p><a href="/MLOS/external/">External Integration</a></p>
-</li>
-<li>
-<p><a href="/MLOS/CODE_OF_CONDUCT/">Code of Conduct</a></p>
-</li>
-<li>
-<p><a href="/MLOS/CONTRIBUTING/">Contributing</a></p>
-</li>
-<li>
-<p><a href="https://github.com/Microsoft/MLOS">MLOS Github Repository</a></p>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="api/mlos_core/modules.html">mlos_core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/mlos_bench/modules.html">mlos_bench</a></li>
 </ul>
 
+        </div>
+      </div>
+    </nav>
 
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">MlosCore</a>
+      </nav>
 
-
-
-
-
-
-
-
-</nav>
-
-
-
-
-  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
-
-
- 
-    </aside>
-
-    <div class="book-page">
-      <header class="book-header">
-        
-  <div class="flex align-center justify-between">
-  <label for="menu-control">
-    <img src="/MLOS/svg/menu.svg" class="book-icon" alt="Menu" />
-  </label>
-
-  <strong></strong>
-
-  <label for="toc-control">
-    
-    <img src="/MLOS/svg/toc.svg" class="book-icon" alt="Table of Contents" />
-    
-  </label>
-</div>
-
-
-  
-  <aside class="hidden clearfix">
-    
-  <nav id="TableOfContents">
-  <ul>
-    <li><a href="/MLOS/#mlos-an-infrastructure-for-automated-software-performance-engineering">MLOS: An Infrastructure for Automated Software Performance Engineering</a></li>
-    <li><a href="/MLOS/#overview">Overview</a>
-      <ul>
-        <li><a href="/MLOS/#problem">Problem</a></li>
-        <li><a href="/MLOS/#goals">Goals</a></li>
-        <li><a href="/MLOS/#architecture">Architecture</a></li>
-      </ul>
-    </li>
-    <li><a href="/MLOS/#python-quickstart">Python Quickstart</a></li>
-    <li><a href="/MLOS/#full-build-c-and-c-components">Full Build (C# and C++ components)</a></li>
-    <li><a href="/MLOS/#examples">Examples</a></li>
-    <li><a href="/MLOS/#documentation">Documentation</a></li>
-    <li><a href="/MLOS/#contributing">Contributing</a></li>
-    <li><a href="/MLOS/#contact">Contact</a></li>
-    <li><a href="/MLOS/#license">License</a></li>
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Welcome to MlosCore’s documentation!</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
   </ul>
-</nav>
-
-
-  </aside>
-  
- 
-      </header>
-
-      
-      
-  <article class="markdown"><h1 id="deprecation-notice">DEPRECATION NOTICE</h1>
-<blockquote>
-<p><strong>NOTE</strong>: this repository is no longer maintained upstream.</p>
-<p>In the future it may be replaced with a streamlined <em>MlosCore</em> python library.</p>
-</blockquote>
-<hr>
-<hr>
-<p><a href="https://codecov.io/gh/microsoft/MLOS"><img src="https://codecov.io/gh/microsoft/MLOS/branch/main/graph/badge.svg?token=14T6RFL2KR" alt="codecov" /></a></p>
-<h1 id="mlos-machine-learning-optimized-systems">MLOS: Machine Learning Optimized Systems</h1>
-<h2 id="mlos-an-infrastructure-for-automated-software-performance-engineering">MLOS: An Infrastructure for Automated Software Performance Engineering</h2>
-<blockquote>
-<p>MLOS is an ML-powered infrastructure and methodology to democratize and automate Performance Engineering. MLOS enables continuous, instance-based, robust, and trackable systems optimization.</p>
-</blockquote>
-<p>From the <a href="https://arxiv.org/abs/2006.02155">MLOS paper at DEEM 2020</a></p>
-<h2 id="overview">Overview</h2>
-<h3 id="problem">Problem</h3>
-<p>All systems software (e.g. SqlServer, MySQL, LevelDB, OpenSSL, etc.) is full of parameter choices.</p>
-<p>Sometimes these are encoded in the software as constants embedded in the code (e.g. choice of abstract data structure implementation, buffer limit size or alignment, etc.).
-Other times they may be exposed as configuration parameters either at startup or runtime.</p>
-<p>Careful selection of these parameters can yield dramatic performance differences for different <em>contexts</em> of a system (e.g. different workloads, hardware, etc.).
-Note that <em>performance</em> can be interpreted in different ways (e.g. reducing average/variability of latency/memory, increasing throughput, decreasing MTTR, etc.)</p>
-<p>Generally speaking, this process is referred to as <em>Software Performance Engineering</em>, and typically involves a lot of manual effort that is brittle and not well tracked.</p>
-<h3 id="goals">Goals</h3>
-<p>MLOS is about using machine-learning and data-science to optimize systems for a given context through these tunable choices.</p>
-<p><img src="/MLOS/documentation/images/MLOS-Experience.png" alt="MLOS data science experience for software performance engineering" /></p>
-<p>Roughly, this can happen in two modes:</p>
-<ol>
-<li>
-<p>Offline (e.g. at development time)</p>
-<p>In this case, developers can use (micro)benchmarks to explore a parameter space for a component either interactively or with a background CI/CD pipeline and then interact with that data through a notebook experience to select the right value to check in to the code, along with the results of the experiments and analysis, all encoded in the notebook.</p>
-</li>
-<li>
-<p>Online (e.g. at runtime)</p>
-<p>In this case a system component provides hooks to adjust its parameters at runtime and exports data about its current state/performance.  These can be combined with additional contextual information from the system to build a model (or simple heuristics) to invoke the hooks to adjust the component to improve performance at runtime.</p>
-</li>
-</ol>
-<h3 id="architecture">Architecture</h3>
-<p><img src="/MLOS/documentation/images/MLOS-Architecture.png" alt="MLOS architecture overview" /></p>
-<p>To achieve this MLOS provides:</p>
-<ol>
-<li>
-<p><em>Code Annotations</em> to help describe additional <em>settings metadata</em> for tunables (a.k.a. <code>Settings</code>).</p>
-<p>For instance, metadata can include things like constraints on acceptable values a Setting can take on as well as developer intuition to help guide the automated search process.</p>
-<p>Currently these are implemented as C# Attributes to provide reflection and easy cross-platform and cross-compiler support for C++ projects.</p>
-</li>
-<li>
-<p><em>Code Generation</em> tools to use that metadata to expose those settings to different target systems/languages (e.g. Python Notebooks, C++, C#, etc.)</p>
-<p>For instance, we generate efficient messages over shared memory communication channels for</p>
-<ol>
-<li>
-<p>exporting data about the component using that Setting</p>
-<p>For instance, this may include performance statistics, workload traces, etc.</p>
-</li>
-<li>
-<p>receiving feedback (e.g. to change the Setting&rsquo;s value)</p>
-<p>This may involve a reconfiguration step or simply update a cache for the next instantiation to read.</p>
-</li>
-</ol>
-</li>
-<li>
-<p>An external agent (<code>Mlos.Agent.Server</code>) which can consume the information exported by the target system (e.g. SqlServer, MySQL, LevelDB, etc.) with mimimal impact on the target system.</p>
-<p>The external agent can perform workload summarization, binning, cataloging, model inference, heuristic invocation, etc. based on the events exposed by the target system to then influence it.</p>
-<p>Once hooks are created in the target system, iteration on the external agent can be more rapidly developed and deployed.</p>
-</li>
-</ol>
-<h2 id="python-quickstart">Python Quickstart</h2>
-<p>The easiest way to get started with MLOS is to just the Python package.
-You can find installation instructions in the <a href="/MLOS/documentation/01-Prerequisites/#python-quickstart">Prerequisites: Python Quickstart</a>.</p>
-<h2 id="full-build-c-and-c-components">Full Build (C# and C++ components)</h2>
-<p>MLOS supports Windows and Linux build environments.</p>
-<p>For detailed instructions, please refer to:</p>
-<ol>
-<li><a href="/MLOS/documentation/01-Prerequisites/">Prerequisites</a></li>
-<li><a href="/MLOS/documentation/02-Build/">Build</a></li>
-</ol>
-<h2 id="examples">Examples</h2>
-<p>Code and documentation for examples of using MLOS to optimize a system are described in the <a href="https://microsoft.github.io/MLOS/notebooks/">Notebooks</a> section.
-Additional code is in the  <a href="https://github.com/microsoft/MLOS/tree/main/source/Examples/">source/Examples</a> source directory.
-You can find the source of the notebooks <a href="https://github.com/microsoft/MLOS/tree/main/source/Mlos.Notebooks/">on github as well</a>.</p>
-<blockquote>
-<p>Some of the notebooks have been used as lab assignments for a seminar class run in collaboration between Microsoft and UW-Madison:
-<a href="https://aka.ms/MLOS_Seminar">https://aka.ms/MLOS_Seminar</a></p>
-</blockquote>
-<h2 id="documentation">Documentation</h2>
-<ul>
-<li>
-<p>Additional overview documentation is available in the <a href="/MLOS/documentation/">documentation</a> tree.</p>
-</li>
-<li>
-<p>Individual components may also include more detailed documentation in their respective subdirectories.</p>
-</li>
-</ul>
-<h2 id="contributing">Contributing</h2>
-<p>We welcome contributions!  Please see <a href="/MLOS/CONTRIBUTING/">Contributing</a> and <a href="/MLOS/CODE_OF_CONDUCT/">Code of Conduct</a> for details.</p>
-<p>Also, please see the <a href="/MLOS/#">Roadmap</a> of planned features.</p>
-<h2 id="contact">Contact</h2>
-<p>For more formal enquiries, you can <a href="mailto:mlos-maintainers@service.microsoft.com">contact us</a>.</p>
-<h2 id="license">License</h2>
-<ul>
-<li><a href="/MLOS/LICENSE.txt">MIT License</a></li>
-</ul>
-</article>
- 
-      
-
-      <footer class="book-footer">
-        
-  <div class="flex flex-wrap justify-between">
-
-
-
-
-
+  <hr/>
 </div>
-
- 
-        
-      </footer>
-
-      
-  
-  <div class="book-comments">
-
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="welcome-to-mloscore-s-documentation">
+<h1>Welcome to MlosCore’s documentation!<a class="headerlink" href="#welcome-to-mloscore-s-documentation" title="Permalink to this heading">¶</a></h1>
+<img alt="_images/tests.svg" src="_images/tests.svg" /><a class="reference external image-reference" href="htmlcov/index.html"><img alt="_images/coverage.svg" src="_images/coverage.svg" /></a>
+<section id="mlos-core">
+<h2><code class="docutils literal notranslate"><span class="pre">mlos_core</span></code><a class="headerlink" href="#mlos-core" title="Permalink to this heading">¶</a></h2>
+<p>This repository contains a stripped down implementation of essentially just the core optimizer and config space description APIs from the original <a class="reference external" href="https://github.com/microsoft/MLOS">MLOS</a>.</p>
+<p>It is intended to provide a simplified, easier to consume (e.g. via <code class="docutils literal notranslate"><span class="pre">pip</span></code>), with lower dependencies abstraction to</p>
+<ul class="simple">
+<li><p>describe a space of context, parameters, their ranges, constraints, etc. and result objectives</p></li>
+<li><p>an “optimizer” service abstraction (e.g. <code class="docutils literal notranslate"><span class="pre">register()</span></code> and <code class="docutils literal notranslate"><span class="pre">suggest()</span></code>) so we can easily swap out different implementations methods of searching (e.g. random, BO, etc.)</p></li>
+<li><p>provide some helpers for automating optimization experiment runner loops and data collection</p></li>
+</ul>
+<p>For these design requirements we intend to reuse as much from existing OSS libraries as possible and layer policies and optimizations specifically geared towards autotuning over top.</p>
+</section>
+<section id="mlos-bench">
+<h2><code class="docutils literal notranslate"><span class="pre">mlos_bench</span></code><a class="headerlink" href="#mlos-bench" title="Permalink to this heading">¶</a></h2>
+<p>This repository also contains the <a class="reference external" href="./overview.html#mlos-bench-api">mlos_bench</a> module intended to help automate and manage running experiments for autotuning systems with <a class="reference external" href="./overview.html#mlos-core-api">mlos_core</a>.</p>
+</section>
+<section id="see-also">
+<h2>See Also<a class="headerlink" href="#see-also" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://aka.ms/mlos-core/src">Source Code</a></p></li>
+</ul>
+<div class="toctree-wrapper compound">
 </div>
-  
- 
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+</section>
 
-      <label for="menu-control" class="hidden book-menu-overlay"></label>
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
-    
-    <aside class="book-toc">
-      
-  <nav id="TableOfContents">
-  <ul>
-    <li><a href="/MLOS/#mlos-an-infrastructure-for-automated-software-performance-engineering">MLOS: An Infrastructure for Automated Software Performance Engineering</a></li>
-    <li><a href="/MLOS/#overview">Overview</a>
-      <ul>
-        <li><a href="/MLOS/#problem">Problem</a></li>
-        <li><a href="/MLOS/#goals">Goals</a></li>
-        <li><a href="/MLOS/#architecture">Architecture</a></li>
-      </ul>
-    </li>
-    <li><a href="/MLOS/#python-quickstart">Python Quickstart</a></li>
-    <li><a href="/MLOS/#full-build-c-and-c-components">Full Build (C# and C++ components)</a></li>
-    <li><a href="/MLOS/#examples">Examples</a></li>
-    <li><a href="/MLOS/#documentation">Documentation</a></li>
-    <li><a href="/MLOS/#contributing">Contributing</a></li>
-    <li><a href="/MLOS/#contact">Contact</a></li>
-    <li><a href="/MLOS/#license">License</a></li>
-  </ul>
-</nav>
+  <hr/>
 
- 
-    </aside>
-    
-  </main>
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, GSL.</p>
+  </div>
 
-  
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-

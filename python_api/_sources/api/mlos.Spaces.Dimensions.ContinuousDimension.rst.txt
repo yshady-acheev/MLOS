@@ -1,7 +1,0 @@
-mlos.Spaces.Dimensions.ContinuousDimension
-==========================================
-
-.. automodule:: mlos.Spaces.Dimensions.ContinuousDimension
-   :members:
-   :undoc-members:
-   :show-inheritance:

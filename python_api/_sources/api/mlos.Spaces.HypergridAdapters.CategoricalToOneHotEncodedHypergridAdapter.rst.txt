@@ -1,7 +1,0 @@
-mlos.Spaces.HypergridAdapters.CategoricalToOneHotEncodedHypergridAdapter
-========================================================================
-
-.. automodule:: mlos.Spaces.HypergridAdapters.CategoricalToOneHotEncodedHypergridAdapter
-   :members:
-   :undoc-members:
-   :show-inheritance:

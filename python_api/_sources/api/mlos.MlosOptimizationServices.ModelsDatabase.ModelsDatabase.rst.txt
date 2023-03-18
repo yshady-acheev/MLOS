@@ -1,7 +1,0 @@
-mlos.MlosOptimizationServices.ModelsDatabase.ModelsDatabase
-===========================================================
-
-.. automodule:: mlos.MlosOptimizationServices.ModelsDatabase.ModelsDatabase
-   :members:
-   :undoc-members:
-   :show-inheritance:

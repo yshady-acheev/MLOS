@@ -1,7 +1,0 @@
-mlos.Optimizers.unit\_tests.TestOptimizationProblem
-===================================================
-
-.. automodule:: mlos.Optimizers.unit_tests.TestOptimizationProblem
-   :members:
-   :undoc-members:
-   :show-inheritance:

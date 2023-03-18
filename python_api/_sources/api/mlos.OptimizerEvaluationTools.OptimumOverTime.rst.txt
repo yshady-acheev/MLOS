@@ -1,7 +1,0 @@
-mlos.OptimizerEvaluationTools.OptimumOverTime
-=============================================
-
-.. automodule:: mlos.OptimizerEvaluationTools.OptimumOverTime
-   :members:
-   :undoc-members:
-   :show-inheritance:

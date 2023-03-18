@@ -1,7 +1,0 @@
-mlos.Optimizers.RegressionModels.MultiObjectiveLassoCrossValidated
-==================================================================
-
-.. automodule:: mlos.Optimizers.RegressionModels.MultiObjectiveLassoCrossValidated
-   :members:
-   :undoc-members:
-   :show-inheritance:

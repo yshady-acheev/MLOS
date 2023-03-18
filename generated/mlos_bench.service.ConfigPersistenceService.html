@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mlos_bench.service.ConfigPersistenceService &mdash; MlosCore 0.0.4 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/plot_directive.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="mlos_bench.service.local.LocalExecService" href="mlos_bench.service.local.LocalExecService.html" />
+    <link rel="prev" title="mlos_bench.service.FileShareService" href="mlos_bench.service.FileShareService.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MlosCore
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">mlos-core API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../overview.html#mlos-bench-api">mlos-bench API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#main">Main</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#benchmark-environments">Benchmark Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#tunable-parameters">Tunable Parameters</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../overview.html#service-mix-ins">Service Mix-ins</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.service.Service.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.service</span></code>.Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.service.FileShareService.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.service</span></code>.FileShareService</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.service</span></code>.ConfigPersistenceService</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#mlos_bench.service.ConfigPersistenceService"><code class="docutils literal notranslate"><span class="pre">ConfigPersistenceService</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../overview.html#local-services">Local Services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview.html#remote-azure-services">Remote Azure Services</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#optimizer-adapters">Optimizer Adapters</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/mlos_core/modules.html">mlos_core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/mlos_bench/modules.html">mlos_bench</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MlosCore</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../overview.html">mlos-core API</a></li>
+      <li class="breadcrumb-item active"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.service</span></code>.ConfigPersistenceService</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/mlos_bench.service.ConfigPersistenceService.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mlos-bench-service-configpersistenceservice">
+<h1><a class="reference internal" href="../api/mlos_bench/mlos_bench.service.html#module-mlos_bench.service" title="mlos_bench.service"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.service</span></code></a>.ConfigPersistenceService<a class="headerlink" href="#mlos-bench-service-configpersistenceservice" title="Permalink to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="mlos_bench.service.ConfigPersistenceService">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.service.</span></span><span class="sig-name descname"><span class="pre">ConfigPersistenceService</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../api/mlos_bench/mlos_bench.service.base_service.html#mlos_bench.service.base_service.Service" title="mlos_bench.service.base_service.Service"><span class="pre">Service</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.service.ConfigPersistenceService" title="Permalink to this definition">¶</a></dt>
+<dd><p>Collection of methods to deserialize the Environment, Service, and TunableGroups objects.</p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.service.ConfigPersistenceService.build_environment" title="mlos_bench.service.ConfigPersistenceService.build_environment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">build_environment</span></code></a>(config[, global_config, ...])</p></td>
+<td><p>Factory method for a new environment with a given config.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.service.ConfigPersistenceService.build_service" title="mlos_bench.service.ConfigPersistenceService.build_service"><code class="xref py py-obj docutils literal notranslate"><span class="pre">build_service</span></code></a>(config[, global_config, parent])</p></td>
+<td><p>Factory method for a new service with a given config.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.service.ConfigPersistenceService.build_tunables" title="mlos_bench.service.ConfigPersistenceService.build_tunables"><code class="xref py py-obj docutils literal notranslate"><span class="pre">build_tunables</span></code></a>(config[, parent])</p></td>
+<td><p>Create a new collection of tunable parameters.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">export</span></code>()</p></td>
+<td><p>Return a dictionary of functions available in this service.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.service.ConfigPersistenceService.load_config" title="mlos_bench.service.ConfigPersistenceService.load_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_config</span></code></a>(json_file_name)</p></td>
+<td><p>Load JSON config file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.service.ConfigPersistenceService.load_environment" title="mlos_bench.service.ConfigPersistenceService.load_environment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_environment</span></code></a>(json_file_name[, ...])</p></td>
+<td><p>Load and build new environment from the config file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.service.ConfigPersistenceService.load_environment_list" title="mlos_bench.service.ConfigPersistenceService.load_environment_list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_environment_list</span></code></a>(json_file_name[, ...])</p></td>
+<td><p>Load and build a list of environments from the config file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.service.ConfigPersistenceService.load_services" title="mlos_bench.service.ConfigPersistenceService.load_services"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_services</span></code></a>(json_file_names[, ...])</p></td>
+<td><p>Read the configuration files and bundle all service methods from those configs into a single Service object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.service.ConfigPersistenceService.load_tunables" title="mlos_bench.service.ConfigPersistenceService.load_tunables"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_tunables</span></code></a>(json_file_names[, parent])</p></td>
+<td><p>Load a collection of tunable parameters from JSON files.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">new</span></code>(class_name, config, parent)</p></td>
+<td><p>Factory method for a new service with a given config.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code>(services)</p></td>
+<td><p>Register new mix-in services.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.service.ConfigPersistenceService.resolve_path" title="mlos_bench.service.ConfigPersistenceService.resolve_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resolve_path</span></code></a>(file_path[, extra_paths])</p></td>
+<td><p>Prepend the suitable <cite>_config_path</cite> to <cite>path</cite> if the latter is not absolute.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.service.ConfigPersistenceService.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../api/mlos_bench/mlos_bench.service.base_service.html#mlos_bench.service.base_service.Service" title="mlos_bench.service.base_service.Service"><span class="pre">Service</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.service.ConfigPersistenceService.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new instance of config persistence service.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>config</strong><span class="classifier">dict</span></dt><dd><p>Free-format dictionary that contains parameters for the service.
+(E.g., root path for config files, etc.)</p>
+</dd>
+<dt><strong>parent</strong><span class="classifier">Service</span></dt><dd><p>An optional parent service that can provide mixin functions.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.service.ConfigPersistenceService.build_environment">
+<span class="sig-name descname"><span class="pre">build_environment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../api/mlos_bench/mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">service</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../api/mlos_bench/mlos_bench.service.base_service.html#mlos_bench.service.base_service.Service" title="mlos_bench.service.base_service.Service"><span class="pre">Service</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../api/mlos_bench/mlos_bench.environment.base_environment.html#mlos_bench.environment.base_environment.Environment" title="mlos_bench.environment.base_environment.Environment"><span class="pre">Environment</span></a></span></span><a class="headerlink" href="#mlos_bench.service.ConfigPersistenceService.build_environment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Factory method for a new environment with a given config.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>config</strong><span class="classifier">dict</span></dt><dd><dl class="simple">
+<dt>A dictionary with three mandatory fields:</dt><dd><p>“name”: Human-readable string describing the environment;
+“class”: FQN of a Python class to instantiate;
+“config”: Free-format dictionary to pass to the constructor.</p>
+</dd>
+</dl>
+</dd>
+<dt><strong>global_config</strong><span class="classifier">dict</span></dt><dd><p>Global parameters to add to the environment config.</p>
+</dd>
+<dt><strong>tunables</strong><span class="classifier">TunableGroups</span></dt><dd><p>A collection of groups of tunable parameters for all environments.</p>
+</dd>
+<dt><strong>service: Service</strong></dt><dd><p>An optional service object (e.g., providing methods to
+deploy or reboot a VM, etc.).</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>env</strong><span class="classifier">Environment</span></dt><dd><p>An instance of the <cite>Environment</cite> class initialized with <cite>config</cite>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.service.ConfigPersistenceService.build_service">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_service</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../api/mlos_bench/mlos_bench.service.base_service.html#mlos_bench.service.base_service.Service" title="mlos_bench.service.base_service.Service"><span class="pre">Service</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../api/mlos_bench/mlos_bench.service.base_service.html#mlos_bench.service.base_service.Service" title="mlos_bench.service.base_service.Service"><span class="pre">Service</span></a></span></span><a class="headerlink" href="#mlos_bench.service.ConfigPersistenceService.build_service" title="Permalink to this definition">¶</a></dt>
+<dd><p>Factory method for a new service with a given config.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>config</strong><span class="classifier">dict or list of dict</span></dt><dd><dl class="simple">
+<dt>A list where each element is a dictionary with 2 mandatory fields:</dt><dd><p>“class”: FQN of a Python class to instantiate;
+“config”: Free-format dictionary to pass to the constructor.</p>
+</dd>
+</dl>
+</dd>
+<dt><strong>global_config</strong><span class="classifier">dict</span></dt><dd><p>Global parameters to add to the service config.</p>
+</dd>
+<dt><strong>parent: Service</strong></dt><dd><p>An optional reference of the parent service to mix in.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>svc</strong><span class="classifier">Service</span></dt><dd><p>An instance of the <cite>Service</cite> class that is a combination of all
+services from the list plus the parent mix-in.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.service.ConfigPersistenceService.build_tunables">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_tunables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../api/mlos_bench/mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../api/mlos_bench/mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></span><a class="headerlink" href="#mlos_bench.service.ConfigPersistenceService.build_tunables" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new collection of tunable parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>config</strong><span class="classifier">dict</span></dt><dd><p>Python dict of serialized representation of the covariant tunable groups.</p>
+</dd>
+<dt><strong>parent</strong><span class="classifier">TunableGroups</span></dt><dd><p>An optional collection of tunables to add to the new collection.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>tunables</strong><span class="classifier">TunableGroup</span></dt><dd><p>Create a new collection of tunable parameters.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.service.ConfigPersistenceService.load_config">
+<span class="sig-name descname"><span class="pre">load_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#mlos_bench.service.ConfigPersistenceService.load_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load JSON config file. Search for a file relative to <cite>_config_path</cite>
+if the input path is not absolute.
+This method is exported to be used as a service.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>json_file_name</strong><span class="classifier">str</span></dt><dd><p>Path to the input config file.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>config</strong><span class="classifier">dict</span></dt><dd><p>Free-format dictionary that contains the configuration.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.service.ConfigPersistenceService.load_environment">
+<span class="sig-name descname"><span class="pre">load_environment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../api/mlos_bench/mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">service</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../api/mlos_bench/mlos_bench.service.base_service.html#mlos_bench.service.base_service.Service" title="mlos_bench.service.base_service.Service"><span class="pre">Service</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../api/mlos_bench/mlos_bench.environment.base_environment.html#mlos_bench.environment.base_environment.Environment" title="mlos_bench.environment.base_environment.Environment"><span class="pre">Environment</span></a></span></span><a class="headerlink" href="#mlos_bench.service.ConfigPersistenceService.load_environment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load and build new environment from the config file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>json_file_name</strong><span class="classifier">str</span></dt><dd><p>The environment JSON configuration file.</p>
+</dd>
+<dt><strong>global_config</strong><span class="classifier">dict</span></dt><dd><p>Global parameters to add to the environment config.</p>
+</dd>
+<dt><strong>tunables</strong><span class="classifier">TunableGroups</span></dt><dd><p>An optional collection of tunables to add to the environment.</p>
+</dd>
+<dt><strong>service</strong><span class="classifier">Service</span></dt><dd><p>An optional reference of the parent service to mix in.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>env</strong><span class="classifier">Environment</span></dt><dd><p>A new benchmarking environment.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.service.ConfigPersistenceService.load_environment_list">
+<span class="sig-name descname"><span class="pre">load_environment_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../api/mlos_bench/mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">service</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../api/mlos_bench/mlos_bench.service.base_service.html#mlos_bench.service.base_service.Service" title="mlos_bench.service.base_service.Service"><span class="pre">Service</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../api/mlos_bench/mlos_bench.environment.base_environment.html#mlos_bench.environment.base_environment.Environment" title="mlos_bench.environment.base_environment.Environment"><span class="pre">Environment</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.service.ConfigPersistenceService.load_environment_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load and build a list of environments from the config file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>json_file_name</strong><span class="classifier">str</span></dt><dd><p>The environment JSON configuration file.
+Can contain either one environment or a list of environments.</p>
+</dd>
+<dt><strong>global_config</strong><span class="classifier">dict</span></dt><dd><p>Global parameters to add to the environment config.</p>
+</dd>
+<dt><strong>tunables</strong><span class="classifier">TunableGroups</span></dt><dd><p>An optional collection of tunables to add to the environment.</p>
+</dd>
+<dt><strong>service</strong><span class="classifier">Service</span></dt><dd><p>An optional reference of the parent service to mix in.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>env</strong><span class="classifier">List[Environment]</span></dt><dd><p>A list of new benchmarking environments.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.service.ConfigPersistenceService.load_services">
+<span class="sig-name descname"><span class="pre">load_services</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_file_names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../api/mlos_bench/mlos_bench.service.base_service.html#mlos_bench.service.base_service.Service" title="mlos_bench.service.base_service.Service"><span class="pre">Service</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../api/mlos_bench/mlos_bench.service.base_service.html#mlos_bench.service.base_service.Service" title="mlos_bench.service.base_service.Service"><span class="pre">Service</span></a></span></span><a class="headerlink" href="#mlos_bench.service.ConfigPersistenceService.load_services" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the configuration files and bundle all service methods
+from those configs into a single Service object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>json_file_names</strong><span class="classifier">list of str</span></dt><dd><p>A list of service JSON configuration files.</p>
+</dd>
+<dt><strong>global_config</strong><span class="classifier">dict</span></dt><dd><p>Global parameters to add to the service config.</p>
+</dd>
+<dt><strong>parent</strong><span class="classifier">Service</span></dt><dd><p>An optional reference of the parent service to mix in.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>service</strong><span class="classifier">Service</span></dt><dd><p>A collection of service methods.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.service.ConfigPersistenceService.load_tunables">
+<span class="sig-name descname"><span class="pre">load_tunables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_file_names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../api/mlos_bench/mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../api/mlos_bench/mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></span><a class="headerlink" href="#mlos_bench.service.ConfigPersistenceService.load_tunables" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a collection of tunable parameters from JSON files.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>json_file_names</strong><span class="classifier">list of str</span></dt><dd><p>A list of JSON files to load.</p>
+</dd>
+<dt><strong>parent</strong><span class="classifier">TunableGroups</span></dt><dd><p>An optional collection of tunables to add to the new collection.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>tunables</strong><span class="classifier">TunableGroup</span></dt><dd><p>Create a new collection of tunable parameters.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.service.ConfigPersistenceService.resolve_path">
+<span class="sig-name descname"><span class="pre">resolve_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_paths</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#mlos_bench.service.ConfigPersistenceService.resolve_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prepend the suitable <cite>_config_path</cite> to <cite>path</cite> if the latter is not absolute.
+If <cite>_config_path</cite> is <cite>None</cite> or <cite>path</cite> is absolute, return <cite>path</cite> as is.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>file_path</strong><span class="classifier">str</span></dt><dd><p>Path to the input config file.</p>
+</dd>
+<dt><strong>extra_paths</strong><span class="classifier">List[str]</span></dt><dd><p>Additional directories to prepend to the list of search paths.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>path</strong><span class="classifier">str</span></dt><dd><p>An actual path to the config or script.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div style='clear:both'></div></section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mlos_bench.service.FileShareService.html" class="btn btn-neutral float-left" title="mlos_bench.service.FileShareService" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mlos_bench.service.local.LocalExecService.html" class="btn btn-neutral float-right" title="mlos_bench.service.local.LocalExecService" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, GSL.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

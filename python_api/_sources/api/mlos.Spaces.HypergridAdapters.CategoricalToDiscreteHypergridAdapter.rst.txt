@@ -1,7 +1,0 @@
-mlos.Spaces.HypergridAdapters.CategoricalToDiscreteHypergridAdapter
-===================================================================
-
-.. automodule:: mlos.Spaces.HypergridAdapters.CategoricalToDiscreteHypergridAdapter
-   :members:
-   :undoc-members:
-   :show-inheritance:

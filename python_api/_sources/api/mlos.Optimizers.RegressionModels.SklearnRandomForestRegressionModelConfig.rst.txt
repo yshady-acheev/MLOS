@@ -1,7 +1,0 @@
-mlos.Optimizers.RegressionModels.SklearnRandomForestRegressionModelConfig
-=========================================================================
-
-.. automodule:: mlos.Optimizers.RegressionModels.SklearnRandomForestRegressionModelConfig
-   :members:
-   :undoc-members:
-   :show-inheritance:

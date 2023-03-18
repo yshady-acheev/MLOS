@@ -1,7 +1,0 @@
-mlos.Optimizers.RegressionModels.GoodnessOfFitMetrics
-=====================================================
-
-.. automodule:: mlos.Optimizers.RegressionModels.GoodnessOfFitMetrics
-   :members:
-   :undoc-members:
-   :show-inheritance:

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mlos-core API &mdash; MlosCore 0.0.4 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/plot_directive.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="mlos_core.optimizers.OptimizerType" href="generated/mlos_core.optimizers.OptimizerType.html" />
+    <link rel="prev" title="Installation" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            MlosCore
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">mlos-core API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#optimizers">Optimizers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/mlos_core.optimizers.OptimizerType.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.optimizers</span></code>.OptimizerType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/mlos_core.optimizers.OptimizerFactory.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.optimizers</span></code>.OptimizerFactory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/mlos_core.optimizers.OptimizerFactory.create.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.optimizers</span></code>.OptimizerFactory.create</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/mlos_core.optimizers.optimizer.BaseOptimizer.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.optimizers.optimizer</span></code>.BaseOptimizer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/mlos_core.optimizers.random_optimizer.RandomOptimizer.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.optimizers.random_optimizer</span></code>.RandomOptimizer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/mlos_core.optimizers.bayesian_optimizers.BaseBayesianOptimizer.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.optimizers.bayesian_optimizers</span></code>.BaseBayesianOptimizer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.optimizers.bayesian_optimizers</span></code>.EmukitOptimizer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/mlos_core.optimizers.bayesian_optimizers.SkoptOptimizer.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.optimizers.bayesian_optimizers</span></code>.SkoptOptimizer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#spaces">Spaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/mlos_core.spaces.configspace_to_emukit_space.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.spaces</span></code>.configspace_to_emukit_space</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/mlos_core.spaces.configspace_to_skopt_space.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.spaces</span></code>.configspace_to_skopt_space</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#space-adapters">Space Adapters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/mlos_core.spaces.adapters.SpaceAdapterType.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.spaces.adapters</span></code>.SpaceAdapterType</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/mlos_core.spaces.adapters.SpaceAdapterFactory.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.spaces.adapters</span></code>.SpaceAdapterFactory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/mlos_core.spaces.adapters.SpaceAdapterFactory.create.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.spaces.adapters</span></code>.SpaceAdapterFactory.create</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/mlos_core.spaces.adapters.adapter.BaseSpaceAdapter.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.spaces.adapters.adapter</span></code>.BaseSpaceAdapter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/mlos_core.spaces.adapters.llamatune.LlamaTuneAdapter.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.spaces.adapters.llamatune</span></code>.LlamaTuneAdapter</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#mlos-bench-api">mlos-bench API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#main">Main</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#benchmark-environments">Benchmark Environments</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/mlos_bench.environment.Status.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.environment</span></code>.Status</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/mlos_bench.environment.Environment.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.environment</span></code>.Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/mlos_bench.environment.CompositeEnv.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.environment</span></code>.CompositeEnv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/mlos_bench.environment.MockEnv.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.environment</span></code>.MockEnv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#local-environments">Local Environments</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/mlos_bench.environment.local.LocalEnv.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.environment.local</span></code>.LocalEnv</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/mlos_bench.environment.local.LocalFileShareEnv.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.environment.local</span></code>.LocalFileShareEnv</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#remote-environments">Remote Environments</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/mlos_bench.environment.remote.RemoteEnv.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.environment.remote</span></code>.RemoteEnv</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/mlos_bench.environment.remote.OSEnv.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.environment.remote</span></code>.OSEnv</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/mlos_bench.environment.remote.VMEnv.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.environment.remote</span></code>.VMEnv</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tunable-parameters">Tunable Parameters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/mlos_bench.tunables.Tunable.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.tunables</span></code>.Tunable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/mlos_bench.tunables.TunableGroups.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.tunables</span></code>.TunableGroups</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#service-mix-ins">Service Mix-ins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/mlos_bench.service.Service.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.service</span></code>.Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/mlos_bench.service.FileShareService.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.service</span></code>.FileShareService</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/mlos_bench.service.ConfigPersistenceService.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.service</span></code>.ConfigPersistenceService</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#local-services">Local Services</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/mlos_bench.service.local.LocalExecService.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.service.local</span></code>.LocalExecService</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#remote-azure-services">Remote Azure Services</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/mlos_bench.service.remote.azure.AzureVMService.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.service.remote.azure</span></code>.AzureVMService</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/mlos_bench.service.remote.azure.AzureFileShareService.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.service.remote.azure</span></code>.AzureFileShareService</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#optimizer-adapters">Optimizer Adapters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/mlos_bench.optimizer.Optimizer.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.optimizer</span></code>.Optimizer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/mlos_bench.optimizer.MockOptimizer.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.optimizer</span></code>.MockOptimizer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/mlos_bench.optimizer.MlosCoreOptimizer.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.optimizer</span></code>.MlosCoreOptimizer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/mlos_core/modules.html">mlos_core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/mlos_bench/modules.html">mlos_bench</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MlosCore</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">mlos-core API</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/overview.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mlos-core-api">
+<h1>mlos-core API<a class="headerlink" href="#mlos-core-api" title="Permalink to this heading">¶</a></h1>
+<p>This is a list of major functions and classes provided by <cite>mlos_core</cite>.</p>
+<section id="optimizers">
+<h2>Optimizers<a class="headerlink" href="#optimizers" title="Permalink to this heading">¶</a></h2>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_core.optimizers.OptimizerType.html#mlos_core.optimizers.OptimizerType" title="mlos_core.optimizers.OptimizerType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OptimizerType</span></code></a>(value)</p></td>
+<td><p>Enumerate supported MlosCore optimizers.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/mlos_core.optimizers.OptimizerFactory.html#mlos_core.optimizers.OptimizerFactory" title="mlos_core.optimizers.OptimizerFactory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OptimizerFactory</span></code></a>()</p></td>
+<td><p>Simple factory class for creating BaseOptimizer-derived objects</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_core.optimizers.OptimizerFactory.html#mlos_core.optimizers.OptimizerFactory.create" title="mlos_core.optimizers.OptimizerFactory.create"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OptimizerFactory.create</span></code></a>(parameter_space[, ...])</p></td>
+<td><p>Creates a new optimizer instance, given the parameter space, optimizer type and potential optimizer options.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_core.optimizers.optimizer.BaseOptimizer.html#mlos_core.optimizers.optimizer.BaseOptimizer" title="mlos_core.optimizers.optimizer.BaseOptimizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseOptimizer</span></code></a>(parameter_space[, space_adapter])</p></td>
+<td><p>Optimizer abstract base class defining the basic interface.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_core.optimizers.random_optimizer.RandomOptimizer.html#mlos_core.optimizers.random_optimizer.RandomOptimizer" title="mlos_core.optimizers.random_optimizer.RandomOptimizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RandomOptimizer</span></code></a>(parameter_space[, space_adapter])</p></td>
+<td><p>Optimizer class that produces random suggestions.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_core.optimizers.bayesian_optimizers.BaseBayesianOptimizer.html#mlos_core.optimizers.bayesian_optimizers.BaseBayesianOptimizer" title="mlos_core.optimizers.bayesian_optimizers.BaseBayesianOptimizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseBayesianOptimizer</span></code></a>(parameter_space[, ...])</p></td>
+<td><p>Abstract base class defining the interface for Bayesian optimization.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.html#mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer" title="mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EmukitOptimizer</span></code></a>(parameter_space[, space_adapter])</p></td>
+<td><p>Wrapper class for Emukit based Bayesian optimization.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_core.optimizers.bayesian_optimizers.SkoptOptimizer.html#mlos_core.optimizers.bayesian_optimizers.SkoptOptimizer" title="mlos_core.optimizers.bayesian_optimizers.SkoptOptimizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SkoptOptimizer</span></code></a>(parameter_space[, ...])</p></td>
+<td><p>Wrapper class for Skopt based Bayesian optimization.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="spaces">
+<h2>Spaces<a class="headerlink" href="#spaces" title="Permalink to this heading">¶</a></h2>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_core.spaces.configspace_to_emukit_space.html#mlos_core.spaces.configspace_to_emukit_space" title="mlos_core.spaces.configspace_to_emukit_space"><code class="xref py py-obj docutils literal notranslate"><span class="pre">configspace_to_emukit_space</span></code></a>(config_space)</p></td>
+<td><p>Converts a ConfigSpace.ConfigurationSpace to emukit.core.ParameterSpace.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/mlos_core.spaces.configspace_to_skopt_space.html#mlos_core.spaces.configspace_to_skopt_space" title="mlos_core.spaces.configspace_to_skopt_space"><code class="xref py py-obj docutils literal notranslate"><span class="pre">configspace_to_skopt_space</span></code></a>(config_space)</p></td>
+<td><p>Converts a ConfigSpace.ConfigurationSpace to a list of skopt spaces.</p></td>
+</tr>
+</tbody>
+</table>
+<section id="space-adapters">
+<h3>Space Adapters<a class="headerlink" href="#space-adapters" title="Permalink to this heading">¶</a></h3>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_core.spaces.adapters.SpaceAdapterType.html#mlos_core.spaces.adapters.SpaceAdapterType" title="mlos_core.spaces.adapters.SpaceAdapterType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpaceAdapterType</span></code></a>(value)</p></td>
+<td><p>Enumerate supported MlosCore space adapters.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/mlos_core.spaces.adapters.SpaceAdapterFactory.html#mlos_core.spaces.adapters.SpaceAdapterFactory" title="mlos_core.spaces.adapters.SpaceAdapterFactory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpaceAdapterFactory</span></code></a>()</p></td>
+<td><p>Simple factory class for creating BaseSpaceAdapter-derived objects</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_core.spaces.adapters.SpaceAdapterFactory.html#mlos_core.spaces.adapters.SpaceAdapterFactory.create" title="mlos_core.spaces.adapters.SpaceAdapterFactory.create"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpaceAdapterFactory.create</span></code></a>(parameter_space)</p></td>
+<td><p>Creates a new space adapter instance, given the parameter space and potential space adapter options.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_core.spaces.adapters.adapter.BaseSpaceAdapter.html#mlos_core.spaces.adapters.adapter.BaseSpaceAdapter" title="mlos_core.spaces.adapters.adapter.BaseSpaceAdapter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseSpaceAdapter</span></code></a>(orig_parameter_space)</p></td>
+<td><p>SpaceAdapter abstract class defining the basic interface.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_core.spaces.adapters.llamatune.LlamaTuneAdapter.html#mlos_core.spaces.adapters.llamatune.LlamaTuneAdapter" title="mlos_core.spaces.adapters.llamatune.LlamaTuneAdapter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LlamaTuneAdapter</span></code></a>(orig_config_space[, ...])</p></td>
+<td><p>Implementation of LlamaTune, a set of parameter space transformation techniques, aimed at improving the sample-efficiency of the underlying optimizer.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+<section id="mlos-bench-api">
+<h1>mlos-bench API<a class="headerlink" href="#mlos-bench-api" title="Permalink to this heading">¶</a></h1>
+<p>This is a list of major functions and classes provided by <cite>mlos_bench</cite>.</p>
+<section id="main">
+<h2>Main<a class="headerlink" href="#main" title="Permalink to this heading">¶</a></h2>
+<p><a class="reference internal" href="api/mlos_bench/mlos_bench.run_opt.html"><span class="doc">run_opt.py</span></a></p>
+<blockquote>
+<div><p>The main optimization loop script.</p>
+</div></blockquote>
+<p><a class="reference internal" href="api/mlos_bench/mlos_bench.run_bench.html"><span class="doc">run_bench.py</span></a></p>
+<blockquote>
+<div><p>A helper script for testing a single application/workload run.</p>
+</div></blockquote>
+</section>
+<section id="benchmark-environments">
+<h2>Benchmark Environments<a class="headerlink" href="#benchmark-environments" title="Permalink to this heading">¶</a></h2>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.environment.Status.html#mlos_bench.environment.Status" title="mlos_bench.environment.Status"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Status</span></code></a>(value)</p></td>
+<td><p>Enum for the status of the benchmark/environment.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/mlos_bench.environment.Environment.html#mlos_bench.environment.Environment" title="mlos_bench.environment.Environment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Environment</span></code></a>(name, config[, global_config, ...])</p></td>
+<td><p>An abstract base of all benchmark environments.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.environment.CompositeEnv.html#mlos_bench.environment.CompositeEnv" title="mlos_bench.environment.CompositeEnv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CompositeEnv</span></code></a>(name, config[, global_config, ...])</p></td>
+<td><p>Composite benchmark environment.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/mlos_bench.environment.MockEnv.html#mlos_bench.environment.MockEnv" title="mlos_bench.environment.MockEnv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MockEnv</span></code></a>(name, config[, global_config, ...])</p></td>
+<td><p>Scheduler-side environment to mock the benchmark results.</p></td>
+</tr>
+</tbody>
+</table>
+<section id="local-environments">
+<h3>Local Environments<a class="headerlink" href="#local-environments" title="Permalink to this heading">¶</a></h3>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.environment.local.LocalEnv.html#mlos_bench.environment.local.LocalEnv" title="mlos_bench.environment.local.LocalEnv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LocalEnv</span></code></a>(name, config[, global_config, ...])</p></td>
+<td><p>Scheduler-side Environment that runs scripts locally.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/mlos_bench.environment.local.LocalFileShareEnv.html#mlos_bench.environment.local.LocalFileShareEnv" title="mlos_bench.environment.local.LocalFileShareEnv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LocalFileShareEnv</span></code></a>(name, config[, ...])</p></td>
+<td><p>Scheduler-side Environment that runs scripts locally and uploads/downloads data to the shared file storage.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="remote-environments">
+<h3>Remote Environments<a class="headerlink" href="#remote-environments" title="Permalink to this heading">¶</a></h3>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.environment.remote.RemoteEnv.html#mlos_bench.environment.remote.RemoteEnv" title="mlos_bench.environment.remote.RemoteEnv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RemoteEnv</span></code></a>(name, config[, global_config, ...])</p></td>
+<td><p>Environment to run benchmarks and scripts on a remote host.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/mlos_bench.environment.remote.OSEnv.html#mlos_bench.environment.remote.OSEnv" title="mlos_bench.environment.remote.OSEnv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OSEnv</span></code></a>(name, config[, global_config, ...])</p></td>
+<td><p>OS Level Environment for a host.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.environment.remote.VMEnv.html#mlos_bench.environment.remote.VMEnv" title="mlos_bench.environment.remote.VMEnv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VMEnv</span></code></a>(name, config[, global_config, ...])</p></td>
+<td><p>&quot;Remote&quot; VM environment.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="tunable-parameters">
+<h2>Tunable Parameters<a class="headerlink" href="#tunable-parameters" title="Permalink to this heading">¶</a></h2>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.tunables.Tunable.html#mlos_bench.tunables.Tunable" title="mlos_bench.tunables.Tunable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Tunable</span></code></a>(name, config)</p></td>
+<td><p>A tunable parameter definition and its current value.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/mlos_bench.tunables.TunableGroups.html#mlos_bench.tunables.TunableGroups" title="mlos_bench.tunables.TunableGroups"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TunableGroups</span></code></a>([config])</p></td>
+<td><p>A collection of covariant groups of tunable parameters.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="service-mix-ins">
+<h2>Service Mix-ins<a class="headerlink" href="#service-mix-ins" title="Permalink to this heading">¶</a></h2>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.service.Service.html#mlos_bench.service.Service" title="mlos_bench.service.Service"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Service</span></code></a>([config, parent])</p></td>
+<td><p>An abstract base of all environment services.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/mlos_bench.service.FileShareService.html#mlos_bench.service.FileShareService" title="mlos_bench.service.FileShareService"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FileShareService</span></code></a>(config, parent)</p></td>
+<td><p>An abstract base of all file shares.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.service.ConfigPersistenceService.html#mlos_bench.service.ConfigPersistenceService" title="mlos_bench.service.ConfigPersistenceService"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigPersistenceService</span></code></a>([config, parent])</p></td>
+<td><p>Collection of methods to deserialize the Environment, Service, and TunableGroups objects.</p></td>
+</tr>
+</tbody>
+</table>
+<section id="local-services">
+<h3>Local Services<a class="headerlink" href="#local-services" title="Permalink to this heading">¶</a></h3>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.service.local.LocalExecService.html#mlos_bench.service.local.LocalExecService" title="mlos_bench.service.local.LocalExecService"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LocalExecService</span></code></a>([config, parent])</p></td>
+<td><p>Collection of methods to run scripts and commands in an external process on the node acting as the scheduler.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="remote-azure-services">
+<h3>Remote Azure Services<a class="headerlink" href="#remote-azure-services" title="Permalink to this heading">¶</a></h3>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.service.remote.azure.AzureVMService.html#mlos_bench.service.remote.azure.AzureVMService" title="mlos_bench.service.remote.azure.AzureVMService"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AzureVMService</span></code></a>(config, parent)</p></td>
+<td><p>Helper methods to manage VMs on Azure.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/mlos_bench.service.remote.azure.AzureFileShareService.html#mlos_bench.service.remote.azure.AzureFileShareService" title="mlos_bench.service.remote.azure.AzureFileShareService"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AzureFileShareService</span></code></a>(config, parent)</p></td>
+<td><p>Helper methods for interacting with Azure File Share</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="optimizer-adapters">
+<h2>Optimizer Adapters<a class="headerlink" href="#optimizer-adapters" title="Permalink to this heading">¶</a></h2>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.optimizer.Optimizer.html#mlos_bench.optimizer.Optimizer" title="mlos_bench.optimizer.Optimizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optimizer</span></code></a>(tunables, config)</p></td>
+<td><p>An abstract interface between the benchmarking framework and mlos_core optimizers.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/mlos_bench.optimizer.MockOptimizer.html#mlos_bench.optimizer.MockOptimizer" title="mlos_bench.optimizer.MockOptimizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MockOptimizer</span></code></a>(tunables, config)</p></td>
+<td><p>Mock optimizer to test the Environment API.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.optimizer.MlosCoreOptimizer.html#mlos_bench.optimizer.MlosCoreOptimizer" title="mlos_bench.optimizer.MlosCoreOptimizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MlosCoreOptimizer</span></code></a>(tunables, config)</p></td>
+<td><p>A wrapper class for the mlos_core optimizers.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="generated/mlos_core.optimizers.OptimizerType.html" class="btn btn-neutral float-right" title="mlos_core.optimizers.OptimizerType" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, GSL.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+﻿:mod:`mlos_core.spaces.adapters`.SpaceAdapterType
+========================================================
+
+.. currentmodule:: mlos_core.spaces.adapters
+
+.. autoclass:: SpaceAdapterType
+
+   
+   .. automethod:: __init__
+   
+
+.. include:: mlos_core.spaces.adapters.SpaceAdapterType.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

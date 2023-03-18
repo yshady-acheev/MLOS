@@ -1,7 +1,0 @@
-mlos.MlosOptimizationServices.MlosOptimizationServicesProxy
-===========================================================
-
-.. automodule:: mlos.MlosOptimizationServices.MlosOptimizationServicesProxy
-   :members:
-   :undoc-members:
-   :show-inheritance:

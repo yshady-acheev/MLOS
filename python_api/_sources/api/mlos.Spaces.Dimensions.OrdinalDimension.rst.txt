@@ -1,7 +1,0 @@
-mlos.Spaces.Dimensions.OrdinalDimension
-=======================================
-
-.. automodule:: mlos.Spaces.Dimensions.OrdinalDimension
-   :members:
-   :undoc-members:
-   :show-inheritance:

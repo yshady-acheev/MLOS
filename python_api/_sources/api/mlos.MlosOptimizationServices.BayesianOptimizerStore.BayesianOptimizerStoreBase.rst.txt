@@ -1,7 +1,0 @@
-mlos.MlosOptimizationServices.BayesianOptimizerStore.BayesianOptimizerStoreBase
-===============================================================================
-
-.. automodule:: mlos.MlosOptimizationServices.BayesianOptimizerStore.BayesianOptimizerStoreBase
-   :members:
-   :undoc-members:
-   :show-inheritance:

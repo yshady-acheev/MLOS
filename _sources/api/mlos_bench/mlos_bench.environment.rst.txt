@@ -1,0 +1,27 @@
+mlos\_bench.environment package
+===============================
+
+.. automodule:: mlos_bench.environment
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   mlos_bench.environment.local
+   mlos_bench.environment.remote
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   mlos_bench.environment.base_environment
+   mlos_bench.environment.composite_env
+   mlos_bench.environment.mock_env
+   mlos_bench.environment.status

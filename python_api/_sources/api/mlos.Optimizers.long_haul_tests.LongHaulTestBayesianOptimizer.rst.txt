@@ -1,7 +1,0 @@
-mlos.Optimizers.long\_haul\_tests.LongHaulTestBayesianOptimizer
-===============================================================
-
-.. automodule:: mlos.Optimizers.long_haul_tests.LongHaulTestBayesianOptimizer
-   :members:
-   :undoc-members:
-   :show-inheritance:

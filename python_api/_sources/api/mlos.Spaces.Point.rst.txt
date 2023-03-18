@@ -1,7 +1,0 @@
-mlos.Spaces.Point
-=================
-
-.. automodule:: mlos.Spaces.Point
-   :members:
-   :undoc-members:
-   :show-inheritance:

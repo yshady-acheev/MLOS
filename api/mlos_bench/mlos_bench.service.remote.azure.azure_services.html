@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mlos_bench.service.remote.azure.azure_services module &mdash; MlosCore 0.0.4 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="mlos_bench.service.remote.ssh package" href="mlos_bench.service.remote.ssh.html" />
+    <link rel="prev" title="mlos_bench.service.remote.azure.azure_fileshare module" href="mlos_bench.service.remote.azure.azure_fileshare.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            MlosCore
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html">mlos-core API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html#mlos-bench-api">mlos-bench API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../mlos_core/modules.html">mlos_core</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">mlos_bench</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="mlos_bench.html">mlos_bench package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="mlos_bench.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.environment.html">mlos_bench.environment package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.optimizer.html">mlos_bench.optimizer package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="mlos_bench.service.html">mlos_bench.service package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.tunables.html">mlos_bench.tunables package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.html#submodules">Submodules</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">MlosCore</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">mlos_bench</a></li>
+          <li class="breadcrumb-item"><a href="mlos_bench.html">mlos_bench package</a></li>
+          <li class="breadcrumb-item"><a href="mlos_bench.service.html">mlos_bench.service package</a></li>
+          <li class="breadcrumb-item"><a href="mlos_bench.service.remote.html">mlos_bench.service.remote package</a></li>
+          <li class="breadcrumb-item"><a href="mlos_bench.service.remote.azure.html">mlos_bench.service.remote.azure package</a></li>
+      <li class="breadcrumb-item active">mlos_bench.service.remote.azure.azure_services module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/api/mlos_bench/mlos_bench.service.remote.azure.azure_services.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-mlos_bench.service.remote.azure.azure_services">
+<span id="mlos-bench-service-remote-azure-azure-services-module"></span><h1>mlos_bench.service.remote.azure.azure_services module<a class="headerlink" href="#module-mlos_bench.service.remote.azure.azure_services" title="Permalink to this heading">¶</a></h1>
+<p>A collection Service functions for managing VMs on Azure.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="mlos_bench.service.remote.azure.azure_services.AzureVMService">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.service.remote.azure.azure_services.</span></span><span class="sig-name descname"><span class="pre">AzureVMService</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.service.base_service.html#mlos_bench.service.base_service.Service" title="mlos_bench.service.base_service.Service"><span class="pre">Service</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.service.remote.azure.azure_services.AzureVMService" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="mlos_bench.service.base_service.html#mlos_bench.service.base_service.Service" title="mlos_bench.service.base_service.Service"><code class="xref py py-class docutils literal notranslate"><span class="pre">Service</span></code></a></p>
+<p>Helper methods to manage VMs on Azure.</p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.service.remote.azure.azure_services.AzureVMService.check_vm_operation_status" title="mlos_bench.service.remote.azure.azure_services.AzureVMService.check_vm_operation_status"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_vm_operation_status</span></code></a>(params)</p></td>
+<td><p>Checks the status of a pending operation on an Azure VM.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">export</span></code>()</p></td>
+<td><p>Return a dictionary of functions available in this service.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.service.remote.azure.azure_services.AzureVMService.get_remote_exec_results" title="mlos_bench.service.remote.azure.azure_services.AzureVMService.get_remote_exec_results"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_remote_exec_results</span></code></a>(params)</p></td>
+<td><p>Get the results of the asynchronously running command.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">new</span></code>(class_name, config, parent)</p></td>
+<td><p>Factory method for a new service with a given config.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code>(services)</p></td>
+<td><p>Register new mix-in services.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.service.remote.azure.azure_services.AzureVMService.remote_exec" title="mlos_bench.service.remote.azure.azure_services.AzureVMService.remote_exec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remote_exec</span></code></a>(script, params)</p></td>
+<td><p>Run a command on Azure VM.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.service.remote.azure.azure_services.AzureVMService.vm_deprovision" title="mlos_bench.service.remote.azure.azure_services.AzureVMService.vm_deprovision"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vm_deprovision</span></code></a>()</p></td>
+<td><p>Deallocates the VM on Azure by shutting it down then releasing the compute resources.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.service.remote.azure.azure_services.AzureVMService.vm_provision" title="mlos_bench.service.remote.azure.azure_services.AzureVMService.vm_provision"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vm_provision</span></code></a>(params)</p></td>
+<td><p>Check if Azure VM is ready.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.service.remote.azure.azure_services.AzureVMService.vm_reboot" title="mlos_bench.service.remote.azure.azure_services.AzureVMService.vm_reboot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vm_reboot</span></code></a>()</p></td>
+<td><p>Reboot the VM on Azure by initiating a graceful shutdown.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.service.remote.azure.azure_services.AzureVMService.vm_start" title="mlos_bench.service.remote.azure.azure_services.AzureVMService.vm_start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vm_start</span></code></a>(params)</p></td>
+<td><p>Start the VM on Azure.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.service.remote.azure.azure_services.AzureVMService.vm_stop" title="mlos_bench.service.remote.azure.azure_services.AzureVMService.vm_stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vm_stop</span></code></a>()</p></td>
+<td><p>Stops the VM on Azure by initiating a graceful shutdown.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.service.remote.azure.azure_services.AzureVMService.wait_vm_deployment" title="mlos_bench.service.remote.azure.azure_services.AzureVMService.wait_vm_deployment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_vm_deployment</span></code></a>(is_setup, params)</p></td>
+<td><p>Waits for a pending operation on an Azure VM to resolve to SUCCEEDED or FAILED.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.service.remote.azure.azure_services.AzureVMService.wait_vm_operation" title="mlos_bench.service.remote.azure.azure_services.AzureVMService.wait_vm_operation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_vm_operation</span></code></a>(params)</p></td>
+<td><p>Waits for a pending operation on an Azure VM to resolve to SUCCEEDED or FAILED.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.service.remote.azure.azure_services.AzureVMService.check_vm_operation_status">
+<span class="sig-name descname"><span class="pre">check_vm_operation_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environment.status.html#mlos_bench.environment.status.Status" title="mlos_bench.environment.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.service.remote.azure.azure_services.AzureVMService.check_vm_operation_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks the status of a pending operation on an Azure VM.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>params: dict</strong></dt><dd><p>Flat dictionary of (key, value) pairs of tunable parameters.
+Must have the “asyncResultsUrl” key to get the results.
+If the key is not present, return Status.PENDING.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>result</strong><span class="classifier">(Status, dict)</span></dt><dd><p>A pair of Status and result.
+Status is one of {PENDING, RUNNING, SUCCEEDED, FAILED}
+Result is info on the operation runtime if SUCCEEDED, otherwise {}.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.service.remote.azure.azure_services.AzureVMService.get_remote_exec_results">
+<span class="sig-name descname"><span class="pre">get_remote_exec_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environment.status.html#mlos_bench.environment.status.Status" title="mlos_bench.environment.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.service.remote.azure.azure_services.AzureVMService.get_remote_exec_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the results of the asynchronously running command.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>params</strong><span class="classifier">dict</span></dt><dd><p>Flat dictionary of (key, value) pairs of tunable parameters.
+Must have the “asyncResultsUrl” key to get the results.
+If the key is not present, return Status.PENDING.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>result</strong><span class="classifier">(Status, dict)</span></dt><dd><p>A pair of Status and result.
+Status is one of {PENDING, SUCCEEDED, FAILED, TIMED_OUT}</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.service.remote.azure.azure_services.AzureVMService.remote_exec">
+<span class="sig-name descname"><span class="pre">remote_exec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">script</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environment.status.html#mlos_bench.environment.status.Status" title="mlos_bench.environment.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.service.remote.azure.azure_services.AzureVMService.remote_exec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run a command on Azure VM.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>script</strong><span class="classifier">List[str]</span></dt><dd><p>A list of lines to execute as a script on a remote VM.</p>
+</dd>
+<dt><strong>params</strong><span class="classifier">dict</span></dt><dd><p>Flat dictionary of (key, value) pairs of parameters.
+They usually come from <cite>const_args</cite> and <cite>tunable_params</cite>
+properties of the Environment.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>result</strong><span class="classifier">(Status, dict)</span></dt><dd><p>A pair of Status and result.
+Status is one of {PENDING, SUCCEEDED, FAILED}</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.service.remote.azure.azure_services.AzureVMService.vm_deprovision">
+<span class="sig-name descname"><span class="pre">vm_deprovision</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environment.status.html#mlos_bench.environment.status.Status" title="mlos_bench.environment.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.service.remote.azure.azure_services.AzureVMService.vm_deprovision" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deallocates the VM on Azure by shutting it down then releasing the compute resources.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>result</strong><span class="classifier">(Status, dict={})</span></dt><dd><p>A pair of Status and result. The result is always {}.
+Status is one of {PENDING, SUCCEEDED, FAILED}</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.service.remote.azure.azure_services.AzureVMService.vm_provision">
+<span class="sig-name descname"><span class="pre">vm_provision</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environment.status.html#mlos_bench.environment.status.Status" title="mlos_bench.environment.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.service.remote.azure.azure_services.AzureVMService.vm_provision" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if Azure VM is ready. Deploy a new VM, if necessary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>params</strong><span class="classifier">dict</span></dt><dd><p>Flat dictionary of (key, value) pairs of tunable parameters.
+VMEnv tunables are variable parameters that, together with the
+VMEnv configuration, are sufficient to provision a VM.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>result</strong><span class="classifier">(Status, dict={})</span></dt><dd><p>A pair of Status and result. The result is always {}.
+Status is one of {PENDING, SUCCEEDED, FAILED}</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.service.remote.azure.azure_services.AzureVMService.vm_reboot">
+<span class="sig-name descname"><span class="pre">vm_reboot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environment.status.html#mlos_bench.environment.status.Status" title="mlos_bench.environment.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.service.remote.azure.azure_services.AzureVMService.vm_reboot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reboot the VM on Azure by initiating a graceful shutdown.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>result</strong><span class="classifier">(Status, dict={})</span></dt><dd><p>A pair of Status and result. The result is always {}.
+Status is one of {PENDING, SUCCEEDED, FAILED}</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.service.remote.azure.azure_services.AzureVMService.vm_start">
+<span class="sig-name descname"><span class="pre">vm_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environment.status.html#mlos_bench.environment.status.Status" title="mlos_bench.environment.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.service.remote.azure.azure_services.AzureVMService.vm_start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start the VM on Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>params</strong><span class="classifier">dict</span></dt><dd><p>Flat dictionary of (key, value) pairs of tunable parameters.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>result</strong><span class="classifier">(Status, dict={})</span></dt><dd><p>A pair of Status and result. The result is always {}.
+Status is one of {PENDING, SUCCEEDED, FAILED}</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.service.remote.azure.azure_services.AzureVMService.vm_stop">
+<span class="sig-name descname"><span class="pre">vm_stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environment.status.html#mlos_bench.environment.status.Status" title="mlos_bench.environment.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.service.remote.azure.azure_services.AzureVMService.vm_stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops the VM on Azure by initiating a graceful shutdown.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>result</strong><span class="classifier">(Status, dict={})</span></dt><dd><p>A pair of Status and result. The result is always {}.
+Status is one of {PENDING, SUCCEEDED, FAILED}</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.service.remote.azure.azure_services.AzureVMService.wait_vm_deployment">
+<span class="sig-name descname"><span class="pre">wait_vm_deployment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">is_setup</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environment.status.html#mlos_bench.environment.status.Status" title="mlos_bench.environment.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.service.remote.azure.azure_services.AzureVMService.wait_vm_deployment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Waits for a pending operation on an Azure VM to resolve to SUCCEEDED or FAILED.
+Return TIMED_OUT when timing out.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>is_setup</strong><span class="classifier">bool</span></dt><dd><p>If True, wait for VM being deployed; otherwise, wait for successful deprovisioning.</p>
+</dd>
+<dt><strong>params</strong><span class="classifier">dict</span></dt><dd><p>Flat dictionary of (key, value) pairs of tunable parameters.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>result</strong><span class="classifier">(Status, dict)</span></dt><dd><p>A pair of Status and result.
+Status is one of {PENDING, SUCCEEDED, FAILED, TIMED_OUT}
+Result is info on the operation runtime if SUCCEEDED, otherwise {}.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.service.remote.azure.azure_services.AzureVMService.wait_vm_operation">
+<span class="sig-name descname"><span class="pre">wait_vm_operation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environment.status.html#mlos_bench.environment.status.Status" title="mlos_bench.environment.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.service.remote.azure.azure_services.AzureVMService.wait_vm_operation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Waits for a pending operation on an Azure VM to resolve to SUCCEEDED or FAILED.
+Return TIMED_OUT when timing out.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>params: dict</strong></dt><dd><p>Flat dictionary of (key, value) pairs of tunable parameters.
+Must have the “asyncResultsUrl” key to get the results.
+If the key is not present, return Status.PENDING.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>result</strong><span class="classifier">(Status, dict)</span></dt><dd><p>A pair of Status and result.
+Status is one of {PENDING, SUCCEEDED, FAILED, TIMED_OUT}
+Result is info on the operation runtime if SUCCEEDED, otherwise {}.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mlos_bench.service.remote.azure.azure_fileshare.html" class="btn btn-neutral float-left" title="mlos_bench.service.remote.azure.azure_fileshare module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mlos_bench.service.remote.ssh.html" class="btn btn-neutral float-right" title="mlos_bench.service.remote.ssh package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, GSL.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

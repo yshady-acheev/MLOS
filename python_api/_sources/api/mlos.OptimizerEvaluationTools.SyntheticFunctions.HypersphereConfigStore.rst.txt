@@ -1,7 +1,0 @@
-mlos.OptimizerEvaluationTools.SyntheticFunctions.HypersphereConfigStore
-=======================================================================
-
-.. automodule:: mlos.OptimizerEvaluationTools.SyntheticFunctions.HypersphereConfigStore
-   :members:
-   :undoc-members:
-   :show-inheritance:

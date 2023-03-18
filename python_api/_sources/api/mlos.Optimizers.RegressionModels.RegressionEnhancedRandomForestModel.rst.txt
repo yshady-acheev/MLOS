@@ -1,7 +1,0 @@
-mlos.Optimizers.RegressionModels.RegressionEnhancedRandomForestModel
-====================================================================
-
-.. automodule:: mlos.Optimizers.RegressionModels.RegressionEnhancedRandomForestModel
-   :members:
-   :undoc-members:
-   :show-inheritance:
