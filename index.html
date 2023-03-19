@@ -86,8 +86,8 @@
 <p>It is intended to provide a simplified, easier to consume (e.g. via <code class="docutils literal notranslate"><span class="pre">pip</span></code>), with lower dependencies abstraction to</p>
 <ul class="simple">
 <li><p>describe a space of context, parameters, their ranges, constraints, etc. and result objectives</p></li>
-<li><p>an “optimizer” service abstraction (e.g. <code class="docutils literal notranslate"><span class="pre">register()</span></code> and <code class="docutils literal notranslate"><span class="pre">suggest()</span></code>) so we can easily swap out different implementations methods of searching (e.g. random, BO, etc.)</p></li>
-<li><p>provide some helpers for automating optimization experiment runner loops and data collection</p></li>
+<li><p>an “optimizer” service <a class="reference external" href="./overview.html#mlos-core-api">abstraction</a> (e.g. <code class="docutils literal notranslate"><span class="pre">register()</span></code> and <code class="docutils literal notranslate"><span class="pre">suggest()</span></code>) so we can easily swap out different implementations methods of searching (e.g. random, BO, etc.)</p></li>
+<li><p>provide some helpers for <a class="reference external" href="./overview.html#mlos-bench-api">automating optimization experiment</a> runner loops and data collection</p></li>
 </ul>
 <p>For these design requirements we intend to reuse as much from existing OSS libraries as possible and layer policies and optimizations specifically geared towards autotuning over top.</p>
 </section>
