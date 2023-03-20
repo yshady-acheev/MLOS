@@ -43,8 +43,8 @@
             </div>
         </div>
         <h2>
-            <span class="text">32 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">32<span class="text"> run</span></button>
+            <span class="text">35 statements &nbsp;</span>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">35<span class="text"> run</span></button>
             <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">0<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
@@ -145,12 +145,23 @@
     <p class="run"><span class="n"><a id="t86" href="#t86">86</a></span><span class="t">    <span class="op">(</span><span class="nam">score</span><span class="op">,</span> <span class="nam">_tunables</span><span class="op">)</span> <span class="op">=</span> <span class="nam">_optimize</span><span class="op">(</span><span class="nam">mock_env_no_noise</span><span class="op">,</span> <span class="nam">emukit_opt</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t87" href="#t87">87</a></span><span class="t">    <span class="key">assert</span> <span class="nam">score</span> <span class="op">==</span> <span class="nam">pytest</span><span class="op">.</span><span class="nam">approx</span><span class="op">(</span><span class="num">80.0</span><span class="op">,</span> <span class="num">0.01</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t88" href="#t88">88</a></span><span class="t">    <span class="com"># Emukit optimizer is not deterministic, so we can't assert the exact values of the tunables.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t89" href="#t89">89</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t90" href="#t90">90</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t91" href="#t91">91</a></span><span class="t"><span class="key">def</span> <span class="nam">test_emukit_optimization_loop_max</span><span class="op">(</span><span class="nam">mock_env_no_noise</span><span class="op">:</span> <span class="nam">MockEnv</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t92" href="#t92">92</a></span><span class="t">                                      <span class="nam">emukit_opt_max</span><span class="op">:</span> <span class="nam">MlosCoreOptimizer</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t93" href="#t93">93</a></span><span class="t">    <span class="str">"""</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t94" href="#t94">94</a></span><span class="t"><span class="str">    Toy optimization loop with mock environment and EmuKit optimizer</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t95" href="#t95">95</a></span><span class="t"><span class="str">    in maximization mode.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t96" href="#t96">96</a></span><span class="t"><span class="str">    """</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t97" href="#t97">97</a></span><span class="t">    <span class="op">(</span><span class="nam">score</span><span class="op">,</span> <span class="nam">_tunables</span><span class="op">)</span> <span class="op">=</span> <span class="nam">_optimize</span><span class="op">(</span><span class="nam">mock_env_no_noise</span><span class="op">,</span> <span class="nam">emukit_opt_max</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t98" href="#t98">98</a></span><span class="t">    <span class="key">assert</span> <span class="nam">score</span> <span class="op">==</span> <span class="nam">pytest</span><span class="op">.</span><span class="nam">approx</span><span class="op">(</span><span class="num">80.0</span><span class="op">,</span> <span class="num">0.01</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t99" href="#t99">99</a></span><span class="t">    <span class="com"># Emukit optimizer is not deterministic, so we can't assert the exact values of the tunables.</span>&nbsp;</span><span class="r"></span></p>
 </main>
 <footer>
     <div class="content">
         <p>
             <a class="nav" href="index.html">&#xab; index</a> &nbsp; &nbsp; <a class="nav" href="https://coverage.readthedocs.io">coverage.py v6.3.2</a>,
-            created at 2023-03-20 20:55 +0000
+            created at 2023-03-20 22:01 +0000
         </p>
     </div>
 </footer>
