@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.optimizer.Optimizer &mdash; MlosCore 0.1.dev1+g7058164 documentation</title>
+  <title>mlos_bench.optimizer.Optimizer &mdash; MlosCore 0.1.dev1+g9f00a01 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/plot_directive.css" type="text/css" />
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g7058164
+                0.1.dev1+g9f00a01
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -103,10 +103,18 @@
 <dt class="sig sig-object py" id="mlos_bench.optimizer.Optimizer">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.optimizer.</span></span><span class="sig-name descname"><span class="pre">Optimizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../api/mlos_bench/mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.optimizer.Optimizer" title="Permalink to this definition">¶</a></dt>
 <dd><p>An abstract interface between the benchmarking framework and mlos_core optimizers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference internal" href="#mlos_bench.optimizer.Optimizer.target" title="mlos_bench.optimizer.Optimizer.target"><code class="xref py py-obj docutils literal notranslate"><span class="pre">target</span></code></a></dt><dd><p>The name of the target metric to optimize.</p>
+</dd>
+</dl>
+</dd>
+</dl>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.optimizer.Optimizer.bulk_register" title="mlos_bench.optimizer.Optimizer.bulk_register"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bulk_register</span></code></a>(data)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.optimizer.Optimizer.bulk_register" title="mlos_bench.optimizer.Optimizer.bulk_register"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bulk_register</span></code></a>(configs, scores[, status])</p></td>
 <td><p>Pre-load the optimizer with the bulk data from previous experiments.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.optimizer.Optimizer.get_best_observation" title="mlos_bench.optimizer.Optimizer.get_best_observation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_best_observation</span></code></a>()</p></td>
@@ -147,13 +155,22 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.optimizer.Optimizer.bulk_register">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bulk_register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.optimizer.Optimizer.bulk_register" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bulk_register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">configs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scores</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../api/mlos_bench/mlos_bench.environment.status.html#mlos_bench.environment.status.Status" title="mlos_bench.environment.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#mlos_bench.optimizer.Optimizer.bulk_register" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pre-load the optimizer with the bulk data from previous experiments.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>data</strong><span class="classifier">List[dict]</span></dt><dd><p>Records of tunable values and benchmark scores from other experiments.
-The data is expected to be in <cite>pandas.DataFrame.to_dict(‘records’)</cite> format.</p>
+<dt><strong>configs</strong><span class="classifier">List[dict]</span></dt><dd><p>Records of tunable values from other experiments.</p>
+</dd>
+<dt><strong>scores</strong><span class="classifier">List[float]</span></dt><dd><p>Benchmark results from experiments that correspond to <cite>configs</cite>.</p>
+</dd>
+<dt><strong>status</strong><span class="classifier">Optional[List[float]]</span></dt><dd><p>Status of the experiments that correspond to <cite>configs</cite>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>is_not_empty</strong><span class="classifier">bool</span></dt><dd><p>True if there is data to register, false otherwise.</p>
 </dd>
 </dl>
 </dd>
@@ -274,6 +291,12 @@ but with the values set to the next suggestion.</p>
 </dl>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="mlos_bench.optimizer.Optimizer.target">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">target</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#mlos_bench.optimizer.Optimizer.target" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the target metric to optimize.</p>
 </dd></dl>
 
 </dd></dl>
