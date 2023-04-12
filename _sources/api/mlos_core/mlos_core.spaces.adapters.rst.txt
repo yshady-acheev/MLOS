@@ -13,4 +13,5 @@ Submodules
    :maxdepth: 4
 
    mlos_core.spaces.adapters.adapter
+   mlos_core.spaces.adapters.identity_adapter
    mlos_core.spaces.adapters.llamatune
