@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_974f7f0354d04887_bayesian_optimizers_test_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.2">coverage.py v7.2.2</a>,
-            created at 2023-04-11 00:32 +0000
+            created at 2023-04-12 00:22 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -186,7 +186,7 @@
     <p class="run"><span class="n"><a id="t104" href="#t104">104</a></span><span class="t">                <span class="key">if</span> <span class="key">not</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_use_approximate_reverse_mapping</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t105" href="#t105">105</a></span><span class="t">                    <span class="key">raise</span> <span class="nam">ValueError</span><span class="op">(</span><span class="str">f"{repr(configuration)}\n"</span> <span class="str">"The above configuration was not suggested by the optimizer. "</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t106" href="#t106">106</a></span><span class="t">                                     <span class="str">"Approximate reverse mapping is currently disabled; thus *only* configurations suggested "</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t107" href="#t107">107</a></span><span class="t">                                     <span class="str">"previously by the optimzer can be registered."</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t107" href="#t107">107</a></span><span class="t">                                     <span class="str">"previously by the optimizer can be registered."</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t108" href="#t108">108</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t109" href="#t109">109</a></span><span class="t">                <span class="com"># ...yet, we try to support that by implementing an approximate reverse mapping using pseudo-inverse matrix.</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t110" href="#t110">110</a></span><span class="t">                <span class="key">if</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_pinv_matrix</span> <span class="key">is</span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
@@ -238,8 +238,8 @@
     <p class="pln"><span class="n"><a id="t156" href="#t156">156</a></span><span class="t">                <span class="key">for</span> <span class="nam">idx</span> <span class="key">in</span> <span class="nam">range</span><span class="op">(</span><span class="nam">num_low_dims</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t157" href="#t157">157</a></span><span class="t">            <span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t158" href="#t158">158</a></span><span class="t">        <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t159" href="#t159">159</a></span><span class="t">            <span class="com"># Currently supported optimizers do not support definint a discretized space (like ConfigSpace does using `q` kwarg).</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t160" href="#t160">160</a></span><span class="t">            <span class="com"># Thus, to support space discretization, we define the low-dimensioanl space using integer hyperparameters.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t159" href="#t159">159</a></span><span class="t">            <span class="com"># Currently supported optimizers do not support defining a discretized space (like ConfigSpace does using `q` kwarg).</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t160" href="#t160">160</a></span><span class="t">            <span class="com"># Thus, to support space discretization, we define the low-dimensional space using integer hyperparameters.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t161" href="#t161">161</a></span><span class="t">            <span class="com"># We also employ a scaler, which scales suggested values to [-1, 1] range, used by HeSBO projection.</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t162" href="#t162">162</a></span><span class="t">            <span class="nam">hyperparameters</span> <span class="op">=</span> <span class="op">[</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t163" href="#t163">163</a></span><span class="t">                <span class="nam">ConfigSpace</span><span class="op">.</span><span class="nam">UniformIntegerHyperparameter</span><span class="op">(</span><span class="nam">name</span><span class="op">=</span><span class="str">f'dim_{idx}'</span><span class="op">,</span> <span class="nam">lower</span><span class="op">=</span><span class="num">1</span><span class="op">,</span> <span class="nam">upper</span><span class="op">=</span><span class="nam">max_unique_values_per_param</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -458,7 +458,7 @@
             <a id="nextFileLink" class="nav" href="d_974f7f0354d04887_bayesian_optimizers_test_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.2">coverage.py v7.2.2</a>,
-            created at 2023-04-11 00:32 +0000
+            created at 2023-04-12 00:22 +0000
         </p>
     </div>
 </footer>
