@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_974f7f0354d04887___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.2">coverage.py v7.2.2</a>,
-            created at 2023-04-17 20:17 +0000
+            created at 2023-04-17 21:12 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -348,7 +348,7 @@
     <p class="run"><span class="n"><a id="t266" href="#t266">266</a></span><span class="t">        <span class="key">return</span> <span class="nam">ret</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t267" href="#t267">267</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t268" href="#t268">268</a></span><span class="t">    <span class="com"># pylint: disable=too-complex,too-many-branches</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t269" href="#t269">269</a></span><span class="t">    <span class="key">def</span> <span class="nam">_validate_special_param_values</span><span class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="nam">special_param_values_dict</span><span class="op">:</span> <span class="nam">dict</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t269" href="#t269">269</a></span><span class="t">    <span class="key">def</span> <span class="nam">_validate_special_param_values</span><span class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="nam">special_param_values_dict</span><span class="op">:</span> <span class="nam">dict</span><span class="op">)</span> <span class="op">-></span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t270" href="#t270">270</a></span><span class="t">        <span class="str">"""Checks that the user-provided dict of special parameter values is valid.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t271" href="#t271">271</a></span><span class="t"><span class="str">        And assigns it to the corresponding attribute.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t272" href="#t272">272</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -381,7 +381,7 @@
     <p class="run"><span class="n"><a id="t299" href="#t299">299</a></span><span class="t">                <span class="nam">tuple_list</span> <span class="op">=</span> <span class="op">[</span><span class="op">(</span><span class="nam">value</span><span class="op">,</span> <span class="nam">self</span><span class="op">.</span><span class="nam">DEFAULT_SPECIAL_PARAM_VALUE_BIASING_PERCENTAGE</span><span class="op">)</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t300" href="#t300">300</a></span><span class="t">            <span class="key">elif</span> <span class="nam">isinstance</span><span class="op">(</span><span class="nam">value</span><span class="op">,</span> <span class="nam">tuple</span><span class="op">)</span> <span class="key">and</span> <span class="op">[</span><span class="nam">type</span><span class="op">(</span><span class="nam">v</span><span class="op">)</span> <span class="key">for</span> <span class="nam">v</span> <span class="key">in</span> <span class="nam">value</span><span class="op">]</span> <span class="op">==</span> <span class="op">[</span><span class="nam">int</span><span class="op">,</span> <span class="nam">float</span><span class="op">]</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t301" href="#t301">301</a></span><span class="t">                <span class="com"># User specifies both special value and biasing percentage</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t302" href="#t302">302</a></span><span class="t">                <span class="nam">tuple_list</span> <span class="op">=</span> <span class="op">[</span><span class="nam">value</span><span class="op">]</span>    <span class="com"># type: ignore</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t302" href="#t302">302</a></span><span class="t">                <span class="nam">tuple_list</span> <span class="op">=</span> <span class="op">[</span><span class="nam">value</span><span class="op">]</span>    <span class="com"># type: ignore[list-item]</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t303" href="#t303">303</a></span><span class="t">            <span class="key">elif</span> <span class="nam">isinstance</span><span class="op">(</span><span class="nam">value</span><span class="op">,</span> <span class="nam">list</span><span class="op">)</span> <span class="key">and</span> <span class="nam">value</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t304" href="#t304">304</a></span><span class="t">                <span class="key">if</span> <span class="nam">all</span><span class="op">(</span><span class="nam">isinstance</span><span class="op">(</span><span class="nam">t</span><span class="op">,</span> <span class="nam">int</span><span class="op">)</span> <span class="key">for</span> <span class="nam">t</span> <span class="key">in</span> <span class="nam">value</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t305" href="#t305">305</a></span><span class="t">                    <span class="com"># User specifies list of special values</span>&nbsp;</span><span class="r"></span></p>
@@ -418,7 +418,7 @@
     <p class="pln"><span class="n"><a id="t336" href="#t336">336</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t337" href="#t337">337</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">_special_param_values_dict</span> <span class="op">=</span> <span class="nam">sanitized_dict</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t338" href="#t338">338</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t339" href="#t339">339</a></span><span class="t">    <span class="key">def</span> <span class="nam">_try_generate_approx_inverse_mapping</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t339" href="#t339">339</a></span><span class="t">    <span class="key">def</span> <span class="nam">_try_generate_approx_inverse_mapping</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span> <span class="op">-></span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t340" href="#t340">340</a></span><span class="t">        <span class="str">"""Tries to generate an approximate reverse mapping: i.e., from high-dimensional space to the low-dimensional one.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t341" href="#t341">341</a></span><span class="t"><span class="str">        Reverse mapping is generated using the pseudo-inverse matrix, of original HeSBO projection matrix.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t342" href="#t342">342</a></span><span class="t"><span class="str">        This mapping can be potentially used to register configurations that were *not* previously suggested by the optimizer.</span>&nbsp;</span><span class="r"></span></p>
@@ -458,7 +458,7 @@
             <a id="nextFileLink" class="nav" href="d_974f7f0354d04887___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.2">coverage.py v7.2.2</a>,
-            created at 2023-04-17 20:17 +0000
+            created at 2023-04-17 21:12 +0000
         </p>
     </div>
 </footer>
