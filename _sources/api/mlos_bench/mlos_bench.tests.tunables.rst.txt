@@ -1,0 +1,18 @@
+mlos\_bench.tests.tunables package
+==================================
+
+.. automodule:: mlos_bench.tests.tunables
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   mlos_bench.tests.tunables.conftest
+   mlos_bench.tests.tunables.tunable_to_configspace_test
+   mlos_bench.tests.tunables.tunables_assign_test
+   mlos_bench.tests.tunables.tunables_copy_test

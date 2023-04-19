@@ -1,0 +1,15 @@
+mlos\_bench.tests.service.remote package
+========================================
+
+.. automodule:: mlos_bench.tests.service.remote
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   mlos_bench.tests.service.remote.azure

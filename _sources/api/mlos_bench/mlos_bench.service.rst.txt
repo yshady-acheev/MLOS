@@ -14,6 +14,7 @@ Subpackages
 
    mlos_bench.service.local
    mlos_bench.service.remote
+   mlos_bench.service.types
 
 Submodules
 ----------

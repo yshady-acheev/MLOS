@@ -1,0 +1,7 @@
+mlos\_bench.tests.service.remote.azure.azure\_services\_test module
+===================================================================
+
+.. automodule:: mlos_bench.tests.service.remote.azure.azure_services_test
+   :members:
+   :undoc-members:
+   :show-inheritance:

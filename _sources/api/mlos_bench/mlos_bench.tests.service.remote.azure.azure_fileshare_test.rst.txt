@@ -1,0 +1,7 @@
+mlos\_bench.tests.service.remote.azure.azure\_fileshare\_test module
+====================================================================
+
+.. automodule:: mlos_bench.tests.service.remote.azure.azure_fileshare_test
+   :members:
+   :undoc-members:
+   :show-inheritance:

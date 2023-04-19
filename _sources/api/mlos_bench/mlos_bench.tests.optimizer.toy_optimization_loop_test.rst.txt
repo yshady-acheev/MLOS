@@ -1,0 +1,7 @@
+mlos\_bench.tests.optimizer.toy\_optimization\_loop\_test module
+================================================================
+
+.. automodule:: mlos_bench.tests.optimizer.toy_optimization_loop_test
+   :members:
+   :undoc-members:
+   :show-inheritance:
