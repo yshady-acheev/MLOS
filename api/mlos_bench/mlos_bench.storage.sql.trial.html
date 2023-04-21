@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mlos_bench.storage.sql.trial module &mdash; MlosCore 0.1.dev1+g41957bc documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="mlos_bench.storage.base_storage module" href="mlos_bench.storage.base_storage.html" />
+    <link rel="prev" title="mlos_bench.storage.sql.storage module" href="mlos_bench.storage.sql.storage.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            MlosCore
+          </a>
+              <div class="version">
+                0.1.dev1+g41957bc
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html">mlos-core API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html#mlos-bench-api">mlos-bench API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../mlos_core/modules.html">mlos_core</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">mlos_bench</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="mlos_bench.html">mlos_bench package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="mlos_bench.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.environment.html">mlos_bench.environment package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.optimizer.html">mlos_bench.optimizer package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.service.html">mlos_bench.service package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="mlos_bench.storage.html">mlos_bench.storage package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.html">mlos_bench.tests package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.tunables.html">mlos_bench.tunables package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.html#submodules">Submodules</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">MlosCore</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">mlos_bench</a></li>
+          <li class="breadcrumb-item"><a href="mlos_bench.html">mlos_bench package</a></li>
+          <li class="breadcrumb-item"><a href="mlos_bench.storage.html">mlos_bench.storage package</a></li>
+          <li class="breadcrumb-item"><a href="mlos_bench.storage.sql.html">mlos_bench.storage.sql package</a></li>
+      <li class="breadcrumb-item active">mlos_bench.storage.sql.trial module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/api/mlos_bench/mlos_bench.storage.sql.trial.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-mlos_bench.storage.sql.trial">
+<span id="mlos-bench-storage-sql-trial-module"></span><h1>mlos_bench.storage.sql.trial module<a class="headerlink" href="#module-mlos_bench.storage.sql.trial" title="Permalink to this heading">¶</a></h1>
+<p>Saving and updating benchmark data using SQLAlchemy backend.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="mlos_bench.storage.sql.trial.Trial">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.storage.sql.trial.</span></span><span class="sig-name descname"><span class="pre">Trial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">engine</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Engine</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.storage.sql.schema.html#mlos_bench.storage.sql.schema.DbSchema" title="mlos_bench.storage.sql.schema.DbSchema"><span class="pre">DbSchema</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">experiment_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trial_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opt_target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.storage.sql.trial.Trial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="mlos_bench.storage.base_storage.html#mlos_bench.storage.base_storage.Storage.Trial" title="mlos_bench.storage.base_storage.Storage.Trial"><code class="xref py py-class docutils literal notranslate"><span class="pre">Trial</span></code></a></p>
+<p>Store the results of a single run of the experiment in SQL database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">config_id</span></code></dt><dd><p>ID of the current trial configuration.</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">trial_id</span></code></dt><dd><p>ID of the current trial.</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">tunables</span></code></dt><dd><p>Tunable parameters of the current trial.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">config</span></code>([global_config])</p></td>
+<td><p>Produce a copy of the global configuration updated with the parameters of the current trial.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.storage.sql.trial.Trial.update" title="mlos_bench.storage.sql.trial.Trial.update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update</span></code></a>(status[, metrics])</p></td>
+<td><p>Update the storage with the results of the experiment.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.storage.sql.trial.Trial.update_telemetry" title="mlos_bench.storage.sql.trial.Trial.update_telemetry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_telemetry</span></code></a>(status[, metrics])</p></td>
+<td><p>Save the experiment's telemetry data and intermediate status.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.storage.sql.trial.Trial.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.environment.status.html#mlos_bench.environment.status.Status" title="mlos_bench.environment.status.Status"><span class="pre">Status</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.storage.sql.trial.Trial.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the storage with the results of the experiment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>status</strong><span class="classifier">Status</span></dt><dd><p>Status of the experiment run.</p>
+</dd>
+<dt><strong>metrics</strong><span class="classifier">Optional[Union[Dict[str, float], float]]</span></dt><dd><p>One or several metrics of the experiment run.
+Must contain the optimization target if the status is SUCCEEDED.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>metrics</strong><span class="classifier">Optional[Dict[str, float]]</span></dt><dd><p>Same as <cite>metrics</cite>, but always in the dict format.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.storage.sql.trial.Trial.update_telemetry">
+<span class="sig-name descname"><span class="pre">update_telemetry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.environment.status.html#mlos_bench.environment.status.Status" title="mlos_bench.environment.status.Status"><span class="pre">Status</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.storage.sql.trial.Trial.update_telemetry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the experiment’s telemetry data and intermediate status.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>status</strong><span class="classifier">Status</span></dt><dd><p>Current status of the trial.</p>
+</dd>
+<dt><strong>metrics</strong><span class="classifier">Optional[Dict[str, float]]</span></dt><dd><p>Telemetry data.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mlos_bench.storage.sql.storage.html" class="btn btn-neutral float-left" title="mlos_bench.storage.sql.storage module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mlos_bench.storage.base_storage.html" class="btn btn-neutral float-right" title="mlos_bench.storage.base_storage module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, GSL.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

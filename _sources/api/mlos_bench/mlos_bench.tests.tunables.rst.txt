@@ -16,3 +16,4 @@ Submodules
    mlos_bench.tests.tunables.tunable_to_configspace_test
    mlos_bench.tests.tunables.tunables_assign_test
    mlos_bench.tests.tunables.tunables_copy_test
+   mlos_bench.tests.tunables.tunables_str_test

@@ -1,0 +1,7 @@
+mlos\_bench.storage.base\_storage module
+========================================
+
+.. automodule:: mlos_bench.storage.base_storage
+   :members:
+   :undoc-members:
+   :show-inheritance:

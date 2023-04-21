@@ -24,3 +24,4 @@ Submodules
    :maxdepth: 4
 
    mlos_bench.tests.conftest
+   mlos_bench.tests.util_git_test

@@ -1,0 +1,7 @@
+mlos\_bench.tests.tunables.tunables\_str\_test module
+=====================================================
+
+.. automodule:: mlos_bench.tests.tunables.tunables_str_test
+   :members:
+   :undoc-members:
+   :show-inheritance:

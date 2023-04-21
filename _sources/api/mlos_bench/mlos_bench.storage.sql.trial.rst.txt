@@ -1,0 +1,7 @@
+mlos\_bench.storage.sql.trial module
+====================================
+
+.. automodule:: mlos_bench.storage.sql.trial
+   :members:
+   :undoc-members:
+   :show-inheritance:
