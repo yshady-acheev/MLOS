@@ -16,3 +16,4 @@ Submodules
    mlos_bench.optimizer.convert_configspace
    mlos_bench.optimizer.mlos_core_optimizer
    mlos_bench.optimizer.mock_optimizer
+   mlos_bench.optimizer.one_shot_optimizer

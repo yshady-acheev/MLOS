@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.optimizer package &mdash; MlosCore 0.1.dev1+g4eb6caf documentation</title>
+  <title>mlos_bench.optimizer package &mdash; MlosCore 0.1.dev1+ge0e18b3 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g4eb6caf
+                0.1.dev1+ge0e18b3
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -324,6 +324,47 @@ None if the experiment was not successful.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="mlos_bench.optimizer.OneShotOptimizer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.optimizer.</span></span><span class="sig-name descname"><span class="pre">OneShotOptimizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">service</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.service.base_service.html#mlos_bench.service.base_service.Service" title="mlos_bench.service.base_service.Service"><span class="pre">Service</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.optimizer.OneShotOptimizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="mlos_bench.optimizer.mock_optimizer.html#mlos_bench.optimizer.mock_optimizer.MockOptimizer" title="mlos_bench.optimizer.mock_optimizer.MockOptimizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">MockOptimizer</span></code></a></p>
+<p>Null optimizer that proposes a single configuration and converges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">target</span></code></dt><dd><p>The name of the target metric to optimize.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">bulk_register</span></code>(configs, scores[, status])</p></td>
+<td><p>Pre-load the optimizer with the bulk data from previous experiments.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_best_observation</span></code>()</p></td>
+<td><p>Get the best observation so far.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">not_converged</span></code>()</p></td>
+<td><p>Return True if not converged, False otherwise.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code>(tunables, status[, score])</p></td>
+<td><p>Register the observation for the given configuration.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.optimizer.OneShotOptimizer.suggest" title="mlos_bench.optimizer.OneShotOptimizer.suggest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">suggest</span></code></a>()</p></td>
+<td><p>Generate the next (random) suggestion.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.optimizer.OneShotOptimizer.suggest">
+<span class="sig-name descname"><span class="pre">suggest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></span><a class="headerlink" href="#mlos_bench.optimizer.OneShotOptimizer.suggest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate the next (random) suggestion.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="mlos_bench.optimizer.Optimizer">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.optimizer.</span></span><span class="sig-name descname"><span class="pre">Optimizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">service</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.service.base_service.html#mlos_bench.service.base_service.Service" title="mlos_bench.service.base_service.Service"><span class="pre">Service</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.optimizer.Optimizer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
@@ -404,7 +445,7 @@ Base implementation just checks the iteration count.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.optimizer.Optimizer.register">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.environment.status.html#mlos_bench.environment.status.Status" title="mlos_bench.environment.status.Status"><span class="pre">Status</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.optimizer.Optimizer.register" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.environment.status.html#mlos_bench.environment.status.Status" title="mlos_bench.environment.status.Status"><span class="pre">Status</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.optimizer.Optimizer.register" title="Permalink to this definition">¶</a></dt>
 <dd><p>Register the observation for the given configuration.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -488,6 +529,13 @@ but with the values set to the next suggestion.</p>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.optimizer.mock_optimizer.html#mlos_bench.optimizer.mock_optimizer.MockOptimizer.get_best_observation"><code class="docutils literal notranslate"><span class="pre">MockOptimizer.get_best_observation()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.optimizer.mock_optimizer.html#mlos_bench.optimizer.mock_optimizer.MockOptimizer.register"><code class="docutils literal notranslate"><span class="pre">MockOptimizer.register()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.optimizer.mock_optimizer.html#mlos_bench.optimizer.mock_optimizer.MockOptimizer.suggest"><code class="docutils literal notranslate"><span class="pre">MockOptimizer.suggest()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mlos_bench.optimizer.one_shot_optimizer.html">mlos_bench.optimizer.one_shot_optimizer module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mlos_bench.optimizer.one_shot_optimizer.html#mlos_bench.optimizer.one_shot_optimizer.OneShotOptimizer"><code class="docutils literal notranslate"><span class="pre">OneShotOptimizer</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.optimizer.one_shot_optimizer.html#mlos_bench.optimizer.one_shot_optimizer.OneShotOptimizer.suggest"><code class="docutils literal notranslate"><span class="pre">OneShotOptimizer.suggest()</span></code></a></li>
 </ul>
 </li>
 </ul>
