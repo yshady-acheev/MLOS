@@ -1,9 +1,0 @@
-mlos\_bench.run\_opt module
-===========================
-
-.. automodule:: mlos_bench.run_opt
-   :members:
-   :undoc-members:
-   :show-inheritance:
-.. literalinclude:: mlos_bench.run_opt.usage.txt
-   :language: none

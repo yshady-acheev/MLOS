@@ -26,6 +26,5 @@ Submodules
    :maxdepth: 4
 
    mlos_bench.launcher
-   mlos_bench.run_bench
-   mlos_bench.run_opt
+   mlos_bench.run
    mlos_bench.util

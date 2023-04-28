@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.launcher module &mdash; MlosCore 0.1.dev1+gf7e6305 documentation</title>
+  <title>mlos_bench.launcher module &mdash; MlosCore 0.1.dev1+g02e079f documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
@@ -19,7 +19,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="mlos_bench.run_bench module" href="mlos_bench.run_bench.html" />
+    <link rel="next" title="mlos_bench.run module" href="mlos_bench.run.html" />
     <link rel="prev" title="mlos_bench.tunables.tunable_groups module" href="mlos_bench.tunables.tunable_groups.html" /> 
 </head>
 
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+gf7e6305
+                0.1.dev1+g02e079f
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -59,8 +59,7 @@
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.html#subpackages">Subpackages</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="mlos_bench.html#submodules">Submodules</a><ul class="current">
 <li class="toctree-l4 current"><a class="current reference internal" href="#">mlos_bench.launcher module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="mlos_bench.run_bench.html">mlos_bench.run_bench module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="mlos_bench.run_opt.html">mlos_bench.run_opt module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.run.html">mlos_bench.run module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.util.html">mlos_bench.util module</a></li>
 </ul>
 </li>
@@ -98,93 +97,15 @@
              
   <section id="module-mlos_bench.launcher">
 <span id="mlos-bench-launcher-module"></span><h1>mlos_bench.launcher module<a class="headerlink" href="#module-mlos_bench.launcher" title="Permalink to this heading">¶</a></h1>
-<p>Helper functions to launch the benchmark and the optimizer from the command line.</p>
+<p>A helper class to load the configuration files, parse the command line parameters,
+and instantiate the main components of mlos_bench system.</p>
+<p>It is used in <cite>mlos_bench.run</cite> module to run the benchmark/optimizer from the
+command line.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="mlos_bench.launcher.Launcher">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.launcher.</span></span><span class="sig-name descname"><span class="pre">Launcher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.launcher.Launcher" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Common parts of the mlos_bench command line launchers.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Attributes<span class="colon">:</span></dt>
-<dd class="field-odd"><dl class="simple">
-<dt><a class="reference internal" href="#mlos_bench.launcher.Launcher.global_config" title="mlos_bench.launcher.Launcher.global_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">global_config</span></code></a></dt><dd><p>Get the global parameters that can override the values in the config snippets.</p>
-</dd>
-<dt><a class="reference internal" href="#mlos_bench.launcher.Launcher.parser" title="mlos_bench.launcher.Launcher.parser"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parser</span></code></a></dt><dd><p>Get the command line parser (so we can add more arguments to it).</p>
-</dd>
-<dt><a class="reference internal" href="#mlos_bench.launcher.Launcher.root_env_config" title="mlos_bench.launcher.Launcher.root_env_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">root_env_config</span></code></a></dt><dd><p>Get the global parameters that can override the values in the config snippets.</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Methods</p>
-<table class="autosummary longtable docutils align-default">
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.launcher.Launcher.load_config" title="mlos_bench.launcher.Launcher.load_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_config</span></code></a>(json_file_name)</p></td>
-<td><p>Load JSON config file.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.launcher.Launcher.load_environment" title="mlos_bench.launcher.Launcher.load_environment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_environment</span></code></a>()</p></td>
-<td><p>Create a new benchmarking environment from the configs and command line parameters.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.launcher.Launcher.load_optimizer" title="mlos_bench.launcher.Launcher.load_optimizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_optimizer</span></code></a>(env, json_file_name)</p></td>
-<td><p>Create a new instance of the Optimizer from JSON configuration.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.launcher.Launcher.load_storage" title="mlos_bench.launcher.Launcher.load_storage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_storage</span></code></a>(env, json_file_name)</p></td>
-<td><p>Create a new instance of the Storage from JSON configuration.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.launcher.Launcher.parse_args" title="mlos_bench.launcher.Launcher.parse_args"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parse_args</span></code></a>()</p></td>
-<td><p>Parse command line arguments and load global config parameters.</p></td>
-</tr>
-</tbody>
-</table>
-<dl class="py property">
-<dt class="sig sig-object py" id="mlos_bench.launcher.Launcher.global_config">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">global_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#mlos_bench.launcher.Launcher.global_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the global parameters that can override the values in the config snippets.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos_bench.launcher.Launcher.load_config">
-<span class="sig-name descname"><span class="pre">load_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.launcher.Launcher.load_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load JSON config file. Use path relative to <cite>config_path</cite> if required.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos_bench.launcher.Launcher.load_environment">
-<span class="sig-name descname"><span class="pre">load_environment</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mlos_bench.environments.base_environment.html#mlos_bench.environments.base_environment.Environment" title="mlos_bench.environments.base_environment.Environment"><span class="pre">Environment</span></a></span></span><a class="headerlink" href="#mlos_bench.launcher.Launcher.load_environment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new benchmarking environment from the configs and command line parameters.
-Inject the persistence service so that the environment can load other configs.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos_bench.launcher.Launcher.load_optimizer">
-<span class="sig-name descname"><span class="pre">load_optimizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">env</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.environments.base_environment.html#mlos_bench.environments.base_environment.Environment" title="mlos_bench.environments.base_environment.Environment"><span class="pre">Environment</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">json_file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mlos_bench.optimizers.base_optimizer.html#mlos_bench.optimizers.base_optimizer.Optimizer" title="mlos_bench.optimizers.base_optimizer.Optimizer"><span class="pre">Optimizer</span></a></span></span><a class="headerlink" href="#mlos_bench.launcher.Launcher.load_optimizer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new instance of the Optimizer from JSON configuration.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos_bench.launcher.Launcher.load_storage">
-<span class="sig-name descname"><span class="pre">load_storage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">env</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.environments.base_environment.html#mlos_bench.environments.base_environment.Environment" title="mlos_bench.environments.base_environment.Environment"><span class="pre">Environment</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">json_file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mlos_bench.storage.base_storage.html#mlos_bench.storage.base_storage.Storage" title="mlos_bench.storage.base_storage.Storage"><span class="pre">Storage</span></a></span></span><a class="headerlink" href="#mlos_bench.launcher.Launcher.load_storage" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new instance of the Storage from JSON configuration.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos_bench.launcher.Launcher.parse_args">
-<span class="sig-name descname"><span class="pre">parse_args</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Namespace</span></span></span><a class="headerlink" href="#mlos_bench.launcher.Launcher.parse_args" title="Permalink to this definition">¶</a></dt>
-<dd><p>Parse command line arguments and load global config parameters.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="mlos_bench.launcher.Launcher.parser">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parser</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ArgumentParser</span></em><a class="headerlink" href="#mlos_bench.launcher.Launcher.parser" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the command line parser (so we can add more arguments to it).</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="mlos_bench.launcher.Launcher.root_env_config">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">root_env_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#mlos_bench.launcher.Launcher.root_env_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the global parameters that can override the values in the config snippets.</p>
-</dd></dl>
-
+<p>Command line launcher for mlos_bench and mlos_core.</p>
 </dd></dl>
 
 </section>
@@ -194,7 +115,7 @@ Inject the persistence service so that the environment can load other configs.</
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="mlos_bench.tunables.tunable_groups.html" class="btn btn-neutral float-left" title="mlos_bench.tunables.tunable_groups module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="mlos_bench.run_bench.html" class="btn btn-neutral float-right" title="mlos_bench.run_bench module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="mlos_bench.run.html" class="btn btn-neutral float-right" title="mlos_bench.run module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

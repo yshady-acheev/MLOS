@@ -1,0 +1,16 @@
+﻿:mod:`mlos_bench.storage.sql.storage`.SqlStorage
+=======================================================
+
+.. currentmodule:: mlos_bench.storage.sql.storage
+
+.. autoclass:: SqlStorage
+
+   
+   .. automethod:: __init__
+   
+
+.. include:: mlos_bench.storage.sql.storage.SqlStorage.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.run_opt module &mdash; MlosCore 0.1.dev1+gf7e6305 documentation</title>
+  <title>mlos_bench.run module &mdash; MlosCore 0.1.dev1+g02e079f documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
@@ -20,7 +20,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="mlos_bench.util module" href="mlos_bench.util.html" />
-    <link rel="prev" title="mlos_bench.run_bench module" href="mlos_bench.run_bench.html" /> 
+    <link rel="prev" title="mlos_bench.launcher module" href="mlos_bench.launcher.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+gf7e6305
+                0.1.dev1+g02e079f
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -59,8 +59,7 @@
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.html#subpackages">Subpackages</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="mlos_bench.html#submodules">Submodules</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.launcher.html">mlos_bench.launcher module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="mlos_bench.run_bench.html">mlos_bench.run_bench module</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">mlos_bench.run_opt module</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">mlos_bench.run module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.util.html">mlos_bench.util module</a></li>
 </ul>
 </li>
@@ -86,9 +85,9 @@
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="modules.html">mlos_bench</a></li>
           <li class="breadcrumb-item"><a href="mlos_bench.html">mlos_bench package</a></li>
-      <li class="breadcrumb-item active">mlos_bench.run_opt module</li>
+      <li class="breadcrumb-item active">mlos_bench.run module</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/api/mlos_bench/mlos_bench.run_opt.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/api/mlos_bench/mlos_bench.run.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -96,16 +95,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-mlos_bench.run_opt">
-<span id="mlos-bench-run-opt-module"></span><h1>mlos_bench.run_opt module<a class="headerlink" href="#module-mlos_bench.run_opt" title="Permalink to this heading">¶</a></h1>
+  <section id="module-mlos_bench.run">
+<span id="mlos-bench-run-module"></span><h1>mlos_bench.run module<a class="headerlink" href="#module-mlos_bench.run" title="Permalink to this heading">¶</a></h1>
 <p>OS Autotune main optimization loop.</p>
 <p>See <cite>–help</cite> output for details.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>usage: run_opt.py [-h] [--log LOG_FILE] [--log-level LOG_LEVEL] --environment
-                  ENVIRONMENT [--config-path CONFIG_PATH [CONFIG_PATH ...]]
-                  [--globals GLOBALS [GLOBALS ...]] [--no-teardown]
-                  --optimizer OPTIMIZER --storage STORAGE
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>usage: run.py [-h] [--log LOG_FILE] [--log-level LOG_LEVEL]
+              [--config-path CONFIG_PATH [CONFIG_PATH ...]] --environment
+              ENVIRONMENT [--optimizer OPTIMIZER] [--storage STORAGE]
+              [--tunables TUNABLES [TUNABLES ...]]
+              [--globals GLOBALS [GLOBALS ...]] [--no-teardown]
 
-mlos_bench run_opt
+mlos_bench
 
 options:
   -h, --help            show this help message and exit
@@ -113,19 +113,27 @@ options:
   --log-level LOG_LEVEL
                         Logging level. Default is 20 (INFO). Set to 10 for
                         debug, 30 for warnings only.
+  --config-path CONFIG_PATH [CONFIG_PATH ...]
+                        One or more locations of JSON config files.
   --environment ENVIRONMENT
                         Path to JSON file with the configuration of the
                         benchmarking environment.
-  --config-path CONFIG_PATH [CONFIG_PATH ...]
-                        One or more locations of JSON config files.
+  --optimizer OPTIMIZER
+                        Path to the optimizer configuration file. If omitted,
+                        run a single trial with default (or specified in
+                        --tunables) values.
+  --storage STORAGE     Path to the storage configuration file. If omitted,
+                        use the ephemeral in-memory SQL storage.
+  --tunables TUNABLES [TUNABLES ...]
+                        Path to one or more JSON files that contain values of
+                        the tunable parameters. This can be used for a single
+                        trial (when no --optimizer is specified) or as default
+                        values for the first run in optimization.
   --globals GLOBALS [GLOBALS ...]
                         Path to one or more JSON files that contain additional
                         [private] parameters of the benchmarking environment.
   --no-teardown         Disable teardown of the environment after the
                         benchmark.
-  --optimizer OPTIMIZER
-                        Path to the optimizer configuration file.
-  --storage STORAGE     Path to the storage configuration file.
 
 </pre></div>
 </div>
@@ -135,7 +143,7 @@ options:
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="mlos_bench.run_bench.html" class="btn btn-neutral float-left" title="mlos_bench.run_bench module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mlos_bench.launcher.html" class="btn btn-neutral float-left" title="mlos_bench.launcher module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="mlos_bench.util.html" class="btn btn-neutral float-right" title="mlos_bench.util module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
