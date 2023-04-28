@@ -1,0 +1,16 @@
+﻿:mod:`mlos_bench.environments.remote`.VMEnv
+==================================================
+
+.. currentmodule:: mlos_bench.environments.remote
+
+.. autoclass:: VMEnv
+
+   
+   .. automethod:: __init__
+   
+
+.. include:: mlos_bench.environments.remote.VMEnv.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

@@ -1,0 +1,7 @@
+mlos\_bench.tests.optimizers.opt\_bulk\_register\_test module
+=============================================================
+
+.. automodule:: mlos_bench.tests.optimizers.opt_bulk_register_test
+   :members:
+   :undoc-members:
+   :show-inheritance:

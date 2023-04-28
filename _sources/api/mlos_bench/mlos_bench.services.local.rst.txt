@@ -1,0 +1,15 @@
+mlos\_bench.services.local package
+==================================
+
+.. automodule:: mlos_bench.services.local
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   mlos_bench.services.local.local_exec

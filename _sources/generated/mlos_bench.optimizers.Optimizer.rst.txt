@@ -1,0 +1,16 @@
+﻿:mod:`mlos_bench.optimizers`.Optimizer
+=============================================
+
+.. currentmodule:: mlos_bench.optimizers
+
+.. autoclass:: Optimizer
+
+   
+   .. automethod:: __init__
+   
+
+.. include:: mlos_bench.optimizers.Optimizer.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

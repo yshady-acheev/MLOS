@@ -1,7 +1,0 @@
-mlos\_bench.optimizer.mock\_optimizer module
-============================================
-
-.. automodule:: mlos_bench.optimizer.mock_optimizer
-   :members:
-   :undoc-members:
-   :show-inheritance:

@@ -1,0 +1,7 @@
+mlos\_bench.tests.services.config\_persistence\_test module
+===========================================================
+
+.. automodule:: mlos_bench.tests.services.config_persistence_test
+   :members:
+   :undoc-members:
+   :show-inheritance:

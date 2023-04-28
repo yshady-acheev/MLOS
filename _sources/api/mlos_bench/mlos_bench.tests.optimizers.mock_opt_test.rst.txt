@@ -1,0 +1,7 @@
+mlos\_bench.tests.optimizers.mock\_opt\_test module
+===================================================
+
+.. automodule:: mlos_bench.tests.optimizers.mock_opt_test
+   :members:
+   :undoc-members:
+   :show-inheritance:

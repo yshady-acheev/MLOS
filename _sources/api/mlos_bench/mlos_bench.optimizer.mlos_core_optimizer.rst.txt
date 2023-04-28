@@ -1,7 +1,0 @@
-mlos\_bench.optimizer.mlos\_core\_optimizer module
-==================================================
-
-.. automodule:: mlos_bench.optimizer.mlos_core_optimizer
-   :members:
-   :undoc-members:
-   :show-inheritance:

@@ -1,0 +1,16 @@
+﻿:mod:`mlos_bench.optimizers`.MockOptimizer
+=================================================
+
+.. currentmodule:: mlos_bench.optimizers
+
+.. autoclass:: MockOptimizer
+
+   
+   .. automethod:: __init__
+   
+
+.. include:: mlos_bench.optimizers.MockOptimizer.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

@@ -12,9 +12,9 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
-   mlos_bench.tests.environment
-   mlos_bench.tests.optimizer
-   mlos_bench.tests.service
+   mlos_bench.tests.environments
+   mlos_bench.tests.optimizers
+   mlos_bench.tests.services
    mlos_bench.tests.tunables
 
 Submodules

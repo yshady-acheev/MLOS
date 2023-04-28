@@ -1,0 +1,16 @@
+﻿:mod:`mlos_bench.environments`.CompositeEnv
+==================================================
+
+.. currentmodule:: mlos_bench.environments
+
+.. autoclass:: CompositeEnv
+
+   
+   .. automethod:: __init__
+   
+
+.. include:: mlos_bench.environments.CompositeEnv.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

@@ -1,0 +1,24 @@
+mlos\_bench.tests.services package
+==================================
+
+.. automodule:: mlos_bench.tests.services
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   mlos_bench.tests.services.local
+   mlos_bench.tests.services.remote
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   mlos_bench.tests.services.config_persistence_test

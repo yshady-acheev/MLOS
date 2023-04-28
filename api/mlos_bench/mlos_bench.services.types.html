@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mlos_bench.services.types package &mdash; MlosCore 0.1.dev1+gf7e6305 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="mlos_bench.services.types.config_loader_type module" href="mlos_bench.services.types.config_loader_type.html" />
+    <link rel="prev" title="mlos_bench.services.remote.ssh package" href="mlos_bench.services.remote.ssh.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            MlosCore
+          </a>
+              <div class="version">
+                0.1.dev1+gf7e6305
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html">mlos-core API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html#mlos-bench-api">mlos-bench API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../mlos_core/modules.html">mlos_core</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">mlos_bench</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="mlos_bench.html">mlos_bench package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="mlos_bench.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.environments.html">mlos_bench.environments package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.optimizers.html">mlos_bench.optimizers package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="mlos_bench.services.html">mlos_bench.services package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.storage.html">mlos_bench.storage package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.html">mlos_bench.tests package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.tunables.html">mlos_bench.tunables package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.html#submodules">Submodules</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">MlosCore</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">mlos_bench</a></li>
+          <li class="breadcrumb-item"><a href="mlos_bench.html">mlos_bench package</a></li>
+          <li class="breadcrumb-item"><a href="mlos_bench.services.html">mlos_bench.services package</a></li>
+      <li class="breadcrumb-item active">mlos_bench.services.types package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/api/mlos_bench/mlos_bench.services.types.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-mlos_bench.services.types">
+<span id="mlos-bench-services-types-package"></span><h1>mlos_bench.services.types package<a class="headerlink" href="#module-mlos_bench.services.types" title="Permalink to this heading">¶</a></h1>
+<p>Service types for implementing declaring Service behavior for Environments to use in mlos_bench.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="mlos_bench.services.types.SupportsConfigLoading">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.services.types.</span></span><span class="sig-name descname"><span class="pre">SupportsConfigLoading</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.services.types.SupportsConfigLoading" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Protocol</span></code></p>
+<p>Protocol interface for helper functions to lookup and load configs.</p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.services.types.SupportsConfigLoading.build_environment" title="mlos_bench.services.types.SupportsConfigLoading.build_environment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">build_environment</span></code></a>(config[, global_config, ...])</p></td>
+<td><p>Factory method for a new environment with a given config.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.services.types.SupportsConfigLoading.load_config" title="mlos_bench.services.types.SupportsConfigLoading.load_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_config</span></code></a>(json_file_name)</p></td>
+<td><p>Load JSON config file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.services.types.SupportsConfigLoading.load_environment_list" title="mlos_bench.services.types.SupportsConfigLoading.load_environment_list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_environment_list</span></code></a>(json_file_name[, ...])</p></td>
+<td><p>Load and build a list of environments from the config file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.services.types.SupportsConfigLoading.resolve_path" title="mlos_bench.services.types.SupportsConfigLoading.resolve_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resolve_path</span></code></a>(file_path[, extra_paths])</p></td>
+<td><p>Prepend the suitable <cite>_config_path</cite> to <cite>path</cite> if the latter is not absolute.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.types.SupportsConfigLoading.build_environment">
+<span class="sig-name descname"><span class="pre">build_environment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../generated/mlos_bench.tunables.TunableGroups.html#mlos_bench.tunables.TunableGroups" title="mlos_bench.tunables.TunableGroups"><span class="pre">TunableGroups</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">service</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../generated/mlos_bench.services.Service.html#mlos_bench.services.Service" title="mlos_bench.services.Service"><span class="pre">Service</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../../generated/mlos_bench.environments.Environment.html#mlos_bench.environments.Environment" title="mlos_bench.environments.Environment"><span class="pre">Environment</span></a></span></span><a class="headerlink" href="#mlos_bench.services.types.SupportsConfigLoading.build_environment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Factory method for a new environment with a given config.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>config</strong><span class="classifier">dict</span></dt><dd><dl class="simple">
+<dt>A dictionary with three mandatory fields:</dt><dd><p>“name”: Human-readable string describing the environment;
+“class”: FQN of a Python class to instantiate;
+“config”: Free-format dictionary to pass to the constructor.</p>
+</dd>
+</dl>
+</dd>
+<dt><strong>global_config</strong><span class="classifier">dict</span></dt><dd><p>Global parameters to add to the environment config.</p>
+</dd>
+<dt><strong>tunables</strong><span class="classifier">TunableGroups</span></dt><dd><p>A collection of groups of tunable parameters for all environments.</p>
+</dd>
+<dt><strong>service: Service</strong></dt><dd><p>An optional service object (e.g., providing methods to
+deploy or reboot a VM, etc.).</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>env</strong><span class="classifier">Environment</span></dt><dd><p>An instance of the <cite>Environment</cite> class initialized with <cite>config</cite>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.types.SupportsConfigLoading.load_config">
+<span class="sig-name descname"><span class="pre">load_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.types.SupportsConfigLoading.load_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load JSON config file. Search for a file relative to <cite>_config_path</cite>
+if the input path is not absolute.
+This method is exported to be used as a service.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>json_file_name</strong><span class="classifier">str</span></dt><dd><p>Path to the input config file.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>config</strong><span class="classifier">Union[dict, List[dict]]</span></dt><dd><p>Free-format dictionary that contains the configuration.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.types.SupportsConfigLoading.load_environment_list">
+<span class="sig-name descname"><span class="pre">load_environment_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../generated/mlos_bench.tunables.TunableGroups.html#mlos_bench.tunables.TunableGroups" title="mlos_bench.tunables.TunableGroups"><span class="pre">TunableGroups</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">service</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../generated/mlos_bench.services.Service.html#mlos_bench.services.Service" title="mlos_bench.services.Service"><span class="pre">Service</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../generated/mlos_bench.environments.Environment.html#mlos_bench.environments.Environment" title="mlos_bench.environments.Environment"><span class="pre">Environment</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.types.SupportsConfigLoading.load_environment_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load and build a list of environments from the config file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>json_file_name</strong><span class="classifier">str</span></dt><dd><p>The environment JSON configuration file.
+Can contain either one environment or a list of environments.</p>
+</dd>
+<dt><strong>global_config</strong><span class="classifier">dict</span></dt><dd><p>Global parameters to add to the environment config.</p>
+</dd>
+<dt><strong>tunables</strong><span class="classifier">TunableGroups</span></dt><dd><p>An optional collection of tunables to add to the environment.</p>
+</dd>
+<dt><strong>service</strong><span class="classifier">Service</span></dt><dd><p>An optional reference of the parent service to mix in.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>env</strong><span class="classifier">List[Environment]</span></dt><dd><p>A list of new benchmarking environments.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.types.SupportsConfigLoading.resolve_path">
+<span class="sig-name descname"><span class="pre">resolve_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_paths</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#mlos_bench.services.types.SupportsConfigLoading.resolve_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prepend the suitable <cite>_config_path</cite> to <cite>path</cite> if the latter is not absolute.
+If <cite>_config_path</cite> is <cite>None</cite> or <cite>path</cite> is absolute, return <cite>path</cite> as is.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>file_path</strong><span class="classifier">str</span></dt><dd><p>Path to the input config file.</p>
+</dd>
+<dt><strong>extra_paths</strong><span class="classifier">Iterable[str]</span></dt><dd><p>Additional directories to prepend to the list of search paths.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>path</strong><span class="classifier">str</span></dt><dd><p>An actual path to the config or script.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="mlos_bench.services.types.SupportsFileShareOps">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.services.types.</span></span><span class="sig-name descname"><span class="pre">SupportsFileShareOps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.services.types.SupportsFileShareOps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Protocol</span></code></p>
+<p>Protocol interface for file share operations.</p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.services.types.SupportsFileShareOps.download" title="mlos_bench.services.types.SupportsFileShareOps.download"><code class="xref py py-obj docutils literal notranslate"><span class="pre">download</span></code></a>(remote_path, local_path[, recursive])</p></td>
+<td><p>Downloads contents from a remote share path to a local path.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.services.types.SupportsFileShareOps.upload" title="mlos_bench.services.types.SupportsFileShareOps.upload"><code class="xref py py-obj docutils literal notranslate"><span class="pre">upload</span></code></a>(local_path, remote_path[, recursive])</p></td>
+<td><p>Uploads contents from a local path to remote share path.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.types.SupportsFileShareOps.download">
+<span class="sig-name descname"><span class="pre">download</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">remote_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recursive</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.services.types.SupportsFileShareOps.download" title="Permalink to this definition">¶</a></dt>
+<dd><p>Downloads contents from a remote share path to a local path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>remote_path</strong><span class="classifier">str</span></dt><dd><p>Path to download from the remote file share, a file if recursive=False
+or a directory if recursive=True.</p>
+</dd>
+<dt><strong>local_path</strong><span class="classifier">str</span></dt><dd><p>Path to store the downloaded content to.</p>
+</dd>
+<dt><strong>recursive</strong><span class="classifier">bool</span></dt><dd><p>If False, ignore the subdirectories;
+if True (the default), download the entire directory tree.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.types.SupportsFileShareOps.upload">
+<span class="sig-name descname"><span class="pre">upload</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">local_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remote_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recursive</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.services.types.SupportsFileShareOps.upload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Uploads contents from a local path to remote share path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>local_path</strong><span class="classifier">str</span></dt><dd><p>Path to the local directory to upload contents from.</p>
+</dd>
+<dt><strong>remote_path</strong><span class="classifier">str</span></dt><dd><p>Path in the remote file share to store the uploaded content to.</p>
+</dd>
+<dt><strong>recursive</strong><span class="classifier">bool</span></dt><dd><p>If False, ignore the subdirectories;
+if True (the default), upload the entire directory tree.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="mlos_bench.services.types.SupportsLocalExec">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.services.types.</span></span><span class="sig-name descname"><span class="pre">SupportsLocalExec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.services.types.SupportsLocalExec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Protocol</span></code></p>
+<p>Protocol interface for a collection of methods to run scripts and commands
+in an external process on the node acting as the scheduler. Can be useful
+for data processing due to reduced dependency management complications vs
+the target environment.
+Used in LocalEnv and provided by LocalExecService.</p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.services.types.SupportsLocalExec.local_exec" title="mlos_bench.services.types.SupportsLocalExec.local_exec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">local_exec</span></code></a>(script_lines[, env, cwd, ...])</p></td>
+<td><p>Execute the script lines from <cite>script_lines</cite> in a local process.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.services.types.SupportsLocalExec.temp_dir_context" title="mlos_bench.services.types.SupportsLocalExec.temp_dir_context"><code class="xref py py-obj docutils literal notranslate"><span class="pre">temp_dir_context</span></code></a>([path])</p></td>
+<td><p>Create a temp directory or use the provided path.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.types.SupportsLocalExec.local_exec">
+<span class="sig-name descname"><span class="pre">local_exec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">script_lines</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Mapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cwd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_on_error</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.types.SupportsLocalExec.local_exec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the script lines from <cite>script_lines</cite> in a local process.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>script_lines</strong><span class="classifier">Iterable[str]</span></dt><dd><p>Lines of the script to run locally.
+Treat every line as a separate command to run.</p>
+</dd>
+<dt><strong>env</strong><span class="classifier">Mapping[str, Union[int, float, str]]</span></dt><dd><p>Environment variables (optional).</p>
+</dd>
+<dt><strong>cwd</strong><span class="classifier">str</span></dt><dd><p>Work directory to run the script at.
+If omitted, use <cite>temp_dir</cite> or create a temporary dir.</p>
+</dd>
+<dt><strong>return_on_error</strong><span class="classifier">bool</span></dt><dd><p>If True, stop running script lines on first non-zero return code.
+The default is False.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>(return_code, stdout, stderr)</strong><span class="classifier">(int, str, str)</span></dt><dd><p>A 3-tuple of return code, stdout, and stderr of the script process.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.types.SupportsLocalExec.temp_dir_context">
+<span class="sig-name descname"><span class="pre">temp_dir_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">TemporaryDirectory</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">nullcontext</span></span></span><a class="headerlink" href="#mlos_bench.services.types.SupportsLocalExec.temp_dir_context" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a temp directory or use the provided path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>path</strong><span class="classifier">str</span></dt><dd><p>A path to the temporary directory. Create a new one if None.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>temp_dir_context</strong><span class="classifier">TemporaryDirectory</span></dt><dd><p>Temporary directory context to use in the <cite>with</cite> clause.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="mlos_bench.services.types.SupportsRemoteExec">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.services.types.</span></span><span class="sig-name descname"><span class="pre">SupportsRemoteExec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.services.types.SupportsRemoteExec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Protocol</span></code></p>
+<p>Protocol interface for Service types that provide helper functions to run
+scripts on a remote host OS.</p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.services.types.SupportsRemoteExec.get_remote_exec_results" title="mlos_bench.services.types.SupportsRemoteExec.get_remote_exec_results"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_remote_exec_results</span></code></a>(params)</p></td>
+<td><p>Get the results of the asynchronously running command.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.services.types.SupportsRemoteExec.remote_exec" title="mlos_bench.services.types.SupportsRemoteExec.remote_exec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remote_exec</span></code></a>(script, params)</p></td>
+<td><p>Run a command on remote host OS.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.types.SupportsRemoteExec.get_remote_exec_results">
+<span class="sig-name descname"><span class="pre">get_remote_exec_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.types.SupportsRemoteExec.get_remote_exec_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the results of the asynchronously running command.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>params</strong><span class="classifier">dict</span></dt><dd><p>Flat dictionary of (key, value) pairs of tunable parameters.
+Must have the “asyncResultsUrl” key to get the results.
+If the key is not present, return Status.PENDING.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>result</strong><span class="classifier">(Status, dict)</span></dt><dd><p>A pair of Status and result.
+Status is one of {PENDING, SUCCEEDED, FAILED, TIMED_OUT}</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.types.SupportsRemoteExec.remote_exec">
+<span class="sig-name descname"><span class="pre">remote_exec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">script</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.types.SupportsRemoteExec.remote_exec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run a command on remote host OS.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>script</strong><span class="classifier">Iterable[str]</span></dt><dd><p>A list of lines to execute as a script on a remote VM.</p>
+</dd>
+<dt><strong>params</strong><span class="classifier">dict</span></dt><dd><p>Flat dictionary of (key, value) pairs of parameters.
+They usually come from <cite>const_args</cite> and <cite>tunable_params</cite>
+properties of the Environment.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>result</strong><span class="classifier">(Status, dict)</span></dt><dd><p>A pair of Status and result.
+Status is one of {PENDING, SUCCEEDED, FAILED}</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="mlos_bench.services.types.SupportsVMOps">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.services.types.</span></span><span class="sig-name descname"><span class="pre">SupportsVMOps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.services.types.SupportsVMOps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Protocol</span></code></p>
+<p>Protocol interface for VM provisioning operations.</p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.services.types.SupportsVMOps.vm_deprovision" title="mlos_bench.services.types.SupportsVMOps.vm_deprovision"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vm_deprovision</span></code></a>()</p></td>
+<td><p>Deallocates the VM by shutting it down then releasing the compute resources.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.services.types.SupportsVMOps.vm_provision" title="mlos_bench.services.types.SupportsVMOps.vm_provision"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vm_provision</span></code></a>(params)</p></td>
+<td><p>Check if VM is ready.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.services.types.SupportsVMOps.vm_restart" title="mlos_bench.services.types.SupportsVMOps.vm_restart"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vm_restart</span></code></a>()</p></td>
+<td><p>Restarts the VM by initiating a graceful shutdown.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.services.types.SupportsVMOps.vm_start" title="mlos_bench.services.types.SupportsVMOps.vm_start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vm_start</span></code></a>(params)</p></td>
+<td><p>Start a VM.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.services.types.SupportsVMOps.vm_stop" title="mlos_bench.services.types.SupportsVMOps.vm_stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vm_stop</span></code></a>()</p></td>
+<td><p>Stops the VM by initiating a graceful shutdown.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.services.types.SupportsVMOps.wait_vm_deployment" title="mlos_bench.services.types.SupportsVMOps.wait_vm_deployment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_vm_deployment</span></code></a>(is_setup, params)</p></td>
+<td><p>Waits for a pending operation on an Azure VM to resolve to SUCCEEDED or FAILED.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.services.types.SupportsVMOps.wait_vm_operation" title="mlos_bench.services.types.SupportsVMOps.wait_vm_operation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_vm_operation</span></code></a>(params)</p></td>
+<td><p>Waits for a pending operation on a VM to resolve to SUCCEEDED or FAILED.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.types.SupportsVMOps.vm_deprovision">
+<span class="sig-name descname"><span class="pre">vm_deprovision</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.types.SupportsVMOps.vm_deprovision" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deallocates the VM by shutting it down then releasing the compute resources.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>result</strong><span class="classifier">(Status, dict={})</span></dt><dd><p>A pair of Status and result. The result is always {}.
+Status is one of {PENDING, SUCCEEDED, FAILED}</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.types.SupportsVMOps.vm_provision">
+<span class="sig-name descname"><span class="pre">vm_provision</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.types.SupportsVMOps.vm_provision" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if VM is ready. Deploy a new VM, if necessary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>params</strong><span class="classifier">dict</span></dt><dd><p>Flat dictionary of (key, value) pairs of tunable parameters.
+VMEnv tunables are variable parameters that, together with the
+VMEnv configuration, are sufficient to provision a VM.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>result</strong><span class="classifier">(Status, dict={})</span></dt><dd><p>A pair of Status and result. The result is always {}.
+Status is one of {PENDING, SUCCEEDED, FAILED}</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.types.SupportsVMOps.vm_restart">
+<span class="sig-name descname"><span class="pre">vm_restart</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.types.SupportsVMOps.vm_restart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Restarts the VM by initiating a graceful shutdown.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>result</strong><span class="classifier">(Status, dict={})</span></dt><dd><p>A pair of Status and result. The result is always {}.
+Status is one of {PENDING, SUCCEEDED, FAILED}</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.types.SupportsVMOps.vm_start">
+<span class="sig-name descname"><span class="pre">vm_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.types.SupportsVMOps.vm_start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start a VM.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>params</strong><span class="classifier">dict</span></dt><dd><p>Flat dictionary of (key, value) pairs of tunable parameters.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>result</strong><span class="classifier">(Status, dict={})</span></dt><dd><p>A pair of Status and result. The result is always {}.
+Status is one of {PENDING, SUCCEEDED, FAILED}</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.types.SupportsVMOps.vm_stop">
+<span class="sig-name descname"><span class="pre">vm_stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.types.SupportsVMOps.vm_stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops the VM by initiating a graceful shutdown.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>result</strong><span class="classifier">(Status, dict={})</span></dt><dd><p>A pair of Status and result. The result is always {}.
+Status is one of {PENDING, SUCCEEDED, FAILED}</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.types.SupportsVMOps.wait_vm_deployment">
+<span class="sig-name descname"><span class="pre">wait_vm_deployment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">is_setup</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.types.SupportsVMOps.wait_vm_deployment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Waits for a pending operation on an Azure VM to resolve to SUCCEEDED or FAILED.
+Return TIMED_OUT when timing out.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>is_setup</strong><span class="classifier">bool</span></dt><dd><p>If True, wait for VM being deployed; otherwise, wait for successful deprovisioning.</p>
+</dd>
+<dt><strong>params</strong><span class="classifier">dict</span></dt><dd><p>Flat dictionary of (key, value) pairs of tunable parameters.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>result</strong><span class="classifier">(Status, dict)</span></dt><dd><p>A pair of Status and result.
+Status is one of {PENDING, SUCCEEDED, FAILED, TIMED_OUT}
+Result is info on the operation runtime if SUCCEEDED, otherwise {}.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.types.SupportsVMOps.wait_vm_operation">
+<span class="sig-name descname"><span class="pre">wait_vm_operation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.types.SupportsVMOps.wait_vm_operation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Waits for a pending operation on a VM to resolve to SUCCEEDED or FAILED.
+Return TIMED_OUT when timing out.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>params: dict</strong></dt><dd><p>Flat dictionary of (key, value) pairs of tunable parameters.
+Must have the “asyncResultsUrl” key to get the results.
+If the key is not present, return Status.PENDING.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>result</strong><span class="classifier">(Status, dict)</span></dt><dd><p>A pair of Status and result.
+Status is one of {PENDING, SUCCEEDED, FAILED, TIMED_OUT}
+Result is info on the operation runtime if SUCCEEDED, otherwise {}.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mlos_bench.services.types.config_loader_type.html">mlos_bench.services.types.config_loader_type module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mlos_bench.services.types.config_loader_type.html#mlos_bench.services.types.config_loader_type.SupportsConfigLoading"><code class="docutils literal notranslate"><span class="pre">SupportsConfigLoading</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.config_loader_type.html#mlos_bench.services.types.config_loader_type.SupportsConfigLoading.build_environment"><code class="docutils literal notranslate"><span class="pre">SupportsConfigLoading.build_environment()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.config_loader_type.html#mlos_bench.services.types.config_loader_type.SupportsConfigLoading.load_config"><code class="docutils literal notranslate"><span class="pre">SupportsConfigLoading.load_config()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.config_loader_type.html#mlos_bench.services.types.config_loader_type.SupportsConfigLoading.load_environment_list"><code class="docutils literal notranslate"><span class="pre">SupportsConfigLoading.load_environment_list()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.config_loader_type.html#mlos_bench.services.types.config_loader_type.SupportsConfigLoading.resolve_path"><code class="docutils literal notranslate"><span class="pre">SupportsConfigLoading.resolve_path()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mlos_bench.services.types.fileshare_type.html">mlos_bench.services.types.fileshare_type module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mlos_bench.services.types.fileshare_type.html#mlos_bench.services.types.fileshare_type.SupportsFileShareOps"><code class="docutils literal notranslate"><span class="pre">SupportsFileShareOps</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.fileshare_type.html#mlos_bench.services.types.fileshare_type.SupportsFileShareOps.download"><code class="docutils literal notranslate"><span class="pre">SupportsFileShareOps.download()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.fileshare_type.html#mlos_bench.services.types.fileshare_type.SupportsFileShareOps.upload"><code class="docutils literal notranslate"><span class="pre">SupportsFileShareOps.upload()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mlos_bench.services.types.local_exec_type.html">mlos_bench.services.types.local_exec_type module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mlos_bench.services.types.local_exec_type.html#mlos_bench.services.types.local_exec_type.SupportsLocalExec"><code class="docutils literal notranslate"><span class="pre">SupportsLocalExec</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.local_exec_type.html#mlos_bench.services.types.local_exec_type.SupportsLocalExec.local_exec"><code class="docutils literal notranslate"><span class="pre">SupportsLocalExec.local_exec()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.local_exec_type.html#mlos_bench.services.types.local_exec_type.SupportsLocalExec.temp_dir_context"><code class="docutils literal notranslate"><span class="pre">SupportsLocalExec.temp_dir_context()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mlos_bench.services.types.remote_exec_type.html">mlos_bench.services.types.remote_exec_type module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mlos_bench.services.types.remote_exec_type.html#mlos_bench.services.types.remote_exec_type.SupportsRemoteExec"><code class="docutils literal notranslate"><span class="pre">SupportsRemoteExec</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.remote_exec_type.html#mlos_bench.services.types.remote_exec_type.SupportsRemoteExec.get_remote_exec_results"><code class="docutils literal notranslate"><span class="pre">SupportsRemoteExec.get_remote_exec_results()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.remote_exec_type.html#mlos_bench.services.types.remote_exec_type.SupportsRemoteExec.remote_exec"><code class="docutils literal notranslate"><span class="pre">SupportsRemoteExec.remote_exec()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mlos_bench.services.types.vm_provisioner_type.html">mlos_bench.services.types.vm_provisioner_type module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mlos_bench.services.types.vm_provisioner_type.html#mlos_bench.services.types.vm_provisioner_type.SupportsVMOps"><code class="docutils literal notranslate"><span class="pre">SupportsVMOps</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.vm_provisioner_type.html#mlos_bench.services.types.vm_provisioner_type.SupportsVMOps.vm_deprovision"><code class="docutils literal notranslate"><span class="pre">SupportsVMOps.vm_deprovision()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.vm_provisioner_type.html#mlos_bench.services.types.vm_provisioner_type.SupportsVMOps.vm_provision"><code class="docutils literal notranslate"><span class="pre">SupportsVMOps.vm_provision()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.vm_provisioner_type.html#mlos_bench.services.types.vm_provisioner_type.SupportsVMOps.vm_restart"><code class="docutils literal notranslate"><span class="pre">SupportsVMOps.vm_restart()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.vm_provisioner_type.html#mlos_bench.services.types.vm_provisioner_type.SupportsVMOps.vm_start"><code class="docutils literal notranslate"><span class="pre">SupportsVMOps.vm_start()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.vm_provisioner_type.html#mlos_bench.services.types.vm_provisioner_type.SupportsVMOps.vm_stop"><code class="docutils literal notranslate"><span class="pre">SupportsVMOps.vm_stop()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.vm_provisioner_type.html#mlos_bench.services.types.vm_provisioner_type.SupportsVMOps.wait_vm_deployment"><code class="docutils literal notranslate"><span class="pre">SupportsVMOps.wait_vm_deployment()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.vm_provisioner_type.html#mlos_bench.services.types.vm_provisioner_type.SupportsVMOps.wait_vm_operation"><code class="docutils literal notranslate"><span class="pre">SupportsVMOps.wait_vm_operation()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mlos_bench.services.remote.ssh.html" class="btn btn-neutral float-left" title="mlos_bench.services.remote.ssh package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mlos_bench.services.types.config_loader_type.html" class="btn btn-neutral float-right" title="mlos_bench.services.types.config_loader_type module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, GSL.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

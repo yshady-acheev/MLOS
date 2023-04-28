@@ -1,0 +1,7 @@
+mlos\_bench.services.types.fileshare\_type module
+=================================================
+
+.. automodule:: mlos_bench.services.types.fileshare_type
+   :members:
+   :undoc-members:
+   :show-inheritance:

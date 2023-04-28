@@ -1,0 +1,7 @@
+mlos\_bench.optimizers.convert\_configspace module
+==================================================
+
+.. automodule:: mlos_bench.optimizers.convert_configspace
+   :members:
+   :undoc-members:
+   :show-inheritance:

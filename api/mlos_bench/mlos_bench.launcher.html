@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.launcher module &mdash; MlosCore 0.1.dev1+gb5c528d documentation</title>
+  <title>mlos_bench.launcher module &mdash; MlosCore 0.1.dev1+gf7e6305 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+gb5c528d
+                0.1.dev1+gf7e6305
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -150,20 +150,20 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.launcher.Launcher.load_environment">
-<span class="sig-name descname"><span class="pre">load_environment</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mlos_bench.environment.base_environment.html#mlos_bench.environment.base_environment.Environment" title="mlos_bench.environment.base_environment.Environment"><span class="pre">Environment</span></a></span></span><a class="headerlink" href="#mlos_bench.launcher.Launcher.load_environment" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">load_environment</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mlos_bench.environments.base_environment.html#mlos_bench.environments.base_environment.Environment" title="mlos_bench.environments.base_environment.Environment"><span class="pre">Environment</span></a></span></span><a class="headerlink" href="#mlos_bench.launcher.Launcher.load_environment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a new benchmarking environment from the configs and command line parameters.
 Inject the persistence service so that the environment can load other configs.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.launcher.Launcher.load_optimizer">
-<span class="sig-name descname"><span class="pre">load_optimizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">env</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.environment.base_environment.html#mlos_bench.environment.base_environment.Environment" title="mlos_bench.environment.base_environment.Environment"><span class="pre">Environment</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">json_file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mlos_bench.optimizer.base_optimizer.html#mlos_bench.optimizer.base_optimizer.Optimizer" title="mlos_bench.optimizer.base_optimizer.Optimizer"><span class="pre">Optimizer</span></a></span></span><a class="headerlink" href="#mlos_bench.launcher.Launcher.load_optimizer" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">load_optimizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">env</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.environments.base_environment.html#mlos_bench.environments.base_environment.Environment" title="mlos_bench.environments.base_environment.Environment"><span class="pre">Environment</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">json_file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mlos_bench.optimizers.base_optimizer.html#mlos_bench.optimizers.base_optimizer.Optimizer" title="mlos_bench.optimizers.base_optimizer.Optimizer"><span class="pre">Optimizer</span></a></span></span><a class="headerlink" href="#mlos_bench.launcher.Launcher.load_optimizer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a new instance of the Optimizer from JSON configuration.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.launcher.Launcher.load_storage">
-<span class="sig-name descname"><span class="pre">load_storage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">env</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.environment.base_environment.html#mlos_bench.environment.base_environment.Environment" title="mlos_bench.environment.base_environment.Environment"><span class="pre">Environment</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">json_file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mlos_bench.storage.base_storage.html#mlos_bench.storage.base_storage.Storage" title="mlos_bench.storage.base_storage.Storage"><span class="pre">Storage</span></a></span></span><a class="headerlink" href="#mlos_bench.launcher.Launcher.load_storage" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">load_storage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">env</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.environments.base_environment.html#mlos_bench.environments.base_environment.Environment" title="mlos_bench.environments.base_environment.Environment"><span class="pre">Environment</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">json_file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mlos_bench.storage.base_storage.html#mlos_bench.storage.base_storage.Storage" title="mlos_bench.storage.base_storage.Storage"><span class="pre">Storage</span></a></span></span><a class="headerlink" href="#mlos_bench.launcher.Launcher.load_storage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a new instance of the Storage from JSON configuration.</p>
 </dd></dl>
 

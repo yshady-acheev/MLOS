@@ -1,0 +1,7 @@
+mlos\_bench.environments.base\_environment module
+=================================================
+
+.. automodule:: mlos_bench.environments.base_environment
+   :members:
+   :undoc-members:
+   :show-inheritance:

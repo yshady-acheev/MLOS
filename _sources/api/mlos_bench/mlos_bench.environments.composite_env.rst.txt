@@ -1,0 +1,7 @@
+mlos\_bench.environments.composite\_env module
+==============================================
+
+.. automodule:: mlos_bench.environments.composite_env
+   :members:
+   :undoc-members:
+   :show-inheritance:

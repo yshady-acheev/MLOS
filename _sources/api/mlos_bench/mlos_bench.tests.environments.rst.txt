@@ -1,0 +1,15 @@
+mlos\_bench.tests.environments package
+======================================
+
+.. automodule:: mlos_bench.tests.environments
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   mlos_bench.tests.environments.mock_env_test

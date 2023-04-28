@@ -1,7 +1,0 @@
-mlos\_bench.optimizer.one\_shot\_optimizer module
-=================================================
-
-.. automodule:: mlos_bench.optimizer.one_shot_optimizer
-   :members:
-   :undoc-members:
-   :show-inheritance:
