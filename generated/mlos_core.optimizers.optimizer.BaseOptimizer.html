@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_core.optimizers.optimizer.BaseOptimizer &mdash; MlosCore 0.1.dev1+g5b57d55 documentation</title>
+  <title>mlos_core.optimizers.optimizer.BaseOptimizer &mdash; MlosCore 0.1.dev1+g7651ac0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/plot_directive.css" type="text/css" />
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g5b57d55
+                0.1.dev1+g7651ac0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -136,7 +136,7 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#mlos_core.optimizers.optimizer.BaseOptimizer.register_pending" title="mlos_core.optimizers.optimizer.BaseOptimizer.register_pending"><code class="xref py py-obj docutils literal notranslate"><span class="pre">register_pending</span></code></a>(configurations[, context])</p></td>
 <td><p>Registers the given configurations as &quot;pending&quot;.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_core.optimizers.optimizer.BaseOptimizer.suggest" title="mlos_core.optimizers.optimizer.BaseOptimizer.suggest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">suggest</span></code></a>([context])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_core.optimizers.optimizer.BaseOptimizer.suggest" title="mlos_core.optimizers.optimizer.BaseOptimizer.suggest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">suggest</span></code></a>([context, defaults])</p></td>
 <td><p>Wrapper method, which employs the space adapter (if any), after suggesting a new configuration.</p></td>
 </tr>
 </tbody>
@@ -218,12 +218,14 @@ This can be useful for executing multiple trials in parallel, retry logic, etc.<
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_core.optimizers.optimizer.BaseOptimizer.suggest">
-<span class="sig-name descname"><span class="pre">suggest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#mlos_core.optimizers.optimizer.BaseOptimizer.suggest" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">suggest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaults</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#mlos_core.optimizers.optimizer.BaseOptimizer.suggest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wrapper method, which employs the space adapter (if any), after suggesting a new configuration.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>context</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Not Yet Implemented.</p>
+</dd>
+<dt><strong>defaults</strong><span class="classifier">bool (default False)</span></dt><dd><p>Whether or not to return the default config instead of an optimizer guided one.</p>
 </dd>
 </dl>
 </dd>
