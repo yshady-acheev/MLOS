@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_6d460002ba244c5c_trial_config_test_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.5">coverage.py v7.2.5</a>,
-            created at 2023-05-02 04:09 +0000
+            created at 2023-05-02 04:24 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -129,8 +129,8 @@
     <p class="pln"><span class="n"><a id="t47" href="#t47">47</a></span><span class="t">    <span class="str">"""</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t48" href="#t48">48</a></span><span class="t"><span class="str">    Start THREE trials and check that both are pending.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t49" href="#t49">49</a></span><span class="t"><span class="str">    """</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t50" href="#t50">50</a></span><span class="t">    <span class="nam">config1</span> <span class="op">=</span> <span class="nam">tunable_groups</span><span class="op">.</span><span class="nam">copy</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">assign</span><span class="op">(</span><span class="op">{</span><span class="str">'rootfs'</span><span class="op">:</span> <span class="str">'ext4'</span><span class="op">}</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t51" href="#t51">51</a></span><span class="t">    <span class="nam">config2</span> <span class="op">=</span> <span class="nam">tunable_groups</span><span class="op">.</span><span class="nam">copy</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">assign</span><span class="op">(</span><span class="op">{</span><span class="str">'rootfs'</span><span class="op">:</span> <span class="str">'ext2'</span><span class="op">}</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t50" href="#t50">50</a></span><span class="t">    <span class="nam">config1</span> <span class="op">=</span> <span class="nam">tunable_groups</span><span class="op">.</span><span class="nam">copy</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">assign</span><span class="op">(</span><span class="op">{</span><span class="str">'idle'</span><span class="op">:</span> <span class="str">'mwait'</span><span class="op">}</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t51" href="#t51">51</a></span><span class="t">    <span class="nam">config2</span> <span class="op">=</span> <span class="nam">tunable_groups</span><span class="op">.</span><span class="nam">copy</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">assign</span><span class="op">(</span><span class="op">{</span><span class="str">'idle'</span><span class="op">:</span> <span class="str">'noidle'</span><span class="op">}</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t52" href="#t52">52</a></span><span class="t">    <span class="nam">trial_ids</span> <span class="op">=</span> <span class="op">{</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t53" href="#t53">53</a></span><span class="t">        <span class="nam">exp_storage_memory_sql</span><span class="op">.</span><span class="nam">new_trial</span><span class="op">(</span><span class="nam">config1</span><span class="op">)</span><span class="op">.</span><span class="nam">trial_id</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t54" href="#t54">54</a></span><span class="t">        <span class="nam">exp_storage_memory_sql</span><span class="op">.</span><span class="nam">new_trial</span><span class="op">(</span><span class="nam">config2</span><span class="op">)</span><span class="op">.</span><span class="nam">trial_id</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
@@ -206,7 +206,7 @@
             <a id="nextFileLink" class="nav" href="d_6d460002ba244c5c_trial_config_test_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.5">coverage.py v7.2.5</a>,
-            created at 2023-05-02 04:09 +0000
+            created at 2023-05-02 04:24 +0000
         </p>
     </div>
 </footer>
