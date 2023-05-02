@@ -1,0 +1,7 @@
+mlos\_bench.tests.launcher\_test module
+=======================================
+
+.. automodule:: mlos_bench.tests.launcher_test
+   :members:
+   :undoc-members:
+   :show-inheritance:
