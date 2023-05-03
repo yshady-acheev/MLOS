@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_323f8141f9f539b4_one_shot_optimizer_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.5">coverage.py v7.2.5</a>,
-            created at 2023-05-03 03:06 +0000
+            created at 2023-05-03 03:37 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -112,7 +112,7 @@
     <p class="run"><span class="n"><a id="t30" href="#t30">30</a></span><span class="t">        <span class="nam">super</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">__init__</span><span class="op">(</span><span class="nam">tunables</span><span class="op">,</span> <span class="nam">service</span><span class="op">,</span> <span class="nam">config</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t31" href="#t31">31</a></span><span class="t">        <span class="nam">rnd</span> <span class="op">=</span> <span class="nam">random</span><span class="op">.</span><span class="nam">Random</span><span class="op">(</span><span class="nam">config</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">"seed"</span><span class="op">,</span> <span class="num">42</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t32" href="#t32">32</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">_random</span><span class="op">:</span> <span class="nam">Dict</span><span class="op">[</span><span class="nam">str</span><span class="op">,</span> <span class="nam">Callable</span><span class="op">[</span><span class="op">[</span><span class="nam">Tunable</span><span class="op">]</span><span class="op">,</span> <span class="nam">TunableValue</span><span class="op">]</span><span class="op">]</span> <span class="op">=</span> <span class="op">{</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t33" href="#t33">33</a></span><span class="t">            <span class="str">"categorical"</span><span class="op">:</span> <span class="key">lambda</span> <span class="nam">tunable</span><span class="op">:</span> <span class="nam">rnd</span><span class="op">.</span><span class="nam">choice</span><span class="op">(</span><span class="nam">tunable</span><span class="op">.</span><span class="nam">categorical_values</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t33" href="#t33">33</a></span><span class="t">            <span class="str">"categorical"</span><span class="op">:</span> <span class="key">lambda</span> <span class="nam">tunable</span><span class="op">:</span> <span class="nam">rnd</span><span class="op">.</span><span class="nam">choice</span><span class="op">(</span><span class="nam">tunable</span><span class="op">.</span><span class="nam">categories</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t34" href="#t34">34</a></span><span class="t">            <span class="str">"float"</span><span class="op">:</span> <span class="key">lambda</span> <span class="nam">tunable</span><span class="op">:</span> <span class="nam">rnd</span><span class="op">.</span><span class="nam">uniform</span><span class="op">(</span><span class="op">*</span><span class="nam">tunable</span><span class="op">.</span><span class="nam">range</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t35" href="#t35">35</a></span><span class="t">            <span class="str">"int"</span><span class="op">:</span> <span class="key">lambda</span> <span class="nam">tunable</span><span class="op">:</span> <span class="nam">rnd</span><span class="op">.</span><span class="nam">randint</span><span class="op">(</span><span class="op">*</span><span class="nam">tunable</span><span class="op">.</span><span class="nam">range</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t36" href="#t36">36</a></span><span class="t">        <span class="op">}</span>&nbsp;</span><span class="r"></span></p>
@@ -172,7 +172,7 @@
             <a id="nextFileLink" class="nav" href="d_323f8141f9f539b4_one_shot_optimizer_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.5">coverage.py v7.2.5</a>,
-            created at 2023-05-03 03:06 +0000
+            created at 2023-05-03 03:37 +0000
         </p>
     </div>
 </footer>
