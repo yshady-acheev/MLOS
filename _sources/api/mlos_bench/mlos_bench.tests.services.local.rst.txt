@@ -6,6 +6,14 @@ mlos\_bench.tests.services.local package
    :undoc-members:
    :show-inheritance:
 
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   mlos_bench.tests.services.local.mock
+
 Submodules
 ----------
 

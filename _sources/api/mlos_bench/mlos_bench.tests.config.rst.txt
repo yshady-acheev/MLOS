@@ -1,0 +1,15 @@
+mlos\_bench.tests.config package
+================================
+
+.. automodule:: mlos_bench.tests.config
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   mlos_bench.tests.config.conftest

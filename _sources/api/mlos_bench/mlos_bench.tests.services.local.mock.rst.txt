@@ -1,0 +1,15 @@
+mlos\_bench.tests.services.local.mock package
+=============================================
+
+.. automodule:: mlos_bench.tests.services.local.mock
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   mlos_bench.tests.services.local.mock.mock_local_exec_service
