@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.tunables package &mdash; MlosCore 0.1.dev1+g9a1b2e2 documentation</title>
+  <title>mlos_bench.tunables package &mdash; MlosCore 0.1.dev1+g539a433 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g9a1b2e2
+                0.1.dev1+g539a433
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -109,9 +109,9 @@
 <dl class="field-list simple">
 <dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
-<dt><a class="reference internal" href="../../generated/mlos_bench.tunables.Tunable.html#mlos_bench.tunables.Tunable.categorical_value" title="mlos_bench.tunables.Tunable.categorical_value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">categorical_value</span></code></a></dt><dd><p>Get the current value of the tunable as a number.</p>
-</dd>
 <dt><a class="reference internal" href="../../generated/mlos_bench.tunables.Tunable.html#mlos_bench.tunables.Tunable.categories" title="mlos_bench.tunables.Tunable.categories"><code class="xref py py-obj docutils literal notranslate"><span class="pre">categories</span></code></a></dt><dd><p>Get the list of all possible values of a categorical tunable.</p>
+</dd>
+<dt><a class="reference internal" href="../../generated/mlos_bench.tunables.Tunable.html#mlos_bench.tunables.Tunable.category" title="mlos_bench.tunables.Tunable.category"><code class="xref py py-obj docutils literal notranslate"><span class="pre">category</span></code></a></dt><dd><p>Get the current value of the tunable as a number.</p>
 </dd>
 <dt><a class="reference internal" href="../../generated/mlos_bench.tunables.Tunable.html#mlos_bench.tunables.Tunable.default" title="mlos_bench.tunables.Tunable.default"><code class="xref py py-obj docutils literal notranslate"><span class="pre">default</span></code></a></dt><dd><p>Get the default value of the tunable.</p>
 </dd>
@@ -144,12 +144,6 @@
 </tbody>
 </table>
 <dl class="py property">
-<dt class="sig sig-object py" id="mlos_bench.tunables.Tunable.categorical_value">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">categorical_value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#mlos_bench.tunables.Tunable.categorical_value" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the current value of the tunable as a number.</p>
-</dd></dl>
-
-<dl class="py property">
 <dt class="sig sig-object py" id="mlos_bench.tunables.Tunable.categories">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">categories</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#mlos_bench.tunables.Tunable.categories" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the list of all possible values of a categorical tunable.
@@ -162,6 +156,12 @@ Return None if the tunable is not categorical.</p>
 </dl>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="mlos_bench.tunables.Tunable.category">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">category</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#mlos_bench.tunables.Tunable.category" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current value of the tunable as a number.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -529,8 +529,8 @@ within a CompositeEnvironment.</p>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="mlos_bench.tunables.tunable.html">mlos_bench.tunables.tunable module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="mlos_bench.tunables.tunable.html#mlos_bench.tunables.tunable.Tunable"><code class="docutils literal notranslate"><span class="pre">Tunable</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="mlos_bench.tunables.tunable.html#mlos_bench.tunables.tunable.Tunable.categorical_value"><code class="docutils literal notranslate"><span class="pre">Tunable.categorical_value</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.tunables.tunable.html#mlos_bench.tunables.tunable.Tunable.categories"><code class="docutils literal notranslate"><span class="pre">Tunable.categories</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.tunables.tunable.html#mlos_bench.tunables.tunable.Tunable.category"><code class="docutils literal notranslate"><span class="pre">Tunable.category</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.tunables.tunable.html#mlos_bench.tunables.tunable.Tunable.copy"><code class="docutils literal notranslate"><span class="pre">Tunable.copy()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.tunables.tunable.html#mlos_bench.tunables.tunable.Tunable.default"><code class="docutils literal notranslate"><span class="pre">Tunable.default</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.tunables.tunable.html#mlos_bench.tunables.tunable.Tunable.is_categorical"><code class="docutils literal notranslate"><span class="pre">Tunable.is_categorical</span></code></a></li>
