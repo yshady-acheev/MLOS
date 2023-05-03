@@ -17,6 +17,7 @@ Submodules
    mlos_bench.tests.tunables.tunable_comparison_test
    mlos_bench.tests.tunables.tunable_definition_test
    mlos_bench.tests.tunables.tunable_group_indexing_test
+   mlos_bench.tests.tunables.tunable_slice_references_test
    mlos_bench.tests.tunables.tunable_to_configspace_test
    mlos_bench.tests.tunables.tunables_assign_test
    mlos_bench.tests.tunables.tunables_copy_test

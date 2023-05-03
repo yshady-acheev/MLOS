@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.tunables.tunable_groups module &mdash; MlosCore 0.1.dev1+g8a0fa86 documentation</title>
+  <title>mlos_bench.tunables.tunable_groups module &mdash; MlosCore 0.1.dev1+g01ad9bf documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g8a0fa86
+                0.1.dev1+g01ad9bf
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -128,14 +128,14 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.tunables.tunable_groups.TunableGroups.is_updated" title="mlos_bench.tunables.tunable_groups.TunableGroups.is_updated"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_updated</span></code></a>([group_names])</p></td>
 <td><p>Check if any of the given covariant tunable groups has been updated.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.tunables.tunable_groups.TunableGroups.reset" title="mlos_bench.tunables.tunable_groups.TunableGroups.reset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset</span></code></a>([group_names])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.tunables.tunable_groups.TunableGroups.merge" title="mlos_bench.tunables.tunable_groups.TunableGroups.merge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">merge</span></code></a>(tunables)</p></td>
+<td><p>Merge the two collections of covariant tunable groups.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.tunables.tunable_groups.TunableGroups.reset" title="mlos_bench.tunables.tunable_groups.TunableGroups.reset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset</span></code></a>([group_names])</p></td>
 <td><p>Clear the update flag of given covariant groups.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.tunables.tunable_groups.TunableGroups.subgroup" title="mlos_bench.tunables.tunable_groups.TunableGroups.subgroup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subgroup</span></code></a>(group_names)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.tunables.tunable_groups.TunableGroups.subgroup" title="mlos_bench.tunables.tunable_groups.TunableGroups.subgroup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subgroup</span></code></a>(group_names)</p></td>
 <td><p>Select the covariance groups from the current set and create a new TunableGroups object that consists of those covariance groups.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.tunables.tunable_groups.TunableGroups.update" title="mlos_bench.tunables.tunable_groups.TunableGroups.update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update</span></code></a>(tunables)</p></td>
-<td><p>Merge the two collections of covariant tunable groups.</p></td>
 </tr>
 </tbody>
 </table>
@@ -254,6 +254,33 @@ Throw KeyError if the tunable is not found.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.tunables.tunable_groups.TunableGroups.merge">
+<span class="sig-name descname"><span class="pre">merge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></span><a class="headerlink" href="#mlos_bench.tunables.tunable_groups.TunableGroups.merge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Merge the two collections of covariant tunable groups.</p>
+<p>Unlike the dict <cite>update</cite> method, this method does not modify the
+original when overlapping keys are found.
+It is expected be used to merge the tunable groups referenced by a
+standalone Environment config into a parent CompositeEnvironment,
+for instance.
+This allows self contained, potentially overlapping, but also
+overridable configs to be composed together.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>tunables</strong><span class="classifier">TunableGroups</span></dt><dd><p>A collection of covariant tunable groups.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>self</strong><span class="classifier">TunableGroups</span></dt><dd><p>Self-reference for chaining.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.tunables.tunable_groups.TunableGroups.reset">
 <span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group_names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></span><a class="headerlink" href="#mlos_bench.tunables.tunable_groups.TunableGroups.reset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Clear the update flag of given covariant groups.</p>
@@ -278,6 +305,11 @@ Throw KeyError if the tunable is not found.</p>
 <span class="sig-name descname"><span class="pre">subgroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group_names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></span><a class="headerlink" href="#mlos_bench.tunables.tunable_groups.TunableGroups.subgroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Select the covariance groups from the current set and create a new
 TunableGroups object that consists of those covariance groups.</p>
+<p>Note: The new TunableGroup will include <em>references</em> (not copies) to
+original ones, so each will get updated together.
+This is often desirable to support the use case of multiple related
+Environments (e.g. Local vs Remote) using the same set of tunables
+within a CompositeEnvironment.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -288,26 +320,6 @@ TunableGroups object that consists of those covariance groups.</p>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>tunables</strong><span class="classifier">TunableGroups</span></dt><dd><p>A collection of covariant tunable groups.</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos_bench.tunables.tunable_groups.TunableGroups.update">
-<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></span><a class="headerlink" href="#mlos_bench.tunables.tunable_groups.TunableGroups.update" title="Permalink to this definition">¶</a></dt>
-<dd><p>Merge the two collections of covariant tunable groups.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>tunables</strong><span class="classifier">TunableGroups</span></dt><dd><p>A collection of covariant tunable groups.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><dl class="simple">
-<dt><strong>self</strong><span class="classifier">TunableGroups</span></dt><dd><p>Self-reference for chaining.</p>
 </dd>
 </dl>
 </dd>
