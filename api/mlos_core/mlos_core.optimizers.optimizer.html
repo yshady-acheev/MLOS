@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_core.optimizers.optimizer module &mdash; MlosCore 0.1.dev1+gab429cd documentation</title>
+  <title>mlos_core.optimizers.optimizer module &mdash; MlosCore 0.1.dev1+gb0bd0db documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+gab429cd
+                0.1.dev1+gb0bd0db
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -104,16 +104,8 @@
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Optimizer abstract base class defining the basic interface.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>parameter_space</strong><span class="classifier">ConfigSpace.ConfigurationSpace</span></dt><dd><p>The parameter space to optimize.</p>
-</dd>
-<dt><strong>space_adapter</strong><span class="classifier">BaseSpaceAdapter</span></dt><dd><p>The space adapter class to employ for parameter space transformations.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Attributes<span class="colon">:</span></dt>
-<dd class="field-even"><dl class="simple">
 <dt><a class="reference internal" href="../../generated/mlos_core.optimizers.optimizer.BaseOptimizer.html#mlos_core.optimizers.optimizer.BaseOptimizer.space_adapter" title="mlos_core.optimizers.optimizer.BaseOptimizer.space_adapter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">space_adapter</span></code></a></dt><dd><p>Get the space adapter instance (if any).</p>
 </dd>
 </dl>
@@ -218,7 +210,8 @@ This can be useful for executing multiple trials in parallel, retry logic, etc.<
 <dd class="field-odd"><dl class="simple">
 <dt><strong>context</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Not Yet Implemented.</p>
 </dd>
-<dt><strong>defaults</strong><span class="classifier">bool (default False)</span></dt><dd><p>Whether or not to return the default config instead of an optimizer guided one.</p>
+<dt><strong>defaults</strong><span class="classifier">bool</span></dt><dd><p>Whether or not to return the default config instead of an optimizer guided one.
+By default, use the one from the optimizer.</p>
 </dd>
 </dl>
 </dd>

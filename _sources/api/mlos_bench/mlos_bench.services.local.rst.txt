@@ -13,3 +13,4 @@ Submodules
    :maxdepth: 4
 
    mlos_bench.services.local.local_exec
+   mlos_bench.services.local.temp_dir_context
