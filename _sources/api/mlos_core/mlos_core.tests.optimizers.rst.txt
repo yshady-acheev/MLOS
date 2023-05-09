@@ -1,0 +1,19 @@
+mlos\_core.tests.optimizers package
+===================================
+
+.. automodule:: mlos_core.tests.optimizers
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   mlos_core.tests.optimizers.bayesian_optimizers_test
+   mlos_core.tests.optimizers.conftest
+   mlos_core.tests.optimizers.one_hot_test
+   mlos_core.tests.optimizers.optimizer_test
+   mlos_core.tests.optimizers.random_optimizer_test

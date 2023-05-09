@@ -6,12 +6,19 @@ mlos\_core.optimizers package
    :undoc-members:
    :show-inheritance:
 
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   mlos_core.optimizers.bayesian_optimizers
+
 Submodules
 ----------
 
 .. toctree::
    :maxdepth: 4
 
-   mlos_core.optimizers.bayesian_optimizers
    mlos_core.optimizers.optimizer
    mlos_core.optimizers.random_optimizer

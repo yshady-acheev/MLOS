@@ -1,0 +1,7 @@
+mlos\_core.tests.optimizers.optimizer\_test module
+==================================================
+
+.. automodule:: mlos_core.tests.optimizers.optimizer_test
+   :members:
+   :undoc-members:
+   :show-inheritance:

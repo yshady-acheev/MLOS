@@ -1,0 +1,15 @@
+mlos\_core.tests package
+========================
+
+.. automodule:: mlos_core.tests
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   mlos_core.tests.optimizers

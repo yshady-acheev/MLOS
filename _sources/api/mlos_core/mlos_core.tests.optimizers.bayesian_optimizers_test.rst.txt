@@ -1,0 +1,7 @@
+mlos\_core.tests.optimizers.bayesian\_optimizers\_test module
+=============================================================
+
+.. automodule:: mlos_core.tests.optimizers.bayesian_optimizers_test
+   :members:
+   :undoc-members:
+   :show-inheritance:

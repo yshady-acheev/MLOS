@@ -1,0 +1,7 @@
+mlos\_core.optimizers.bayesian\_optimizers.bayesian\_optimizer module
+=====================================================================
+
+.. automodule:: mlos_core.optimizers.bayesian_optimizers.bayesian_optimizer
+   :members:
+   :undoc-members:
+   :show-inheritance:

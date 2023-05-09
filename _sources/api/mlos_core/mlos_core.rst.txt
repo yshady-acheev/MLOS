@@ -14,3 +14,4 @@ Subpackages
 
    mlos_core.optimizers
    mlos_core.spaces
+   mlos_core.tests
