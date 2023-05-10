@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_e8b6df00ef81429a_test_load_service_config_examples_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.5">coverage.py v7.2.5</a>,
-            created at 2023-05-10 00:37 +0000
+            created at 2023-05-10 16:35 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -99,7 +99,7 @@
     <p class="run"><span class="n"><a id="t17" href="#t17">17</a></span><span class="t"><span class="key">from</span> <span class="nam">mlos_bench</span><span class="op">.</span><span class="nam">services</span><span class="op">.</span><span class="nam">config_persistence</span> <span class="key">import</span> <span class="nam">ConfigPersistenceService</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t18" href="#t18">18</a></span><span class="t"><span class="key">from</span> <span class="nam">mlos_bench</span><span class="op">.</span><span class="nam">optimizers</span><span class="op">.</span><span class="nam">base_optimizer</span> <span class="key">import</span> <span class="nam">Optimizer</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t19" href="#t19">19</a></span><span class="t"><span class="key">from</span> <span class="nam">mlos_bench</span><span class="op">.</span><span class="nam">tunables</span><span class="op">.</span><span class="nam">tunable_groups</span> <span class="key">import</span> <span class="nam">TunableGroups</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t20" href="#t20">20</a></span><span class="t"><span class="key">from</span> <span class="nam">mlos_bench</span><span class="op">.</span><span class="nam">util</span> <span class="key">import</span> <span class="nam">get_class_from_name</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t20" href="#t20">20</a></span><span class="t"><span class="key">from</span> <span class="nam">mlos_bench</span><span class="op">.</span><span class="nam">util</span> <span class="key">import</span> <span class="nam">get_class_from_name</span><span class="op">,</span> <span class="nam">path_join</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t21" href="#t21">21</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t22" href="#t22">22</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t23" href="#t23">23</a></span><span class="t"><span class="nam">_LOG</span> <span class="op">=</span> <span class="nam">logging</span><span class="op">.</span><span class="nam">getLogger</span><span class="op">(</span><span class="nam">__name__</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -115,7 +115,7 @@
     <p class="run"><span class="n"><a id="t33" href="#t33">33</a></span><span class="t">    <span class="key">return</span> <span class="nam">configs_to_filter</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t34" href="#t34">34</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t35" href="#t35">35</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t36" href="#t36">36</a></span><span class="t"><span class="nam">configs</span> <span class="op">=</span> <span class="nam">filter_configs</span><span class="op">(</span><span class="nam">locate_config_examples</span><span class="op">(</span><span class="nam">os</span><span class="op">.</span><span class="nam">path</span><span class="op">.</span><span class="nam">join</span><span class="op">(</span><span class="nam">ConfigPersistenceService</span><span class="op">.</span><span class="nam">BUILTIN_CONFIG_PATH</span><span class="op">,</span> <span class="nam">CONFIG_TYPE</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t36" href="#t36">36</a></span><span class="t"><span class="nam">configs</span> <span class="op">=</span> <span class="nam">filter_configs</span><span class="op">(</span><span class="nam">locate_config_examples</span><span class="op">(</span><span class="nam">path_join</span><span class="op">(</span><span class="nam">ConfigPersistenceService</span><span class="op">.</span><span class="nam">BUILTIN_CONFIG_PATH</span><span class="op">,</span> <span class="nam">CONFIG_TYPE</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t37" href="#t37">37</a></span><span class="t"><span class="key">assert</span> <span class="nam">configs</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t38" href="#t38">38</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t39" href="#t39">39</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -145,7 +145,7 @@
             <a id="nextFileLink" class="nav" href="d_e8b6df00ef81429a_test_load_service_config_examples_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.5">coverage.py v7.2.5</a>,
-            created at 2023-05-10 00:37 +0000
+            created at 2023-05-10 16:35 +0000
         </p>
     </div>
 </footer>
