@@ -54,8 +54,8 @@
             </div>
         </aside>
         <h2>
-            <span class="text">59 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">55<span class="text"> run</span></button>
+            <span class="text">60 statements &nbsp;</span>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">56<span class="text"> run</span></button>
             <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">4<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_323f8141f9f539b4_mock_optimizer_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.5">coverage.py v7.2.5</a>,
-            created at 2023-05-15 21:46 +0000
+            created at 2023-05-15 22:10 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -175,8 +175,9 @@
     <p class="run"><span class="n"><a id="t93" href="#t93">93</a></span><span class="t">        <span class="key">if</span> <span class="nam">len</span><span class="op">(</span><span class="nam">df_config</span><span class="op">)</span> <span class="op">==</span> <span class="num">0</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t94" href="#t94">94</a></span><span class="t">            <span class="key">return</span> <span class="op">(</span><span class="key">None</span><span class="op">,</span> <span class="key">None</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t95" href="#t95">95</a></span><span class="t">        <span class="nam">params</span> <span class="op">=</span> <span class="nam">df_config</span><span class="op">.</span><span class="nam">iloc</span><span class="op">[</span><span class="num">0</span><span class="op">]</span><span class="op">.</span><span class="nam">to_dict</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t96" href="#t96">96</a></span><span class="t">        <span class="nam">score</span> <span class="op">=</span> <span class="nam">params</span><span class="op">.</span><span class="nam">pop</span><span class="op">(</span><span class="nam">self</span><span class="op">.</span><span class="nam">_opt_target</span><span class="op">)</span> <span class="op">*</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_opt_sign</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t97" href="#t97">97</a></span><span class="t">        <span class="key">return</span> <span class="op">(</span><span class="nam">score</span><span class="op">,</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_tunables</span><span class="op">.</span><span class="nam">copy</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">assign</span><span class="op">(</span><span class="nam">params</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t96" href="#t96">96</a></span><span class="t">        <span class="nam">_LOG</span><span class="op">.</span><span class="nam">debug</span><span class="op">(</span><span class="str">"Best observation: %s"</span><span class="op">,</span> <span class="nam">params</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t97" href="#t97">97</a></span><span class="t">        <span class="nam">score</span> <span class="op">=</span> <span class="nam">params</span><span class="op">.</span><span class="nam">pop</span><span class="op">(</span><span class="str">"score"</span><span class="op">)</span> <span class="op">*</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_opt_sign</span>  <span class="com"># mlos_core always uses the `score` column</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t98" href="#t98">98</a></span><span class="t">        <span class="key">return</span> <span class="op">(</span><span class="nam">score</span><span class="op">,</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_tunables</span><span class="op">.</span><span class="nam">copy</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">assign</span><span class="op">(</span><span class="nam">params</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
 </main>
 <footer>
     <div class="content">
@@ -186,7 +187,7 @@
             <a id="nextFileLink" class="nav" href="d_323f8141f9f539b4_mock_optimizer_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.5">coverage.py v7.2.5</a>,
-            created at 2023-05-15 21:46 +0000
+            created at 2023-05-15 22:10 +0000
         </p>
     </div>
 </footer>
