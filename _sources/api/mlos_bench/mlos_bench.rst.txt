@@ -12,6 +12,7 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
+   mlos_bench.config
    mlos_bench.environments
    mlos_bench.optimizers
    mlos_bench.services

@@ -1,0 +1,7 @@
+mlos\_bench.tests.config.schemas package
+========================================
+
+.. automodule:: mlos_bench.tests.config.schemas
+   :members:
+   :undoc-members:
+   :show-inheritance:
