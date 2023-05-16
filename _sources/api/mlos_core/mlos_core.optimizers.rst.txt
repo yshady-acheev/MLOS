@@ -20,5 +20,6 @@ Submodules
 .. toctree::
    :maxdepth: 4
 
+   mlos_core.optimizers.flaml_optimizer
    mlos_core.optimizers.optimizer
    mlos_core.optimizers.random_optimizer

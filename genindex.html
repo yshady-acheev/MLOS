@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Index &mdash; MlosCore 0.1.dev1+g3824f8e documentation</title>
+  <title>Index &mdash; MlosCore 0.1.dev1+ga5945e0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/plot_directive.css" type="text/css" />
@@ -32,7 +32,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g3824f8e
+                0.1.dev1+ga5945e0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -329,7 +329,11 @@
 </li>
       </ul></li>
       <li><a href="api/mlos_bench/mlos_bench.tests.config.schemas.html#mlos_bench.tests.config.schemas.SchemaTestCaseInfo.config">config (mlos_bench.tests.config.schemas.SchemaTestCaseInfo attribute)</a>
+
+      <ul>
+        <li><a href="api/mlos_core/mlos_core.optimizers.flaml_optimizer.html#mlos_core.optimizers.flaml_optimizer.EvaluatedSample.config">(mlos_core.optimizers.flaml_optimizer.EvaluatedSample attribute)</a>
 </li>
+      </ul></li>
       <li><a href="api/mlos_bench/mlos_bench.storage.base_storage.html#mlos_bench.storage.base_storage.Storage.Trial.config">config() (mlos_bench.storage.base_storage.Storage.Trial method)</a>
 
       <ul>
@@ -369,6 +373,8 @@
 </li>
       </ul></li>
       <li><a href="api/mlos_core/mlos_core.spaces.html#mlos_core.spaces.configspace_to_emukit_space">configspace_to_emukit_space() (in module mlos_core.spaces)</a>, <a href="generated/mlos_core.spaces.configspace_to_emukit_space.html#mlos_core.spaces.configspace_to_emukit_space">[1]</a>
+</li>
+      <li><a href="api/mlos_core/mlos_core.spaces.html#mlos_core.spaces.configspace_to_flaml_space">configspace_to_flaml_space() (in module mlos_core.spaces)</a>
 </li>
       <li><a href="api/mlos_core/mlos_core.spaces.html#mlos_core.spaces.configspace_to_skopt_space">configspace_to_skopt_space() (in module mlos_core.spaces)</a>, <a href="generated/mlos_core.spaces.configspace_to_skopt_space.html#mlos_core.spaces.configspace_to_skopt_space">[1]</a>
 </li>
@@ -492,15 +498,17 @@
         <li><a href="api/mlos_bench/mlos_bench.environments.base_environment.html#mlos_bench.environments.base_environment.Environment">(class in mlos_bench.environments.base_environment)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/mlos_bench/mlos_bench.config.schemas.config_schemas.html#mlos_bench.config.schemas.config_schemas.ConfigSchema.ENVIRONMENT">ENVIRONMENT (mlos_bench.config.schemas.config_schemas.ConfigSchema attribute)</a>
 
       <ul>
         <li><a href="api/mlos_bench/mlos_bench.config.schemas.html#mlos_bench.config.schemas.ConfigSchema.ENVIRONMENT">(mlos_bench.config.schemas.ConfigSchema attribute)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/mlos_bench/mlos_bench.tunables.covariant_group.html#mlos_bench.tunables.covariant_group.CovariantTunableGroup.equals_defaults">equals_defaults() (mlos_bench.tunables.covariant_group.CovariantTunableGroup method)</a>
+</li>
+      <li><a href="api/mlos_core/mlos_core.optimizers.flaml_optimizer.html#mlos_core.optimizers.flaml_optimizer.EvaluatedSample">EvaluatedSample (class in mlos_core.optimizers.flaml_optimizer)</a>
 </li>
       <li><a href="api/mlos_bench/mlos_bench.storage.sql.experiment.html#mlos_bench.storage.sql.experiment.Experiment">Experiment (class in mlos_bench.storage.sql.experiment)</a>
 </li>
@@ -530,12 +538,20 @@
         <li><a href="api/mlos_bench/mlos_bench.environments.status.html#mlos_bench.environments.status.Status.FAILED">(mlos_bench.environments.status.Status attribute)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/mlos_bench/mlos_bench.services.html#mlos_bench.services.FileShareService">FileShareService (class in mlos_bench.services)</a>, <a href="generated/mlos_bench.services.FileShareService.html#mlos_bench.services.FileShareService">[1]</a>
 
       <ul>
         <li><a href="api/mlos_bench/mlos_bench.services.base_fileshare.html#mlos_bench.services.base_fileshare.FileShareService">(class in mlos_bench.services.base_fileshare)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="generated/mlos_core.optimizers.OptimizerType.html#mlos_core.optimizers.OptimizerType.FLAML">FLAML (mlos_core.optimizers.OptimizerType attribute)</a>
+</li>
+      <li><a href="api/mlos_core/mlos_core.optimizers.html#mlos_core.optimizers.FlamlOptimizer">FlamlOptimizer (class in mlos_core.optimizers)</a>
+
+      <ul>
+        <li><a href="api/mlos_core/mlos_core.optimizers.flaml_optimizer.html#mlos_core.optimizers.flaml_optimizer.FlamlOptimizer">(class in mlos_core.optimizers.flaml_optimizer)</a>
 </li>
       </ul></li>
   </ul></td>
@@ -1481,8 +1497,6 @@
         <li><a href="api/mlos_bench/mlos_bench.tests.util_git_test.html#module-mlos_bench.tests.util_git_test">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     mlos_bench.tunables
 
@@ -1490,6 +1504,8 @@
         <li><a href="api/mlos_bench/mlos_bench.tunables.html#module-mlos_bench.tunables">module</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     mlos_bench.tunables.covariant_group
 
@@ -1558,6 +1574,13 @@
 
       <ul>
         <li><a href="api/mlos_core/mlos_core.optimizers.bayesian_optimizers.skopt_optimizer.html#module-mlos_core.optimizers.bayesian_optimizers.skopt_optimizer">module</a>
+</li>
+      </ul></li>
+      <li>
+    mlos_core.optimizers.flaml_optimizer
+
+      <ul>
+        <li><a href="api/mlos_core/mlos_core.optimizers.flaml_optimizer.html#module-mlos_core.optimizers.flaml_optimizer">module</a>
 </li>
       </ul></li>
       <li>
@@ -1916,6 +1939,8 @@
 </li>
         <li><a href="api/mlos_core/mlos_core.optimizers.bayesian_optimizers.skopt_optimizer.html#module-mlos_core.optimizers.bayesian_optimizers.skopt_optimizer">mlos_core.optimizers.bayesian_optimizers.skopt_optimizer</a>
 </li>
+        <li><a href="api/mlos_core/mlos_core.optimizers.flaml_optimizer.html#module-mlos_core.optimizers.flaml_optimizer">mlos_core.optimizers.flaml_optimizer</a>
+</li>
         <li><a href="api/mlos_core/mlos_core.optimizers.optimizer.html#module-mlos_core.optimizers.optimizer">mlos_core.optimizers.optimizer</a>
 </li>
         <li><a href="api/mlos_core/mlos_core.optimizers.random_optimizer.html#module-mlos_core.optimizers.random_optimizer">mlos_core.optimizers.random_optimizer</a>
@@ -2128,6 +2153,10 @@
 </li>
         <li><a href="api/mlos_core/mlos_core.optimizers.html#mlos_core.optimizers.EmukitOptimizer.register_pending">(mlos_core.optimizers.EmukitOptimizer method)</a>
 </li>
+        <li><a href="api/mlos_core/mlos_core.optimizers.flaml_optimizer.html#mlos_core.optimizers.flaml_optimizer.FlamlOptimizer.register_pending">(mlos_core.optimizers.flaml_optimizer.FlamlOptimizer method)</a>
+</li>
+        <li><a href="api/mlos_core/mlos_core.optimizers.html#mlos_core.optimizers.FlamlOptimizer.register_pending">(mlos_core.optimizers.FlamlOptimizer method)</a>
+</li>
         <li><a href="api/mlos_core/mlos_core.optimizers.optimizer.html#mlos_core.optimizers.optimizer.BaseOptimizer.register_pending">(mlos_core.optimizers.optimizer.BaseOptimizer method)</a>, <a href="generated/mlos_core.optimizers.optimizer.BaseOptimizer.html#mlos_core.optimizers.optimizer.BaseOptimizer.register_pending">[1]</a>
 </li>
         <li><a href="api/mlos_core/mlos_core.optimizers.random_optimizer.html#mlos_core.optimizers.random_optimizer.RandomOptimizer.register_pending">(mlos_core.optimizers.random_optimizer.RandomOptimizer method)</a>, <a href="generated/mlos_core.optimizers.random_optimizer.RandomOptimizer.html#mlos_core.optimizers.random_optimizer.RandomOptimizer.register_pending">[1]</a>
@@ -2236,6 +2265,8 @@
       <li><a href="api/mlos_bench/mlos_bench.tests.optimizers.conftest.html#mlos_bench.tests.optimizers.conftest.scikit_et_opt">scikit_et_opt() (in module mlos_bench.tests.optimizers.conftest)</a>
 </li>
       <li><a href="api/mlos_bench/mlos_bench.tests.optimizers.conftest.html#mlos_bench.tests.optimizers.conftest.scikit_gp_opt">scikit_gp_opt() (in module mlos_bench.tests.optimizers.conftest)</a>
+</li>
+      <li><a href="api/mlos_core/mlos_core.optimizers.flaml_optimizer.html#mlos_core.optimizers.flaml_optimizer.EvaluatedSample.score">score (mlos_core.optimizers.flaml_optimizer.EvaluatedSample attribute)</a>
 </li>
       <li><a href="api/mlos_bench/mlos_bench.services.html#mlos_bench.services.Service">Service (class in mlos_bench.services)</a>, <a href="generated/mlos_bench.services.Service.html#mlos_bench.services.Service">[1]</a>
 
