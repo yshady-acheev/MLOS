@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.tests.config.schemas package &mdash; MlosCore 0.1.dev1+ge5a8bde documentation</title>
+  <title>mlos_bench.tests.config.schemas package &mdash; MlosCore 0.1.dev1+gfbec7d7 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+ge5a8bde
+                0.1.dev1+gfbec7d7
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -106,55 +106,17 @@
 <p>Common tests for config schemas and their validation and test cases.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="mlos_bench.tests.config.schemas.SchemaTestCaseInfo">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.tests.config.schemas.</span></span><span class="sig-name descname"><span class="pre">SchemaTestCaseInfo</span></span><a class="headerlink" href="#mlos_bench.tests.config.schemas.SchemaTestCaseInfo" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TypedDict</span></code></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.tests.config.schemas.</span></span><span class="sig-name descname"><span class="pre">SchemaTestCaseInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_case_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_case_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_case_subtype</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.tests.config.schemas.SchemaTestCaseInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Some basic info about a schema test case.</p>
-<p class="rubric">Methods</p>
-<table class="autosummary longtable docutils align-default">
-<tbody>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear</span></code>()</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code>()</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">fromkeys</span></code>(iterable[, value])</p></td>
-<td><p>Create a new dictionary with keys from iterable and values set to value.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get</span></code>(key[, default])</p></td>
-<td><p>Return the value for key if key is in the dictionary, else default.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">items</span></code>()</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">keys</span></code>()</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">pop</span></code>(key[, default])</p></td>
-<td><p>If the key is not found, return the default if given; otherwise, raise a KeyError.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">popitem</span></code>(/)</p></td>
-<td><p>Remove and return a (key, value) pair as a 2-tuple.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setdefault</span></code>(key[, default])</p></td>
-<td><p>Insert key with a value of default if key is not in the dictionary.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">update</span></code>([E, ]**F)</p></td>
-<td><p>If E is present and has a .keys() method, then does:  for k in E: D[k] = E[k] If E is present and lacks a .keys() method, then does:  for k, v in E: D[k] = v In either case, this is followed by: for k in F:  D[k] = F[k]</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">values</span></code>()</p></td>
-<td><p></p></td>
-</tr>
-</tbody>
-</table>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlos_bench.tests.config.schemas.SchemaTestCaseInfo.config">
 <span class="sig-name descname"><span class="pre">config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#mlos_bench.tests.config.schemas.SchemaTestCaseInfo.config" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="mlos_bench.tests.config.schemas.SchemaTestCaseInfo.test_case">
-<span class="sig-name descname"><span class="pre">test_case</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#mlos_bench.tests.config.schemas.SchemaTestCaseInfo.test_case" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="mlos_bench.tests.config.schemas.SchemaTestCaseInfo.test_case_file">
+<span class="sig-name descname"><span class="pre">test_case_file</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#mlos_bench.tests.config.schemas.SchemaTestCaseInfo.test_case_file" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -186,6 +148,28 @@
 
 </dd></dl>
 
+<dl class="py class">
+<dt class="sig sig-object py" id="mlos_bench.tests.config.schemas.TestCases">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.tests.config.schemas.</span></span><span class="sig-name descname"><span class="pre">TestCases</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">by_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#mlos_bench.tests.config.schemas.SchemaTestCaseInfo" title="mlos_bench.tests.config.schemas.SchemaTestCaseInfo"><span class="pre">SchemaTestCaseInfo</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">by_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#mlos_bench.tests.config.schemas.SchemaTestCaseInfo" title="mlos_bench.tests.config.schemas.SchemaTestCaseInfo"><span class="pre">SchemaTestCaseInfo</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">by_subtype</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#mlos_bench.tests.config.schemas.SchemaTestCaseInfo" title="mlos_bench.tests.config.schemas.SchemaTestCaseInfo"><span class="pre">SchemaTestCaseInfo</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.tests.config.schemas.TestCases" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A container for test cases by type.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mlos_bench.tests.config.schemas.TestCases.by_path">
+<span class="sig-name descname"><span class="pre">by_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#mlos_bench.tests.config.schemas.SchemaTestCaseInfo" title="mlos_bench.tests.config.schemas.SchemaTestCaseInfo"><span class="pre">SchemaTestCaseInfo</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#mlos_bench.tests.config.schemas.TestCases.by_path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mlos_bench.tests.config.schemas.TestCases.by_subtype">
+<span class="sig-name descname"><span class="pre">by_subtype</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#mlos_bench.tests.config.schemas.SchemaTestCaseInfo" title="mlos_bench.tests.config.schemas.SchemaTestCaseInfo"><span class="pre">SchemaTestCaseInfo</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#mlos_bench.tests.config.schemas.TestCases.by_subtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mlos_bench.tests.config.schemas.TestCases.by_type">
+<span class="sig-name descname"><span class="pre">by_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#mlos_bench.tests.config.schemas.SchemaTestCaseInfo" title="mlos_bench.tests.config.schemas.SchemaTestCaseInfo"><span class="pre">SchemaTestCaseInfo</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#mlos_bench.tests.config.schemas.TestCases.by_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="mlos_bench.tests.config.schemas.check_schema_dir_layout">
 <span class="sig-prename descclassname"><span class="pre">mlos_bench.tests.config.schemas.</span></span><span class="sig-name descname"><span class="pre">check_schema_dir_layout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test_cases_root</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.tests.config.schemas.check_schema_dir_layout" title="Permalink to this definition">¶</a></dt>
@@ -194,8 +178,27 @@ any extra configs or test cases.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="mlos_bench.tests.config.schemas.check_test_case_against_schema">
+<span class="sig-prename descclassname"><span class="pre">mlos_bench.tests.config.schemas.</span></span><span class="sig-name descname"><span class="pre">check_test_case_against_schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test_case</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mlos_bench.tests.config.schemas.SchemaTestCaseInfo" title="mlos_bench.tests.config.schemas.SchemaTestCaseInfo"><span class="pre">SchemaTestCaseInfo</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.config.schemas.config_schemas.html#mlos_bench.config.schemas.config_schemas.ConfigSchema" title="mlos_bench.config.schemas.config_schemas.ConfigSchema"><span class="pre">ConfigSchema</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.tests.config.schemas.check_test_case_against_schema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks the given test case against the given schema.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>test_case</strong><span class="classifier">SchemaTestCaseInfo</span></dt><dd></dd>
+<dt><strong>schema_type</strong><span class="classifier">ConfigSchema</span></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>NotImplementedError</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="mlos_bench.tests.config.schemas.get_schema_test_cases">
-<span class="sig-prename descclassname"><span class="pre">mlos_bench.tests.config.schemas.</span></span><span class="sig-name descname"><span class="pre">get_schema_test_cases</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test_cases_root</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#mlos_bench.tests.config.schemas.SchemaTestCaseInfo" title="mlos_bench.tests.config.schemas.SchemaTestCaseInfo"><span class="pre">SchemaTestCaseInfo</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.tests.config.schemas.get_schema_test_cases" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">mlos_bench.tests.config.schemas.</span></span><span class="sig-name descname"><span class="pre">get_schema_test_cases</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test_cases_root</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#mlos_bench.tests.config.schemas.TestCases" title="mlos_bench.tests.config.schemas.TestCases"><span class="pre">TestCases</span></a></span></span><a class="headerlink" href="#mlos_bench.tests.config.schemas.get_schema_test_cases" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets a dict of schema test cases from the given root.</p>
 </dd></dl>
 
