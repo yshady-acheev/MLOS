@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_974f7f0354d04887_optimizer_test_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.5">coverage.py v7.2.5</a>,
-            created at 2023-05-19 14:36 +0000
+            created at 2023-05-19 18:35 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -131,7 +131,7 @@
     <p class="pln"><span class="n"><a id="t49" href="#t49">49</a></span><span class="t">    <span class="str">"""</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t50" href="#t50">50</a></span><span class="t"><span class="str">    Toy problem to test one-hot encoding.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t51" href="#t51">51</a></span><span class="t"><span class="str">    """</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t52" href="#t52">52</a></span><span class="t">    <span class="nam">optimizer</span> <span class="op">=</span> <span class="nam">EmukitOptimizer</span><span class="op">(</span><span class="nam">configuration_space</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t52" href="#t52">52</a></span><span class="t">    <span class="nam">optimizer</span> <span class="op">=</span> <span class="nam">EmukitOptimizer</span><span class="op">(</span><span class="nam">parameter_space</span><span class="op">=</span><span class="nam">configuration_space</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t53" href="#t53">53</a></span><span class="t">    <span class="key">assert</span> <span class="nam">optimizer</span><span class="op">.</span><span class="nam">_to_1hot</span><span class="op">(</span><span class="nam">data_frame</span><span class="op">)</span> <span class="op">==</span> <span class="nam">pytest</span><span class="op">.</span><span class="nam">approx</span><span class="op">(</span><span class="nam">one_hot</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t54" href="#t54">54</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t55" href="#t55">55</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -140,7 +140,7 @@
     <p class="pln"><span class="n"><a id="t58" href="#t58">58</a></span><span class="t">    <span class="str">"""</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t59" href="#t59">59</a></span><span class="t"><span class="str">    Toy problem to test one-hot decoding.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t60" href="#t60">60</a></span><span class="t"><span class="str">    """</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t61" href="#t61">61</a></span><span class="t">    <span class="nam">optimizer</span> <span class="op">=</span> <span class="nam">EmukitOptimizer</span><span class="op">(</span><span class="nam">configuration_space</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t61" href="#t61">61</a></span><span class="t">    <span class="nam">optimizer</span> <span class="op">=</span> <span class="nam">EmukitOptimizer</span><span class="op">(</span><span class="nam">parameter_space</span><span class="op">=</span><span class="nam">configuration_space</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t62" href="#t62">62</a></span><span class="t">    <span class="key">assert</span> <span class="nam">optimizer</span><span class="op">.</span><span class="nam">_from_1hot</span><span class="op">(</span><span class="nam">one_hot</span><span class="op">)</span><span class="op">.</span><span class="nam">to_dict</span><span class="op">(</span><span class="op">)</span> <span class="op">==</span> <span class="nam">data_frame</span><span class="op">.</span><span class="nam">to_dict</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t63" href="#t63">63</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t64" href="#t64">64</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -148,7 +148,7 @@
     <p class="pln"><span class="n"><a id="t66" href="#t66">66</a></span><span class="t">    <span class="str">"""</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t67" href="#t67">67</a></span><span class="t"><span class="str">    Round-trip test for one-hot-encoding and then decoding a data frame.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t68" href="#t68">68</a></span><span class="t"><span class="str">    """</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t69" href="#t69">69</a></span><span class="t">    <span class="nam">optimizer</span> <span class="op">=</span> <span class="nam">EmukitOptimizer</span><span class="op">(</span><span class="nam">configuration_space</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t69" href="#t69">69</a></span><span class="t">    <span class="nam">optimizer</span> <span class="op">=</span> <span class="nam">EmukitOptimizer</span><span class="op">(</span><span class="nam">parameter_space</span><span class="op">=</span><span class="nam">configuration_space</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t70" href="#t70">70</a></span><span class="t">    <span class="nam">df_round_trip</span> <span class="op">=</span> <span class="nam">optimizer</span><span class="op">.</span><span class="nam">_from_1hot</span><span class="op">(</span><span class="nam">optimizer</span><span class="op">.</span><span class="nam">_to_1hot</span><span class="op">(</span><span class="nam">data_frame</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t71" href="#t71">71</a></span><span class="t">    <span class="key">assert</span> <span class="nam">df_round_trip</span><span class="op">.</span><span class="nam">x</span><span class="op">.</span><span class="nam">to_numpy</span><span class="op">(</span><span class="op">)</span> <span class="op">==</span> <span class="nam">pytest</span><span class="op">.</span><span class="nam">approx</span><span class="op">(</span><span class="nam">data_frame</span><span class="op">.</span><span class="nam">x</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t72" href="#t72">72</a></span><span class="t">    <span class="key">assert</span> <span class="op">(</span><span class="nam">df_round_trip</span><span class="op">.</span><span class="nam">y</span> <span class="op">==</span> <span class="nam">data_frame</span><span class="op">.</span><span class="nam">y</span><span class="op">)</span><span class="op">.</span><span class="nam">all</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -159,7 +159,7 @@
     <p class="pln"><span class="n"><a id="t77" href="#t77">77</a></span><span class="t">    <span class="str">"""</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t78" href="#t78">78</a></span><span class="t"><span class="str">    Round-trip test for one-hot-decoding and then encoding of a numpy array.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t79" href="#t79">79</a></span><span class="t"><span class="str">    """</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t80" href="#t80">80</a></span><span class="t">    <span class="nam">optimizer</span> <span class="op">=</span> <span class="nam">EmukitOptimizer</span><span class="op">(</span><span class="nam">configuration_space</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t80" href="#t80">80</a></span><span class="t">    <span class="nam">optimizer</span> <span class="op">=</span> <span class="nam">EmukitOptimizer</span><span class="op">(</span><span class="nam">parameter_space</span><span class="op">=</span><span class="nam">configuration_space</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t81" href="#t81">81</a></span><span class="t">    <span class="nam">round_trip</span> <span class="op">=</span> <span class="nam">optimizer</span><span class="op">.</span><span class="nam">_to_1hot</span><span class="op">(</span><span class="nam">optimizer</span><span class="op">.</span><span class="nam">_from_1hot</span><span class="op">(</span><span class="nam">one_hot</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t82" href="#t82">82</a></span><span class="t">    <span class="key">assert</span> <span class="nam">round_trip</span> <span class="op">==</span> <span class="nam">pytest</span><span class="op">.</span><span class="nam">approx</span><span class="op">(</span><span class="nam">one_hot</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
 </main>
@@ -171,7 +171,7 @@
             <a id="nextFileLink" class="nav" href="d_974f7f0354d04887_optimizer_test_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.5">coverage.py v7.2.5</a>,
-            created at 2023-05-19 14:36 +0000
+            created at 2023-05-19 18:35 +0000
         </p>
     </div>
 </footer>

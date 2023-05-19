@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_core.optimizers.OptimizerFactory &mdash; MlosCore 0.1.dev1+gbfdd823 documentation</title>
+  <title>mlos_core.optimizers.OptimizerFactory &mdash; MlosCore 0.1.dev1+g21df312 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/plot_directive.css" type="text/css" />
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+gbfdd823
+                0.1.dev1+g21df312
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -108,8 +108,8 @@
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_core.optimizers.OptimizerFactory.create" title="mlos_core.optimizers.OptimizerFactory.create"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create</span></code></a>(parameter_space[, optimizer_type, ...])</p></td>
-<td><p>Creates a new optimizer instance, given the parameter space, optimizer type and potential optimizer options.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_core.optimizers.OptimizerFactory.create" title="mlos_core.optimizers.OptimizerFactory.create"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create</span></code></a>(*, parameter_space[, optimizer_type, ...])</p></td>
+<td><p>Create a new optimizer instance, given the parameter space, optimizer type, and potential optimizer options.</p></td>
 </tr>
 </tbody>
 </table>
@@ -120,8 +120,9 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_core.optimizers.OptimizerFactory.create">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameter_space</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ConfigurationSpace</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimizer_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_core.optimizers.OptimizerType.html#mlos_core.optimizers.OptimizerType" title="mlos_core.optimizers.OptimizerType"><span class="pre">OptimizerType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OptimizerType.SKOPT</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimizer_kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">space_adapter_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_core.spaces.adapters.SpaceAdapterType.html#mlos_core.spaces.adapters.SpaceAdapterType" title="mlos_core.spaces.adapters.SpaceAdapterType"><span class="pre">SpaceAdapterType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">SpaceAdapterType.IDENTITY</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">space_adapter_kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ConcreteOptimizer</span></span></span><a class="headerlink" href="#mlos_core.optimizers.OptimizerFactory.create" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a new optimizer instance, given the parameter space, optimizer type and potential optimizer options.</p>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameter_space</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ConfigurationSpace</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimizer_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_core.optimizers.OptimizerType.html#mlos_core.optimizers.OptimizerType" title="mlos_core.optimizers.OptimizerType"><span class="pre">OptimizerType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">OptimizerType.SKOPT</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimizer_kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">space_adapter_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_core.spaces.adapters.SpaceAdapterType.html#mlos_core.spaces.adapters.SpaceAdapterType" title="mlos_core.spaces.adapters.SpaceAdapterType"><span class="pre">SpaceAdapterType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">SpaceAdapterType.IDENTITY</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">space_adapter_kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ConcreteOptimizer</span></span></span><a class="headerlink" href="#mlos_core.optimizers.OptimizerFactory.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new optimizer instance, given the parameter space, optimizer type,
+and potential optimizer options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -139,7 +140,9 @@
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
-<dt>Instance of concrete optimizer (e.g., RandomOptimizer, EmukitOptimizer, SkoptOptimizer, etc.) class.</dt><dd></dd>
+<dt><strong>optimizer</strong><span class="classifier">ConcreteOptimizer</span></dt><dd><p>Instance of concrete optimizer class
+(e.g., RandomOptimizer, EmukitOptimizer, SkoptOptimizer, etc.).</p>
+</dd>
 </dl>
 </dd>
 </dl>
