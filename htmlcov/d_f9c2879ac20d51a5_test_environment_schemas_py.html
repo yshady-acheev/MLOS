@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_f9c64468f625e920_test_globals_schemas_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.5">coverage.py v7.2.5</a>,
-            created at 2023-05-22 17:27 +0000
+            created at 2023-05-22 20:41 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -116,7 +116,7 @@
     <p class="pln"><span class="n"><a id="t34" href="#t34">34</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t35" href="#t35">35</a></span><span class="t"><span class="nam">expected_environment_class_names</span> <span class="op">=</span> <span class="op">[</span><span class="nam">subclass</span><span class="op">.</span><span class="nam">__module__</span> <span class="op">+</span> <span class="str">"."</span> <span class="op">+</span> <span class="nam">subclass</span><span class="op">.</span><span class="nam">__name__</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t36" href="#t36">36</a></span><span class="t">                                    <span class="key">for</span> <span class="nam">subclass</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t37" href="#t37">37</a></span><span class="t">                                    <span class="key">in</span> <span class="nam">get_all_concrete_subclasses</span><span class="op">(</span><span class="nam">Environment</span><span class="op">)</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t37" href="#t37">37</a></span><span class="t">                                    <span class="key">in</span> <span class="nam">get_all_concrete_subclasses</span><span class="op">(</span><span class="nam">Environment</span><span class="op">,</span> <span class="nam">pkg_name</span><span class="op">=</span><span class="str">'mlos_bench'</span><span class="op">)</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t38" href="#t38">38</a></span><span class="t"><span class="key">assert</span> <span class="nam">expected_environment_class_names</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t39" href="#t39">39</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t40" href="#t40">40</a></span><span class="t"><span class="nam">COMPOSITE_ENV_CLASS_NAME</span> <span class="op">=</span> <span class="nam">CompositeEnv</span><span class="op">.</span><span class="nam">__module__</span> <span class="op">+</span> <span class="str">"."</span> <span class="op">+</span> <span class="nam">CompositeEnv</span><span class="op">.</span><span class="nam">__name__</span>&nbsp;</span><span class="r"></span></p>
@@ -124,12 +124,12 @@
     <p class="pln"><span class="n"><a id="t42" href="#t42">42</a></span><span class="t">                                         <span class="key">if</span> <span class="nam">subclass_name</span> <span class="op">!=</span> <span class="nam">COMPOSITE_ENV_CLASS_NAME</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t43" href="#t43">43</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t44" href="#t44">44</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t45" href="#t45">45</a></span><span class="t"><span class="com"># Do the full cross product of all the test cases and all the optimizer types.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t45" href="#t45">45</a></span><span class="t"><span class="com"># Do the full cross product of all the test cases and all the Environment types.</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t46" href="#t46">46</a></span><span class="t"><span class="op">@</span><span class="nam">pytest</span><span class="op">.</span><span class="nam">mark</span><span class="op">.</span><span class="nam">parametrize</span><span class="op">(</span><span class="str">"test_case_subtype"</span><span class="op">,</span> <span class="nam">sorted</span><span class="op">(</span><span class="nam">TEST_CASES</span><span class="op">.</span><span class="nam">by_subtype</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t47" href="#t47">47</a></span><span class="t"><span class="op">@</span><span class="nam">pytest</span><span class="op">.</span><span class="nam">mark</span><span class="op">.</span><span class="nam">parametrize</span><span class="op">(</span><span class="str">"env_class"</span><span class="op">,</span> <span class="nam">expected_environment_class_names</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t48" href="#t48">48</a></span><span class="t"><span class="key">def</span> <span class="nam">test_case_coverage_mlos_bench_environment_type</span><span class="op">(</span><span class="nam">test_case_subtype</span><span class="op">:</span> <span class="nam">str</span><span class="op">,</span> <span class="nam">env_class</span><span class="op">:</span> <span class="nam">str</span><span class="op">)</span> <span class="op">-></span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t49" href="#t49">49</a></span><span class="t">    <span class="str">"""</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t50" href="#t50">50</a></span><span class="t"><span class="str">    Checks to see if there is a given type of test case for the given mlos_bench optimizer type.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t50" href="#t50">50</a></span><span class="t"><span class="str">    Checks to see if there is a given type of test case for the given mlos_bench Environment type.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t51" href="#t51">51</a></span><span class="t"><span class="str">    """</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t52" href="#t52">52</a></span><span class="t">    <span class="key">for</span> <span class="nam">test_case</span> <span class="key">in</span> <span class="nam">TEST_CASES</span><span class="op">.</span><span class="nam">by_subtype</span><span class="op">[</span><span class="nam">test_case_subtype</span><span class="op">]</span><span class="op">.</span><span class="nam">values</span><span class="op">(</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t53" href="#t53">53</a></span><span class="t">        <span class="key">if</span> <span class="nam">try_resolve_class_name</span><span class="op">(</span><span class="nam">test_case</span><span class="op">.</span><span class="nam">config</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">"class"</span><span class="op">)</span><span class="op">)</span> <span class="op">==</span> <span class="nam">env_class</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
@@ -163,7 +163,7 @@
             <a id="nextFileLink" class="nav" href="d_f9c64468f625e920_test_globals_schemas_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.5">coverage.py v7.2.5</a>,
-            created at 2023-05-22 17:27 +0000
+            created at 2023-05-22 20:41 +0000
         </p>
     </div>
 </footer>

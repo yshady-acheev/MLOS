@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.tests.services.local.mock package &mdash; MlosCore 0.1.dev1+gc05176c documentation</title>
+  <title>mlos_bench.tests.services.local.mock package &mdash; MlosCore 0.1.dev1+gf7348f1 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+gc05176c
+                0.1.dev1+gf7348f1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -105,6 +105,70 @@
   <section id="module-mlos_bench.tests.services.local.mock">
 <span id="mlos-bench-tests-services-local-mock-package"></span><h1>mlos_bench.tests.services.local.mock package<a class="headerlink" href="#module-mlos_bench.tests.services.local.mock" title="Permalink to this heading">¶</a></h1>
 <p>Mock local services for testing purposes.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="mlos_bench.tests.services.local.mock.MockLocalExecService">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.tests.services.local.mock.</span></span><span class="sig-name descname"><span class="pre">MockLocalExecService</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.services.base_service.html#mlos_bench.services.base_service.Service" title="mlos_bench.services.base_service.Service"><span class="pre">Service</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.tests.services.local.mock.MockLocalExecService" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="mlos_bench.services.local.temp_dir_context.html#mlos_bench.services.local.temp_dir_context.TempDirContextService" title="mlos_bench.services.local.temp_dir_context.TempDirContextService"><code class="xref py py-class docutils literal notranslate"><span class="pre">TempDirContextService</span></code></a>, <a class="reference internal" href="mlos_bench.services.types.local_exec_type.html#mlos_bench.services.types.local_exec_type.SupportsLocalExec" title="mlos_bench.services.types.local_exec_type.SupportsLocalExec"><code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsLocalExec</span></code></a></p>
+<p>Mock methods for LocalExecService testing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">config_loader_service</span></code></dt><dd><p>Return a config loader service.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">export</span></code>()</p></td>
+<td><p>Return a dictionary of functions available in this service.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.tests.services.local.mock.MockLocalExecService.local_exec" title="mlos_bench.tests.services.local.mock.MockLocalExecService.local_exec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">local_exec</span></code></a>(script_lines[, env, cwd, ...])</p></td>
+<td><p>Execute the script lines from <cite>script_lines</cite> in a local process.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">new</span></code>(class_name, config, parent)</p></td>
+<td><p>Factory method for a new service with a given config.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code>(services)</p></td>
+<td><p>Register new mix-in services.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">temp_dir_context</span></code>([path])</p></td>
+<td><p>Create a temp directory or use the provided path.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.tests.services.local.mock.MockLocalExecService.local_exec">
+<span class="sig-name descname"><span class="pre">local_exec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">script_lines</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Mapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">TunableValue</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cwd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_on_error</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.tests.services.local.mock.MockLocalExecService.local_exec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the script lines from <cite>script_lines</cite> in a local process.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>script_lines</strong><span class="classifier">Iterable[str]</span></dt><dd><p>Lines of the script to run locally.
+Treat every line as a separate command to run.</p>
+</dd>
+<dt><strong>env</strong><span class="classifier">Mapping[str, Union[int, float, str]]</span></dt><dd><p>Environment variables (optional).</p>
+</dd>
+<dt><strong>cwd</strong><span class="classifier">str</span></dt><dd><p>Work directory to run the script at.
+If omitted, use <cite>temp_dir</cite> or create a temporary dir.</p>
+</dd>
+<dt><strong>return_on_error</strong><span class="classifier">bool</span></dt><dd><p>If True, stop running script lines on first non-zero return code.
+The default is False.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>(return_code, stdout, stderr)</strong><span class="classifier">(int, str, str)</span></dt><dd><p>A 3-tuple of return code, stdout, and stderr of the script process.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">¶</a></h2>
 <div class="toctree-wrapper compound">
