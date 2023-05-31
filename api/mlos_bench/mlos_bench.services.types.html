@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.services.types package &mdash; MlosCore 0.1.dev1+g1f7eef4 documentation</title>
+  <title>mlos_bench.services.types package &mdash; MlosCore 0.1.dev1+gc2637d5 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g1f7eef4
+                0.1.dev1+gc2637d5
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -437,19 +437,19 @@ Status is one of {PENDING, SUCCEEDED, FAILED}</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.services.types.SupportsVMOps.vm_deprovision" title="mlos_bench.services.types.SupportsVMOps.vm_deprovision"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vm_deprovision</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.services.types.SupportsVMOps.vm_deprovision" title="mlos_bench.services.types.SupportsVMOps.vm_deprovision"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vm_deprovision</span></code></a>(params)</p></td>
 <td><p>Deallocates the VM by shutting it down then releasing the compute resources.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.services.types.SupportsVMOps.vm_provision" title="mlos_bench.services.types.SupportsVMOps.vm_provision"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vm_provision</span></code></a>(params)</p></td>
 <td><p>Check if VM is ready.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.services.types.SupportsVMOps.vm_restart" title="mlos_bench.services.types.SupportsVMOps.vm_restart"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vm_restart</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.services.types.SupportsVMOps.vm_restart" title="mlos_bench.services.types.SupportsVMOps.vm_restart"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vm_restart</span></code></a>(params)</p></td>
 <td><p>Restarts the VM by initiating a graceful shutdown.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.services.types.SupportsVMOps.vm_start" title="mlos_bench.services.types.SupportsVMOps.vm_start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vm_start</span></code></a>(params)</p></td>
 <td><p>Start a VM.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.services.types.SupportsVMOps.vm_stop" title="mlos_bench.services.types.SupportsVMOps.vm_stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vm_stop</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.services.types.SupportsVMOps.vm_stop" title="mlos_bench.services.types.SupportsVMOps.vm_stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vm_stop</span></code></a>(params)</p></td>
 <td><p>Stops the VM by initiating a graceful shutdown.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.services.types.SupportsVMOps.wait_vm_deployment" title="mlos_bench.services.types.SupportsVMOps.wait_vm_deployment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_vm_deployment</span></code></a>(is_setup, params)</p></td>
@@ -462,11 +462,17 @@ Status is one of {PENDING, SUCCEEDED, FAILED}</p>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.services.types.SupportsVMOps.vm_deprovision">
-<span class="sig-name descname"><span class="pre">vm_deprovision</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../generated/mlos_bench.environments.Status.html#mlos_bench.environments.Status" title="mlos_bench.environments.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.types.SupportsVMOps.vm_deprovision" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">vm_deprovision</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../generated/mlos_bench.environments.Status.html#mlos_bench.environments.Status" title="mlos_bench.environments.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.types.SupportsVMOps.vm_deprovision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deallocates the VM by shutting it down then releasing the compute resources.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
+<dt><strong>params</strong><span class="classifier">dict</span></dt><dd><p>Flat dictionary of (key, value) pairs of tunable parameters.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
 <dt><strong>result</strong><span class="classifier">(Status, dict={})</span></dt><dd><p>A pair of Status and result. The result is always {}.
 Status is one of {PENDING, SUCCEEDED, FAILED}</p>
 </dd>
@@ -500,11 +506,17 @@ Status is one of {PENDING, SUCCEEDED, FAILED}</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.services.types.SupportsVMOps.vm_restart">
-<span class="sig-name descname"><span class="pre">vm_restart</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../generated/mlos_bench.environments.Status.html#mlos_bench.environments.Status" title="mlos_bench.environments.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.types.SupportsVMOps.vm_restart" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">vm_restart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../generated/mlos_bench.environments.Status.html#mlos_bench.environments.Status" title="mlos_bench.environments.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.types.SupportsVMOps.vm_restart" title="Permalink to this definition">¶</a></dt>
 <dd><p>Restarts the VM by initiating a graceful shutdown.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
+<dt><strong>params</strong><span class="classifier">dict</span></dt><dd><p>Flat dictionary of (key, value) pairs of tunable parameters.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
 <dt><strong>result</strong><span class="classifier">(Status, dict={})</span></dt><dd><p>A pair of Status and result. The result is always {}.
 Status is one of {PENDING, SUCCEEDED, FAILED}</p>
 </dd>
@@ -536,11 +548,17 @@ Status is one of {PENDING, SUCCEEDED, FAILED}</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.services.types.SupportsVMOps.vm_stop">
-<span class="sig-name descname"><span class="pre">vm_stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../generated/mlos_bench.environments.Status.html#mlos_bench.environments.Status" title="mlos_bench.environments.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.types.SupportsVMOps.vm_stop" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">vm_stop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../generated/mlos_bench.environments.Status.html#mlos_bench.environments.Status" title="mlos_bench.environments.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.types.SupportsVMOps.vm_stop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stops the VM by initiating a graceful shutdown.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
+<dt><strong>params</strong><span class="classifier">dict</span></dt><dd><p>Flat dictionary of (key, value) pairs of tunable parameters.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
 <dt><strong>result</strong><span class="classifier">(Status, dict={})</span></dt><dd><p>A pair of Status and result. The result is always {}.
 Status is one of {PENDING, SUCCEEDED, FAILED}</p>
 </dd>
