@@ -12,4 +12,5 @@ Submodules
 .. toctree::
    :maxdepth: 4
 
+   mlos_bench.tests.environments.composite_env_test
    mlos_bench.tests.environments.mock_env_test
