@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.services.remote.azure package &mdash; MlosCore 0.1.dev1+g8f7526f documentation</title>
+  <title>mlos_bench.services.remote.azure package &mdash; MlosCore 0.1.dev1+gc192fe0 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g8f7526f
+                0.1.dev1+gc192fe0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -197,7 +197,7 @@ if True (the default), upload the entire directory tree.</p>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">export</span></code>()</p></td>
 <td><p>Return a dictionary of functions available in this service.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../generated/mlos_bench.services.remote.azure.AzureVMService.html#mlos_bench.services.remote.azure.AzureVMService.get_remote_exec_results" title="mlos_bench.services.remote.azure.AzureVMService.get_remote_exec_results"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_remote_exec_results</span></code></a>(params)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../generated/mlos_bench.services.remote.azure.AzureVMService.html#mlos_bench.services.remote.azure.AzureVMService.get_remote_exec_results" title="mlos_bench.services.remote.azure.AzureVMService.get_remote_exec_results"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_remote_exec_results</span></code></a>(config)</p></td>
 <td><p>Get the results of the asynchronously running command.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">new</span></code>(class_name, config, parent)</p></td>
@@ -206,7 +206,7 @@ if True (the default), upload the entire directory tree.</p>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code>(services)</p></td>
 <td><p>Register new mix-in services.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../generated/mlos_bench.services.remote.azure.AzureVMService.html#mlos_bench.services.remote.azure.AzureVMService.remote_exec" title="mlos_bench.services.remote.azure.AzureVMService.remote_exec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remote_exec</span></code></a>(script, params)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../generated/mlos_bench.services.remote.azure.AzureVMService.html#mlos_bench.services.remote.azure.AzureVMService.remote_exec" title="mlos_bench.services.remote.azure.AzureVMService.remote_exec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remote_exec</span></code></a>(script, config, env_params)</p></td>
 <td><p>Run a command on Azure VM.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="../../generated/mlos_bench.services.remote.azure.AzureVMService.html#mlos_bench.services.remote.azure.AzureVMService.vm_deprovision" title="mlos_bench.services.remote.azure.AzureVMService.vm_deprovision"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vm_deprovision</span></code></a>(params)</p></td>
@@ -234,12 +234,12 @@ if True (the default), upload the entire directory tree.</p>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.services.remote.azure.AzureVMService.get_remote_exec_results">
-<span class="sig-name descname"><span class="pre">get_remote_exec_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.remote.azure.AzureVMService.get_remote_exec_results" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_remote_exec_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.remote.azure.AzureVMService.get_remote_exec_results" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the results of the asynchronously running command.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>params</strong><span class="classifier">dict</span></dt><dd><p>Flat dictionary of (key, value) pairs of tunable parameters.
+<dt><strong>config</strong><span class="classifier">dict</span></dt><dd><p>Flat dictionary of (key, value) pairs of tunable parameters.
 Must have the “asyncResultsUrl” key to get the results.
 If the key is not present, return Status.PENDING.</p>
 </dd>
@@ -257,16 +257,19 @@ Status is one of {PENDING, SUCCEEDED, FAILED, TIMED_OUT}</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.services.remote.azure.AzureVMService.remote_exec">
-<span class="sig-name descname"><span class="pre">remote_exec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">script</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.remote.azure.AzureVMService.remote_exec" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">remote_exec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">script</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.remote.azure.AzureVMService.remote_exec" title="Permalink to this definition">¶</a></dt>
 <dd><p>Run a command on Azure VM.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>script</strong><span class="classifier">Iterable[str]</span></dt><dd><p>A list of lines to execute as a script on a remote VM.</p>
 </dd>
-<dt><strong>params</strong><span class="classifier">dict</span></dt><dd><p>Flat dictionary of (key, value) pairs of parameters.
+<dt><strong>config</strong><span class="classifier">dict</span></dt><dd><p>Flat dictionary of (key, value) pairs of the Environment parameters.
 They usually come from <cite>const_args</cite> and <cite>tunable_params</cite>
 properties of the Environment.</p>
+</dd>
+<dt><strong>env_params</strong><span class="classifier">dict</span></dt><dd><p>Parameters to pass as <em>shell</em> environment variables into the script.
+This is usually a subset of <cite>config</cite> with some possible conversions.</p>
 </dd>
 </dl>
 </dd>

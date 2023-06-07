@@ -54,8 +54,8 @@
             </div>
         </aside>
         <h2>
-            <span class="text">70 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">69<span class="text"> run</span></button>
+            <span class="text">69 statements &nbsp;</span>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">68<span class="text"> run</span></button>
             <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">1<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_b5994b7a43ca5d1f_conftest_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2023-06-07 00:38 +0000
+            created at 2023-06-07 21:30 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -193,7 +193,7 @@
     <p class="run"><span class="n"><a id="t111" href="#t111">111</a></span><span class="t">    <span class="nam">mock_response</span><span class="op">.</span><span class="nam">status_code</span> <span class="op">=</span> <span class="nam">http_status_code</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t112" href="#t112">112</a></span><span class="t">    <span class="nam">mock_requests</span><span class="op">.</span><span class="nam">post</span><span class="op">.</span><span class="nam">return_value</span> <span class="op">=</span> <span class="nam">mock_response</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t113" href="#t113">113</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t114" href="#t114">114</a></span><span class="t">    <span class="nam">status</span><span class="op">,</span> <span class="nam">_</span> <span class="op">=</span> <span class="nam">azure_vm_service</span><span class="op">.</span><span class="nam">remote_exec</span><span class="op">(</span><span class="nam">script</span><span class="op">,</span> <span class="op">{</span><span class="op">}</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t114" href="#t114">114</a></span><span class="t">    <span class="nam">status</span><span class="op">,</span> <span class="nam">_</span> <span class="op">=</span> <span class="nam">azure_vm_service</span><span class="op">.</span><span class="nam">remote_exec</span><span class="op">(</span><span class="nam">script</span><span class="op">,</span> <span class="nam">config</span><span class="op">=</span><span class="op">{</span><span class="op">}</span><span class="op">,</span> <span class="nam">env_params</span><span class="op">=</span><span class="op">{</span><span class="op">}</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t115" href="#t115">115</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t116" href="#t116">116</a></span><span class="t">    <span class="key">assert</span> <span class="nam">status</span> <span class="op">==</span> <span class="nam">operation_status</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t117" href="#t117">117</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -212,7 +212,7 @@
     <p class="pln"><span class="n"><a id="t130" href="#t130">130</a></span><span class="t">    <span class="op">}</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t131" href="#t131">131</a></span><span class="t">    <span class="nam">mock_requests</span><span class="op">.</span><span class="nam">post</span><span class="op">.</span><span class="nam">return_value</span> <span class="op">=</span> <span class="nam">mock_response</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t132" href="#t132">132</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t133" href="#t133">133</a></span><span class="t">    <span class="nam">_</span><span class="op">,</span> <span class="nam">cmd_output</span> <span class="op">=</span> <span class="nam">azure_vm_service</span><span class="op">.</span><span class="nam">remote_exec</span><span class="op">(</span><span class="nam">script</span><span class="op">,</span> <span class="op">{</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t133" href="#t133">133</a></span><span class="t">    <span class="nam">_</span><span class="op">,</span> <span class="nam">cmd_output</span> <span class="op">=</span> <span class="nam">azure_vm_service</span><span class="op">.</span><span class="nam">remote_exec</span><span class="op">(</span><span class="nam">script</span><span class="op">,</span> <span class="nam">config</span><span class="op">=</span><span class="op">{</span><span class="op">}</span><span class="op">,</span> <span class="nam">env_params</span><span class="op">=</span><span class="op">{</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t134" href="#t134">134</a></span><span class="t">        <span class="str">"param_1"</span><span class="op">:</span> <span class="num">123</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t135" href="#t135">135</a></span><span class="t">        <span class="str">"param_2"</span><span class="op">:</span> <span class="str">"abc"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t136" href="#t136">136</a></span><span class="t">    <span class="op">}</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -257,8 +257,7 @@
     <p class="run"><span class="n"><a id="t175" href="#t175">175</a></span><span class="t">    <span class="nam">status</span><span class="op">,</span> <span class="nam">cmd_output</span> <span class="op">=</span> <span class="nam">azure_vm_service</span><span class="op">.</span><span class="nam">get_remote_exec_results</span><span class="op">(</span><span class="nam">params</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t176" href="#t176">176</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t177" href="#t177">177</a></span><span class="t">    <span class="key">assert</span> <span class="nam">status</span> <span class="op">==</span> <span class="nam">operation_status</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t178" href="#t178">178</a></span><span class="t">    <span class="key">assert</span> <span class="nam">mock_wait_vm_operation</span><span class="op">.</span><span class="nam">call_args</span><span class="op">[</span><span class="num">0</span><span class="op">]</span><span class="op">[</span><span class="num">0</span><span class="op">]</span> <span class="op">==</span> <span class="nam">params</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t179" href="#t179">179</a></span><span class="t">    <span class="key">assert</span> <span class="nam">cmd_output</span> <span class="op">==</span> <span class="nam">results_output</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t178" href="#t178">178</a></span><span class="t">    <span class="key">assert</span> <span class="nam">cmd_output</span> <span class="op">==</span> <span class="nam">results_output</span>&nbsp;</span><span class="r"></span></p>
 </main>
 <footer>
     <div class="content">
@@ -268,7 +267,7 @@
             <a id="nextFileLink" class="nav" href="d_b5994b7a43ca5d1f_conftest_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2023-06-07 00:38 +0000
+            created at 2023-06-07 21:30 +0000
         </p>
     </div>
 </footer>

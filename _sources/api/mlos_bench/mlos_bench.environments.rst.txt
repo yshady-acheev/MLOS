@@ -24,4 +24,5 @@ Submodules
    mlos_bench.environments.base_environment
    mlos_bench.environments.composite_env
    mlos_bench.environments.mock_env
+   mlos_bench.environments.script_env
    mlos_bench.environments.status
