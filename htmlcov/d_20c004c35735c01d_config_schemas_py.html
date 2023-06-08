@@ -54,8 +54,8 @@
             </div>
         </aside>
         <h2>
-            <span class="text">51 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">49<span class="text"> run</span></button>
+            <span class="text">52 statements &nbsp;</span>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">50<span class="text"> run</span></button>
             <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">2<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_2af64a9d4152bba3___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2023-06-08 17:54 +0000
+            created at 2023-06-08 18:11 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -89,7 +89,7 @@
     <p class="pln"><span class="n"><a id="t7" href="#t7">7</a></span><span class="t"><span class="str">"""</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t8" href="#t8">8</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t9" href="#t9">9</a></span><span class="t"><span class="key">from</span> <span class="nam">enum</span> <span class="key">import</span> <span class="nam">Enum</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t10" href="#t10">10</a></span><span class="t"><span class="key">from</span> <span class="nam">os</span> <span class="key">import</span> <span class="nam">path</span><span class="op">,</span> <span class="nam">walk</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t10" href="#t10">10</a></span><span class="t"><span class="key">from</span> <span class="nam">os</span> <span class="key">import</span> <span class="nam">path</span><span class="op">,</span> <span class="nam">walk</span><span class="op">,</span> <span class="nam">environ</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t11" href="#t11">11</a></span><span class="t"><span class="key">from</span> <span class="nam">typing</span> <span class="key">import</span> <span class="nam">Dict</span><span class="op">,</span> <span class="nam">Iterator</span><span class="op">,</span> <span class="nam">Mapping</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t12" href="#t12">12</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t13" href="#t13">13</a></span><span class="t"><span class="key">import</span> <span class="nam">json</span>         <span class="com"># schema files are pure json - no comments</span>&nbsp;</span><span class="r"></span></p>
@@ -180,8 +180,11 @@
     <p class="pln"><span class="n"><a id="t98" href="#t98">98</a></span><span class="t"><span class="str">        jsonschema.exceptions.ValidationError</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t99" href="#t99">99</a></span><span class="t"><span class="str">        jsonschema.exceptions.SchemaError</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t100" href="#t100">100</a></span><span class="t"><span class="str">        """</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t101" href="#t101">101</a></span><span class="t">        <span class="nam">resolver</span><span class="op">:</span> <span class="nam">jsonschema</span><span class="op">.</span><span class="nam">RefResolver</span> <span class="op">=</span> <span class="nam">jsonschema</span><span class="op">.</span><span class="nam">RefResolver</span><span class="op">.</span><span class="nam">from_schema</span><span class="op">(</span><span class="nam">self</span><span class="op">.</span><span class="nam">schema</span><span class="op">,</span> <span class="nam">store</span><span class="op">=</span><span class="nam">SCHEMA_STORE</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t102" href="#t102">102</a></span><span class="t">        <span class="nam">jsonschema</span><span class="op">.</span><span class="nam">validate</span><span class="op">(</span><span class="nam">instance</span><span class="op">=</span><span class="nam">config</span><span class="op">,</span> <span class="nam">schema</span><span class="op">=</span><span class="nam">self</span><span class="op">.</span><span class="nam">schema</span><span class="op">,</span> <span class="nam">resolver</span><span class="op">=</span><span class="nam">resolver</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t101" href="#t101">101</a></span><span class="t">        <span class="com"># Allow skipping schema validation for tight dev cycle changes.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t102" href="#t102">102</a></span><span class="t">        <span class="com"># Note: this may cause pytest to fail if it's expecting exceptions to be raised for invalid configs.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t103" href="#t103">103</a></span><span class="t">        <span class="key">if</span> <span class="nam">environ</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">'MLOS_BENCH_SKIP_SCHEMA_VALIDATION'</span><span class="op">,</span> <span class="str">'false'</span><span class="op">)</span><span class="op">.</span><span class="nam">lower</span><span class="op">(</span><span class="op">)</span> <span class="key">not</span> <span class="key">in</span> <span class="op">{</span><span class="str">'true'</span><span class="op">,</span> <span class="str">'y'</span><span class="op">,</span> <span class="str">'yes'</span><span class="op">,</span> <span class="str">'on'</span><span class="op">,</span> <span class="str">'1'</span><span class="op">}</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t104" href="#t104">104</a></span><span class="t">            <span class="nam">resolver</span><span class="op">:</span> <span class="nam">jsonschema</span><span class="op">.</span><span class="nam">RefResolver</span> <span class="op">=</span> <span class="nam">jsonschema</span><span class="op">.</span><span class="nam">RefResolver</span><span class="op">.</span><span class="nam">from_schema</span><span class="op">(</span><span class="nam">self</span><span class="op">.</span><span class="nam">schema</span><span class="op">,</span> <span class="nam">store</span><span class="op">=</span><span class="nam">SCHEMA_STORE</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t105" href="#t105">105</a></span><span class="t">            <span class="nam">jsonschema</span><span class="op">.</span><span class="nam">validate</span><span class="op">(</span><span class="nam">instance</span><span class="op">=</span><span class="nam">config</span><span class="op">,</span> <span class="nam">schema</span><span class="op">=</span><span class="nam">self</span><span class="op">.</span><span class="nam">schema</span><span class="op">,</span> <span class="nam">resolver</span><span class="op">=</span><span class="nam">resolver</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
 </main>
 <footer>
     <div class="content">
@@ -191,7 +194,7 @@
             <a id="nextFileLink" class="nav" href="d_2af64a9d4152bba3___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2023-06-08 17:54 +0000
+            created at 2023-06-08 18:11 +0000
         </p>
     </div>
 </footer>
