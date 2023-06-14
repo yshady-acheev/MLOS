@@ -1,0 +1,7 @@
+mlos\_core.optimizers.bayesian\_optimizers.smac\_optimizer module
+=================================================================
+
+.. automodule:: mlos_core.optimizers.bayesian_optimizers.smac_optimizer
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_core.optimizers.optimizer module &mdash; MlosCore 0.1.dev1+g07dc5a9 documentation</title>
+  <title>mlos_core.optimizers.optimizer module &mdash; MlosCore 0.1.dev1+g1e6f563 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g07dc5a9
+                0.1.dev1+g1e6f563
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -115,23 +115,32 @@
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../generated/mlos_core.optimizers.optimizer.BaseOptimizer.html#mlos_core.optimizers.optimizer.BaseOptimizer.get_best_observation" title="mlos_core.optimizers.optimizer.BaseOptimizer.get_best_observation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_best_observation</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../generated/mlos_core.optimizers.optimizer.BaseOptimizer.html#mlos_core.optimizers.optimizer.BaseOptimizer.cleanup" title="mlos_core.optimizers.optimizer.BaseOptimizer.cleanup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cleanup</span></code></a>()</p></td>
+<td><p>Cleanup the optimizer.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../generated/mlos_core.optimizers.optimizer.BaseOptimizer.html#mlos_core.optimizers.optimizer.BaseOptimizer.get_best_observation" title="mlos_core.optimizers.optimizer.BaseOptimizer.get_best_observation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_best_observation</span></code></a>()</p></td>
 <td><p>Returns the best observation so far as a dataframe.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../generated/mlos_core.optimizers.optimizer.BaseOptimizer.html#mlos_core.optimizers.optimizer.BaseOptimizer.get_observations" title="mlos_core.optimizers.optimizer.BaseOptimizer.get_observations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_observations</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../generated/mlos_core.optimizers.optimizer.BaseOptimizer.html#mlos_core.optimizers.optimizer.BaseOptimizer.get_observations" title="mlos_core.optimizers.optimizer.BaseOptimizer.get_observations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_observations</span></code></a>()</p></td>
 <td><p>Returns the observations as a dataframe.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../generated/mlos_core.optimizers.optimizer.BaseOptimizer.html#mlos_core.optimizers.optimizer.BaseOptimizer.register" title="mlos_core.optimizers.optimizer.BaseOptimizer.register"><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code></a>(configurations, scores[, context])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../generated/mlos_core.optimizers.optimizer.BaseOptimizer.html#mlos_core.optimizers.optimizer.BaseOptimizer.register" title="mlos_core.optimizers.optimizer.BaseOptimizer.register"><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code></a>(configurations, scores[, context])</p></td>
 <td><p>Wrapper method, which employs the space adapter (if any), before registering the configurations and scores.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../generated/mlos_core.optimizers.optimizer.BaseOptimizer.html#mlos_core.optimizers.optimizer.BaseOptimizer.register_pending" title="mlos_core.optimizers.optimizer.BaseOptimizer.register_pending"><code class="xref py py-obj docutils literal notranslate"><span class="pre">register_pending</span></code></a>(configurations[, context])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../generated/mlos_core.optimizers.optimizer.BaseOptimizer.html#mlos_core.optimizers.optimizer.BaseOptimizer.register_pending" title="mlos_core.optimizers.optimizer.BaseOptimizer.register_pending"><code class="xref py py-obj docutils literal notranslate"><span class="pre">register_pending</span></code></a>(configurations[, context])</p></td>
 <td><p>Registers the given configurations as &quot;pending&quot;.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../generated/mlos_core.optimizers.optimizer.BaseOptimizer.html#mlos_core.optimizers.optimizer.BaseOptimizer.suggest" title="mlos_core.optimizers.optimizer.BaseOptimizer.suggest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">suggest</span></code></a>([context, defaults])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../generated/mlos_core.optimizers.optimizer.BaseOptimizer.html#mlos_core.optimizers.optimizer.BaseOptimizer.suggest" title="mlos_core.optimizers.optimizer.BaseOptimizer.suggest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">suggest</span></code></a>([context, defaults])</p></td>
 <td><p>Wrapper method, which employs the space adapter (if any), after suggesting a new configuration.</p></td>
 </tr>
 </tbody>
 </table>
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_core.optimizers.optimizer.BaseOptimizer.cleanup">
+<span class="sig-name descname"><span class="pre">cleanup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_core.optimizers.optimizer.BaseOptimizer.cleanup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleanup the optimizer.</p>
+</dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_core.optimizers.optimizer.BaseOptimizer.get_best_observation">
 <span class="sig-name descname"><span class="pre">get_best_observation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#mlos_core.optimizers.optimizer.BaseOptimizer.get_best_observation" title="Permalink to this definition">¶</a></dt>

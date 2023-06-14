@@ -14,3 +14,4 @@ Submodules
 
    mlos_core.optimizers.bayesian_optimizers.bayesian_optimizer
    mlos_core.optimizers.bayesian_optimizers.emukit_optimizer
+   mlos_core.optimizers.bayesian_optimizers.smac_optimizer
