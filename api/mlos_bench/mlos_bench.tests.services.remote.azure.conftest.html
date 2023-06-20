@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.tests.services.remote.azure.conftest module &mdash; MlosCore 0.1.dev1+gacd32d6 documentation</title>
+  <title>mlos_bench.tests.services.remote.azure.conftest module &mdash; MlosCore 0.1.dev1+gb571d4c documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+gacd32d6
+                0.1.dev1+gb571d4c
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -107,6 +107,12 @@
 <span id="mlos-bench-tests-services-remote-azure-conftest-module"></span><h1>mlos_bench.tests.services.remote.azure.conftest module<a class="headerlink" href="#module-mlos_bench.tests.services.remote.azure.conftest" title="Permalink to this heading">¶</a></h1>
 <p>Configuration test fixtures for azure_services in mlos_bench.</p>
 <dl class="py function">
+<dt class="sig sig-object py" id="mlos_bench.tests.services.remote.azure.conftest.azure_auth_service">
+<span class="sig-prename descclassname"><span class="pre">mlos_bench.tests.services.remote.azure.conftest.</span></span><span class="sig-name descname"><span class="pre">azure_auth_service</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_persistence_service</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../generated/mlos_bench.services.config_persistence.ConfigPersistenceService.html#mlos_bench.services.config_persistence.ConfigPersistenceService" title="mlos_bench.services.config_persistence.ConfigPersistenceService"><span class="pre">ConfigPersistenceService</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">monkeypatch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">MonkeyPatch</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mlos_bench.services.remote.azure.azure_auth.html#mlos_bench.services.remote.azure.azure_auth.AzureAuthService" title="mlos_bench.services.remote.azure.azure_auth.AzureAuthService"><span class="pre">AzureAuthService</span></a></span></span><a class="headerlink" href="#mlos_bench.tests.services.remote.azure.conftest.azure_auth_service" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a dummy AzureAuthService for tests that require it.</p>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="mlos_bench.tests.services.remote.azure.conftest.azure_fileshare">
 <span class="sig-prename descclassname"><span class="pre">mlos_bench.tests.services.remote.azure.conftest.</span></span><span class="sig-name descname"><span class="pre">azure_fileshare</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_persistence_service</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../generated/mlos_bench.services.config_persistence.ConfigPersistenceService.html#mlos_bench.services.config_persistence.ConfigPersistenceService" title="mlos_bench.services.config_persistence.ConfigPersistenceService"><span class="pre">ConfigPersistenceService</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mlos_bench.services.remote.azure.azure_fileshare.html#mlos_bench.services.remote.azure.azure_fileshare.AzureFileShareService" title="mlos_bench.services.remote.azure.azure_fileshare.AzureFileShareService"><span class="pre">AzureFileShareService</span></a></span></span><a class="headerlink" href="#mlos_bench.tests.services.remote.azure.conftest.azure_fileshare" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a dummy AzureFileShareService for tests that require it.</p>
@@ -114,7 +120,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="mlos_bench.tests.services.remote.azure.conftest.azure_vm_service">
-<span class="sig-prename descclassname"><span class="pre">mlos_bench.tests.services.remote.azure.conftest.</span></span><span class="sig-name descname"><span class="pre">azure_vm_service</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_persistence_service</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../generated/mlos_bench.services.config_persistence.ConfigPersistenceService.html#mlos_bench.services.config_persistence.ConfigPersistenceService" title="mlos_bench.services.config_persistence.ConfigPersistenceService"><span class="pre">ConfigPersistenceService</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mlos_bench.services.remote.azure.azure_services.html#mlos_bench.services.remote.azure.azure_services.AzureVMService" title="mlos_bench.services.remote.azure.azure_services.AzureVMService"><span class="pre">AzureVMService</span></a></span></span><a class="headerlink" href="#mlos_bench.tests.services.remote.azure.conftest.azure_vm_service" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">mlos_bench.tests.services.remote.azure.conftest.</span></span><span class="sig-name descname"><span class="pre">azure_vm_service</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">azure_auth_service</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.services.remote.azure.azure_auth.html#mlos_bench.services.remote.azure.azure_auth.AzureAuthService" title="mlos_bench.services.remote.azure.azure_auth.AzureAuthService"><span class="pre">AzureAuthService</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mlos_bench.services.remote.azure.azure_services.html#mlos_bench.services.remote.azure.azure_services.AzureVMService" title="mlos_bench.services.remote.azure.azure_services.AzureVMService"><span class="pre">AzureVMService</span></a></span></span><a class="headerlink" href="#mlos_bench.tests.services.remote.azure.conftest.azure_vm_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a dummy Azure VM service for tests that require it.</p>
 </dd></dl>
 

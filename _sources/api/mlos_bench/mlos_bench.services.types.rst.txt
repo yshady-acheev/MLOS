@@ -12,6 +12,7 @@ Submodules
 .. toctree::
    :maxdepth: 4
 
+   mlos_bench.services.types.authenticator_type
    mlos_bench.services.types.config_loader_type
    mlos_bench.services.types.fileshare_type
    mlos_bench.services.types.local_exec_type

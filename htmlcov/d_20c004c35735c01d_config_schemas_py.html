@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_2af64a9d4152bba3___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2023-06-20 19:19 +0000
+            created at 2023-06-20 20:24 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -184,17 +184,18 @@
     <p class="pln"><span class="n"><a id="t102" href="#t102">102</a></span><span class="t"><span class="str">        Parameters</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t103" href="#t103">103</a></span><span class="t"><span class="str">        ----------</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t104" href="#t104">104</a></span><span class="t"><span class="str">        config : dict</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t105" href="#t105">105</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t106" href="#t106">106</a></span><span class="t"><span class="str">        Raises</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t107" href="#t107">107</a></span><span class="t"><span class="str">        ------</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t108" href="#t108">108</a></span><span class="t"><span class="str">        jsonschema.exceptions.ValidationError</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t109" href="#t109">109</a></span><span class="t"><span class="str">        jsonschema.exceptions.SchemaError</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t110" href="#t110">110</a></span><span class="t"><span class="str">        """</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t111" href="#t111">111</a></span><span class="t">        <span class="key">if</span> <span class="nam">_SKIP_VALIDATION</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t112" href="#t112">112</a></span><span class="t">            <span class="nam">_LOG</span><span class="op">.</span><span class="nam">warning</span><span class="op">(</span><span class="str">"%s is set - skip schema validation"</span><span class="op">,</span> <span class="nam">_VALIDATION_ENV_FLAG</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t113" href="#t113">113</a></span><span class="t">        <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t114" href="#t114">114</a></span><span class="t">            <span class="nam">resolver</span><span class="op">:</span> <span class="nam">jsonschema</span><span class="op">.</span><span class="nam">RefResolver</span> <span class="op">=</span> <span class="nam">jsonschema</span><span class="op">.</span><span class="nam">RefResolver</span><span class="op">.</span><span class="nam">from_schema</span><span class="op">(</span><span class="nam">self</span><span class="op">.</span><span class="nam">schema</span><span class="op">,</span> <span class="nam">store</span><span class="op">=</span><span class="nam">SCHEMA_STORE</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t115" href="#t115">115</a></span><span class="t">            <span class="nam">jsonschema</span><span class="op">.</span><span class="nam">validate</span><span class="op">(</span><span class="nam">instance</span><span class="op">=</span><span class="nam">config</span><span class="op">,</span> <span class="nam">schema</span><span class="op">=</span><span class="nam">self</span><span class="op">.</span><span class="nam">schema</span><span class="op">,</span> <span class="nam">resolver</span><span class="op">=</span><span class="nam">resolver</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t105" href="#t105">105</a></span><span class="t"><span class="str">            The config to validate.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t106" href="#t106">106</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t107" href="#t107">107</a></span><span class="t"><span class="str">        Raises</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t108" href="#t108">108</a></span><span class="t"><span class="str">        ------</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t109" href="#t109">109</a></span><span class="t"><span class="str">        jsonschema.exceptions.ValidationError</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t110" href="#t110">110</a></span><span class="t"><span class="str">        jsonschema.exceptions.SchemaError</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t111" href="#t111">111</a></span><span class="t"><span class="str">        """</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t112" href="#t112">112</a></span><span class="t">        <span class="key">if</span> <span class="nam">_SKIP_VALIDATION</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t113" href="#t113">113</a></span><span class="t">            <span class="nam">_LOG</span><span class="op">.</span><span class="nam">warning</span><span class="op">(</span><span class="str">"%s is set - skip schema validation"</span><span class="op">,</span> <span class="nam">_VALIDATION_ENV_FLAG</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t114" href="#t114">114</a></span><span class="t">        <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t115" href="#t115">115</a></span><span class="t">            <span class="nam">resolver</span><span class="op">:</span> <span class="nam">jsonschema</span><span class="op">.</span><span class="nam">RefResolver</span> <span class="op">=</span> <span class="nam">jsonschema</span><span class="op">.</span><span class="nam">RefResolver</span><span class="op">.</span><span class="nam">from_schema</span><span class="op">(</span><span class="nam">self</span><span class="op">.</span><span class="nam">schema</span><span class="op">,</span> <span class="nam">store</span><span class="op">=</span><span class="nam">SCHEMA_STORE</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t116" href="#t116">116</a></span><span class="t">            <span class="nam">jsonschema</span><span class="op">.</span><span class="nam">validate</span><span class="op">(</span><span class="nam">instance</span><span class="op">=</span><span class="nam">config</span><span class="op">,</span> <span class="nam">schema</span><span class="op">=</span><span class="nam">self</span><span class="op">.</span><span class="nam">schema</span><span class="op">,</span> <span class="nam">resolver</span><span class="op">=</span><span class="nam">resolver</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
 </main>
 <footer>
     <div class="content">
@@ -204,7 +205,7 @@
             <a id="nextFileLink" class="nav" href="d_2af64a9d4152bba3___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2023-06-20 19:19 +0000
+            created at 2023-06-20 20:24 +0000
         </p>
     </div>
 </footer>
