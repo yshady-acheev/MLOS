@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_ce2854f29b8d638d_local_fileshare_env_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2023-06-23 01:08 +0000
+            created at 2023-06-23 01:21 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -234,7 +234,7 @@
     <p class="pln"><span class="n"><a id="t152" href="#t152">152</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t153" href="#t153">153</a></span><span class="t">            <span class="nam">data_dict</span> <span class="op">=</span> <span class="nam">data</span><span class="op">.</span><span class="nam">iloc</span><span class="op">[</span><span class="op">-</span><span class="num">1</span><span class="op">]</span><span class="op">.</span><span class="nam">to_dict</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t154" href="#t154">154</a></span><span class="t">            <span class="nam">_LOG</span><span class="op">.</span><span class="nam">info</span><span class="op">(</span><span class="str">"Local run complete: %s ::\n%s"</span><span class="op">,</span> <span class="nam">self</span><span class="op">,</span> <span class="nam">data_dict</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t155" href="#t155">155</a></span><span class="t">            <span class="key">return</span> <span class="op">(</span><span class="nam">Status</span><span class="op">.</span><span class="nam">SUCCEEDED</span><span class="op">,</span> <span class="nam">data_dict</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t155" href="#t155">155</a></span><span class="t">            <span class="key">return</span> <span class="op">(</span><span class="nam">Status</span><span class="op">.</span><span class="nam">SUCCEEDED</span><span class="op">,</span> <span class="nam">data_dict</span><span class="op">)</span> <span class="key">if</span> <span class="nam">data_dict</span> <span class="key">else</span> <span class="op">(</span><span class="nam">Status</span><span class="op">.</span><span class="nam">FAILED</span><span class="op">,</span> <span class="key">None</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t156" href="#t156">156</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t157" href="#t157">157</a></span><span class="t">    <span class="key">def</span> <span class="nam">teardown</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span> <span class="op">-></span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t158" href="#t158">158</a></span><span class="t">        <span class="str">"""</span>&nbsp;</span><span class="r"></span></p>
@@ -279,7 +279,7 @@
             <a id="nextFileLink" class="nav" href="d_ce2854f29b8d638d_local_fileshare_env_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2023-06-23 01:08 +0000
+            created at 2023-06-23 01:21 +0000
         </p>
     </div>
 </footer>
