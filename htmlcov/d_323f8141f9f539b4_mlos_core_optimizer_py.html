@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_323f8141f9f539b4_mock_optimizer_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2023-06-27 17:04 +0000
+            created at 2023-06-27 17:17 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -192,7 +192,7 @@
     <p class="run"><span class="n"><a id="t110" href="#t110">110</a></span><span class="t">    <span class="key">def</span> <span class="nam">register</span><span class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="nam">tunables</span><span class="op">:</span> <span class="nam">TunableGroups</span><span class="op">,</span> <span class="nam">status</span><span class="op">:</span> <span class="nam">Status</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t111" href="#t111">111</a></span><span class="t">                 <span class="nam">score</span><span class="op">:</span> <span class="nam">Optional</span><span class="op">[</span><span class="nam">Union</span><span class="op">[</span><span class="nam">float</span><span class="op">,</span> <span class="nam">dict</span><span class="op">]</span><span class="op">]</span> <span class="op">=</span> <span class="key">None</span><span class="op">)</span> <span class="op">-></span> <span class="nam">Optional</span><span class="op">[</span><span class="nam">float</span><span class="op">]</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t112" href="#t112">112</a></span><span class="t">        <span class="nam">score</span> <span class="op">=</span> <span class="nam">super</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">register</span><span class="op">(</span><span class="nam">tunables</span><span class="op">,</span> <span class="nam">status</span><span class="op">,</span> <span class="nam">score</span><span class="op">)</span>  <span class="com"># With _opt_sign applied</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t113" href="#t113">113</a></span><span class="t">        <span class="key">if</span> <span class="nam">status</span><span class="op">.</span><span class="nam">is_completed</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t113" href="#t113">113</a></span><span class="t">        <span class="key">if</span> <span class="nam">status</span><span class="op">.</span><span class="nam">is_completed</span><span class="op">(</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t114" href="#t114">114</a></span><span class="t">            <span class="com"># By default, hyperparameters in ConfigurationSpace are sorted by name:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t115" href="#t115">115</a></span><span class="t">            <span class="nam">df_config</span> <span class="op">=</span> <span class="nam">pd</span><span class="op">.</span><span class="nam">DataFrame</span><span class="op">(</span><span class="nam">dict</span><span class="op">(</span><span class="nam">sorted</span><span class="op">(</span><span class="nam">tunables</span><span class="op">.</span><span class="nam">get_param_values</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">items</span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">,</span> <span class="nam">index</span><span class="op">=</span><span class="op">[</span><span class="num">0</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t116" href="#t116">116</a></span><span class="t">            <span class="nam">_LOG</span><span class="op">.</span><span class="nam">debug</span><span class="op">(</span><span class="str">"Score: %s Dataframe:\n%s"</span><span class="op">,</span> <span class="nam">score</span><span class="op">,</span> <span class="nam">df_config</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -217,7 +217,7 @@
             <a id="nextFileLink" class="nav" href="d_323f8141f9f539b4_mock_optimizer_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2023-06-27 17:04 +0000
+            created at 2023-06-27 17:17 +0000
         </p>
     </div>
 </footer>

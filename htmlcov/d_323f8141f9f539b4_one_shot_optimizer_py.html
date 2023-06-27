@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_5396f41af8b1e4bd_run_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2023-06-27 17:04 +0000
+            created at 2023-06-27 17:17 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -117,8 +117,8 @@
     <p class="run"><span class="n"><a id="t35" href="#t35">35</a></span><span class="t">            <span class="nam">self</span><span class="op">.</span><span class="nam">_tunables</span> <span class="op">=</span> <span class="nam">super</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">suggest</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t36" href="#t36">36</a></span><span class="t">            <span class="com"># Now assign the values we were given in the config.</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t37" href="#t37">37</a></span><span class="t">            <span class="key">for</span> <span class="nam">data_file</span> <span class="key">in</span> <span class="nam">config</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">"include_tunable_values"</span><span class="op">,</span> <span class="op">[</span><span class="op">]</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t38" href="#t38">38</a></span><span class="t">                <span class="nam">tunable_values</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_service</span><span class="op">.</span><span class="nam">config_loader_service</span><span class="op">.</span><span class="nam">load_config</span><span class="op">(</span><span class="nam">data_file</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t39" href="#t39">39</a></span><span class="t">                                                                                 <span class="nam">schema_type</span><span class="op">=</span><span class="nam">ConfigSchema</span><span class="op">.</span><span class="nam">TUNABLE_VALUES</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t38" href="#t38">38</a></span><span class="t">                <span class="nam">tunable_values</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_service</span><span class="op">.</span><span class="nam">config_loader_service</span><span class="op">.</span><span class="nam">load_config</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t39" href="#t39">39</a></span><span class="t">                    <span class="nam">data_file</span><span class="op">,</span> <span class="nam">schema_type</span><span class="op">=</span><span class="nam">ConfigSchema</span><span class="op">.</span><span class="nam">TUNABLE_VALUES</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t40" href="#t40">40</a></span><span class="t">                <span class="key">assert</span> <span class="nam">isinstance</span><span class="op">(</span><span class="nam">tunable_values</span><span class="op">,</span> <span class="nam">Dict</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t41" href="#t41">41</a></span><span class="t">                <span class="nam">self</span><span class="op">.</span><span class="nam">_tunables</span><span class="op">.</span><span class="nam">assign</span><span class="op">(</span><span class="nam">tunable_values</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t42" href="#t42">42</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">_tunables</span><span class="op">.</span><span class="nam">assign</span><span class="op">(</span><span class="nam">config</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">"tunable_values"</span><span class="op">,</span> <span class="op">{</span><span class="op">}</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -138,7 +138,7 @@
             <a id="nextFileLink" class="nav" href="d_5396f41af8b1e4bd_run_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2023-06-27 17:04 +0000
+            created at 2023-06-27 17:17 +0000
         </p>
     </div>
 </footer>
