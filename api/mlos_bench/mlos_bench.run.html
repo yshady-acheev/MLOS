@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.run module &mdash; MlosCore 0.1.dev1+gdfd6f48 documentation</title>
+  <title>mlos_bench.run module &mdash; MlosCore 0.1.dev1+geafa279 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+gdfd6f48
+                0.1.dev1+geafa279
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -104,7 +104,8 @@
                   [--log_level LOG_LEVEL]
                   [--config_path CONFIG_PATH [CONFIG_PATH ...]]
                   [--environment ENVIRONMENT] [--optimizer OPTIMIZER]
-                  [--storage STORAGE]
+                  [--storage STORAGE] [--random_init]
+                  [--random_seed RANDOM_SEED]
                   [--tunable_values TUNABLE_VALUES [TUNABLE_VALUES ...]]
                   [--globals GLOBALS [GLOBALS ...]] [--no_teardown]
 
@@ -132,6 +133,10 @@ options:
                         --tunable_values).
   --storage STORAGE     Path to the storage configuration file. If omitted,
                         use the ephemeral in-memory SQL storage.
+  --random_init         Initialize tunables with random values. (Before
+                        applying --tunable_values).
+  --random_seed RANDOM_SEED
+                        Seed to use with --random_init
   --tunable_values TUNABLE_VALUES [TUNABLE_VALUES ...]
                         Path to one or more JSON files that contain values of
                         the tunable parameters. This can be used for a single
