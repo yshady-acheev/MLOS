@@ -1,0 +1,12 @@
+﻿:mod:`mlos_core.spaces.converters.flaml`.configspace_to_flaml_space
+================================================================================
+
+.. currentmodule:: mlos_core.spaces.converters.flaml
+
+.. autofunction:: configspace_to_flaml_space
+
+.. include:: mlos_core.spaces.converters.flaml.configspace_to_flaml_space.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

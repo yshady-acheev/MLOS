@@ -13,3 +13,4 @@ Subpackages
    :maxdepth: 4
 
    mlos_core.spaces.adapters
+   mlos_core.spaces.converters

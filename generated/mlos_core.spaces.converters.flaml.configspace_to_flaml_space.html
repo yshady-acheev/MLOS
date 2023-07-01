@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_core.spaces.configspace_to_flaml_space &mdash; MlosCore 0.1.dev1+gb2d5f9b documentation</title>
+  <title>mlos_core.spaces.converters.flaml.configspace_to_flaml_space &mdash; MlosCore 0.1.dev1+g8b82b33 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/plot_directive.css" type="text/css" />
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+gb2d5f9b
+                0.1.dev1+g8b82b33
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -52,8 +52,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../overview.html#optimizers">Optimizers</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../overview.html#spaces">Spaces</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="mlos_core.spaces.configspace_to_emukit_space.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.spaces</span></code>.configspace_to_emukit_space</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.spaces</span></code>.configspace_to_flaml_space</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#mlos_core.spaces.configspace_to_flaml_space"><code class="docutils literal notranslate"><span class="pre">configspace_to_flaml_space()</span></code></a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../overview.html#converters">Converters</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.spaces.converters.flaml</span></code>.configspace_to_flaml_space</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../overview.html#space-adapters">Space Adapters</a></li>
@@ -84,9 +84,9 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../overview.html">mlos-core API</a></li>
-      <li class="breadcrumb-item active"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.spaces</span></code>.configspace_to_flaml_space</li>
+      <li class="breadcrumb-item active"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.spaces.converters.flaml</span></code>.configspace_to_flaml_space</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/generated/mlos_core.spaces.configspace_to_flaml_space.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/generated/mlos_core.spaces.converters.flaml.configspace_to_flaml_space.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -94,11 +94,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="mlos-core-spaces-configspace-to-flaml-space">
-<h1><a class="reference internal" href="../api/mlos_core/mlos_core.spaces.html#module-mlos_core.spaces" title="mlos_core.spaces"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.spaces</span></code></a>.configspace_to_flaml_space<a class="headerlink" href="#mlos-core-spaces-configspace-to-flaml-space" title="Permalink to this heading">¶</a></h1>
+  <section id="mlos-core-spaces-converters-flaml-configspace-to-flaml-space">
+<h1><a class="reference internal" href="../api/mlos_core/mlos_core.spaces.converters.flaml.html#module-mlos_core.spaces.converters.flaml" title="mlos_core.spaces.converters.flaml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.spaces.converters.flaml</span></code></a>.configspace_to_flaml_space<a class="headerlink" href="#mlos-core-spaces-converters-flaml-configspace-to-flaml-space" title="Permalink to this heading">¶</a></h1>
 <dl class="py function">
-<dt class="sig sig-object py" id="mlos_core.spaces.configspace_to_flaml_space">
-<span class="sig-prename descclassname"><span class="pre">mlos_core.spaces.</span></span><span class="sig-name descname"><span class="pre">configspace_to_flaml_space</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_space</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ConfigurationSpace</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#mlos_core.spaces.configspace_to_flaml_space" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="mlos_core.spaces.converters.flaml.configspace_to_flaml_space">
+<span class="sig-prename descclassname"><span class="pre">mlos_core.spaces.converters.flaml.</span></span><span class="sig-name descname"><span class="pre">configspace_to_flaml_space</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_space</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ConfigurationSpace</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Domain</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_core.spaces.converters.flaml.configspace_to_flaml_space" title="Permalink to this definition">¶</a></dt>
 <dd><p>Converts a ConfigSpace.ConfigurationSpace to dict.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
