@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_core.optimizers.bayesian_optimizers package &mdash; MlosCore 0.1.dev1+g24bdfcb documentation</title>
+  <title>mlos_core.optimizers.bayesian_optimizers package &mdash; MlosCore 0.1.dev1+g1582c6b documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g24bdfcb
+                0.1.dev1+g1582c6b
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -160,108 +160,6 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_core.optimizers.bayesian_optimizers.BaseBayesianOptimizer.surrogate_predict">
 <em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">surrogate_predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">configurations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">ScalarType</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_core.optimizers.bayesian_optimizers.BaseBayesianOptimizer.surrogate_predict" title="Permalink to this definition">¶</a></dt>
-<dd><p>Obtain a prediction from this Bayesian optimizer’s surrogate model for the given configuration(s).</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>configurations</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Dataframe of configurations / parameters. The columns are parameter names and the rows are the configurations.</p>
-</dd>
-<dt><strong>context</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Not Yet Implemented.</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_core.optimizers.bayesian_optimizers.</span></span><span class="sig-name descname"><span class="pre">EmukitOptimizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameter_space</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ConfigurationSpace</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">space_adapter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../generated/mlos_core.spaces.adapters.adapter.BaseSpaceAdapter.html#mlos_core.spaces.adapters.adapter.BaseSpaceAdapter" title="mlos_core.spaces.adapters.adapter.BaseSpaceAdapter"><span class="pre">BaseSpaceAdapter</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="mlos_core.optimizers.bayesian_optimizers.bayesian_optimizer.html#mlos_core.optimizers.bayesian_optimizers.bayesian_optimizer.BaseBayesianOptimizer" title="mlos_core.optimizers.bayesian_optimizers.bayesian_optimizer.BaseBayesianOptimizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseBayesianOptimizer</span></code></a></p>
-<p>Wrapper class for Emukit based Bayesian optimization.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>parameter_space</strong><span class="classifier">ConfigSpace.ConfigurationSpace</span></dt><dd><p>The parameter space to optimize.</p>
-</dd>
-<dt><strong>space_adapter</strong><span class="classifier">BaseSpaceAdapter</span></dt><dd><p>The space adapter class to employ for parameter space transformations.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Attributes<span class="colon">:</span></dt>
-<dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">space_adapter</span></code></dt><dd><p>Get the space adapter instance (if any).</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Methods</p>
-<table class="autosummary longtable docutils align-default">
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../generated/mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.html#mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.acquisition_function" title="mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.acquisition_function"><code class="xref py py-obj docutils literal notranslate"><span class="pre">acquisition_function</span></code></a>(configurations[, context])</p></td>
-<td><p>Invokes the acquisition function from this Bayesian optimizer for the given configuration.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">cleanup</span></code>()</p></td>
-<td><p>Cleanup the optimizer.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_best_observation</span></code>()</p></td>
-<td><p>Returns the best observation so far as a dataframe.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_observations</span></code>()</p></td>
-<td><p>Returns the observations as a dataframe.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code>(configurations, scores[, context])</p></td>
-<td><p>Wrapper method, which employs the space adapter (if any), before registering the configurations and scores.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../generated/mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.html#mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.register_pending" title="mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.register_pending"><code class="xref py py-obj docutils literal notranslate"><span class="pre">register_pending</span></code></a>(configurations[, context])</p></td>
-<td><p>Registers the given configurations as &quot;pending&quot;.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">suggest</span></code>([context, defaults])</p></td>
-<td><p>Wrapper method, which employs the space adapter (if any), after suggesting a new configuration.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../generated/mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.html#mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.surrogate_predict" title="mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.surrogate_predict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">surrogate_predict</span></code></a>(configurations[, context])</p></td>
-<td><p>Obtain a prediction from this Bayesian optimizer's surrogate model for the given configuration(s).</p></td>
-</tr>
-</tbody>
-</table>
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.acquisition_function">
-<span class="sig-name descname"><span class="pre">acquisition_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">configurations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">ScalarType</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.acquisition_function" title="Permalink to this definition">¶</a></dt>
-<dd><p>Invokes the acquisition function from this Bayesian optimizer for the given configuration.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>configurations</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Dataframe of configurations / parameters. The columns are parameter names and the rows are the configurations.</p>
-</dd>
-<dt><strong>context</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Not Yet Implemented.</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.register_pending">
-<span class="sig-name descname"><span class="pre">register_pending</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">configurations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.register_pending" title="Permalink to this definition">¶</a></dt>
-<dd><p>Registers the given configurations as “pending”.
-That is it say, it has been suggested by the optimizer, and an experiment trial has been started.
-This can be useful for executing multiple trials in parallel, retry logic, etc.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>configurations</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Dataframe of configurations / parameters. The columns are parameter names and the rows are the configurations.</p>
-</dd>
-<dt><strong>context</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Not Yet Implemented.</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.surrogate_predict">
-<span class="sig-name descname"><span class="pre">surrogate_predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">configurations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">ScalarType</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.surrogate_predict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Obtain a prediction from this Bayesian optimizer’s surrogate model for the given configuration(s).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -409,15 +307,6 @@ This can be useful for executing multiple trials in parallel, retry logic, etc.<
 <li class="toctree-l2"><a class="reference internal" href="mlos_core.optimizers.bayesian_optimizers.bayesian_optimizer.html#mlos_core.optimizers.bayesian_optimizers.bayesian_optimizer.BaseBayesianOptimizer"><code class="docutils literal notranslate"><span class="pre">BaseBayesianOptimizer</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="mlos_core.optimizers.bayesian_optimizers.bayesian_optimizer.html#mlos_core.optimizers.bayesian_optimizers.bayesian_optimizer.BaseBayesianOptimizer.acquisition_function"><code class="docutils literal notranslate"><span class="pre">BaseBayesianOptimizer.acquisition_function()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_core.optimizers.bayesian_optimizers.bayesian_optimizer.html#mlos_core.optimizers.bayesian_optimizers.bayesian_optimizer.BaseBayesianOptimizer.surrogate_predict"><code class="docutils literal notranslate"><span class="pre">BaseBayesianOptimizer.surrogate_predict()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="mlos_core.optimizers.bayesian_optimizers.emukit_optimizer.html">mlos_core.optimizers.bayesian_optimizers.emukit_optimizer module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mlos_core.optimizers.bayesian_optimizers.emukit_optimizer.html#mlos_core.optimizers.bayesian_optimizers.emukit_optimizer.EmukitOptimizer"><code class="docutils literal notranslate"><span class="pre">EmukitOptimizer</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="mlos_core.optimizers.bayesian_optimizers.emukit_optimizer.html#mlos_core.optimizers.bayesian_optimizers.emukit_optimizer.EmukitOptimizer.acquisition_function"><code class="docutils literal notranslate"><span class="pre">EmukitOptimizer.acquisition_function()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="mlos_core.optimizers.bayesian_optimizers.emukit_optimizer.html#mlos_core.optimizers.bayesian_optimizers.emukit_optimizer.EmukitOptimizer.register_pending"><code class="docutils literal notranslate"><span class="pre">EmukitOptimizer.register_pending()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="mlos_core.optimizers.bayesian_optimizers.emukit_optimizer.html#mlos_core.optimizers.bayesian_optimizers.emukit_optimizer.EmukitOptimizer.surrogate_predict"><code class="docutils literal notranslate"><span class="pre">EmukitOptimizer.surrogate_predict()</span></code></a></li>
 </ul>
 </li>
 </ul>

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos-core API &mdash; MlosCore 0.1.dev1+g24bdfcb documentation</title>
+  <title>mlos-core API &mdash; MlosCore 0.1.dev1+g1582c6b documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/plot_directive.css" type="text/css" />
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g24bdfcb
+                0.1.dev1+g1582c6b
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -57,12 +57,10 @@
 <li class="toctree-l3"><a class="reference internal" href="generated/mlos_core.optimizers.random_optimizer.RandomOptimizer.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.optimizers.random_optimizer</span></code>.RandomOptimizer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/mlos_core.optimizers.flaml_optimizer.FlamlOptimizer.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.optimizers.flaml_optimizer</span></code>.FlamlOptimizer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/mlos_core.optimizers.bayesian_optimizers.BaseBayesianOptimizer.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.optimizers.bayesian_optimizers</span></code>.BaseBayesianOptimizer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="generated/mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.optimizers.bayesian_optimizers</span></code>.EmukitOptimizer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/mlos_core.optimizers.bayesian_optimizers.SmacOptimizer.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.optimizers.bayesian_optimizers</span></code>.SmacOptimizer</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#spaces">Spaces</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="generated/mlos_core.spaces.configspace_to_emukit_space.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.spaces</span></code>.configspace_to_emukit_space</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#converters">Converters</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="generated/mlos_core.spaces.converters.flaml.configspace_to_flaml_space.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.spaces.converters.flaml</span></code>.configspace_to_flaml_space</a></li>
 </ul>
@@ -202,7 +200,7 @@
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_core.optimizers.flaml_optimizer.FlamlOptimizer.html#mlos_core.optimizers.flaml_optimizer.FlamlOptimizer" title="mlos_core.optimizers.flaml_optimizer.FlamlOptimizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FlamlOptimizer</span></code></a>(*, parameter_space[, ...])</p></td>
-<td><p>Wraper class for FLAML Optimizer: A fast library for AutoML and tuning.</p></td>
+<td><p>Wrapper class for FLAML Optimizer: A fast library for AutoML and tuning.</p></td>
 </tr>
 </tbody>
 </table>
@@ -211,10 +209,7 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_core.optimizers.bayesian_optimizers.BaseBayesianOptimizer.html#mlos_core.optimizers.bayesian_optimizers.BaseBayesianOptimizer" title="mlos_core.optimizers.bayesian_optimizers.BaseBayesianOptimizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseBayesianOptimizer</span></code></a>(*, parameter_space[, ...])</p></td>
 <td><p>Abstract base class defining the interface for Bayesian optimization.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer.html#mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer" title="mlos_core.optimizers.bayesian_optimizers.EmukitOptimizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EmukitOptimizer</span></code></a>(*, parameter_space[, ...])</p></td>
-<td><p>Wrapper class for Emukit based Bayesian optimization.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_core.optimizers.bayesian_optimizers.SmacOptimizer.html#mlos_core.optimizers.bayesian_optimizers.SmacOptimizer" title="mlos_core.optimizers.bayesian_optimizers.SmacOptimizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SmacOptimizer</span></code></a>(*, parameter_space[, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/mlos_core.optimizers.bayesian_optimizers.SmacOptimizer.html#mlos_core.optimizers.bayesian_optimizers.SmacOptimizer" title="mlos_core.optimizers.bayesian_optimizers.SmacOptimizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SmacOptimizer</span></code></a>(*, parameter_space[, ...])</p></td>
 <td><p>Wrapper class for SMAC based Bayesian optimization.</p></td>
 </tr>
 </tbody>
@@ -222,13 +217,6 @@
 </section>
 <section id="spaces">
 <h2>Spaces<a class="headerlink" href="#spaces" title="Permalink to this heading">¶</a></h2>
-<table class="autosummary longtable docutils align-default">
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_core.spaces.configspace_to_emukit_space.html#mlos_core.spaces.configspace_to_emukit_space" title="mlos_core.spaces.configspace_to_emukit_space"><code class="xref py py-obj docutils literal notranslate"><span class="pre">configspace_to_emukit_space</span></code></a>(config_space)</p></td>
-<td><p>Converts a ConfigSpace.ConfigurationSpace to emukit.core.ParameterSpace.</p></td>
-</tr>
-</tbody>
-</table>
 <section id="converters">
 <h3>Converters<a class="headerlink" href="#converters" title="Permalink to this heading">¶</a></h3>
 <table class="autosummary longtable docutils align-default">
