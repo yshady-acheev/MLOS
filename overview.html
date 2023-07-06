@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos-core API &mdash; MlosCore 0.1.dev1+gcf4d923 documentation</title>
+  <title>mlos-core API &mdash; MlosCore 0.1.dev1+gf4043f1 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/plot_directive.css" type="text/css" />
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+gcf4d923
+                0.1.dev1+gf4043f1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -346,17 +346,17 @@
 <h2>Service Mix-ins<a class="headerlink" href="#service-mix-ins" title="Permalink to this heading">¶</a></h2>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.services.Service.html#mlos_bench.services.Service" title="mlos_bench.services.Service"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Service</span></code></a>([config, parent])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.services.Service.html#mlos_bench.services.Service" title="mlos_bench.services.Service"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Service</span></code></a>([config, global_config, parent])</p></td>
 <td><p>An abstract base of all environment services.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/mlos_bench.services.FileShareService.html#mlos_bench.services.FileShareService" title="mlos_bench.services.FileShareService"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FileShareService</span></code></a>(config, parent)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/mlos_bench.services.FileShareService.html#mlos_bench.services.FileShareService" title="mlos_bench.services.FileShareService"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FileShareService</span></code></a>([config, global_config, parent])</p></td>
 <td><p>An abstract base of all file shares.</p></td>
 </tr>
 </tbody>
 </table>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.services.config_persistence.ConfigPersistenceService.html#mlos_bench.services.config_persistence.ConfigPersistenceService" title="mlos_bench.services.config_persistence.ConfigPersistenceService"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigPersistenceService</span></code></a>([config, parent])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.services.config_persistence.ConfigPersistenceService.html#mlos_bench.services.config_persistence.ConfigPersistenceService" title="mlos_bench.services.config_persistence.ConfigPersistenceService"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigPersistenceService</span></code></a>([config, ...])</p></td>
 <td><p>Collection of methods to deserialize the Environment, Service, and TunableGroups objects.</p></td>
 </tr>
 </tbody>
@@ -365,7 +365,7 @@
 <h3>Local Services<a class="headerlink" href="#local-services" title="Permalink to this heading">¶</a></h3>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.services.local.LocalExecService.html#mlos_bench.services.local.LocalExecService" title="mlos_bench.services.local.LocalExecService"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LocalExecService</span></code></a>([config, parent])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.services.local.LocalExecService.html#mlos_bench.services.local.LocalExecService" title="mlos_bench.services.local.LocalExecService"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LocalExecService</span></code></a>([config, global_config, parent])</p></td>
 <td><p>Collection of methods to run scripts and commands in an external process on the node acting as the scheduler.</p></td>
 </tr>
 </tbody>
@@ -375,10 +375,10 @@
 <h3>Remote Azure Services<a class="headerlink" href="#remote-azure-services" title="Permalink to this heading">¶</a></h3>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.services.remote.azure.AzureVMService.html#mlos_bench.services.remote.azure.AzureVMService" title="mlos_bench.services.remote.azure.AzureVMService"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AzureVMService</span></code></a>(config, parent)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.services.remote.azure.AzureVMService.html#mlos_bench.services.remote.azure.AzureVMService" title="mlos_bench.services.remote.azure.AzureVMService"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AzureVMService</span></code></a>([config, global_config, parent])</p></td>
 <td><p>Helper methods to manage VMs on Azure.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/mlos_bench.services.remote.azure.AzureFileShareService.html#mlos_bench.services.remote.azure.AzureFileShareService" title="mlos_bench.services.remote.azure.AzureFileShareService"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AzureFileShareService</span></code></a>(config, parent)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/mlos_bench.services.remote.azure.AzureFileShareService.html#mlos_bench.services.remote.azure.AzureFileShareService" title="mlos_bench.services.remote.azure.AzureFileShareService"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AzureFileShareService</span></code></a>([config, ...])</p></td>
 <td><p>Helper methods for interacting with Azure File Share</p></td>
 </tr>
 </tbody>
