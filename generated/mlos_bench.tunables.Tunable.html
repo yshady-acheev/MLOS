@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.tunables.Tunable &mdash; MlosCore 0.1.dev1+g4a23149 documentation</title>
+  <title>mlos_bench.tunables.Tunable &mdash; MlosCore 0.1.dev1+geb6205d documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/plot_directive.css" type="text/css" />
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g4a23149
+                0.1.dev1+geb6205d
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -141,6 +141,9 @@
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.tunables.Tunable.is_valid" title="mlos_bench.tunables.Tunable.is_valid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_valid</span></code></a>(value)</p></td>
 <td><p>Check if the value can be assigned to the tunable.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.tunables.Tunable.update" title="mlos_bench.tunables.Tunable.update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update</span></code></a>(value)</p></td>
+<td><p>Assign the value to the tunable.</p></td>
 </tr>
 </tbody>
 </table>
@@ -306,6 +309,26 @@ Numbers can be int or float, depending on the type of the tunable.</p>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>type</strong><span class="classifier">str</span></dt><dd><p>Data type of the tunable - one of {‘int’, ‘float’, ‘categorical’}.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.tunables.Tunable.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#mlos_bench.tunables.Tunable.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assign the value to the tunable. Return True if it is a new value, False otherwise.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>value</strong><span class="classifier">Union[int, float, str]</span></dt><dd><p>Value to assign.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>is_updated</strong><span class="classifier">bool</span></dt><dd><p>True if the new value is different from the previous one, False otherwise.</p>
 </dd>
 </dl>
 </dd>
