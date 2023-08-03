@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos-core API &mdash; MlosCore 0.1.dev1+g67a7d0a documentation</title>
+  <title>mlos-core API &mdash; MlosCore 0.1.dev1+g5c9e540 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/plot_directive.css" type="text/css" />
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g67a7d0a
+                0.1.dev1+g5c9e540
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -389,13 +389,13 @@
 <h2>Optimizer Adapters<a class="headerlink" href="#optimizer-adapters" title="Permalink to this heading">¶</a></h2>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.optimizers.Optimizer.html#mlos_bench.optimizers.Optimizer" title="mlos_bench.optimizers.Optimizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optimizer</span></code></a>(tunables, service, config)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.optimizers.Optimizer.html#mlos_bench.optimizers.Optimizer" title="mlos_bench.optimizers.Optimizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optimizer</span></code></a>(tunables, config[, global_config, ...])</p></td>
 <td><p>An abstract interface between the benchmarking framework and mlos_core optimizers.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/mlos_bench.optimizers.MockOptimizer.html#mlos_bench.optimizers.MockOptimizer" title="mlos_bench.optimizers.MockOptimizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MockOptimizer</span></code></a>(tunables, service, config)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/mlos_bench.optimizers.MockOptimizer.html#mlos_bench.optimizers.MockOptimizer" title="mlos_bench.optimizers.MockOptimizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MockOptimizer</span></code></a>(tunables, config[, ...])</p></td>
 <td><p>Mock optimizer to test the Environment API.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.optimizers.MlosCoreOptimizer.html#mlos_bench.optimizers.MlosCoreOptimizer" title="mlos_bench.optimizers.MlosCoreOptimizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MlosCoreOptimizer</span></code></a>(tunables, service, config)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.optimizers.MlosCoreOptimizer.html#mlos_bench.optimizers.MlosCoreOptimizer" title="mlos_bench.optimizers.MlosCoreOptimizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MlosCoreOptimizer</span></code></a>(tunables, config[, ...])</p></td>
 <td><p>A wrapper class for the mlos_core optimizers.</p></td>
 </tr>
 </tbody>
@@ -405,7 +405,7 @@
 <h2>Storage<a class="headerlink" href="#storage" title="Permalink to this heading">¶</a></h2>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.storage.Storage.html#mlos_bench.storage.Storage" title="mlos_bench.storage.Storage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Storage</span></code></a>(tunables, service, config)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.storage.Storage.html#mlos_bench.storage.Storage" title="mlos_bench.storage.Storage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Storage</span></code></a>(tunables, config[, global_config, ...])</p></td>
 <td><p>An abstract interface between the benchmarking framework and storage systems (e.g., SQLite or MLFLow).</p></td>
 </tr>
 </tbody>
@@ -414,7 +414,7 @@
 <h3>SQL DB Storage<a class="headerlink" href="#sql-db-storage" title="Permalink to this heading">¶</a></h3>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.storage.sql.storage.SqlStorage.html#mlos_bench.storage.sql.storage.SqlStorage" title="mlos_bench.storage.sql.storage.SqlStorage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SqlStorage</span></code></a>(tunables, service, config)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.storage.sql.storage.SqlStorage.html#mlos_bench.storage.sql.storage.SqlStorage" title="mlos_bench.storage.sql.storage.SqlStorage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SqlStorage</span></code></a>(tunables, config[, ...])</p></td>
 <td><p>An implementation of the Storage interface using SQLAlchemy backend.</p></td>
 </tr>
 </tbody>

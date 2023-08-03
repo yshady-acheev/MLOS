@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_323f8141f9f539b4___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2023-08-03 22:50 +0000
+            created at 2023-08-03 23:08 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -341,7 +341,7 @@
     <p class="pln"><span class="n"><a id="t259" href="#t259">259</a></span><span class="t"><span class="str">        """</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t260" href="#t260">260</a></span><span class="t">        <span class="key">if</span> <span class="nam">args_optimizer</span> <span class="key">is</span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t261" href="#t261">261</a></span><span class="t">            <span class="key">return</span> <span class="nam">OneShotOptimizer</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t262" href="#t262">262</a></span><span class="t">                <span class="nam">self</span><span class="op">.</span><span class="nam">tunables</span><span class="op">,</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_parent_service</span><span class="op">,</span> <span class="nam">self</span><span class="op">.</span><span class="nam">global_config</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t262" href="#t262">262</a></span><span class="t">                <span class="nam">self</span><span class="op">.</span><span class="nam">tunables</span><span class="op">,</span> <span class="nam">config</span><span class="op">=</span><span class="nam">self</span><span class="op">.</span><span class="nam">global_config</span><span class="op">,</span> <span class="nam">service</span><span class="op">=</span><span class="nam">self</span><span class="op">.</span><span class="nam">_parent_service</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t263" href="#t263">263</a></span><span class="t">        <span class="nam">optimizer</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_load</span><span class="op">(</span><span class="nam">Optimizer</span><span class="op">,</span> <span class="nam">args_optimizer</span><span class="op">,</span> <span class="nam">ConfigSchema</span><span class="op">.</span><span class="nam">OPTIMIZER</span><span class="op">)</span>   <span class="com"># type: ignore[type-abstract]</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t264" href="#t264">264</a></span><span class="t">        <span class="key">return</span> <span class="nam">optimizer</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t265" href="#t265">265</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -354,8 +354,8 @@
     <p class="run"><span class="n"><a id="t272" href="#t272">272</a></span><span class="t">        <span class="key">if</span> <span class="nam">args_storage</span> <span class="key">is</span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t273" href="#t273">273</a></span><span class="t">            <span class="com"># pylint: disable=import-outside-toplevel</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t274" href="#t274">274</a></span><span class="t">            <span class="key">from</span> <span class="nam">mlos_bench</span><span class="op">.</span><span class="nam">storage</span><span class="op">.</span><span class="nam">sql</span><span class="op">.</span><span class="nam">storage</span> <span class="key">import</span> <span class="nam">SqlStorage</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t275" href="#t275">275</a></span><span class="t">            <span class="key">return</span> <span class="nam">SqlStorage</span><span class="op">(</span><span class="nam">self</span><span class="op">.</span><span class="nam">tunables</span><span class="op">,</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_parent_service</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t276" href="#t276">276</a></span><span class="t">                              <span class="op">{</span><span class="str">"drivername"</span><span class="op">:</span> <span class="str">"sqlite"</span><span class="op">,</span> <span class="str">"database"</span><span class="op">:</span> <span class="str">":memory:"</span><span class="op">}</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t275" href="#t275">275</a></span><span class="t">            <span class="key">return</span> <span class="nam">SqlStorage</span><span class="op">(</span><span class="nam">self</span><span class="op">.</span><span class="nam">tunables</span><span class="op">,</span> <span class="nam">service</span><span class="op">=</span><span class="nam">self</span><span class="op">.</span><span class="nam">_parent_service</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t276" href="#t276">276</a></span><span class="t">                              <span class="nam">config</span><span class="op">=</span><span class="op">{</span><span class="str">"drivername"</span><span class="op">:</span> <span class="str">"sqlite"</span><span class="op">,</span> <span class="str">"database"</span><span class="op">:</span> <span class="str">":memory:"</span><span class="op">}</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t277" href="#t277">277</a></span><span class="t">        <span class="nam">storage</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_load</span><span class="op">(</span><span class="nam">Storage</span><span class="op">,</span> <span class="nam">args_storage</span><span class="op">,</span> <span class="nam">ConfigSchema</span><span class="op">.</span><span class="nam">STORAGE</span><span class="op">)</span>   <span class="com"># type: ignore[type-abstract]</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t278" href="#t278">278</a></span><span class="t">        <span class="key">return</span> <span class="nam">storage</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t279" href="#t279">279</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -387,7 +387,7 @@
             <a id="nextFileLink" class="nav" href="d_323f8141f9f539b4___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2023-08-03 22:50 +0000
+            created at 2023-08-03 23:08 +0000
         </p>
     </div>
 </footer>
