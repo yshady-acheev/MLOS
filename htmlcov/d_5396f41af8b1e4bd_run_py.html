@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Coverage for mlos_bench/mlos_bench/run.py: 77%</title>
+    <title>Coverage for mlos_bench/mlos_bench/run.py: 82%</title>
     <link rel="icon" sizes="32x32" href="favicon_32.png">
     <link rel="stylesheet" href="style.css" type="text/css">
     <script type="text/javascript" src="coverage_html.js" defer></script>
@@ -12,7 +12,7 @@
     <div class="content">
         <h1>
             <span class="text">Coverage for </span><b>mlos_bench/mlos_bench/run.py</b>:
-            <span class="pc_cov">77%</span>
+            <span class="pc_cov">82%</span>
         </h1>
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -55,8 +55,8 @@
         </aside>
         <h2>
             <span class="text">61 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">47<span class="text"> run</span></button>
-            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">14<span class="text"> missing</span></button>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">50<span class="text"> run</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">11<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
         <p class="text">
@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_2f8ecfca0b9e9362___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2023-08-07 00:37 +0000
+            created at 2023-08-07 23:15 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -173,10 +173,10 @@
     <p class="pln"><span class="n"><a id="t91" href="#t91">91</a></span><span class="t">            <span class="com"># Load (tunable values, benchmark scores) to warm-up the optimizer.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t92" href="#t92">92</a></span><span class="t">            <span class="com"># `.load()` returns data from ALL merged-in experiments and attempts</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t93" href="#t93">93</a></span><span class="t">            <span class="com"># to impute the missing tunable values.</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t94" href="#t94">94</a></span><span class="t">            <span class="op">(</span><span class="nam">configs</span><span class="op">,</span> <span class="nam">scores</span><span class="op">,</span> <span class="nam">status</span><span class="op">)</span> <span class="op">=</span> <span class="nam">exp</span><span class="op">.</span><span class="nam">load</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t95" href="#t95">95</a></span><span class="t">            <span class="nam">opt</span><span class="op">.</span><span class="nam">bulk_register</span><span class="op">(</span><span class="nam">configs</span><span class="op">,</span> <span class="nam">scores</span><span class="op">,</span> <span class="nam">status</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t94" href="#t94">94</a></span><span class="t">            <span class="op">(</span><span class="nam">configs</span><span class="op">,</span> <span class="nam">scores</span><span class="op">,</span> <span class="nam">status</span><span class="op">)</span> <span class="op">=</span> <span class="nam">exp</span><span class="op">.</span><span class="nam">load</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t95" href="#t95">95</a></span><span class="t">            <span class="nam">opt</span><span class="op">.</span><span class="nam">bulk_register</span><span class="op">(</span><span class="nam">configs</span><span class="op">,</span> <span class="nam">scores</span><span class="op">,</span> <span class="nam">status</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t96" href="#t96">96</a></span><span class="t">            <span class="com"># Complete any pending trials.</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t97" href="#t97">97</a></span><span class="t">            <span class="key">for</span> <span class="nam">trial</span> <span class="key">in</span> <span class="nam">exp</span><span class="op">.</span><span class="nam">pending_trials</span><span class="op">(</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t97" href="#t97">97</a></span><span class="t">            <span class="key">for</span> <span class="nam">trial</span> <span class="key">in</span> <span class="nam">exp</span><span class="op">.</span><span class="nam">pending_trials</span><span class="op">(</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t98" href="#t98">98</a></span><span class="t">                <span class="nam">_run</span><span class="op">(</span><span class="nam">env_context</span><span class="op">,</span> <span class="nam">opt</span><span class="op">,</span> <span class="nam">trial</span><span class="op">,</span> <span class="nam">global_config</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t99" href="#t99">99</a></span><span class="t">        <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t100" href="#t100">100</a></span><span class="t">            <span class="nam">_LOG</span><span class="op">.</span><span class="nam">warning</span><span class="op">(</span><span class="str">"Skip pending trials and warm-up: %s"</span><span class="op">,</span> <span class="nam">opt</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -254,7 +254,7 @@
             <a id="nextFileLink" class="nav" href="d_2f8ecfca0b9e9362___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2023-08-07 00:37 +0000
+            created at 2023-08-07 23:15 +0000
         </p>
     </div>
 </footer>
