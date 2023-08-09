@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_2f8ecfca0b9e9362___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2023-08-09 00:36 +0000
+            created at 2023-08-09 22:52 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -231,20 +231,23 @@
     <p class="mis show_mis"><span class="n"><a id="t149" href="#t149">149</a></span><span class="t">        <span class="nam">opt</span><span class="op">.</span><span class="nam">register</span><span class="op">(</span><span class="nam">trial</span><span class="op">.</span><span class="nam">tunables</span><span class="op">,</span> <span class="nam">Status</span><span class="op">.</span><span class="nam">FAILED</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t150" href="#t150">150</a></span><span class="t">        <span class="key">return</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t151" href="#t151">151</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t152" href="#t152">152</a></span><span class="t">    <span class="com"># In async mode (TODO), poll the environment for status and telemetry</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t153" href="#t153">153</a></span><span class="t">    <span class="com"># and update the storage with the intermediate results.</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t154" href="#t154">154</a></span><span class="t">    <span class="op">(</span><span class="nam">status</span><span class="op">,</span> <span class="nam">telemetry</span><span class="op">)</span> <span class="op">=</span> <span class="nam">env_context</span><span class="op">.</span><span class="nam">status</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t155" href="#t155">155</a></span><span class="t">    <span class="nam">trial</span><span class="op">.</span><span class="nam">update_telemetry</span><span class="op">(</span><span class="nam">status</span><span class="op">,</span> <span class="nam">telemetry</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t156" href="#t156">156</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t157" href="#t157">157</a></span><span class="t">    <span class="op">(</span><span class="nam">status</span><span class="op">,</span> <span class="nam">results</span><span class="op">)</span> <span class="op">=</span> <span class="nam">env_context</span><span class="op">.</span><span class="nam">run</span><span class="op">(</span><span class="op">)</span>  <span class="com"># Block and wait for the final result.</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t158" href="#t158">158</a></span><span class="t">    <span class="nam">_LOG</span><span class="op">.</span><span class="nam">info</span><span class="op">(</span><span class="str">"Results: %s :: %s\n%s"</span><span class="op">,</span> <span class="nam">trial</span><span class="op">.</span><span class="nam">tunables</span><span class="op">,</span> <span class="nam">status</span><span class="op">,</span> <span class="nam">results</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t159" href="#t159">159</a></span><span class="t">    <span class="com"># FIXME: Use the actual timestamp from the benchmark.</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t160" href="#t160">160</a></span><span class="t">    <span class="nam">trial</span><span class="op">.</span><span class="nam">update</span><span class="op">(</span><span class="nam">status</span><span class="op">,</span> <span class="nam">datetime</span><span class="op">.</span><span class="nam">utcnow</span><span class="op">(</span><span class="op">)</span><span class="op">,</span> <span class="nam">results</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t161" href="#t161">161</a></span><span class="t">    <span class="nam">opt</span><span class="op">.</span><span class="nam">register</span><span class="op">(</span><span class="nam">trial</span><span class="op">.</span><span class="nam">tunables</span><span class="op">,</span> <span class="nam">status</span><span class="op">,</span> <span class="nam">results</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t162" href="#t162">162</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t163" href="#t163">163</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t164" href="#t164">164</a></span><span class="t"><span class="key">if</span> <span class="nam">__name__</span> <span class="op">==</span> <span class="str">"__main__"</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t165" href="#t165">165</a></span><span class="t">    <span class="nam">_main</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t152" href="#t152">152</a></span><span class="t">    <span class="op">(</span><span class="nam">status</span><span class="op">,</span> <span class="nam">results</span><span class="op">)</span> <span class="op">=</span> <span class="nam">env_context</span><span class="op">.</span><span class="nam">run</span><span class="op">(</span><span class="op">)</span>  <span class="com"># Block and wait for the final result.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t153" href="#t153">153</a></span><span class="t">    <span class="nam">_LOG</span><span class="op">.</span><span class="nam">info</span><span class="op">(</span><span class="str">"Results: %s :: %s\n%s"</span><span class="op">,</span> <span class="nam">trial</span><span class="op">.</span><span class="nam">tunables</span><span class="op">,</span> <span class="nam">status</span><span class="op">,</span> <span class="nam">results</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t154" href="#t154">154</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t155" href="#t155">155</a></span><span class="t">    <span class="com"># In async mode (TODO), poll the environment for status and telemetry</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t156" href="#t156">156</a></span><span class="t">    <span class="com"># and update the storage with the intermediate results.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t157" href="#t157">157</a></span><span class="t">    <span class="op">(</span><span class="nam">_</span><span class="op">,</span> <span class="nam">telemetry</span><span class="op">)</span> <span class="op">=</span> <span class="nam">env_context</span><span class="op">.</span><span class="nam">status</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t158" href="#t158">158</a></span><span class="t">    <span class="com"># Use the status from `.run()` as it is the final status of the experiment.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t159" href="#t159">159</a></span><span class="t">    <span class="com"># TODO: Use the `.status()` output in async mode.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t160" href="#t160">160</a></span><span class="t">    <span class="nam">trial</span><span class="op">.</span><span class="nam">update_telemetry</span><span class="op">(</span><span class="nam">status</span><span class="op">,</span> <span class="nam">telemetry</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t161" href="#t161">161</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t162" href="#t162">162</a></span><span class="t">    <span class="com"># FIXME: Use the actual timestamp from the benchmark.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t163" href="#t163">163</a></span><span class="t">    <span class="nam">trial</span><span class="op">.</span><span class="nam">update</span><span class="op">(</span><span class="nam">status</span><span class="op">,</span> <span class="nam">datetime</span><span class="op">.</span><span class="nam">utcnow</span><span class="op">(</span><span class="op">)</span><span class="op">,</span> <span class="nam">results</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t164" href="#t164">164</a></span><span class="t">    <span class="nam">opt</span><span class="op">.</span><span class="nam">register</span><span class="op">(</span><span class="nam">trial</span><span class="op">.</span><span class="nam">tunables</span><span class="op">,</span> <span class="nam">status</span><span class="op">,</span> <span class="nam">results</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t165" href="#t165">165</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t166" href="#t166">166</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t167" href="#t167">167</a></span><span class="t"><span class="key">if</span> <span class="nam">__name__</span> <span class="op">==</span> <span class="str">"__main__"</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t168" href="#t168">168</a></span><span class="t">    <span class="nam">_main</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
 </main>
 <footer>
     <div class="content">
@@ -254,7 +257,7 @@
             <a id="nextFileLink" class="nav" href="d_2f8ecfca0b9e9362___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2023-08-09 00:36 +0000
+            created at 2023-08-09 22:52 +0000
         </p>
     </div>
 </footer>
