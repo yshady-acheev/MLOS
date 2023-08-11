@@ -1,0 +1,7 @@
+mlos\_bench.tests.environments.local\_env\_test module
+======================================================
+
+.. automodule:: mlos_bench.tests.environments.local_env_test
+   :members:
+   :undoc-members:
+   :show-inheritance:

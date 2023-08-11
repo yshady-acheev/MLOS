@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.tests.tunables.tunables_copy_test module &mdash; MlosCore 0.1.dev1+ge377431 documentation</title>
+  <title>mlos_bench.tests.environments.local_env_test module &mdash; MlosCore 0.1.dev1+ge377431 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
@@ -19,8 +19,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="mlos_bench.tests.tunables.tunables_str_test module" href="mlos_bench.tests.tunables.tunables_str_test.html" />
-    <link rel="prev" title="mlos_bench.tests.tunables.tunables_assign_test module" href="mlos_bench.tests.tunables.tunables_assign_test.html" /> 
+    <link rel="next" title="mlos_bench.tests.environments.mock_env_test module" href="mlos_bench.tests.environments.mock_env_test.html" />
+    <link rel="prev" title="mlos_bench.tests.environments.include_tunables_test module" href="mlos_bench.tests.environments.include_tunables_test.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -90,10 +90,10 @@
           <li class="breadcrumb-item"><a href="modules.html">mlos_bench</a></li>
           <li class="breadcrumb-item"><a href="mlos_bench.html">mlos_bench package</a></li>
           <li class="breadcrumb-item"><a href="mlos_bench.tests.html">mlos_bench.tests package</a></li>
-          <li class="breadcrumb-item"><a href="mlos_bench.tests.tunables.html">mlos_bench.tests.tunables package</a></li>
-      <li class="breadcrumb-item active">mlos_bench.tests.tunables.tunables_copy_test module</li>
+          <li class="breadcrumb-item"><a href="mlos_bench.tests.environments.html">mlos_bench.tests.environments package</a></li>
+      <li class="breadcrumb-item active">mlos_bench.tests.environments.local_env_test module</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/api/mlos_bench/mlos_bench.tests.tunables.tunables_copy_test.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/api/mlos_bench/mlos_bench.tests.environments.local_env_test.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -101,25 +101,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-mlos_bench.tests.tunables.tunables_copy_test">
-<span id="mlos-bench-tests-tunables-tunables-copy-test-module"></span><h1>mlos_bench.tests.tunables.tunables_copy_test module<a class="headerlink" href="#module-mlos_bench.tests.tunables.tunables_copy_test" title="Permalink to this heading">¶</a></h1>
-<p>Unit tests for deep copy of tunable objects and groups.</p>
+  <section id="module-mlos_bench.tests.environments.local_env_test">
+<span id="mlos-bench-tests-environments-local-env-test-module"></span><h1>mlos_bench.tests.environments.local_env_test module<a class="headerlink" href="#module-mlos_bench.tests.environments.local_env_test" title="Permalink to this heading">¶</a></h1>
+<p>Unit tests for mock benchmark environment.</p>
 <dl class="py function">
-<dt class="sig sig-object py" id="mlos_bench.tests.tunables.tunables_copy_test.test_copy_covariant_group">
-<span class="sig-prename descclassname"><span class="pre">mlos_bench.tests.tunables.tunables_copy_test.</span></span><span class="sig-name descname"><span class="pre">test_copy_covariant_group</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">covariant_group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.tunables.covariant_group.html#mlos_bench.tunables.covariant_group.CovariantTunableGroup" title="mlos_bench.tunables.covariant_group.CovariantTunableGroup"><span class="pre">CovariantTunableGroup</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.tests.tunables.tunables_copy_test.test_copy_covariant_group" title="Permalink to this definition">¶</a></dt>
-<dd><p>Check if deep copy works for TunableGroups object.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="mlos_bench.tests.tunables.tunables_copy_test.test_copy_tunable_groups">
-<span class="sig-prename descclassname"><span class="pre">mlos_bench.tests.tunables.tunables_copy_test.</span></span><span class="sig-name descname"><span class="pre">test_copy_tunable_groups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tunable_groups</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.tests.tunables.tunables_copy_test.test_copy_tunable_groups" title="Permalink to this definition">¶</a></dt>
-<dd><p>Check if deep copy works for TunableGroups object.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="mlos_bench.tests.tunables.tunables_copy_test.test_copy_tunable_int">
-<span class="sig-prename descclassname"><span class="pre">mlos_bench.tests.tunables.tunables_copy_test.</span></span><span class="sig-name descname"><span class="pre">test_copy_tunable_int</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tunable_int</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.tunables.tunable.html#mlos_bench.tunables.tunable.Tunable" title="mlos_bench.tunables.tunable.Tunable"><span class="pre">Tunable</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.tests.tunables.tunables_copy_test.test_copy_tunable_int" title="Permalink to this definition">¶</a></dt>
-<dd><p>Check if deep copy works for Tunable object.</p>
+<dt class="sig sig-object py" id="mlos_bench.tests.environments.local_env_test.test_local_env">
+<span class="sig-prename descclassname"><span class="pre">mlos_bench.tests.environments.local_env_test.</span></span><span class="sig-name descname"><span class="pre">test_local_env</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tunable_groups</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.tests.environments.local_env_test.test_local_env" title="Permalink to this definition">¶</a></dt>
+<dd><p>Produce benchmark and telemetry data in a local script and read it.</p>
 </dd></dl>
 
 </section>
@@ -128,8 +116,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="mlos_bench.tests.tunables.tunables_assign_test.html" class="btn btn-neutral float-left" title="mlos_bench.tests.tunables.tunables_assign_test module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="mlos_bench.tests.tunables.tunables_str_test.html" class="btn btn-neutral float-right" title="mlos_bench.tests.tunables.tunables_str_test module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="mlos_bench.tests.environments.include_tunables_test.html" class="btn btn-neutral float-left" title="mlos_bench.tests.environments.include_tunables_test module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mlos_bench.tests.environments.mock_env_test.html" class="btn btn-neutral float-right" title="mlos_bench.tests.environments.mock_env_test module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
