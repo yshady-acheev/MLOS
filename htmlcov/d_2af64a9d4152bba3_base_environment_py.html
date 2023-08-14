@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Coverage for mlos_bench/mlos_bench/environments/base_environment.py: 94%</title>
+    <title>Coverage for mlos_bench/mlos_bench/environments/base_environment.py: 96%</title>
     <link rel="icon" sizes="32x32" href="favicon_32.png">
     <link rel="stylesheet" href="style.css" type="text/css">
     <script type="text/javascript" src="coverage_html.js" defer></script>
@@ -12,7 +12,7 @@
     <div class="content">
         <h1>
             <span class="text">Coverage for </span><b>mlos_bench/mlos_bench/environments/base_environment.py</b>:
-            <span class="pc_cov">94%</span>
+            <span class="pc_cov">96%</span>
         </h1>
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -55,8 +55,8 @@
         </aside>
         <h2>
             <span class="text">112 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">105<span class="text"> run</span></button>
-            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">7<span class="text"> missing</span></button>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">107<span class="text"> run</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">5<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
         <p class="text">
@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_2af64a9d4152bba3_composite_env_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.3.0">coverage.py v7.3.0</a>,
-            created at 2023-08-14 19:51 +0000
+            created at 2023-08-14 23:45 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -199,8 +199,8 @@
     <p class="run"><span class="n"><a id="t117" href="#t117">117</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">_const_args</span> <span class="op">=</span> <span class="nam">config</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">"const_args"</span><span class="op">,</span> <span class="op">{</span><span class="op">}</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t118" href="#t118">118</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t119" href="#t119">119</a></span><span class="t">        <span class="key">if</span> <span class="nam">tunables</span> <span class="key">is</span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t120" href="#t120">120</a></span><span class="t">            <span class="nam">_LOG</span><span class="op">.</span><span class="nam">warning</span><span class="op">(</span><span class="str">"No tunables provided for %s. Tunable inheritance across composite environments may be broken."</span><span class="op">,</span> <span class="nam">name</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t121" href="#t121">121</a></span><span class="t">            <span class="nam">tunables</span> <span class="op">=</span> <span class="nam">TunableGroups</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t120" href="#t120">120</a></span><span class="t">            <span class="nam">_LOG</span><span class="op">.</span><span class="nam">warning</span><span class="op">(</span><span class="str">"No tunables provided for %s. Tunable inheritance across composite environments may be broken."</span><span class="op">,</span> <span class="nam">name</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t121" href="#t121">121</a></span><span class="t">            <span class="nam">tunables</span> <span class="op">=</span> <span class="nam">TunableGroups</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t122" href="#t122">122</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t123" href="#t123">123</a></span><span class="t">        <span class="nam">groups</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_expand_groups</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t124" href="#t124">124</a></span><span class="t">            <span class="nam">config</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">"tunable_params"</span><span class="op">,</span> <span class="op">[</span><span class="op">]</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
@@ -460,7 +460,7 @@
             <a id="nextFileLink" class="nav" href="d_2af64a9d4152bba3_composite_env_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.3.0">coverage.py v7.3.0</a>,
-            created at 2023-08-14 19:51 +0000
+            created at 2023-08-14 23:45 +0000
         </p>
     </div>
 </footer>
