@@ -1,0 +1,7 @@
+mlos\_bench.tests.optimizers.mlos\_core\_opt\_smac\_test module
+===============================================================
+
+.. automodule:: mlos_bench.tests.optimizers.mlos_core_opt_smac_test
+   :members:
+   :undoc-members:
+   :show-inheritance:
