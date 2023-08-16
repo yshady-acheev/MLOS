@@ -6,6 +6,14 @@ mlos\_bench.tests.environments package
    :undoc-members:
    :show-inheritance:
 
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   mlos_bench.tests.environments.local
+
 Submodules
 ----------
 
@@ -15,5 +23,4 @@ Submodules
    mlos_bench.tests.environments.base_env_test
    mlos_bench.tests.environments.composite_env_test
    mlos_bench.tests.environments.include_tunables_test
-   mlos_bench.tests.environments.local_env_test
    mlos_bench.tests.environments.mock_env_test
