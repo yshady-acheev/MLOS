@@ -12,9 +12,9 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/documentation_options.js?v=ee472bcf"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -101,63 +101,63 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-mlos_bench.config.schemas.config_schemas">
-<span id="mlos-bench-config-schemas-config-schemas-module"></span><h1>mlos_bench.config.schemas.config_schemas module<a class="headerlink" href="#module-mlos_bench.config.schemas.config_schemas" title="Permalink to this heading">¶</a></h1>
-<p>A simple class for describing where to find different config schemas and validating configs against them.</p>
+  <section id="mlos-bench-config-schemas-config-schemas-module">
+<h1>mlos_bench.config.schemas.config_schemas module<a class="headerlink" href="#mlos-bench-config-schemas-config-schemas-module" title="Link to this heading">¶</a></h1>
+<p id="module-mlos_bench.config.schemas.config_schemas">A simple class for describing where to find different config schemas and validating configs against them.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="mlos_bench.config.schemas.config_schemas.ConfigSchema">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.config.schemas.config_schemas.</span></span><span class="sig-name descname"><span class="pre">ConfigSchema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.config.schemas.config_schemas.</span></span><span class="sig-name descname"><span class="pre">ConfigSchema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
 <p>An enum to help describe schema types and help validate configs against them.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlos_bench.config.schemas.config_schemas.ConfigSchema.CLI">
-<span class="sig-name descname"><span class="pre">CLI</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/MLOS/mlos_bench/mlos_bench/config/schemas/cli/cli-schema.json'</span></em><a class="headerlink" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema.CLI" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">CLI</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/MLOS/mlos_bench/mlos_bench/config/schemas/cli/cli-schema.json'</span></em><a class="headerlink" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema.CLI" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlos_bench.config.schemas.config_schemas.ConfigSchema.ENVIRONMENT">
-<span class="sig-name descname"><span class="pre">ENVIRONMENT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/MLOS/mlos_bench/mlos_bench/config/schemas/environments/environment-schema.json'</span></em><a class="headerlink" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema.ENVIRONMENT" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ENVIRONMENT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/MLOS/mlos_bench/mlos_bench/config/schemas/environments/environment-schema.json'</span></em><a class="headerlink" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema.ENVIRONMENT" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlos_bench.config.schemas.config_schemas.ConfigSchema.GLOBALS">
-<span class="sig-name descname"><span class="pre">GLOBALS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/MLOS/mlos_bench/mlos_bench/config/schemas/cli/globals-schema.json'</span></em><a class="headerlink" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema.GLOBALS" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">GLOBALS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/MLOS/mlos_bench/mlos_bench/config/schemas/cli/globals-schema.json'</span></em><a class="headerlink" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema.GLOBALS" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlos_bench.config.schemas.config_schemas.ConfigSchema.OPTIMIZER">
-<span class="sig-name descname"><span class="pre">OPTIMIZER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/MLOS/mlos_bench/mlos_bench/config/schemas/optimizers/optimizer-schema.json'</span></em><a class="headerlink" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema.OPTIMIZER" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">OPTIMIZER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/MLOS/mlos_bench/mlos_bench/config/schemas/optimizers/optimizer-schema.json'</span></em><a class="headerlink" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema.OPTIMIZER" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlos_bench.config.schemas.config_schemas.ConfigSchema.SERVICE">
-<span class="sig-name descname"><span class="pre">SERVICE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/MLOS/mlos_bench/mlos_bench/config/schemas/services/service-schema.json'</span></em><a class="headerlink" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema.SERVICE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">SERVICE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/MLOS/mlos_bench/mlos_bench/config/schemas/services/service-schema.json'</span></em><a class="headerlink" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema.SERVICE" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlos_bench.config.schemas.config_schemas.ConfigSchema.STORAGE">
-<span class="sig-name descname"><span class="pre">STORAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/MLOS/mlos_bench/mlos_bench/config/schemas/storage/storage-schema.json'</span></em><a class="headerlink" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema.STORAGE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">STORAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/MLOS/mlos_bench/mlos_bench/config/schemas/storage/storage-schema.json'</span></em><a class="headerlink" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema.STORAGE" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlos_bench.config.schemas.config_schemas.ConfigSchema.TUNABLE_PARAMS">
-<span class="sig-name descname"><span class="pre">TUNABLE_PARAMS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/MLOS/mlos_bench/mlos_bench/config/schemas/tunables/tunable-params-schema.json'</span></em><a class="headerlink" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema.TUNABLE_PARAMS" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">TUNABLE_PARAMS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/MLOS/mlos_bench/mlos_bench/config/schemas/tunables/tunable-params-schema.json'</span></em><a class="headerlink" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema.TUNABLE_PARAMS" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlos_bench.config.schemas.config_schemas.ConfigSchema.TUNABLE_VALUES">
-<span class="sig-name descname"><span class="pre">TUNABLE_VALUES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/MLOS/mlos_bench/mlos_bench/config/schemas/tunables/tunable-values-schema.json'</span></em><a class="headerlink" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema.TUNABLE_VALUES" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">TUNABLE_VALUES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/MLOS/mlos_bench/mlos_bench/config/schemas/tunables/tunable-values-schema.json'</span></em><a class="headerlink" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema.TUNABLE_VALUES" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="mlos_bench.config.schemas.config_schemas.ConfigSchema.schema">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">schema</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span></em><a class="headerlink" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema.schema" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">schema</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span></em><a class="headerlink" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema.schema" title="Link to this definition">¶</a></dt>
 <dd><p>Gets the schema object for this type.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.config.schemas.config_schemas.ConfigSchema.validate">
-<span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema.validate" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema.validate" title="Link to this definition">¶</a></dt>
 <dd><p>Validates the given config against this schema.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -179,7 +179,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="mlos_bench.config.schemas.config_schemas.SchemaStore">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.config.schemas.config_schemas.</span></span><span class="sig-name descname"><span class="pre">SchemaStore</span></span><a class="headerlink" href="#mlos_bench.config.schemas.config_schemas.SchemaStore" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.config.schemas.config_schemas.</span></span><span class="sig-name descname"><span class="pre">SchemaStore</span></span><a class="headerlink" href="#mlos_bench.config.schemas.config_schemas.SchemaStore" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></p>
 <p>A simple class for storing schemas and subschemas for the validator to reference.</p>
 <dl class="field-list simple">
@@ -209,7 +209,7 @@
 </table>
 <dl class="py property">
 <dt class="sig sig-object py" id="mlos_bench.config.schemas.config_schemas.SchemaStore.registry">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">registry</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Registry</span></em><a class="headerlink" href="#mlos_bench.config.schemas.config_schemas.SchemaStore.registry" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">registry</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Registry</span></em><a class="headerlink" href="#mlos_bench.config.schemas.config_schemas.SchemaStore.registry" title="Link to this definition">¶</a></dt>
 <dd><p>Returns a Registry object with all the schemas loaded.</p>
 </dd></dl>
 

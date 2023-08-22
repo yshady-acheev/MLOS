@@ -12,9 +12,9 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/documentation_options.js?v=ee472bcf"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -95,12 +95,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-mlos_core.tests">
-<span id="mlos-core-tests-package"></span><h1>mlos_core.tests package<a class="headerlink" href="#module-mlos_core.tests" title="Permalink to this heading">¶</a></h1>
-<p>Common functions for mlos_core Optimizer tests.</p>
+  <section id="mlos-core-tests-package">
+<h1>mlos_core.tests package<a class="headerlink" href="#mlos-core-tests-package" title="Link to this heading">¶</a></h1>
+<p id="module-mlos_core.tests">Common functions for mlos_core Optimizer tests.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="mlos_core.tests.get_all_concrete_subclasses">
-<span class="sig-prename descclassname"><span class="pre">mlos_core.tests.</span></span><span class="sig-name descname"><span class="pre">get_all_concrete_subclasses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pkg_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_core.tests.get_all_concrete_subclasses" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">mlos_core.tests.</span></span><span class="sig-name descname"><span class="pre">get_all_concrete_subclasses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pkg_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_core.tests.get_all_concrete_subclasses" title="Link to this definition">¶</a></dt>
 <dd><p>Gets a sorted list of all of the concrete subclasses of the given class.
 Useful for dynamically enumerating expected test cases.</p>
 <p>Note: For abstract types, mypy will complain at the call site.
@@ -110,13 +110,13 @@ See Also: <a class="reference external" href="https://github.com/python/mypy/iss
 
 <dl class="py function">
 <dt class="sig sig-object py" id="mlos_core.tests.get_all_submodules">
-<span class="sig-prename descclassname"><span class="pre">mlos_core.tests.</span></span><span class="sig-name descname"><span class="pre">get_all_submodules</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pkg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">TypeAlias</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_core.tests.get_all_submodules" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">mlos_core.tests.</span></span><span class="sig-name descname"><span class="pre">get_all_submodules</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pkg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">TypeAlias</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_core.tests.get_all_submodules" title="Link to this definition">¶</a></dt>
 <dd><p>Imports all submodules for a package and returns their names.
 Useful for dynamically enumerating subclasses.</p>
 </dd></dl>
 
 <section id="subpackages">
-<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading">¶</a></h2>
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="mlos_core.tests.optimizers.html">mlos_core.tests.optimizers package</a><ul>
