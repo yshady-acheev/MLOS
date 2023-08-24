@@ -1,0 +1,7 @@
+mlos\_bench.tests.services.remote.mock.mock\_auth\_service module
+=================================================================
+
+.. automodule:: mlos_bench.tests.services.remote.mock.mock_auth_service
+   :members:
+   :undoc-members:
+   :show-inheritance:

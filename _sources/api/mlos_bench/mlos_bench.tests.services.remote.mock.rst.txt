@@ -12,6 +12,7 @@ Submodules
 .. toctree::
    :maxdepth: 4
 
+   mlos_bench.tests.services.remote.mock.mock_auth_service
    mlos_bench.tests.services.remote.mock.mock_fileshare_service
    mlos_bench.tests.services.remote.mock.mock_remote_exec_service
    mlos_bench.tests.services.remote.mock.mock_vm_service
