@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.tests package &mdash; MlosCore 0.1.dev1+g83497e2 documentation</title>
+  <title>mlos_bench.tests package &mdash; MlosCore 0.1.dev1+g4bfc9cb documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
@@ -12,7 +12,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=b0e79078"></script>
+        <script src="../../_static/documentation_options.js?v=8ba4cd15"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g83497e2
+                0.1.dev1+g4bfc9cb
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -99,10 +99,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="mlos-bench-tests-package">
-<h1>mlos_bench.tests package<a class="headerlink" href="#mlos-bench-tests-package" title="Link to this heading">¶</a></h1>
-<p id="module-mlos_bench.tests">Tests for mlos_bench.
+  <section id="module-mlos_bench.tests">
+<span id="mlos-bench-tests-package"></span><h1>mlos_bench.tests package<a class="headerlink" href="#module-mlos_bench.tests" title="Link to this heading">¶</a></h1>
+<p>Tests for mlos_bench.
 Used to make mypy happy about multiple conftest.py modules.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="mlos_bench.tests.check_class_name">
+<span class="sig-prename descclassname"><span class="pre">mlos_bench.tests.</span></span><span class="sig-name descname"><span class="pre">check_class_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expected_class_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#mlos_bench.tests.check_class_name" title="Link to this definition">¶</a></dt>
+<dd><p>Compares the class name of the given object with the given name.</p>
+</dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="mlos_bench.tests.try_resolve_class_name">
 <span class="sig-prename descclassname"><span class="pre">mlos_bench.tests.</span></span><span class="sig-name descname"><span class="pre">try_resolve_class_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">class_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.tests.try_resolve_class_name" title="Link to this definition">¶</a></dt>
@@ -408,11 +414,17 @@ Used to make mypy happy about multiple conftest.py modules.</p>
 <li class="toctree-l2"><a class="reference internal" href="mlos_bench.tests.conftest.html#mlos_bench.tests.conftest.tunable_groups_config"><code class="docutils literal notranslate"><span class="pre">tunable_groups_config()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="mlos_bench.tests.launcher_test.html">mlos_bench.tests.launcher_test module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mlos_bench.tests.launcher_test.html#mlos_bench.tests.launcher_test.local_exec_service"><code class="docutils literal notranslate"><span class="pre">local_exec_service()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="mlos_bench.tests.launcher_test.html#mlos_bench.tests.launcher_test.root_path"><code class="docutils literal notranslate"><span class="pre">root_path()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="mlos_bench.tests.launcher_test.html#mlos_bench.tests.launcher_test.test_launch_main_app_bench"><code class="docutils literal notranslate"><span class="pre">test_launch_main_app_bench()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="mlos_bench.tests.launcher_test.html#mlos_bench.tests.launcher_test.test_launch_main_app_opt"><code class="docutils literal notranslate"><span class="pre">test_launch_main_app_opt()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="mlos_bench.tests.launcher_parse_args_test.html">mlos_bench.tests.launcher_parse_args_test module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mlos_bench.tests.launcher_parse_args_test.html#mlos_bench.tests.launcher_parse_args_test.config_paths"><code class="docutils literal notranslate"><span class="pre">config_paths()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="mlos_bench.tests.launcher_parse_args_test.html#mlos_bench.tests.launcher_parse_args_test.test_launcher_args_parse_1"><code class="docutils literal notranslate"><span class="pre">test_launcher_args_parse_1()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="mlos_bench.tests.launcher_parse_args_test.html#mlos_bench.tests.launcher_parse_args_test.test_launcher_args_parse_2"><code class="docutils literal notranslate"><span class="pre">test_launcher_args_parse_2()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mlos_bench.tests.launcher_run_test.html">mlos_bench.tests.launcher_run_test module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mlos_bench.tests.launcher_run_test.html#mlos_bench.tests.launcher_run_test.local_exec_service"><code class="docutils literal notranslate"><span class="pre">local_exec_service()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="mlos_bench.tests.launcher_run_test.html#mlos_bench.tests.launcher_run_test.root_path"><code class="docutils literal notranslate"><span class="pre">root_path()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="mlos_bench.tests.launcher_run_test.html#mlos_bench.tests.launcher_run_test.test_launch_main_app_bench"><code class="docutils literal notranslate"><span class="pre">test_launch_main_app_bench()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="mlos_bench.tests.launcher_run_test.html#mlos_bench.tests.launcher_run_test.test_launch_main_app_opt"><code class="docutils literal notranslate"><span class="pre">test_launch_main_app_opt()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="mlos_bench.tests.util_git_test.html">mlos_bench.tests.util_git_test module</a><ul>

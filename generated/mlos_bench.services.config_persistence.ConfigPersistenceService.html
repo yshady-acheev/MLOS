@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.services.config_persistence.ConfigPersistenceService &mdash; MlosCore 0.1.dev1+g83497e2 documentation</title>
+  <title>mlos_bench.services.config_persistence.ConfigPersistenceService &mdash; MlosCore 0.1.dev1+g4bfc9cb documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/plot_directive.css" type="text/css" />
@@ -12,7 +12,7 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/documentation_options.js?v=b0e79078"></script>
+        <script src="../_static/documentation_options.js?v=8ba4cd15"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g83497e2
+                0.1.dev1+g4bfc9cb
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -110,6 +110,8 @@
 <dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">config_loader_service</span></code></dt><dd><p>Return a config loader service.</p>
+</dd>
+<dt><a class="reference internal" href="#mlos_bench.services.config_persistence.ConfigPersistenceService.config_paths" title="mlos_bench.services.config_persistence.ConfigPersistenceService.config_paths"><code class="xref py py-obj docutils literal notranslate"><span class="pre">config_paths</span></code></a></dt><dd><p>Gets the list of config paths this service will search for config files.</p>
 </dd>
 </dl>
 </dd>
@@ -271,6 +273,19 @@ configurations of merged-in experiments and restored/pending trials.</p>
 <dt><strong>svc</strong><span class="classifier">Service</span></dt><dd><p>An instance of the <cite>Service</cite> class that is a combination of all
 services from the list plus the parent mix-in.</p>
 </dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="mlos_bench.services.config_persistence.ConfigPersistenceService.config_paths">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">config_paths</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#mlos_bench.services.config_persistence.ConfigPersistenceService.config_paths" title="Link to this definition">¶</a></dt>
+<dd><p>Gets the list of config paths this service will search for config files.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt>List[str]</dt><dd></dd>
 </dl>
 </dd>
 </dl>
