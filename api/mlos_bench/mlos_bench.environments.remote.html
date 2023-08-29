@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.environments.remote package &mdash; MlosCore 0.1.dev1+g50e0e94 documentation</title>
+  <title>mlos_bench.environments.remote package &mdash; MlosCore 0.1.dev1+gd51634c documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
@@ -12,14 +12,14 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=c6fd6311"></script>
+        <script src="../../_static/documentation_options.js?v=3e1b0ccf"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="mlos_bench.environments.remote.os_env module" href="mlos_bench.environments.remote.os_env.html" />
+    <link rel="next" title="mlos_bench.environments.remote.host_env module" href="mlos_bench.environments.remote.host_env.html" />
     <link rel="prev" title="mlos_bench.environments.local.local_fileshare_env module" href="mlos_bench.environments.local.local_fileshare_env.html" /> 
 </head>
 
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g50e0e94
+                0.1.dev1+gd51634c
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -104,6 +104,78 @@
 <span id="mlos-bench-environments-remote-package"></span><h1>mlos_bench.environments.remote package<a class="headerlink" href="#module-mlos_bench.environments.remote" title="Link to this heading">¶</a></h1>
 <p>Remote Tunable Environments for mlos_bench.</p>
 <dl class="py class">
+<dt class="sig sig-object py" id="mlos_bench.environments.remote.HostEnv">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.environments.remote.</span></span><span class="sig-name descname"><span class="pre">HostEnv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">service</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.services.base_service.html#mlos_bench.services.base_service.Service" title="mlos_bench.services.base_service.Service"><span class="pre">Service</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.environments.remote.HostEnv" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="mlos_bench.environments.base_environment.html#mlos_bench.environments.base_environment.Environment" title="mlos_bench.environments.base_environment.Environment"><code class="xref py py-class docutils literal notranslate"><span class="pre">Environment</span></code></a></p>
+<p>Remote host environment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">parameters</span></code></dt><dd><p>Key/value pairs of all environment parameters (i.e., <cite>const_args</cite> and <cite>tunable_params</cite>).</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">tunable_params</span></code></dt><dd><p>Get the configuration space of the given environment.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">new</span></code>(*, env_name, class_name, config[, ...])</p></td>
+<td><p>Factory method for a new environment with a given config.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">pprint</span></code>([indent, level])</p></td>
+<td><p>Pretty-print the environment configuration.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code>()</p></td>
+<td><p>Execute the run script for this environment.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../generated/mlos_bench.environments.remote.HostEnv.html#mlos_bench.environments.remote.HostEnv.setup" title="mlos_bench.environments.remote.HostEnv.setup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setup</span></code></a>(tunables[, global_config])</p></td>
+<td><p>Check if host is ready.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">status</span></code>()</p></td>
+<td><p>Check the status of the benchmark environment.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../generated/mlos_bench.environments.remote.HostEnv.html#mlos_bench.environments.remote.HostEnv.teardown" title="mlos_bench.environments.remote.HostEnv.teardown"><code class="xref py py-obj docutils literal notranslate"><span class="pre">teardown</span></code></a>()</p></td>
+<td><p>Shut down the Host and release it.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.environments.remote.HostEnv.setup">
+<span class="sig-name descname"><span class="pre">setup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#mlos_bench.environments.remote.HostEnv.setup" title="Link to this definition">¶</a></dt>
+<dd><p>Check if host is ready. (Re)provision and start it, if necessary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>tunables</strong><span class="classifier">TunableGroups</span></dt><dd><p>A collection of groups of tunable parameters along with the
+parameters’ values. HostEnv tunables are variable parameters that,
+together with the HostEnv configuration, are sufficient to provision
+and start a Host.</p>
+</dd>
+<dt><strong>global_config</strong><span class="classifier">dict</span></dt><dd><p>Free-format dictionary of global parameters of the environment
+that are not used in the optimization process.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>is_success</strong><span class="classifier">bool</span></dt><dd><p>True if operation is successful, false otherwise.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.environments.remote.HostEnv.teardown">
+<span class="sig-name descname"><span class="pre">teardown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.environments.remote.HostEnv.teardown" title="Link to this definition">¶</a></dt>
+<dd><p>Shut down the Host and release it.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="mlos_bench.environments.remote.OSEnv">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.environments.remote.</span></span><span class="sig-name descname"><span class="pre">OSEnv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">service</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.services.base_service.html#mlos_bench.services.base_service.Service" title="mlos_bench.services.base_service.Service"><span class="pre">Service</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.environments.remote.OSEnv" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="mlos_bench.environments.base_environment.html#mlos_bench.environments.base_environment.Environment" title="mlos_bench.environments.base_environment.Environment"><code class="xref py py-class docutils literal notranslate"><span class="pre">Environment</span></code></a></p>
@@ -149,9 +221,9 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>tunables</strong><span class="classifier">TunableGroups</span></dt><dd><p>A collection of groups of tunable parameters along with the
-parameters’ values. VMEnv tunables are variable parameters that,
-together with the VMEnv configuration, are sufficient to provision
-and start a VM.</p>
+parameters’ values. HostEnv tunables are variable parameters that,
+together with the HostEnv configuration, are sufficient to provision
+and start a host.</p>
 </dd>
 <dt><strong>global_config</strong><span class="classifier">dict</span></dt><dd><p>Free-format dictionary of global parameters of the environment
 that are not used in the optimization process.</p>
@@ -179,7 +251,8 @@ that are not used in the optimization process.</p>
 <dt class="sig sig-object py" id="mlos_bench.environments.remote.RemoteEnv">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.environments.remote.</span></span><span class="sig-name descname"><span class="pre">RemoteEnv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">service</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.services.base_service.html#mlos_bench.services.base_service.Service" title="mlos_bench.services.base_service.Service"><span class="pre">Service</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.environments.remote.RemoteEnv" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="mlos_bench.environments.script_env.html#mlos_bench.environments.script_env.ScriptEnv" title="mlos_bench.environments.script_env.ScriptEnv"><code class="xref py py-class docutils literal notranslate"><span class="pre">ScriptEnv</span></code></a></p>
-<p>Environment to run benchmarks and scripts on a remote host.</p>
+<p>Environment to run benchmarks and scripts on a remote host OS.</p>
+<p>e.g. Application Environment</p>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -269,8 +342,9 @@ that are not used in the optimization process.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="mlos_bench.environments.remote.VMEnv">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.environments.remote.</span></span><span class="sig-name descname"><span class="pre">VMEnv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">service</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.services.base_service.html#mlos_bench.services.base_service.Service" title="mlos_bench.services.base_service.Service"><span class="pre">Service</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.environments.remote.VMEnv" title="Link to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="mlos_bench.environments.base_environment.html#mlos_bench.environments.base_environment.Environment" title="mlos_bench.environments.base_environment.Environment"><code class="xref py py-class docutils literal notranslate"><span class="pre">Environment</span></code></a></p>
-<p>“Remote” VM environment.</p>
+<dd><p>Bases: <a class="reference internal" href="mlos_bench.environments.remote.host_env.html#mlos_bench.environments.remote.host_env.HostEnv" title="mlos_bench.environments.remote.host_env.HostEnv"><code class="xref py py-class docutils literal notranslate"><span class="pre">HostEnv</span></code></a></p>
+<p>Remote VM/host environment.</p>
+<p>Note: this is just a class alias for HostEnv for historical purposes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -293,55 +367,31 @@ that are not used in the optimization process.</p>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code>()</p></td>
 <td><p>Execute the run script for this environment.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../generated/mlos_bench.environments.remote.VMEnv.html#mlos_bench.environments.remote.VMEnv.setup" title="mlos_bench.environments.remote.VMEnv.setup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setup</span></code></a>(tunables[, global_config])</p></td>
-<td><p>Check if VM is ready.</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setup</span></code>(tunables[, global_config])</p></td>
+<td><p>Check if host is ready.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">status</span></code>()</p></td>
 <td><p>Check the status of the benchmark environment.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../generated/mlos_bench.environments.remote.VMEnv.html#mlos_bench.environments.remote.VMEnv.teardown" title="mlos_bench.environments.remote.VMEnv.teardown"><code class="xref py py-obj docutils literal notranslate"><span class="pre">teardown</span></code></a>()</p></td>
-<td><p>Shut down the VM and release it.</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">teardown</span></code>()</p></td>
+<td><p>Shut down the Host and release it.</p></td>
 </tr>
 </tbody>
 </table>
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos_bench.environments.remote.VMEnv.setup">
-<span class="sig-name descname"><span class="pre">setup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#mlos_bench.environments.remote.VMEnv.setup" title="Link to this definition">¶</a></dt>
-<dd><p>Check if VM is ready. (Re)provision and start it, if necessary.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>tunables</strong><span class="classifier">TunableGroups</span></dt><dd><p>A collection of groups of tunable parameters along with the
-parameters’ values. VMEnv tunables are variable parameters that,
-together with the VMEnv configuration, are sufficient to provision
-and start a VM.</p>
-</dd>
-<dt><strong>global_config</strong><span class="classifier">dict</span></dt><dd><p>Free-format dictionary of global parameters of the environment
-that are not used in the optimization process.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><dl class="simple">
-<dt><strong>is_success</strong><span class="classifier">bool</span></dt><dd><p>True if operation is successful, false otherwise.</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos_bench.environments.remote.VMEnv.teardown">
-<span class="sig-name descname"><span class="pre">teardown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.environments.remote.VMEnv.teardown" title="Link to this definition">¶</a></dt>
-<dd><p>Shut down the VM and release it.</p>
-</dd></dl>
-
 </dd></dl>
 
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="mlos_bench.environments.remote.host_env.html">mlos_bench.environments.remote.host_env module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mlos_bench.environments.remote.host_env.html#mlos_bench.environments.remote.host_env.HostEnv"><code class="docutils literal notranslate"><span class="pre">HostEnv</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.environments.remote.host_env.html#mlos_bench.environments.remote.host_env.HostEnv.setup"><code class="docutils literal notranslate"><span class="pre">HostEnv.setup()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.environments.remote.host_env.html#mlos_bench.environments.remote.host_env.HostEnv.teardown"><code class="docutils literal notranslate"><span class="pre">HostEnv.teardown()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="mlos_bench.environments.remote.os_env.html">mlos_bench.environments.remote.os_env module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="mlos_bench.environments.remote.os_env.html#mlos_bench.environments.remote.os_env.OSEnv"><code class="docutils literal notranslate"><span class="pre">OSEnv</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.environments.remote.os_env.html#mlos_bench.environments.remote.os_env.OSEnv.setup"><code class="docutils literal notranslate"><span class="pre">OSEnv.setup()</span></code></a></li>
@@ -360,11 +410,7 @@ that are not used in the optimization process.</p>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="mlos_bench.environments.remote.vm_env.html">mlos_bench.environments.remote.vm_env module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mlos_bench.environments.remote.vm_env.html#mlos_bench.environments.remote.vm_env.VMEnv"><code class="docutils literal notranslate"><span class="pre">VMEnv</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="mlos_bench.environments.remote.vm_env.html#mlos_bench.environments.remote.vm_env.VMEnv.setup"><code class="docutils literal notranslate"><span class="pre">VMEnv.setup()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="mlos_bench.environments.remote.vm_env.html#mlos_bench.environments.remote.vm_env.VMEnv.teardown"><code class="docutils literal notranslate"><span class="pre">VMEnv.teardown()</span></code></a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="mlos_bench.environments.remote.vm_env.html#mlos_bench.environments.remote.vm_env.VMEnv"><code class="docutils literal notranslate"><span class="pre">VMEnv</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -377,7 +423,7 @@ that are not used in the optimization process.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="mlos_bench.environments.local.local_fileshare_env.html" class="btn btn-neutral float-left" title="mlos_bench.environments.local.local_fileshare_env module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="mlos_bench.environments.remote.os_env.html" class="btn btn-neutral float-right" title="mlos_bench.environments.remote.os_env module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="mlos_bench.environments.remote.host_env.html" class="btn btn-neutral float-right" title="mlos_bench.environments.remote.host_env module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

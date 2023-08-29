@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.services package &mdash; MlosCore 0.1.dev1+g50e0e94 documentation</title>
+  <title>mlos_bench.services package &mdash; MlosCore 0.1.dev1+gd51634c documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
@@ -12,7 +12,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=c6fd6311"></script>
+        <script src="../../_static/documentation_options.js?v=3e1b0ccf"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g50e0e94
+                0.1.dev1+gd51634c
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -246,7 +246,7 @@ The default is False.</p>
 <dt class="sig sig-object py" id="mlos_bench.services.Service">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.services.</span></span><span class="sig-name descname"><span class="pre">Service</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.services.base_service.html#mlos_bench.services.base_service.Service" title="mlos_bench.services.base_service.Service"><span class="pre">Service</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.services.Service" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>An abstract base of all environment services.</p>
+<p>An abstract base of all Environment Services and used to build up mix-ins.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -393,6 +393,13 @@ specified by <cite>class_name</cite>.</p>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.html#mlos_bench.services.types.SupportsFileShareOps.upload"><code class="docutils literal notranslate"><span class="pre">SupportsFileShareOps.upload()</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="mlos_bench.services.types.html#mlos_bench.services.types.SupportsHostProvisioning"><code class="docutils literal notranslate"><span class="pre">SupportsHostProvisioning</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.html#mlos_bench.services.types.SupportsHostProvisioning.deallocate_host"><code class="docutils literal notranslate"><span class="pre">SupportsHostProvisioning.deallocate_host()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.html#mlos_bench.services.types.SupportsHostProvisioning.deprovision_host"><code class="docutils literal notranslate"><span class="pre">SupportsHostProvisioning.deprovision_host()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.html#mlos_bench.services.types.SupportsHostProvisioning.provision_host"><code class="docutils literal notranslate"><span class="pre">SupportsHostProvisioning.provision_host()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.html#mlos_bench.services.types.SupportsHostProvisioning.wait_host_deployment"><code class="docutils literal notranslate"><span class="pre">SupportsHostProvisioning.wait_host_deployment()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="mlos_bench.services.types.html#mlos_bench.services.types.SupportsLocalExec"><code class="docutils literal notranslate"><span class="pre">SupportsLocalExec</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.html#mlos_bench.services.types.SupportsLocalExec.local_exec"><code class="docutils literal notranslate"><span class="pre">SupportsLocalExec.local_exec()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.html#mlos_bench.services.types.SupportsLocalExec.temp_dir_context"><code class="docutils literal notranslate"><span class="pre">SupportsLocalExec.temp_dir_context()</span></code></a></li>
@@ -401,16 +408,6 @@ specified by <cite>class_name</cite>.</p>
 <li class="toctree-l2"><a class="reference internal" href="mlos_bench.services.types.html#mlos_bench.services.types.SupportsRemoteExec"><code class="docutils literal notranslate"><span class="pre">SupportsRemoteExec</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.html#mlos_bench.services.types.SupportsRemoteExec.get_remote_exec_results"><code class="docutils literal notranslate"><span class="pre">SupportsRemoteExec.get_remote_exec_results()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.html#mlos_bench.services.types.SupportsRemoteExec.remote_exec"><code class="docutils literal notranslate"><span class="pre">SupportsRemoteExec.remote_exec()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="mlos_bench.services.types.html#mlos_bench.services.types.SupportsVMOps"><code class="docutils literal notranslate"><span class="pre">SupportsVMOps</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.html#mlos_bench.services.types.SupportsVMOps.vm_deprovision"><code class="docutils literal notranslate"><span class="pre">SupportsVMOps.vm_deprovision()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.html#mlos_bench.services.types.SupportsVMOps.vm_provision"><code class="docutils literal notranslate"><span class="pre">SupportsVMOps.vm_provision()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.html#mlos_bench.services.types.SupportsVMOps.vm_restart"><code class="docutils literal notranslate"><span class="pre">SupportsVMOps.vm_restart()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.html#mlos_bench.services.types.SupportsVMOps.vm_start"><code class="docutils literal notranslate"><span class="pre">SupportsVMOps.vm_start()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.html#mlos_bench.services.types.SupportsVMOps.vm_stop"><code class="docutils literal notranslate"><span class="pre">SupportsVMOps.vm_stop()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.html#mlos_bench.services.types.SupportsVMOps.wait_vm_deployment"><code class="docutils literal notranslate"><span class="pre">SupportsVMOps.wait_vm_deployment()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.html#mlos_bench.services.types.SupportsVMOps.wait_vm_operation"><code class="docutils literal notranslate"><span class="pre">SupportsVMOps.wait_vm_operation()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="mlos_bench.services.types.html#submodules">Submodules</a><ul>
@@ -426,8 +423,20 @@ specified by <cite>class_name</cite>.</p>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.services.types.fileshare_type.html#mlos_bench.services.types.fileshare_type.SupportsFileShareOps"><code class="docutils literal notranslate"><span class="pre">SupportsFileShareOps</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.host_ops_type.html">mlos_bench.services.types.host_ops_type module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.services.types.host_ops_type.html#mlos_bench.services.types.host_ops_type.SupportsHostOps"><code class="docutils literal notranslate"><span class="pre">SupportsHostOps</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.host_provisioner_type.html">mlos_bench.services.types.host_provisioner_type module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.services.types.host_provisioner_type.html#mlos_bench.services.types.host_provisioner_type.SupportsHostProvisioning"><code class="docutils literal notranslate"><span class="pre">SupportsHostProvisioning</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.local_exec_type.html">mlos_bench.services.types.local_exec_type module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.services.types.local_exec_type.html#mlos_bench.services.types.local_exec_type.SupportsLocalExec"><code class="docutils literal notranslate"><span class="pre">SupportsLocalExec</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.os_ops_type.html">mlos_bench.services.types.os_ops_type module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.services.types.os_ops_type.html#mlos_bench.services.types.os_ops_type.SupportsOSOps"><code class="docutils literal notranslate"><span class="pre">SupportsOSOps</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.remote_exec_type.html">mlos_bench.services.types.remote_exec_type module</a><ul>

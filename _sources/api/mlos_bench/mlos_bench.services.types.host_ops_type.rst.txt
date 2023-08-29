@@ -1,0 +1,7 @@
+mlos\_bench.services.types.host\_ops\_type module
+=================================================
+
+.. automodule:: mlos_bench.services.types.host_ops_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
