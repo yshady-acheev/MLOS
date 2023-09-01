@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Coverage for mlos_bench/mlos_bench/services/remote/azure/azure_services.py: 74%</title>
+    <title>Coverage for mlos_bench/mlos_bench/services/remote/azure/azure_services.py: 75%</title>
     <link rel="icon" sizes="32x32" href="favicon_32.png">
     <link rel="stylesheet" href="style.css" type="text/css">
     <script type="text/javascript" src="coverage_html.js" defer></script>
@@ -12,7 +12,7 @@
     <div class="content">
         <h1>
             <span class="text">Coverage for </span><b>mlos_bench/mlos_bench/services/remote/azure/azure_services.py</b>:
-            <span class="pc_cov">74%</span>
+            <span class="pc_cov">75%</span>
         </h1>
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -54,8 +54,8 @@
             </div>
         </aside>
         <h2>
-            <span class="text">203 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">151<span class="text"> run</span></button>
+            <span class="text">205 statements &nbsp;</span>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">153<span class="text"> run</span></button>
             <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">52<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_3f378eb4eadac84f___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.3.0">coverage.py v7.3.0</a>,
-            created at 2023-08-31 00:33 +0000
+            created at 2023-09-01 20:16 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -871,13 +871,16 @@
     <p class="pln"><span class="n"><a id="t789" href="#t789">789</a></span><span class="t"><span class="str">        result : (Status, dict)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t790" href="#t790">790</a></span><span class="t"><span class="str">            A pair of Status and result.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t791" href="#t791">791</a></span><span class="t"><span class="str">            Status is one of {PENDING, SUCCEEDED, FAILED, TIMED_OUT}</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t792" href="#t792">792</a></span><span class="t"><span class="str">        """</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t793" href="#t793">793</a></span><span class="t">        <span class="nam">_LOG</span><span class="op">.</span><span class="nam">info</span><span class="op">(</span><span class="str">"Check the results on VM: %s"</span><span class="op">,</span> <span class="nam">config</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">"vmName"</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t794" href="#t794">794</a></span><span class="t">        <span class="op">(</span><span class="nam">status</span><span class="op">,</span> <span class="nam">result</span><span class="op">)</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">wait_host_operation</span><span class="op">(</span><span class="nam">config</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t795" href="#t795">795</a></span><span class="t">        <span class="key">if</span> <span class="nam">status</span><span class="op">.</span><span class="nam">is_succeeded</span><span class="op">(</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t796" href="#t796">796</a></span><span class="t">            <span class="key">return</span> <span class="op">(</span><span class="nam">status</span><span class="op">,</span> <span class="nam">result</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">"properties"</span><span class="op">,</span> <span class="op">{</span><span class="op">}</span><span class="op">)</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">"output"</span><span class="op">,</span> <span class="op">{</span><span class="op">}</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t797" href="#t797">797</a></span><span class="t">        <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t798" href="#t798">798</a></span><span class="t">            <span class="key">return</span> <span class="op">(</span><span class="nam">status</span><span class="op">,</span> <span class="nam">result</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t792" href="#t792">792</a></span><span class="t"><span class="str">            A dict can have an "stdout" key with the remote output.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t793" href="#t793">793</a></span><span class="t"><span class="str">        """</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t794" href="#t794">794</a></span><span class="t">        <span class="nam">_LOG</span><span class="op">.</span><span class="nam">info</span><span class="op">(</span><span class="str">"Check the results on VM: %s"</span><span class="op">,</span> <span class="nam">config</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">"vmName"</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t795" href="#t795">795</a></span><span class="t">        <span class="op">(</span><span class="nam">status</span><span class="op">,</span> <span class="nam">result</span><span class="op">)</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">wait_host_operation</span><span class="op">(</span><span class="nam">config</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t796" href="#t796">796</a></span><span class="t">        <span class="nam">_LOG</span><span class="op">.</span><span class="nam">debug</span><span class="op">(</span><span class="str">"Result: %s :: %s"</span><span class="op">,</span> <span class="nam">status</span><span class="op">,</span> <span class="nam">result</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t797" href="#t797">797</a></span><span class="t">        <span class="key">if</span> <span class="key">not</span> <span class="nam">status</span><span class="op">.</span><span class="nam">is_succeeded</span><span class="op">(</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t798" href="#t798">798</a></span><span class="t">            <span class="com"># TODO: Extract the telemetry and status from stdout, if available</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t799" href="#t799">799</a></span><span class="t">            <span class="key">return</span> <span class="op">(</span><span class="nam">status</span><span class="op">,</span> <span class="nam">result</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t800" href="#t800">800</a></span><span class="t">        <span class="nam">val</span> <span class="op">=</span> <span class="nam">result</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">"properties"</span><span class="op">,</span> <span class="op">{</span><span class="op">}</span><span class="op">)</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">"output"</span><span class="op">,</span> <span class="op">{</span><span class="op">}</span><span class="op">)</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">"value"</span><span class="op">,</span> <span class="op">[</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t801" href="#t801">801</a></span><span class="t">        <span class="key">return</span> <span class="op">(</span><span class="nam">status</span><span class="op">,</span> <span class="op">{</span><span class="str">"stdout"</span><span class="op">:</span> <span class="nam">val</span><span class="op">[</span><span class="num">0</span><span class="op">]</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">"message"</span><span class="op">,</span> <span class="str">""</span><span class="op">)</span><span class="op">}</span> <span class="key">if</span> <span class="nam">val</span> <span class="key">else</span> <span class="op">{</span><span class="op">}</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
 </main>
 <footer>
     <div class="content">
@@ -887,7 +890,7 @@
             <a id="nextFileLink" class="nav" href="d_3f378eb4eadac84f___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.3.0">coverage.py v7.3.0</a>,
-            created at 2023-08-31 00:33 +0000
+            created at 2023-09-01 20:16 +0000
         </p>
     </div>
 </footer>
