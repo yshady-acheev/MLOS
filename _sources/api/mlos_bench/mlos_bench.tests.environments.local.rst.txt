@@ -12,6 +12,7 @@ Submodules
 .. toctree::
    :maxdepth: 4
 
+   mlos_bench.tests.environments.local.composite_local_env_test
    mlos_bench.tests.environments.local.local_env_stdout_test
    mlos_bench.tests.environments.local.local_env_telemetry_test
    mlos_bench.tests.environments.local.local_env_test
