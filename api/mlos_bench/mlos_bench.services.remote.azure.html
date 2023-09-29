@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.services.remote.azure package &mdash; MlosCore 0.1.dev1+g13c62ca documentation</title>
+  <title>mlos_bench.services.remote.azure package &mdash; MlosCore 0.1.dev1+g30d4577 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
@@ -12,7 +12,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=32ceb0a6"></script>
+        <script src="../../_static/documentation_options.js?v=5e1d950f"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g13c62ca
+                0.1.dev1+g30d4577
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -158,7 +158,7 @@
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../generated/mlos_bench.services.remote.azure.AzureFileShareService.html#mlos_bench.services.remote.azure.AzureFileShareService.download" title="mlos_bench.services.remote.azure.AzureFileShareService.download"><code class="xref py py-obj docutils literal notranslate"><span class="pre">download</span></code></a>(remote_path, local_path[, recursive])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../generated/mlos_bench.services.remote.azure.AzureFileShareService.html#mlos_bench.services.remote.azure.AzureFileShareService.download" title="mlos_bench.services.remote.azure.AzureFileShareService.download"><code class="xref py py-obj docutils literal notranslate"><span class="pre">download</span></code></a>(params, remote_path, local_path[, ...])</p></td>
 <td><p>Downloads contents from a remote share path to a local path.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">export</span></code>()</p></td>
@@ -170,18 +170,20 @@
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code>(services)</p></td>
 <td><p>Register new mix-in services.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../generated/mlos_bench.services.remote.azure.AzureFileShareService.html#mlos_bench.services.remote.azure.AzureFileShareService.upload" title="mlos_bench.services.remote.azure.AzureFileShareService.upload"><code class="xref py py-obj docutils literal notranslate"><span class="pre">upload</span></code></a>(local_path, remote_path[, recursive])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../generated/mlos_bench.services.remote.azure.AzureFileShareService.html#mlos_bench.services.remote.azure.AzureFileShareService.upload" title="mlos_bench.services.remote.azure.AzureFileShareService.upload"><code class="xref py py-obj docutils literal notranslate"><span class="pre">upload</span></code></a>(params, local_path, remote_path[, ...])</p></td>
 <td><p>Uploads contents from a local path to remote share path.</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.services.remote.azure.AzureFileShareService.download">
-<span class="sig-name descname"><span class="pre">download</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">remote_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recursive</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.azure.AzureFileShareService.download" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">download</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remote_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recursive</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.azure.AzureFileShareService.download" title="Link to this definition">¶</a></dt>
 <dd><p>Downloads contents from a remote share path to a local path.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
+<dt><strong>params</strong><span class="classifier">dict</span></dt><dd><p>Flat dictionary of (key, value) pairs of (optional) connection details.</p>
+</dd>
 <dt><strong>remote_path</strong><span class="classifier">str</span></dt><dd><p>Path to download from the remote file share, a file if recursive=False
 or a directory if recursive=True.</p>
 </dd>
@@ -197,11 +199,13 @@ if True (the default), download the entire directory tree.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.services.remote.azure.AzureFileShareService.upload">
-<span class="sig-name descname"><span class="pre">upload</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">local_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remote_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recursive</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.azure.AzureFileShareService.upload" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">upload</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remote_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recursive</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.azure.AzureFileShareService.upload" title="Link to this definition">¶</a></dt>
 <dd><p>Uploads contents from a local path to remote share path.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
+<dt><strong>params</strong><span class="classifier">dict</span></dt><dd><p>Flat dictionary of (key, value) pairs of (optional) connection details.</p>
+</dd>
 <dt><strong>local_path</strong><span class="classifier">str</span></dt><dd><p>Path to the local directory to upload contents from.</p>
 </dd>
 <dt><strong>remote_path</strong><span class="classifier">str</span></dt><dd><p>Path in the remote file share to store the uploaded content to.</p>
