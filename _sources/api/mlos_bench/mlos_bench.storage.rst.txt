@@ -20,4 +20,7 @@ Submodules
 .. toctree::
    :maxdepth: 4
 
+   mlos_bench.storage.base_experiment_data
    mlos_bench.storage.base_storage
+   mlos_bench.storage.base_trial_data
+   mlos_bench.storage.storage_factory
