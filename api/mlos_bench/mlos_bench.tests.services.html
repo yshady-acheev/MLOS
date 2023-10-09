@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.tests.services package &mdash; MlosCore 0.1.dev1+ge1120ae documentation</title>
+  <title>mlos_bench.tests.services package &mdash; MlosCore 0.1.dev1+gfaeaf0b documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
@@ -12,7 +12,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=015aba7b"></script>
+        <script src="../../_static/documentation_options.js?v=ead57820"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+ge1120ae
+                0.1.dev1+gfaeaf0b
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -201,7 +201,7 @@ if True (the default), upload the entire directory tree.</p>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">export</span></code>()</p></td>
 <td><p>Return a dictionary of functions available in this service.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.tests.services.MockLocalExecService.local_exec" title="mlos_bench.tests.services.MockLocalExecService.local_exec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">local_exec</span></code></a>(script_lines[, env, cwd, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.tests.services.MockLocalExecService.local_exec" title="mlos_bench.tests.services.MockLocalExecService.local_exec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">local_exec</span></code></a>(script_lines[, env, cwd])</p></td>
 <td><p>Execute the script lines from <cite>script_lines</cite> in a local process.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">new</span></code>(class_name[, config, global_config, parent])</p></td>
@@ -217,7 +217,7 @@ if True (the default), upload the entire directory tree.</p>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.tests.services.MockLocalExecService.local_exec">
-<span class="sig-name descname"><span class="pre">local_exec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">script_lines</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Mapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">TunableValue</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cwd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_on_error</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.tests.services.MockLocalExecService.local_exec" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">local_exec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">script_lines</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Mapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">TunableValue</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cwd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.tests.services.MockLocalExecService.local_exec" title="Link to this definition">¶</a></dt>
 <dd><p>Execute the script lines from <cite>script_lines</cite> in a local process.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -229,9 +229,6 @@ Treat every line as a separate command to run.</p>
 </dd>
 <dt><strong>cwd</strong><span class="classifier">str</span></dt><dd><p>Work directory to run the script at.
 If omitted, use <cite>temp_dir</cite> or create a temporary dir.</p>
-</dd>
-<dt><strong>return_on_error</strong><span class="classifier">bool</span></dt><dd><p>If True, stop running script lines on first non-zero return code.
-The default is False.</p>
 </dd>
 </dl>
 </dd>
@@ -371,6 +368,8 @@ The default is False.</p>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.services.local.local_exec_test.html#mlos_bench.tests.services.local.local_exec_test.test_resolve_script"><code class="docutils literal notranslate"><span class="pre">test_resolve_script()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.services.local.local_exec_test.html#mlos_bench.tests.services.local.local_exec_test.test_run_script"><code class="docutils literal notranslate"><span class="pre">test_run_script()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.services.local.local_exec_test.html#mlos_bench.tests.services.local.local_exec_test.test_run_script_fail"><code class="docutils literal notranslate"><span class="pre">test_run_script_fail()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.services.local.local_exec_test.html#mlos_bench.tests.services.local.local_exec_test.test_run_script_middle_fail_abort"><code class="docutils literal notranslate"><span class="pre">test_run_script_middle_fail_abort()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.services.local.local_exec_test.html#mlos_bench.tests.services.local.local_exec_test.test_run_script_middle_fail_pass"><code class="docutils literal notranslate"><span class="pre">test_run_script_middle_fail_pass()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.services.local.local_exec_test.html#mlos_bench.tests.services.local.local_exec_test.test_run_script_multiline"><code class="docutils literal notranslate"><span class="pre">test_run_script_multiline()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.services.local.local_exec_test.html#mlos_bench.tests.services.local.local_exec_test.test_run_script_multiline_env"><code class="docutils literal notranslate"><span class="pre">test_run_script_multiline_env()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.services.local.local_exec_test.html#mlos_bench.tests.services.local.local_exec_test.test_run_script_read_csv"><code class="docutils literal notranslate"><span class="pre">test_run_script_read_csv()</span></code></a></li>
