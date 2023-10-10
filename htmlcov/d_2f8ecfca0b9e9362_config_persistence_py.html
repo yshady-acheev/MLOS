@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_ea07be53de14ffe8___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.3.2">coverage.py v7.3.2</a>,
-            created at 2023-10-10 00:36 +0000
+            created at 2023-10-10 17:32 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -151,7 +151,7 @@
     <p class="run"><span class="n"><a id="t69" href="#t69">69</a></span><span class="t">            <span class="key">if</span> <span class="nam">path</span> <span class="key">not</span> <span class="key">in</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_config_path</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t70" href="#t70">70</a></span><span class="t">                <span class="nam">self</span><span class="op">.</span><span class="nam">_config_path</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="nam">path_join</span><span class="op">(</span><span class="nam">path</span><span class="op">,</span> <span class="nam">abs_path</span><span class="op">=</span><span class="key">True</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t71" href="#t71">71</a></span><span class="t">        <span class="com"># Prepend the cwd if not already on the list.</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t72" href="#t72">72</a></span><span class="t">        <span class="nam">cwd</span> <span class="op">=</span> <span class="nam">os</span><span class="op">.</span><span class="nam">path</span><span class="op">.</span><span class="nam">abspath</span><span class="op">(</span><span class="nam">os</span><span class="op">.</span><span class="nam">getcwd</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t72" href="#t72">72</a></span><span class="t">        <span class="nam">cwd</span> <span class="op">=</span> <span class="nam">path_join</span><span class="op">(</span><span class="nam">os</span><span class="op">.</span><span class="nam">getcwd</span><span class="op">(</span><span class="op">)</span><span class="op">,</span> <span class="nam">abs_path</span><span class="op">=</span><span class="key">True</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t73" href="#t73">73</a></span><span class="t">        <span class="key">if</span> <span class="nam">cwd</span> <span class="key">not</span> <span class="key">in</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_config_path</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t74" href="#t74">74</a></span><span class="t">            <span class="nam">self</span><span class="op">.</span><span class="nam">_config_path</span><span class="op">.</span><span class="nam">insert</span><span class="op">(</span><span class="num">0</span><span class="op">,</span> <span class="nam">cwd</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t75" href="#t75">75</a></span><span class="t">        <span class="com"># Append the built-in config path if not already on the list.</span>&nbsp;</span><span class="r"></span></p>
@@ -641,7 +641,7 @@
             <a id="nextFileLink" class="nav" href="d_ea07be53de14ffe8___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.3.2">coverage.py v7.3.2</a>,
-            created at 2023-10-10 00:36 +0000
+            created at 2023-10-10 17:32 +0000
         </p>
     </div>
 </footer>

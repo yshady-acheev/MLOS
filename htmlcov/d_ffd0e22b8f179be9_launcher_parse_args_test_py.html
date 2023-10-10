@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Coverage for mlos_bench/mlos_bench/tests/launcher_parse_args_test.py: 94%</title>
+    <title>Coverage for mlos_bench/mlos_bench/tests/launcher_parse_args_test.py: 93%</title>
     <link rel="icon" sizes="32x32" href="favicon_32.png">
     <link rel="stylesheet" href="style.css" type="text/css">
     <script type="text/javascript" src="coverage_html.js" defer></script>
@@ -12,7 +12,7 @@
     <div class="content">
         <h1>
             <span class="text">Coverage for </span><b>mlos_bench/mlos_bench/tests/launcher_parse_args_test.py</b>:
-            <span class="pc_cov">94%</span>
+            <span class="pc_cov">93%</span>
         </h1>
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -54,9 +54,9 @@
             </div>
         </aside>
         <h2>
-            <span class="text">52 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">49<span class="text"> run</span></button>
-            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">3<span class="text"> missing</span></button>
+            <span class="text">54 statements &nbsp;</span>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">50<span class="text"> run</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">4<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
         <p class="text">
@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_ffd0e22b8f179be9_launcher_run_test_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.3.2">coverage.py v7.3.2</a>,
-            created at 2023-10-10 00:36 +0000
+            created at 2023-10-10 17:32 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -152,7 +152,7 @@
     <p class="pln"><span class="n"><a id="t70" href="#t70">70</a></span><span class="t">    <span class="com"># Check overriding values in a file from the command line.</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t71" href="#t71">71</a></span><span class="t">    <span class="key">assert</span> <span class="nam">launcher</span><span class="op">.</span><span class="nam">global_config</span><span class="op">[</span><span class="str">'test_global_value_2'</span><span class="op">]</span> <span class="op">==</span> <span class="str">'from-args'</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t72" href="#t72">72</a></span><span class="t">    <span class="com"># Check that we can expand a $var in a config file that references an environment variable.</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t73" href="#t73">73</a></span><span class="t">    <span class="key">assert</span> <span class="nam">launcher</span><span class="op">.</span><span class="nam">global_config</span><span class="op">[</span><span class="str">"varWithEnvVarRef"</span><span class="op">]</span> <span class="op">==</span> <span class="nam">path_join</span><span class="op">(</span><span class="nam">os</span><span class="op">.</span><span class="nam">getcwd</span><span class="op">(</span><span class="op">)</span><span class="op">,</span> <span class="str">"foo"</span><span class="op">,</span> <span class="nam">abs_path</span><span class="op">=</span><span class="key">True</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t73" href="#t73">73</a></span><span class="t">    <span class="key">assert</span> <span class="nam">path_join</span><span class="op">(</span><span class="nam">launcher</span><span class="op">.</span><span class="nam">global_config</span><span class="op">[</span><span class="str">"varWithEnvVarRef"</span><span class="op">]</span><span class="op">,</span> <span class="nam">abs_path</span><span class="op">=</span><span class="key">True</span><span class="op">)</span> <span class="op">==</span> <span class="nam">path_join</span><span class="op">(</span><span class="nam">os</span><span class="op">.</span><span class="nam">getcwd</span><span class="op">(</span><span class="op">)</span><span class="op">,</span> <span class="str">"foo"</span><span class="op">,</span> <span class="nam">abs_path</span><span class="op">=</span><span class="key">True</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t74" href="#t74">74</a></span><span class="t">    <span class="key">assert</span> <span class="nam">launcher</span><span class="op">.</span><span class="nam">teardown</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t75" href="#t75">75</a></span><span class="t">    <span class="com"># Check that the environment that got loaded looks to be of the right type.</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t76" href="#t76">76</a></span><span class="t">    <span class="nam">env_config</span> <span class="op">=</span> <span class="nam">launcher</span><span class="op">.</span><span class="nam">config_loader</span><span class="op">.</span><span class="nam">load_config</span><span class="op">(</span><span class="nam">env_conf_path</span><span class="op">,</span> <span class="nam">ConfigSchema</span><span class="op">.</span><span class="nam">ENVIRONMENT</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -187,7 +187,7 @@
     <p class="pln"><span class="n"><a id="t105" href="#t105">105</a></span><span class="t">    <span class="com"># Check that secondary expansion also works.</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t106" href="#t106">106</a></span><span class="t">    <span class="key">assert</span> <span class="nam">launcher</span><span class="op">.</span><span class="nam">global_config</span><span class="op">[</span><span class="str">'testVnetName'</span><span class="op">]</span> <span class="op">==</span> <span class="str">'MockeryExperiment-vm-vnet'</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t107" href="#t107">107</a></span><span class="t">    <span class="com"># Check that we can expand a $var in a config file that references an environment variable.</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t108" href="#t108">108</a></span><span class="t">    <span class="key">assert</span> <span class="nam">launcher</span><span class="op">.</span><span class="nam">global_config</span><span class="op">[</span><span class="str">"varWithEnvVarRef"</span><span class="op">]</span> <span class="op">==</span> <span class="nam">path_join</span><span class="op">(</span><span class="nam">os</span><span class="op">.</span><span class="nam">getcwd</span><span class="op">(</span><span class="op">)</span><span class="op">,</span> <span class="str">"foo"</span><span class="op">,</span> <span class="nam">abs_path</span><span class="op">=</span><span class="key">True</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t108" href="#t108">108</a></span><span class="t">    <span class="key">assert</span> <span class="nam">path_join</span><span class="op">(</span><span class="nam">launcher</span><span class="op">.</span><span class="nam">global_config</span><span class="op">[</span><span class="str">"varWithEnvVarRef"</span><span class="op">]</span><span class="op">,</span> <span class="nam">abs_path</span><span class="op">=</span><span class="key">True</span><span class="op">)</span> <span class="op">==</span> <span class="nam">path_join</span><span class="op">(</span><span class="nam">os</span><span class="op">.</span><span class="nam">getcwd</span><span class="op">(</span><span class="op">)</span><span class="op">,</span> <span class="str">"foo"</span><span class="op">,</span> <span class="nam">abs_path</span><span class="op">=</span><span class="key">True</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t109" href="#t109">109</a></span><span class="t">    <span class="key">assert</span> <span class="key">not</span> <span class="nam">launcher</span><span class="op">.</span><span class="nam">teardown</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t110" href="#t110">110</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t111" href="#t111">111</a></span><span class="t">    <span class="nam">config</span> <span class="op">=</span> <span class="nam">launcher</span><span class="op">.</span><span class="nam">config_loader</span><span class="op">.</span><span class="nam">load_config</span><span class="op">(</span><span class="nam">config_file</span><span class="op">,</span> <span class="nam">ConfigSchema</span><span class="op">.</span><span class="nam">CLI</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -215,6 +215,10 @@
     <p class="pln"><span class="n"><a id="t133" href="#t133">133</a></span><span class="t">    <span class="com"># applies to a temporary Optimizer used to populate the initial values via</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t134" href="#t134">134</a></span><span class="t">    <span class="com"># random sampling.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t135" href="#t135">135</a></span><span class="t">    <span class="com"># assert launcher.optimizer.seed == 1234</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t136" href="#t136">136</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t137" href="#t137">137</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t138" href="#t138">138</a></span><span class="t"><span class="key">if</span> <span class="nam">__name__</span> <span class="op">==</span> <span class="str">'__main__'</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t139" href="#t139">139</a></span><span class="t">    <span class="nam">pytest</span><span class="op">.</span><span class="nam">main</span><span class="op">(</span><span class="op">[</span><span class="nam">__file__</span><span class="op">,</span> <span class="str">"-n1"</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
 </main>
 <footer>
     <div class="content">
@@ -224,7 +228,7 @@
             <a id="nextFileLink" class="nav" href="d_ffd0e22b8f179be9_launcher_run_test_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.3.2">coverage.py v7.3.2</a>,
-            created at 2023-10-10 00:36 +0000
+            created at 2023-10-10 17:32 +0000
         </p>
     </div>
 </footer>
