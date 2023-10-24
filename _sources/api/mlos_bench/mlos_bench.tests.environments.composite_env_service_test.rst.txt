@@ -1,0 +1,7 @@
+mlos\_bench.tests.environments.composite\_env\_service\_test module
+===================================================================
+
+.. automodule:: mlos_bench.tests.environments.composite_env_service_test
+   :members:
+   :undoc-members:
+   :show-inheritance:
