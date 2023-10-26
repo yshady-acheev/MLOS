@@ -22,3 +22,5 @@ Submodules
    :maxdepth: 4
 
    mlos_bench.tests.services.config_persistence_test
+   mlos_bench.tests.services.mock_service
+   mlos_bench.tests.services.test_service_method_registering
