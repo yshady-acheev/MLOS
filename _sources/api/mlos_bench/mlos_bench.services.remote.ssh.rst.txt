@@ -5,3 +5,13 @@ mlos\_bench.services.remote.ssh package
    :members:
    :undoc-members:
    :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   mlos_bench.services.remote.ssh.ssh_fileshare
+   mlos_bench.services.remote.ssh.ssh_host_service
+   mlos_bench.services.remote.ssh.ssh_service

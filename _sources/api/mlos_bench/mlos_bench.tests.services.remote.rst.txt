@@ -14,3 +14,4 @@ Subpackages
 
    mlos_bench.tests.services.remote.azure
    mlos_bench.tests.services.remote.mock
+   mlos_bench.tests.services.remote.ssh

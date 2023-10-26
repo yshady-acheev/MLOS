@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.services.remote.ssh package &mdash; MlosCore 0.1.dev1+g31e0d89 documentation</title>
+  <title>mlos_bench.services.remote.ssh package &mdash; MlosCore 0.1.dev1+g1f0f8ee documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
@@ -12,14 +12,14 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=56a15283"></script>
+        <script src="../../_static/documentation_options.js?v=f47ffa2f"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="mlos_bench.services.types package" href="mlos_bench.services.types.html" />
+    <link rel="next" title="mlos_bench.services.remote.ssh.ssh_fileshare module" href="mlos_bench.services.remote.ssh.ssh_fileshare.html" />
     <link rel="prev" title="mlos_bench.services.remote.azure.azure_services module" href="mlos_bench.services.remote.azure.azure_services.html" /> 
 </head>
 
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g31e0d89
+                0.1.dev1+g1f0f8ee
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -104,6 +104,337 @@
   <section id="module-mlos_bench.services.remote.ssh">
 <span id="mlos-bench-services-remote-ssh-package"></span><h1>mlos_bench.services.remote.ssh package<a class="headerlink" href="#module-mlos_bench.services.remote.ssh" title="Link to this heading">¶</a></h1>
 <p>SSH remote service.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.SshFileShareService">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.services.remote.ssh.</span></span><span class="sig-name descname"><span class="pre">SshFileShareService</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.services.base_service.html#mlos_bench.services.base_service.Service" title="mlos_bench.services.base_service.Service"><span class="pre">Service</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">methods</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Callable</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.services.remote.ssh.SshFileShareService" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="mlos_bench.services.base_fileshare.html#mlos_bench.services.base_fileshare.FileShareService" title="mlos_bench.services.base_fileshare.FileShareService"><code class="xref py py-class docutils literal notranslate"><span class="pre">FileShareService</span></code></a>, <a class="reference internal" href="mlos_bench.services.remote.ssh.ssh_service.html#mlos_bench.services.remote.ssh.ssh_service.SshService" title="mlos_bench.services.remote.ssh.ssh_service.SshService"><code class="xref py py-class docutils literal notranslate"><span class="pre">SshService</span></code></a></p>
+<p>A collection of functions for interacting with SSH servers as file shares.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">config_loader_service</span></code></dt><dd><p>Return a config loader service.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear_client_cache</span></code>()</p></td>
+<td><p>Clears the cache of client connections.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.services.remote.ssh.SshFileShareService.download" title="mlos_bench.services.remote.ssh.SshFileShareService.download"><code class="xref py py-obj docutils literal notranslate"><span class="pre">download</span></code></a>(params, remote_path, local_path[, ...])</p></td>
+<td><p>Downloads contents from a remote share path to a local path.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">export</span></code>()</p></td>
+<td><p>Return a dictionary of functions available in this service.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">merge_methods</span></code>(ext_methods, local_methods)</p></td>
+<td><p>Merge methods from the external caller with the local ones.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">new</span></code>(class_name[, config, global_config, parent])</p></td>
+<td><p>Factory method for a new service with a given config.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">pprint</span></code>()</p></td>
+<td><p>Produce a human-readable string listing all public methods of the service.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code>(services)</p></td>
+<td><p>Register new mix-in services.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.services.remote.ssh.SshFileShareService.upload" title="mlos_bench.services.remote.ssh.SshFileShareService.upload"><code class="xref py py-obj docutils literal notranslate"><span class="pre">upload</span></code></a>(params, local_path, remote_path[, ...])</p></td>
+<td><p>Uploads contents from a local path to remote share path.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>FutureReturnType</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.SshFileShareService.download">
+<span class="sig-name descname"><span class="pre">download</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remote_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recursive</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.SshFileShareService.download" title="Link to this definition">¶</a></dt>
+<dd><p>Downloads contents from a remote share path to a local path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>params</strong><span class="classifier">dict</span></dt><dd><p>Flat dictionary of (key, value) pairs of (optional) connection details.</p>
+</dd>
+<dt><strong>remote_path</strong><span class="classifier">str</span></dt><dd><p>Path to download from the remote file share, a file if recursive=False
+or a directory if recursive=True.</p>
+</dd>
+<dt><strong>local_path</strong><span class="classifier">str</span></dt><dd><p>Path to store the downloaded content to.</p>
+</dd>
+<dt><strong>recursive</strong><span class="classifier">bool</span></dt><dd><p>If False, ignore the subdirectories;
+if True (the default), download the entire directory tree.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.SshFileShareService.upload">
+<span class="sig-name descname"><span class="pre">upload</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remote_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recursive</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.SshFileShareService.upload" title="Link to this definition">¶</a></dt>
+<dd><p>Uploads contents from a local path to remote share path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>params</strong><span class="classifier">dict</span></dt><dd><p>Flat dictionary of (key, value) pairs of (optional) connection details.</p>
+</dd>
+<dt><strong>local_path</strong><span class="classifier">str</span></dt><dd><p>Path to the local directory to upload contents from.</p>
+</dd>
+<dt><strong>remote_path</strong><span class="classifier">str</span></dt><dd><p>Path in the remote file share to store the uploaded content to.</p>
+</dd>
+<dt><strong>recursive</strong><span class="classifier">bool</span></dt><dd><p>If False, ignore the subdirectories;
+if True (the default), upload the entire directory tree.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.SshHostService">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.services.remote.ssh.</span></span><span class="sig-name descname"><span class="pre">SshHostService</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.services.base_service.html#mlos_bench.services.base_service.Service" title="mlos_bench.services.base_service.Service"><span class="pre">Service</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">methods</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Callable</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.services.remote.ssh.SshHostService" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="mlos_bench.services.remote.ssh.ssh_service.html#mlos_bench.services.remote.ssh.ssh_service.SshService" title="mlos_bench.services.remote.ssh.ssh_service.SshService"><code class="xref py py-class docutils literal notranslate"><span class="pre">SshService</span></code></a>, <a class="reference internal" href="mlos_bench.services.types.os_ops_type.html#mlos_bench.services.types.os_ops_type.SupportsOSOps" title="mlos_bench.services.types.os_ops_type.SupportsOSOps"><code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsOSOps</span></code></a>, <a class="reference internal" href="mlos_bench.services.types.remote_exec_type.html#mlos_bench.services.types.remote_exec_type.SupportsRemoteExec" title="mlos_bench.services.types.remote_exec_type.SupportsRemoteExec"><code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsRemoteExec</span></code></a></p>
+<p>Helper methods to manage machines via SSH.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">config_loader_service</span></code></dt><dd><p>Return a config loader service.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear_client_cache</span></code>()</p></td>
+<td><p>Clears the cache of client connections.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">export</span></code>()</p></td>
+<td><p>Return a dictionary of functions available in this service.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.services.remote.ssh.SshHostService.get_remote_exec_results" title="mlos_bench.services.remote.ssh.SshHostService.get_remote_exec_results"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_remote_exec_results</span></code></a>(config)</p></td>
+<td><p>Get the results of the asynchronously running command.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">merge_methods</span></code>(ext_methods, local_methods)</p></td>
+<td><p>Merge methods from the external caller with the local ones.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">new</span></code>(class_name[, config, global_config, parent])</p></td>
+<td><p>Factory method for a new service with a given config.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">pprint</span></code>()</p></td>
+<td><p>Produce a human-readable string listing all public methods of the service.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.services.remote.ssh.SshHostService.reboot" title="mlos_bench.services.remote.ssh.SshHostService.reboot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reboot</span></code></a>(params[, force])</p></td>
+<td><p>Initiates a (graceful) shutdown of the Host/VM OS.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code>(services)</p></td>
+<td><p>Register new mix-in services.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.services.remote.ssh.SshHostService.remote_exec" title="mlos_bench.services.remote.ssh.SshHostService.remote_exec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remote_exec</span></code></a>(script, config, env_params)</p></td>
+<td><p>Start running a command on remote host OS.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.services.remote.ssh.SshHostService.shutdown" title="mlos_bench.services.remote.ssh.SshHostService.shutdown"><code class="xref py py-obj docutils literal notranslate"><span class="pre">shutdown</span></code></a>(params[, force])</p></td>
+<td><p>Initiates a (graceful) shutdown of the Host/VM OS.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.services.remote.ssh.SshHostService.wait_os_operation" title="mlos_bench.services.remote.ssh.SshHostService.wait_os_operation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_os_operation</span></code></a>(params)</p></td>
+<td><p>Waits for a pending operation on an OS to resolve to SUCCEEDED or FAILED.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>FutureReturnType</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.SshHostService.get_remote_exec_results">
+<span class="sig-name descname"><span class="pre">get_remote_exec_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.SshHostService.get_remote_exec_results" title="Link to this definition">¶</a></dt>
+<dd><p>Get the results of the asynchronously running command.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>config</strong><span class="classifier">dict</span></dt><dd><p>Flat dictionary of (key, value) pairs of tunable parameters.
+Must have the “asyncRemoteExecResultsFuture” key to get the results.
+If the key is not present, return Status.PENDING.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>result</strong><span class="classifier">(Status, dict)</span></dt><dd><p>A pair of Status and result.
+Status is one of {PENDING, SUCCEEDED, FAILED, TIMED_OUT}</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.SshHostService.reboot">
+<span class="sig-name descname"><span class="pre">reboot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.SshHostService.reboot" title="Link to this definition">¶</a></dt>
+<dd><p>Initiates a (graceful) shutdown of the Host/VM OS.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>params: dict</strong></dt><dd><p>Flat dictionary of (key, value) pairs of tunable parameters.</p>
+</dd>
+<dt><strong>force</strong><span class="classifier">bool</span></dt><dd><p>If True, force restart the Host/VM.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>result</strong><span class="classifier">(Status, dict={})</span></dt><dd><p>A pair of Status and result.
+Status is one of {PENDING, SUCCEEDED, FAILED}</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.SshHostService.remote_exec">
+<span class="sig-name descname"><span class="pre">remote_exec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">script</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.SshHostService.remote_exec" title="Link to this definition">¶</a></dt>
+<dd><p>Start running a command on remote host OS.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>script</strong><span class="classifier">Iterable[str]</span></dt><dd><p>A list of lines to execute as a script on a remote VM.</p>
+</dd>
+<dt><strong>config</strong><span class="classifier">dict</span></dt><dd><p>Flat dictionary of (key, value) pairs of parameters.
+They usually come from <cite>const_args</cite> and <cite>tunable_params</cite>
+properties of the Environment.</p>
+</dd>
+<dt><strong>env_params</strong><span class="classifier">dict</span></dt><dd><p>Parameters to pass as <em>shell</em> environment variables into the script.
+This is usually a subset of <cite>config</cite> with some possible conversions.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>result</strong><span class="classifier">(Status, dict)</span></dt><dd><p>A pair of Status and result.
+Status is one of {PENDING, SUCCEEDED, FAILED}</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.SshHostService.shutdown">
+<span class="sig-name descname"><span class="pre">shutdown</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.SshHostService.shutdown" title="Link to this definition">¶</a></dt>
+<dd><p>Initiates a (graceful) shutdown of the Host/VM OS.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>params: dict</strong></dt><dd><p>Flat dictionary of (key, value) pairs of tunable parameters.</p>
+</dd>
+<dt><strong>force</strong><span class="classifier">bool</span></dt><dd><p>If True, force stop the Host/VM.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>result</strong><span class="classifier">(Status, dict={})</span></dt><dd><p>A pair of Status and result.
+Status is one of {PENDING, SUCCEEDED, FAILED}</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.SshHostService.wait_os_operation">
+<span class="sig-name descname"><span class="pre">wait_os_operation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.SshHostService.wait_os_operation" title="Link to this definition">¶</a></dt>
+<dd><p>Waits for a pending operation on an OS to resolve to SUCCEEDED or FAILED.
+Return TIMED_OUT when timing out.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>params: dict</strong></dt><dd><p>Flat dictionary of (key, value) pairs of tunable parameters.
+Must have the “asyncRemoteExecResultsFuture” key to get the results.
+If the key is not present, return Status.PENDING.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>result</strong><span class="classifier">(Status, dict)</span></dt><dd><p>A pair of Status and result.
+Status is one of {PENDING, SUCCEEDED, FAILED, TIMED_OUT}
+Result is info on the operation runtime if SUCCEEDED, otherwise {}.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mlos_bench.services.remote.ssh.ssh_fileshare.html">mlos_bench.services.remote.ssh.ssh_fileshare module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mlos_bench.services.remote.ssh.ssh_fileshare.html#mlos_bench.services.remote.ssh.ssh_fileshare.CopyMode"><code class="docutils literal notranslate"><span class="pre">CopyMode</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.remote.ssh.ssh_fileshare.html#mlos_bench.services.remote.ssh.ssh_fileshare.CopyMode.DOWNLOAD"><code class="docutils literal notranslate"><span class="pre">CopyMode.DOWNLOAD</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.remote.ssh.ssh_fileshare.html#mlos_bench.services.remote.ssh.ssh_fileshare.CopyMode.UPLOAD"><code class="docutils literal notranslate"><span class="pre">CopyMode.UPLOAD</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mlos_bench.services.remote.ssh.ssh_fileshare.html#mlos_bench.services.remote.ssh.ssh_fileshare.SshFileShareService"><code class="docutils literal notranslate"><span class="pre">SshFileShareService</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.remote.ssh.ssh_fileshare.html#mlos_bench.services.remote.ssh.ssh_fileshare.SshFileShareService.download"><code class="docutils literal notranslate"><span class="pre">SshFileShareService.download()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.remote.ssh.ssh_fileshare.html#mlos_bench.services.remote.ssh.ssh_fileshare.SshFileShareService.upload"><code class="docutils literal notranslate"><span class="pre">SshFileShareService.upload()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mlos_bench.services.remote.ssh.ssh_host_service.html">mlos_bench.services.remote.ssh.ssh_host_service module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mlos_bench.services.remote.ssh.ssh_host_service.html#mlos_bench.services.remote.ssh.ssh_host_service.SshHostService"><code class="docutils literal notranslate"><span class="pre">SshHostService</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.remote.ssh.ssh_host_service.html#mlos_bench.services.remote.ssh.ssh_host_service.SshHostService.get_remote_exec_results"><code class="docutils literal notranslate"><span class="pre">SshHostService.get_remote_exec_results()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.remote.ssh.ssh_host_service.html#mlos_bench.services.remote.ssh.ssh_host_service.SshHostService.reboot"><code class="docutils literal notranslate"><span class="pre">SshHostService.reboot()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.remote.ssh.ssh_host_service.html#mlos_bench.services.remote.ssh.ssh_host_service.SshHostService.remote_exec"><code class="docutils literal notranslate"><span class="pre">SshHostService.remote_exec()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.remote.ssh.ssh_host_service.html#mlos_bench.services.remote.ssh.ssh_host_service.SshHostService.shutdown"><code class="docutils literal notranslate"><span class="pre">SshHostService.shutdown()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.remote.ssh.ssh_host_service.html#mlos_bench.services.remote.ssh.ssh_host_service.SshHostService.wait_os_operation"><code class="docutils literal notranslate"><span class="pre">SshHostService.wait_os_operation()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mlos_bench.services.remote.ssh.ssh_service.html">mlos_bench.services.remote.ssh.ssh_service module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mlos_bench.services.remote.ssh.ssh_service.html#mlos_bench.services.remote.ssh.ssh_service.SshClient"><code class="docutils literal notranslate"><span class="pre">SshClient</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.remote.ssh.ssh_service.html#mlos_bench.services.remote.ssh.ssh_service.SshClient.connection"><code class="docutils literal notranslate"><span class="pre">SshClient.connection()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.remote.ssh.ssh_service.html#mlos_bench.services.remote.ssh.ssh_service.SshClient.connection_lost"><code class="docutils literal notranslate"><span class="pre">SshClient.connection_lost()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.remote.ssh.ssh_service.html#mlos_bench.services.remote.ssh.ssh_service.SshClient.connection_made"><code class="docutils literal notranslate"><span class="pre">SshClient.connection_made()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.remote.ssh.ssh_service.html#mlos_bench.services.remote.ssh.ssh_service.SshClient.id_from_connection"><code class="docutils literal notranslate"><span class="pre">SshClient.id_from_connection()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.remote.ssh.ssh_service.html#mlos_bench.services.remote.ssh.ssh_service.SshClient.id_from_params"><code class="docutils literal notranslate"><span class="pre">SshClient.id_from_params()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mlos_bench.services.remote.ssh.ssh_service.html#mlos_bench.services.remote.ssh.ssh_service.SshClientCache"><code class="docutils literal notranslate"><span class="pre">SshClientCache</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.remote.ssh.ssh_service.html#mlos_bench.services.remote.ssh.ssh_service.SshClientCache.cleanup"><code class="docutils literal notranslate"><span class="pre">SshClientCache.cleanup()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.remote.ssh.ssh_service.html#mlos_bench.services.remote.ssh.ssh_service.SshClientCache.enter"><code class="docutils literal notranslate"><span class="pre">SshClientCache.enter()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.remote.ssh.ssh_service.html#mlos_bench.services.remote.ssh.ssh_service.SshClientCache.exit"><code class="docutils literal notranslate"><span class="pre">SshClientCache.exit()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.remote.ssh.ssh_service.html#mlos_bench.services.remote.ssh.ssh_service.SshClientCache.get_client_connection"><code class="docutils literal notranslate"><span class="pre">SshClientCache.get_client_connection()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mlos_bench.services.remote.ssh.ssh_service.html#mlos_bench.services.remote.ssh.ssh_service.SshService"><code class="docutils literal notranslate"><span class="pre">SshService</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.remote.ssh.ssh_service.html#mlos_bench.services.remote.ssh.ssh_service.SshService.CoroReturnType"><code class="docutils literal notranslate"><span class="pre">SshService.CoroReturnType</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.remote.ssh.ssh_service.html#mlos_bench.services.remote.ssh.ssh_service.SshService.FutureReturnType"><code class="docutils literal notranslate"><span class="pre">SshService.FutureReturnType</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.remote.ssh.ssh_service.html#mlos_bench.services.remote.ssh.ssh_service.SshService.clear_client_cache"><code class="docutils literal notranslate"><span class="pre">SshService.clear_client_cache()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
 </section>
 
 
@@ -111,7 +442,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="mlos_bench.services.remote.azure.azure_services.html" class="btn btn-neutral float-left" title="mlos_bench.services.remote.azure.azure_services module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="mlos_bench.services.types.html" class="btn btn-neutral float-right" title="mlos_bench.services.types package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="mlos_bench.services.remote.ssh.ssh_fileshare.html" class="btn btn-neutral float-right" title="mlos_bench.services.remote.ssh.ssh_fileshare module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

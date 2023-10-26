@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mlos_bench.services.remote.ssh.ssh_service module &mdash; MlosCore 0.1.dev1+g1f0f8ee documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/documentation_options.js?v=f47ffa2f"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="mlos_bench.services.types package" href="mlos_bench.services.types.html" />
+    <link rel="prev" title="mlos_bench.services.remote.ssh.ssh_host_service module" href="mlos_bench.services.remote.ssh.ssh_host_service.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            MlosCore
+          </a>
+              <div class="version">
+                0.1.dev1+g1f0f8ee
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html">mlos-core API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html#mlos-bench-api">mlos-bench API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../mlos_core/modules.html">mlos_core</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">mlos_bench</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="mlos_bench.html">mlos_bench package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="mlos_bench.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.config.html">mlos_bench.config package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.environments.html">mlos_bench.environments package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.optimizers.html">mlos_bench.optimizers package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="mlos_bench.services.html">mlos_bench.services package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.storage.html">mlos_bench.storage package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.html">mlos_bench.tests package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.tunables.html">mlos_bench.tunables package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.html#submodules">Submodules</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">MlosCore</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">mlos_bench</a></li>
+          <li class="breadcrumb-item"><a href="mlos_bench.html">mlos_bench package</a></li>
+          <li class="breadcrumb-item"><a href="mlos_bench.services.html">mlos_bench.services package</a></li>
+          <li class="breadcrumb-item"><a href="mlos_bench.services.remote.html">mlos_bench.services.remote package</a></li>
+          <li class="breadcrumb-item"><a href="mlos_bench.services.remote.ssh.html">mlos_bench.services.remote.ssh package</a></li>
+      <li class="breadcrumb-item active">mlos_bench.services.remote.ssh.ssh_service module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/api/mlos_bench/mlos_bench.services.remote.ssh.ssh_service.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-mlos_bench.services.remote.ssh.ssh_service">
+<span id="mlos-bench-services-remote-ssh-ssh-service-module"></span><h1>mlos_bench.services.remote.ssh.ssh_service module<a class="headerlink" href="#module-mlos_bench.services.remote.ssh.ssh_service" title="Link to this heading">¶</a></h1>
+<p>A collection functions for interacting with SSH servers as file shares.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.ssh_service.SshClient">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.services.remote.ssh.ssh_service.</span></span><span class="sig-name descname"><span class="pre">SshClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClient" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">SSHClient</span></code></p>
+<p>Wrapper around SSHClient to help provide connection caching and reconnect logic.</p>
+<p>Used by the SshService to try and maintain a single connection to hosts,
+handle reconnects if possible, and use that to run commands rather than
+reconnect for each command.</p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">auth_banner_received</span></code>(msg, lang)</p></td>
+<td><p>An incoming authentication banner was received</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">auth_completed</span></code>()</p></td>
+<td><p>Authentication was completed successfully</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.services.remote.ssh.ssh_service.SshClient.connection" title="mlos_bench.services.remote.ssh.ssh_service.SshClient.connection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">connection</span></code></a>()</p></td>
+<td><p>Waits for and returns the SSHClientConnection to be established or lost.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.services.remote.ssh.ssh_service.SshClient.connection_lost" title="mlos_bench.services.remote.ssh.ssh_service.SshClient.connection_lost"><code class="xref py py-obj docutils literal notranslate"><span class="pre">connection_lost</span></code></a>(exc)</p></td>
+<td><p>Called when a connection is lost or closed</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.services.remote.ssh.ssh_service.SshClient.connection_made" title="mlos_bench.services.remote.ssh.ssh_service.SshClient.connection_made"><code class="xref py py-obj docutils literal notranslate"><span class="pre">connection_made</span></code></a>(conn)</p></td>
+<td><p>Override hook provided by asyncssh.SSHClient.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">debug_msg_received</span></code>(msg, lang, always_display)</p></td>
+<td><p>A debug message was received on this connection</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.services.remote.ssh.ssh_service.SshClient.id_from_connection" title="mlos_bench.services.remote.ssh.ssh_service.SshClient.id_from_connection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">id_from_connection</span></code></a>(connection)</p></td>
+<td><p>Gets a unique id repr for the connection.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.services.remote.ssh.ssh_service.SshClient.id_from_params" title="mlos_bench.services.remote.ssh.ssh_service.SshClient.id_from_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">id_from_params</span></code></a>(connect_params)</p></td>
+<td><p>Gets a unique id repr for the connection.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">kbdint_auth_requested</span></code>()</p></td>
+<td><p>Keyboard-interactive authentication has been requested</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">kbdint_challenge_received</span></code>(name, ...)</p></td>
+<td><p>A keyboard-interactive auth challenge has been received</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">password_auth_requested</span></code>()</p></td>
+<td><p>Password authentication has been requested</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">password_change_failed</span></code>()</p></td>
+<td><p>The requested password change has failed</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">password_change_requested</span></code>(prompt, lang)</p></td>
+<td><p>A password change has been requested</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">password_changed</span></code>()</p></td>
+<td><p>The requested password change was successful</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">public_key_auth_requested</span></code>()</p></td>
+<td><p>Public key authentication has been requested</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_host_ca_key</span></code>(host, addr, port, key)</p></td>
+<td><p>Return whether key is an authorized CA key for this host</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_host_public_key</span></code>(host, addr, port, key)</p></td>
+<td><p>Return whether key is an authorized key for this host</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.ssh_service.SshClient.connection">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">connection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">SSHClientConnection</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClient.connection" title="Link to this definition">¶</a></dt>
+<dd><p>Waits for and returns the SSHClientConnection to be established or lost.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.ssh_service.SshClient.connection_lost">
+<span class="sig-name descname"><span class="pre">connection_lost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Exception</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClient.connection_lost" title="Link to this definition">¶</a></dt>
+<dd><p>Called when a connection is lost or closed</p>
+<p>This method is called when a connection is closed. If the
+connection is shut down cleanly, <em>exc</em> will be <cite>None</cite>.
+Otherwise, it will be an exception explaining the reason for
+the disconnect.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>exc</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code>) – The exception which caused the connection to close, or
+<cite>None</cite> if the connection closed cleanly</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.ssh_service.SshClient.connection_made">
+<span class="sig-name descname"><span class="pre">connection_made</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SSHClientConnection</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClient.connection_made" title="Link to this definition">¶</a></dt>
+<dd><p>Override hook provided by asyncssh.SSHClient.</p>
+<p>Changes the connection_id from _CONNECTION_PENDING to a unique id repr.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.ssh_service.SshClient.id_from_connection">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id_from_connection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SSHClientConnection</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClient.id_from_connection" title="Link to this definition">¶</a></dt>
+<dd><p>Gets a unique id repr for the connection.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.ssh_service.SshClient.id_from_params">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id_from_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connect_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClient.id_from_params" title="Link to this definition">¶</a></dt>
+<dd><p>Gets a unique id repr for the connection.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.ssh_service.SshClientCache">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.services.remote.ssh.ssh_service.</span></span><span class="sig-name descname"><span class="pre">SshClientCache</span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClientCache" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Manages a cache of SshClient connections.
+Note: Only one per event loop thread supported.
+See additional details in SshService comments.</p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.services.remote.ssh.ssh_service.SshClientCache.cleanup" title="mlos_bench.services.remote.ssh.ssh_service.SshClientCache.cleanup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cleanup</span></code></a>()</p></td>
+<td><p>Closes all cached connections.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.services.remote.ssh.ssh_service.SshClientCache.enter" title="mlos_bench.services.remote.ssh.ssh_service.SshClientCache.enter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enter</span></code></a>()</p></td>
+<td><p>Manages the cache lifecycle with reference counting.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.services.remote.ssh.ssh_service.SshClientCache.exit" title="mlos_bench.services.remote.ssh.ssh_service.SshClientCache.exit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">exit</span></code></a>()</p></td>
+<td><p>Manages the cache lifecycle with reference counting.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.services.remote.ssh.ssh_service.SshClientCache.get_client_connection" title="mlos_bench.services.remote.ssh.ssh_service.SshClientCache.get_client_connection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_client_connection</span></code></a>(connect_params)</p></td>
+<td><p>Gets a (possibly cached) client connection.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.ssh_service.SshClientCache.cleanup">
+<span class="sig-name descname"><span class="pre">cleanup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClientCache.cleanup" title="Link to this definition">¶</a></dt>
+<dd><p>Closes all cached connections.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.ssh_service.SshClientCache.enter">
+<span class="sig-name descname"><span class="pre">enter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClientCache.enter" title="Link to this definition">¶</a></dt>
+<dd><p>Manages the cache lifecycle with reference counting.
+To be used in the __enter__ method of a caller’s context manager.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.ssh_service.SshClientCache.exit">
+<span class="sig-name descname"><span class="pre">exit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClientCache.exit" title="Link to this definition">¶</a></dt>
+<dd><p>Manages the cache lifecycle with reference counting.
+To be used in the __exit__ method of a caller’s context manager.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.ssh_service.SshClientCache.get_client_connection">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_client_connection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connect_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">SSHClientConnection</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#mlos_bench.services.remote.ssh.ssh_service.SshClient" title="mlos_bench.services.remote.ssh.ssh_service.SshClient"><span class="pre">SshClient</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClientCache.get_client_connection" title="Link to this definition">¶</a></dt>
+<dd><p>Gets a (possibly cached) client connection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>connect_params: dict</strong></dt><dd><p>Parameters to pass to asyncssh.create_connection.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>Tuple[SSHClientConnection, SshClient]</dt><dd><p>A tuple of (SSHClientConnection, SshClient).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.ssh_service.SshService">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.services.remote.ssh.ssh_service.</span></span><span class="sig-name descname"><span class="pre">SshService</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.services.base_service.html#mlos_bench.services.base_service.Service" title="mlos_bench.services.base_service.Service"><span class="pre">Service</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">methods</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Callable</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshService" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="mlos_bench.services.base_service.html#mlos_bench.services.base_service.Service" title="mlos_bench.services.base_service.Service"><code class="xref py py-class docutils literal notranslate"><span class="pre">Service</span></code></a></p>
+<p>Base class for SSH services.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">config_loader_service</span></code></dt><dd><p>Return a config loader service.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.services.remote.ssh.ssh_service.SshService.clear_client_cache" title="mlos_bench.services.remote.ssh.ssh_service.SshService.clear_client_cache"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear_client_cache</span></code></a>()</p></td>
+<td><p>Clears the cache of client connections.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">export</span></code>()</p></td>
+<td><p>Return a dictionary of functions available in this service.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">merge_methods</span></code>(ext_methods, local_methods)</p></td>
+<td><p>Merge methods from the external caller with the local ones.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">new</span></code>(class_name[, config, global_config, parent])</p></td>
+<td><p>Factory method for a new service with a given config.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">pprint</span></code>()</p></td>
+<td><p>Produce a human-readable string listing all public methods of the service.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code>(services)</p></td>
+<td><p>Register new mix-in services.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>FutureReturnType</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.ssh_service.SshService.CoroReturnType">
+<span class="sig-name descname"><span class="pre">CoroReturnType</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">~CoroReturnType</span></em><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshService.CoroReturnType" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.ssh_service.SshService.FutureReturnType">
+<span class="sig-name descname"><span class="pre">FutureReturnType</span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshService.FutureReturnType" title="Link to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">Future</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">CoroReturnType</span></code>]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.ssh_service.SshService.clear_client_cache">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">clear_client_cache</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshService.clear_client_cache" title="Link to this definition">¶</a></dt>
+<dd><p>Clears the cache of client connections.
+Note: This may cause in flight operations to fail.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mlos_bench.services.remote.ssh.ssh_host_service.html" class="btn btn-neutral float-left" title="mlos_bench.services.remote.ssh.ssh_host_service module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mlos_bench.services.types.html" class="btn btn-neutral float-right" title="mlos_bench.services.types package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, GSL.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

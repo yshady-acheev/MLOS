@@ -1,0 +1,18 @@
+mlos\_bench.tests.services.remote.ssh package
+=============================================
+
+.. automodule:: mlos_bench.tests.services.remote.ssh
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   mlos_bench.tests.services.remote.ssh.conftest
+   mlos_bench.tests.services.remote.ssh.test_ssh_fileshare
+   mlos_bench.tests.services.remote.ssh.test_ssh_host_service
+   mlos_bench.tests.services.remote.ssh.test_ssh_service
