@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench package &mdash; MlosCore 0.1.dev1+g156dd4b documentation</title>
+  <title>mlos_bench package &mdash; MlosCore 0.1.dev1+g31e0d89 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
@@ -12,7 +12,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=1e745c0e"></script>
+        <script src="../../_static/documentation_options.js?v=56a15283"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g156dd4b
+                0.1.dev1+g31e0d89
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -67,6 +67,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.event_loop_context.html">mlos_bench.event_loop_context module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.launcher.html">mlos_bench.launcher module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.run.html">mlos_bench.run module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.util.html">mlos_bench.util module</a></li>
@@ -443,6 +444,11 @@ OS/application parameter autotuning.</p>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.conftest.html#mlos_bench.tests.conftest.tunable_groups_config"><code class="docutils literal notranslate"><span class="pre">tunable_groups_config()</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.tests.event_loop_context_test.html">mlos_bench.tests.event_loop_context_test module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.event_loop_context_test.html#mlos_bench.tests.event_loop_context_test.EventLoopContextCaller"><code class="docutils literal notranslate"><span class="pre">EventLoopContextCaller</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.event_loop_context_test.html#mlos_bench.tests.event_loop_context_test.test_event_loop_context"><code class="docutils literal notranslate"><span class="pre">test_event_loop_context()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.tests.launcher_parse_args_test.html">mlos_bench.tests.launcher_parse_args_test module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.launcher_parse_args_test.html#mlos_bench.tests.launcher_parse_args_test.config_paths"><code class="docutils literal notranslate"><span class="pre">config_paths()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.launcher_parse_args_test.html#mlos_bench.tests.launcher_parse_args_test.test_launcher_args_parse_1"><code class="docutils literal notranslate"><span class="pre">test_launcher_args_parse_1()</span></code></a></li>
@@ -523,6 +529,17 @@ OS/application parameter autotuning.</p>
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="mlos_bench.event_loop_context.html">mlos_bench.event_loop_context module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mlos_bench.event_loop_context.html#mlos_bench.event_loop_context.EventLoopContext"><code class="docutils literal notranslate"><span class="pre">EventLoopContext</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.event_loop_context.html#mlos_bench.event_loop_context.EventLoopContext.CoroReturnType"><code class="docutils literal notranslate"><span class="pre">EventLoopContext.CoroReturnType</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.event_loop_context.html#mlos_bench.event_loop_context.EventLoopContext.FutureReturnType"><code class="docutils literal notranslate"><span class="pre">EventLoopContext.FutureReturnType</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.event_loop_context.html#mlos_bench.event_loop_context.EventLoopContext.enter"><code class="docutils literal notranslate"><span class="pre">EventLoopContext.enter()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.event_loop_context.html#mlos_bench.event_loop_context.EventLoopContext.exit"><code class="docutils literal notranslate"><span class="pre">EventLoopContext.exit()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.event_loop_context.html#mlos_bench.event_loop_context.EventLoopContext.run_coroutine"><code class="docutils literal notranslate"><span class="pre">EventLoopContext.run_coroutine()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="mlos_bench.launcher.html">mlos_bench.launcher module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="mlos_bench.launcher.html#mlos_bench.launcher.Launcher"><code class="docutils literal notranslate"><span class="pre">Launcher</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.launcher.html#mlos_bench.launcher.Launcher.config_loader"><code class="docutils literal notranslate"><span class="pre">Launcher.config_loader</span></code></a></li>
