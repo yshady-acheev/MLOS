@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Index &mdash; MlosCore 0.1.dev1+g339ed2a documentation</title>
+  <title>Index &mdash; MlosCore 0.1.dev1+g9cdc5f4 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/plot_directive.css" type="text/css" />
@@ -11,7 +11,7 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="_static/documentation_options.js?v=76fa5ec0"></script>
+        <script src="_static/documentation_options.js?v=01dd364d"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -32,7 +32,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g339ed2a
+                0.1.dev1+g9cdc5f4
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -197,7 +197,7 @@
         <li><a href="api/mlos_core/mlos_core.optimizers.html#mlos_core.optimizers.SmacOptimizer.acquisition_function">(mlos_core.optimizers.SmacOptimizer method)</a>
 </li>
       </ul></li>
-      <li><a href="api/mlos_bench/mlos_bench.tests.services.remote.ssh.conftest.html#mlos_bench.tests.services.remote.ssh.conftest.alt_test_server">alt_test_server() (in module mlos_bench.tests.services.remote.ssh.conftest)</a>
+      <li><a href="api/mlos_bench/mlos_bench.tests.services.remote.ssh.fixtures.html#mlos_bench.tests.services.remote.ssh.fixtures.alt_test_server">alt_test_server() (in module mlos_bench.tests.services.remote.ssh.fixtures)</a>
 </li>
       <li><a href="api/mlos_bench/mlos_bench.tests.html#mlos_bench.tests.are_dir_trees_equal">are_dir_trees_equal() (in module mlos_bench.tests)</a>
 </li>
@@ -321,9 +321,9 @@
       </ul></li>
       <li><a href="api/mlos_bench/mlos_bench.tests.html#mlos_bench.tests.check_class_name">check_class_name() (in module mlos_bench.tests)</a>
 </li>
-      <li><a href="api/mlos_bench/mlos_bench.tests.environments.local.html#mlos_bench.tests.environments.local.check_env_fail_telemetry">check_env_fail_telemetry() (in module mlos_bench.tests.environments.local)</a>
+      <li><a href="api/mlos_bench/mlos_bench.tests.environments.html#mlos_bench.tests.environments.check_env_fail_telemetry">check_env_fail_telemetry() (in module mlos_bench.tests.environments)</a>
 </li>
-      <li><a href="api/mlos_bench/mlos_bench.tests.environments.local.html#mlos_bench.tests.environments.local.check_env_success">check_env_success() (in module mlos_bench.tests.environments.local)</a>
+      <li><a href="api/mlos_bench/mlos_bench.tests.environments.html#mlos_bench.tests.environments.check_env_success">check_env_success() (in module mlos_bench.tests.environments)</a>
 </li>
       <li><a href="api/mlos_bench/mlos_bench.util.html#mlos_bench.util.check_required_params">check_required_params() (in module mlos_bench.util)</a>
 </li>
@@ -1914,6 +1914,13 @@
 </li>
       </ul></li>
       <li>
+    mlos_bench.tests.services.remote.ssh.fixtures
+
+      <ul>
+        <li><a href="api/mlos_bench/mlos_bench.tests.services.remote.ssh.fixtures.html#module-mlos_bench.tests.services.remote.ssh.fixtures">module</a>
+</li>
+      </ul></li>
+      <li>
     mlos_bench.tests.services.remote.ssh.test_ssh_fileshare
 
       <ul>
@@ -2551,6 +2558,8 @@
 </li>
         <li><a href="api/mlos_bench/mlos_bench.tests.services.remote.ssh.conftest.html#module-mlos_bench.tests.services.remote.ssh.conftest">mlos_bench.tests.services.remote.ssh.conftest</a>
 </li>
+        <li><a href="api/mlos_bench/mlos_bench.tests.services.remote.ssh.fixtures.html#module-mlos_bench.tests.services.remote.ssh.fixtures">mlos_bench.tests.services.remote.ssh.fixtures</a>
+</li>
         <li><a href="api/mlos_bench/mlos_bench.tests.services.remote.ssh.test_ssh_fileshare.html#module-mlos_bench.tests.services.remote.ssh.test_ssh_fileshare">mlos_bench.tests.services.remote.ssh.test_ssh_fileshare</a>
 </li>
         <li><a href="api/mlos_bench/mlos_bench.tests.services.remote.ssh.test_ssh_host_service.html#module-mlos_bench.tests.services.remote.ssh.test_ssh_host_service">mlos_bench.tests.services.remote.ssh.test_ssh_host_service</a>
@@ -3148,13 +3157,13 @@
 </li>
       <li><a href="api/mlos_bench/mlos_bench.storage.sql.storage.html#mlos_bench.storage.sql.storage.SqlStorage">SqlStorage (class in mlos_bench.storage.sql.storage)</a>, <a href="generated/mlos_bench.storage.sql.storage.SqlStorage.html#mlos_bench.storage.sql.storage.SqlStorage">[1]</a>
 </li>
-      <li><a href="api/mlos_bench/mlos_bench.tests.services.remote.ssh.conftest.html#mlos_bench.tests.services.remote.ssh.conftest.ssh_fileshare_service">ssh_fileshare_service() (in module mlos_bench.tests.services.remote.ssh.conftest)</a>
+      <li><a href="api/mlos_bench/mlos_bench.tests.services.remote.ssh.fixtures.html#mlos_bench.tests.services.remote.ssh.fixtures.ssh_fileshare_service">ssh_fileshare_service() (in module mlos_bench.tests.services.remote.ssh.fixtures)</a>
 </li>
-      <li><a href="api/mlos_bench/mlos_bench.tests.services.remote.ssh.conftest.html#mlos_bench.tests.services.remote.ssh.conftest.ssh_host_service">ssh_host_service() (in module mlos_bench.tests.services.remote.ssh.conftest)</a>
+      <li><a href="api/mlos_bench/mlos_bench.tests.services.remote.ssh.fixtures.html#mlos_bench.tests.services.remote.ssh.fixtures.ssh_host_service">ssh_host_service() (in module mlos_bench.tests.services.remote.ssh.fixtures)</a>
 </li>
-      <li><a href="api/mlos_bench/mlos_bench.tests.services.remote.ssh.conftest.html#mlos_bench.tests.services.remote.ssh.conftest.ssh_test_server">ssh_test_server() (in module mlos_bench.tests.services.remote.ssh.conftest)</a>
+      <li><a href="api/mlos_bench/mlos_bench.tests.services.remote.ssh.fixtures.html#mlos_bench.tests.services.remote.ssh.fixtures.ssh_test_server">ssh_test_server() (in module mlos_bench.tests.services.remote.ssh.fixtures)</a>
 </li>
-      <li><a href="api/mlos_bench/mlos_bench.tests.services.remote.ssh.conftest.html#mlos_bench.tests.services.remote.ssh.conftest.ssh_test_server_hostname">ssh_test_server_hostname() (in module mlos_bench.tests.services.remote.ssh.conftest)</a>
+      <li><a href="api/mlos_bench/mlos_bench.tests.services.remote.ssh.fixtures.html#mlos_bench.tests.services.remote.ssh.fixtures.ssh_test_server_hostname">ssh_test_server_hostname() (in module mlos_bench.tests.services.remote.ssh.fixtures)</a>
 </li>
       <li><a href="api/mlos_bench/mlos_bench.services.remote.ssh.ssh_service.html#mlos_bench.services.remote.ssh.ssh_service.SshClient">SshClient (class in mlos_bench.services.remote.ssh.ssh_service)</a>
 </li>

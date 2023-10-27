@@ -1,0 +1,7 @@
+mlos\_bench.tests.services.remote.ssh.fixtures module
+=====================================================
+
+.. automodule:: mlos_bench.tests.services.remote.ssh.fixtures
+   :members:
+   :undoc-members:
+   :show-inheritance:

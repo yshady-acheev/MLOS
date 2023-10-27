@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Coverage for mlos_bench/mlos_bench/environments/composite_env.py: 84%</title>
+    <title>Coverage for mlos_bench/mlos_bench/environments/composite_env.py: 89%</title>
     <link rel="icon" sizes="32x32" href="favicon_32.png">
     <link rel="stylesheet" href="style.css" type="text/css">
     <script type="text/javascript" src="coverage_html.js" defer></script>
@@ -12,7 +12,7 @@
     <div class="content">
         <h1>
             <span class="text">Coverage for </span><b>mlos_bench/mlos_bench/environments/composite_env.py</b>:
-            <span class="pc_cov">84%</span>
+            <span class="pc_cov">89%</span>
         </h1>
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -55,8 +55,8 @@
         </aside>
         <h2>
             <span class="text">96 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">81<span class="text"> run</span></button>
-            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">15<span class="text"> missing</span></button>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">85<span class="text"> run</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">11<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
         <p class="text">
@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_ce2854f29b8d638d___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.3.2">coverage.py v7.3.2</a>,
-            created at 2023-10-27 20:38 +0000
+            created at 2023-10-27 21:16 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -255,10 +255,10 @@
     <p class="pln"><span class="n"><a id="t173" href="#t173">173</a></span><span class="t"><span class="str">        i.e., calling it several times is equivalent to a single call.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t174" href="#t174">174</a></span><span class="t"><span class="str">        The environments are being torn down in the reverse order.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t175" href="#t175">175</a></span><span class="t"><span class="str">        """</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t176" href="#t176">176</a></span><span class="t">        <span class="key">assert</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_in_context</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t177" href="#t177">177</a></span><span class="t">        <span class="key">for</span> <span class="nam">env_context</span> <span class="key">in</span> <span class="nam">reversed</span><span class="op">(</span><span class="nam">self</span><span class="op">.</span><span class="nam">_child_contexts</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t178" href="#t178">178</a></span><span class="t">            <span class="nam">env_context</span><span class="op">.</span><span class="nam">teardown</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t179" href="#t179">179</a></span><span class="t">        <span class="nam">super</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">teardown</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t176" href="#t176">176</a></span><span class="t">        <span class="key">assert</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_in_context</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t177" href="#t177">177</a></span><span class="t">        <span class="key">for</span> <span class="nam">env_context</span> <span class="key">in</span> <span class="nam">reversed</span><span class="op">(</span><span class="nam">self</span><span class="op">.</span><span class="nam">_child_contexts</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t178" href="#t178">178</a></span><span class="t">            <span class="nam">env_context</span><span class="op">.</span><span class="nam">teardown</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t179" href="#t179">179</a></span><span class="t">        <span class="nam">super</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">teardown</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t180" href="#t180">180</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t181" href="#t181">181</a></span><span class="t">    <span class="key">def</span> <span class="nam">run</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span> <span class="op">-></span> <span class="nam">Tuple</span><span class="op">[</span><span class="nam">Status</span><span class="op">,</span> <span class="nam">Optional</span><span class="op">[</span><span class="nam">Dict</span><span class="op">[</span><span class="nam">str</span><span class="op">,</span> <span class="nam">float</span><span class="op">]</span><span class="op">]</span><span class="op">]</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t182" href="#t182">182</a></span><span class="t">        <span class="str">"""</span>&nbsp;</span><span class="r"></span></p>
@@ -327,7 +327,7 @@
             <a id="nextFileLink" class="nav" href="d_ce2854f29b8d638d___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.3.2">coverage.py v7.3.2</a>,
-            created at 2023-10-27 20:38 +0000
+            created at 2023-10-27 21:16 +0000
         </p>
     </div>
 </footer>

@@ -13,6 +13,7 @@ Submodules
    :maxdepth: 4
 
    mlos_bench.tests.services.remote.ssh.conftest
+   mlos_bench.tests.services.remote.ssh.fixtures
    mlos_bench.tests.services.remote.ssh.test_ssh_fileshare
    mlos_bench.tests.services.remote.ssh.test_ssh_host_service
    mlos_bench.tests.services.remote.ssh.test_ssh_service
