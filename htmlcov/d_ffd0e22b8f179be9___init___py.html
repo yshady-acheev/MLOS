@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_23ca098d381c2703___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.3.2">coverage.py v7.3.2</a>,
-            created at 2023-11-02 20:55 +0000
+            created at 2023-11-02 21:10 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -107,7 +107,7 @@
     <p class="pln"><span class="n"><a id="t25" href="#t25">25</a></span><span class="t"><span class="com"># Use with @requires_docker above a test_...() function.</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t26" href="#t26">26</a></span><span class="t"><span class="nam">DOCKER</span> <span class="op">=</span> <span class="nam">shutil</span><span class="op">.</span><span class="nam">which</span><span class="op">(</span><span class="str">'docker'</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t27" href="#t27">27</a></span><span class="t"><span class="key">if</span> <span class="nam">DOCKER</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t28" href="#t28">28</a></span><span class="t">    <span class="nam">cmd</span> <span class="op">=</span> <span class="nam">run</span><span class="op">(</span><span class="str">"docker builder inspect default"</span><span class="op">,</span> <span class="nam">shell</span><span class="op">=</span><span class="key">True</span><span class="op">,</span> <span class="nam">check</span><span class="op">=</span><span class="key">False</span><span class="op">,</span> <span class="nam">capture_output</span><span class="op">=</span><span class="key">True</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t28" href="#t28">28</a></span><span class="t">    <span class="nam">cmd</span> <span class="op">=</span> <span class="nam">run</span><span class="op">(</span><span class="str">"docker builder inspect default || docker buildx inspect default"</span><span class="op">,</span> <span class="nam">shell</span><span class="op">=</span><span class="key">True</span><span class="op">,</span> <span class="nam">check</span><span class="op">=</span><span class="key">False</span><span class="op">,</span> <span class="nam">capture_output</span><span class="op">=</span><span class="key">True</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t29" href="#t29">29</a></span><span class="t">    <span class="nam">stdout</span> <span class="op">=</span> <span class="nam">cmd</span><span class="op">.</span><span class="nam">stdout</span><span class="op">.</span><span class="nam">decode</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t30" href="#t30">30</a></span><span class="t">    <span class="key">if</span> <span class="nam">cmd</span><span class="op">.</span><span class="nam">returncode</span> <span class="op">!=</span> <span class="num">0</span> <span class="key">or</span> <span class="key">not</span> <span class="nam">any</span><span class="op">(</span><span class="nam">line</span> <span class="key">for</span> <span class="nam">line</span> <span class="key">in</span> <span class="nam">stdout</span><span class="op">.</span><span class="nam">splitlines</span><span class="op">(</span><span class="op">)</span> <span class="key">if</span> <span class="str">'Platform'</span> <span class="key">in</span> <span class="nam">line</span> <span class="key">and</span> <span class="str">'linux'</span> <span class="key">in</span> <span class="nam">line</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t31" href="#t31">31</a></span><span class="t">        <span class="nam">debug</span><span class="op">(</span><span class="str">"Docker is available but missing support for targeting linux platform."</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -222,7 +222,7 @@
             <a id="nextFileLink" class="nav" href="d_23ca098d381c2703___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.3.2">coverage.py v7.3.2</a>,
-            created at 2023-11-02 20:55 +0000
+            created at 2023-11-02 21:10 +0000
         </p>
     </div>
 </footer>
