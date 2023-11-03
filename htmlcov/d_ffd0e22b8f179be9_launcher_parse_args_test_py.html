@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Coverage for mlos_bench/mlos_bench/tests/launcher_parse_args_test.py: 90%</title>
+    <title>Coverage for mlos_bench/mlos_bench/tests/launcher_parse_args_test.py: 93%</title>
     <link rel="icon" sizes="32x32" href="favicon_32.png">
     <link rel="stylesheet" href="style.css" type="text/css">
     <script type="text/javascript" src="coverage_html.js" defer></script>
@@ -12,7 +12,7 @@
     <div class="content">
         <h1>
             <span class="text">Coverage for </span><b>mlos_bench/mlos_bench/tests/launcher_parse_args_test.py</b>:
-            <span class="pc_cov">90%</span>
+            <span class="pc_cov">93%</span>
         </h1>
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -54,9 +54,9 @@
             </div>
         </aside>
         <h2>
-            <span class="text">61 statements &nbsp;</span>
+            <span class="text">59 statements &nbsp;</span>
             <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">55<span class="text"> run</span></button>
-            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">6<span class="text"> missing</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">4<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
         <p class="text">
@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_ffd0e22b8f179be9_launcher_run_test_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.3.2">coverage.py v7.3.2</a>,
-            created at 2023-11-03 00:37 +0000
+            created at 2023-11-03 20:06 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -134,11 +134,11 @@
     <p class="pln"><span class="n"><a id="t52" href="#t52">52</a></span><span class="t"><span class="str">    """</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t53" href="#t53">53</a></span><span class="t">    <span class="com"># The VSCode pytest wrapper actually starts in a different directory before</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t54" href="#t54">54</a></span><span class="t">    <span class="com"># changing into the code directory, but doesn't update the PWD environment</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t55" href="#t55">55</a></span><span class="t">    <span class="com"># variable.</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t56" href="#t56">56</a></span><span class="t">    <span class="nam">expected_root_pwd</span> <span class="op">=</span> <span class="nam">os</span><span class="op">.</span><span class="nam">environ</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">'VSCODE_CWD'</span><span class="op">,</span> <span class="nam">os</span><span class="op">.</span><span class="nam">getcwd</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t57" href="#t57">57</a></span><span class="t">    <span class="key">if</span> <span class="nam">sys</span><span class="op">.</span><span class="nam">platform</span> <span class="op">==</span> <span class="str">'win32'</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t58" href="#t58">58</a></span><span class="t">        <span class="com"># Some env tweaks for platform compatibility.</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t59" href="#t59">59</a></span><span class="t">        <span class="nam">os</span><span class="op">.</span><span class="nam">environ</span><span class="op">[</span><span class="str">'PWD'</span><span class="op">]</span> <span class="op">=</span> <span class="nam">expected_root_pwd</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t55" href="#t55">55</a></span><span class="t">    <span class="com"># variable so we use a separate variable.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t56" href="#t56">56</a></span><span class="t">    <span class="com"># See global_test_config.jsonc for more details.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t57" href="#t57">57</a></span><span class="t">    <span class="nam">os</span><span class="op">.</span><span class="nam">environ</span><span class="op">[</span><span class="str">"CUSTOM_PATH_FROM_ENV"</span><span class="op">]</span> <span class="op">=</span> <span class="nam">os</span><span class="op">.</span><span class="nam">getcwd</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t58" href="#t58">58</a></span><span class="t">    <span class="key">if</span> <span class="nam">sys</span><span class="op">.</span><span class="nam">platform</span> <span class="op">==</span> <span class="str">'win32'</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t59" href="#t59">59</a></span><span class="t">        <span class="com"># Some env tweaks for platform compatibility.</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t60" href="#t60">60</a></span><span class="t">        <span class="nam">os</span><span class="op">.</span><span class="nam">environ</span><span class="op">[</span><span class="str">'USER'</span><span class="op">]</span> <span class="op">=</span> <span class="nam">os</span><span class="op">.</span><span class="nam">environ</span><span class="op">[</span><span class="str">'USERNAME'</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t61" href="#t61">61</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t62" href="#t62">62</a></span><span class="t">    <span class="com"># This is part of the minimal required args by the Launcher.</span>&nbsp;</span><span class="r"></span></p>
@@ -160,7 +160,7 @@
     <p class="run"><span class="n"><a id="t78" href="#t78">78</a></span><span class="t">    <span class="key">assert</span> <span class="nam">launcher</span><span class="op">.</span><span class="nam">global_config</span><span class="op">[</span><span class="str">'test_global_value_2'</span><span class="op">]</span> <span class="op">==</span> <span class="str">'from-args'</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t79" href="#t79">79</a></span><span class="t">    <span class="com"># Check that we can expand a $var in a config file that references an environment variable.</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t80" href="#t80">80</a></span><span class="t">    <span class="key">assert</span> <span class="nam">path_join</span><span class="op">(</span><span class="nam">launcher</span><span class="op">.</span><span class="nam">global_config</span><span class="op">[</span><span class="str">"pathVarWithEnvVarRef"</span><span class="op">]</span><span class="op">,</span> <span class="nam">abs_path</span><span class="op">=</span><span class="key">True</span><span class="op">)</span> <span class="xx">\</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t81" href="#t81">81</a></span><span class="t">        <span class="op">==</span> <span class="nam">path_join</span><span class="op">(</span><span class="nam">expected_root_pwd</span><span class="op">,</span> <span class="str">"foo"</span><span class="op">,</span> <span class="nam">abs_path</span><span class="op">=</span><span class="key">True</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t81" href="#t81">81</a></span><span class="t">        <span class="op">==</span> <span class="nam">path_join</span><span class="op">(</span><span class="nam">os</span><span class="op">.</span><span class="nam">getcwd</span><span class="op">(</span><span class="op">)</span><span class="op">,</span> <span class="str">"foo"</span><span class="op">,</span> <span class="nam">abs_path</span><span class="op">=</span><span class="key">True</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t82" href="#t82">82</a></span><span class="t">    <span class="key">assert</span> <span class="nam">launcher</span><span class="op">.</span><span class="nam">global_config</span><span class="op">[</span><span class="str">"varWithEnvVarRef"</span><span class="op">]</span> <span class="op">==</span> <span class="str">f'user:{getuser()}'</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t83" href="#t83">83</a></span><span class="t">    <span class="key">assert</span> <span class="nam">launcher</span><span class="op">.</span><span class="nam">teardown</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t84" href="#t84">84</a></span><span class="t">    <span class="com"># Check that the environment that got loaded looks to be of the right type.</span>&nbsp;</span><span class="r"></span></p>
@@ -179,11 +179,11 @@
     <p class="pln"><span class="n"><a id="t97" href="#t97">97</a></span><span class="t"><span class="str">    """</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t98" href="#t98">98</a></span><span class="t">    <span class="com"># The VSCode pytest wrapper actually starts in a different directory before</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t99" href="#t99">99</a></span><span class="t">    <span class="com"># changing into the code directory, but doesn't update the PWD environment</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t100" href="#t100">100</a></span><span class="t">    <span class="com"># variable.</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t101" href="#t101">101</a></span><span class="t">    <span class="nam">expected_root_pwd</span> <span class="op">=</span> <span class="nam">os</span><span class="op">.</span><span class="nam">environ</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">'VSCODE_CWD'</span><span class="op">,</span> <span class="nam">os</span><span class="op">.</span><span class="nam">getcwd</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t102" href="#t102">102</a></span><span class="t">    <span class="key">if</span> <span class="nam">sys</span><span class="op">.</span><span class="nam">platform</span> <span class="op">==</span> <span class="str">'win32'</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t103" href="#t103">103</a></span><span class="t">        <span class="com"># Some env tweaks for platform compatibility.</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t104" href="#t104">104</a></span><span class="t">        <span class="nam">os</span><span class="op">.</span><span class="nam">environ</span><span class="op">[</span><span class="str">'PWD'</span><span class="op">]</span> <span class="op">=</span> <span class="nam">expected_root_pwd</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t100" href="#t100">100</a></span><span class="t">    <span class="com"># variable so we use a separate variable.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t101" href="#t101">101</a></span><span class="t">    <span class="com"># See global_test_config.jsonc for more details.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t102" href="#t102">102</a></span><span class="t">    <span class="nam">os</span><span class="op">.</span><span class="nam">environ</span><span class="op">[</span><span class="str">"CUSTOM_PATH_FROM_ENV"</span><span class="op">]</span> <span class="op">=</span> <span class="nam">os</span><span class="op">.</span><span class="nam">getcwd</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t103" href="#t103">103</a></span><span class="t">    <span class="key">if</span> <span class="nam">sys</span><span class="op">.</span><span class="nam">platform</span> <span class="op">==</span> <span class="str">'win32'</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t104" href="#t104">104</a></span><span class="t">        <span class="com"># Some env tweaks for platform compatibility.</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t105" href="#t105">105</a></span><span class="t">        <span class="nam">os</span><span class="op">.</span><span class="nam">environ</span><span class="op">[</span><span class="str">'USER'</span><span class="op">]</span> <span class="op">=</span> <span class="nam">os</span><span class="op">.</span><span class="nam">environ</span><span class="op">[</span><span class="str">'USERNAME'</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t106" href="#t106">106</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t107" href="#t107">107</a></span><span class="t">    <span class="nam">config_file</span> <span class="op">=</span> <span class="str">'cli/test-cli-config.jsonc'</span>&nbsp;</span><span class="r"></span></p>
@@ -203,7 +203,7 @@
     <p class="run"><span class="n"><a id="t121" href="#t121">121</a></span><span class="t">    <span class="key">assert</span> <span class="nam">launcher</span><span class="op">.</span><span class="nam">global_config</span><span class="op">[</span><span class="str">'testVnetName'</span><span class="op">]</span> <span class="op">==</span> <span class="str">'MockeryExperiment-vm-vnet'</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t122" href="#t122">122</a></span><span class="t">    <span class="com"># Check that we can expand a $var in a config file that references an environment variable.</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t123" href="#t123">123</a></span><span class="t">    <span class="key">assert</span> <span class="nam">path_join</span><span class="op">(</span><span class="nam">launcher</span><span class="op">.</span><span class="nam">global_config</span><span class="op">[</span><span class="str">"pathVarWithEnvVarRef"</span><span class="op">]</span><span class="op">,</span> <span class="nam">abs_path</span><span class="op">=</span><span class="key">True</span><span class="op">)</span> <span class="xx">\</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t124" href="#t124">124</a></span><span class="t">        <span class="op">==</span> <span class="nam">path_join</span><span class="op">(</span><span class="nam">expected_root_pwd</span><span class="op">,</span> <span class="str">"foo"</span><span class="op">,</span> <span class="nam">abs_path</span><span class="op">=</span><span class="key">True</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t124" href="#t124">124</a></span><span class="t">        <span class="op">==</span> <span class="nam">path_join</span><span class="op">(</span><span class="nam">os</span><span class="op">.</span><span class="nam">getcwd</span><span class="op">(</span><span class="op">)</span><span class="op">,</span> <span class="str">"foo"</span><span class="op">,</span> <span class="nam">abs_path</span><span class="op">=</span><span class="key">True</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t125" href="#t125">125</a></span><span class="t">    <span class="key">assert</span> <span class="nam">launcher</span><span class="op">.</span><span class="nam">global_config</span><span class="op">[</span><span class="str">"varWithEnvVarRef"</span><span class="op">]</span> <span class="op">==</span> <span class="str">f'user:{getuser()}'</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t126" href="#t126">126</a></span><span class="t">    <span class="key">assert</span> <span class="key">not</span> <span class="nam">launcher</span><span class="op">.</span><span class="nam">teardown</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t127" href="#t127">127</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -245,7 +245,7 @@
             <a id="nextFileLink" class="nav" href="d_ffd0e22b8f179be9_launcher_run_test_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.3.2">coverage.py v7.3.2</a>,
-            created at 2023-11-03 00:37 +0000
+            created at 2023-11-03 20:06 +0000
         </p>
     </div>
 </footer>
