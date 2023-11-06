@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_core.optimizers.bayesian_optimizers.smac_optimizer module &mdash; MlosCore 0.1.dev1+g108f5de documentation</title>
+  <title>mlos_core.optimizers.bayesian_optimizers.smac_optimizer module &mdash; MlosCore 0.1.dev1+g82af33b documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
@@ -12,7 +12,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=26a06bea"></script>
+        <script src="../../_static/documentation_options.js?v=606dcd08"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g108f5de
+                0.1.dev1+g82af33b
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -158,7 +158,7 @@ Defaults to <cite>0.1</cite>. Setting this to a higher value favors exploration 
 <td><p>Invokes the acquisition function from this Bayesian optimizer for the given configuration.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#mlos_core.optimizers.bayesian_optimizers.smac_optimizer.SmacOptimizer.cleanup" title="mlos_core.optimizers.bayesian_optimizers.smac_optimizer.SmacOptimizer.cleanup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cleanup</span></code></a>()</p></td>
-<td><p>Cleanup the optimizer.</p></td>
+<td><p>Remove temp files, release resources, etc.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_best_observation</span></code>()</p></td>
 <td><p>Returns the best observation so far as a dataframe.</p></td>
@@ -199,7 +199,8 @@ Defaults to <cite>0.1</cite>. Setting this to a higher value favors exploration 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_core.optimizers.bayesian_optimizers.smac_optimizer.SmacOptimizer.cleanup">
 <span class="sig-name descname"><span class="pre">cleanup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_core.optimizers.bayesian_optimizers.smac_optimizer.SmacOptimizer.cleanup" title="Link to this definition">¶</a></dt>
-<dd><p>Cleanup the optimizer.</p>
+<dd><p>Remove temp files, release resources, etc. after use. Default is no-op.
+Redefine this method in optimizers that require cleanup.</p>
 </dd></dl>
 
 <dl class="py property">
