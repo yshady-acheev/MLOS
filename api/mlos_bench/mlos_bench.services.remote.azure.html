@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.services.remote.azure package &mdash; MlosCore 0.1.dev1+g25e144e documentation</title>
+  <title>mlos_bench.services.remote.azure package &mdash; MlosCore 0.1.dev1+g4a8e54a documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
@@ -12,7 +12,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=aae65e05"></script>
+        <script src="../../_static/documentation_options.js?v=1683efc1"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g25e144e
+                0.1.dev1+g4a8e54a
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -126,16 +126,19 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.services.remote.azure.AzureAuthService.get_access_token" title="mlos_bench.services.remote.azure.AzureAuthService.get_access_token"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_access_token</span></code></a>()</p></td>
 <td><p>Get the access token from Azure CLI, if expired.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">merge_methods</span></code>(ext_methods, local_methods)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.services.remote.azure.AzureAuthService.get_auth_headers" title="mlos_bench.services.remote.azure.AzureAuthService.get_auth_headers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_auth_headers</span></code></a>()</p></td>
+<td><p>Get the authorization part of HTTP headers for REST API calls.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">merge_methods</span></code>(ext_methods, local_methods)</p></td>
 <td><p>Merge methods from the external caller with the local ones.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">new</span></code>(class_name[, config, global_config, parent])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">new</span></code>(class_name[, config, global_config, parent])</p></td>
 <td><p>Factory method for a new service with a given config.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">pprint</span></code>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">pprint</span></code>()</p></td>
 <td><p>Produce a human-readable string listing all public methods of the service.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code>(services)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code>(services)</p></td>
 <td><p>Register new mix-in services.</p></td>
 </tr>
 </tbody>
@@ -144,6 +147,12 @@
 <dt class="sig sig-object py" id="mlos_bench.services.remote.azure.AzureAuthService.get_access_token">
 <span class="sig-name descname"><span class="pre">get_access_token</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.azure.AzureAuthService.get_access_token" title="Link to this definition">¶</a></dt>
 <dd><p>Get the access token from Azure CLI, if expired.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.remote.azure.AzureAuthService.get_auth_headers">
+<span class="sig-name descname"><span class="pre">get_auth_headers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.azure.AzureAuthService.get_auth_headers" title="Link to this definition">¶</a></dt>
+<dd><p>Get the authorization part of HTTP headers for REST API calls.</p>
 </dd></dl>
 
 </dd></dl>
@@ -621,6 +630,7 @@ Result is info on the operation runtime if SUCCEEDED, otherwise {}.</p>
 <li class="toctree-l1"><a class="reference internal" href="mlos_bench.services.remote.azure.azure_auth.html">mlos_bench.services.remote.azure.azure_auth module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="mlos_bench.services.remote.azure.azure_auth.html#mlos_bench.services.remote.azure.azure_auth.AzureAuthService"><code class="docutils literal notranslate"><span class="pre">AzureAuthService</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.remote.azure.azure_auth.html#mlos_bench.services.remote.azure.azure_auth.AzureAuthService.get_access_token"><code class="docutils literal notranslate"><span class="pre">AzureAuthService.get_access_token()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.remote.azure.azure_auth.html#mlos_bench.services.remote.azure.azure_auth.AzureAuthService.get_auth_headers"><code class="docutils literal notranslate"><span class="pre">AzureAuthService.get_auth_headers()</span></code></a></li>
 </ul>
 </li>
 </ul>
