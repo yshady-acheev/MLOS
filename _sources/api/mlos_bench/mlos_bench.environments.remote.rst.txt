@@ -15,4 +15,5 @@ Submodules
    mlos_bench.environments.remote.host_env
    mlos_bench.environments.remote.os_env
    mlos_bench.environments.remote.remote_env
+   mlos_bench.environments.remote.saas_env
    mlos_bench.environments.remote.vm_env

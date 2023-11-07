@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mlos_bench.services.remote.azure.azure_saas module &mdash; MlosCore 0.1.dev1+g6b4cf3e documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/documentation_options.js?v=05ff0414"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="mlos_bench.services.remote.azure.azure_services module" href="mlos_bench.services.remote.azure.azure_services.html" />
+    <link rel="prev" title="mlos_bench.services.remote.azure.azure_fileshare module" href="mlos_bench.services.remote.azure.azure_fileshare.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            MlosCore
+          </a>
+              <div class="version">
+                0.1.dev1+g6b4cf3e
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html">mlos-core API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html#mlos-bench-api">mlos-bench API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../mlos_core/modules.html">mlos_core</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">mlos_bench</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="mlos_bench.html">mlos_bench package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="mlos_bench.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.config.html">mlos_bench.config package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.environments.html">mlos_bench.environments package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.optimizers.html">mlos_bench.optimizers package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="mlos_bench.services.html">mlos_bench.services package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.storage.html">mlos_bench.storage package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.html">mlos_bench.tests package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.tunables.html">mlos_bench.tunables package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.html#submodules">Submodules</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">MlosCore</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">mlos_bench</a></li>
+          <li class="breadcrumb-item"><a href="mlos_bench.html">mlos_bench package</a></li>
+          <li class="breadcrumb-item"><a href="mlos_bench.services.html">mlos_bench.services package</a></li>
+          <li class="breadcrumb-item"><a href="mlos_bench.services.remote.html">mlos_bench.services.remote package</a></li>
+          <li class="breadcrumb-item"><a href="mlos_bench.services.remote.azure.html">mlos_bench.services.remote.azure package</a></li>
+      <li class="breadcrumb-item active">mlos_bench.services.remote.azure.azure_saas module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/api/mlos_bench/mlos_bench.services.remote.azure.azure_saas.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-mlos_bench.services.remote.azure.azure_saas">
+<span id="mlos-bench-services-remote-azure-azure-saas-module"></span><h1>mlos_bench.services.remote.azure.azure_saas module<a class="headerlink" href="#module-mlos_bench.services.remote.azure.azure_saas" title="Link to this heading">¶</a></h1>
+<p>A collection Service functions for configuring SaaS instances on Azure.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="mlos_bench.services.remote.azure.azure_saas.AzureSaaSConfigService">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.services.remote.azure.azure_saas.</span></span><span class="sig-name descname"><span class="pre">AzureSaaSConfigService</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.services.base_service.html#mlos_bench.services.base_service.Service" title="mlos_bench.services.base_service.Service"><span class="pre">Service</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">methods</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Callable</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.services.remote.azure.azure_saas.AzureSaaSConfigService" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="mlos_bench.services.base_service.html#mlos_bench.services.base_service.Service" title="mlos_bench.services.base_service.Service"><code class="xref py py-class docutils literal notranslate"><span class="pre">Service</span></code></a>, <a class="reference internal" href="mlos_bench.services.types.remote_config_type.html#mlos_bench.services.types.remote_config_type.SupportsRemoteConfig" title="mlos_bench.services.types.remote_config_type.SupportsRemoteConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">SupportsRemoteConfig</span></code></a></p>
+<p>Helper methods to configure Azure Flex services.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">config_loader_service</span></code></dt><dd><p>Return a config loader service.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.services.remote.azure.azure_saas.AzureSaaSConfigService.configure" title="mlos_bench.services.remote.azure.azure_saas.AzureSaaSConfigService.configure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">configure</span></code></a>(config, params)</p></td>
+<td><p>Update the parameters of an Azure DB service.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">export</span></code>()</p></td>
+<td><p>Return a dictionary of functions available in this service.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.services.remote.azure.azure_saas.AzureSaaSConfigService.is_config_pending" title="mlos_bench.services.remote.azure.azure_saas.AzureSaaSConfigService.is_config_pending"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_config_pending</span></code></a>(config)</p></td>
+<td><p>Check if the configuration of an Azure DB service requires a reboot or restart.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">merge_methods</span></code>(ext_methods, local_methods)</p></td>
+<td><p>Merge methods from the external caller with the local ones.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">new</span></code>(class_name[, config, global_config, parent])</p></td>
+<td><p>Factory method for a new service with a given config.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">pprint</span></code>()</p></td>
+<td><p>Produce a human-readable string listing all public methods of the service.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code>(services)</p></td>
+<td><p>Register new mix-in services.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.remote.azure.azure_saas.AzureSaaSConfigService.configure">
+<span class="sig-name descname"><span class="pre">configure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.remote.azure.azure_saas.AzureSaaSConfigService.configure" title="Link to this definition">¶</a></dt>
+<dd><p>Update the parameters of an Azure DB service.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>config</strong><span class="classifier">Dict[str, Any]</span></dt><dd><p>Key/value pairs of configuration parameters (e.g., vmName).</p>
+</dd>
+<dt><strong>params</strong><span class="classifier">Dict[str, Any]</span></dt><dd><p>Key/value pairs of the service parameters to update.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>result</strong><span class="classifier">(Status, dict={})</span></dt><dd><p>A pair of Status and result. The result is always {}.
+Status is one of {PENDING, SUCCEEDED, FAILED}</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.remote.azure.azure_saas.AzureSaaSConfigService.is_config_pending">
+<span class="sig-name descname"><span class="pre">is_config_pending</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.remote.azure.azure_saas.AzureSaaSConfigService.is_config_pending" title="Link to this definition">¶</a></dt>
+<dd><p>Check if the configuration of an Azure DB service requires a reboot or restart.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>config</strong><span class="classifier">Dict[str, Any]</span></dt><dd><p>Key/value pairs of configuration parameters (e.g., vmName).</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>result</strong><span class="classifier">(Status, dict)</span></dt><dd><p>A pair of Status and result. A Boolean field
+“isConfigPendingRestart” indicates whether the service restart is required.
+If “isConfigPendingReboot” is set to True, rebooting a VM is necessary.
+Status is one of {PENDING, TIMED_OUT, SUCCEEDED, FAILED}</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mlos_bench.services.remote.azure.azure_fileshare.html" class="btn btn-neutral float-left" title="mlos_bench.services.remote.azure.azure_fileshare module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mlos_bench.services.remote.azure.azure_services.html" class="btn btn-neutral float-right" title="mlos_bench.services.remote.azure.azure_services module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, GSL.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
