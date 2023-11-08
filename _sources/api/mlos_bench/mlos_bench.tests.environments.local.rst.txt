@@ -17,3 +17,4 @@ Submodules
    mlos_bench.tests.environments.local.local_env_telemetry_test
    mlos_bench.tests.environments.local.local_env_test
    mlos_bench.tests.environments.local.local_env_vars_test
+   mlos_bench.tests.environments.local.local_fileshare_env_test
