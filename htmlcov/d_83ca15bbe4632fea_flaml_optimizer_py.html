@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_83ca15bbe4632fea_optimizer_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.3.2">coverage.py v7.3.2</a>,
-            created at 2023-11-10 00:31 +0000
+            created at 2023-11-14 19:23 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -246,8 +246,8 @@
     <p class="run"><span class="n"><a id="t164" href="#t164">164</a></span><span class="t">        <span class="nam">points_to_evaluate</span><span class="op">:</span> <span class="nam">list</span> <span class="op">=</span> <span class="op">[</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t165" href="#t165">165</a></span><span class="t">        <span class="nam">evaluated_rewards</span><span class="op">:</span> <span class="nam">list</span> <span class="op">=</span> <span class="op">[</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t166" href="#t166">166</a></span><span class="t">        <span class="key">if</span> <span class="nam">len</span><span class="op">(</span><span class="nam">self</span><span class="op">.</span><span class="nam">evaluated_samples</span><span class="op">)</span> <span class="op">></span> <span class="num">0</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t167" href="#t167">167</a></span><span class="t">            <span class="nam">evaluated_samples_list</span><span class="op">:</span> <span class="nam">list</span> <span class="op">=</span> <span class="op">[</span><span class="op">(</span><span class="nam">s</span><span class="op">.</span><span class="nam">config</span><span class="op">,</span> <span class="nam">s</span><span class="op">.</span><span class="nam">score</span><span class="op">)</span> <span class="key">for</span> <span class="nam">s</span> <span class="key">in</span> <span class="nam">self</span><span class="op">.</span><span class="nam">evaluated_samples</span><span class="op">.</span><span class="nam">values</span><span class="op">(</span><span class="op">)</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t168" href="#t168">168</a></span><span class="t">            <span class="nam">points_to_evaluate</span><span class="op">,</span> <span class="nam">evaluated_rewards</span> <span class="op">=</span> <span class="nam">list</span><span class="op">(</span><span class="nam">zip</span><span class="op">(</span><span class="op">*</span><span class="nam">evaluated_samples_list</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t167" href="#t167">167</a></span><span class="t">            <span class="nam">points_to_evaluate</span> <span class="op">=</span> <span class="op">[</span><span class="nam">s</span><span class="op">.</span><span class="nam">config</span> <span class="key">for</span> <span class="nam">s</span> <span class="key">in</span> <span class="nam">self</span><span class="op">.</span><span class="nam">evaluated_samples</span><span class="op">.</span><span class="nam">values</span><span class="op">(</span><span class="op">)</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t168" href="#t168">168</a></span><span class="t">            <span class="nam">evaluated_rewards</span> <span class="op">=</span> <span class="op">[</span><span class="nam">s</span><span class="op">.</span><span class="nam">score</span> <span class="key">for</span> <span class="nam">s</span> <span class="key">in</span> <span class="nam">self</span><span class="op">.</span><span class="nam">evaluated_samples</span><span class="op">.</span><span class="nam">values</span><span class="op">(</span><span class="op">)</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t169" href="#t169">169</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t170" href="#t170">170</a></span><span class="t">        <span class="com"># Warm start FLAML optimizer</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t171" href="#t171">171</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">_suggested_config</span> <span class="op">=</span> <span class="key">None</span>&nbsp;</span><span class="r"></span></p>
@@ -275,7 +275,7 @@
             <a id="nextFileLink" class="nav" href="d_83ca15bbe4632fea_optimizer_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.3.2">coverage.py v7.3.2</a>,
-            created at 2023-11-10 00:31 +0000
+            created at 2023-11-14 19:23 +0000
         </p>
     </div>
 </footer>
