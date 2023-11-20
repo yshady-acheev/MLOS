@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.run module &mdash; MlosCore 0.1.dev1+g0ae67ab documentation</title>
+  <title>mlos_bench.run module &mdash; MlosCore 0.1.dev1+g6bb0124 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
@@ -12,7 +12,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=a6db8f89"></script>
+        <script src="../../_static/documentation_options.js?v=54cfc4b4"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g0ae67ab
+                0.1.dev1+g6bb0124
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -118,6 +118,7 @@
                   [--random_seed RANDOM_SEED]
                   [--tunable_values TUNABLE_VALUES [TUNABLE_VALUES ...]]
                   [--globals GLOBALS [GLOBALS ...]] [--no_teardown]
+                  [--experiment_id EXPERIMENT_ID]
 
 mlos_bench : Systems autotuning and benchmarking tool
 
@@ -160,6 +161,22 @@ options:
   --no_teardown, --no-teardown
                         Disable teardown of the environment after the
                         benchmark.
+  --experiment_id EXPERIMENT_ID, --experiment-id EXPERIMENT_ID
+                        Experiment ID to use for the benchmark. If omitted,
+                        the value from the --cli config or --globals is used.
+                        This is used to store and reload trial results from
+                        the storage. NOTE: It is **important** to change this
+                        value when incompatible changes are made to config
+                        files, scripts, versions, etc. This is left as a
+                        manual operation as detection of what is
+                        &quot;incompatible&quot; is not easily automatable across
+                        systems.
+
+Additional --key=value pairs can be specified to augment or override values
+listed in --globals. Other required_args values can also be pulled from shell
+environment variables. For additional details, please see the website or the
+README.md files in the source tree:
+&lt;https://github.com/microsoft/MLOS/tree/main/mlos_bench/&gt;
 
 </pre></div>
 </div>

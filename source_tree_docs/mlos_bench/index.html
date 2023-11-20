@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos-bench &mdash; MlosCore 0.1.dev1+g0ae67ab documentation</title>
+  <title>mlos-bench &mdash; MlosCore 0.1.dev1+g6bb0124 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
@@ -12,7 +12,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=a6db8f89"></script>
+        <script src="../../_static/documentation_options.js?v=54cfc4b4"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -35,7 +35,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g0ae67ab
+                0.1.dev1+g6bb0124
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -58,11 +58,17 @@
 <li class="toctree-l3"><a class="reference internal" href="#generate-access-tokens-to-interact-with-azure-resources">3. Generate access tokens to interact with Azure resources</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#create-a-json-config-with-db-credentials-optional">4. Create a JSON config with DB credentials (Optional)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#create-a-top-level-configuration-file-for-your-mlos-setup">5. Create a top-level configuration file for your MLOS setup</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#create-another-config-file-for-the-parameters-specific-to-your-experiment">5. Create another config file for the parameters specific to your experiment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-another-config-file-for-the-parameters-specific-to-your-experiment">5. Create another config file for the parameters specific to your experiment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#importance-of-the-experiment-id-config">Importance of the Experiment ID config</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#run-the-benchmark">6. Run the benchmark</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#optimization">Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#optimization">Optimization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#resuming-interrupted-experiments">Resuming interrupted experiments</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../mlos_core/index.html">mlos-core</a></li>
@@ -127,11 +133,19 @@
 <li><p><a class="reference internal" href="#generate-access-tokens-to-interact-with-azure-resources"><span class="std std-ref">Generate access tokens to interact with Azure resources</span></a></p></li>
 <li><p><a class="reference internal" href="#create-a-json-config-with-db-credentials-optional"><span class="std std-ref">Create a JSON config with DB credentials Optional</span></a></p></li>
 <li><p><a class="reference internal" href="#create-a-top-level-configuration-file-for-your-mlos-setup"><span class="std std-ref">Create a top-level configuration file for your MLOS setup</span></a></p></li>
-<li><p><a class="reference internal" href="#create-another-config-file-for-the-parameters-specific-to-your-experiment"><span class="std std-ref">Create another config file for the parameters specific to your experiment</span></a></p></li>
+<li><p><a class="reference internal" href="#create-another-config-file-for-the-parameters-specific-to-your-experiment"><span class="std std-ref">Create another config file for the parameters specific to your experiment</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#importance-of-the-experiment-id-config"><span class="std std-ref">Importance of the Experiment ID config</span></a></p></li>
+</ul>
+</li>
 <li><p><a class="reference internal" href="#run-the-benchmark"><span class="std std-ref">Run the benchmark</span></a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#optimization"><span class="std std-ref">Optimization</span></a></p></li>
+<li><p><a class="reference internal" href="#optimization"><span class="std std-ref">Optimization</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#resuming-interrupted-experiments"><span class="std std-ref">Resuming interrupted experiments</span></a></p></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -270,6 +284,14 @@ We’ll give more details on that below.</p>
 <div><p>A general rule is that the parameters from the global configs like <code class="docutils literal notranslate"><span class="pre">./global_config_azure.jsonc</span></code> or <code class="docutils literal notranslate"><span class="pre">experiment_MyAppBench.jsonc</span></code> override the corresponding parameters in other configurations.
 That allows us to propagate the values of the parameters that are specific to the experiment into other components of the framework and keep the majority of the config files in our library immutable and reusable.</p>
 </div></blockquote>
+<section id="importance-of-the-experiment-id-config">
+<h4>Importance of the Experiment ID config<a class="headerlink" href="#importance-of-the-experiment-id-config" title="Link to this heading">¶</a></h4>
+<p>An important part of this file is the value of <code class="docutils literal notranslate"><span class="pre">experiment_id</span></code> which controls the storage and retrieval of trial data.
+Should the experiment be interrupted, the <code class="docutils literal notranslate"><span class="pre">experiment_id</span></code> will be used to resume the experiment from the last completed trial, reloading the optimizer with data from the previously completed trial data.</p>
+<p>As such this value should be unique for each experiment.
+Be sure to change it whenever <em>“incompatible”</em> changes are made to the experiment configuration or scripts.
+Unfortunately, determining what constitutes and <em>“incompatible”</em> change for any given system is not always possible, so <code class="docutils literal notranslate"><span class="pre">mlos_bench</span></code> largely leaves this up to the user.</p>
+</section>
 </section>
 <section id="run-the-benchmark">
 <h3>6. Run the benchmark<a class="headerlink" href="#run-the-benchmark" title="Link to this heading">¶</a></h3>
@@ -292,6 +314,13 @@ All we have to do is specifying the <a class="reference external" href="https://
 </div>
 <p>Note that again we use the command line option <code class="docutils literal notranslate"><span class="pre">--max_iterations</span></code> to override the default value from <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/./mlos_bench/config/optimizers/mlos_core_flaml.jsonc"><code class="docutils literal notranslate"><span class="pre">mlos_core_flaml.jsonc</span></code></a>.</p>
 <p>We don’t have to specify the <code class="docutils literal notranslate"><span class="pre">&quot;tunable_values&quot;</span></code> for the optimization: the optimizer will suggest new values on each iteration and the framework will feed this data into the benchmarking environment.</p>
+<section id="resuming-interrupted-experiments">
+<h3>Resuming interrupted experiments<a class="headerlink" href="#resuming-interrupted-experiments" title="Link to this heading">¶</a></h3>
+<p>Experiments sometimes get interrupted, e.g., due to errors in automation scripts or other failures in the system.</p>
+<!-- TODO: Document retry logic once implemented: #523 -->
+<p>To resume an interrupted experiment, simply run the same command as before.</p>
+<p>As mentioned above in the <a class="reference internal" href="#importance-of-the-experiment-id-config"><span class="std std-ref">importance of the experiment_id config</span></a> section, the <code class="docutils literal notranslate"><span class="pre">experiment_id</span></code> is used to resume interrupted experiments, reloading prior trial data for that <code class="docutils literal notranslate"><span class="pre">experiment_id</span></code>.</p>
+</section>
 </section>
 </section>
 
