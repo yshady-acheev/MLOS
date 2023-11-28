@@ -54,10 +54,10 @@
             </div>
         </aside>
         <h2>
-            <span class="text">155 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">150<span class="text"> run</span></button>
-            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">5<span class="text"> missing</span></button>
-            <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
+            <span class="text">153 statements &nbsp;</span>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">149<span class="text"> run</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">4<span class="text"> missing</span></button>
+            <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">2<span class="text"> excluded</span></button>
         </h2>
         <p class="text">
             <a id="prevFileLink" class="nav" href="d_a35407dc3f69ee51_identity_adapter_py.html">&#xab; prev</a> &nbsp; &nbsp;
@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_4c77d49b5a513862___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.3.2">coverage.py v7.3.2</a>,
-            created at 2023-11-28 00:32 +0000
+            created at 2023-11-28 15:47 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -306,7 +306,7 @@
     <p class="run"><span class="n"><a id="t224" href="#t224">224</a></span><span class="t">                <span class="nam">orig_value</span> <span class="op">=</span> <span class="nam">param</span><span class="op">.</span><span class="nam">_transform</span><span class="op">(</span><span class="nam">value</span><span class="op">)</span>    <span class="com"># pylint: disable=protected-access</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t225" href="#t225">225</a></span><span class="t">                <span class="nam">orig_value</span> <span class="op">=</span> <span class="nam">max</span><span class="op">(</span><span class="nam">param</span><span class="op">.</span><span class="nam">lower</span><span class="op">,</span> <span class="nam">min</span><span class="op">(</span><span class="nam">param</span><span class="op">.</span><span class="nam">upper</span><span class="op">,</span> <span class="nam">orig_value</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t226" href="#t226">226</a></span><span class="t">            <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t227" href="#t227">227</a></span><span class="t">                <span class="key">raise</span> <span class="nam">NotImplementedError</span><span class="op">(</span><span class="str">"Only Categorical, Integer, and Float hyperparameters are currently supported."</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="exc show_exc"><span class="n"><a id="t227" href="#t227">227</a></span><span class="t">                <span class="key">raise</span> <span class="nam">NotImplementedError</span><span class="op">(</span><span class="str">"Only Categorical, Integer, and Float hyperparameters are currently supported."</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t228" href="#t228">228</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t229" href="#t229">229</a></span><span class="t">            <span class="nam">original_config</span><span class="op">[</span><span class="nam">param</span><span class="op">.</span><span class="nam">name</span><span class="op">]</span> <span class="op">=</span> <span class="nam">orig_value</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t230" href="#t230">230</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -370,7 +370,7 @@
     <p class="pln"><span class="n"><a id="t288" href="#t288">288</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t289" href="#t289">289</a></span><span class="t">            <span class="nam">hyperparameter</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">orig_parameter_space</span><span class="op">[</span><span class="nam">param</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t290" href="#t290">290</a></span><span class="t">            <span class="key">if</span> <span class="key">not</span> <span class="nam">isinstance</span><span class="op">(</span><span class="nam">hyperparameter</span><span class="op">,</span> <span class="nam">ConfigSpace</span><span class="op">.</span><span class="nam">UniformIntegerHyperparameter</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t291" href="#t291">291</a></span><span class="t">                <span class="key">raise</span> <span class="nam">NotImplementedError</span><span class="op">(</span><span class="nam">error_prefix</span> <span class="op">+</span> <span class="str">f"Parameter '{param}' is not supported. "</span>&nbsp;</span><span class="r"></span></p>
+    <p class="exc show_exc"><span class="n"><a id="t291" href="#t291">291</a></span><span class="t">                <span class="key">raise</span> <span class="nam">NotImplementedError</span><span class="op">(</span><span class="nam">error_prefix</span> <span class="op">+</span> <span class="str">f"Parameter '{param}' is not supported. "</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t292" href="#t292">292</a></span><span class="t">                                          <span class="str">"Only Integer Hyperparameters are currently supported."</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t293" href="#t293">293</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t294" href="#t294">294</a></span><span class="t">            <span class="key">if</span> <span class="nam">isinstance</span><span class="op">(</span><span class="nam">value</span><span class="op">,</span> <span class="nam">int</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
@@ -455,7 +455,7 @@
             <a id="nextFileLink" class="nav" href="d_4c77d49b5a513862___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.3.2">coverage.py v7.3.2</a>,
-            created at 2023-11-28 00:32 +0000
+            created at 2023-11-28 15:47 +0000
         </p>
     </div>
 </footer>
