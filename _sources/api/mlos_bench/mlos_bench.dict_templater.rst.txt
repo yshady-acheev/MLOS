@@ -1,0 +1,7 @@
+mlos\_bench.dict\_templater module
+==================================
+
+.. automodule:: mlos_bench.dict_templater
+   :members:
+   :undoc-members:
+   :show-inheritance:
