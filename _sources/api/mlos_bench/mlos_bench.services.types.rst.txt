@@ -18,6 +18,7 @@ Submodules
    mlos_bench.services.types.host_ops_type
    mlos_bench.services.types.host_provisioner_type
    mlos_bench.services.types.local_exec_type
+   mlos_bench.services.types.network_provisioner_type
    mlos_bench.services.types.os_ops_type
    mlos_bench.services.types.remote_config_type
    mlos_bench.services.types.remote_exec_type

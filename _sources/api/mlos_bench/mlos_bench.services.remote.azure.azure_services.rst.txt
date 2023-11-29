@@ -1,0 +1,7 @@
+mlos\_bench.services.remote.azure.azure\_services module
+========================================================
+
+.. automodule:: mlos_bench.services.remote.azure.azure_services
+   :members:
+   :undoc-members:
+   :show-inheritance:

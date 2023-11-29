@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.services package &mdash; MlosCore 0.1.dev1+g3b9d0b4 documentation</title>
+  <title>mlos_bench.services package &mdash; MlosCore 0.1.dev1+gbab3ca5 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=633562b7"></script>
+        <script src="../../_static/documentation_options.js?v=6bc6279b"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g3b9d0b4
+                0.1.dev1+gbab3ca5
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -415,6 +415,7 @@ specified by <cite>class_name</cite>.</p>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.remote.azure.html">mlos_bench.services.remote.azure package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.services.remote.azure.html#mlos_bench.services.remote.azure.AzureAuthService"><code class="docutils literal notranslate"><span class="pre">AzureAuthService</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.services.remote.azure.html#mlos_bench.services.remote.azure.AzureFileShareService"><code class="docutils literal notranslate"><span class="pre">AzureFileShareService</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.services.remote.azure.html#mlos_bench.services.remote.azure.AzureNetworkService"><code class="docutils literal notranslate"><span class="pre">AzureNetworkService</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.services.remote.azure.html#mlos_bench.services.remote.azure.AzureSaaSConfigService"><code class="docutils literal notranslate"><span class="pre">AzureSaaSConfigService</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.services.remote.azure.html#mlos_bench.services.remote.azure.AzureVMService"><code class="docutils literal notranslate"><span class="pre">AzureVMService</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.services.remote.azure.html#submodules">Submodules</a></li>
@@ -461,6 +462,12 @@ specified by <cite>class_name</cite>.</p>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.html#mlos_bench.services.types.SupportsLocalExec.temp_dir_context"><code class="docutils literal notranslate"><span class="pre">SupportsLocalExec.temp_dir_context()</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="mlos_bench.services.types.html#mlos_bench.services.types.SupportsNetworkProvisioning"><code class="docutils literal notranslate"><span class="pre">SupportsNetworkProvisioning</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.html#mlos_bench.services.types.SupportsNetworkProvisioning.deprovision_network"><code class="docutils literal notranslate"><span class="pre">SupportsNetworkProvisioning.deprovision_network()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.html#mlos_bench.services.types.SupportsNetworkProvisioning.provision_network"><code class="docutils literal notranslate"><span class="pre">SupportsNetworkProvisioning.provision_network()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.html#mlos_bench.services.types.SupportsNetworkProvisioning.wait_network_deployment"><code class="docutils literal notranslate"><span class="pre">SupportsNetworkProvisioning.wait_network_deployment()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="mlos_bench.services.types.html#mlos_bench.services.types.SupportsRemoteConfig"><code class="docutils literal notranslate"><span class="pre">SupportsRemoteConfig</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.html#mlos_bench.services.types.SupportsRemoteConfig.configure"><code class="docutils literal notranslate"><span class="pre">SupportsRemoteConfig.configure()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.html#mlos_bench.services.types.SupportsRemoteConfig.is_config_pending"><code class="docutils literal notranslate"><span class="pre">SupportsRemoteConfig.is_config_pending()</span></code></a></li>
@@ -494,6 +501,10 @@ specified by <cite>class_name</cite>.</p>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.local_exec_type.html">mlos_bench.services.types.local_exec_type module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.services.types.local_exec_type.html#mlos_bench.services.types.local_exec_type.SupportsLocalExec"><code class="docutils literal notranslate"><span class="pre">SupportsLocalExec</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.network_provisioner_type.html">mlos_bench.services.types.network_provisioner_type module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.services.types.network_provisioner_type.html#mlos_bench.services.types.network_provisioner_type.SupportsNetworkProvisioning"><code class="docutils literal notranslate"><span class="pre">SupportsNetworkProvisioning</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.services.types.os_ops_type.html">mlos_bench.services.types.os_ops_type module</a><ul>

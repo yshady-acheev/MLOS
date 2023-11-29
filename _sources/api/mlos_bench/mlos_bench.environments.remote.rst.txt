@@ -13,6 +13,7 @@ Submodules
    :maxdepth: 4
 
    mlos_bench.environments.remote.host_env
+   mlos_bench.environments.remote.network_env
    mlos_bench.environments.remote.os_env
    mlos_bench.environments.remote.remote_env
    mlos_bench.environments.remote.saas_env

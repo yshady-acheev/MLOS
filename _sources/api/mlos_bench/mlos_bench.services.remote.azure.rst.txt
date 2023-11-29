@@ -14,5 +14,7 @@ Submodules
 
    mlos_bench.services.remote.azure.azure_auth
    mlos_bench.services.remote.azure.azure_fileshare
+   mlos_bench.services.remote.azure.azure_network_services
    mlos_bench.services.remote.azure.azure_saas
+   mlos_bench.services.remote.azure.azure_services
    mlos_bench.services.remote.azure.azure_vm_services

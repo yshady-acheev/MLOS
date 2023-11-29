@@ -13,5 +13,6 @@ Submodules
    :maxdepth: 4
 
    mlos_bench.tests.services.remote.azure.azure_fileshare_test
-   mlos_bench.tests.services.remote.azure.azure_services_test
+   mlos_bench.tests.services.remote.azure.azure_network_services_test
+   mlos_bench.tests.services.remote.azure.azure_vm_services_test
    mlos_bench.tests.services.remote.azure.conftest
