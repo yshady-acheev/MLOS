@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_2af64a9d4152bba3___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.3.2">coverage.py v7.3.2</a>,
-            created at 2023-12-01 00:35 +0000
+            created at 2023-12-01 19:36 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -92,7 +92,7 @@
     <p class="run"><span class="n"><a id="t10" href="#t10">10</a></span><span class="t"><span class="key">from</span> <span class="nam">string</span> <span class="key">import</span> <span class="nam">Template</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t11" href="#t11">11</a></span><span class="t"><span class="key">from</span> <span class="nam">typing</span> <span class="key">import</span> <span class="nam">Any</span><span class="op">,</span> <span class="nam">Dict</span><span class="op">,</span> <span class="nam">Optional</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t12" href="#t12">12</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t13" href="#t13">13</a></span><span class="t"><span class="key">import</span> <span class="nam">os</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t13" href="#t13">13</a></span><span class="t"><span class="key">from</span> <span class="nam">mlos_bench</span><span class="op">.</span><span class="nam">os_environ</span> <span class="key">import</span> <span class="nam">environ</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t14" href="#t14">14</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t15" href="#t15">15</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t16" href="#t16">16</a></span><span class="t"><span class="key">class</span> <span class="nam">DictTemplater</span><span class="op">:</span>    <span class="com"># pylint: disable=too-few-public-methods</span>&nbsp;</span><span class="r"></span></p>
@@ -149,7 +149,7 @@
     <p class="run"><span class="n"><a id="t67" href="#t67">67</a></span><span class="t">                <span class="nam">value</span> <span class="op">=</span> <span class="nam">Template</span><span class="op">(</span><span class="nam">value</span><span class="op">)</span><span class="op">.</span><span class="nam">safe_substitute</span><span class="op">(</span><span class="nam">extra_source_dict</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t68" href="#t68">68</a></span><span class="t">            <span class="com"># Finally, fallback to the os environment.</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t69" href="#t69">69</a></span><span class="t">            <span class="key">if</span> <span class="nam">use_os_env</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t70" href="#t70">70</a></span><span class="t">                <span class="nam">value</span> <span class="op">=</span> <span class="nam">Template</span><span class="op">(</span><span class="nam">value</span><span class="op">)</span><span class="op">.</span><span class="nam">safe_substitute</span><span class="op">(</span><span class="nam">dict</span><span class="op">(</span><span class="nam">os</span><span class="op">.</span><span class="nam">environ</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t70" href="#t70">70</a></span><span class="t">                <span class="nam">value</span> <span class="op">=</span> <span class="nam">Template</span><span class="op">(</span><span class="nam">value</span><span class="op">)</span><span class="op">.</span><span class="nam">safe_substitute</span><span class="op">(</span><span class="nam">dict</span><span class="op">(</span><span class="nam">environ</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t71" href="#t71">71</a></span><span class="t">        <span class="key">elif</span> <span class="nam">isinstance</span><span class="op">(</span><span class="nam">value</span><span class="op">,</span> <span class="nam">dict</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t72" href="#t72">72</a></span><span class="t">            <span class="com"># Note: we use a loop instead of dict comprehension in order to</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t73" href="#t73">73</a></span><span class="t">            <span class="com"># allow secondary expansion of subsequent values immediately.</span>&nbsp;</span><span class="r"></span></p>
@@ -171,7 +171,7 @@
             <a id="nextFileLink" class="nav" href="d_2af64a9d4152bba3___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.3.2">coverage.py v7.3.2</a>,
-            created at 2023-12-01 00:35 +0000
+            created at 2023-12-01 19:36 +0000
         </p>
     </div>
 </footer>

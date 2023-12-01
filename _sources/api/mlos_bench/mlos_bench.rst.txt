@@ -29,5 +29,6 @@ Submodules
    mlos_bench.dict_templater
    mlos_bench.event_loop_context
    mlos_bench.launcher
+   mlos_bench.os_environ
    mlos_bench.run
    mlos_bench.util
