@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos-core &mdash; MlosCore 0.1.dev1+g3415bcc documentation</title>
+  <title>mlos-core &mdash; MlosCore 0.1.dev1+gc7df7ff documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=aa609464"></script>
+        <script src="../../_static/documentation_options.js?v=9f163564"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g3415bcc
+                0.1.dev1+gc7df7ff
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -101,24 +101,27 @@
 <p>This <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_core/./">directory</a> contains the code for the <code class="docutils literal notranslate"><span class="pre">mlos-core</span></code> optimizer package.</p>
 <section id="description">
 <h2>Description<a class="headerlink" href="#description" title="Link to this heading">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">mlos-core</span></code> is an optimizer package, using Bayesian optimization to identify &amp; sample tunable configuration parameters and propose optimal parameter values.
-These are evaluated by <code class="docutils literal notranslate"><span class="pre">mlos-bench</span></code>, generating and tracking experiment results (proposed parameters, benchmark results &amp; telemetry) to update the optimization loop.</p>
+<p><code class="docutils literal notranslate"><span class="pre">mlos-core</span></code> is an optimizer package, wrapping other libraries like FLAML and SMAC to use techniques like Bayesian optimization and others to identify &amp; sample tunable configuration parameters and propose optimal parameter values with a consistent API: <code class="docutils literal notranslate"><span class="pre">suggest</span></code> and <code class="docutils literal notranslate"><span class="pre">register</span></code>.</p>
+<p>These can be evaluated by <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_core/../mlos_bench/"><code class="docutils literal notranslate"><span class="pre">mlos-bench</span></code></a>, generating and tracking experiment results (proposed parameters, benchmark results &amp; telemetry) to update the optimization loop, or used independently.</p>
 </section>
 <section id="features">
 <h2>Features<a class="headerlink" href="#features" title="Link to this heading">¶</a></h2>
-<p>Since the tunable OS kernel parameter search space is extremely large, <code class="docutils literal notranslate"><span class="pre">mlos-core</span></code> automates the following steps to efficiently generate optimal task-specific kernel configurations.</p>
+<p>Since the tunable parameter search space is often extremely large, <code class="docutils literal notranslate"><span class="pre">mlos-core</span></code> automates the following steps to efficiently generate optimal task-specific kernel and application configurations.</p>
 <ol class="arabic simple">
 <li><p>Reduce the search space by identifying a promising set of tunable parameters</p>
 <ul class="simple">
-<li><p>Map out the configuration search space: Automatically track and manage the discovery of new Linux kernel parameters and their default values across versions. Filter out non-tunable parameters (e.g., not writable) and track which kernel parameters exist for a given kernel version.</p></li>
-<li><p>Leverage parameter knowledge for optimization: Information on ranges, sampling intervals, parameter correlations, workload type sensitivities for tunable parameters are tracked and currently manually curated. In the future, this can be automatically maintained by scraping documentation pages on kernel parameters.</p></li>
+<li><p>Map out the configuration search space: Automatically track and manage the discovery of new Linux kernel parameters and their default values across versions.
+Filter out non-tunable parameters (e.g., not writable) and track which kernel parameters exist for a given kernel version.</p></li>
+<li><p>Leverage parameter knowledge for optimization: Information on ranges, sampling intervals, parameter correlations, workload type sensitivities for tunable parameters are tracked and currently manually curated.
+In the future, this can be automatically maintained by scraping documentation pages on kernel parameters.</p></li>
 <li><p>Tailored to application: Consider prior knowledge of the parameter’s impact &amp; an application’s workload profile (e.g. network heavy, disk heavy, CPU bound, multi-threaded, latency sensitive, throughput oriented, etc.) to identify likely impactful candidates of tunable parameters, specific to a particular application.</p></li>
 </ul>
 </li>
 <li><p>Sampling to warm-start optimization in a high dimensional search space</p></li>
 <li><p>Produce optimal configurations through Bayesian optimization</p>
 <ul class="simple">
-<li><p>Support for various optimizer algorithms (default Bayesian optimizer, Flaml, SMAC, and random for baseline comparison), that handle multiple types of constraints. This includes cost-aware optimization, that considers experiment costs given current tunable parameters.</p></li>
+<li><p>Support for various optimizer algorithms (default Bayesian optimizer, Flaml, SMAC, and random for baseline comparison), that handle multiple types of constraints.
+This includes cost-aware optimization, that considers experiment costs given current tunable parameters.</p></li>
 <li><p>Integrated with <code class="docutils literal notranslate"><span class="pre">mlos-bench</span></code>, proposed configurations are logged and evaluated.</p></li>
 </ul>
 </li>

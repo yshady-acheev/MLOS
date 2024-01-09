@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MLOS &mdash; MlosCore 0.1.dev1+g3415bcc documentation</title>
+  <title>MLOS &mdash; MlosCore 0.1.dev1+gc7df7ff documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/documentation_options.js?v=aa609464"></script>
+        <script src="../_static/documentation_options.js?v=9f163564"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g3415bcc
+                0.1.dev1+gc7df7ff
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -63,7 +63,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#distributing">Distributing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#see-also">See Also</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#examples">Examples</a></li>
 </ul>
@@ -140,7 +140,7 @@
 </li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#distributing"><span class="std std-ref">Distributing</span></a></p></li>
+<li><p><a class="reference internal" href="#installation"><span class="std std-ref">Installation</span></a></p></li>
 <li><p><a class="reference internal" href="#see-also"><span class="std std-ref">See Also</span></a></p>
 <ul>
 <li><p><a class="reference internal" href="#examples"><span class="std std-ref">Examples</span></a></p></li>
@@ -250,35 +250,27 @@ mlos_bench<span class="w"> </span>--config<span class="w"> </span>./mlos_bench/m
 </section>
 </section>
 </section>
-<section id="distributing">
-<h2>Distributing<a class="headerlink" href="#distributing" title="Link to this heading">¶</a></h2>
-<p>MLOS is not <a class="reference external" href="https://github.com/microsoft/MLOS/issues/547"><em>yet</em></a> published on <code class="docutils literal notranslate"><span class="pre">pypi</span></code>, so until them here are some instructions for installation for usage in production or other environments.</p>
-<ol class="arabic">
-<li><p>Build the <em>wheel</em> file(s)</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>dist
-</pre></div>
-</div>
-</li>
-<li><p>Install it (e.g. after copying it somewhere else).</p>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h2>
+<p>The MLOS modules are published to <a class="reference external" href="https://pypi.org">pypi</a> when new tags/releases are made.</p>
+<p>To install the latest release, simply run:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># this will install just the optimizer component with SMAC support:</span>
-pip<span class="w"> </span>install<span class="w"> </span>dist/mlos_core-0.1.0-py3-none-any.whl<span class="o">[</span>smac<span class="o">]</span>
+pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>mlos-core<span class="o">[</span>smac<span class="o">]</span>
 
 <span class="c1"># this will install just the optimizer component with flaml support:</span>
-pip<span class="w"> </span>install<span class="w"> </span>dist/mlos_core-0.1.0-py3-none-any.whl<span class="o">[</span>flaml<span class="o">]</span>
+pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span><span class="s2">&quot;mlos-core[flaml]&quot;</span>
 
 <span class="c1"># this will install just the optimizer component with smac and flaml support:</span>
-pip<span class="w"> </span>install<span class="w"> </span>dist/mlos_core-0.1.0-py3-none-any.whl<span class="o">[</span>smac,flaml<span class="o">]</span>
+pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span><span class="s2">&quot;mlos-core[smac,flaml]&quot;</span>
+
+<span class="c1"># this will install both the flaml optimizer and the experiment runner with azure support:</span>
+pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span><span class="s2">&quot;mlos-bench[flaml,azure]&quot;</span>
+
+<span class="c1"># this will install both the smac optimizer and the experiment runner with ssh support:</span>
+pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span><span class="s2">&quot;mlos-bench[smac,ssh]&quot;</span>
 </pre></div>
 </div>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># this will install both the optimizer and the experiment runner:</span>
-pip<span class="w"> </span>install<span class="w"> </span>dist/mlos_bench-0.1.0-py3-none-any.whl
-</pre></div>
-</div>
-<blockquote>
-<div><p>Note: exact versions may differ due to automatic versioning.</p>
-</div></blockquote>
-</li>
-</ol>
+<p>Details on using a local version from git are available in <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/././CONTRIBUTING.md">CONTRIBUTING.md</a>.</p>
 </section>
 <section id="see-also">
 <h2>See Also<a class="headerlink" href="#see-also" title="Link to this heading">¶</a></h2>
