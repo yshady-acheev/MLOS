@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.storage.base_storage module &mdash; MlosCore 0.1.dev1+g2032d79 documentation</title>
+  <title>mlos_bench.storage.base_storage module &mdash; MlosCore 0.1.dev1+gc8639c0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=d5e87a84"></script>
+        <script src="../../_static/documentation_options.js?v=0b74551a"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g2032d79
+                0.1.dev1+gc8639c0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -154,11 +154,11 @@ This class is instantiated in the <cite>Storage.experiment()</cite> method.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.storage.base_storage.Storage.Experiment.load" title="mlos_bench.storage.base_storage.Storage.Experiment.load"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code></a>([opt_target])</p></td>
 <td><p>Load (tunable values, benchmark scores, status) to warm-up the optimizer.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.storage.base_storage.Storage.Experiment.load_config" title="mlos_bench.storage.base_storage.Storage.Experiment.load_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_config</span></code></a>(config_id)</p></td>
-<td><p>Load tunable values for a given config ID.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.storage.base_storage.Storage.Experiment.load_telemetry" title="mlos_bench.storage.base_storage.Storage.Experiment.load_telemetry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_telemetry</span></code></a>(trial_id)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.storage.base_storage.Storage.Experiment.load_telemetry" title="mlos_bench.storage.base_storage.Storage.Experiment.load_telemetry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_telemetry</span></code></a>(trial_id)</p></td>
 <td><p>Retrieve the telemetry data for a given trial.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.storage.base_storage.Storage.Experiment.load_tunable_config" title="mlos_bench.storage.base_storage.Storage.Experiment.load_tunable_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_tunable_config</span></code></a>(config_id)</p></td>
+<td><p>Load tunable values for a given config ID.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.storage.base_storage.Storage.Experiment.merge" title="mlos_bench.storage.base_storage.Storage.Experiment.merge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">merge</span></code></a>(experiment_ids)</p></td>
 <td><p>Merge in the results of other (compatible) experiments trials.</p></td>
@@ -180,12 +180,6 @@ to impute the missing tunable values.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mlos_bench.storage.base_storage.Storage.Experiment.load_config">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.storage.base_storage.Storage.Experiment.load_config" title="Link to this definition">¶</a></dt>
-<dd><p>Load tunable values for a given config ID.</p>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.storage.base_storage.Storage.Experiment.load_telemetry">
 <em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_telemetry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trial_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.storage.base_storage.Storage.Experiment.load_telemetry" title="Link to this definition">¶</a></dt>
 <dd><p>Retrieve the telemetry data for a given trial.</p>
@@ -203,6 +197,12 @@ to impute the missing tunable values.</p>
 </dl>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.storage.base_storage.Storage.Experiment.load_tunable_config">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_tunable_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.storage.base_storage.Storage.Experiment.load_tunable_config" title="Link to this definition">¶</a></dt>
+<dd><p>Load tunable values for a given config ID.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -264,7 +264,7 @@ This class is instantiated in the <cite>Storage.Experiment.trial()</cite> method
 </dd>
 <dt><a class="reference internal" href="#mlos_bench.storage.base_storage.Storage.Trial.trial_id" title="mlos_bench.storage.base_storage.Storage.Trial.trial_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trial_id</span></code></a></dt><dd><p>ID of the current trial.</p>
 </dd>
-<dt><a class="reference internal" href="#mlos_bench.storage.base_storage.Storage.Trial.tunables" title="mlos_bench.storage.base_storage.Storage.Trial.tunables"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tunables</span></code></a></dt><dd><p>Tunable parameters of the current trial.</p>
+<dt><a class="reference internal" href="#mlos_bench.storage.base_storage.Storage.Trial.tunables" title="mlos_bench.storage.base_storage.Storage.Trial.tunables"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tunables</span></code></a></dt><dd><p>Tunable parameters of the current trial</p>
 </dd>
 </dl>
 </dd>
@@ -288,6 +288,10 @@ This class is instantiated in the <cite>Storage.Experiment.trial()</cite> method
 <span class="sig-name descname"><span class="pre">config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">global_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.storage.base_storage.Storage.Trial.config" title="Link to this definition">¶</a></dt>
 <dd><p>Produce a copy of the global configuration updated
 with the parameters of the current trial.</p>
+<p>Note: this is not the target Environment’s “config” (i.e., tunable
+params), but rather the internal “config” which consists of a
+combination of somewhat more static variables defined in the json config
+files.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -305,7 +309,8 @@ with the parameters of the current trial.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="mlos_bench.storage.base_storage.Storage.Trial.tunables">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tunables</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></em><a class="headerlink" href="#mlos_bench.storage.base_storage.Storage.Trial.tunables" title="Link to this definition">¶</a></dt>
-<dd><p>Tunable parameters of the current trial.</p>
+<dd><p>Tunable parameters of the current trial</p>
+<p>(e.g., application Environment’s “config”)</p>
 </dd></dl>
 
 <dl class="py method">

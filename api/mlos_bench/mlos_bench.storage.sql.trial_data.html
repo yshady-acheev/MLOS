@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.storage.sql.trial_data module &mdash; MlosCore 0.1.dev1+g2032d79 documentation</title>
+  <title>mlos_bench.storage.sql.trial_data module &mdash; MlosCore 0.1.dev1+gc8639c0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=d5e87a84"></script>
+        <script src="../../_static/documentation_options.js?v=0b74551a"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g2032d79
+                0.1.dev1+gc8639c0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -123,13 +123,11 @@
 <dl class="field-list simple">
 <dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
-<dt><a class="reference internal" href="#mlos_bench.storage.sql.trial_data.TrialSqlData.config" title="mlos_bench.storage.sql.trial_data.TrialSqlData.config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">config</span></code></a></dt><dd><p>Retrieve the trials’ configuration from the storage.</p>
-</dd>
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">config_id</span></code></dt><dd><p>ID of the configuration of the current trial.</p>
 </dd>
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">exp_id</span></code></dt><dd><p>ID of the experiment this trial belongs to.</p>
 </dd>
-<dt><a class="reference internal" href="#mlos_bench.storage.sql.trial_data.TrialSqlData.metadata" title="mlos_bench.storage.sql.trial_data.TrialSqlData.metadata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metadata</span></code></a></dt><dd><p>Retrieve the trials’ metadata.</p>
+<dt><a class="reference internal" href="#mlos_bench.storage.sql.trial_data.TrialSqlData.metadata" title="mlos_bench.storage.sql.trial_data.TrialSqlData.metadata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metadata</span></code></a></dt><dd><p>Retrieve the trials’ metadata params.</p>
 </dd>
 <dt><a class="reference internal" href="#mlos_bench.storage.sql.trial_data.TrialSqlData.results" title="mlos_bench.storage.sql.trial_data.TrialSqlData.results"><code class="xref py py-obj docutils literal notranslate"><span class="pre">results</span></code></a></dt><dd><p>Retrieve the trials’ results from the storage.</p>
 </dd>
@@ -143,19 +141,16 @@
 </dd>
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">ts_start</span></code></dt><dd><p>Start timestamp of the current trial (UTC).</p>
 </dd>
+<dt><a class="reference internal" href="#mlos_bench.storage.sql.trial_data.TrialSqlData.tunable_config" title="mlos_bench.storage.sql.trial_data.TrialSqlData.tunable_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tunable_config</span></code></a></dt><dd><p>Retrieve the trials’ tunable configuration from the storage.</p>
+</dd>
 </dl>
 </dd>
 </dl>
 <dl class="py property">
-<dt class="sig sig-object py" id="mlos_bench.storage.sql.trial_data.TrialSqlData.config">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DataFrame</span></em><a class="headerlink" href="#mlos_bench.storage.sql.trial_data.TrialSqlData.config" title="Link to this definition">¶</a></dt>
-<dd><p>Retrieve the trials’ configuration from the storage.</p>
-</dd></dl>
-
-<dl class="py property">
 <dt class="sig sig-object py" id="mlos_bench.storage.sql.trial_data.TrialSqlData.metadata">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">metadata</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DataFrame</span></em><a class="headerlink" href="#mlos_bench.storage.sql.trial_data.TrialSqlData.metadata" title="Link to this definition">¶</a></dt>
-<dd><p>Retrieve the trials’ metadata.</p>
+<dd><p>Retrieve the trials’ metadata params.</p>
+<p>Note: this corresponds to the Trial object’s “config” property.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -168,6 +163,13 @@
 <dt class="sig sig-object py" id="mlos_bench.storage.sql.trial_data.TrialSqlData.telemetry">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">telemetry</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DataFrame</span></em><a class="headerlink" href="#mlos_bench.storage.sql.trial_data.TrialSqlData.telemetry" title="Link to this definition">¶</a></dt>
 <dd><p>Retrieve the trials’ telemetry from the storage.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="mlos_bench.storage.sql.trial_data.TrialSqlData.tunable_config">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tunable_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DataFrame</span></em><a class="headerlink" href="#mlos_bench.storage.sql.trial_data.TrialSqlData.tunable_config" title="Link to this definition">¶</a></dt>
+<dd><p>Retrieve the trials’ tunable configuration from the storage.</p>
+<p>Note: this corresponds to the Trial object’s “tunables” property.</p>
 </dd></dl>
 
 </dd></dl>
