@@ -1,0 +1,16 @@
+﻿:mod:`mlos_bench.storage.base_experiment_data`.ExperimentData
+====================================================================
+
+.. currentmodule:: mlos_bench.storage.base_experiment_data
+
+.. autoclass:: ExperimentData
+
+   
+   .. automethod:: __init__
+   
+
+.. include:: mlos_bench.storage.base_experiment_data.ExperimentData.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

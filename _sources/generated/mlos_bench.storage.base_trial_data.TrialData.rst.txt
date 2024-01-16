@@ -1,0 +1,16 @@
+﻿:mod:`mlos_bench.storage.base_trial_data`.TrialData
+==========================================================
+
+.. currentmodule:: mlos_bench.storage.base_trial_data
+
+.. autoclass:: TrialData
+
+   
+   .. automethod:: __init__
+   
+
+.. include:: mlos_bench.storage.base_trial_data.TrialData.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

@@ -1,0 +1,12 @@
+﻿:mod:`mlos_viz`.plot
+=================================
+
+.. currentmodule:: mlos_viz
+
+.. autofunction:: plot
+
+.. include:: mlos_viz.plot.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

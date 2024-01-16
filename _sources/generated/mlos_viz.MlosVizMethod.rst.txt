@@ -1,0 +1,16 @@
+﻿:mod:`mlos_viz`.MlosVizMethod
+====================================
+
+.. currentmodule:: mlos_viz
+
+.. autoclass:: MlosVizMethod
+
+   
+   .. automethod:: __init__
+   
+
+.. include:: mlos_viz.MlosVizMethod.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

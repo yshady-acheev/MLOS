@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.storage package &mdash; MlosCore 0.1.dev1+g221cee3 documentation</title>
+  <title>mlos_bench.storage package &mdash; MlosCore 0.1.dev1+g1f3b26d documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=332369ff"></script>
+        <script src="../../_static/documentation_options.js?v=14c60872"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g221cee3
+                0.1.dev1+g1f3b26d
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -50,13 +50,16 @@
               <p class="caption" role="heading"><span class="caption-text">Source Tree Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../source_tree_docs/index.html">MLOS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../source_tree_docs/mlos_bench/index.html">mlos-bench</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../source_tree_docs/mlos_core/index.html">mlos-core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source_tree_docs/mlos_bench/index.html">mlos-bench</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source_tree_docs/mlos_viz/index.html">mlos_viz</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API Overview</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../overview.html">mlos-core API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html">MLOS Package APIs Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html#mlos-core-api">mlos-core API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../overview.html#mlos-bench-api">mlos-bench API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html#mlos-viz-api">mlos-viz API</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
 <ul class="current">
@@ -78,10 +81,11 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../mlos_viz/modules.html">mlos_viz</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference external" href="https://aka.ms/mlos-core/src">Github Source Tree</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/microsoft/MLOS">Github Source Tree</a></li>
 </ul>
 
         </div>
@@ -453,7 +457,7 @@ the results of the experiment and related data.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="mlos_bench.storage.Storage.experiments">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">experiments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="mlos_bench.storage.base_experiment_data.html#mlos_bench.storage.base_experiment_data.ExperimentData" title="mlos_bench.storage.base_experiment_data.ExperimentData"><span class="pre">ExperimentData</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#mlos_bench.storage.Storage.experiments" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">experiments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../../generated/mlos_bench.storage.base_experiment_data.ExperimentData.html#mlos_bench.storage.base_experiment_data.ExperimentData" title="mlos_bench.storage.base_experiment_data.ExperimentData"><span class="pre">ExperimentData</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#mlos_bench.storage.Storage.experiments" title="Link to this definition">¶</a></dt>
 <dd><p>Retrieve the experiments’ data from the storage.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -536,6 +540,8 @@ the results of the experiment and related data.</p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="mlos_bench.storage.base_experiment_data.html">mlos_bench.storage.base_experiment_data module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="mlos_bench.storage.base_experiment_data.html#mlos_bench.storage.base_experiment_data.ExperimentData"><code class="docutils literal notranslate"><span class="pre">ExperimentData</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.storage.base_experiment_data.html#mlos_bench.storage.base_experiment_data.ExperimentData.CONFIG_COLUMN_PREFIX"><code class="docutils literal notranslate"><span class="pre">ExperimentData.CONFIG_COLUMN_PREFIX</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.storage.base_experiment_data.html#mlos_bench.storage.base_experiment_data.ExperimentData.RESULT_COLUMN_PREFIX"><code class="docutils literal notranslate"><span class="pre">ExperimentData.RESULT_COLUMN_PREFIX</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.storage.base_experiment_data.html#mlos_bench.storage.base_experiment_data.ExperimentData.description"><code class="docutils literal notranslate"><span class="pre">ExperimentData.description</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.storage.base_experiment_data.html#mlos_bench.storage.base_experiment_data.ExperimentData.exp_id"><code class="docutils literal notranslate"><span class="pre">ExperimentData.exp_id</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.storage.base_experiment_data.html#mlos_bench.storage.base_experiment_data.ExperimentData.objectives"><code class="docutils literal notranslate"><span class="pre">ExperimentData.objectives</span></code></a></li>
@@ -615,7 +621,7 @@ the results of the experiment and related data.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, GSL.</p>
+    <p>&#169; Copyright 2024, GSL.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
