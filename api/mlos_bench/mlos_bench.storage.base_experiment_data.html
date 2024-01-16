@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.storage.base_experiment_data module &mdash; MlosCore 0.1.dev1+g42a149f documentation</title>
+  <title>mlos_bench.storage.base_experiment_data module &mdash; MlosCore 0.1.dev1+g221cee3 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=69904da2"></script>
+        <script src="../../_static/documentation_options.js?v=332369ff"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g42a149f
+                0.1.dev1+g221cee3
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -126,6 +126,8 @@
 </dd>
 <dt><a class="reference internal" href="#mlos_bench.storage.base_experiment_data.ExperimentData.exp_id" title="mlos_bench.storage.base_experiment_data.ExperimentData.exp_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">exp_id</span></code></a></dt><dd><p>ID of the current experiment.</p>
 </dd>
+<dt><a class="reference internal" href="#mlos_bench.storage.base_experiment_data.ExperimentData.objectives" title="mlos_bench.storage.base_experiment_data.ExperimentData.objectives"><code class="xref py py-obj docutils literal notranslate"><span class="pre">objectives</span></code></a></dt><dd><p>Retrieve the experiment’s objectives data from the storage.</p>
+</dd>
 <dt><a class="reference internal" href="#mlos_bench.storage.base_experiment_data.ExperimentData.results" title="mlos_bench.storage.base_experiment_data.ExperimentData.results"><code class="xref py py-obj docutils literal notranslate"><span class="pre">results</span></code></a></dt><dd><p>Retrieve all experimental results as a single DataFrame.</p>
 </dd>
 <dt><a class="reference internal" href="#mlos_bench.storage.base_experiment_data.ExperimentData.root_env_config" title="mlos_bench.storage.base_experiment_data.ExperimentData.root_env_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">root_env_config</span></code></a></dt><dd><p>Root environment configuration.</p>
@@ -145,6 +147,21 @@
 <dt class="sig sig-object py" id="mlos_bench.storage.base_experiment_data.ExperimentData.exp_id">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">exp_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#mlos_bench.storage.base_experiment_data.ExperimentData.exp_id" title="Link to this definition">¶</a></dt>
 <dd><p>ID of the current experiment.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="mlos_bench.storage.base_experiment_data.ExperimentData.objectives">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">objectives</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#mlos_bench.storage.base_experiment_data.ExperimentData.objectives" title="Link to this definition">¶</a></dt>
+<dd><p>Retrieve the experiment’s objectives data from the storage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>objectives</strong><span class="classifier">Dict[str, objective]</span></dt><dd><p>A dictionary of the experiment’s objective names (optimization_targets)
+and their directions (e.g., min or max).</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py property">

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.optimizers package &mdash; MlosCore 0.1.dev1+g42a149f documentation</title>
+  <title>mlos_bench.optimizers package &mdash; MlosCore 0.1.dev1+g221cee3 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=69904da2"></script>
+        <script src="../../_static/documentation_options.js?v=332369ff"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g42a149f
+                0.1.dev1+g221cee3
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -121,6 +121,8 @@
 <dl class="field-list simple">
 <dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">direction</span></code></dt><dd><p>The direction to optimize the target metric (e.g., min or max).</p>
+</dd>
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_min</span></code></dt><dd><p>True if minimizing, False otherwise.</p>
 </dd>
 <dt><a class="reference internal" href="../../generated/mlos_bench.optimizers.MlosCoreOptimizer.html#mlos_bench.optimizers.MlosCoreOptimizer.name" title="mlos_bench.optimizers.MlosCoreOptimizer.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></dt><dd><p>The name of the optimizer.</p>
@@ -256,6 +258,8 @@ but with the values set to the next suggestion.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">direction</span></code></dt><dd><p>The direction to optimize the target metric (e.g., min or max).</p>
+</dd>
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_min</span></code></dt><dd><p>True if minimizing, False otherwise.</p>
 </dd>
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></dt><dd><p>The name of the optimizer.</p>
@@ -375,6 +379,8 @@ Explicit configs (partial or full) are possible using configuration files.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">direction</span></code></dt><dd><p>The direction to optimize the target metric (e.g., min or max).</p>
+</dd>
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_min</span></code></dt><dd><p>True if minimizing, False otherwise.</p>
 </dd>
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></dt><dd><p>The name of the optimizer.</p>
@@ -434,6 +440,8 @@ Explicit configs (partial or full) are possible using configuration files.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
+<dt><a class="reference internal" href="../../generated/mlos_bench.optimizers.Optimizer.html#mlos_bench.optimizers.Optimizer.direction" title="mlos_bench.optimizers.Optimizer.direction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">direction</span></code></a></dt><dd><p>The direction to optimize the target metric (e.g., min or max).</p>
+</dd>
 <dt><a class="reference internal" href="../../generated/mlos_bench.optimizers.Optimizer.html#mlos_bench.optimizers.Optimizer.is_min" title="mlos_bench.optimizers.Optimizer.is_min"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_min</span></code></a></dt><dd><p>True if minimizing, False otherwise.</p>
 </dd>
 <dt><a class="reference internal" href="../../generated/mlos_bench.optimizers.Optimizer.html#mlos_bench.optimizers.Optimizer.name" title="mlos_bench.optimizers.Optimizer.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></dt><dd><p>The name of the optimizer.</p>
@@ -498,6 +506,12 @@ Explicit configs (partial or full) are possible using configuration files.</p>
 </dl>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="mlos_bench.optimizers.Optimizer.direction">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">direction</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#mlos_bench.optimizers.Optimizer.direction" title="Link to this definition">¶</a></dt>
+<dd><p>The direction to optimize the target metric (e.g., min or max).</p>
 </dd></dl>
 
 <dl class="py method">
@@ -627,6 +641,7 @@ but with the values set to the next suggestion.</p>
 <li class="toctree-l2"><a class="reference internal" href="mlos_bench.optimizers.base_optimizer.html#mlos_bench.optimizers.base_optimizer.Optimizer"><code class="docutils literal notranslate"><span class="pre">Optimizer</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.optimizers.base_optimizer.html#mlos_bench.optimizers.base_optimizer.Optimizer.BASE_SUPPORTED_CONFIG_PROPS"><code class="docutils literal notranslate"><span class="pre">Optimizer.BASE_SUPPORTED_CONFIG_PROPS</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.optimizers.base_optimizer.html#mlos_bench.optimizers.base_optimizer.Optimizer.bulk_register"><code class="docutils literal notranslate"><span class="pre">Optimizer.bulk_register()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.optimizers.base_optimizer.html#mlos_bench.optimizers.base_optimizer.Optimizer.direction"><code class="docutils literal notranslate"><span class="pre">Optimizer.direction</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.optimizers.base_optimizer.html#mlos_bench.optimizers.base_optimizer.Optimizer.get_best_observation"><code class="docutils literal notranslate"><span class="pre">Optimizer.get_best_observation()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.optimizers.base_optimizer.html#mlos_bench.optimizers.base_optimizer.Optimizer.is_min"><code class="docutils literal notranslate"><span class="pre">Optimizer.is_min</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.optimizers.base_optimizer.html#mlos_bench.optimizers.base_optimizer.Optimizer.name"><code class="docutils literal notranslate"><span class="pre">Optimizer.name</span></code></a></li>
