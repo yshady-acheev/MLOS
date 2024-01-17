@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_354360b2842e9a22___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.4.0">coverage.py v7.4.0</a>,
-            created at 2024-01-17 17:57 +0000
+            created at 2024-01-17 21:37 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -94,7 +94,7 @@
     <p class="pln"><span class="n"><a id="t12" href="#t12">12</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t13" href="#t13">13</a></span><span class="t"><span class="key">import</span> <span class="nam">pytest</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t14" href="#t14">14</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t15" href="#t15">15</a></span><span class="t"><span class="key">from</span> <span class="nam">mlos_core</span> <span class="key">import</span> <span class="nam">config_to_dataframe</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t15" href="#t15">15</a></span><span class="t"><span class="key">from</span> <span class="nam">mlos_core</span><span class="op">.</span><span class="nam">util</span> <span class="key">import</span> <span class="nam">config_to_dataframe</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t16" href="#t16">16</a></span><span class="t"><span class="key">from</span> <span class="nam">mlos_core</span><span class="op">.</span><span class="nam">optimizers</span><span class="op">.</span><span class="nam">bayesian_optimizers</span><span class="op">.</span><span class="nam">smac_optimizer</span> <span class="key">import</span> <span class="nam">SmacOptimizer</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t17" href="#t17">17</a></span><span class="t"><span class="key">from</span> <span class="nam">mlos_bench</span><span class="op">.</span><span class="nam">optimizers</span><span class="op">.</span><span class="nam">convert_configspace</span> <span class="key">import</span> <span class="nam">tunable_values_to_configuration</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t18" href="#t18">18</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -163,7 +163,7 @@
     <p class="run"><span class="n"><a id="t81" href="#t81">81</a></span><span class="t">    <span class="key">assert</span> <span class="nam">tunables</span><span class="op">.</span><span class="nam">get_param_values</span><span class="op">(</span><span class="op">)</span> <span class="op">==</span> <span class="op">{</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t82" href="#t82">82</a></span><span class="t">        <span class="str">"vmSize"</span><span class="op">:</span> <span class="str">"Standard_B2ms"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t83" href="#t83">83</a></span><span class="t">        <span class="str">"idle"</span><span class="op">:</span> <span class="str">"halt"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t84" href="#t84">84</a></span><span class="t">        <span class="str">"kernel_sched_migration_cost_ns"</span><span class="op">:</span> <span class="num">117025</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t84" href="#t84">84</a></span><span class="t">        <span class="str">"kernel_sched_migration_cost_ns"</span><span class="op">:</span> <span class="num">117026</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t85" href="#t85">85</a></span><span class="t">        <span class="str">"kernel_sched_latency_ns"</span><span class="op">:</span> <span class="num">149827706</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t86" href="#t86">86</a></span><span class="t">    <span class="op">}</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t87" href="#t87">87</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -178,7 +178,7 @@
     <p class="run"><span class="n"><a id="t96" href="#t96">96</a></span><span class="t">    <span class="key">assert</span> <span class="nam">tunables</span><span class="op">.</span><span class="nam">get_param_values</span><span class="op">(</span><span class="op">)</span> <span class="op">==</span> <span class="op">{</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t97" href="#t97">97</a></span><span class="t">        <span class="str">"vmSize"</span><span class="op">:</span> <span class="str">"Standard_B2s"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t98" href="#t98">98</a></span><span class="t">        <span class="str">"idle"</span><span class="op">:</span> <span class="str">"halt"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t99" href="#t99">99</a></span><span class="t">        <span class="str">"kernel_sched_migration_cost_ns"</span><span class="op">:</span> <span class="num">49122</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t99" href="#t99">99</a></span><span class="t">        <span class="str">"kernel_sched_migration_cost_ns"</span><span class="op">:</span> <span class="num">49123</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t100" href="#t100">100</a></span><span class="t">        <span class="str">"kernel_sched_latency_ns"</span><span class="op">:</span> <span class="num">234760738</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t101" href="#t101">101</a></span><span class="t">    <span class="op">}</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t102" href="#t102">102</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -193,8 +193,8 @@
     <p class="run"><span class="n"><a id="t111" href="#t111">111</a></span><span class="t">    <span class="key">assert</span> <span class="nam">tunables</span><span class="op">.</span><span class="nam">get_param_values</span><span class="op">(</span><span class="op">)</span> <span class="op">==</span> <span class="op">{</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t112" href="#t112">112</a></span><span class="t">        <span class="str">"vmSize"</span><span class="op">:</span> <span class="str">"Standard_B2s"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t113" href="#t113">113</a></span><span class="t">        <span class="str">"idle"</span><span class="op">:</span> <span class="str">"halt"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t114" href="#t114">114</a></span><span class="t">        <span class="str">"kernel_sched_migration_cost_ns"</span><span class="op">:</span> <span class="num">50132</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t115" href="#t115">115</a></span><span class="t">        <span class="str">"kernel_sched_latency_ns"</span><span class="op">:</span> <span class="num">22674895</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t114" href="#t114">114</a></span><span class="t">        <span class="str">"kernel_sched_migration_cost_ns"</span><span class="op">:</span> <span class="op">-</span><span class="num">1</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t115" href="#t115">115</a></span><span class="t">        <span class="str">"kernel_sched_latency_ns"</span><span class="op">:</span> <span class="num">13718105</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t116" href="#t116">116</a></span><span class="t">    <span class="op">}</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t117" href="#t117">117</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t118" href="#t118">118</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -205,12 +205,12 @@
     <p class="pln"><span class="n"><a id="t123" href="#t123">123</a></span><span class="t"><span class="str">    Toy optimization loop with mock environment and SMAC optimizer.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t124" href="#t124">124</a></span><span class="t"><span class="str">    """</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t125" href="#t125">125</a></span><span class="t">    <span class="op">(</span><span class="nam">score</span><span class="op">,</span> <span class="nam">tunables</span><span class="op">)</span> <span class="op">=</span> <span class="nam">_optimize</span><span class="op">(</span><span class="nam">mock_env_no_noise</span><span class="op">,</span> <span class="nam">smac_opt</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t126" href="#t126">126</a></span><span class="t">    <span class="nam">expected_score</span> <span class="op">=</span> <span class="num">73.59</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t126" href="#t126">126</a></span><span class="t">    <span class="nam">expected_score</span> <span class="op">=</span> <span class="num">70.33</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t127" href="#t127">127</a></span><span class="t">    <span class="nam">expected_tunable_values</span> <span class="op">=</span> <span class="op">{</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t128" href="#t128">128</a></span><span class="t">        <span class="str">"vmSize"</span><span class="op">:</span> <span class="str">"Standard_B2s"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t129" href="#t129">129</a></span><span class="t">        <span class="str">"idle"</span><span class="op">:</span> <span class="str">"mwait"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t130" href="#t130">130</a></span><span class="t">        <span class="str">"kernel_sched_migration_cost_ns"</span><span class="op">:</span> <span class="num">319025</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t131" href="#t131">131</a></span><span class="t">        <span class="str">"kernel_sched_latency_ns"</span><span class="op">:</span> <span class="num">499339615</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t130" href="#t130">130</a></span><span class="t">        <span class="str">"kernel_sched_migration_cost_ns"</span><span class="op">:</span> <span class="num">297669</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t131" href="#t131">131</a></span><span class="t">        <span class="str">"kernel_sched_latency_ns"</span><span class="op">:</span> <span class="num">290365137</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t132" href="#t132">132</a></span><span class="t">    <span class="op">}</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t133" href="#t133">133</a></span><span class="t">    <span class="key">assert</span> <span class="nam">score</span> <span class="op">==</span> <span class="nam">pytest</span><span class="op">.</span><span class="nam">approx</span><span class="op">(</span><span class="nam">expected_score</span><span class="op">,</span> <span class="num">0.01</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t134" href="#t134">134</a></span><span class="t">    <span class="key">assert</span> <span class="nam">tunables</span><span class="op">.</span><span class="nam">get_param_values</span><span class="op">(</span><span class="op">)</span> <span class="op">==</span> <span class="nam">expected_tunable_values</span>&nbsp;</span><span class="r"></span></p>
@@ -223,7 +223,7 @@
             <a id="nextFileLink" class="nav" href="d_354360b2842e9a22___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.4.0">coverage.py v7.4.0</a>,
-            created at 2024-01-17 17:57 +0000
+            created at 2024-01-17 21:37 +0000
         </p>
     </div>
 </footer>

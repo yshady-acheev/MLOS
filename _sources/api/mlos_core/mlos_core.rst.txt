@@ -15,3 +15,11 @@ Subpackages
    mlos_core.optimizers
    mlos_core.spaces
    mlos_core.tests
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   mlos_core.util
