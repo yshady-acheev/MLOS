@@ -14,6 +14,7 @@ Submodules
 
    mlos_bench.tests.optimizers.conftest
    mlos_bench.tests.optimizers.llamatune_opt_test
+   mlos_bench.tests.optimizers.mlos_core_opt_df_test
    mlos_bench.tests.optimizers.mlos_core_opt_smac_test
    mlos_bench.tests.optimizers.mock_opt_test
    mlos_bench.tests.optimizers.opt_bulk_register_test
