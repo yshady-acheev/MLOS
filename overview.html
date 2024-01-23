@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MLOS Package APIs Overview &mdash; MlosCore 0.1.dev1+gc786a25 documentation</title>
+  <title>MLOS Package APIs Overview &mdash; MlosCore 0.1.dev1+gd8ea64f documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="_static/documentation_options.js?v=35e682bf"></script>
+        <script src="_static/documentation_options.js?v=3932d75e"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+gc786a25
+                0.1.dev1+gd8ea64f
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -135,11 +135,20 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#storage">Storage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="generated/mlos_bench.storage.Storage.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.storage</span></code>.Storage</a></li>
-<li class="toctree-l3"><a class="reference internal" href="generated/mlos_bench.storage.base_experiment_data.ExperimentData.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.storage.base_experiment_data</span></code>.ExperimentData</a></li>
-<li class="toctree-l3"><a class="reference internal" href="generated/mlos_bench.storage.base_trial_data.TrialData.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.storage.base_trial_data</span></code>.TrialData</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#sql-db-storage">SQL DB Storage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#base-runtime-backends">Base Runtime Backends</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/mlos_bench.storage.Storage.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.storage</span></code>.Storage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/mlos_bench.storage.storage_factory.from_config.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.storage.storage_factory</span></code>.from_config</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#sql-db-storage-backend">SQL DB Storage Backend</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="generated/mlos_bench.storage.sql.storage.SqlStorage.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.storage.sql.storage</span></code>.SqlStorage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#analysis-client-access-apis">Analysis Client Access APIs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/mlos_bench.storage.base_experiment_data.ExperimentData.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.storage.base_experiment_data</span></code>.ExperimentData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/mlos_bench.storage.base_trial_data.TrialData.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.storage.base_trial_data</span></code>.TrialData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/mlos_bench.storage.base_tunable_config_data.TunableConfigData.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.storage.base_tunable_config_data</span></code>.TunableConfigData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/mlos_bench.storage.base_tunable_config_trial_group_data.TunableConfigTrialGroupData.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.storage.base_tunable_config_trial_group_data</span></code>.TunableConfigTrialGroupData</a></li>
 </ul>
 </li>
 </ul>
@@ -432,6 +441,8 @@
 </section>
 <section id="storage">
 <h2>Storage<a class="headerlink" href="#storage" title="Link to this heading">¶</a></h2>
+<section id="base-runtime-backends">
+<h3>Base Runtime Backends<a class="headerlink" href="#base-runtime-backends" title="Link to this heading">¶</a></h3>
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.storage.Storage.html#mlos_bench.storage.Storage" title="mlos_bench.storage.Storage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Storage</span></code></a>(config[, global_config, service])</p></td>
@@ -441,24 +452,49 @@
 </table>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.storage.base_experiment_data.ExperimentData.html#mlos_bench.storage.base_experiment_data.ExperimentData" title="mlos_bench.storage.base_experiment_data.ExperimentData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExperimentData</span></code></a>(*, exp_id, description, ...)</p></td>
-<td><p>Base interface for accessing the stored benchmark data.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.storage.storage_factory.from_config.html#mlos_bench.storage.storage_factory.from_config" title="mlos_bench.storage.storage_factory.from_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_config</span></code></a>(config_file[, global_configs])</p></td>
+<td><p>Create a new storage object from JSON5 config file.</p></td>
 </tr>
 </tbody>
 </table>
-<table class="autosummary longtable docutils align-default">
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.storage.base_trial_data.TrialData.html#mlos_bench.storage.base_trial_data.TrialData" title="mlos_bench.storage.base_trial_data.TrialData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TrialData</span></code></a>(*, exp_id, trial_id, config_id, ...)</p></td>
-<td><p>Base interface for accessing the stored benchmark data.</p></td>
-</tr>
-</tbody>
-</table>
-<section id="sql-db-storage">
-<h3>SQL DB Storage<a class="headerlink" href="#sql-db-storage" title="Link to this heading">¶</a></h3>
+</section>
+<section id="sql-db-storage-backend">
+<h3>SQL DB Storage Backend<a class="headerlink" href="#sql-db-storage-backend" title="Link to this heading">¶</a></h3>
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.storage.sql.storage.SqlStorage.html#mlos_bench.storage.sql.storage.SqlStorage" title="mlos_bench.storage.sql.storage.SqlStorage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SqlStorage</span></code></a>(config[, global_config, service])</p></td>
 <td><p>An implementation of the Storage interface using SQLAlchemy backend.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="analysis-client-access-apis">
+<h3>Analysis Client Access APIs<a class="headerlink" href="#analysis-client-access-apis" title="Link to this heading">¶</a></h3>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.storage.base_experiment_data.ExperimentData.html#mlos_bench.storage.base_experiment_data.ExperimentData" title="mlos_bench.storage.base_experiment_data.ExperimentData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExperimentData</span></code></a>(*, experiment_id, ...)</p></td>
+<td><p>Base interface for accessing the stored experiment benchmark data.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.storage.base_trial_data.TrialData.html#mlos_bench.storage.base_trial_data.TrialData" title="mlos_bench.storage.base_trial_data.TrialData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TrialData</span></code></a>(*, experiment_id, trial_id, ...)</p></td>
+<td><p>Base interface for accessing the stored experiment benchmark trial data.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.storage.base_tunable_config_data.TunableConfigData.html#mlos_bench.storage.base_tunable_config_data.TunableConfigData" title="mlos_bench.storage.base_tunable_config_data.TunableConfigData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TunableConfigData</span></code></a>(*, tunable_config_id)</p></td>
+<td><p>Base interface for accessing the stored experiment benchmark (tunable) config data.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.storage.base_tunable_config_trial_group_data.TunableConfigTrialGroupData.html#mlos_bench.storage.base_tunable_config_trial_group_data.TunableConfigTrialGroupData" title="mlos_bench.storage.base_tunable_config_trial_group_data.TunableConfigTrialGroupData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TunableConfigTrialGroupData</span></code></a>(*, ...[, ...])</p></td>
+<td><p>Base interface for accessing the stored experiment benchmark tunable config trial group data.</p></td>
 </tr>
 </tbody>
 </table>

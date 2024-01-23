@@ -1,0 +1,16 @@
+﻿:mod:`mlos_bench.storage.base_tunable_config_data`.TunableConfigData
+===========================================================================
+
+.. currentmodule:: mlos_bench.storage.base_tunable_config_data
+
+.. autoclass:: TunableConfigData
+
+   
+   .. automethod:: __init__
+   
+
+.. include:: mlos_bench.storage.base_tunable_config_data.TunableConfigData.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

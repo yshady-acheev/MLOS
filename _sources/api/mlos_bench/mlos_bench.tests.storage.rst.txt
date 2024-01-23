@@ -23,7 +23,8 @@ Submodules
    mlos_bench.tests.storage.conftest
    mlos_bench.tests.storage.exp_data_test
    mlos_bench.tests.storage.exp_load_test
-   mlos_bench.tests.storage.fixtures
    mlos_bench.tests.storage.trial_config_test
    mlos_bench.tests.storage.trial_data_test
    mlos_bench.tests.storage.trial_telemetry_test
+   mlos_bench.tests.storage.tunable_config_data_test
+   mlos_bench.tests.storage.tunable_config_trial_group_data_test

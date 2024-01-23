@@ -1,0 +1,12 @@
+﻿:mod:`mlos_bench.storage.storage_factory`.from_config
+==================================================================
+
+.. currentmodule:: mlos_bench.storage.storage_factory
+
+.. autofunction:: from_config
+
+.. include:: mlos_bench.storage.storage_factory.from_config.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

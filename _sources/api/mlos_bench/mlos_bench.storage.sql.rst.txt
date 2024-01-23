@@ -12,9 +12,12 @@ Submodules
 .. toctree::
    :maxdepth: 4
 
+   mlos_bench.storage.sql.common
    mlos_bench.storage.sql.experiment
    mlos_bench.storage.sql.experiment_data
    mlos_bench.storage.sql.schema
    mlos_bench.storage.sql.storage
    mlos_bench.storage.sql.trial
    mlos_bench.storage.sql.trial_data
+   mlos_bench.storage.sql.tunable_config_data
+   mlos_bench.storage.sql.tunable_config_trial_group_data

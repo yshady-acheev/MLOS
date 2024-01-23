@@ -23,4 +23,7 @@ Submodules
    mlos_bench.storage.base_experiment_data
    mlos_bench.storage.base_storage
    mlos_bench.storage.base_trial_data
+   mlos_bench.storage.base_tunable_config_data
+   mlos_bench.storage.base_tunable_config_trial_group_data
    mlos_bench.storage.storage_factory
+   mlos_bench.storage.util
