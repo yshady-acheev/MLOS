@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench package &mdash; MlosCore 0.1.dev1+g08b3a94 documentation</title>
+  <title>mlos_bench package &mdash; MlosCore 0.1.dev1+gc786a25 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=0233d4ab"></script>
+        <script src="../../_static/documentation_options.js?v=35e682bf"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g08b3a94
+                0.1.dev1+gc786a25
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -390,6 +390,7 @@ OS/application parameter autotuning.</p>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.storage.html#mlos_bench.storage.Storage.Experiment.opt_target"><code class="docutils literal notranslate"><span class="pre">Storage.Experiment.opt_target</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.storage.html#mlos_bench.storage.Storage.Experiment.pending_trials"><code class="docutils literal notranslate"><span class="pre">Storage.Experiment.pending_trials()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.storage.html#mlos_bench.storage.Storage.Experiment.trial_id"><code class="docutils literal notranslate"><span class="pre">Storage.Experiment.trial_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.storage.html#mlos_bench.storage.Storage.Experiment.tunables"><code class="docutils literal notranslate"><span class="pre">Storage.Experiment.tunables</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.storage.html#mlos_bench.storage.Storage.Trial"><code class="docutils literal notranslate"><span class="pre">Storage.Trial</span></code></a><ul>
@@ -469,6 +470,11 @@ OS/application parameter autotuning.</p>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.services.html#submodules">Submodules</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.tests.storage.html">mlos_bench.tests.storage package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.storage.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.storage.html#submodules">Submodules</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.tests.tunables.html">mlos_bench.tests.tunables package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.tunables.html#submodules">Submodules</a></li>
 </ul>
@@ -477,7 +483,6 @@ OS/application parameter autotuning.</p>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="mlos_bench.tests.html#submodules">Submodules</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.tests.conftest.html">mlos_bench.tests.conftest module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.conftest.html#mlos_bench.tests.conftest.covariant_group"><code class="docutils literal notranslate"><span class="pre">covariant_group()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.conftest.html#mlos_bench.tests.conftest.docker_compose_file"><code class="docutils literal notranslate"><span class="pre">docker_compose_file()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.conftest.html#mlos_bench.tests.conftest.docker_compose_project_name"><code class="docutils literal notranslate"><span class="pre">docker_compose_project_name()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.conftest.html#mlos_bench.tests.conftest.docker_services_lock"><code class="docutils literal notranslate"><span class="pre">docker_services_lock()</span></code></a></li>
@@ -485,8 +490,6 @@ OS/application parameter autotuning.</p>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.conftest.html#mlos_bench.tests.conftest.locked_docker_services"><code class="docutils literal notranslate"><span class="pre">locked_docker_services()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.conftest.html#mlos_bench.tests.conftest.mock_env"><code class="docutils literal notranslate"><span class="pre">mock_env()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.conftest.html#mlos_bench.tests.conftest.mock_env_no_noise"><code class="docutils literal notranslate"><span class="pre">mock_env_no_noise()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.conftest.html#mlos_bench.tests.conftest.tunable_groups"><code class="docutils literal notranslate"><span class="pre">tunable_groups()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.conftest.html#mlos_bench.tests.conftest.tunable_groups_config"><code class="docutils literal notranslate"><span class="pre">tunable_groups_config()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.tests.dict_templater_test.html">mlos_bench.tests.dict_templater_test module</a><ul>
@@ -513,6 +516,12 @@ OS/application parameter autotuning.</p>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.launcher_run_test.html#mlos_bench.tests.launcher_run_test.root_path"><code class="docutils literal notranslate"><span class="pre">root_path()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.launcher_run_test.html#mlos_bench.tests.launcher_run_test.test_launch_main_app_bench"><code class="docutils literal notranslate"><span class="pre">test_launch_main_app_bench()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.launcher_run_test.html#mlos_bench.tests.launcher_run_test.test_launch_main_app_opt"><code class="docutils literal notranslate"><span class="pre">test_launch_main_app_opt()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.tests.tunable_groups_fixtures.html">mlos_bench.tests.tunable_groups_fixtures module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.tunable_groups_fixtures.html#mlos_bench.tests.tunable_groups_fixtures.covariant_group"><code class="docutils literal notranslate"><span class="pre">covariant_group()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.tunable_groups_fixtures.html#mlos_bench.tests.tunable_groups_fixtures.tunable_groups"><code class="docutils literal notranslate"><span class="pre">tunable_groups()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_bench.tests.tunable_groups_fixtures.html#mlos_bench.tests.tunable_groups_fixtures.tunable_groups_config"><code class="docutils literal notranslate"><span class="pre">tunable_groups_config()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.tests.util_git_test.html">mlos_bench.tests.util_git_test module</a><ul>

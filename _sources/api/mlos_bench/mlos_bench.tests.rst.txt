@@ -16,6 +16,7 @@ Subpackages
    mlos_bench.tests.environments
    mlos_bench.tests.optimizers
    mlos_bench.tests.services
+   mlos_bench.tests.storage
    mlos_bench.tests.tunables
 
 Submodules
@@ -29,5 +30,6 @@ Submodules
    mlos_bench.tests.event_loop_context_test
    mlos_bench.tests.launcher_parse_args_test
    mlos_bench.tests.launcher_run_test
+   mlos_bench.tests.tunable_groups_fixtures
    mlos_bench.tests.util_git_test
    mlos_bench.tests.util_try_parse_test

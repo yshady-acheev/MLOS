@@ -1,0 +1,7 @@
+mlos\_bench.tests.storage.trial\_config\_test module
+====================================================
+
+.. automodule:: mlos_bench.tests.storage.trial_config_test
+   :members:
+   :undoc-members:
+   :show-inheritance:

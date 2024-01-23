@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.storage.storage_factory module &mdash; MlosCore 0.1.dev1+g08b3a94 documentation</title>
+  <title>mlos_bench.storage.storage_factory module &mdash; MlosCore 0.1.dev1+gc786a25 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=0233d4ab"></script>
+        <script src="../../_static/documentation_options.js?v=35e682bf"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g08b3a94
+                0.1.dev1+gc786a25
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -120,7 +120,7 @@
 <p>Factory method to create a new Storage instance from configs.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="mlos_bench.storage.storage_factory.from_config">
-<span class="sig-prename descclassname"><span class="pre">mlos_bench.storage.storage_factory.</span></span><span class="sig-name descname"><span class="pre">from_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_configs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mlos_bench.storage.base_storage.html#mlos_bench.storage.base_storage.Storage" title="mlos_bench.storage.base_storage.Storage"><span class="pre">Storage</span></a></span></span><a class="headerlink" href="#mlos_bench.storage.storage_factory.from_config" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">mlos_bench.storage.storage_factory.</span></span><span class="sig-name descname"><span class="pre">from_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_configs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mlos_bench.storage.base_storage.html#mlos_bench.storage.base_storage.Storage" title="mlos_bench.storage.base_storage.Storage"><span class="pre">Storage</span></a></span></span><a class="headerlink" href="#mlos_bench.storage.storage_factory.from_config" title="Link to this definition">¶</a></dt>
 <dd><p>Create a new storage object from JSON5 config file.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -128,8 +128,6 @@
 <dt><strong>config_file</strong><span class="classifier">str</span></dt><dd><p>JSON5 config file to load.</p>
 </dd>
 <dt><strong>global_configs</strong><span class="classifier">Optional[List[str]]</span></dt><dd><p>An optional list of config files with global parameters.</p>
-</dd>
-<dt><strong>tunables</strong><span class="classifier">Optional[List[str]]</span></dt><dd><p>An optional list of files containing JSON5 metadata of the tunables.</p>
 </dd>
 <dt><strong>kwargs</strong><span class="classifier">dict</span></dt><dd><p>Additional configuration parameters.</p>
 </dd>

@@ -1,0 +1,7 @@
+mlos\_bench.tests.storage.trial\_telemetry\_test module
+=======================================================
+
+.. automodule:: mlos_bench.tests.storage.trial_telemetry_test
+   :members:
+   :undoc-members:
+   :show-inheritance:

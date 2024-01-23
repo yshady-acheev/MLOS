@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.storage.sql.trial_data module &mdash; MlosCore 0.1.dev1+g08b3a94 documentation</title>
+  <title>mlos_bench.storage.sql.trial_data module &mdash; MlosCore 0.1.dev1+gc786a25 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=0233d4ab"></script>
+        <script src="../../_static/documentation_options.js?v=35e682bf"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g08b3a94
+                0.1.dev1+gc786a25
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -127,25 +127,31 @@
 <dl class="field-list simple">
 <dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">config_id</span></code></dt><dd><p>ID of the configuration of the current trial.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">config_id</span></code></dt><dd><p>ID of the configuration of the trial.</p>
 </dd>
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">exp_id</span></code></dt><dd><p>ID of the experiment this trial belongs to.</p>
 </dd>
 <dt><a class="reference internal" href="#mlos_bench.storage.sql.trial_data.TrialSqlData.metadata" title="mlos_bench.storage.sql.trial_data.TrialSqlData.metadata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metadata</span></code></a></dt><dd><p>Retrieve the trials’ metadata params.</p>
 </dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">metadata_dict</span></code></dt><dd><p>Retrieve the trials’ metadata parameters as a dict.</p>
+</dd>
 <dt><a class="reference internal" href="#mlos_bench.storage.sql.trial_data.TrialSqlData.results" title="mlos_bench.storage.sql.trial_data.TrialSqlData.results"><code class="xref py py-obj docutils literal notranslate"><span class="pre">results</span></code></a></dt><dd><p>Retrieve the trials’ results from the storage.</p>
 </dd>
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">status</span></code></dt><dd><p>Status of the current trial.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">results_dict</span></code></dt><dd><p>Retrieve the trials’ results from the storage as a dict.</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">status</span></code></dt><dd><p>Status of the trial.</p>
 </dd>
 <dt><a class="reference internal" href="#mlos_bench.storage.sql.trial_data.TrialSqlData.telemetry" title="mlos_bench.storage.sql.trial_data.TrialSqlData.telemetry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">telemetry</span></code></a></dt><dd><p>Retrieve the trials’ telemetry from the storage.</p>
 </dd>
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">trial_id</span></code></dt><dd><p>ID of the current trial.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">trial_id</span></code></dt><dd><p>ID of the trial.</p>
 </dd>
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">ts_end</span></code></dt><dd><p>End timestamp of the current trial (UTC).</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">ts_end</span></code></dt><dd><p>End timestamp of the trial (UTC).</p>
 </dd>
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">ts_start</span></code></dt><dd><p>Start timestamp of the current trial (UTC).</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">ts_start</span></code></dt><dd><p>Start timestamp of the trial (UTC).</p>
 </dd>
 <dt><a class="reference internal" href="#mlos_bench.storage.sql.trial_data.TrialSqlData.tunable_config" title="mlos_bench.storage.sql.trial_data.TrialSqlData.tunable_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tunable_config</span></code></a></dt><dd><p>Retrieve the trials’ tunable configuration from the storage.</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">tunable_config_dict</span></code></dt><dd><p>Retrieve the trials’ tunable configuration from the storage as a dict.</p>
 </dd>
 </dl>
 </dd>

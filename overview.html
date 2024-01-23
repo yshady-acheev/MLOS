@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MLOS Package APIs Overview &mdash; MlosCore 0.1.dev1+g08b3a94 documentation</title>
+  <title>MLOS Package APIs Overview &mdash; MlosCore 0.1.dev1+gc786a25 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="_static/documentation_options.js?v=0233d4ab"></script>
+        <script src="_static/documentation_options.js?v=35e682bf"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g08b3a94
+                0.1.dev1+gc786a25
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -434,7 +434,7 @@
 <h2>Storage<a class="headerlink" href="#storage" title="Link to this heading">¶</a></h2>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.storage.Storage.html#mlos_bench.storage.Storage" title="mlos_bench.storage.Storage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Storage</span></code></a>(tunables, config[, global_config, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.storage.Storage.html#mlos_bench.storage.Storage" title="mlos_bench.storage.Storage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Storage</span></code></a>(config[, global_config, service])</p></td>
 <td><p>An abstract interface between the benchmarking framework and storage systems (e.g., SQLite or MLFLow).</p></td>
 </tr>
 </tbody>
@@ -457,7 +457,7 @@
 <h3>SQL DB Storage<a class="headerlink" href="#sql-db-storage" title="Link to this heading">¶</a></h3>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.storage.sql.storage.SqlStorage.html#mlos_bench.storage.sql.storage.SqlStorage" title="mlos_bench.storage.sql.storage.SqlStorage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SqlStorage</span></code></a>(tunables, config[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.storage.sql.storage.SqlStorage.html#mlos_bench.storage.sql.storage.SqlStorage" title="mlos_bench.storage.sql.storage.SqlStorage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SqlStorage</span></code></a>(config[, global_config, service])</p></td>
 <td><p>An implementation of the Storage interface using SQLAlchemy backend.</p></td>
 </tr>
 </tbody>

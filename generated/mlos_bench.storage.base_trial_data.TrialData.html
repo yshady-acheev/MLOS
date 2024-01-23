@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.storage.base_trial_data.TrialData &mdash; MlosCore 0.1.dev1+g08b3a94 documentation</title>
+  <title>mlos_bench.storage.base_trial_data.TrialData &mdash; MlosCore 0.1.dev1+gc786a25 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/documentation_options.js?v=0233d4ab"></script>
+        <script src="../_static/documentation_options.js?v=35e682bf"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g08b3a94
+                0.1.dev1+gc786a25
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -123,25 +123,31 @@
 <dl class="field-list simple">
 <dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
-<dt><a class="reference internal" href="#mlos_bench.storage.base_trial_data.TrialData.config_id" title="mlos_bench.storage.base_trial_data.TrialData.config_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">config_id</span></code></a></dt><dd><p>ID of the configuration of the current trial.</p>
+<dt><a class="reference internal" href="#mlos_bench.storage.base_trial_data.TrialData.config_id" title="mlos_bench.storage.base_trial_data.TrialData.config_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">config_id</span></code></a></dt><dd><p>ID of the configuration of the trial.</p>
 </dd>
 <dt><a class="reference internal" href="#mlos_bench.storage.base_trial_data.TrialData.exp_id" title="mlos_bench.storage.base_trial_data.TrialData.exp_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">exp_id</span></code></a></dt><dd><p>ID of the experiment this trial belongs to.</p>
 </dd>
-<dt><a class="reference internal" href="#mlos_bench.storage.base_trial_data.TrialData.metadata" title="mlos_bench.storage.base_trial_data.TrialData.metadata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metadata</span></code></a></dt><dd><p>Retrieve the trials’ metadata parameters.</p>
+<dt><a class="reference internal" href="#mlos_bench.storage.base_trial_data.TrialData.metadata" title="mlos_bench.storage.base_trial_data.TrialData.metadata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metadata</span></code></a></dt><dd><p>Retrieve the trials’ metadata parameters as a dataframe.</p>
+</dd>
+<dt><a class="reference internal" href="#mlos_bench.storage.base_trial_data.TrialData.metadata_dict" title="mlos_bench.storage.base_trial_data.TrialData.metadata_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metadata_dict</span></code></a></dt><dd><p>Retrieve the trials’ metadata parameters as a dict.</p>
 </dd>
 <dt><a class="reference internal" href="#mlos_bench.storage.base_trial_data.TrialData.results" title="mlos_bench.storage.base_trial_data.TrialData.results"><code class="xref py py-obj docutils literal notranslate"><span class="pre">results</span></code></a></dt><dd><p>Retrieve the trials’ results from the storage.</p>
 </dd>
-<dt><a class="reference internal" href="#mlos_bench.storage.base_trial_data.TrialData.status" title="mlos_bench.storage.base_trial_data.TrialData.status"><code class="xref py py-obj docutils literal notranslate"><span class="pre">status</span></code></a></dt><dd><p>Status of the current trial.</p>
+<dt><a class="reference internal" href="#mlos_bench.storage.base_trial_data.TrialData.results_dict" title="mlos_bench.storage.base_trial_data.TrialData.results_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">results_dict</span></code></a></dt><dd><p>Retrieve the trials’ results from the storage as a dict.</p>
 </dd>
-<dt><a class="reference internal" href="#mlos_bench.storage.base_trial_data.TrialData.telemetry" title="mlos_bench.storage.base_trial_data.TrialData.telemetry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">telemetry</span></code></a></dt><dd><p>Retrieve the trials’ telemetry from the storage.</p>
+<dt><a class="reference internal" href="#mlos_bench.storage.base_trial_data.TrialData.status" title="mlos_bench.storage.base_trial_data.TrialData.status"><code class="xref py py-obj docutils literal notranslate"><span class="pre">status</span></code></a></dt><dd><p>Status of the trial.</p>
 </dd>
-<dt><a class="reference internal" href="#mlos_bench.storage.base_trial_data.TrialData.trial_id" title="mlos_bench.storage.base_trial_data.TrialData.trial_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trial_id</span></code></a></dt><dd><p>ID of the current trial.</p>
+<dt><a class="reference internal" href="#mlos_bench.storage.base_trial_data.TrialData.telemetry" title="mlos_bench.storage.base_trial_data.TrialData.telemetry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">telemetry</span></code></a></dt><dd><p>Retrieve the trials’ telemetry from the storage as a dataframe.</p>
 </dd>
-<dt><a class="reference internal" href="#mlos_bench.storage.base_trial_data.TrialData.ts_end" title="mlos_bench.storage.base_trial_data.TrialData.ts_end"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ts_end</span></code></a></dt><dd><p>End timestamp of the current trial (UTC).</p>
+<dt><a class="reference internal" href="#mlos_bench.storage.base_trial_data.TrialData.trial_id" title="mlos_bench.storage.base_trial_data.TrialData.trial_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trial_id</span></code></a></dt><dd><p>ID of the trial.</p>
 </dd>
-<dt><a class="reference internal" href="#mlos_bench.storage.base_trial_data.TrialData.ts_start" title="mlos_bench.storage.base_trial_data.TrialData.ts_start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ts_start</span></code></a></dt><dd><p>Start timestamp of the current trial (UTC).</p>
+<dt><a class="reference internal" href="#mlos_bench.storage.base_trial_data.TrialData.ts_end" title="mlos_bench.storage.base_trial_data.TrialData.ts_end"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ts_end</span></code></a></dt><dd><p>End timestamp of the trial (UTC).</p>
+</dd>
+<dt><a class="reference internal" href="#mlos_bench.storage.base_trial_data.TrialData.ts_start" title="mlos_bench.storage.base_trial_data.TrialData.ts_start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ts_start</span></code></a></dt><dd><p>Start timestamp of the trial (UTC).</p>
 </dd>
 <dt><a class="reference internal" href="#mlos_bench.storage.base_trial_data.TrialData.tunable_config" title="mlos_bench.storage.base_trial_data.TrialData.tunable_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tunable_config</span></code></a></dt><dd><p>Retrieve the trials’ tunable configuration from the storage.</p>
+</dd>
+<dt><a class="reference internal" href="#mlos_bench.storage.base_trial_data.TrialData.tunable_config_dict" title="mlos_bench.storage.base_trial_data.TrialData.tunable_config_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tunable_config_dict</span></code></a></dt><dd><p>Retrieve the trials’ tunable configuration from the storage as a dict.</p>
 </dd>
 </dl>
 </dd>
@@ -154,7 +160,7 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="mlos_bench.storage.base_trial_data.TrialData.config_id">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">config_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#mlos_bench.storage.base_trial_data.TrialData.config_id" title="Link to this definition">¶</a></dt>
-<dd><p>ID of the configuration of the current trial.</p>
+<dd><p>ID of the configuration of the trial.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -166,7 +172,7 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="mlos_bench.storage.base_trial_data.TrialData.metadata">
 <em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">metadata</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DataFrame</span></em><a class="headerlink" href="#mlos_bench.storage.base_trial_data.TrialData.metadata" title="Link to this definition">¶</a></dt>
-<dd><p>Retrieve the trials’ metadata parameters.</p>
+<dd><p>Retrieve the trials’ metadata parameters as a dataframe.</p>
 <p>Note: this corresponds to the Trial object’s “config” property.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -181,13 +187,27 @@ Returns an empty dataframe if there is no metadata.</p>
 </dd></dl>
 
 <dl class="py property">
+<dt class="sig sig-object py" id="mlos_bench.storage.base_trial_data.TrialData.metadata_dict">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">metadata_dict</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span></em><a class="headerlink" href="#mlos_bench.storage.base_trial_data.TrialData.metadata_dict" title="Link to this definition">¶</a></dt>
+<dd><p>Retrieve the trials’ metadata parameters as a dict.</p>
+<p>Note: this corresponds to the Trial object’s “config” property.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>metadata</strong><span class="classifier">dict</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="mlos_bench.storage.base_trial_data.TrialData.results">
 <em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">results</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DataFrame</span></em><a class="headerlink" href="#mlos_bench.storage.base_trial_data.TrialData.results" title="Link to this definition">¶</a></dt>
 <dd><p>Retrieve the trials’ results from the storage.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>config</strong><span class="classifier">pandas.DataFrame</span></dt><dd><p>A dataframe with the trial results.
+<dt><strong>results</strong><span class="classifier">pandas.DataFrame</span></dt><dd><p>A dataframe with the trial results.
 It has two <cite>str</cite> columns, “metric” and “value”.
 If the trial status is not SUCCEEDED, the dataframe is empty.</p>
 </dd>
@@ -197,15 +217,28 @@ If the trial status is not SUCCEEDED, the dataframe is empty.</p>
 </dd></dl>
 
 <dl class="py property">
+<dt class="sig sig-object py" id="mlos_bench.storage.base_trial_data.TrialData.results_dict">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">results_dict</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#mlos_bench.storage.base_trial_data.TrialData.results_dict" title="Link to this definition">¶</a></dt>
+<dd><p>Retrieve the trials’ results from the storage as a dict.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>results</strong><span class="classifier">dict</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="mlos_bench.storage.base_trial_data.TrialData.status">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">status</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../api/mlos_bench/mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a></em><a class="headerlink" href="#mlos_bench.storage.base_trial_data.TrialData.status" title="Link to this definition">¶</a></dt>
-<dd><p>Status of the current trial.</p>
+<dd><p>Status of the trial.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="mlos_bench.storage.base_trial_data.TrialData.telemetry">
 <em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">telemetry</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DataFrame</span></em><a class="headerlink" href="#mlos_bench.storage.base_trial_data.TrialData.telemetry" title="Link to this definition">¶</a></dt>
-<dd><p>Retrieve the trials’ telemetry from the storage.</p>
+<dd><p>Retrieve the trials’ telemetry from the storage as a dataframe.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -222,19 +255,19 @@ the dataframe is empty.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="mlos_bench.storage.base_trial_data.TrialData.trial_id">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">trial_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#mlos_bench.storage.base_trial_data.TrialData.trial_id" title="Link to this definition">¶</a></dt>
-<dd><p>ID of the current trial.</p>
+<dd><p>ID of the trial.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="mlos_bench.storage.base_trial_data.TrialData.ts_end">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ts_end</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">datetime</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#mlos_bench.storage.base_trial_data.TrialData.ts_end" title="Link to this definition">¶</a></dt>
-<dd><p>End timestamp of the current trial (UTC).</p>
+<dd><p>End timestamp of the trial (UTC).</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="mlos_bench.storage.base_trial_data.TrialData.ts_start">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ts_start</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">datetime</span></em><a class="headerlink" href="#mlos_bench.storage.base_trial_data.TrialData.ts_start" title="Link to this definition">¶</a></dt>
-<dd><p>Start timestamp of the current trial (UTC).</p>
+<dd><p>Start timestamp of the trial (UTC).</p>
 </dd></dl>
 
 <dl class="py property">
@@ -245,9 +278,23 @@ the dataframe is empty.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>config</strong><span class="classifier">pandas.DataFrame</span></dt><dd><p>A dataframe with the tunable configuration of the current trial.
+<dt><strong>config</strong><span class="classifier">pandas.DataFrame</span></dt><dd><p>A dataframe with the tunable configuration of the trial.
 It has two <cite>str</cite> columns, “parameter” and “value”.</p>
 </dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="mlos_bench.storage.base_trial_data.TrialData.tunable_config_dict">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tunable_config_dict</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#mlos_bench.storage.base_trial_data.TrialData.tunable_config_dict" title="Link to this definition">¶</a></dt>
+<dd><p>Retrieve the trials’ tunable configuration from the storage as a dict.</p>
+<p>Note: this corresponds to the Trial object’s “tunables” property.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>config</strong><span class="classifier">dict</span></dt><dd></dd>
 </dl>
 </dd>
 </dl>
