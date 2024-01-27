@@ -64,8 +64,8 @@
             <a id="indexLink" class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
             <a id="nextFileLink" class="nav" href="d_ce2854f29b8d638d_local_fileshare_env_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
-            <a class="nav" href="https://coverage.readthedocs.io/en/7.4.1">coverage.py v7.4.1</a>,
-            created at 2024-01-27 00:32 +0000
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.4.0">coverage.py v7.4.0</a>,
+            created at 2024-01-27 00:40 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -275,7 +275,7 @@
     <p class="run"><span class="n"><a id="t193" href="#t193">193</a></span><span class="t">            <span class="nam">_LOG</span><span class="op">.</span><span class="nam">info</span><span class="op">(</span><span class="str">"Local results have (metric,value) header and %d rows: assume long format"</span><span class="op">,</span> <span class="nam">len</span><span class="op">(</span><span class="nam">data</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t194" href="#t194">194</a></span><span class="t">            <span class="nam">data</span> <span class="op">=</span> <span class="nam">pandas</span><span class="op">.</span><span class="nam">DataFrame</span><span class="op">(</span><span class="op">[</span><span class="nam">data</span><span class="op">.</span><span class="nam">value</span><span class="op">.</span><span class="nam">to_list</span><span class="op">(</span><span class="op">)</span><span class="op">]</span><span class="op">,</span> <span class="nam">columns</span><span class="op">=</span><span class="nam">data</span><span class="op">.</span><span class="nam">metric</span><span class="op">.</span><span class="nam">to_list</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t195" href="#t195">195</a></span><span class="t">            <span class="com"># Try to convert string metrics to numbers.</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t196" href="#t196">196</a></span><span class="t">            <span class="nam">data</span> <span class="op">=</span> <span class="nam">data</span><span class="op">.</span><span class="nam">apply</span><span class="op">(</span><span class="nam">pandas</span><span class="op">.</span><span class="nam">to_numeric</span><span class="op">,</span> <span class="nam">errors</span><span class="op">=</span><span class="str">"ignore"</span><span class="op">)</span>   <span class="com"># type: ignore[assignment]  # (false positive)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t196" href="#t196">196</a></span><span class="t">            <span class="nam">data</span> <span class="op">=</span> <span class="nam">data</span><span class="op">.</span><span class="nam">apply</span><span class="op">(</span><span class="nam">pandas</span><span class="op">.</span><span class="nam">to_numeric</span><span class="op">,</span> <span class="nam">errors</span><span class="op">=</span><span class="str">'coerce'</span><span class="op">)</span><span class="op">.</span><span class="nam">fillna</span><span class="op">(</span><span class="nam">data</span><span class="op">)</span>    <span class="com"># type: ignore[assignment]  # (false positive)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t197" href="#t197">197</a></span><span class="t">        <span class="key">elif</span> <span class="nam">len</span><span class="op">(</span><span class="nam">data</span><span class="op">)</span> <span class="op">==</span> <span class="num">1</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t198" href="#t198">198</a></span><span class="t">            <span class="nam">_LOG</span><span class="op">.</span><span class="nam">info</span><span class="op">(</span><span class="str">"Local results have 1 row: assume wide format"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t199" href="#t199">199</a></span><span class="t">        <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
@@ -374,8 +374,8 @@
             <a id="indexLink" class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
             <a id="nextFileLink" class="nav" href="d_ce2854f29b8d638d_local_fileshare_env_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
-            <a class="nav" href="https://coverage.readthedocs.io/en/7.4.1">coverage.py v7.4.1</a>,
-            created at 2024-01-27 00:32 +0000
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.4.0">coverage.py v7.4.0</a>,
+            created at 2024-01-27 00:40 +0000
         </p>
     </div>
 </footer>
