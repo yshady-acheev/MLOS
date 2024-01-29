@@ -1,0 +1,18 @@
+mlos\_viz.tests package
+=======================
+
+.. automodule:: mlos_viz.tests
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   mlos_viz.tests.conftest
+   mlos_viz.tests.test_base_plot
+   mlos_viz.tests.test_dabl_plot
+   mlos_viz.tests.test_mlos_viz

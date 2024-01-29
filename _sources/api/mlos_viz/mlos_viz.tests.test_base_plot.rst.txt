@@ -1,0 +1,7 @@
+mlos\_viz.tests.test\_base\_plot module
+=======================================
+
+.. automodule:: mlos_viz.tests.test_base_plot
+   :members:
+   :undoc-members:
+   :show-inheritance:

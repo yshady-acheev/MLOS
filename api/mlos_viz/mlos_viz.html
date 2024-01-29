@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_viz package &mdash; MlosCore 0.1.dev1+g3a36797 documentation</title>
+  <title>mlos_viz package &mdash; MlosCore 0.1.dev1+ga45f97d documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -14,14 +14,14 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=2785102b"></script>
+        <script src="../../_static/documentation_options.js?v=93aa4c27"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="mlos_viz.dabl module" href="mlos_viz.dabl.html" />
+    <link rel="next" title="mlos_viz.tests package" href="mlos_viz.tests.html" />
     <link rel="prev" title="mlos_viz" href="modules.html" /> 
 </head>
 
@@ -37,7 +37,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g3a36797
+                0.1.dev1+ga45f97d
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -74,8 +74,14 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#mlos_viz.ignore_plotter_warnings"><code class="docutils literal notranslate"><span class="pre">ignore_plotter_warnings()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#mlos_viz.plot"><code class="docutils literal notranslate"><span class="pre">plot()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="mlos_viz.tests.html">mlos_viz.tests package</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="mlos_viz.base.html">mlos_viz.base module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mlos_viz.dabl.html">mlos_viz.dabl module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_viz.util.html">mlos_viz.util module</a></li>
 </ul>
 </li>
 </ul>
@@ -136,7 +142,7 @@ from the mlos_bench framework for benchmarking and optimization automation.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="mlos_viz.ignore_plotter_warnings">
-<span class="sig-prename descclassname"><span class="pre">mlos_viz.</span></span><span class="sig-name descname"><span class="pre">ignore_plotter_warnings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plotter_method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../generated/mlos_viz.MlosVizMethod.html#mlos_viz.MlosVizMethod" title="mlos_viz.MlosVizMethod"><span class="pre">MlosVizMethod</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">MlosVizMethod.AUTO</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_viz.ignore_plotter_warnings" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">mlos_viz.</span></span><span class="sig-name descname"><span class="pre">ignore_plotter_warnings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plotter_method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../generated/mlos_viz.MlosVizMethod.html#mlos_viz.MlosVizMethod" title="mlos_viz.MlosVizMethod"><span class="pre">MlosVizMethod</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">MlosVizMethod.DABL</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_viz.ignore_plotter_warnings" title="Link to this definition">¶</a></dt>
 <dd><p>Suppress some annoying warnings from third-party data visualization packages by
 adding them to the warnings filter.</p>
 <dl class="field-list simple">
@@ -151,7 +157,7 @@ adding them to the warnings filter.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="mlos_viz.plot">
-<span class="sig-prename descclassname"><span class="pre">mlos_viz.</span></span><span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exp_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../generated/mlos_bench.storage.base_experiment_data.ExperimentData.html#mlos_bench.storage.base_experiment_data.ExperimentData" title="mlos_bench.storage.base_experiment_data.ExperimentData"><span class="pre">ExperimentData</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">plotter_method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../generated/mlos_viz.MlosVizMethod.html#mlos_viz.MlosVizMethod" title="mlos_viz.MlosVizMethod"><span class="pre">MlosVizMethod</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">MlosVizMethod.AUTO</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_warnings</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_viz.plot" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">mlos_viz.</span></span><span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exp_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../generated/mlos_bench.storage.base_experiment_data.ExperimentData.html#mlos_bench.storage.base_experiment_data.ExperimentData" title="mlos_bench.storage.base_experiment_data.ExperimentData"><span class="pre">ExperimentData</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">results_df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objectives</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'min'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'max'</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plotter_method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../generated/mlos_viz.MlosVizMethod.html#mlos_viz.MlosVizMethod" title="mlos_viz.MlosVizMethod"><span class="pre">MlosVizMethod</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">MlosVizMethod.DABL</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_warnings</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_viz.plot" title="Link to this definition">¶</a></dt>
 <dd><p>Plots the results of the experiment.</p>
 <p>Intended to be used from a Jupyter notebook.</p>
 <dl class="field-list simple">
@@ -159,22 +165,70 @@ adding them to the warnings filter.</p>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>exp_data: ExperimentData</strong></dt><dd><p>The experiment data to plot.</p>
 </dd>
+<dt><strong>results_df</strong><span class="classifier">Optional[“pandas.DataFrame”]</span></dt><dd><p>Optional results_df to plot.
+If not provided, defaults to exp_data.results_df property.</p>
+</dd>
+<dt><strong>objectives</strong><span class="classifier">Optional[Dict[str, Literal[“min”, “max”]]]</span></dt><dd><p>Optional objectives to plot.
+If not provided, defaults to exp_data.objectives property.</p>
+</dd>
 <dt><strong>plotter_method: MlosVizMethod</strong></dt><dd><p>The method to use for visualizing the experiment results.</p>
 </dd>
 <dt><strong>filter_warnings: bool</strong></dt><dd><p>Whether or not to filter some warnings from the plotter.</p>
+</dd>
+<dt><strong>kwargs</strong><span class="classifier">dict</span></dt><dd><p>Remaining keyword arguments are passed along to the underlying plotter(s).</p>
 </dd>
 </dl>
 </dd>
 </dl>
 </dd></dl>
 
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mlos_viz.tests.html">mlos_viz.tests package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mlos_viz.tests.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mlos_viz.tests.conftest.html">mlos_viz.tests.conftest module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_viz.tests.test_base_plot.html">mlos_viz.tests.test_base_plot module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="mlos_viz.tests.test_base_plot.html#mlos_viz.tests.test_base_plot.test_plot_optimizer_trends"><code class="docutils literal notranslate"><span class="pre">test_plot_optimizer_trends()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_viz.tests.test_base_plot.html#mlos_viz.tests.test_base_plot.test_plot_top_n_configs"><code class="docutils literal notranslate"><span class="pre">test_plot_top_n_configs()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_viz.tests.test_dabl_plot.html">mlos_viz.tests.test_dabl_plot module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="mlos_viz.tests.test_dabl_plot.html#mlos_viz.tests.test_dabl_plot.test_dabl_plot"><code class="docutils literal notranslate"><span class="pre">test_dabl_plot()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_viz.tests.test_mlos_viz.html">mlos_viz.tests.test_mlos_viz module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="mlos_viz.tests.test_mlos_viz.html#mlos_viz.tests.test_mlos_viz.test_auto_method_type"><code class="docutils literal notranslate"><span class="pre">test_auto_method_type()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlos_viz.tests.test_mlos_viz.html#mlos_viz.tests.test_mlos_viz.test_plot"><code class="docutils literal notranslate"><span class="pre">test_plot()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="mlos_viz.base.html">mlos_viz.base module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mlos_viz.base.html#mlos_viz.base.augment_results_df_with_config_trial_group_stats"><code class="docutils literal notranslate"><span class="pre">augment_results_df_with_config_trial_group_stats()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="mlos_viz.base.html#mlos_viz.base.ignore_plotter_warnings"><code class="docutils literal notranslate"><span class="pre">ignore_plotter_warnings()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="mlos_viz.base.html#mlos_viz.base.limit_top_n_configs"><code class="docutils literal notranslate"><span class="pre">limit_top_n_configs()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="mlos_viz.base.html#mlos_viz.base.plot_optimizer_trends"><code class="docutils literal notranslate"><span class="pre">plot_optimizer_trends()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="mlos_viz.base.html#mlos_viz.base.plot_top_n_configs"><code class="docutils literal notranslate"><span class="pre">plot_top_n_configs()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="mlos_viz.dabl.html">mlos_viz.dabl module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="mlos_viz.dabl.html#mlos_viz.dabl.ignore_plotter_warnings"><code class="docutils literal notranslate"><span class="pre">ignore_plotter_warnings()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="mlos_viz.dabl.html#mlos_viz.dabl.plot"><code class="docutils literal notranslate"><span class="pre">plot()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mlos_viz.util.html">mlos_viz.util module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mlos_viz.util.html#mlos_viz.util.expand_results_data_args"><code class="docutils literal notranslate"><span class="pre">expand_results_data_args()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -187,7 +241,7 @@ adding them to the warnings filter.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="modules.html" class="btn btn-neutral float-left" title="mlos_viz" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="mlos_viz.dabl.html" class="btn btn-neutral float-right" title="mlos_viz.dabl module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="mlos_viz.tests.html" class="btn btn-neutral float-right" title="mlos_viz.tests package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
