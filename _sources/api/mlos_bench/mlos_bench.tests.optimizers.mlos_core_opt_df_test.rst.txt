@@ -1,7 +1,0 @@
-mlos\_bench.tests.optimizers.mlos\_core\_opt\_df\_test module
-=============================================================
-
-.. automodule:: mlos_bench.tests.optimizers.mlos_core_opt_df_test
-   :members:
-   :undoc-members:
-   :show-inheritance:

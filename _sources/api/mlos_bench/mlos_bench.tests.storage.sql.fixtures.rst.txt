@@ -1,7 +1,0 @@
-mlos\_bench.tests.storage.sql.fixtures module
-=============================================
-
-.. automodule:: mlos_bench.tests.storage.sql.fixtures
-   :members:
-   :undoc-members:
-   :show-inheritance:

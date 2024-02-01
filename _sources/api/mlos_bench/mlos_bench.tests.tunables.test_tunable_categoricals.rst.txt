@@ -1,7 +1,0 @@
-mlos\_bench.tests.tunables.test\_tunable\_categoricals module
-=============================================================
-
-.. automodule:: mlos_bench.tests.tunables.test_tunable_categoricals
-   :members:
-   :undoc-members:
-   :show-inheritance:

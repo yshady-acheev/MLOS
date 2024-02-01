@@ -1,7 +1,0 @@
-mlos\_bench.tests.optimizers.conftest module
-============================================
-
-.. automodule:: mlos_bench.tests.optimizers.conftest
-   :members:
-   :undoc-members:
-   :show-inheritance:

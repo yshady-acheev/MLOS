@@ -1,7 +1,0 @@
-mlos\_bench.tests.util\_git\_test module
-========================================
-
-.. automodule:: mlos_bench.tests.util_git_test
-   :members:
-   :undoc-members:
-   :show-inheritance:

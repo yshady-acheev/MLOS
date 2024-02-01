@@ -17,7 +17,6 @@ Subpackages
    mlos_bench.optimizers
    mlos_bench.services
    mlos_bench.storage
-   mlos_bench.tests
    mlos_bench.tunables
 
 Submodules

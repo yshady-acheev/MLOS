@@ -1,7 +1,0 @@
-mlos\_bench.tests.services.test\_service\_method\_registering module
-====================================================================
-
-.. automodule:: mlos_bench.tests.services.test_service_method_registering
-   :members:
-   :undoc-members:
-   :show-inheritance:

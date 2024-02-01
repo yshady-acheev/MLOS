@@ -1,7 +1,0 @@
-mlos\_viz.tests.test\_mlos\_viz module
-======================================
-
-.. automodule:: mlos_viz.tests.test_mlos_viz
-   :members:
-   :undoc-members:
-   :show-inheritance:

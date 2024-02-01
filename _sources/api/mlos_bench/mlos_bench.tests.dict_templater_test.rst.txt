@@ -1,7 +1,0 @@
-mlos\_bench.tests.dict\_templater\_test module
-==============================================
-
-.. automodule:: mlos_bench.tests.dict_templater_test
-   :members:
-   :undoc-members:
-   :show-inheritance:

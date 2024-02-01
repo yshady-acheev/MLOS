@@ -1,7 +1,0 @@
-mlos\_bench.tests.environments.composite\_env\_test module
-==========================================================
-
-.. automodule:: mlos_bench.tests.environments.composite_env_test
-   :members:
-   :undoc-members:
-   :show-inheritance:

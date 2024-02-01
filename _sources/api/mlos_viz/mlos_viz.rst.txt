@@ -6,14 +6,6 @@ mlos\_viz package
    :undoc-members:
    :show-inheritance:
 
-Subpackages
------------
-
-.. toctree::
-   :maxdepth: 4
-
-   mlos_viz.tests
-
 Submodules
 ----------
 

@@ -1,7 +1,0 @@
-mlos\_core.tests.optimizers.random\_optimizer\_test module
-==========================================================
-
-.. automodule:: mlos_core.tests.optimizers.random_optimizer_test
-   :members:
-   :undoc-members:
-   :show-inheritance:
