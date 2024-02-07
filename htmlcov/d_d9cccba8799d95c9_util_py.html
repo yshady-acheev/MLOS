@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_ffd0e22b8f179be9___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.4.1">coverage.py v7.4.1</a>,
-            created at 2024-02-07 00:33 +0000
+            created at 2024-02-07 20:16 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -112,7 +112,7 @@
     <p class="run"><span class="n"><a id="t30" href="#t30">30</a></span><span class="t">        <span class="nam">dataframe</span><span class="op">.</span><span class="nam">rename</span><span class="op">(</span><span class="nam">columns</span><span class="op">=</span><span class="op">{</span><span class="str">'metric'</span><span class="op">:</span> <span class="str">'parameter'</span><span class="op">}</span><span class="op">,</span> <span class="nam">inplace</span><span class="op">=</span><span class="key">True</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t31" href="#t31">31</a></span><span class="t">    <span class="key">assert</span> <span class="nam">dataframe</span><span class="op">.</span><span class="nam">columns</span><span class="op">.</span><span class="nam">tolist</span><span class="op">(</span><span class="op">)</span> <span class="op">==</span> <span class="op">[</span><span class="str">'parameter'</span><span class="op">,</span> <span class="str">'value'</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t32" href="#t32">32</a></span><span class="t">    <span class="nam">data</span> <span class="op">=</span> <span class="op">{</span><span class="op">}</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t33" href="#t33">33</a></span><span class="t">    <span class="key">for</span> <span class="nam">_</span><span class="op">,</span> <span class="nam">row</span> <span class="key">in</span> <span class="nam">dataframe</span><span class="op">.</span><span class="nam">iterrows</span><span class="op">(</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t33" href="#t33">33</a></span><span class="t">    <span class="key">for</span> <span class="nam">_</span><span class="op">,</span> <span class="nam">row</span> <span class="key">in</span> <span class="nam">dataframe</span><span class="op">.</span><span class="nam">astype</span><span class="op">(</span><span class="str">'O'</span><span class="op">)</span><span class="op">.</span><span class="nam">iterrows</span><span class="op">(</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t34" href="#t34">34</a></span><span class="t">        <span class="key">assert</span> <span class="nam">isinstance</span><span class="op">(</span><span class="nam">row</span><span class="op">[</span><span class="str">'parameter'</span><span class="op">]</span><span class="op">,</span> <span class="nam">str</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t35" href="#t35">35</a></span><span class="t">        <span class="key">assert</span> <span class="nam">row</span><span class="op">[</span><span class="str">'value'</span><span class="op">]</span> <span class="key">is</span> <span class="key">None</span> <span class="key">or</span> <span class="nam">isinstance</span><span class="op">(</span><span class="nam">row</span><span class="op">[</span><span class="str">'value'</span><span class="op">]</span><span class="op">,</span> <span class="op">(</span><span class="nam">str</span><span class="op">,</span> <span class="nam">int</span><span class="op">,</span> <span class="nam">float</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t36" href="#t36">36</a></span><span class="t">        <span class="key">if</span> <span class="nam">row</span><span class="op">[</span><span class="str">'parameter'</span><span class="op">]</span> <span class="key">in</span> <span class="nam">data</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
@@ -128,7 +128,7 @@
             <a id="nextFileLink" class="nav" href="d_ffd0e22b8f179be9___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.4.1">coverage.py v7.4.1</a>,
-            created at 2024-02-07 00:33 +0000
+            created at 2024-02-07 20:16 +0000
         </p>
     </div>
 </footer>
