@@ -54,8 +54,8 @@
             </div>
         </aside>
         <h2>
-            <span class="text">137 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">127<span class="text"> run</span></button>
+            <span class="text">138 statements &nbsp;</span>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">128<span class="text"> run</span></button>
             <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">10<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">4<span class="text"> excluded</span></button>
         </h2>
@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_2af64a9d4152bba3_composite_env_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.4.1">coverage.py v7.4.1</a>,
-            created at 2024-02-13 00:34 +0000
+            created at 2024-02-13 20:11 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -460,7 +460,7 @@
     <p class="run"><span class="n"><a id="t378" href="#t378">378</a></span><span class="t">        <span class="key">assert</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_in_context</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t379" href="#t379">379</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">_is_ready</span> <span class="op">=</span> <span class="key">False</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t380" href="#t380">380</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t381" href="#t381">381</a></span><span class="t">    <span class="key">def</span> <span class="nam">run</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span> <span class="op">-></span> <span class="nam">Tuple</span><span class="op">[</span><span class="nam">Status</span><span class="op">,</span> <span class="nam">Optional</span><span class="op">[</span><span class="nam">Dict</span><span class="op">[</span><span class="nam">str</span><span class="op">,</span> <span class="nam">TunableValue</span><span class="op">]</span><span class="op">]</span><span class="op">]</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t381" href="#t381">381</a></span><span class="t">    <span class="key">def</span> <span class="nam">run</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span> <span class="op">-></span> <span class="nam">Tuple</span><span class="op">[</span><span class="nam">Status</span><span class="op">,</span> <span class="nam">datetime</span><span class="op">,</span> <span class="nam">Optional</span><span class="op">[</span><span class="nam">Dict</span><span class="op">[</span><span class="nam">str</span><span class="op">,</span> <span class="nam">TunableValue</span><span class="op">]</span><span class="op">]</span><span class="op">]</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t382" href="#t382">382</a></span><span class="t">        <span class="str">"""</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t383" href="#t383">383</a></span><span class="t"><span class="str">        Execute the run script for this environment.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t384" href="#t384">384</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -469,33 +469,35 @@
     <p class="pln"><span class="n"><a id="t387" href="#t387">387</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t388" href="#t388">388</a></span><span class="t"><span class="str">        Returns</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t389" href="#t389">389</a></span><span class="t"><span class="str">        -------</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t390" href="#t390">390</a></span><span class="t"><span class="str">        (status, output) : (Status, dict)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t391" href="#t391">391</a></span><span class="t"><span class="str">            A pair of (Status, output) values, where `output` is a dict</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t390" href="#t390">390</a></span><span class="t"><span class="str">        (status, timestamp, output) : (Status, datetime, dict)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t391" href="#t391">391</a></span><span class="t"><span class="str">            3-tuple of (Status, timestamp, output) values, where `output` is a dict</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t392" href="#t392">392</a></span><span class="t"><span class="str">            with the results or None if the status is not COMPLETED.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t393" href="#t393">393</a></span><span class="t"><span class="str">            If run script is a benchmark, then the score is usually expected to</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t394" href="#t394">394</a></span><span class="t"><span class="str">            be in the `score` field.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t395" href="#t395">395</a></span><span class="t"><span class="str">        """</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t396" href="#t396">396</a></span><span class="t">        <span class="com"># Make sure we create a context before invoking setup/run/status/teardown</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t397" href="#t397">397</a></span><span class="t">        <span class="key">assert</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_in_context</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t398" href="#t398">398</a></span><span class="t">        <span class="op">(</span><span class="nam">status</span><span class="op">,</span> <span class="nam">_</span><span class="op">)</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">status</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t399" href="#t399">399</a></span><span class="t">        <span class="key">return</span> <span class="op">(</span><span class="nam">status</span><span class="op">,</span> <span class="key">None</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t398" href="#t398">398</a></span><span class="t">        <span class="op">(</span><span class="nam">status</span><span class="op">,</span> <span class="nam">timestamp</span><span class="op">,</span> <span class="nam">_</span><span class="op">)</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">status</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t399" href="#t399">399</a></span><span class="t">        <span class="key">return</span> <span class="op">(</span><span class="nam">status</span><span class="op">,</span> <span class="nam">timestamp</span><span class="op">,</span> <span class="key">None</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t400" href="#t400">400</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t401" href="#t401">401</a></span><span class="t">    <span class="key">def</span> <span class="nam">status</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span> <span class="op">-></span> <span class="nam">Tuple</span><span class="op">[</span><span class="nam">Status</span><span class="op">,</span> <span class="nam">List</span><span class="op">[</span><span class="nam">Tuple</span><span class="op">[</span><span class="nam">datetime</span><span class="op">,</span> <span class="nam">str</span><span class="op">,</span> <span class="nam">Any</span><span class="op">]</span><span class="op">]</span><span class="op">]</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t401" href="#t401">401</a></span><span class="t">    <span class="key">def</span> <span class="nam">status</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span> <span class="op">-></span> <span class="nam">Tuple</span><span class="op">[</span><span class="nam">Status</span><span class="op">,</span> <span class="nam">datetime</span><span class="op">,</span> <span class="nam">List</span><span class="op">[</span><span class="nam">Tuple</span><span class="op">[</span><span class="nam">datetime</span><span class="op">,</span> <span class="nam">str</span><span class="op">,</span> <span class="nam">Any</span><span class="op">]</span><span class="op">]</span><span class="op">]</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t402" href="#t402">402</a></span><span class="t">        <span class="str">"""</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t403" href="#t403">403</a></span><span class="t"><span class="str">        Check the status of the benchmark environment.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t404" href="#t404">404</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t405" href="#t405">405</a></span><span class="t"><span class="str">        Returns</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t406" href="#t406">406</a></span><span class="t"><span class="str">        -------</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t407" href="#t407">407</a></span><span class="t"><span class="str">        (benchmark_status, telemetry) : (Status, list)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t408" href="#t408">408</a></span><span class="t"><span class="str">            A pair of (benchmark status, telemetry) values.</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t409" href="#t409">409</a></span><span class="t"><span class="str">            `telemetry` is a list (maybe empty) of (timestamp, metric, value) triplets.</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t410" href="#t410">410</a></span><span class="t"><span class="str">        """</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t411" href="#t411">411</a></span><span class="t">        <span class="com"># Make sure we create a context before invoking setup/run/status/teardown</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t412" href="#t412">412</a></span><span class="t">        <span class="key">assert</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_in_context</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t413" href="#t413">413</a></span><span class="t">        <span class="key">if</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_is_ready</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t414" href="#t414">414</a></span><span class="t">            <span class="key">return</span> <span class="op">(</span><span class="nam">Status</span><span class="op">.</span><span class="nam">READY</span><span class="op">,</span> <span class="op">[</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t415" href="#t415">415</a></span><span class="t">        <span class="nam">_LOG</span><span class="op">.</span><span class="nam">warning</span><span class="op">(</span><span class="str">"Environment not ready: %s"</span><span class="op">,</span> <span class="nam">self</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t416" href="#t416">416</a></span><span class="t">        <span class="key">return</span> <span class="op">(</span><span class="nam">Status</span><span class="op">.</span><span class="nam">PENDING</span><span class="op">,</span> <span class="op">[</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t407" href="#t407">407</a></span><span class="t"><span class="str">        (benchmark_status, timestamp, telemetry) : (Status, datetime, list)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t408" href="#t408">408</a></span><span class="t"><span class="str">            3-tuple of (benchmark status, timestamp, telemetry) values.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t409" href="#t409">409</a></span><span class="t"><span class="str">            `timestamp` is UTC time stamp of the status; it's current time by default.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t410" href="#t410">410</a></span><span class="t"><span class="str">            `telemetry` is a list (maybe empty) of (timestamp, metric, value) triplets.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t411" href="#t411">411</a></span><span class="t"><span class="str">        """</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t412" href="#t412">412</a></span><span class="t">        <span class="com"># Make sure we create a context before invoking setup/run/status/teardown</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t413" href="#t413">413</a></span><span class="t">        <span class="key">assert</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_in_context</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t414" href="#t414">414</a></span><span class="t">        <span class="nam">timestamp</span> <span class="op">=</span> <span class="nam">datetime</span><span class="op">.</span><span class="nam">utcnow</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t415" href="#t415">415</a></span><span class="t">        <span class="key">if</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_is_ready</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t416" href="#t416">416</a></span><span class="t">            <span class="key">return</span> <span class="op">(</span><span class="nam">Status</span><span class="op">.</span><span class="nam">READY</span><span class="op">,</span> <span class="nam">timestamp</span><span class="op">,</span> <span class="op">[</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t417" href="#t417">417</a></span><span class="t">        <span class="nam">_LOG</span><span class="op">.</span><span class="nam">warning</span><span class="op">(</span><span class="str">"Environment not ready: %s"</span><span class="op">,</span> <span class="nam">self</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t418" href="#t418">418</a></span><span class="t">        <span class="key">return</span> <span class="op">(</span><span class="nam">Status</span><span class="op">.</span><span class="nam">PENDING</span><span class="op">,</span> <span class="nam">timestamp</span><span class="op">,</span> <span class="op">[</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
 </main>
 <footer>
     <div class="content">
@@ -505,7 +507,7 @@
             <a id="nextFileLink" class="nav" href="d_2af64a9d4152bba3_composite_env_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.4.1">coverage.py v7.4.1</a>,
-            created at 2024-02-13 00:34 +0000
+            created at 2024-02-13 20:11 +0000
         </p>
     </div>
 </footer>
