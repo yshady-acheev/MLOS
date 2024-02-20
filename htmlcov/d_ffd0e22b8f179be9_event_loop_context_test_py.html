@@ -64,8 +64,8 @@
             <a id="indexLink" class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
             <a id="nextFileLink" class="nav" href="d_ffd0e22b8f179be9_launcher_parse_args_test_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
-            <a class="nav" href="https://coverage.readthedocs.io/en/7.4.1">coverage.py v7.4.1</a>,
-            created at 2024-02-20 19:39 +0000
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.4.2">coverage.py v7.4.2</a>,
+            created at 2024-02-20 20:03 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -209,7 +209,7 @@
     <p class="run"><span class="n"><a id="t127" href="#t127">127</a></span><span class="t">    <span class="key">assert</span> <span class="nam">hasattr</span><span class="op">(</span><span class="nam">EventLoopContextCaller</span><span class="op">.</span><span class="nam">EVENT_LOOP_CONTEXT</span><span class="op">.</span><span class="nam">_event_loop</span><span class="op">,</span> <span class="str">'_scheduled'</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t128" href="#t128">128</a></span><span class="t">    <span class="key">assert</span> <span class="nam">len</span><span class="op">(</span><span class="nam">EventLoopContextCaller</span><span class="op">.</span><span class="nam">EVENT_LOOP_CONTEXT</span><span class="op">.</span><span class="nam">_event_loop</span><span class="op">.</span><span class="nam">_scheduled</span><span class="op">)</span> <span class="op">==</span> <span class="num">0</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t129" href="#t129">129</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t130" href="#t130">130</a></span><span class="t">    <span class="key">with</span> <span class="nam">pytest</span><span class="op">.</span><span class="nam">raises</span><span class="op">(</span><span class="nam">AssertionError</span><span class="op">)</span><span class="op">,</span> <span class="nam">pytest</span><span class="op">.</span><span class="nam">warns</span><span class="op">(</span><span class="nam">RuntimeWarning</span><span class="op">,</span> <span class="nam">match</span><span class="op">=</span><span class="str">r".*coroutine 'sleep' was never awaited"</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t130" href="#t130">130</a></span><span class="t">    <span class="key">with</span> <span class="nam">pytest</span><span class="op">.</span><span class="nam">raises</span><span class="op">(</span><span class="nam">AssertionError</span><span class="op">)</span><span class="op">:</span>  <span class="com"># , pytest.warns(RuntimeWarning, match=r".*coroutine 'sleep' was never awaited"):</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t131" href="#t131">131</a></span><span class="t">        <span class="nam">future</span> <span class="op">=</span> <span class="nam">event_loop_caller_instance_1</span><span class="op">.</span><span class="nam">EVENT_LOOP_CONTEXT</span><span class="op">.</span><span class="nam">run_coroutine</span><span class="op">(</span><span class="nam">asyncio</span><span class="op">.</span><span class="nam">sleep</span><span class="op">(</span><span class="num">0.1</span><span class="op">,</span> <span class="nam">result</span><span class="op">=</span><span class="str">'foo'</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t132" href="#t132">132</a></span><span class="t">        <span class="key">raise</span> <span class="nam">ValueError</span><span class="op">(</span><span class="str">f"Future should not have been available to wait on {future.result()}"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t133" href="#t133">133</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -238,8 +238,8 @@
             <a id="indexLink" class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
             <a id="nextFileLink" class="nav" href="d_ffd0e22b8f179be9_launcher_parse_args_test_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
-            <a class="nav" href="https://coverage.readthedocs.io/en/7.4.1">coverage.py v7.4.1</a>,
-            created at 2024-02-20 19:39 +0000
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.4.2">coverage.py v7.4.2</a>,
+            created at 2024-02-20 20:03 +0000
         </p>
     </div>
 </footer>
