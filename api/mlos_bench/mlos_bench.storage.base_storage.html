@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.storage.base_storage module &mdash; MlosCore 0.1.dev1+g3178da5 documentation</title>
+  <title>mlos_bench.storage.base_storage module &mdash; MlosCore 0.1.dev1+g28644bc documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=51c90a4c"></script>
+        <script src="../../_static/documentation_options.js?v=f469ec0a"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g3178da5
+                0.1.dev1+g28644bc
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -172,7 +172,7 @@ This class is instantiated in the <cite>Storage.experiment()</cite> method.</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.storage.base_storage.Storage.Experiment.load" title="mlos_bench.storage.base_storage.Storage.Experiment.load"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code></a>([opt_target])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.storage.base_storage.Storage.Experiment.load" title="mlos_bench.storage.base_storage.Storage.Experiment.load"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code></a>([last_trial_id, opt_target])</p></td>
 <td><p>Load (tunable values, benchmark scores, status) to warm-up the optimizer.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.storage.base_storage.Storage.Experiment.load_telemetry" title="mlos_bench.storage.base_storage.Storage.Experiment.load_telemetry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_telemetry</span></code></a>(trial_id)</p></td>
@@ -184,11 +184,11 @@ This class is instantiated in the <cite>Storage.experiment()</cite> method.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.storage.base_storage.Storage.Experiment.merge" title="mlos_bench.storage.base_storage.Storage.Experiment.merge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">merge</span></code></a>(experiment_ids)</p></td>
 <td><p>Merge in the results of other (compatible) experiments trials.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.storage.base_storage.Storage.Experiment.new_trial" title="mlos_bench.storage.base_storage.Storage.Experiment.new_trial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">new_trial</span></code></a>(tunables[, config])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.storage.base_storage.Storage.Experiment.new_trial" title="mlos_bench.storage.base_storage.Storage.Experiment.new_trial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">new_trial</span></code></a>(tunables[, ts_start, config])</p></td>
 <td><p>Create a new experiment run in the storage.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.storage.base_storage.Storage.Experiment.pending_trials" title="mlos_bench.storage.base_storage.Storage.Experiment.pending_trials"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pending_trials</span></code></a>()</p></td>
-<td><p>Return an iterator over the pending trial runs for this experiment.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.storage.base_storage.Storage.Experiment.pending_trials" title="mlos_bench.storage.base_storage.Storage.Experiment.pending_trials"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pending_trials</span></code></a>(timestamp, *, running)</p></td>
+<td><p>Return an iterator over the pending trials that are scheduled to run on or before the specified timestamp.</p></td>
 </tr>
 </tbody>
 </table>
@@ -206,10 +206,27 @@ This class is instantiated in the <cite>Storage.experiment()</cite> method.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.storage.base_storage.Storage.Experiment.load">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">opt_target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.storage.base_storage.Storage.Experiment.load" title="Link to this definition">¶</a></dt>
-<dd><p>Load (tunable values, benchmark scores, status) to warm-up the optimizer.
-This call returns data from ALL merged-in experiments and attempts
-to impute the missing tunable values.</p>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">last_trial_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opt_target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.storage.base_storage.Storage.Experiment.load" title="Link to this definition">¶</a></dt>
+<dd><p>Load (tunable values, benchmark scores, status) to warm-up the optimizer.</p>
+<p>If <cite>last_trial_id</cite> is present, load only the data from the (completed) trials
+that were scheduled <em>after</em> the given trial ID. Otherwise, return data from ALL
+merged-in experiments and attempt to impute the missing tunable values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>last_trial_id</strong><span class="classifier">int</span></dt><dd><p>(Optional) Trial ID to start from.</p>
+</dd>
+<dt><strong>opt_target</strong><span class="classifier">Optional[str]</span></dt><dd><p>Name of the optimization target.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>(configs, scores, status)</strong><span class="classifier">Tuple[List[dict], List[Optional[float]], List[Status]]</span></dt><dd><p>Tunable values, benchmark scores, and status of the trials.</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -255,12 +272,14 @@ Used to help warm up the optimizer for this experiment.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.storage.base_storage.Storage.Experiment.new_trial">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">new_trial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#mlos_bench.storage.base_storage.Storage.Trial" title="mlos_bench.storage.base_storage.Storage.Trial"><span class="pre">Trial</span></a></span></span><a class="headerlink" href="#mlos_bench.storage.base_storage.Storage.Experiment.new_trial" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">new_trial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">ts_start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">datetime</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#mlos_bench.storage.base_storage.Storage.Trial" title="mlos_bench.storage.base_storage.Storage.Trial"><span class="pre">Trial</span></a></span></span><a class="headerlink" href="#mlos_bench.storage.base_storage.Storage.Experiment.new_trial" title="Link to this definition">¶</a></dt>
 <dd><p>Create a new experiment run in the storage.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>tunables</strong><span class="classifier">TunableGroups</span></dt><dd><p>Tunable parameters to use for the trial.</p>
+</dd>
+<dt><strong>ts_start</strong><span class="classifier">Optional[datetime]</span></dt><dd><p>Timestamp of the trial start (can be in the future).</p>
 </dd>
 <dt><strong>config</strong><span class="classifier">dict</span></dt><dd><p>Key/value pairs of additional non-tunable parameters of the trial.</p>
 </dd>
@@ -290,8 +309,26 @@ the results of the experiment trial run.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.storage.base_storage.Storage.Experiment.pending_trials">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pending_trials</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#mlos_bench.storage.base_storage.Storage.Trial" title="mlos_bench.storage.base_storage.Storage.Trial"><span class="pre">Trial</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.storage.base_storage.Storage.Experiment.pending_trials" title="Link to this definition">¶</a></dt>
-<dd><p>Return an iterator over the pending trial runs for this experiment.</p>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pending_trials</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">datetime</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">running</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#mlos_bench.storage.base_storage.Storage.Trial" title="mlos_bench.storage.base_storage.Storage.Trial"><span class="pre">Trial</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.storage.base_storage.Storage.Experiment.pending_trials" title="Link to this definition">¶</a></dt>
+<dd><p>Return an iterator over the pending trials that are scheduled to run
+on or before the specified timestamp.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>timestamp</strong><span class="classifier">datetime</span></dt><dd><p>The time in UTC to check for scheduled trials.</p>
+</dd>
+<dt><strong>running</strong><span class="classifier">bool</span></dt><dd><p>If True, include the trials that are already running.
+Otherwise, return only the scheduled trials.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>trials</strong><span class="classifier">Iterator[Storage.Trial]</span></dt><dd><p>An iterator over the scheduled (and maybe running) trials.</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py property">

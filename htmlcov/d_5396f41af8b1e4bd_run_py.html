@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_2f8ecfca0b9e9362___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.4.2">coverage.py v7.4.2</a>,
-            created at 2024-02-21 00:33 +0000
+            created at 2024-02-21 18:23 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -190,7 +190,7 @@
     <p class="run"><span class="n"><a id="t108" href="#t108">108</a></span><span class="t">            <span class="op">(</span><span class="nam">configs</span><span class="op">,</span> <span class="nam">scores</span><span class="op">,</span> <span class="nam">status</span><span class="op">)</span> <span class="op">=</span> <span class="nam">exp</span><span class="op">.</span><span class="nam">load</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t109" href="#t109">109</a></span><span class="t">            <span class="nam">opt_context</span><span class="op">.</span><span class="nam">bulk_register</span><span class="op">(</span><span class="nam">configs</span><span class="op">,</span> <span class="nam">scores</span><span class="op">,</span> <span class="nam">status</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t110" href="#t110">110</a></span><span class="t">            <span class="com"># Complete any pending trials.</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t111" href="#t111">111</a></span><span class="t">            <span class="key">for</span> <span class="nam">trial</span> <span class="key">in</span> <span class="nam">exp</span><span class="op">.</span><span class="nam">pending_trials</span><span class="op">(</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t111" href="#t111">111</a></span><span class="t">            <span class="key">for</span> <span class="nam">trial</span> <span class="key">in</span> <span class="nam">exp</span><span class="op">.</span><span class="nam">pending_trials</span><span class="op">(</span><span class="nam">datetime</span><span class="op">.</span><span class="nam">utcnow</span><span class="op">(</span><span class="op">)</span><span class="op">,</span> <span class="nam">running</span><span class="op">=</span><span class="key">True</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t112" href="#t112">112</a></span><span class="t">                <span class="nam">_run</span><span class="op">(</span><span class="nam">env_context</span><span class="op">,</span> <span class="nam">opt_context</span><span class="op">,</span> <span class="nam">trial</span><span class="op">,</span> <span class="nam">global_config</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t113" href="#t113">113</a></span><span class="t">        <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t114" href="#t114">114</a></span><span class="t">            <span class="nam">_LOG</span><span class="op">.</span><span class="nam">warning</span><span class="op">(</span><span class="str">"Skip pending trials and warm-up: %s"</span><span class="op">,</span> <span class="nam">opt</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -289,7 +289,7 @@
             <a id="nextFileLink" class="nav" href="d_2f8ecfca0b9e9362___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.4.2">coverage.py v7.4.2</a>,
-            created at 2024-02-21 00:33 +0000
+            created at 2024-02-21 18:23 +0000
         </p>
     </div>
 </footer>
