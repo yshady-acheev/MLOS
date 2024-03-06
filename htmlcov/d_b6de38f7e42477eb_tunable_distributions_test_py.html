@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_b6de38f7e42477eb_tunable_group_indexing_test_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.4.3">coverage.py v7.4.3</a>,
-            created at 2024-03-06 20:31 +0000
+            created at 2024-03-06 21:38 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -91,7 +91,7 @@
     <p class="run"><span class="n"><a id="t9" href="#t9">9</a></span><span class="t"><span class="key">import</span> <span class="nam">json5</span> <span class="key">as</span> <span class="nam">json</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t10" href="#t10">10</a></span><span class="t"><span class="key">import</span> <span class="nam">pytest</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t11" href="#t11">11</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t12" href="#t12">12</a></span><span class="t"><span class="key">from</span> <span class="nam">mlos_bench</span><span class="op">.</span><span class="nam">tunables</span><span class="op">.</span><span class="nam">tunable</span> <span class="key">import</span> <span class="nam">Tunable</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t12" href="#t12">12</a></span><span class="t"><span class="key">from</span> <span class="nam">mlos_bench</span><span class="op">.</span><span class="nam">tunables</span><span class="op">.</span><span class="nam">tunable</span> <span class="key">import</span> <span class="nam">Tunable</span><span class="op">,</span> <span class="nam">TunableValueTypeName</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t13" href="#t13">13</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t14" href="#t14">14</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t15" href="#t15">15</a></span><span class="t"><span class="key">def</span> <span class="nam">test_categorical_distribution</span><span class="op">(</span><span class="op">)</span> <span class="op">-></span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
@@ -110,7 +110,7 @@
     <p class="pln"><span class="n"><a id="t28" href="#t28">28</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t29" href="#t29">29</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t30" href="#t30">30</a></span><span class="t"><span class="op">@</span><span class="nam">pytest</span><span class="op">.</span><span class="nam">mark</span><span class="op">.</span><span class="nam">parametrize</span><span class="op">(</span><span class="str">"tunable_type"</span><span class="op">,</span> <span class="op">[</span><span class="str">"int"</span><span class="op">,</span> <span class="str">"float"</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t31" href="#t31">31</a></span><span class="t"><span class="key">def</span> <span class="nam">test_numerical_distribution_uniform</span><span class="op">(</span><span class="nam">tunable_type</span><span class="op">:</span> <span class="nam">str</span><span class="op">)</span> <span class="op">-></span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t31" href="#t31">31</a></span><span class="t"><span class="key">def</span> <span class="nam">test_numerical_distribution_uniform</span><span class="op">(</span><span class="nam">tunable_type</span><span class="op">:</span> <span class="nam">TunableValueTypeName</span><span class="op">)</span> <span class="op">-></span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t32" href="#t32">32</a></span><span class="t">    <span class="str">"""</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t33" href="#t33">33</a></span><span class="t"><span class="str">    Create a numeric Tunable with explicit uniform distribution.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t34" href="#t34">34</a></span><span class="t"><span class="str">    """</span>&nbsp;</span><span class="r"></span></p>
@@ -128,7 +128,7 @@
     <p class="pln"><span class="n"><a id="t46" href="#t46">46</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t47" href="#t47">47</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t48" href="#t48">48</a></span><span class="t"><span class="op">@</span><span class="nam">pytest</span><span class="op">.</span><span class="nam">mark</span><span class="op">.</span><span class="nam">parametrize</span><span class="op">(</span><span class="str">"tunable_type"</span><span class="op">,</span> <span class="op">[</span><span class="str">"int"</span><span class="op">,</span> <span class="str">"float"</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t49" href="#t49">49</a></span><span class="t"><span class="key">def</span> <span class="nam">test_numerical_distribution_normal</span><span class="op">(</span><span class="nam">tunable_type</span><span class="op">:</span> <span class="nam">str</span><span class="op">)</span> <span class="op">-></span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t49" href="#t49">49</a></span><span class="t"><span class="key">def</span> <span class="nam">test_numerical_distribution_normal</span><span class="op">(</span><span class="nam">tunable_type</span><span class="op">:</span> <span class="nam">TunableValueTypeName</span><span class="op">)</span> <span class="op">-></span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t50" href="#t50">50</a></span><span class="t">    <span class="str">"""</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t51" href="#t51">51</a></span><span class="t"><span class="str">    Create a numeric Tunable with explicit Gaussian distribution specified.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t52" href="#t52">52</a></span><span class="t"><span class="str">    """</span>&nbsp;</span><span class="r"></span></p>
@@ -149,7 +149,7 @@
     <p class="pln"><span class="n"><a id="t67" href="#t67">67</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t68" href="#t68">68</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t69" href="#t69">69</a></span><span class="t"><span class="op">@</span><span class="nam">pytest</span><span class="op">.</span><span class="nam">mark</span><span class="op">.</span><span class="nam">parametrize</span><span class="op">(</span><span class="str">"tunable_type"</span><span class="op">,</span> <span class="op">[</span><span class="str">"int"</span><span class="op">,</span> <span class="str">"float"</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t70" href="#t70">70</a></span><span class="t"><span class="key">def</span> <span class="nam">test_numerical_distribution_beta</span><span class="op">(</span><span class="nam">tunable_type</span><span class="op">:</span> <span class="nam">str</span><span class="op">)</span> <span class="op">-></span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t70" href="#t70">70</a></span><span class="t"><span class="key">def</span> <span class="nam">test_numerical_distribution_beta</span><span class="op">(</span><span class="nam">tunable_type</span><span class="op">:</span> <span class="nam">TunableValueTypeName</span><span class="op">)</span> <span class="op">-></span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t71" href="#t71">71</a></span><span class="t">    <span class="str">"""</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t72" href="#t72">72</a></span><span class="t"><span class="str">    Create a numeric Tunable with explicit Beta distribution specified.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t73" href="#t73">73</a></span><span class="t"><span class="str">    """</span>&nbsp;</span><span class="r"></span></p>
@@ -199,7 +199,7 @@
             <a id="nextFileLink" class="nav" href="d_b6de38f7e42477eb_tunable_group_indexing_test_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.4.3">coverage.py v7.4.3</a>,
-            created at 2024-03-06 20:31 +0000
+            created at 2024-03-06 21:38 +0000
         </p>
     </div>
 </footer>
