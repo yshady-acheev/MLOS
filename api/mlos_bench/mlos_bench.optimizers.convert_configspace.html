@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.optimizers.convert_configspace module &mdash; MlosCore 0.1.dev1+gdc11f71 documentation</title>
+  <title>mlos_bench.optimizers.convert_configspace module &mdash; MlosCore 0.1.dev1+gde9e35d documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=9de98a6b"></script>
+        <script src="../../_static/documentation_options.js?v=2d68d1e6"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+gdc11f71
+                0.1.dev1+gde9e35d
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -137,7 +137,7 @@ It is not a true enum because ConfigSpace wants string values.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="mlos_bench.optimizers.convert_configspace.configspace_data_to_tunable_values">
-<span class="sig-prename descclassname"><span class="pre">mlos_bench.optimizers.convert_configspace.</span></span><span class="sig-name descname"><span class="pre">configspace_data_to_tunable_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#mlos_bench.optimizers.convert_configspace.configspace_data_to_tunable_values" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">mlos_bench.optimizers.convert_configspace.</span></span><span class="sig-name descname"><span class="pre">configspace_data_to_tunable_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.optimizers.convert_configspace.configspace_data_to_tunable_values" title="Link to this definition">¶</a></dt>
 <dd><p>Remove the fields that correspond to special values in ConfigSpace.
 In particular, remove and keys suffixes added by <cite>special_param_names</cite>.</p>
 </dd></dl>

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.optimizers.base_optimizer module &mdash; MlosCore 0.1.dev1+gdc11f71 documentation</title>
+  <title>mlos_bench.optimizers.base_optimizer module &mdash; MlosCore 0.1.dev1+gde9e35d documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=9de98a6b"></script>
+        <script src="../../_static/documentation_options.js?v=2d68d1e6"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+gdc11f71
+                0.1.dev1+gde9e35d
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -126,6 +126,10 @@ and mlos_core optimizers.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
+<dt><a class="reference internal" href="#mlos_bench.optimizers.base_optimizer.Optimizer.config_space" title="mlos_bench.optimizers.base_optimizer.Optimizer.config_space"><code class="xref py py-obj docutils literal notranslate"><span class="pre">config_space</span></code></a></dt><dd><p>Get the tunable parameters of the optimizer as a ConfigurationSpace.</p>
+</dd>
+<dt><a class="reference internal" href="#mlos_bench.optimizers.base_optimizer.Optimizer.current_iteration" title="mlos_bench.optimizers.base_optimizer.Optimizer.current_iteration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">current_iteration</span></code></a></dt><dd><p>The current number of iterations (trials) registered.</p>
+</dd>
 <dt><a class="reference internal" href="#mlos_bench.optimizers.base_optimizer.Optimizer.direction" title="mlos_bench.optimizers.base_optimizer.Optimizer.direction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">direction</span></code></a></dt><dd><p>The direction to optimize the target metric (e.g., min or max).</p>
 </dd>
 <dt><a class="reference internal" href="#mlos_bench.optimizers.base_optimizer.Optimizer.is_min" title="mlos_bench.optimizers.base_optimizer.Optimizer.is_min"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_min</span></code></a></dt><dd><p>True if minimizing, False otherwise.</p>
@@ -142,7 +146,7 @@ and mlos_core optimizers.</p>
 </dd>
 <dt><a class="reference internal" href="#mlos_bench.optimizers.base_optimizer.Optimizer.target" title="mlos_bench.optimizers.base_optimizer.Optimizer.target"><code class="xref py py-obj docutils literal notranslate"><span class="pre">target</span></code></a></dt><dd><p>The name of the target metric to optimize.</p>
 </dd>
-<dt><a class="reference internal" href="#mlos_bench.optimizers.base_optimizer.Optimizer.tunable_params" title="mlos_bench.optimizers.base_optimizer.Optimizer.tunable_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tunable_params</span></code></a></dt><dd><p>Get the configuration space of the optimizer.</p>
+<dt><a class="reference internal" href="#mlos_bench.optimizers.base_optimizer.Optimizer.tunable_params" title="mlos_bench.optimizers.base_optimizer.Optimizer.tunable_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tunable_params</span></code></a></dt><dd><p>Get the tunable parameters of the optimizer as TunableGroups.</p>
 </dd>
 </dl>
 </dd>
@@ -196,6 +200,28 @@ and mlos_core optimizers.</p>
 </dl>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="mlos_bench.optimizers.base_optimizer.Optimizer.config_space">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">config_space</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ConfigurationSpace</span></em><a class="headerlink" href="#mlos_bench.optimizers.base_optimizer.Optimizer.config_space" title="Link to this definition">¶</a></dt>
+<dd><p>Get the tunable parameters of the optimizer as a ConfigurationSpace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt>ConfigurationSpace</dt><dd><p>The ConfigSpace representation of the tunable parameters.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="mlos_bench.optimizers.base_optimizer.Optimizer.current_iteration">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">current_iteration</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#mlos_bench.optimizers.base_optimizer.Optimizer.current_iteration" title="Link to this definition">¶</a></dt>
+<dd><p>The current number of iterations (trials) registered.</p>
+<p>Note: this may or may not be the same as the number of configurations.
+See Also: Launcher.trial_config_repeat_count.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -318,7 +344,7 @@ but with the values set to the next suggestion.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="mlos_bench.optimizers.base_optimizer.Optimizer.tunable_params">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tunable_params</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></em><a class="headerlink" href="#mlos_bench.optimizers.base_optimizer.Optimizer.tunable_params" title="Link to this definition">¶</a></dt>
-<dd><p>Get the configuration space of the optimizer.</p>
+<dd><p>Get the tunable parameters of the optimizer as TunableGroups.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
