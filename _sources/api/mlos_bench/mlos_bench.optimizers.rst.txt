@@ -14,6 +14,7 @@ Submodules
 
    mlos_bench.optimizers.base_optimizer
    mlos_bench.optimizers.convert_configspace
+   mlos_bench.optimizers.grid_search_optimizer
    mlos_bench.optimizers.mlos_core_optimizer
    mlos_bench.optimizers.mock_optimizer
    mlos_bench.optimizers.one_shot_optimizer

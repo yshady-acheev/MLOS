@@ -1,0 +1,7 @@
+mlos\_bench.optimizers.grid\_search\_optimizer module
+=====================================================
+
+.. automodule:: mlos_bench.optimizers.grid_search_optimizer
+   :members:
+   :undoc-members:
+   :show-inheritance:
