@@ -15,6 +15,7 @@ Subpackages
    mlos_bench.config
    mlos_bench.environments
    mlos_bench.optimizers
+   mlos_bench.schedulers
    mlos_bench.services
    mlos_bench.storage
    mlos_bench.tunables

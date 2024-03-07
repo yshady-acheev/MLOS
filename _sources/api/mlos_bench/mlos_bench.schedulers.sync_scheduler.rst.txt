@@ -1,0 +1,7 @@
+mlos\_bench.schedulers.sync\_scheduler module
+=============================================
+
+.. automodule:: mlos_bench.schedulers.sync_scheduler
+   :members:
+   :undoc-members:
+   :show-inheritance:
