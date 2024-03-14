@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_323f8141f9f539b4_grid_search_optimizer_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.4.3">coverage.py v7.4.3</a>,
-            created at 2024-03-14 00:32 +0000
+            created at 2024-03-14 16:58 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -105,7 +105,7 @@
     <p class="pln"><span class="n"><a id="t23" href="#t23">23</a></span><span class="t"><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t24" href="#t24">24</a></span><span class="t"><span class="key">from</span> <span class="nam">mlos_bench</span><span class="op">.</span><span class="nam">tunables</span><span class="op">.</span><span class="nam">tunable</span> <span class="key">import</span> <span class="nam">Tunable</span><span class="op">,</span> <span class="nam">TunableValue</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t25" href="#t25">25</a></span><span class="t"><span class="key">from</span> <span class="nam">mlos_bench</span><span class="op">.</span><span class="nam">tunables</span><span class="op">.</span><span class="nam">tunable_groups</span> <span class="key">import</span> <span class="nam">TunableGroups</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t26" href="#t26">26</a></span><span class="t"><span class="key">from</span> <span class="nam">mlos_bench</span><span class="op">.</span><span class="nam">util</span> <span class="key">import</span> <span class="nam">try_parse_val</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t26" href="#t26">26</a></span><span class="t"><span class="key">from</span> <span class="nam">mlos_bench</span><span class="op">.</span><span class="nam">util</span> <span class="key">import</span> <span class="nam">try_parse_val</span><span class="op">,</span> <span class="nam">nullable</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t27" href="#t27">27</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t28" href="#t28">28</a></span><span class="t"><span class="nam">_LOG</span> <span class="op">=</span> <span class="nam">logging</span><span class="op">.</span><span class="nam">getLogger</span><span class="op">(</span><span class="nam">__name__</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t29" href="#t29">29</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -183,7 +183,7 @@
     <p class="pln"><span class="n"><a id="t101" href="#t101">101</a></span><span class="t">            <span class="nam">name</span><span class="op">=</span><span class="nam">tunable</span><span class="op">.</span><span class="nam">name</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t102" href="#t102">102</a></span><span class="t">            <span class="nam">bounds</span><span class="op">=</span><span class="op">(</span><span class="nam">int</span><span class="op">(</span><span class="nam">tunable</span><span class="op">.</span><span class="nam">range</span><span class="op">[</span><span class="num">0</span><span class="op">]</span><span class="op">)</span><span class="op">,</span> <span class="nam">int</span><span class="op">(</span><span class="nam">tunable</span><span class="op">.</span><span class="nam">range</span><span class="op">[</span><span class="num">1</span><span class="op">]</span><span class="op">)</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t103" href="#t103">103</a></span><span class="t">            <span class="nam">log</span><span class="op">=</span><span class="nam">bool</span><span class="op">(</span><span class="nam">tunable</span><span class="op">.</span><span class="nam">is_log</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t104" href="#t104">104</a></span><span class="t">            <span class="nam">q</span><span class="op">=</span><span class="nam">int</span><span class="op">(</span><span class="nam">tunable</span><span class="op">.</span><span class="nam">quantization</span><span class="op">)</span> <span class="key">if</span> <span class="nam">tunable</span><span class="op">.</span><span class="nam">quantization</span> <span class="key">is</span> <span class="key">not</span> <span class="key">None</span> <span class="key">else</span> <span class="key">None</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t104" href="#t104">104</a></span><span class="t">            <span class="nam">q</span><span class="op">=</span><span class="nam">nullable</span><span class="op">(</span><span class="nam">int</span><span class="op">,</span> <span class="nam">tunable</span><span class="op">.</span><span class="nam">quantization</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t105" href="#t105">105</a></span><span class="t">            <span class="nam">distribution</span><span class="op">=</span><span class="nam">distribution</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t106" href="#t106">106</a></span><span class="t">            <span class="nam">default</span><span class="op">=</span><span class="op">(</span><span class="nam">int</span><span class="op">(</span><span class="nam">tunable</span><span class="op">.</span><span class="nam">default</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t107" href="#t107">107</a></span><span class="t">                     <span class="key">if</span> <span class="nam">tunable</span><span class="op">.</span><span class="nam">in_range</span><span class="op">(</span><span class="nam">tunable</span><span class="op">.</span><span class="nam">default</span><span class="op">)</span> <span class="key">and</span> <span class="nam">tunable</span><span class="op">.</span><span class="nam">default</span> <span class="key">is</span> <span class="key">not</span> <span class="key">None</span>&nbsp;</span><span class="r"></span></p>
@@ -387,7 +387,7 @@
             <a id="nextFileLink" class="nav" href="d_323f8141f9f539b4_grid_search_optimizer_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.4.3">coverage.py v7.4.3</a>,
-            created at 2024-03-14 00:32 +0000
+            created at 2024-03-14 16:58 +0000
         </p>
     </div>
 </footer>
