@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.run module &mdash; MlosCore 0.1.dev1+g6e3aea3 documentation</title>
+  <title>mlos_bench.run module &mdash; MlosCore 0.1.dev1+g4166e96 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=c4cac076"></script>
+        <script src="../../_static/documentation_options.js?v=56fcc2ee"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g6e3aea3
+                0.1.dev1+g4166e96
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -124,7 +124,7 @@
                   [--service SERVICE [SERVICE ...]]
                   [--environment ENVIRONMENT] [--optimizer OPTIMIZER]
                   [--trial_config_repeat_count TRIAL_CONFIG_REPEAT_COUNT]
-                  [--storage STORAGE] [--random_init]
+                  [--scheduler SCHEDULER] [--storage STORAGE] [--random_init]
                   [--random_seed RANDOM_SEED]
                   [--tunable_values TUNABLE_VALUES [TUNABLE_VALUES ...]]
                   [--globals GLOBALS [GLOBALS ...]] [--no_teardown]
@@ -159,6 +159,9 @@ options:
   --trial_config_repeat_count TRIAL_CONFIG_REPEAT_COUNT, --trial-config-repeat-count TRIAL_CONFIG_REPEAT_COUNT
                         Number of times to repeat each config. Default is 1
                         trial per config, though more may be advised.
+  --scheduler SCHEDULER
+                        Path to the scheduler configuration file. By default,
+                        use a single worker synchronous scheduler.
   --storage STORAGE     Path to the storage configuration file. If omitted,
                         use the ephemeral in-memory SQL storage.
   --random_init, --random-init
