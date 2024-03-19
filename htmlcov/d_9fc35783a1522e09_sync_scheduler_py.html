@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_2f8ecfca0b9e9362___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.4.4">coverage.py v7.4.4</a>,
-            created at 2024-03-19 21:40 +0000
+            created at 2024-03-19 23:05 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -115,11 +115,11 @@
     <p class="run"><span class="n"><a id="t33" href="#t33">33</a></span><span class="t">        <span class="key">if</span> <span class="key">not</span> <span class="nam">is_warm_up</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t34" href="#t34">34</a></span><span class="t">            <span class="nam">_LOG</span><span class="op">.</span><span class="nam">warning</span><span class="op">(</span><span class="str">"Skip pending trials and warm-up: %s"</span><span class="op">,</span> <span class="nam">self</span><span class="op">.</span><span class="nam">optimizer</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t35" href="#t35">35</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t36" href="#t36">36</a></span><span class="t">        <span class="nam">not_converged</span> <span class="op">=</span> <span class="key">True</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t37" href="#t37">37</a></span><span class="t">        <span class="key">while</span> <span class="nam">not_converged</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t36" href="#t36">36</a></span><span class="t">        <span class="nam">not_done</span> <span class="op">=</span> <span class="key">True</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t37" href="#t37">37</a></span><span class="t">        <span class="key">while</span> <span class="nam">not_done</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t38" href="#t38">38</a></span><span class="t">            <span class="nam">_LOG</span><span class="op">.</span><span class="nam">info</span><span class="op">(</span><span class="str">"Optimization loop: Last trial ID: %d"</span><span class="op">,</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_last_trial_id</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t39" href="#t39">39</a></span><span class="t">            <span class="nam">self</span><span class="op">.</span><span class="nam">_run_schedule</span><span class="op">(</span><span class="nam">is_warm_up</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t40" href="#t40">40</a></span><span class="t">            <span class="nam">not_converged</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_schedule_new_optimizer_suggestions</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t40" href="#t40">40</a></span><span class="t">            <span class="nam">not_done</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_schedule_new_optimizer_suggestions</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t41" href="#t41">41</a></span><span class="t">            <span class="nam">is_warm_up</span> <span class="op">=</span> <span class="key">False</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t42" href="#t42">42</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t43" href="#t43">43</a></span><span class="t">    <span class="key">def</span> <span class="nam">run_trial</span><span class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="nam">trial</span><span class="op">:</span> <span class="nam">Storage</span><span class="op">.</span><span class="nam">Trial</span><span class="op">)</span> <span class="op">-></span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
@@ -157,7 +157,7 @@
             <a id="nextFileLink" class="nav" href="d_2f8ecfca0b9e9362___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.4.4">coverage.py v7.4.4</a>,
-            created at 2024-03-19 21:40 +0000
+            created at 2024-03-19 23:05 +0000
         </p>
     </div>
 </footer>
