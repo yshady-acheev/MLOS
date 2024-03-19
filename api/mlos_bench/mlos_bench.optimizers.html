@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.optimizers package &mdash; MlosCore 0.1.dev1+g647e3a2 documentation</title>
+  <title>mlos_bench.optimizers package &mdash; MlosCore 0.1.dev1+gd2e7f05 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=f166cc48"></script>
+        <script src="../../_static/documentation_options.js?v=9800685f"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g647e3a2
+                0.1.dev1+gd2e7f05
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -153,7 +153,7 @@
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../generated/mlos_bench.optimizers.MlosCoreOptimizer.html#mlos_bench.optimizers.MlosCoreOptimizer.bulk_register" title="mlos_bench.optimizers.MlosCoreOptimizer.bulk_register"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bulk_register</span></code></a>(configs, scores[, status, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../generated/mlos_bench.optimizers.MlosCoreOptimizer.html#mlos_bench.optimizers.MlosCoreOptimizer.bulk_register" title="mlos_bench.optimizers.MlosCoreOptimizer.bulk_register"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bulk_register</span></code></a>(configs, scores[, status])</p></td>
 <td><p>Pre-load the optimizer with the bulk data from previous experiments.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="../../generated/mlos_bench.optimizers.MlosCoreOptimizer.html#mlos_bench.optimizers.MlosCoreOptimizer.get_best_observation" title="mlos_bench.optimizers.MlosCoreOptimizer.get_best_observation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_best_observation</span></code></a>()</p></td>
@@ -172,7 +172,7 @@
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.optimizers.MlosCoreOptimizer.bulk_register">
-<span class="sig-name descname"><span class="pre">bulk_register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">configs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scores</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_warm_up</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#mlos_bench.optimizers.MlosCoreOptimizer.bulk_register" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">bulk_register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">configs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scores</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#mlos_bench.optimizers.MlosCoreOptimizer.bulk_register" title="Link to this definition">¶</a></dt>
 <dd><p>Pre-load the optimizer with the bulk data from previous experiments.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -182,8 +182,6 @@
 <dt><strong>scores</strong><span class="classifier">Sequence[float]</span></dt><dd><p>Benchmark results from experiments that correspond to <cite>configs</cite>.</p>
 </dd>
 <dt><strong>status</strong><span class="classifier">Optional[Sequence[float]]</span></dt><dd><p>Status of the experiments that correspond to <cite>configs</cite>.</p>
-</dd>
-<dt><strong>is_warm_up</strong><span class="classifier">bool</span></dt><dd><p>True for the initial load, False for subsequent calls.</p>
 </dd>
 </dl>
 </dd>
@@ -221,8 +219,7 @@ mlos_bench storage to track the source of each configuration.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.optimizers.MlosCoreOptimizer.register">
 <span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.optimizers.MlosCoreOptimizer.register" title="Link to this definition">¶</a></dt>
-<dd><p>Register the observation for the given configuration.
-Base class’ implementations logs and increments the iteration count.</p>
+<dd><p>Register the observation for the given configuration.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -248,7 +245,9 @@ None if the experiment was not successful.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.optimizers.MlosCoreOptimizer.suggest">
 <span class="sig-name descname"><span class="pre">suggest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></span><a class="headerlink" href="#mlos_bench.optimizers.MlosCoreOptimizer.suggest" title="Link to this definition">¶</a></dt>
-<dd><p>Generate the next suggestion.</p>
+<dd><p>Generate the next suggestion.
+Base class’ implementation increments the iteration count
+and returns the current values of the tunables.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -299,7 +298,7 @@ but with the values set to the next suggestion.</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../generated/mlos_bench.optimizers.MockOptimizer.html#mlos_bench.optimizers.MockOptimizer.bulk_register" title="mlos_bench.optimizers.MockOptimizer.bulk_register"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bulk_register</span></code></a>(configs, scores[, status, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../generated/mlos_bench.optimizers.MockOptimizer.html#mlos_bench.optimizers.MockOptimizer.bulk_register" title="mlos_bench.optimizers.MockOptimizer.bulk_register"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bulk_register</span></code></a>(configs, scores[, status])</p></td>
 <td><p>Pre-load the optimizer with the bulk data from previous experiments.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_best_observation</span></code>()</p></td>
@@ -318,7 +317,7 @@ but with the values set to the next suggestion.</p>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.optimizers.MockOptimizer.bulk_register">
-<span class="sig-name descname"><span class="pre">bulk_register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">configs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scores</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_warm_up</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#mlos_bench.optimizers.MockOptimizer.bulk_register" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">bulk_register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">configs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scores</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#mlos_bench.optimizers.MockOptimizer.bulk_register" title="Link to this definition">¶</a></dt>
 <dd><p>Pre-load the optimizer with the bulk data from previous experiments.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -328,8 +327,6 @@ but with the values set to the next suggestion.</p>
 <dt><strong>scores</strong><span class="classifier">Sequence[float]</span></dt><dd><p>Benchmark results from experiments that correspond to <cite>configs</cite>.</p>
 </dd>
 <dt><strong>status</strong><span class="classifier">Optional[Sequence[float]]</span></dt><dd><p>Status of the experiments that correspond to <cite>configs</cite>.</p>
-</dd>
-<dt><strong>is_warm_up</strong><span class="classifier">bool</span></dt><dd><p>True for the initial load, False for subsequent calls.</p>
 </dd>
 </dl>
 </dd>
@@ -387,7 +384,7 @@ Explicit configs (partial or full) are possible using configuration files.</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">bulk_register</span></code>(configs, scores[, status, ...])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">bulk_register</span></code>(configs, scores[, status])</p></td>
 <td><p>Pre-load the optimizer with the bulk data from previous experiments.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_best_observation</span></code>()</p></td>
@@ -399,17 +396,11 @@ Explicit configs (partial or full) are possible using configuration files.</p>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code>(tunables, status[, score])</p></td>
 <td><p>Register the observation for the given configuration.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.optimizers.OneShotOptimizer.suggest" title="mlos_bench.optimizers.OneShotOptimizer.suggest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">suggest</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">suggest</span></code>()</p></td>
 <td><p>Generate the next (random) suggestion.</p></td>
 </tr>
 </tbody>
 </table>
-<dl class="py method">
-<dt class="sig sig-object py" id="mlos_bench.optimizers.OneShotOptimizer.suggest">
-<span class="sig-name descname"><span class="pre">suggest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></span><a class="headerlink" href="#mlos_bench.optimizers.OneShotOptimizer.suggest" title="Link to this definition">¶</a></dt>
-<dd><p>Generate the next (random) suggestion.</p>
-</dd></dl>
-
 <dl class="py property">
 <dt class="sig sig-object py" id="mlos_bench.optimizers.OneShotOptimizer.supports_preload">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">supports_preload</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#mlos_bench.optimizers.OneShotOptimizer.supports_preload" title="Link to this definition">¶</a></dt>
@@ -454,7 +445,7 @@ Explicit configs (partial or full) are possible using configuration files.</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../generated/mlos_bench.optimizers.Optimizer.html#mlos_bench.optimizers.Optimizer.bulk_register" title="mlos_bench.optimizers.Optimizer.bulk_register"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bulk_register</span></code></a>(configs, scores[, status, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../generated/mlos_bench.optimizers.Optimizer.html#mlos_bench.optimizers.Optimizer.bulk_register" title="mlos_bench.optimizers.Optimizer.bulk_register"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bulk_register</span></code></a>(configs, scores[, status])</p></td>
 <td><p>Pre-load the optimizer with the bulk data from previous experiments.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="../../generated/mlos_bench.optimizers.Optimizer.html#mlos_bench.optimizers.Optimizer.get_best_observation" title="mlos_bench.optimizers.Optimizer.get_best_observation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_best_observation</span></code></a>()</p></td>
@@ -473,12 +464,12 @@ Explicit configs (partial or full) are possible using configuration files.</p>
 </table>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlos_bench.optimizers.Optimizer.BASE_SUPPORTED_CONFIG_PROPS">
-<span class="sig-name descname"><span class="pre">BASE_SUPPORTED_CONFIG_PROPS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'max_iterations',</span> <span class="pre">'optimization_direction',</span> <span class="pre">'optimization_target',</span> <span class="pre">'seed',</span> <span class="pre">'start_with_defaults'}</span></em><a class="headerlink" href="#mlos_bench.optimizers.Optimizer.BASE_SUPPORTED_CONFIG_PROPS" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">BASE_SUPPORTED_CONFIG_PROPS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'max_suggestions',</span> <span class="pre">'optimization_direction',</span> <span class="pre">'optimization_target',</span> <span class="pre">'seed',</span> <span class="pre">'start_with_defaults'}</span></em><a class="headerlink" href="#mlos_bench.optimizers.Optimizer.BASE_SUPPORTED_CONFIG_PROPS" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.optimizers.Optimizer.bulk_register">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bulk_register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">configs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scores</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_warm_up</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#mlos_bench.optimizers.Optimizer.bulk_register" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bulk_register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">configs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scores</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#mlos_bench.optimizers.Optimizer.bulk_register" title="Link to this definition">¶</a></dt>
 <dd><p>Pre-load the optimizer with the bulk data from previous experiments.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -488,8 +479,6 @@ Explicit configs (partial or full) are possible using configuration files.</p>
 <dt><strong>scores</strong><span class="classifier">Sequence[float]</span></dt><dd><p>Benchmark results from experiments that correspond to <cite>configs</cite>.</p>
 </dd>
 <dt><strong>status</strong><span class="classifier">Optional[Sequence[float]]</span></dt><dd><p>Status of the experiments that correspond to <cite>configs</cite>.</p>
-</dd>
-<dt><strong>is_warm_up</strong><span class="classifier">bool</span></dt><dd><p>True for the initial load, False for subsequent calls.</p>
 </dd>
 </dl>
 </dd>
@@ -576,8 +565,7 @@ Base implementation just checks the iteration count.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.optimizers.Optimizer.register">
 <em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.optimizers.Optimizer.register" title="Link to this definition">¶</a></dt>
-<dd><p>Register the observation for the given configuration.
-Base class’ implementations logs and increments the iteration count.</p>
+<dd><p>Register the observation for the given configuration.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -616,8 +604,10 @@ defaults are first suggested.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.optimizers.Optimizer.suggest">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">suggest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></span><a class="headerlink" href="#mlos_bench.optimizers.Optimizer.suggest" title="Link to this definition">¶</a></dt>
-<dd><p>Generate the next suggestion.</p>
+<span class="sig-name descname"><span class="pre">suggest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></span><a class="headerlink" href="#mlos_bench.optimizers.Optimizer.suggest" title="Link to this definition">¶</a></dt>
+<dd><p>Generate the next suggestion.
+Base class’ implementation increments the iteration count
+and returns the current values of the tunables.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -732,7 +722,6 @@ but with the values set to the next suggestion.</p>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="mlos_bench.optimizers.one_shot_optimizer.html">mlos_bench.optimizers.one_shot_optimizer module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="mlos_bench.optimizers.one_shot_optimizer.html#mlos_bench.optimizers.one_shot_optimizer.OneShotOptimizer"><code class="docutils literal notranslate"><span class="pre">OneShotOptimizer</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="mlos_bench.optimizers.one_shot_optimizer.html#mlos_bench.optimizers.one_shot_optimizer.OneShotOptimizer.suggest"><code class="docutils literal notranslate"><span class="pre">OneShotOptimizer.suggest()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.optimizers.one_shot_optimizer.html#mlos_bench.optimizers.one_shot_optimizer.OneShotOptimizer.supports_preload"><code class="docutils literal notranslate"><span class="pre">OneShotOptimizer.supports_preload</span></code></a></li>
 </ul>
 </li>

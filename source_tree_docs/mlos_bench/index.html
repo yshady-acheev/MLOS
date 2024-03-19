@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos-bench &mdash; MlosCore 0.1.dev1+g647e3a2 documentation</title>
+  <title>mlos-bench &mdash; MlosCore 0.1.dev1+gd2e7f05 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=f166cc48"></script>
+        <script src="../../_static/documentation_options.js?v=9800685f"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+g647e3a2
+                0.1.dev1+gd2e7f05
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -318,10 +318,12 @@ Same applies to all other CLI parameters - e.g., you can change the log level by
 <h2>Optimization<a class="headerlink" href="#optimization" title="Link to this heading">¶</a></h2>
 <p>Searching for an optimal set of tunable parameters is very similar to running a single benchmark.
 All we have to do is specifying the <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/./mlos_bench/optimizers/"><code class="docutils literal notranslate"><span class="pre">Optimizer</span></code></a> in the top-level configuration, like in our <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/./mlos_bench/config/cli/azure-redis-opt.jsonc"><code class="docutils literal notranslate"><span class="pre">azure-redis-opt.jsonc</span></code></a> example.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mlos_bench<span class="w"> </span>--config<span class="w"> </span><span class="s2">&quot;./mlos_bench/mlos_bench/config/cli/azure-redis-opt.jsonc&quot;</span><span class="w"> </span>--globals<span class="w"> </span><span class="s2">&quot;experiment_MyBenchmark.jsonc&quot;</span><span class="w"> </span>--max_iterations<span class="w"> </span><span class="m">10</span>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mlos_bench<span class="w"> </span>--config<span class="w"> </span><span class="s2">&quot;./mlos_bench/mlos_bench/config/cli/azure-redis-opt.jsonc&quot;</span><span class="w"> </span>--globals<span class="w"> </span><span class="s2">&quot;experiment_MyBenchmark.jsonc&quot;</span><span class="w"> </span>--max_suggestions<span class="w"> </span><span class="m">10</span><span class="w"> </span>--trial-config-repeat-count<span class="w"> </span><span class="m">3</span>
 </pre></div>
 </div>
-<p>Note that again we use the command line option <code class="docutils literal notranslate"><span class="pre">--max_iterations</span></code> to override the default value from <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/./mlos_bench/config/optimizers/mlos_core_flaml.jsonc"><code class="docutils literal notranslate"><span class="pre">mlos_core_flaml.jsonc</span></code></a>.</p>
+<p>Note that again we use the command line option <code class="docutils literal notranslate"><span class="pre">--max_suggestions</span></code> to override the max. number of suggested configurations to trial from <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/./mlos_bench/config/optimizers/mlos_core_flaml.jsonc"><code class="docutils literal notranslate"><span class="pre">mlos_core_flaml.jsonc</span></code></a>.
+We also use <code class="docutils literal notranslate"><span class="pre">--trial-config-repeat-count</span></code> to benchmark each suggested configuration 3 times.
+That means, we will run 30 trials in total, 3 for each of the 10 suggested configurations.</p>
 <p>We don’t have to specify the <code class="docutils literal notranslate"><span class="pre">&quot;tunable_values&quot;</span></code> for the optimization: the optimizer will suggest new values on each iteration and the framework will feed this data into the benchmarking environment.</p>
 <section id="resuming-interrupted-experiments">
 <h3>Resuming interrupted experiments<a class="headerlink" href="#resuming-interrupted-experiments" title="Link to this heading">¶</a></h3>
