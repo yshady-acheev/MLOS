@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="z_97f09f0ec8586ada___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.5.1">coverage.py v7.5.1</a>,
-            created at 2024-05-06 00:35 +0000
+            created at 2024-05-10 22:45 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -163,7 +163,7 @@
     <p class="pln"><span class="n"><a id="t81" href="#t81">81</a></span><span class="t">        <span class="str">"--config mlos_bench/mlos_bench/tests/config/cli/mock-bench.jsonc"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t82" href="#t82">82</a></span><span class="t">        <span class="op">[</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t83" href="#t83">83</a></span><span class="t">            <span class="str">f"^{_RE_DATE} run\\.py:\\d+ "</span> <span class="op">+</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t84" href="#t84">84</a></span><span class="t">            <span class="str">r"_main INFO Final score: 65\.67\d+\s*$"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t84" href="#t84">84</a></span><span class="t">            <span class="str">r"_main INFO Final score: \{'score': 65\.67\d+\}\s*$"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t85" href="#t85">85</a></span><span class="t">        <span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t86" href="#t86">86</a></span><span class="t">    <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t87" href="#t87">87</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -179,16 +179,16 @@
     <p class="pln"><span class="n"><a id="t97" href="#t97">97</a></span><span class="t">        <span class="op">[</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t98" href="#t98">98</a></span><span class="t">            <span class="com"># Iteration 1: Expect first value to be the baseline</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t99" href="#t99">99</a></span><span class="t">            <span class="str">f"^{_RE_DATE} mlos_core_optimizer\\.py:\\d+ "</span> <span class="op">+</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t100" href="#t100">100</a></span><span class="t">            <span class="str">r"bulk_register DEBUG Warm-up end: score = 64\.53\d+$"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t100" href="#t100">100</a></span><span class="t">            <span class="str">r"bulk_register DEBUG Warm-up END: .* :: \{'score': 64\.53\d+\}$"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t101" href="#t101">101</a></span><span class="t">            <span class="com"># Iteration 2: The result may not always be deterministic</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t102" href="#t102">102</a></span><span class="t">            <span class="str">f"^{_RE_DATE} mlos_core_optimizer\\.py:\\d+ "</span> <span class="op">+</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t103" href="#t103">103</a></span><span class="t">            <span class="str">r"bulk_register DEBUG Warm-up end: score = \d+\.\d+$"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t103" href="#t103">103</a></span><span class="t">            <span class="str">r"bulk_register DEBUG Warm-up END: .* :: \{'score': \d+\.\d+\}$"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t104" href="#t104">104</a></span><span class="t">            <span class="com"># Iteration 3: non-deterministic (depends on the optimizer)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t105" href="#t105">105</a></span><span class="t">            <span class="str">f"^{_RE_DATE} mlos_core_optimizer\\.py:\\d+ "</span> <span class="op">+</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t106" href="#t106">106</a></span><span class="t">            <span class="str">r"bulk_register DEBUG Warm-up end: score = \d+\.\d+$"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t106" href="#t106">106</a></span><span class="t">            <span class="str">r"bulk_register DEBUG Warm-up END: .* :: \{'score': \d+\.\d+\}$"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t107" href="#t107">107</a></span><span class="t">            <span class="com"># Final result: baseline is the optimum for the mock environment</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t108" href="#t108">108</a></span><span class="t">            <span class="str">f"^{_RE_DATE} run\\.py:\\d+ "</span> <span class="op">+</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t109" href="#t109">109</a></span><span class="t">            <span class="str">r"_main INFO Final score: 64\.53\d+\s*$"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t109" href="#t109">109</a></span><span class="t">            <span class="str">r"_main INFO Final score: \{'score': 64\.53\d+\}\s*$"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t110" href="#t110">110</a></span><span class="t">        <span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t111" href="#t111">111</a></span><span class="t">    <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
 </main>
@@ -200,7 +200,7 @@
             <a class="nav" href="z_97f09f0ec8586ada___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.5.1">coverage.py v7.5.1</a>,
-            created at 2024-05-06 00:35 +0000
+            created at 2024-05-10 22:45 +0000
         </p>
     </div>
 </footer>
