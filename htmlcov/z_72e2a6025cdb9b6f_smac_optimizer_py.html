@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="z_83ca15bbe4632fea_flaml_optimizer_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.5.1">coverage.py v7.5.1</a>,
-            created at 2024-05-21 00:35 +0000
+            created at 2024-05-21 19:27 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -109,7 +109,7 @@
     <p class="pln"><span class="n"><a id="t27" href="#t27">27</a></span><span class="t"><span class="str">    Wrapper class for SMAC based Bayesian optimization.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t28" href="#t28">28</a></span><span class="t"><span class="str">    """</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t29" href="#t29">29</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t30" href="#t30">30</a></span><span class="t">    <span class="key">def</span> <span class="nam">__init__</span><span class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="op">*</span><span class="op">,</span>  <span class="com"># pylint: disable=too-many-locals</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t30" href="#t30">30</a></span><span class="t">    <span class="key">def</span> <span class="nam">__init__</span><span class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="op">*</span><span class="op">,</span>  <span class="com"># pylint: disable=too-many-locals,too-many-arguments</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t31" href="#t31">31</a></span><span class="t">                 <span class="nam">parameter_space</span><span class="op">:</span> <span class="nam">ConfigSpace</span><span class="op">.</span><span class="nam">ConfigurationSpace</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t32" href="#t32">32</a></span><span class="t">                 <span class="nam">optimization_targets</span><span class="op">:</span> <span class="nam">List</span><span class="op">[</span><span class="nam">str</span><span class="op">]</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t33" href="#t33">33</a></span><span class="t">                 <span class="nam">space_adapter</span><span class="op">:</span> <span class="nam">Optional</span><span class="op">[</span><span class="nam">BaseSpaceAdapter</span><span class="op">]</span> <span class="op">=</span> <span class="key">None</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
@@ -365,7 +365,7 @@
     <p class="pln"><span class="n"><a id="t283" href="#t283">283</a></span><span class="t"><span class="str">            Pandas dataframe with a single row. Column names are the parameter names.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t284" href="#t284">284</a></span><span class="t"><span class="str">        """</span>&nbsp;</span><span class="r"></span></p>
     <p class="exc show_exc"><span class="n"><a id="t285" href="#t285">285</a></span><span class="t">        <span class="key">if</span> <span class="nam">TYPE_CHECKING</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="exc show_exc"><span class="n"><a id="t286" href="#t286">286</a></span><span class="t">            <span class="key">from</span> <span class="nam">smac</span><span class="op">.</span><span class="nam">runhistory</span> <span class="key">import</span> <span class="nam">TrialInfo</span>  <span class="com"># pylint: disable=import-outside-toplevel</span>&nbsp;</span><span class="r"></span></p>
+    <p class="exc show_exc"><span class="n"><a id="t286" href="#t286">286</a></span><span class="t">            <span class="key">from</span> <span class="nam">smac</span><span class="op">.</span><span class="nam">runhistory</span> <span class="key">import</span> <span class="nam">TrialInfo</span>  <span class="com"># pylint: disable=import-outside-toplevel,unused-import</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t287" href="#t287">287</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t288" href="#t288">288</a></span><span class="t">        <span class="key">if</span> <span class="nam">context</span> <span class="key">is</span> <span class="key">not</span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t289" href="#t289">289</a></span><span class="t">            <span class="nam">warn</span><span class="op">(</span><span class="str">f"Not Implemented: Ignoring context {list(context.columns)}"</span><span class="op">,</span> <span class="nam">UserWarning</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -445,7 +445,7 @@
             <a class="nav" href="z_83ca15bbe4632fea_flaml_optimizer_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.5.1">coverage.py v7.5.1</a>,
-            created at 2024-05-21 00:35 +0000
+            created at 2024-05-21 19:27 +0000
         </p>
     </div>
 </footer>
