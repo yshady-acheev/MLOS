@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_core.optimizers.flaml_optimizer.FlamlOptimizer &mdash; MlosCore 0.1.dev1+gc7a4823 documentation</title>
+  <title>mlos_core.optimizers.flaml_optimizer.FlamlOptimizer &mdash; MlosCore 0.1.dev1+gbb6c6f2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/documentation_options.js?v=1a63a2b4"></script>
+        <script src="../_static/documentation_options.js?v=dbdfffaf"></script>
         <script src="../_static/doctools.js?v=9a2dae69"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MlosCore
           </a>
               <div class="version">
-                0.1.dev1+gc7a4823
+                0.1.dev1+gbb6c6f2
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -134,19 +134,19 @@
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">cleanup</span></code>()</p></td>
 <td><p>Remove temp files, release resources, etc.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_best_observations</span></code>([n_max])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_best_observations</span></code>(*[, n_max])</p></td>
 <td><p>Get the N best observations so far as a triplet of DataFrames (config, score, context).</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_observations</span></code>()</p></td>
 <td><p>Returns the observations as a triplet of DataFrames (config, score, context).</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code>(configurations, scores[, context])</p></td>
-<td><p>Wrapper method, which employs the space adapter (if any), before registering the configurations and scores.</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code>(*, configs, scores[, context])</p></td>
+<td><p>Wrapper method, which employs the space adapter (if any), before registering the configs and scores.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_core.optimizers.flaml_optimizer.FlamlOptimizer.register_pending" title="mlos_core.optimizers.flaml_optimizer.FlamlOptimizer.register_pending"><code class="xref py py-obj docutils literal notranslate"><span class="pre">register_pending</span></code></a>(configurations[, context])</p></td>
-<td><p>Registers the given configurations as &quot;pending&quot;.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_core.optimizers.flaml_optimizer.FlamlOptimizer.register_pending" title="mlos_core.optimizers.flaml_optimizer.FlamlOptimizer.register_pending"><code class="xref py py-obj docutils literal notranslate"><span class="pre">register_pending</span></code></a>(*, configs[, context])</p></td>
+<td><p>Registers the given configs as &quot;pending&quot;.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">suggest</span></code>([context, defaults])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">suggest</span></code>(*[, context, defaults])</p></td>
 <td><p>Wrapper method, which employs the space adapter (if any), after suggesting a new configuration.</p></td>
 </tr>
 </tbody>
@@ -178,14 +178,14 @@ More info: <a class="reference external" href="https://microsoft.github.io/FLAML
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_core.optimizers.flaml_optimizer.FlamlOptimizer.register_pending">
-<span class="sig-name descname"><span class="pre">register_pending</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">configurations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_core.optimizers.flaml_optimizer.FlamlOptimizer.register_pending" title="Link to this definition">¶</a></dt>
-<dd><p>Registers the given configurations as “pending”.
+<span class="sig-name descname"><span class="pre">register_pending</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">configs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_core.optimizers.flaml_optimizer.FlamlOptimizer.register_pending" title="Link to this definition">¶</a></dt>
+<dd><p>Registers the given configs as “pending”.
 That is it say, it has been suggested by the optimizer, and an experiment trial has been started.
 This can be useful for executing multiple trials in parallel, retry logic, etc.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>configurations</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Dataframe of configurations / parameters. The columns are parameter names and the rows are the configurations.</p>
+<dt><strong>configs</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Dataframe of configs / parameters. The columns are parameter names and the rows are the configs.</p>
 </dd>
 <dt><strong>context</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Not Yet Implemented.</p>
 </dd>
