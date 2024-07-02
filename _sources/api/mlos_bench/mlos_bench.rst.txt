@@ -32,3 +32,4 @@ Submodules
    mlos_bench.os_environ
    mlos_bench.run
    mlos_bench.util
+   mlos_bench.version

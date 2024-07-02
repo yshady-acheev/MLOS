@@ -22,3 +22,4 @@ Submodules
    :maxdepth: 4
 
    mlos_core.util
+   mlos_core.version
