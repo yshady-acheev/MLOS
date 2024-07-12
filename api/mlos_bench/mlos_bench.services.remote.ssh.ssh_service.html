@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.services.remote.ssh.ssh_service module &mdash; MLOS 0.5.2.dev49+gfd9c8f993 documentation</title>
+  <title>mlos_bench.services.remote.ssh.ssh_service module &mdash; MLOS 0.5.2.dev50+ge40ac2831 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=2c826bde"></script>
+        <script src="../../_static/documentation_options.js?v=5c399c21"></script>
         <script src="../../_static/doctools.js?v=9a2dae69"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MLOS
           </a>
               <div class="version">
-                0.5.2.dev49+gfd9c8f993
+                0.5.2.dev50+ge40ac2831
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -125,9 +125,9 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.services.remote.ssh.ssh_service.</span></span><span class="sig-name descname"><span class="pre">SshClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClient" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">SSHClient</span></code></p>
 <p>Wrapper around SSHClient to help provide connection caching and reconnect logic.</p>
-<p>Used by the SshService to try and maintain a single connection to hosts,
-handle reconnects if possible, and use that to run commands rather than
-reconnect for each command.</p>
+<p>Used by the SshService to try and maintain a single connection to hosts, handle
+reconnects if possible, and use that to run commands rather than reconnect for each
+command.</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
@@ -231,8 +231,8 @@ the disconnect.</p>
 <dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.ssh_service.SshClientCache">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.services.remote.ssh.ssh_service.</span></span><span class="sig-name descname"><span class="pre">SshClientCache</span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClientCache" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Manages a cache of SshClient connections.
-Note: Only one per event loop thread supported.
+<p>Manages a cache of SshClient connections.</p>
+<p>Note: Only one per event loop thread supported.
 See additional details in SshService comments.</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
@@ -260,15 +260,15 @@ See additional details in SshService comments.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.ssh_service.SshClientCache.enter">
 <span class="sig-name descname"><span class="pre">enter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClientCache.enter" title="Link to this definition">¶</a></dt>
-<dd><p>Manages the cache lifecycle with reference counting.
-To be used in the __enter__ method of a caller’s context manager.</p>
+<dd><p>Manages the cache lifecycle with reference counting.</p>
+<p>To be used in the __enter__ method of a caller’s context manager.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.ssh_service.SshClientCache.exit">
 <span class="sig-name descname"><span class="pre">exit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClientCache.exit" title="Link to this definition">¶</a></dt>
-<dd><p>Manages the cache lifecycle with reference counting.
-To be used in the __exit__ method of a caller’s context manager.</p>
+<dd><p>Manages the cache lifecycle with reference counting.</p>
+<p>To be used in the __exit__ method of a caller’s context manager.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -332,8 +332,8 @@ To be used in the __exit__ method of a caller’s context manager.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.ssh_service.SshService.clear_client_cache">
 <em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">clear_client_cache</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshService.clear_client_cache" title="Link to this definition">¶</a></dt>
-<dd><p>Clears the cache of client connections.
-Note: This may cause in flight operations to fail.</p>
+<dd><p>Clears the cache of client connections.</p>
+<p>Note: This may cause in flight operations to fail.</p>
 </dd></dl>
 
 </dd></dl>

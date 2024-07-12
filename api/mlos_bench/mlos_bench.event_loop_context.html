@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.event_loop_context module &mdash; MLOS 0.5.2.dev49+gfd9c8f993 documentation</title>
+  <title>mlos_bench.event_loop_context module &mdash; MLOS 0.5.2.dev50+ge40ac2831 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=2c826bde"></script>
+        <script src="../../_static/documentation_options.js?v=5c399c21"></script>
         <script src="../../_static/doctools.js?v=9a2dae69"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MLOS
           </a>
               <div class="version">
-                0.5.2.dev49+gfd9c8f993
+                0.5.2.dev50+ge40ac2831
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -121,13 +121,13 @@
 <dt class="sig sig-object py" id="mlos_bench.event_loop_context.EventLoopContext">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.event_loop_context.</span></span><span class="sig-name descname"><span class="pre">EventLoopContext</span></span><a class="headerlink" href="#mlos_bench.event_loop_context.EventLoopContext" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>EventLoopContext encapsulates a background thread for asyncio event
-loop processing as an aid for context managers.</p>
-<p>There is generally only expected to be one of these, either as a base
-class instance if it’s specific to that functionality or for the full
-mlos_bench process to support parallel trial runners, for instance.</p>
-<p>It’s enter() and exit() routines are expected to be called from the
-caller’s context manager routines (e.g., __enter__ and __exit__).</p>
+<p>EventLoopContext encapsulates a background thread for asyncio event loop processing
+as an aid for context managers.</p>
+<p>There is generally only expected to be one of these, either as a base class instance
+if it’s specific to that functionality or for the full mlos_bench process to support
+parallel trial runners, for instance.</p>
+<p>It’s enter() and exit() routines are expected to be called from the caller’s context
+manager routines (e.g., __enter__ and __exit__).</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
@@ -157,8 +157,8 @@ caller’s context manager routines (e.g., __enter__ and __exit__).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.event_loop_context.EventLoopContext.run_coroutine">
 <span class="sig-name descname"><span class="pre">run_coroutine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coro</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Coroutine</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">CoroReturnType</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Future</span><span class="p"><span class="pre">[</span></span><span class="pre">CoroReturnType</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.event_loop_context.EventLoopContext.run_coroutine" title="Link to this definition">¶</a></dt>
-<dd><p>Runs the given coroutine in the background event loop thread and
-returns a Future that can be used to wait for the result.</p>
+<dd><p>Runs the given coroutine in the background event loop thread and returns a
+Future that can be used to wait for the result.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">

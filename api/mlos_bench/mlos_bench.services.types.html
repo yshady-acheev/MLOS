@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.services.types package &mdash; MLOS 0.5.2.dev49+gfd9c8f993 documentation</title>
+  <title>mlos_bench.services.types package &mdash; MLOS 0.5.2.dev50+ge40ac2831 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=2c826bde"></script>
+        <script src="../../_static/documentation_options.js?v=5c399c21"></script>
         <script src="../../_static/doctools.js?v=9a2dae69"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MLOS
           </a>
               <div class="version">
-                0.5.2.dev49+gfd9c8f993
+                0.5.2.dev50+ge40ac2831
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -117,7 +117,8 @@
              
   <section id="module-mlos_bench.services.types">
 <span id="mlos-bench-services-types-package"></span><h1>mlos_bench.services.types package<a class="headerlink" href="#module-mlos_bench.services.types" title="Link to this heading">¶</a></h1>
-<p>Service types for implementing declaring Service behavior for Environments to use in mlos_bench.</p>
+<p>Service types for implementing declaring Service behavior for Environments to use in
+mlos_bench.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="mlos_bench.services.types.SupportsAuth">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.services.types.</span></span><span class="sig-name descname"><span class="pre">SupportsAuth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.services.types.SupportsAuth" title="Link to this definition">¶</a></dt>
@@ -228,9 +229,8 @@ deploy or reboot a VM, etc.).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.services.types.SupportsConfigLoading.load_config">
 <span class="sig-name descname"><span class="pre">load_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.config.schemas.config_schemas.html#mlos_bench.config.schemas.config_schemas.ConfigSchema" title="mlos_bench.config.schemas.config_schemas.ConfigSchema"><span class="pre">ConfigSchema</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.types.SupportsConfigLoading.load_config" title="Link to this definition">¶</a></dt>
-<dd><p>Load JSON config file. Search for a file relative to <cite>_config_path</cite>
-if the input path is not absolute.
-This method is exported to be used as a service.</p>
+<dd><p>Load JSON config file. Search for a file relative to <cite>_config_path</cite> if the input
+path is not absolute. This method is exported to be used as a service.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -282,8 +282,8 @@ expand dynamic config parameters from.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.services.types.SupportsConfigLoading.load_services">
 <span class="sig-name descname"><span class="pre">load_services</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_file_names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../generated/mlos_bench.services.Service.html#mlos_bench.services.Service" title="mlos_bench.services.Service"><span class="pre">Service</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../../generated/mlos_bench.services.Service.html#mlos_bench.services.Service" title="mlos_bench.services.Service"><span class="pre">Service</span></a></span></span><a class="headerlink" href="#mlos_bench.services.types.SupportsConfigLoading.load_services" title="Link to this definition">¶</a></dt>
-<dd><p>Read the configuration files and bundle all service methods
-from those configs into a single Service object.</p>
+<dd><p>Read the configuration files and bundle all service methods from those configs
+into a single Service object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -307,8 +307,8 @@ from those configs into a single Service object.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.services.types.SupportsConfigLoading.resolve_path">
 <span class="sig-name descname"><span class="pre">resolve_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_paths</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#mlos_bench.services.types.SupportsConfigLoading.resolve_path" title="Link to this definition">¶</a></dt>
-<dd><p>Prepend the suitable <cite>_config_path</cite> to <cite>path</cite> if the latter is not absolute.
-If <cite>_config_path</cite> is <cite>None</cite> or <cite>path</cite> is absolute, return <cite>path</cite> as is.</p>
+<dd><p>Prepend the suitable <cite>_config_path</cite> to <cite>path</cite> if the latter is not absolute. If
+<cite>_config_path</cite> is <cite>None</cite> or <cite>path</cite> is absolute, return <cite>path</cite> as is.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -415,7 +415,8 @@ if True (the default), upload the entire directory tree.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.services.types.SupportsHostProvisioning.deallocate_host">
 <span class="sig-name descname"><span class="pre">deallocate_host</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../generated/mlos_bench.environments.Status.html#mlos_bench.environments.Status" title="mlos_bench.environments.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.types.SupportsHostProvisioning.deallocate_host" title="Link to this definition">¶</a></dt>
-<dd><p>Deallocates the Host/VM by shutting it down then releasing the compute resources.</p>
+<dd><p>Deallocates the Host/VM by shutting it down then releasing the compute
+resources.</p>
 <p>Note: This can cause the VM to arrive on a new host node when its
 restarted, which may have different performance characteristics.</p>
 <dl class="field-list simple">
@@ -489,7 +490,8 @@ Return TIMED_OUT when timing out.</p>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>params</strong><span class="classifier">dict</span></dt><dd><p>Flat dictionary of (key, value) pairs of tunable parameters.</p>
 </dd>
-<dt><strong>is_setup</strong><span class="classifier">bool</span></dt><dd><p>If True, wait for Host/VM being deployed; otherwise, wait for successful deprovisioning.</p>
+<dt><strong>is_setup</strong><span class="classifier">bool</span></dt><dd><p>If True, wait for Host/VM being deployed; otherwise, wait for successful
+deprovisioning.</p>
 </dd>
 </dl>
 </dd>
@@ -510,11 +512,10 @@ Result is info on the operation runtime if SUCCEEDED, otherwise {}.</p>
 <dt class="sig sig-object py" id="mlos_bench.services.types.SupportsLocalExec">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.services.types.</span></span><span class="sig-name descname"><span class="pre">SupportsLocalExec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.services.types.SupportsLocalExec" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Protocol</span></code></p>
-<p>Protocol interface for a collection of methods to run scripts and commands
-in an external process on the node acting as the scheduler. Can be useful
-for data processing due to reduced dependency management complications vs
-the target environment.
-Used in LocalEnv and provided by LocalExecService.</p>
+<p>Protocol interface for a collection of methods to run scripts and commands in an
+external process on the node acting as the scheduler.</p>
+<p>Can be useful for data processing due to reduced dependency management complications
+vs the target environment. Used in LocalEnv and provided by LocalExecService.</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
@@ -650,7 +651,8 @@ Return TIMED_OUT when timing out.</p>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>params</strong><span class="classifier">dict</span></dt><dd><p>Flat dictionary of (key, value) pairs of tunable parameters.</p>
 </dd>
-<dt><strong>is_setup</strong><span class="classifier">bool</span></dt><dd><p>If True, wait for Network being deployed; otherwise, wait for successful deprovisioning.</p>
+<dt><strong>is_setup</strong><span class="classifier">bool</span></dt><dd><p>If True, wait for Network being deployed; otherwise, wait for successful
+deprovisioning.</p>
 </dd>
 </dl>
 </dd>
@@ -735,8 +737,8 @@ Status is one of {PENDING, TIMED_OUT, SUCCEEDED, FAILED}</p>
 <dt class="sig sig-object py" id="mlos_bench.services.types.SupportsRemoteExec">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.services.types.</span></span><span class="sig-name descname"><span class="pre">SupportsRemoteExec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.services.types.SupportsRemoteExec" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Protocol</span></code></p>
-<p>Protocol interface for Service types that provide helper functions to run
-scripts on a remote host OS.</p>
+<p>Protocol interface for Service types that provide helper functions to run scripts
+on a remote host OS.</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>

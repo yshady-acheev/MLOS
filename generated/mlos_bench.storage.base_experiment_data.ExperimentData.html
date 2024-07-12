@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.storage.base_experiment_data.ExperimentData &mdash; MLOS 0.5.2.dev49+gfd9c8f993 documentation</title>
+  <title>mlos_bench.storage.base_experiment_data.ExperimentData &mdash; MLOS 0.5.2.dev50+ge40ac2831 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/documentation_options.js?v=2c826bde"></script>
+        <script src="../_static/documentation_options.js?v=5c399c21"></script>
         <script src="../_static/doctools.js?v=9a2dae69"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MLOS
           </a>
               <div class="version">
-                0.5.2.dev49+gfd9c8f993
+                0.5.2.dev50+ge40ac2831
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -166,7 +166,8 @@ scripts and mlos_bench configuration files.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="mlos_bench.storage.base_experiment_data.ExperimentData.default_tunable_config_id">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">default_tunable_config_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#mlos_bench.storage.base_experiment_data.ExperimentData.default_tunable_config_id" title="Link to this definition">¶</a></dt>
-<dd><p>Retrieves the (tunable) config id for the default tunable values for this experiment.</p>
+<dd><p>Retrieves the (tunable) config id for the default tunable values for this
+experiment.</p>
 <p>Note: this is by <em>default</em> the first trial executed for this experiment.
 However, it is currently possible that the user changed the tunables config
 in between resumptions of an experiment.</p>
@@ -214,7 +215,8 @@ and their directions (e.g., min or max).</p>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>results</strong><span class="classifier">pandas.DataFrame</span></dt><dd><p>A DataFrame with configurations and results from all trials of the experiment.
-Has columns [trial_id, tunable_config_id, tunable_config_trial_group_id, ts_start, ts_end, status]
+Has columns
+[trial_id, tunable_config_id, tunable_config_trial_group_id, ts_start, ts_end, status]
 followed by tunable config parameters (prefixed with “config.”) and
 trial results (prefixed with “result.”). The latter can be NULLs if the
 trial was not successful.</p>

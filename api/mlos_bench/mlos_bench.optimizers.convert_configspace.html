@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.optimizers.convert_configspace module &mdash; MLOS 0.5.2.dev49+gfd9c8f993 documentation</title>
+  <title>mlos_bench.optimizers.convert_configspace module &mdash; MLOS 0.5.2.dev50+ge40ac2831 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=2c826bde"></script>
+        <script src="../../_static/documentation_options.js?v=5c399c21"></script>
         <script src="../../_static/doctools.js?v=9a2dae69"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MLOS
           </a>
               <div class="version">
-                0.5.2.dev49+gfd9c8f993
+                0.5.2.dev50+ge40ac2831
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -117,13 +117,14 @@
              
   <section id="module-mlos_bench.optimizers.convert_configspace">
 <span id="mlos-bench-optimizers-convert-configspace-module"></span><h1>mlos_bench.optimizers.convert_configspace module<a class="headerlink" href="#module-mlos_bench.optimizers.convert_configspace" title="Link to this heading">¶</a></h1>
-<p>Functions to convert TunableGroups to ConfigSpace for use with the mlos_core optimizers.</p>
+<p>Functions to convert TunableGroups to ConfigSpace for use with the mlos_core
+optimizers.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="mlos_bench.optimizers.convert_configspace.TunableValueKind">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.optimizers.convert_configspace.</span></span><span class="sig-name descname"><span class="pre">TunableValueKind</span></span><a class="headerlink" href="#mlos_bench.optimizers.convert_configspace.TunableValueKind" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Enum for the kind of the tunable value (special or not).
-It is not a true enum because ConfigSpace wants string values.</p>
+<p>Enum for the kind of the tunable value (special or not).</p>
+<p>It is not a true enum because ConfigSpace wants string values.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlos_bench.optimizers.convert_configspace.TunableValueKind.RANGE">
 <span class="sig-name descname"><span class="pre">RANGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'range'</span></em><a class="headerlink" href="#mlos_bench.optimizers.convert_configspace.TunableValueKind.RANGE" title="Link to this definition">¶</a></dt>
@@ -139,8 +140,8 @@ It is not a true enum because ConfigSpace wants string values.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="mlos_bench.optimizers.convert_configspace.configspace_data_to_tunable_values">
 <span class="sig-prename descclassname"><span class="pre">mlos_bench.optimizers.convert_configspace.</span></span><span class="sig-name descname"><span class="pre">configspace_data_to_tunable_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.optimizers.convert_configspace.configspace_data_to_tunable_values" title="Link to this definition">¶</a></dt>
-<dd><p>Remove the fields that correspond to special values in ConfigSpace.
-In particular, remove and keys suffixes added by <cite>special_param_names</cite>.</p>
+<dd><p>Remove the fields that correspond to special values in ConfigSpace.</p>
+<p>In particular, remove and keys suffixes added by <cite>special_param_names</cite>.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -188,8 +189,8 @@ In particular, remove and keys suffixes added by <cite>special_param_names</cite
 <dl class="py function">
 <dt class="sig sig-object py" id="mlos_bench.optimizers.convert_configspace.special_param_names">
 <span class="sig-prename descclassname"><span class="pre">mlos_bench.optimizers.convert_configspace.</span></span><span class="sig-name descname"><span class="pre">special_param_names</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.optimizers.convert_configspace.special_param_names" title="Link to this definition">¶</a></dt>
-<dd><p>Generate the names of the auxiliary hyperparameters that correspond
-to a tunable that can have special values.</p>
+<dd><p>Generate the names of the auxiliary hyperparameters that correspond to a tunable
+that can have special values.</p>
 <p>NOTE: <cite>!</cite> characters are currently disallowed in Tunable names in order handle this logic.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>

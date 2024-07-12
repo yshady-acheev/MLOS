@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.tunables.tunable module &mdash; MLOS 0.5.2.dev49+gfd9c8f993 documentation</title>
+  <title>mlos_bench.tunables.tunable module &mdash; MLOS 0.5.2.dev50+ge40ac2831 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=2c826bde"></script>
+        <script src="../../_static/documentation_options.js?v=5c399c21"></script>
         <script src="../../_static/doctools.js?v=9a2dae69"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MLOS
           </a>
               <div class="version">
-                0.5.2.dev49+gfd9c8f993
+                0.5.2.dev50+ge40ac2831
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -270,8 +270,8 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="mlos_bench.tunables.tunable.Tunable.categories">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">categories</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#mlos_bench.tunables.tunable.Tunable.categories" title="Link to this definition">¶</a></dt>
-<dd><p>Get the list of all possible values of a categorical tunable.
-Return None if the tunable is not categorical.</p>
+<dd><p>Get the list of all possible values of a categorical tunable. Return None if the
+tunable is not categorical.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -354,9 +354,9 @@ Return None if the tunable is not categorical.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.tunables.tunable.Tunable.in_range">
 <span class="sig-name descname"><span class="pre">in_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#mlos_bench.tunables.tunable.Tunable.in_range" title="Link to this definition">¶</a></dt>
-<dd><p>Check if the value is within the range of the tunable.
-Do <em>NOT</em> check for special values.
-Return False if the tunable or value is categorical or None.</p>
+<dd><p>Check if the value is within the range of the tunable.</p>
+<p>Do <em>NOT</em> check for special values. Return False if the tunable or value is
+categorical or None.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -376,7 +376,8 @@ Return False if the tunable or value is categorical or None.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.tunables.tunable.Tunable.is_default">
 <span class="sig-name descname"><span class="pre">is_default</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.tunables.tunable.Tunable.is_default" title="Link to this definition">¶</a></dt>
-<dd><p>Checks whether the currently assigned value of the tunable is at its default.</p>
+<dd><p>Checks whether the currently assigned value of the tunable is at its
+default.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -444,8 +445,9 @@ Return False if the tunable or value is categorical or None.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="mlos_bench.tunables.tunable.Tunable.meta">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">meta</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#mlos_bench.tunables.tunable.Tunable.meta" title="Link to this definition">¶</a></dt>
-<dd><p>Get the tunable’s metadata. This is a free-form dictionary that can be used to
-store any additional information about the tunable (e.g., the unit information).</p>
+<dd><p>Get the tunable’s metadata.</p>
+<p>This is a free-form dictionary that can be used to store any additional
+information about the tunable (e.g., the unit information).</p>
 </dd></dl>
 
 <dl class="py property">
@@ -507,8 +509,8 @@ Numbers can be int or float, depending on the type of the tunable.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="mlos_bench.tunables.tunable.Tunable.range_weight">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">range_weight</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#mlos_bench.tunables.tunable.Tunable.range_weight" title="Link to this definition">¶</a></dt>
-<dd><p>Get weight of the range of the numeric tunable.
-Return None if there are no weights or a tunable is categorical.</p>
+<dd><p>Get weight of the range of the numeric tunable. Return None if there are no
+weights or a tunable is categorical.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -565,7 +567,8 @@ Return None if there are no weights or a tunable is categorical.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.tunables.tunable.Tunable.update">
 <span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#mlos_bench.tunables.tunable.Tunable.update" title="Link to this definition">¶</a></dt>
-<dd><p>Assign the value to the tunable. Return True if it is a new value, False otherwise.</p>
+<dd><p>Assign the value to the tunable. Return True if it is a new value, False
+otherwise.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -605,8 +608,8 @@ Return None if there are no weights or a tunable is categorical.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="mlos_bench.tunables.tunable.Tunable.weights">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">weights</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#mlos_bench.tunables.tunable.Tunable.weights" title="Link to this definition">¶</a></dt>
-<dd><p>Get the weights of the categories or special values of the tunable.
-Return None if there are none.</p>
+<dd><p>Get the weights of the categories or special values of the tunable. Return None
+if there are none.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -736,15 +739,15 @@ Return None if there are none.</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="mlos_bench.tunables.tunable.TunableValueType">
 <span class="sig-prename descclassname"><span class="pre">mlos_bench.tunables.tunable.</span></span><span class="sig-name descname"><span class="pre">TunableValueType</span></span><a class="headerlink" href="#mlos_bench.tunables.tunable.TunableValueType" title="Link to this definition">¶</a></dt>
-<dd><p>Tunable value type tuple.
-For checking with isinstance()</p>
+<dd><p>Tunable value type tuple.</p>
+<p>For checking with isinstance()</p>
 <p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">Type</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>] | <code class="xref py py-class docutils literal notranslate"><span class="pre">Type</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>] | <code class="xref py py-class docutils literal notranslate"><span class="pre">Type</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</p>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="mlos_bench.tunables.tunable.TunableValueTypeName">
 <span class="sig-prename descclassname"><span class="pre">mlos_bench.tunables.tunable.</span></span><span class="sig-name descname"><span class="pre">TunableValueTypeName</span></span><a class="headerlink" href="#mlos_bench.tunables.tunable.TunableValueTypeName" title="Link to this definition">¶</a></dt>
-<dd><p>Tunable values dictionary type</p>
+<dd><p>Tunable values dictionary type.</p>
 <p>alias of <code class="xref py py-obj docutils literal notranslate"><span class="pre">Literal</span></code>[‘int’, ‘float’, ‘categorical’]</p>
 </dd></dl>
 
@@ -757,7 +760,7 @@ For checking with isinstance()</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="mlos_bench.tunables.tunable.TunableValuesDict">
 <span class="sig-prename descclassname"><span class="pre">mlos_bench.tunables.tunable.</span></span><span class="sig-name descname"><span class="pre">TunableValuesDict</span></span><a class="headerlink" href="#mlos_bench.tunables.tunable.TunableValuesDict" title="Link to this definition">¶</a></dt>
-<dd><p>Tunable value distribution type</p>
+<dd><p>Tunable value distribution type.</p>
 <p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code> | <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code> | <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code> | <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]</p>
 </dd></dl>
 

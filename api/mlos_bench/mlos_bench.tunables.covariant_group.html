@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.tunables.covariant_group module &mdash; MLOS 0.5.2.dev49+gfd9c8f993 documentation</title>
+  <title>mlos_bench.tunables.covariant_group module &mdash; MLOS 0.5.2.dev50+ge40ac2831 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=2c826bde"></script>
+        <script src="../../_static/documentation_options.js?v=5c399c21"></script>
         <script src="../../_static/doctools.js?v=9a2dae69"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MLOS
           </a>
               <div class="version">
-                0.5.2.dev49+gfd9c8f993
+                0.5.2.dev50+ge40ac2831
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -122,8 +122,8 @@
 <dt class="sig sig-object py" id="mlos_bench.tunables.covariant_group.CovariantTunableGroup">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.tunables.covariant_group.</span></span><span class="sig-name descname"><span class="pre">CovariantTunableGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>A collection of tunable parameters.
-Changing any of the parameters in the group incurs the same cost of the experiment.</p>
+<p>A collection of tunable parameters.</p>
+<p>Changing any of the parameters in the group incurs the same cost of the experiment.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -190,9 +190,9 @@ that is a deep copy of the original one.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="mlos_bench.tunables.covariant_group.CovariantTunableGroup.cost">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cost</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup.cost" title="Link to this definition">¶</a></dt>
-<dd><p>Get the cost of changing the values in the covariant group.
-This value is a constant. Use <cite>get_current_cost()</cite> to get
-the cost given the group update status.</p>
+<dd><p>Get the cost of changing the values in the covariant group. This value is a
+constant. Use <cite>get_current_cost()</cite> to get the cost given the group update
+status.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -206,8 +206,8 @@ the cost given the group update status.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.tunables.covariant_group.CovariantTunableGroup.equals_defaults">
 <span class="sig-name descname"><span class="pre">equals_defaults</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup" title="mlos_bench.tunables.covariant_group.CovariantTunableGroup"><span class="pre">CovariantTunableGroup</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup.equals_defaults" title="Link to this definition">¶</a></dt>
-<dd><p>Checks to see if the other CovariantTunableGroup is the same, ignoring
-the current values of the two groups’ Tunables.</p>
+<dd><p>Checks to see if the other CovariantTunableGroup is the same, ignoring the
+current values of the two groups’ Tunables.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -248,8 +248,8 @@ False otherwise.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.tunables.covariant_group.CovariantTunableGroup.get_tunable">
 <span class="sig-name descname"><span class="pre">get_tunable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tunable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="mlos_bench.tunables.tunable.html#mlos_bench.tunables.tunable.Tunable" title="mlos_bench.tunables.tunable.Tunable"><span class="pre">Tunable</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mlos_bench.tunables.tunable.html#mlos_bench.tunables.tunable.Tunable" title="mlos_bench.tunables.tunable.Tunable"><span class="pre">Tunable</span></a></span></span><a class="headerlink" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup.get_tunable" title="Link to this definition">¶</a></dt>
-<dd><p>Access the entire Tunable in a group (not just its value).
-Throw KeyError if the tunable is not in the group.</p>
+<dd><p>Access the entire Tunable in a group (not just its value). Throw KeyError if the
+tunable is not in the group.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -295,7 +295,8 @@ Throw KeyError if the tunable is not in the group.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.tunables.covariant_group.CovariantTunableGroup.is_defaults">
 <span class="sig-name descname"><span class="pre">is_defaults</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup.is_defaults" title="Link to this definition">¶</a></dt>
-<dd><p>Checks whether the currently assigned values of all tunables are at their defaults.</p>
+<dd><p>Checks whether the currently assigned values of all tunables are at their
+defaults.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -336,8 +337,9 @@ Throw KeyError if the tunable is not in the group.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.tunables.covariant_group.CovariantTunableGroup.reset_is_updated">
 <span class="sig-name descname"><span class="pre">reset_is_updated</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup.reset_is_updated" title="Link to this definition">¶</a></dt>
-<dd><p>Clear the update flag. That is, state that running an experiment with the
-current values of the tunables in this group has no extra cost.</p>
+<dd><p>Clear the update flag.</p>
+<p>That is, state that running an experiment with the current values of the
+tunables in this group has no extra cost.</p>
 </dd></dl>
 
 <dl class="py method">
