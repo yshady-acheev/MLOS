@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="z_8bda1461cdfcd6c7_azure_deployment_services_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.0">coverage.py v7.6.0</a>,
-            created at 2024-07-19 00:36 +0000
+            created at 2024-07-22 16:59 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -148,9 +148,9 @@
     <p class="run"><span class="n"><a id="t66" href="#t66">66</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">_access_token</span> <span class="op">=</span> <span class="str">"RENEW *NOW*"</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t67" href="#t67">67</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">_token_expiration_ts</span> <span class="op">=</span> <span class="nam">datetime</span><span class="op">.</span><span class="nam">now</span><span class="op">(</span><span class="nam">UTC</span><span class="op">)</span>  <span class="com"># Typically, some future timestamp.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t68" href="#t68">68</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t69" href="#t69">69</a></span><span class="t">        <span class="com"># Login as ourselves</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t70" href="#t70">70</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">_cred</span><span class="op">:</span> <span class="nam">Union</span><span class="op">[</span><span class="nam">azure_id</span><span class="op">.</span><span class="nam">AzureCliCredential</span><span class="op">,</span> <span class="nam">azure_id</span><span class="op">.</span><span class="nam">CertificateCredential</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t71" href="#t71">71</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">_cred</span> <span class="op">=</span> <span class="nam">azure_id</span><span class="op">.</span><span class="nam">AzureCliCredential</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t69" href="#t69">69</a></span><span class="t">        <span class="com"># Login as the first identity available, usually ourselves or a managed identity</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t70" href="#t70">70</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">_cred</span><span class="op">:</span> <span class="nam">Union</span><span class="op">[</span><span class="nam">azure_id</span><span class="op">.</span><span class="nam">DefaultAzureCredential</span><span class="op">,</span> <span class="nam">azure_id</span><span class="op">.</span><span class="nam">CertificateCredential</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t71" href="#t71">71</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">_cred</span> <span class="op">=</span> <span class="nam">azure_id</span><span class="op">.</span><span class="nam">DefaultAzureCredential</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t72" href="#t72">72</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t73" href="#t73">73</a></span><span class="t">        <span class="com"># Verify info required for SP auth early</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t74" href="#t74">74</a></span><span class="t">        <span class="key">if</span> <span class="str">"spClientId"</span> <span class="key">in</span> <span class="nam">self</span><span class="op">.</span><span class="nam">config</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
@@ -224,7 +224,7 @@
             <a class="nav" href="z_8bda1461cdfcd6c7_azure_deployment_services_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.0">coverage.py v7.6.0</a>,
-            created at 2024-07-19 00:36 +0000
+            created at 2024-07-22 16:59 +0000
         </p>
     </div>
 </footer>
