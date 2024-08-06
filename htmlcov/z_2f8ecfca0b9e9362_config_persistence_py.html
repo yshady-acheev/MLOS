@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="z_ea07be53de14ffe8___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.1">coverage.py v7.6.1</a>,
-            created at 2024-08-06 00:37 +0000
+            created at 2024-08-06 17:21 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -273,8 +273,8 @@
     <p class="pln"><span class="n"><a id="t191" href="#t191">191</a></span><span class="t">                    <span class="nam">schema_type</span><span class="op">.</span><span class="nam">value</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t192" href="#t192">192</a></span><span class="t">                <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t193" href="#t193">193</a></span><span class="t">                <span class="key">raise</span> <span class="nam">ValueError</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t194" href="#t194">194</a></span><span class="t">                    <span class="str">f"Failed to validate config {json_file_name} against "</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t195" href="#t195">195</a></span><span class="t">                    <span class="str">f"schema type {schema_type.name} at {schema_type.value}"</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t194" href="#t194">194</a></span><span class="t">                    <span class="fst">f"</span><span class="fst">Failed to validate config </span><span class="op">{</span><span class="nam">json_file_name</span><span class="op">}</span><span class="fst"> against </span><span class="fst">"</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t195" href="#t195">195</a></span><span class="t">                    <span class="fst">f"</span><span class="fst">schema type </span><span class="op">{</span><span class="nam">schema_type</span><span class="op">.</span><span class="nam">name</span><span class="op">}</span><span class="fst"> at </span><span class="op">{</span><span class="nam">schema_type</span><span class="op">.</span><span class="nam">value</span><span class="op">}</span><span class="fst">"</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t196" href="#t196">196</a></span><span class="t">                <span class="op">)</span> <span class="key">from</span> <span class="nam">ex</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t197" href="#t197">197</a></span><span class="t">            <span class="key">if</span> <span class="nam">isinstance</span><span class="op">(</span><span class="nam">config</span><span class="op">,</span> <span class="nam">dict</span><span class="op">)</span> <span class="key">and</span> <span class="nam">config</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">"$schema"</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t198" href="#t198">198</a></span><span class="t">                <span class="com"># Remove $schema attributes from the config after we've validated</span>&nbsp;</span><span class="r"></span></p>
@@ -332,7 +332,7 @@
     <p class="mis show_mis"><span class="n"><a id="t250" href="#t250">250</a></span><span class="t">            <span class="key">elif</span> <span class="nam">isinstance</span><span class="op">(</span><span class="nam">class_config</span><span class="op">[</span><span class="nam">key</span><span class="op">]</span><span class="op">,</span> <span class="op">(</span><span class="nam">list</span><span class="op">,</span> <span class="nam">tuple</span><span class="op">)</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t251" href="#t251">251</a></span><span class="t">                <span class="nam">class_config</span><span class="op">[</span><span class="nam">key</span><span class="op">]</span> <span class="op">=</span> <span class="op">[</span><span class="nam">self</span><span class="op">.</span><span class="nam">resolve_path</span><span class="op">(</span><span class="nam">path</span><span class="op">)</span> <span class="key">for</span> <span class="nam">path</span> <span class="key">in</span> <span class="nam">class_config</span><span class="op">[</span><span class="nam">key</span><span class="op">]</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t252" href="#t252">252</a></span><span class="t">            <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t253" href="#t253">253</a></span><span class="t">                <span class="key">raise</span> <span class="nam">ValueError</span><span class="op">(</span><span class="str">f"Parameter {key} must be a string or a list"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t253" href="#t253">253</a></span><span class="t">                <span class="key">raise</span> <span class="nam">ValueError</span><span class="op">(</span><span class="fst">f"</span><span class="fst">Parameter </span><span class="op">{</span><span class="nam">key</span><span class="op">}</span><span class="fst"> must be a string or a list</span><span class="fst">"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t254" href="#t254">254</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t255" href="#t255">255</a></span><span class="t">        <span class="key">if</span> <span class="nam">_LOG</span><span class="op">.</span><span class="nam">isEnabledFor</span><span class="op">(</span><span class="nam">logging</span><span class="op">.</span><span class="nam">DEBUG</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t256" href="#t256">256</a></span><span class="t">            <span class="nam">_LOG</span><span class="op">.</span><span class="nam">debug</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
@@ -788,7 +788,7 @@
             <a class="nav" href="z_ea07be53de14ffe8___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.1">coverage.py v7.6.1</a>,
-            created at 2024-08-06 00:37 +0000
+            created at 2024-08-06 17:21 +0000
         </p>
     </div>
 </footer>

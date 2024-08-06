@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="z_ffd0e22b8f179be9_dict_templater_test_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.1">coverage.py v7.6.1</a>,
-            created at 2024-08-06 00:37 +0000
+            created at 2024-08-06 17:21 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -175,7 +175,7 @@
     <p class="pln"><span class="n"><a id="t93" href="#t93">93</a></span><span class="t"><span class="str">    """</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t94" href="#t94">94</a></span><span class="t">    <span class="com"># Use the xdist testrun UID to ensure that the docker-compose project name</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t95" href="#t95">95</a></span><span class="t">    <span class="com"># is unique across sessions, but shared amongst workers.</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t96" href="#t96">96</a></span><span class="t">    <span class="key">return</span> <span class="str">f"mlos_bench-test-{short_testrun_uid}"</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t96" href="#t96">96</a></span><span class="t">    <span class="key">return</span> <span class="fst">f"</span><span class="fst">mlos_bench-test-</span><span class="op">{</span><span class="nam">short_testrun_uid</span><span class="op">}</span><span class="fst">"</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t97" href="#t97">97</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t98" href="#t98">98</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t99" href="#t99">99</a></span><span class="t"><span class="op">@</span><span class="nam">pytest</span><span class="op">.</span><span class="nam">fixture</span><span class="op">(</span><span class="nam">scope</span><span class="op">=</span><span class="str">"session"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -193,7 +193,7 @@
     <p class="pln"><span class="n"><a id="t111" href="#t111">111</a></span><span class="t"><span class="str">        worker is using the docker services.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t112" href="#t112">112</a></span><span class="t"><span class="str">    """</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t113" href="#t113">113</a></span><span class="t">    <span class="key">return</span> <span class="nam">InterProcessReaderWriterLock</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t114" href="#t114">114</a></span><span class="t">        <span class="str">f"{shared_temp_dir}/pytest_docker_services-{short_testrun_uid}.lock"</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t114" href="#t114">114</a></span><span class="t">        <span class="fst">f"</span><span class="op">{</span><span class="nam">shared_temp_dir</span><span class="op">}</span><span class="fst">/pytest_docker_services-</span><span class="op">{</span><span class="nam">short_testrun_uid</span><span class="op">}</span><span class="fst">.lock</span><span class="fst">"</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t115" href="#t115">115</a></span><span class="t">    <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t116" href="#t116">116</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t117" href="#t117">117</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -208,7 +208,7 @@
     <p class="pln"><span class="n"><a id="t126" href="#t126">126</a></span><span class="t"><span class="str">        A lock to ensure that only one worker is doing setup/teardown at a time.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t127" href="#t127">127</a></span><span class="t"><span class="str">    """</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t128" href="#t128">128</a></span><span class="t">    <span class="key">return</span> <span class="nam">InterProcessLock</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t129" href="#t129">129</a></span><span class="t">        <span class="str">f"{shared_temp_dir}/pytest_docker_services-setup-teardown-{short_testrun_uid}.lock"</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t129" href="#t129">129</a></span><span class="t">        <span class="fst">f"</span><span class="op">{</span><span class="nam">shared_temp_dir</span><span class="op">}</span><span class="fst">/pytest_docker_services-setup-teardown-</span><span class="op">{</span><span class="nam">short_testrun_uid</span><span class="op">}</span><span class="fst">.lock</span><span class="fst">"</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t130" href="#t130">130</a></span><span class="t">    <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t131" href="#t131">131</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t132" href="#t132">132</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -270,7 +270,7 @@
             <a class="nav" href="z_ffd0e22b8f179be9_dict_templater_test_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.1">coverage.py v7.6.1</a>,
-            created at 2024-08-06 00:37 +0000
+            created at 2024-08-06 17:21 +0000
         </p>
     </div>
 </footer>

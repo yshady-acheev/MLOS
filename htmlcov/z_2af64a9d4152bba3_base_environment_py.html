@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="z_2af64a9d4152bba3_composite_env_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.1">coverage.py v7.6.1</a>,
-            created at 2024-08-06 00:37 +0000
+            created at 2024-08-06 17:21 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -294,7 +294,7 @@
     <p class="run"><span class="n"><a id="t212" href="#t212">212</a></span><span class="t">                <span class="key">if</span> <span class="nam">tunable_group_name</span> <span class="key">not</span> <span class="key">in</span> <span class="nam">groups_exp</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t213" href="#t213">213</a></span><span class="t">                    <span class="key">raise</span> <span class="nam">KeyError</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t214" href="#t214">214</a></span><span class="t">                        <span class="op">(</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t215" href="#t215">215</a></span><span class="t">                            <span class="str">f"Expected tunable group name ${tunable_group_name} "</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t215" href="#t215">215</a></span><span class="t">                            <span class="fst">f"</span><span class="fst">Expected tunable group name $</span><span class="op">{</span><span class="nam">tunable_group_name</span><span class="op">}</span><span class="fst"> </span><span class="fst">"</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t216" href="#t216">216</a></span><span class="t">                            <span class="str">"undefined in {groups_exp}"</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t217" href="#t217">217</a></span><span class="t">                        <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t218" href="#t218">218</a></span><span class="t">                    <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -358,7 +358,7 @@
     <p class="run"><span class="n"><a id="t276" href="#t276">276</a></span><span class="t">        <span class="key">return</span> <span class="nam">self</span><span class="op">.</span><span class="nam">name</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t277" href="#t277">277</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="exc show_exc"><span class="n"><a id="t278" href="#t278">278</a></span><span class="t">    <span class="key">def</span> <span class="nam">__repr__</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span> <span class="op">-></span> <span class="nam">str</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="exc show_exc"><span class="n"><a id="t279" href="#t279">279</a></span><span class="t">        <span class="key">return</span> <span class="str">f"{self.__class__.__name__} :: '{self.name}'"</span>&nbsp;</span><span class="r"></span></p>
+    <p class="exc show_exc"><span class="n"><a id="t279" href="#t279">279</a></span><span class="t">        <span class="key">return</span> <span class="fst">f"</span><span class="op">{</span><span class="nam">self</span><span class="op">.</span><span class="nam">__class__</span><span class="op">.</span><span class="nam">__name__</span><span class="op">}</span><span class="fst"> :: '</span><span class="op">{</span><span class="nam">self</span><span class="op">.</span><span class="nam">name</span><span class="op">}</span><span class="fst">'</span><span class="fst">"</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t280" href="#t280">280</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t281" href="#t281">281</a></span><span class="t">    <span class="key">def</span> <span class="nam">pprint</span><span class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="nam">indent</span><span class="op">:</span> <span class="nam">int</span> <span class="op">=</span> <span class="num">4</span><span class="op">,</span> <span class="nam">level</span><span class="op">:</span> <span class="nam">int</span> <span class="op">=</span> <span class="num">0</span><span class="op">)</span> <span class="op">-></span> <span class="nam">str</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t282" href="#t282">282</a></span><span class="t">        <span class="str">"""</span>&nbsp;</span><span class="r"></span></p>
@@ -378,7 +378,7 @@
     <p class="pln"><span class="n"><a id="t296" href="#t296">296</a></span><span class="t"><span class="str">            Pretty-printed environment configuration.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t297" href="#t297">297</a></span><span class="t"><span class="str">            Default output is the same as `__repr__`.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t298" href="#t298">298</a></span><span class="t"><span class="str">        """</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t299" href="#t299">299</a></span><span class="t">        <span class="key">return</span> <span class="str">f'{" " * indent * level}{repr(self)}'</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t299" href="#t299">299</a></span><span class="t">        <span class="key">return</span> <span class="fst">f'</span><span class="op">{</span><span class="str">" "</span> <span class="op">*</span> <span class="nam">indent</span> <span class="op">*</span> <span class="nam">level</span><span class="op">}</span><span class="op">{</span><span class="nam">repr</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span><span class="op">}</span><span class="fst">'</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t300" href="#t300">300</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t301" href="#t301">301</a></span><span class="t">    <span class="key">def</span> <span class="nam">_combine_tunables</span><span class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="nam">tunables</span><span class="op">:</span> <span class="nam">TunableGroups</span><span class="op">)</span> <span class="op">-></span> <span class="nam">Dict</span><span class="op">[</span><span class="nam">str</span><span class="op">,</span> <span class="nam">TunableValue</span><span class="op">]</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t302" href="#t302">302</a></span><span class="t">        <span class="str">"""</span>&nbsp;</span><span class="r"></span></p>
@@ -542,7 +542,7 @@
             <a class="nav" href="z_2af64a9d4152bba3_composite_env_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.1">coverage.py v7.6.1</a>,
-            created at 2024-08-06 00:37 +0000
+            created at 2024-08-06 17:21 +0000
         </p>
     </div>
 </footer>

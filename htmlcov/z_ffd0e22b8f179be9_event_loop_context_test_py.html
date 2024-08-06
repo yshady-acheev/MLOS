@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="z_ffd0e22b8f179be9_launcher_in_process_test_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.1">coverage.py v7.6.1</a>,
-            created at 2024-08-06 00:37 +0000
+            created at 2024-08-06 17:21 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -114,7 +114,7 @@
     <p class="run"><span class="n"><a id="t32" href="#t32">32</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">_in_context</span> <span class="op">=</span> <span class="key">False</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t33" href="#t33">33</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="exc show_exc"><span class="n"><a id="t34" href="#t34">34</a></span><span class="t">    <span class="key">def</span> <span class="nam">__repr__</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span> <span class="op">-></span> <span class="nam">str</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="exc show_exc"><span class="n"><a id="t35" href="#t35">35</a></span><span class="t">        <span class="key">return</span> <span class="str">f"{self.__class__.__name__}(id={self._id})"</span>&nbsp;</span><span class="r"></span></p>
+    <p class="exc show_exc"><span class="n"><a id="t35" href="#t35">35</a></span><span class="t">        <span class="key">return</span> <span class="fst">f"</span><span class="op">{</span><span class="nam">self</span><span class="op">.</span><span class="nam">__class__</span><span class="op">.</span><span class="nam">__name__</span><span class="op">}</span><span class="fst">(id=</span><span class="op">{</span><span class="nam">self</span><span class="op">.</span><span class="nam">_id</span><span class="op">}</span><span class="fst">)</span><span class="fst">"</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t36" href="#t36">36</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t37" href="#t37">37</a></span><span class="t">    <span class="key">def</span> <span class="nam">__enter__</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span> <span class="op">-></span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t38" href="#t38">38</a></span><span class="t">        <span class="key">assert</span> <span class="key">not</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_in_context</span>&nbsp;</span><span class="r"></span></p>
@@ -230,7 +230,7 @@
     <p class="run"><span class="n"><a id="t148" href="#t148">148</a></span><span class="t">        <span class="nam">future</span> <span class="op">=</span> <span class="nam">event_loop_caller_instance_1</span><span class="op">.</span><span class="nam">EVENT_LOOP_CONTEXT</span><span class="op">.</span><span class="nam">run_coroutine</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t149" href="#t149">149</a></span><span class="t">            <span class="nam">asyncio</span><span class="op">.</span><span class="nam">sleep</span><span class="op">(</span><span class="num">0.1</span><span class="op">,</span> <span class="nam">result</span><span class="op">=</span><span class="str">"foo"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t150" href="#t150">150</a></span><span class="t">        <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t151" href="#t151">151</a></span><span class="t">        <span class="key">raise</span> <span class="nam">ValueError</span><span class="op">(</span><span class="str">f"Future should not have been available to wait on {future.result()}"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t151" href="#t151">151</a></span><span class="t">        <span class="key">raise</span> <span class="nam">ValueError</span><span class="op">(</span><span class="fst">f"</span><span class="fst">Future should not have been available to wait on </span><span class="op">{</span><span class="nam">future</span><span class="op">.</span><span class="nam">result</span><span class="op">(</span><span class="op">)</span><span class="op">}</span><span class="fst">"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t152" href="#t152">152</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t153" href="#t153">153</a></span><span class="t">    <span class="com"># Test that when re-entering the context we have the same event loop.</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t154" href="#t154">154</a></span><span class="t">    <span class="key">with</span> <span class="nam">event_loop_caller_instance_1</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
@@ -260,7 +260,7 @@
             <a class="nav" href="z_ffd0e22b8f179be9_launcher_in_process_test_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.1">coverage.py v7.6.1</a>,
-            created at 2024-08-06 00:37 +0000
+            created at 2024-08-06 17:21 +0000
         </p>
     </div>
 </footer>
