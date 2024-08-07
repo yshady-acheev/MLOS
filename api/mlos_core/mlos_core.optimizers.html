@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_core.optimizers package &mdash; MLOS 0.6.1.dev16+g5d980561e documentation</title>
+  <title>mlos_core.optimizers package &mdash; MLOS 0.6.1.dev17+ga4d21cd5e documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=7408df72"></script>
+        <script src="../../_static/documentation_options.js?v=bdd03108"></script>
         <script src="../../_static/doctools.js?v=9a2dae69"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MLOS
           </a>
               <div class="version">
-                0.6.1.dev16+g5d980561e
+                0.6.1.dev17+ga4d21cd5e
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -208,7 +208,7 @@ the rows are the configs.</p>
 </dd>
 <dt><strong>context</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Not Yet Implemented.</p>
 </dd>
-<dt><strong>metadata</strong><span class="classifier">Optional[pd.DataFrame]</span></dt><dd><p>Not Yet Implemented.</p>
+<dt><strong>metadata</strong><span class="classifier">Optional[pd.DataFrame]</span></dt><dd><p>Metadata returned by the backend optimizer’s suggest method.</p>
 </dd>
 </dl>
 </dd>
@@ -229,7 +229,7 @@ the rows are the configs.</p>
 </dd>
 <dt><strong>context</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Not Yet Implemented.</p>
 </dd>
-<dt><strong>metadata</strong><span class="classifier">Optional[pd.DataFrame]</span></dt><dd><p>Not Yet Implemented.</p>
+<dt><strong>metadata</strong><span class="classifier">Optional[pd.DataFrame]</span></dt><dd><p>Metadata returned by the backend optimizer’s suggest method.</p>
 </dd>
 </dl>
 </dd>
@@ -260,6 +260,9 @@ By default, use the one from the optimizer.</p>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>configuration</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Pandas dataframe with a single row. Column names are the parameter names.</p>
+</dd>
+<dt><strong>metadata</strong><span class="classifier">Optional[pd.DataFrame]</span></dt><dd><p>The metadata associated with the given configuration used for evaluations.
+Backend optimizer specific.</p>
 </dd>
 </dl>
 </dd>
@@ -318,7 +321,7 @@ the rows are the configs.</p>
 </dd>
 <dt><strong>context</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Not Yet Implemented.</p>
 </dd>
-<dt><strong>metadata</strong><span class="classifier">Optional[pd.DataFrame]</span></dt><dd><p>Not Yet Implemented.</p>
+<dt><strong>metadata</strong><span class="classifier">Optional[pd.DataFrame]</span></dt><dd><p>Metadata returned by the backend optimizer’s suggest method.</p>
 </dd>
 </dl>
 </dd>
@@ -431,7 +434,7 @@ the rows are the configs.</p>
 </dd>
 <dt><strong>context</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Not Yet Implemented.</p>
 </dd>
-<dt><strong>metadata</strong><span class="classifier">Optional[pd.DataFrame]</span></dt><dd><p>Not Yet Implemented.</p>
+<dt><strong>metadata</strong><span class="classifier">Optional[pd.DataFrame]</span></dt><dd><p>Metadata returned by the backend optimizer’s suggest method.</p>
 </dd>
 </dl>
 </dd>
@@ -542,7 +545,7 @@ the rows are the configs.</p>
 </dd>
 <dt><strong>context</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>Not Yet Implemented.</p>
 </dd>
-<dt><strong>metadata</strong><span class="classifier">Optional[pd.DataFrame]</span></dt><dd><p>Not Yet Implemented.</p>
+<dt><strong>metadata</strong><span class="classifier">Optional[pd.DataFrame]</span></dt><dd><p>Metadata returned by the backend optimizer’s suggest method.</p>
 </dd>
 </dl>
 </dd>
