@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="z_323f8141f9f539b4_grid_search_optimizer_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.1">coverage.py v7.6.1</a>,
-            created at 2024-08-16 15:07 +0000
+            created at 2024-08-16 17:09 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -250,10 +250,10 @@
     <p class="pln"><span class="n"><a id="t168" href="#t168">168</a></span><span class="t">    <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t169" href="#t169">169</a></span><span class="t">        <span class="key">raise</span> <span class="nam">TypeError</span><span class="op">(</span><span class="fst">f"</span><span class="fst">Invalid Parameter Type: </span><span class="op">{</span><span class="nam">tunable</span><span class="op">.</span><span class="nam">type</span><span class="op">}</span><span class="fst">"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t170" href="#t170">170</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t171" href="#t171">171</a></span><span class="t">    <span class="key">if</span> <span class="nam">tunable</span><span class="op">.</span><span class="nam">quantization</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t171" href="#t171">171</a></span><span class="t">    <span class="key">if</span> <span class="nam">tunable</span><span class="op">.</span><span class="nam">quantization_bins</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t172" href="#t172">172</a></span><span class="t">        <span class="com"># Temporary workaround to dropped quantization support in ConfigSpace 1.0</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t173" href="#t173">173</a></span><span class="t">        <span class="com"># See Also: https://github.com/automl/ConfigSpace/issues/390</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t174" href="#t174">174</a></span><span class="t">        <span class="nam">_monkey_patch_quantization</span><span class="op">(</span><span class="nam">range_hp</span><span class="op">,</span> <span class="nam">tunable</span><span class="op">.</span><span class="nam">quantization</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t174" href="#t174">174</a></span><span class="t">        <span class="nam">_monkey_patch_quantization</span><span class="op">(</span><span class="nam">range_hp</span><span class="op">,</span> <span class="nam">tunable</span><span class="op">.</span><span class="nam">quantization_bins</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t175" href="#t175">175</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t176" href="#t176">176</a></span><span class="t">    <span class="key">if</span> <span class="key">not</span> <span class="nam">tunable</span><span class="op">.</span><span class="nam">special</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t177" href="#t177">177</a></span><span class="t">        <span class="key">return</span> <span class="nam">ConfigurationSpace</span><span class="op">(</span><span class="op">{</span><span class="nam">tunable</span><span class="op">.</span><span class="nam">name</span><span class="op">:</span> <span class="nam">range_hp</span><span class="op">}</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -447,7 +447,7 @@
             <a class="nav" href="z_323f8141f9f539b4_grid_search_optimizer_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.1">coverage.py v7.6.1</a>,
-            created at 2024-08-16 15:07 +0000
+            created at 2024-08-16 17:09 +0000
         </p>
     </div>
 </footer>
