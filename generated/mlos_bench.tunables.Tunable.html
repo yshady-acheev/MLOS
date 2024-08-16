@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.tunables.Tunable &mdash; MLOS 0.6.1.dev19+gf3eb624a5 documentation</title>
+  <title>mlos_bench.tunables.Tunable &mdash; MLOS 0.6.1.dev20+g2e4cfa26a documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/documentation_options.js?v=a05cd72d"></script>
+        <script src="../_static/documentation_options.js?v=31650036"></script>
         <script src="../_static/doctools.js?v=9a2dae69"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MLOS
           </a>
               <div class="version">
-                0.6.1.dev19+gf3eb624a5
+                0.6.1.dev20+g2e4cfa26a
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -121,7 +121,7 @@
 <dl class="field-list simple">
 <dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
-<dt><a class="reference internal" href="#mlos_bench.tunables.Tunable.cardinality" title="mlos_bench.tunables.Tunable.cardinality"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cardinality</span></code></a></dt><dd><p>Gets the cardinality of elements in this tunable, or else infinity.</p>
+<dt><a class="reference internal" href="#mlos_bench.tunables.Tunable.cardinality" title="mlos_bench.tunables.Tunable.cardinality"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cardinality</span></code></a></dt><dd><p>Gets the cardinality of elements in this tunable, or else None.</p>
 </dd>
 <dt><a class="reference internal" href="#mlos_bench.tunables.Tunable.categories" title="mlos_bench.tunables.Tunable.categories"><code class="xref py py-obj docutils literal notranslate"><span class="pre">categories</span></code></a></dt><dd><p>Get the list of all possible values of a categorical tunable.</p>
 </dd>
@@ -149,7 +149,7 @@
 </dd>
 <dt><a class="reference internal" href="#mlos_bench.tunables.Tunable.numerical_value" title="mlos_bench.tunables.Tunable.numerical_value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numerical_value</span></code></a></dt><dd><p>Get the current value of the tunable as a number.</p>
 </dd>
-<dt><a class="reference internal" href="#mlos_bench.tunables.Tunable.quantization" title="mlos_bench.tunables.Tunable.quantization"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quantization</span></code></a></dt><dd><p>Get the quantization factor, if specified.</p>
+<dt><a class="reference internal" href="#mlos_bench.tunables.Tunable.quantization" title="mlos_bench.tunables.Tunable.quantization"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quantization</span></code></a></dt><dd><p>Get the number of quantization bins, if specified.</p>
 </dd>
 <dt><a class="reference internal" href="#mlos_bench.tunables.Tunable.quantized_values" title="mlos_bench.tunables.Tunable.quantized_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quantized_values</span></code></a></dt><dd><p>Get a sequence of quanitized values for this tunable.</p>
 </dd>
@@ -210,13 +210,14 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="mlos_bench.tunables.Tunable.cardinality">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cardinality</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#mlos_bench.tunables.Tunable.cardinality" title="Link to this definition">¶</a></dt>
-<dd><p>Gets the cardinality of elements in this tunable, or else infinity.</p>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cardinality</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#mlos_bench.tunables.Tunable.cardinality" title="Link to this definition">¶</a></dt>
+<dd><p>Gets the cardinality of elements in this tunable, or else None. (i.e., when the
+tunable is continuous float and not quantized).</p>
 <p>If the tunable has quantization set, this</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>cardinality</strong><span class="classifier">int, float</span></dt><dd><p>Either the number of points in the tunable or else infinity.</p>
+<dt><strong>cardinality</strong><span class="classifier">int</span></dt><dd><p>Either the number of points in the tunable or else None.</p>
 </dd>
 </dl>
 </dd>
@@ -420,12 +421,12 @@ information about the tunable (e.g., the unit information).</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="mlos_bench.tunables.Tunable.quantization">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">quantization</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#mlos_bench.tunables.Tunable.quantization" title="Link to this definition">¶</a></dt>
-<dd><p>Get the quantization factor, if specified.</p>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">quantization</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#mlos_bench.tunables.Tunable.quantization" title="Link to this definition">¶</a></dt>
+<dd><p>Get the number of quantization bins, if specified.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>quantization</strong><span class="classifier">int, float, None</span></dt><dd><p>The quantization factor, or None.</p>
+<dt><strong>quantization</strong><span class="classifier">int | None</span></dt><dd><p>Number of quantization bins, or None.</p>
 </dd>
 </dl>
 </dd>
