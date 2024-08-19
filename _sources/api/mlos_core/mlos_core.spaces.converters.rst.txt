@@ -13,3 +13,4 @@ Submodules
    :maxdepth: 4
 
    mlos_core.spaces.converters.flaml
+   mlos_core.spaces.converters.util

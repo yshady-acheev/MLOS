@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Coverage for mlos_bench/mlos_bench/tests/tunables/tunable_to_configspace_quant_test.py: 100%</title>
+    <title>Coverage for mlos_core/mlos_core/tests/spaces/monkey_patch_quantization_test.py: 100%</title>
     <link rel="icon" sizes="32x32" href="favicon_32_cb_58284776.png">
     <link rel="stylesheet" href="style_cb_8e611ae1.css" type="text/css">
     <script src="coverage_html_cb_6fb7b396.js" defer></script>
@@ -11,7 +11,7 @@
 <header>
     <div class="content">
         <h1>
-            <span class="text">Coverage for </span><b>mlos_bench/mlos_bench/tests/tunables/tunable_to_configspace_quant_test.py</b>:
+            <span class="text">Coverage for </span><b>mlos_core/mlos_core/tests/spaces/monkey_patch_quantization_test.py</b>:
             <span class="pc_cov">100%</span>
         </h1>
         <aside id="help_panel_wrapper">
@@ -60,12 +60,12 @@
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
         <p class="text">
-            <a id="prevFileLink" class="nav" href="z_b6de38f7e42477eb_tunable_to_configspace_distr_test_py.html">&#xab; prev</a> &nbsp; &nbsp;
+            <a id="prevFileLink" class="nav" href="z_c9154d4bcbf20984_space_adapter_factory_test_py.html">&#xab; prev</a> &nbsp; &nbsp;
             <a id="indexLink" class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
-            <a id="nextFileLink" class="nav" href="z_b6de38f7e42477eb_tunable_to_configspace_test_py.html">&#xbb; next</a>
+            <a id="nextFileLink" class="nav" href="z_fdd0616ad8099d78_spaces_test_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.1">coverage.py v7.6.1</a>,
-            created at 2024-08-19 00:38 +0000
+            created at 2024-08-19 22:50 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -90,8 +90,8 @@
     <p class="run"><span class="n"><a id="t8" href="#t8">8</a></span><span class="t"><span class="key">from</span> <span class="nam">ConfigSpace</span> <span class="key">import</span> <span class="nam">UniformFloatHyperparameter</span><span class="op">,</span> <span class="nam">UniformIntegerHyperparameter</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t9" href="#t9">9</a></span><span class="t"><span class="key">from</span> <span class="nam">numpy</span><span class="op">.</span><span class="nam">random</span> <span class="key">import</span> <span class="nam">RandomState</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t10" href="#t10">10</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t11" href="#t11">11</a></span><span class="t"><span class="key">from</span> <span class="nam">mlos_bench</span><span class="op">.</span><span class="nam">optimizers</span><span class="op">.</span><span class="nam">convert_configspace</span> <span class="key">import</span> <span class="nam">_monkey_patch_quantization</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t12" href="#t12">12</a></span><span class="t"><span class="key">from</span> <span class="nam">mlos_bench</span><span class="op">.</span><span class="nam">tests</span> <span class="key">import</span> <span class="nam">SEED</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t11" href="#t11">11</a></span><span class="t"><span class="key">from</span> <span class="nam">mlos_core</span><span class="op">.</span><span class="nam">spaces</span><span class="op">.</span><span class="nam">converters</span><span class="op">.</span><span class="nam">util</span> <span class="key">import</span> <span class="nam">monkey_patch_quantization</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t12" href="#t12">12</a></span><span class="t"><span class="key">from</span> <span class="nam">mlos_core</span><span class="op">.</span><span class="nam">tests</span> <span class="key">import</span> <span class="nam">SEED</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t13" href="#t13">13</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t14" href="#t14">14</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t15" href="#t15">15</a></span><span class="t"><span class="key">def</span> <span class="nam">test_configspace_quant_int</span><span class="op">(</span><span class="op">)</span> <span class="op">-></span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
@@ -102,7 +102,7 @@
     <p class="pln"><span class="n"><a id="t20" href="#t20">20</a></span><span class="t">    <span class="com"># Before patching: expect that at least one value is not quantized.</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t21" href="#t21">21</a></span><span class="t">    <span class="key">assert</span> <span class="key">not</span> <span class="nam">set</span><span class="op">(</span><span class="nam">hp</span><span class="op">.</span><span class="nam">sample_value</span><span class="op">(</span><span class="num">100</span><span class="op">)</span><span class="op">)</span><span class="op">.</span><span class="nam">issubset</span><span class="op">(</span><span class="nam">quantized_values</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t22" href="#t22">22</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t23" href="#t23">23</a></span><span class="t">    <span class="nam">_monkey_patch_quantization</span><span class="op">(</span><span class="nam">hp</span><span class="op">,</span> <span class="num">11</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t23" href="#t23">23</a></span><span class="t">    <span class="nam">monkey_patch_quantization</span><span class="op">(</span><span class="nam">hp</span><span class="op">,</span> <span class="num">11</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t24" href="#t24">24</a></span><span class="t">    <span class="com"># After patching: *all* values must belong to the set of quantized values.</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t25" href="#t25">25</a></span><span class="t">    <span class="key">assert</span> <span class="nam">hp</span><span class="op">.</span><span class="nam">sample_value</span><span class="op">(</span><span class="op">)</span> <span class="key">in</span> <span class="nam">quantized_values</span>  <span class="com"># check scalar type</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t26" href="#t26">26</a></span><span class="t">    <span class="key">assert</span> <span class="nam">set</span><span class="op">(</span><span class="nam">hp</span><span class="op">.</span><span class="nam">sample_value</span><span class="op">(</span><span class="num">100</span><span class="op">)</span><span class="op">)</span><span class="op">.</span><span class="nam">issubset</span><span class="op">(</span><span class="nam">quantized_values</span><span class="op">)</span>  <span class="com"># batch version</span>&nbsp;</span><span class="r"></span></p>
@@ -117,7 +117,7 @@
     <p class="run"><span class="n"><a id="t35" href="#t35">35</a></span><span class="t">    <span class="key">assert</span> <span class="key">not</span> <span class="nam">set</span><span class="op">(</span><span class="nam">hp</span><span class="op">.</span><span class="nam">sample_value</span><span class="op">(</span><span class="num">100</span><span class="op">)</span><span class="op">)</span><span class="op">.</span><span class="nam">issubset</span><span class="op">(</span><span class="nam">quantized_values</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t36" href="#t36">36</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t37" href="#t37">37</a></span><span class="t">    <span class="com"># 5 is a nice number of bins to avoid floating point errors.</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t38" href="#t38">38</a></span><span class="t">    <span class="nam">_monkey_patch_quantization</span><span class="op">(</span><span class="nam">hp</span><span class="op">,</span> <span class="num">5</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t38" href="#t38">38</a></span><span class="t">    <span class="nam">monkey_patch_quantization</span><span class="op">(</span><span class="nam">hp</span><span class="op">,</span> <span class="num">5</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t39" href="#t39">39</a></span><span class="t">    <span class="com"># After patching: *all* values must belong to the set of quantized values.</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t40" href="#t40">40</a></span><span class="t">    <span class="key">assert</span> <span class="nam">hp</span><span class="op">.</span><span class="nam">sample_value</span><span class="op">(</span><span class="op">)</span> <span class="key">in</span> <span class="nam">quantized_values</span>  <span class="com"># check scalar type</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t41" href="#t41">41</a></span><span class="t">    <span class="key">assert</span> <span class="nam">set</span><span class="op">(</span><span class="nam">hp</span><span class="op">.</span><span class="nam">sample_value</span><span class="op">(</span><span class="num">100</span><span class="op">)</span><span class="op">)</span><span class="op">.</span><span class="nam">issubset</span><span class="op">(</span><span class="nam">quantized_values</span><span class="op">)</span>  <span class="com"># batch version</span>&nbsp;</span><span class="r"></span></p>
@@ -131,18 +131,18 @@
     <p class="pln"><span class="n"><a id="t49" href="#t49">49</a></span><span class="t">    <span class="com"># Before patching: expect that at least one value is not quantized.</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t50" href="#t50">50</a></span><span class="t">    <span class="key">assert</span> <span class="key">not</span> <span class="nam">set</span><span class="op">(</span><span class="nam">hp</span><span class="op">.</span><span class="nam">sample_value</span><span class="op">(</span><span class="num">100</span><span class="op">)</span><span class="op">)</span><span class="op">.</span><span class="nam">issubset</span><span class="op">(</span><span class="nam">quantized_values</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t51" href="#t51">51</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t52" href="#t52">52</a></span><span class="t">    <span class="nam">_monkey_patch_quantization</span><span class="op">(</span><span class="nam">hp</span><span class="op">,</span> <span class="num">11</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t52" href="#t52">52</a></span><span class="t">    <span class="nam">monkey_patch_quantization</span><span class="op">(</span><span class="nam">hp</span><span class="op">,</span> <span class="num">11</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t53" href="#t53">53</a></span><span class="t">    <span class="com"># After patching: *all* values must belong to the set of quantized values.</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t54" href="#t54">54</a></span><span class="t">    <span class="nam">samples</span> <span class="op">=</span> <span class="nam">hp</span><span class="op">.</span><span class="nam">sample_value</span><span class="op">(</span><span class="num">100</span><span class="op">,</span> <span class="nam">seed</span><span class="op">=</span><span class="nam">RandomState</span><span class="op">(</span><span class="nam">SEED</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t55" href="#t55">55</a></span><span class="t">    <span class="key">assert</span> <span class="nam">set</span><span class="op">(</span><span class="nam">samples</span><span class="op">)</span><span class="op">.</span><span class="nam">issubset</span><span class="op">(</span><span class="nam">quantized_values</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t56" href="#t56">56</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t57" href="#t57">57</a></span><span class="t">    <span class="com"># Patch the same hyperparameter again and check that the results are the same.</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t58" href="#t58">58</a></span><span class="t">    <span class="nam">_monkey_patch_quantization</span><span class="op">(</span><span class="nam">hp</span><span class="op">,</span> <span class="num">11</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t58" href="#t58">58</a></span><span class="t">    <span class="nam">monkey_patch_quantization</span><span class="op">(</span><span class="nam">hp</span><span class="op">,</span> <span class="num">11</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t59" href="#t59">59</a></span><span class="t">    <span class="com"># After patching: *all* values must belong to the set of quantized values.</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t60" href="#t60">60</a></span><span class="t">    <span class="key">assert</span> <span class="nam">all</span><span class="op">(</span><span class="nam">samples</span> <span class="op">==</span> <span class="nam">hp</span><span class="op">.</span><span class="nam">sample_value</span><span class="op">(</span><span class="num">100</span><span class="op">,</span> <span class="nam">seed</span><span class="op">=</span><span class="nam">RandomState</span><span class="op">(</span><span class="nam">SEED</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t61" href="#t61">61</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t62" href="#t62">62</a></span><span class="t">    <span class="com"># Repatch with the higher number of bins and make sure we get new values.</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t63" href="#t63">63</a></span><span class="t">    <span class="nam">_monkey_patch_quantization</span><span class="op">(</span><span class="nam">hp</span><span class="op">,</span> <span class="num">21</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t63" href="#t63">63</a></span><span class="t">    <span class="nam">monkey_patch_quantization</span><span class="op">(</span><span class="nam">hp</span><span class="op">,</span> <span class="num">21</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t64" href="#t64">64</a></span><span class="t">    <span class="nam">samples_set</span> <span class="op">=</span> <span class="nam">set</span><span class="op">(</span><span class="nam">hp</span><span class="op">.</span><span class="nam">sample_value</span><span class="op">(</span><span class="num">100</span><span class="op">,</span> <span class="nam">seed</span><span class="op">=</span><span class="nam">RandomState</span><span class="op">(</span><span class="nam">SEED</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t65" href="#t65">65</a></span><span class="t">    <span class="nam">quantized_values_new</span> <span class="op">=</span> <span class="nam">set</span><span class="op">(</span><span class="nam">range</span><span class="op">(</span><span class="num">5</span><span class="op">,</span> <span class="num">96</span><span class="op">,</span> <span class="num">10</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t66" href="#t66">66</a></span><span class="t">    <span class="key">assert</span> <span class="nam">samples_set</span><span class="op">.</span><span class="nam">issubset</span><span class="op">(</span><span class="nam">set</span><span class="op">(</span><span class="nam">range</span><span class="op">(</span><span class="num">0</span><span class="op">,</span> <span class="num">101</span><span class="op">,</span> <span class="num">5</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -151,12 +151,12 @@
 <footer>
     <div class="content">
         <p>
-            <a class="nav" href="z_b6de38f7e42477eb_tunable_to_configspace_distr_test_py.html">&#xab; prev</a> &nbsp; &nbsp;
+            <a class="nav" href="z_c9154d4bcbf20984_space_adapter_factory_test_py.html">&#xab; prev</a> &nbsp; &nbsp;
             <a class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
-            <a class="nav" href="z_b6de38f7e42477eb_tunable_to_configspace_test_py.html">&#xbb; next</a>
+            <a class="nav" href="z_fdd0616ad8099d78_spaces_test_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.1">coverage.py v7.6.1</a>,
-            created at 2024-08-19 00:38 +0000
+            created at 2024-08-19 22:50 +0000
         </p>
     </div>
 </footer>
