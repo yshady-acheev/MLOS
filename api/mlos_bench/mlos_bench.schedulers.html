@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.schedulers package &mdash; MLOS 0.6.2.dev4+g85fdec3e5 documentation</title>
+  <title>mlos_bench.schedulers package &mdash; MLOS 0.6.2.dev5+ge514908d1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=7547a390"></script>
+        <script src="../../_static/documentation_options.js?v=8d6bc46f"></script>
         <script src="../../_static/doctools.js?v=9a2dae69"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MLOS
           </a>
               <div class="version">
-                0.6.2.dev4+g85fdec3e5
+                0.6.2.dev5+ge514908d1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -127,7 +127,11 @@
 <dd class="field-odd"><dl class="simple">
 <dt><a class="reference internal" href="#mlos_bench.schedulers.Scheduler.max_trials" title="mlos_bench.schedulers.Scheduler.max_trials"><code class="xref py py-obj docutils literal notranslate"><span class="pre">max_trials</span></code></a></dt><dd><p>Gets the maximum number of trials to run for a given experiment, or -1 for no limit.</p>
 </dd>
+<dt><a class="reference internal" href="#mlos_bench.schedulers.Scheduler.ran_trials" title="mlos_bench.schedulers.Scheduler.ran_trials"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ran_trials</span></code></a></dt><dd><p>Get the list of trials that were run.</p>
+</dd>
 <dt><a class="reference internal" href="#mlos_bench.schedulers.Scheduler.trial_config_repeat_count" title="mlos_bench.schedulers.Scheduler.trial_config_repeat_count"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trial_config_repeat_count</span></code></a></dt><dd><p>Gets the number of trials to run for a given config.</p>
+</dd>
+<dt><a class="reference internal" href="#mlos_bench.schedulers.Scheduler.trial_count" title="mlos_bench.schedulers.Scheduler.trial_count"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trial_count</span></code></a></dt><dd><p>Gets the current number of trials run for the experiment.</p>
 </dd>
 </dl>
 </dd>
@@ -184,6 +188,12 @@ limit.</p>
 <p>By default, stop when the optimizer converges or max limit of trials reached.</p>
 </dd></dl>
 
+<dl class="py property">
+<dt class="sig sig-object py" id="mlos_bench.schedulers.Scheduler.ran_trials">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ran_trials</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.storage.base_storage.html#mlos_bench.storage.base_storage.Storage.Trial" title="mlos_bench.storage.base_storage.Storage.Trial"><span class="pre">Trial</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#mlos_bench.schedulers.Scheduler.ran_trials" title="Link to this definition">¶</a></dt>
+<dd><p>Get the list of trials that were run.</p>
+</dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.schedulers.Scheduler.run_trial">
 <em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">run_trial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trial</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.storage.base_storage.html#mlos_bench.storage.base_storage.Storage.Trial" title="mlos_bench.storage.base_storage.Storage.Trial"><span class="pre">Trial</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.schedulers.Scheduler.run_trial" title="Link to this definition">¶</a></dt>
@@ -216,6 +226,12 @@ limit.</p>
 <dd><p>Gets the number of trials to run for a given config.</p>
 </dd></dl>
 
+<dl class="py property">
+<dt class="sig sig-object py" id="mlos_bench.schedulers.Scheduler.trial_count">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">trial_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#mlos_bench.schedulers.Scheduler.trial_count" title="Link to this definition">¶</a></dt>
+<dd><p>Gets the current number of trials run for the experiment.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
@@ -228,7 +244,11 @@ limit.</p>
 <dd class="field-odd"><dl class="simple">
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">max_trials</span></code></dt><dd><p>Gets the maximum number of trials to run for a given experiment, or -1 for no limit.</p>
 </dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">ran_trials</span></code></dt><dd><p>Get the list of trials that were run.</p>
+</dd>
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">trial_config_repeat_count</span></code></dt><dd><p>Gets the number of trials to run for a given config.</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">trial_count</span></code></dt><dd><p>Gets the current number of trials run for the experiment.</p>
 </dd>
 </dl>
 </dd>
@@ -284,11 +304,13 @@ limit.</p>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.schedulers.base_scheduler.html#mlos_bench.schedulers.base_scheduler.Scheduler.load_config"><code class="docutils literal notranslate"><span class="pre">Scheduler.load_config()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.schedulers.base_scheduler.html#mlos_bench.schedulers.base_scheduler.Scheduler.max_trials"><code class="docutils literal notranslate"><span class="pre">Scheduler.max_trials</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.schedulers.base_scheduler.html#mlos_bench.schedulers.base_scheduler.Scheduler.not_done"><code class="docutils literal notranslate"><span class="pre">Scheduler.not_done()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.schedulers.base_scheduler.html#mlos_bench.schedulers.base_scheduler.Scheduler.ran_trials"><code class="docutils literal notranslate"><span class="pre">Scheduler.ran_trials</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.schedulers.base_scheduler.html#mlos_bench.schedulers.base_scheduler.Scheduler.run_trial"><code class="docutils literal notranslate"><span class="pre">Scheduler.run_trial()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.schedulers.base_scheduler.html#mlos_bench.schedulers.base_scheduler.Scheduler.schedule_trial"><code class="docutils literal notranslate"><span class="pre">Scheduler.schedule_trial()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.schedulers.base_scheduler.html#mlos_bench.schedulers.base_scheduler.Scheduler.start"><code class="docutils literal notranslate"><span class="pre">Scheduler.start()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.schedulers.base_scheduler.html#mlos_bench.schedulers.base_scheduler.Scheduler.teardown"><code class="docutils literal notranslate"><span class="pre">Scheduler.teardown()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.schedulers.base_scheduler.html#mlos_bench.schedulers.base_scheduler.Scheduler.trial_config_repeat_count"><code class="docutils literal notranslate"><span class="pre">Scheduler.trial_config_repeat_count</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.schedulers.base_scheduler.html#mlos_bench.schedulers.base_scheduler.Scheduler.trial_count"><code class="docutils literal notranslate"><span class="pre">Scheduler.trial_count</span></code></a></li>
 </ul>
 </li>
 </ul>
