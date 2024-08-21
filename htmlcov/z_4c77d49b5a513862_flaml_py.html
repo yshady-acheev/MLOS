@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="z_4c77d49b5a513862_util_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.1">coverage.py v7.6.1</a>,
-            created at 2024-08-21 00:38 +0000
+            created at 2024-08-21 23:11 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -148,7 +148,7 @@
     <p class="pln"><span class="n"><a id="t66" href="#t66">66</a></span><span class="t">                    <span class="str">"FLAML doesn't support categorical parameters with non-uniform probabilities."</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t67" href="#t67">67</a></span><span class="t">                <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t68" href="#t68">68</a></span><span class="t">            <span class="key">return</span> <span class="nam">flaml</span><span class="op">.</span><span class="nam">tune</span><span class="op">.</span><span class="nam">choice</span><span class="op">(</span><span class="nam">parameter</span><span class="op">.</span><span class="nam">choices</span><span class="op">)</span>  <span class="com"># TODO: set order?</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t69" href="#t69">69</a></span><span class="t">        <span class="key">raise</span> <span class="nam">ValueError</span><span class="op">(</span><span class="fst">f"</span><span class="fst">Type of parameter </span><span class="op">{</span><span class="nam">parameter</span><span class="op">}</span><span class="fst"> (</span><span class="op">{</span><span class="nam">type</span><span class="op">(</span><span class="nam">parameter</span><span class="op">)</span><span class="op">}</span><span class="fst">) not supported.</span><span class="fst">"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t69" href="#t69">69</a></span><span class="t">        <span class="key">raise</span> <span class="nam">ValueError</span><span class="op">(</span><span class="str">f"Type of parameter {parameter} ({type(parameter)}) not supported."</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t70" href="#t70">70</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t71" href="#t71">71</a></span><span class="t">    <span class="key">return</span> <span class="op">{</span><span class="nam">param</span><span class="op">.</span><span class="nam">name</span><span class="op">:</span> <span class="nam">_one_parameter_convert</span><span class="op">(</span><span class="nam">param</span><span class="op">)</span> <span class="key">for</span> <span class="nam">param</span> <span class="key">in</span> <span class="nam">config_space</span><span class="op">.</span><span class="nam">values</span><span class="op">(</span><span class="op">)</span><span class="op">}</span>&nbsp;</span><span class="r"></span></p>
 </main>
@@ -160,7 +160,7 @@
             <a class="nav" href="z_4c77d49b5a513862_util_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.1">coverage.py v7.6.1</a>,
-            created at 2024-08-21 00:38 +0000
+            created at 2024-08-21 23:11 +0000
         </p>
     </div>
 </footer>

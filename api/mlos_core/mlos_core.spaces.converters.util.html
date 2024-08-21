@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_core.spaces.converters.util module &mdash; MLOS 0.6.2.dev5+ge514908d1 documentation</title>
+  <title>mlos_core.spaces.converters.util module &mdash; MLOS 0.6.2.dev6+g2b2a9f0e7 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=8d6bc46f"></script>
+        <script src="../../_static/documentation_options.js?v=f15b420e"></script>
         <script src="../../_static/doctools.js?v=9a2dae69"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MLOS
           </a>
               <div class="version">
-                0.6.2.dev5+ge514908d1
+                0.6.2.dev6+g2b2a9f0e7
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -115,15 +115,41 @@
 <span id="mlos-core-spaces-converters-util-module"></span><h1>mlos_core.spaces.converters.util module<a class="headerlink" href="#module-mlos_core.spaces.converters.util" title="Link to this heading">¶</a></h1>
 <p>Helper functions for config space converters.</p>
 <dl class="py function">
-<dt class="sig sig-object py" id="mlos_core.spaces.converters.util.monkey_patch_quantization">
-<span class="sig-prename descclassname"><span class="pre">mlos_core.spaces.converters.util.</span></span><span class="sig-name descname"><span class="pre">monkey_patch_quantization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">NumericalHyperparameter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantization_bins</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_core.spaces.converters.util.monkey_patch_quantization" title="Link to this definition">¶</a></dt>
-<dd><p>Monkey-patch quantization into the Hyperparameter.</p>
+<dt class="sig sig-object py" id="mlos_core.spaces.converters.util.monkey_patch_cs_quantization">
+<span class="sig-prename descclassname"><span class="pre">mlos_core.spaces.converters.util.</span></span><span class="sig-name descname"><span class="pre">monkey_patch_cs_quantization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ConfigurationSpace</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ConfigurationSpace</span></span></span><a class="headerlink" href="#mlos_core.spaces.converters.util.monkey_patch_cs_quantization" title="Link to this definition">¶</a></dt>
+<dd><p>Monkey-patch quantization into the Hyperparameters of a ConfigSpace.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>hp</strong><span class="classifier">NumericalHyperparameter</span></dt><dd><p>ConfigSpace hyperparameter to patch.</p>
+<dt><strong>cs</strong><span class="classifier">ConfigurationSpace</span></dt><dd><p>ConfigSpace to patch.</p>
 </dd>
-<dt><strong>quantization_bins</strong><span class="classifier">int</span></dt><dd><p>Number of bins to quantize the hyperparameter into.</p>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>cs</strong><span class="classifier">ConfigurationSpace</span></dt><dd><p>Patched ConfigSpace.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mlos_core.spaces.converters.util.monkey_patch_hp_quantization">
+<span class="sig-prename descclassname"><span class="pre">mlos_core.spaces.converters.util.</span></span><span class="sig-name descname"><span class="pre">monkey_patch_hp_quantization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Hyperparameter</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Hyperparameter</span></span></span><a class="headerlink" href="#mlos_core.spaces.converters.util.monkey_patch_hp_quantization" title="Link to this definition">¶</a></dt>
+<dd><p>Monkey-patch quantization into the Hyperparameter.</p>
+<p>Temporary workaround to dropped quantization support in ConfigSpace 1.0
+See Also: &lt;<a class="reference external" href="https://github.com/automl/ConfigSpace/issues/390">https://github.com/automl/ConfigSpace/issues/390</a>&gt;</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>hp</strong><span class="classifier">Hyperparameter</span></dt><dd><p>ConfigSpace hyperparameter to patch.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>hp</strong><span class="classifier">Hyperparameter</span></dt><dd><p>Patched hyperparameter.</p>
 </dd>
 </dl>
 </dd>
