@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="z_5396f41af8b1e4bd_version_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.1">coverage.py v7.6.1</a>,
-            created at 2024-09-17 00:34 +0000
+            created at 2024-09-17 19:57 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -328,7 +328,7 @@
     <p class="run"><span class="n"><a id="t246" href="#t246">246</a></span><span class="t">    <span class="key">if</span> <span class="nam">missing_params</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t247" href="#t247">247</a></span><span class="t">        <span class="key">raise</span> <span class="nam">ValueError</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t248" href="#t248">248</a></span><span class="t">            <span class="str">"The following parameters must be provided in the configuration"</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t249" href="#t249">249</a></span><span class="t">            <span class="op">+</span> <span class="str">f" or as command line arguments: {missing_params}"</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t249" href="#t249">249</a></span><span class="t">            <span class="op">+</span> <span class="fst">f"</span><span class="fst"> or as command line arguments: </span><span class="op">{</span><span class="nam">missing_params</span><span class="op">}</span><span class="fst">"</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t250" href="#t250">250</a></span><span class="t">        <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t251" href="#t251">251</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t252" href="#t252">252</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -446,7 +446,7 @@
     <p class="pln"><span class="n"><a id="t364" href="#t364">364</a></span><span class="t">        <span class="com"># a timestamp conversion which we don't want.</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t365" href="#t365">365</a></span><span class="t">        <span class="key">return</span> <span class="nam">timestamp</span><span class="op">.</span><span class="nam">replace</span><span class="op">(</span><span class="nam">tzinfo</span><span class="op">=</span><span class="nam">pytz</span><span class="op">.</span><span class="nam">UTC</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t366" href="#t366">366</a></span><span class="t">    <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t367" href="#t367">367</a></span><span class="t">        <span class="key">raise</span> <span class="nam">ValueError</span><span class="op">(</span><span class="str">f"Invalid origin: {origin}"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t367" href="#t367">367</a></span><span class="t">        <span class="key">raise</span> <span class="nam">ValueError</span><span class="op">(</span><span class="fst">f"</span><span class="fst">Invalid origin: </span><span class="op">{</span><span class="nam">origin</span><span class="op">}</span><span class="fst">"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t368" href="#t368">368</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t369" href="#t369">369</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t370" href="#t370">370</a></span><span class="t"><span class="key">def</span> <span class="nam">utcify_nullable_timestamp</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
@@ -497,15 +497,15 @@
     <p class="mis show_mis"><span class="n"><a id="t415" href="#t415">415</a></span><span class="t">        <span class="key">elif</span> <span class="nam">origin</span> <span class="op">==</span> <span class="str">"utc"</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t416" href="#t416">416</a></span><span class="t">            <span class="nam">tzinfo</span> <span class="op">=</span> <span class="nam">pytz</span><span class="op">.</span><span class="nam">UTC</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t417" href="#t417">417</a></span><span class="t">        <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t418" href="#t418">418</a></span><span class="t">            <span class="key">raise</span> <span class="nam">ValueError</span><span class="op">(</span><span class="str">f"Invalid timezone origin: {origin}"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t418" href="#t418">418</a></span><span class="t">            <span class="key">raise</span> <span class="nam">ValueError</span><span class="op">(</span><span class="fst">f"</span><span class="fst">Invalid timezone origin: </span><span class="op">{</span><span class="nam">origin</span><span class="op">}</span><span class="fst">"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t419" href="#t419">419</a></span><span class="t">        <span class="nam">new_datetime_col</span> <span class="op">=</span> <span class="nam">new_datetime_col</span><span class="op">.</span><span class="nam">dt</span><span class="op">.</span><span class="nam">tz_localize</span><span class="op">(</span><span class="nam">tzinfo</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t420" href="#t420">420</a></span><span class="t">    <span class="key">assert</span> <span class="nam">new_datetime_col</span><span class="op">.</span><span class="nam">dt</span><span class="op">.</span><span class="nam">tz</span> <span class="key">is</span> <span class="key">not</span> <span class="key">None</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t421" href="#t421">421</a></span><span class="t">    <span class="com"># And convert it to UTC.</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t422" href="#t422">422</a></span><span class="t">    <span class="nam">new_datetime_col</span> <span class="op">=</span> <span class="nam">new_datetime_col</span><span class="op">.</span><span class="nam">dt</span><span class="op">.</span><span class="nam">tz_convert</span><span class="op">(</span><span class="str">"UTC"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t423" href="#t423">423</a></span><span class="t">    <span class="key">if</span> <span class="nam">new_datetime_col</span><span class="op">.</span><span class="nam">isna</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">any</span><span class="op">(</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t424" href="#t424">424</a></span><span class="t">        <span class="key">raise</span> <span class="nam">ValueError</span><span class="op">(</span><span class="str">f"Invalid date format in the data: {datetime_col}"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t424" href="#t424">424</a></span><span class="t">        <span class="key">raise</span> <span class="nam">ValueError</span><span class="op">(</span><span class="fst">f"</span><span class="fst">Invalid date format in the data: </span><span class="op">{</span><span class="nam">datetime_col</span><span class="op">}</span><span class="fst">"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t425" href="#t425">425</a></span><span class="t">    <span class="key">if</span> <span class="nam">new_datetime_col</span><span class="op">.</span><span class="nam">le</span><span class="op">(</span><span class="nam">_MIN_TS</span><span class="op">)</span><span class="op">.</span><span class="nam">any</span><span class="op">(</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t426" href="#t426">426</a></span><span class="t">        <span class="key">raise</span> <span class="nam">ValueError</span><span class="op">(</span><span class="str">f"Invalid date range in the data: {datetime_col}"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t426" href="#t426">426</a></span><span class="t">        <span class="key">raise</span> <span class="nam">ValueError</span><span class="op">(</span><span class="fst">f"</span><span class="fst">Invalid date range in the data: </span><span class="op">{</span><span class="nam">datetime_col</span><span class="op">}</span><span class="fst">"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t427" href="#t427">427</a></span><span class="t">    <span class="key">return</span> <span class="nam">new_datetime_col</span>&nbsp;</span><span class="r"></span></p>
 </main>
 <footer>
@@ -516,7 +516,7 @@
             <a class="nav" href="z_5396f41af8b1e4bd_version_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.1">coverage.py v7.6.1</a>,
-            created at 2024-09-17 00:34 +0000
+            created at 2024-09-17 19:57 +0000
         </p>
     </div>
 </footer>

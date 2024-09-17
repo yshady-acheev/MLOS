@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="z_323f8141f9f539b4_convert_configspace_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.1">coverage.py v7.6.1</a>,
-            created at 2024-09-17 00:34 +0000
+            created at 2024-09-17 19:57 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -170,7 +170,7 @@
     <p class="run"><span class="n"><a id="t88" href="#t88">88</a></span><span class="t">            <span class="key">elif</span> <span class="nam">opt_dir</span> <span class="op">==</span> <span class="str">"max"</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t89" href="#t89">89</a></span><span class="t">                <span class="nam">self</span><span class="op">.</span><span class="nam">_opt_targets</span><span class="op">[</span><span class="nam">opt_target</span><span class="op">]</span> <span class="op">=</span> <span class="op">-</span><span class="num">1</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t90" href="#t90">90</a></span><span class="t">            <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t91" href="#t91">91</a></span><span class="t">                <span class="key">raise</span> <span class="nam">ValueError</span><span class="op">(</span><span class="str">f"Invalid optimization direction: {opt_dir} for {opt_target}"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t91" href="#t91">91</a></span><span class="t">                <span class="key">raise</span> <span class="nam">ValueError</span><span class="op">(</span><span class="fst">f"</span><span class="fst">Invalid optimization direction: </span><span class="op">{</span><span class="nam">opt_dir</span><span class="op">}</span><span class="fst"> for </span><span class="op">{</span><span class="nam">opt_target</span><span class="op">}</span><span class="fst">"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t92" href="#t92">92</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t93" href="#t93">93</a></span><span class="t">    <span class="key">def</span> <span class="nam">_validate_json_config</span><span class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="nam">config</span><span class="op">:</span> <span class="nam">dict</span><span class="op">)</span> <span class="op">-></span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t94" href="#t94">94</a></span><span class="t">        <span class="str">"""Reconstructs a basic json config that this class might have been instantiated</span>&nbsp;</span><span class="r"></span></p>
@@ -186,10 +186,10 @@
     <p class="pln"><span class="n"><a id="t104" href="#t104">104</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="exc show_exc"><span class="n"><a id="t105" href="#t105">105</a></span><span class="t">    <span class="key">def</span> <span class="nam">__repr__</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span> <span class="op">-></span> <span class="nam">str</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="exc show_exc"><span class="n"><a id="t106" href="#t106">106</a></span><span class="t">        <span class="nam">opt_targets</span> <span class="op">=</span> <span class="str">","</span><span class="op">.</span><span class="nam">join</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
-    <p class="exc show_exc"><span class="n"><a id="t107" href="#t107">107</a></span><span class="t">            <span class="str">f"{opt_target}:{({1: 'min', -1: 'max'}[opt_dir])}"</span>&nbsp;</span><span class="r"></span></p>
+    <p class="exc show_exc"><span class="n"><a id="t107" href="#t107">107</a></span><span class="t">            <span class="fst">f"</span><span class="op">{</span><span class="nam">opt_target</span><span class="op">}</span><span class="fst">:</span><span class="op">{</span><span class="op">(</span><span class="op">{</span><span class="num">1</span><span class="op">:</span> <span class="str">'min'</span><span class="op">,</span> <span class="op">-</span><span class="num">1</span><span class="op">:</span> <span class="str">'max'</span><span class="op">}</span><span class="op">[</span><span class="nam">opt_dir</span><span class="op">]</span><span class="op">)</span><span class="op">}</span><span class="fst">"</span>&nbsp;</span><span class="r"></span></p>
     <p class="exc show_exc"><span class="n"><a id="t108" href="#t108">108</a></span><span class="t">            <span class="key">for</span> <span class="op">(</span><span class="nam">opt_target</span><span class="op">,</span> <span class="nam">opt_dir</span><span class="op">)</span> <span class="key">in</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_opt_targets</span><span class="op">.</span><span class="nam">items</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="exc show_exc"><span class="n"><a id="t109" href="#t109">109</a></span><span class="t">        <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="exc show_exc"><span class="n"><a id="t110" href="#t110">110</a></span><span class="t">        <span class="key">return</span> <span class="str">f"{self.name}({opt_targets},config={self._config})"</span>&nbsp;</span><span class="r"></span></p>
+    <p class="exc show_exc"><span class="n"><a id="t110" href="#t110">110</a></span><span class="t">        <span class="key">return</span> <span class="fst">f"</span><span class="op">{</span><span class="nam">self</span><span class="op">.</span><span class="nam">name</span><span class="op">}</span><span class="fst">(</span><span class="op">{</span><span class="nam">opt_targets</span><span class="op">}</span><span class="fst">,config=</span><span class="op">{</span><span class="nam">self</span><span class="op">.</span><span class="nam">_config</span><span class="op">}</span><span class="fst">)</span><span class="fst">"</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t111" href="#t111">111</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t112" href="#t112">112</a></span><span class="t">    <span class="key">def</span> <span class="nam">__enter__</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span> <span class="op">-></span> <span class="str">"Optimizer"</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t113" href="#t113">113</a></span><span class="t">        <span class="str">"""Enter the optimizer's context."""</span>&nbsp;</span><span class="r"></span></p>
@@ -465,7 +465,7 @@
             <a class="nav" href="z_323f8141f9f539b4_convert_configspace_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.1">coverage.py v7.6.1</a>,
-            created at 2024-09-17 00:34 +0000
+            created at 2024-09-17 19:57 +0000
         </p>
     </div>
 </footer>

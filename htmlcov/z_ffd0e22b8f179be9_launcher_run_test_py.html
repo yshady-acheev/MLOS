@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="z_97f09f0ec8586ada___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.1">coverage.py v7.6.1</a>,
-            created at 2024-09-17 00:34 +0000
+            created at 2024-09-17 19:57 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -138,7 +138,7 @@
     <p class="pln"><span class="n"><a id="t56" href="#t56">56</a></span><span class="t">            <span class="op">[</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t57" href="#t57">57</a></span><span class="t">                <span class="str">"./mlos_bench/mlos_bench/run.py"</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t58" href="#t58">58</a></span><span class="t">                <span class="op">+</span> <span class="str">" --config_path ./mlos_bench/mlos_bench/tests/config/"</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t59" href="#t59">59</a></span><span class="t">                <span class="op">+</span> <span class="str">f" {cli_config} --log_file '{log_path}'"</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t59" href="#t59">59</a></span><span class="t">                <span class="op">+</span> <span class="fst">f"</span><span class="fst"> </span><span class="op">{</span><span class="nam">cli_config</span><span class="op">}</span><span class="fst"> --log_file '</span><span class="op">{</span><span class="nam">log_path</span><span class="op">}</span><span class="fst">'</span><span class="fst">"</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t60" href="#t60">60</a></span><span class="t">            <span class="op">]</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t61" href="#t61">61</a></span><span class="t">            <span class="nam">cwd</span><span class="op">=</span><span class="nam">root_path</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t62" href="#t62">62</a></span><span class="t">        <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -151,7 +151,7 @@
     <p class="run"><span class="n"><a id="t69" href="#t69">69</a></span><span class="t">                <span class="key">for</span> <span class="nam">line</span> <span class="key">in</span> <span class="nam">fh_out</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t70" href="#t70">70</a></span><span class="t">                    <span class="key">if</span> <span class="nam">re_log</span><span class="op">.</span><span class="nam">match</span><span class="op">(</span><span class="nam">line</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t71" href="#t71">71</a></span><span class="t">                        <span class="nam">re_log</span> <span class="op">=</span> <span class="nam">re</span><span class="op">.</span><span class="nam">compile</span><span class="op">(</span><span class="nam">next</span><span class="op">(</span><span class="nam">iter_expected</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t72" href="#t72">72</a></span><span class="t">            <span class="key">assert</span> <span class="key">False</span><span class="op">,</span> <span class="str">f"Pattern not found: '{re_log.pattern}'"</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t72" href="#t72">72</a></span><span class="t">            <span class="key">assert</span> <span class="key">False</span><span class="op">,</span> <span class="fst">f"</span><span class="fst">Pattern not found: '</span><span class="op">{</span><span class="nam">re_log</span><span class="op">.</span><span class="nam">pattern</span><span class="op">}</span><span class="fst">'</span><span class="fst">"</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t73" href="#t73">73</a></span><span class="t">        <span class="key">except</span> <span class="nam">StopIteration</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t74" href="#t74">74</a></span><span class="t">            <span class="key">pass</span>  <span class="com"># Success: all patterns found</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t75" href="#t75">75</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -170,7 +170,7 @@
     <p class="pln"><span class="n"><a id="t88" href="#t88">88</a></span><span class="t">        <span class="op">+</span> <span class="str">" --trial_config_repeat_count 5"</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t89" href="#t89">89</a></span><span class="t">        <span class="op">+</span> <span class="str">" --mock_env_seed -1"</span><span class="op">,</span>  <span class="com"># Deterministic Mock Environment.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t90" href="#t90">90</a></span><span class="t">        <span class="op">[</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t91" href="#t91">91</a></span><span class="t">            <span class="str">f"^{_RE_DATE} run\\.py:\\d+ "</span> <span class="op">+</span> <span class="str">r"_main INFO Final score: \{'score': 67\.40\d+\}\s*$"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t91" href="#t91">91</a></span><span class="t">            <span class="fst">f"</span><span class="fst">^</span><span class="op">{</span><span class="nam">_RE_DATE</span><span class="op">}</span><span class="fst"> run\\.py:\\d+ </span><span class="fst">"</span> <span class="op">+</span> <span class="str">r"_main INFO Final score: \{'score': 67\.40\d+\}\s*$"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t92" href="#t92">92</a></span><span class="t">        <span class="op">]</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t93" href="#t93">93</a></span><span class="t">    <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t94" href="#t94">94</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -190,7 +190,7 @@
     <p class="pln"><span class="n"><a id="t108" href="#t108">108</a></span><span class="t">        <span class="op">+</span> <span class="str">" --trial_config_repeat_count 5"</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t109" href="#t109">109</a></span><span class="t">        <span class="op">+</span> <span class="str">" --mock_env_seed -1"</span><span class="op">,</span>  <span class="com"># Deterministic Mock Environment.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t110" href="#t110">110</a></span><span class="t">        <span class="op">[</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t111" href="#t111">111</a></span><span class="t">            <span class="str">f"^{_RE_DATE} run\\.py:\\d+ "</span> <span class="op">+</span> <span class="str">r"_main INFO Final score: \{'score': 67\.11\d+\}\s*$"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t111" href="#t111">111</a></span><span class="t">            <span class="fst">f"</span><span class="fst">^</span><span class="op">{</span><span class="nam">_RE_DATE</span><span class="op">}</span><span class="fst"> run\\.py:\\d+ </span><span class="fst">"</span> <span class="op">+</span> <span class="str">r"_main INFO Final score: \{'score': 67\.11\d+\}\s*$"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t112" href="#t112">112</a></span><span class="t">        <span class="op">]</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t113" href="#t113">113</a></span><span class="t">    <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t114" href="#t114">114</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -208,16 +208,16 @@
     <p class="pln"><span class="n"><a id="t126" href="#t126">126</a></span><span class="t">        <span class="op">+</span> <span class="str">" --mock_env_seed 42"</span><span class="op">,</span>  <span class="com"># Noisy Mock Environment.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t127" href="#t127">127</a></span><span class="t">        <span class="op">[</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t128" href="#t128">128</a></span><span class="t">            <span class="com"># Iteration 1: Expect first value to be the baseline</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t129" href="#t129">129</a></span><span class="t">            <span class="str">f"^{_RE_DATE} mlos_core_optimizer\\.py:\\d+ "</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t129" href="#t129">129</a></span><span class="t">            <span class="fst">f"</span><span class="fst">^</span><span class="op">{</span><span class="nam">_RE_DATE</span><span class="op">}</span><span class="fst"> mlos_core_optimizer\\.py:\\d+ </span><span class="fst">"</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t130" href="#t130">130</a></span><span class="t">            <span class="op">+</span> <span class="str">r"bulk_register DEBUG Warm-up END: .* :: \{'score': 64\.53\d+\}$"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t131" href="#t131">131</a></span><span class="t">            <span class="com"># Iteration 2: The result may not always be deterministic</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t132" href="#t132">132</a></span><span class="t">            <span class="str">f"^{_RE_DATE} mlos_core_optimizer\\.py:\\d+ "</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t132" href="#t132">132</a></span><span class="t">            <span class="fst">f"</span><span class="fst">^</span><span class="op">{</span><span class="nam">_RE_DATE</span><span class="op">}</span><span class="fst"> mlos_core_optimizer\\.py:\\d+ </span><span class="fst">"</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t133" href="#t133">133</a></span><span class="t">            <span class="op">+</span> <span class="str">r"bulk_register DEBUG Warm-up END: .* :: \{'score': \d+\.\d+\}$"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t134" href="#t134">134</a></span><span class="t">            <span class="com"># Iteration 3: non-deterministic (depends on the optimizer)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t135" href="#t135">135</a></span><span class="t">            <span class="str">f"^{_RE_DATE} mlos_core_optimizer\\.py:\\d+ "</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t135" href="#t135">135</a></span><span class="t">            <span class="fst">f"</span><span class="fst">^</span><span class="op">{</span><span class="nam">_RE_DATE</span><span class="op">}</span><span class="fst"> mlos_core_optimizer\\.py:\\d+ </span><span class="fst">"</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t136" href="#t136">136</a></span><span class="t">            <span class="op">+</span> <span class="str">r"bulk_register DEBUG Warm-up END: .* :: \{'score': \d+\.\d+\}$"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t137" href="#t137">137</a></span><span class="t">            <span class="com"># Final result: baseline is the optimum for the mock environment</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t138" href="#t138">138</a></span><span class="t">            <span class="str">f"^{_RE_DATE} run\\.py:\\d+ "</span> <span class="op">+</span> <span class="str">r"_main INFO Final score: \{'score': 64\.53\d+\}\s*$"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t138" href="#t138">138</a></span><span class="t">            <span class="fst">f"</span><span class="fst">^</span><span class="op">{</span><span class="nam">_RE_DATE</span><span class="op">}</span><span class="fst"> run\\.py:\\d+ </span><span class="fst">"</span> <span class="op">+</span> <span class="str">r"_main INFO Final score: \{'score': 64\.53\d+\}\s*$"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t139" href="#t139">139</a></span><span class="t">        <span class="op">]</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t140" href="#t140">140</a></span><span class="t">    <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
 </main>
@@ -229,7 +229,7 @@
             <a class="nav" href="z_97f09f0ec8586ada___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.1">coverage.py v7.6.1</a>,
-            created at 2024-09-17 00:34 +0000
+            created at 2024-09-17 19:57 +0000
         </p>
     </div>
 </footer>
