@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.environments package &mdash; MLOS 0.6.2.dev9+gfcc49aab5e documentation</title>
+  <title>mlos_bench.environments package &mdash; MLOS 0.6.2.dev10+g1f6a787c48 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=76dedcbd"></script>
+        <script src="../../_static/documentation_options.js?v=cfd1bdc6"></script>
         <script src="../../_static/doctools.js?v=9a2dae69"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MLOS
           </a>
               <div class="version">
-                0.6.2.dev9+gfcc49aab5e
+                0.6.2.dev10+g1f6a787c48
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -690,8 +690,8 @@ that are not used in the optimization process.</p>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setup</span></code>(tunables[, global_config])</p></td>
 <td><p>Set up a new benchmark environment, if necessary.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">status</span></code>()</p></td>
-<td><p>Check the status of the benchmark environment.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../generated/mlos_bench.environments.MockEnv.html#mlos_bench.environments.MockEnv.status" title="mlos_bench.environments.MockEnv.status"><code class="xref py py-obj docutils literal notranslate"><span class="pre">status</span></code></a>()</p></td>
+<td><p>Produce mock benchmark status telemetry for one experiment.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">teardown</span></code>()</p></td>
 <td><p>Tear down the benchmark environment.</p></td>
@@ -710,6 +710,22 @@ with the results or None if the status is not COMPLETED.
 The keys of the <cite>output</cite> dict are the names of the metrics
 specified in the config; by default it’s just one metric
 named “score”. All output metrics have the same value.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.environments.MockEnv.status">
+<span class="sig-name descname"><span class="pre">status</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">datetime</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.environments.MockEnv.status" title="Link to this definition">¶</a></dt>
+<dd><p>Produce mock benchmark status telemetry for one experiment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>(benchmark_status, timestamp, telemetry)</strong><span class="classifier">(Status, datetime, list)</span></dt><dd><p>3-tuple of (benchmark status, timestamp, telemetry) values.
+<cite>timestamp</cite> is UTC time stamp of the status; it’s current time by default.
+<cite>telemetry</cite> is a list (maybe empty) of (timestamp, metric, value) triplets.</p>
 </dd>
 </dl>
 </dd>
@@ -1029,6 +1045,7 @@ CANCELED, FAILED, TIMED_OUT}.</p>
 <li class="toctree-l1"><a class="reference internal" href="mlos_bench.environments.mock_env.html">mlos_bench.environments.mock_env module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="mlos_bench.environments.mock_env.html#mlos_bench.environments.mock_env.MockEnv"><code class="docutils literal notranslate"><span class="pre">MockEnv</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="mlos_bench.environments.mock_env.html#mlos_bench.environments.mock_env.MockEnv.run"><code class="docutils literal notranslate"><span class="pre">MockEnv.run()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlos_bench.environments.mock_env.html#mlos_bench.environments.mock_env.MockEnv.status"><code class="docutils literal notranslate"><span class="pre">MockEnv.status()</span></code></a></li>
 </ul>
 </li>
 </ul>
