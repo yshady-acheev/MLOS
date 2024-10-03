@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.services.remote.azure.AzureVMService &mdash; MLOS 0.6.2.dev12+gc69b7da1b5 documentation</title>
+  <title>mlos_bench.services.remote.azure.AzureVMService &mdash; MLOS 0.6.2.dev14+gdf8eac00d7 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/documentation_options.js?v=72a93cad"></script>
+        <script src="../_static/documentation_options.js?v=6a2689c3"></script>
         <script src="../_static/doctools.js?v=9a2dae69"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -37,7 +37,7 @@
             MLOS
           </a>
               <div class="version">
-                0.6.2.dev12+gc69b7da1b5
+                0.6.2.dev14+gdf8eac00d7
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -189,6 +189,9 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.services.remote.azure.AzureVMService.wait_os_operation" title="mlos_bench.services.remote.azure.AzureVMService.wait_os_operation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_os_operation</span></code></a>(params)</p></td>
 <td><p>Waits for a pending operation on an OS to resolve to SUCCEEDED or FAILED.</p></td>
 </tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.services.remote.azure.AzureVMService.wait_remote_exec_operation" title="mlos_bench.services.remote.azure.AzureVMService.wait_remote_exec_operation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_remote_exec_operation</span></code></a>(params)</p></td>
+<td><p>Waits for a pending remote execution on an Azure VM to resolve to SUCCEEDED or FAILED.</p></td>
+</tr>
 </tbody>
 </table>
 <dl class="py method">
@@ -274,7 +277,8 @@ If the key is not present, return Status.PENDING.</p>
 <dd class="field-even"><dl class="simple">
 <dt><strong>result</strong><span class="classifier">(Status, dict)</span></dt><dd><p>A pair of Status and result.
 Status is one of {PENDING, SUCCEEDED, FAILED, TIMED_OUT}
-A dict can have an “stdout” key with the remote output.</p>
+A dict can have an “stdout” key with the remote output
+and an “stderr” key for errors / warnings.</p>
 </dd>
 </dl>
 </dd>
@@ -501,6 +505,31 @@ Result is info on the operation runtime if SUCCEEDED, otherwise {}.</p>
 <span class="sig-name descname"><span class="pre">wait_os_operation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../api/mlos_bench/mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.remote.azure.AzureVMService.wait_os_operation" title="Link to this definition">¶</a></dt>
 <dd><p>Waits for a pending operation on an OS to resolve to SUCCEEDED or FAILED. Return
 TIMED_OUT when timing out.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>params: dict</strong></dt><dd><p>Flat dictionary of (key, value) pairs of tunable parameters.
+Must have the “asyncResultsUrl” key to get the results.
+If the key is not present, return Status.PENDING.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>result</strong><span class="classifier">(Status, dict)</span></dt><dd><p>A pair of Status and result.
+Status is one of {PENDING, SUCCEEDED, FAILED, TIMED_OUT}
+Result is info on the operation runtime if SUCCEEDED, otherwise {}.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.services.remote.azure.AzureVMService.wait_remote_exec_operation">
+<span class="sig-name descname"><span class="pre">wait_remote_exec_operation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../api/mlos_bench/mlos_bench.environments.status.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.remote.azure.AzureVMService.wait_remote_exec_operation" title="Link to this definition">¶</a></dt>
+<dd><p>Waits for a pending remote execution on an Azure VM to resolve to SUCCEEDED or
+FAILED. Return TIMED_OUT when timing out.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
