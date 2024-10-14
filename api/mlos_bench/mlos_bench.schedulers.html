@@ -1,23 +1,23 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../../">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.schedulers package &mdash; MLOS 0.6.2.dev15+gdbaccea503 documentation</title>
+  <title>mlos_bench.schedulers package &mdash; MLOS 0.6.2.dev17+ged7a6146eb documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../../_static/documentation_options.js?v=3fe951e2"></script>
-        <script src="../../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=55ffbb98"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -36,9 +36,6 @@
           <a href="../../index.html" class="icon icon-home">
             MLOS
           </a>
-              <div class="version">
-                0.6.2.dev15+gdbaccea503
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -115,11 +112,11 @@
            <div itemprop="articleBody">
              
   <section id="module-mlos_bench.schedulers">
-<span id="mlos-bench-schedulers-package"></span><h1>mlos_bench.schedulers package<a class="headerlink" href="#module-mlos_bench.schedulers" title="Link to this heading">¶</a></h1>
+<span id="mlos-bench-schedulers-package"></span><h1>mlos_bench.schedulers package<a class="headerlink" href="#module-mlos_bench.schedulers" title="Link to this heading"></a></h1>
 <p>Interfaces and implementations of the optimization loop scheduling policies.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="mlos_bench.schedulers.Scheduler">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.schedulers.</span></span><span class="sig-name descname"><span class="pre">Scheduler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">environment</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.environments.base_environment.html#mlos_bench.environments.base_environment.Environment" title="mlos_bench.environments.base_environment.Environment"><span class="pre">Environment</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimizer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.optimizers.base_optimizer.html#mlos_bench.optimizers.base_optimizer.Optimizer" title="mlos_bench.optimizers.base_optimizer.Optimizer"><span class="pre">Optimizer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">storage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.storage.base_storage.html#mlos_bench.storage.base_storage.Storage" title="mlos_bench.storage.base_storage.Storage"><span class="pre">Storage</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">root_env_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.schedulers.Scheduler" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.schedulers.</span></span><span class="sig-name descname"><span class="pre">Scheduler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">environment</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.environments.base_environment.html#mlos_bench.environments.base_environment.Environment" title="mlos_bench.environments.base_environment.Environment"><span class="pre">Environment</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimizer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.optimizers.base_optimizer.html#mlos_bench.optimizers.base_optimizer.Optimizer" title="mlos_bench.optimizers.base_optimizer.Optimizer"><span class="pre">Optimizer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">storage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.storage.base_storage.html#mlos_bench.storage.base_storage.Storage" title="mlos_bench.storage.base_storage.Storage"><span class="pre">Storage</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">root_env_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.schedulers.Scheduler" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Base class for the optimization loop scheduling policies.</p>
 <dl class="field-list simple">
@@ -164,71 +161,71 @@
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.schedulers.Scheduler.get_best_observation">
-<span class="sig-name descname"><span class="pre">get_best_observation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.schedulers.Scheduler.get_best_observation" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_best_observation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.schedulers.Scheduler.get_best_observation" title="Link to this definition"></a></dt>
 <dd><p>Get the best observation from the optimizer.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.schedulers.Scheduler.load_config">
-<span class="sig-name descname"><span class="pre">load_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></span><a class="headerlink" href="#mlos_bench.schedulers.Scheduler.load_config" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">load_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></span><a class="headerlink" href="#mlos_bench.schedulers.Scheduler.load_config" title="Link to this definition"></a></dt>
 <dd><p>Load the existing tunable configuration from the storage.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="mlos_bench.schedulers.Scheduler.max_trials">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_trials</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#mlos_bench.schedulers.Scheduler.max_trials" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_trials</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#mlos_bench.schedulers.Scheduler.max_trials" title="Link to this definition"></a></dt>
 <dd><p>Gets the maximum number of trials to run for a given experiment, or -1 for no
 limit.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.schedulers.Scheduler.not_done">
-<span class="sig-name descname"><span class="pre">not_done</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#mlos_bench.schedulers.Scheduler.not_done" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">not_done</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#mlos_bench.schedulers.Scheduler.not_done" title="Link to this definition"></a></dt>
 <dd><p>Check the stopping conditions.</p>
 <p>By default, stop when the optimizer converges or max limit of trials reached.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="mlos_bench.schedulers.Scheduler.ran_trials">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ran_trials</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.storage.base_storage.html#mlos_bench.storage.base_storage.Storage.Trial" title="mlos_bench.storage.base_storage.Storage.Trial"><span class="pre">Trial</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#mlos_bench.schedulers.Scheduler.ran_trials" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ran_trials</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlos_bench.storage.base_storage.html#mlos_bench.storage.base_storage.Storage.Trial" title="mlos_bench.storage.base_storage.Storage.Trial"><span class="pre">Trial</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#mlos_bench.schedulers.Scheduler.ran_trials" title="Link to this definition"></a></dt>
 <dd><p>Get the list of trials that were run.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.schedulers.Scheduler.run_trial">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">run_trial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trial</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.storage.base_storage.html#mlos_bench.storage.base_storage.Storage.Trial" title="mlos_bench.storage.base_storage.Storage.Trial"><span class="pre">Trial</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.schedulers.Scheduler.run_trial" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">run_trial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trial</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.storage.base_storage.html#mlos_bench.storage.base_storage.Storage.Trial" title="mlos_bench.storage.base_storage.Storage.Trial"><span class="pre">Trial</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.schedulers.Scheduler.run_trial" title="Link to this definition"></a></dt>
 <dd><p>Set up and run a single trial.</p>
 <p>Save the results in the storage.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.schedulers.Scheduler.schedule_trial">
-<span class="sig-name descname"><span class="pre">schedule_trial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.schedulers.Scheduler.schedule_trial" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">schedule_trial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.tunables.tunable_groups.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">TunableGroups</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.schedulers.Scheduler.schedule_trial" title="Link to this definition"></a></dt>
 <dd><p>Add a configuration to the queue of trials.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.schedulers.Scheduler.start">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.schedulers.Scheduler.start" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.schedulers.Scheduler.start" title="Link to this definition"></a></dt>
 <dd><p>Start the optimization loop.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.schedulers.Scheduler.teardown">
-<span class="sig-name descname"><span class="pre">teardown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.schedulers.Scheduler.teardown" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">teardown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.schedulers.Scheduler.teardown" title="Link to this definition"></a></dt>
 <dd><p>Tear down the environment.</p>
 <p>Call it after the completion of the <cite>.start()</cite> in the scheduler context.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="mlos_bench.schedulers.Scheduler.trial_config_repeat_count">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">trial_config_repeat_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#mlos_bench.schedulers.Scheduler.trial_config_repeat_count" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">trial_config_repeat_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#mlos_bench.schedulers.Scheduler.trial_config_repeat_count" title="Link to this definition"></a></dt>
 <dd><p>Gets the number of trials to run for a given config.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="mlos_bench.schedulers.Scheduler.trial_count">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">trial_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#mlos_bench.schedulers.Scheduler.trial_count" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">trial_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#mlos_bench.schedulers.Scheduler.trial_count" title="Link to this definition"></a></dt>
 <dd><p>Gets the current number of trials run for the experiment.</p>
 </dd></dl>
 
@@ -236,7 +233,7 @@ limit.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="mlos_bench.schedulers.SyncScheduler">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.schedulers.</span></span><span class="sig-name descname"><span class="pre">SyncScheduler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">environment</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.environments.base_environment.html#mlos_bench.environments.base_environment.Environment" title="mlos_bench.environments.base_environment.Environment"><span class="pre">Environment</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimizer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.optimizers.base_optimizer.html#mlos_bench.optimizers.base_optimizer.Optimizer" title="mlos_bench.optimizers.base_optimizer.Optimizer"><span class="pre">Optimizer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">storage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.storage.base_storage.html#mlos_bench.storage.base_storage.Storage" title="mlos_bench.storage.base_storage.Storage"><span class="pre">Storage</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">root_env_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.schedulers.SyncScheduler" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.schedulers.</span></span><span class="sig-name descname"><span class="pre">SyncScheduler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">environment</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.environments.base_environment.html#mlos_bench.environments.base_environment.Environment" title="mlos_bench.environments.base_environment.Environment"><span class="pre">Environment</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimizer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.optimizers.base_optimizer.html#mlos_bench.optimizers.base_optimizer.Optimizer" title="mlos_bench.optimizers.base_optimizer.Optimizer"><span class="pre">Optimizer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">storage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.storage.base_storage.html#mlos_bench.storage.base_storage.Storage" title="mlos_bench.storage.base_storage.Storage"><span class="pre">Storage</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">root_env_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.schedulers.SyncScheduler" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="mlos_bench.schedulers.base_scheduler.html#mlos_bench.schedulers.base_scheduler.Scheduler" title="mlos_bench.schedulers.base_scheduler.Scheduler"><code class="xref py py-class docutils literal notranslate"><span class="pre">Scheduler</span></code></a></p>
 <p>A simple single-threaded synchronous optimization loop implementation.</p>
 <dl class="field-list simple">
@@ -281,21 +278,21 @@ limit.</p>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.schedulers.SyncScheduler.run_trial">
-<span class="sig-name descname"><span class="pre">run_trial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trial</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.storage.base_storage.html#mlos_bench.storage.base_storage.Storage.Trial" title="mlos_bench.storage.base_storage.Storage.Trial"><span class="pre">Trial</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.schedulers.SyncScheduler.run_trial" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">run_trial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trial</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.storage.base_storage.html#mlos_bench.storage.base_storage.Storage.Trial" title="mlos_bench.storage.base_storage.Storage.Trial"><span class="pre">Trial</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.schedulers.SyncScheduler.run_trial" title="Link to this definition"></a></dt>
 <dd><p>Set up and run a single trial.</p>
 <p>Save the results in the storage.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.schedulers.SyncScheduler.start">
-<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.schedulers.SyncScheduler.start" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.schedulers.SyncScheduler.start" title="Link to this definition"></a></dt>
 <dd><p>Start the optimization loop.</p>
 </dd></dl>
 
 </dd></dl>
 
 <section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="mlos_bench.schedulers.base_scheduler.html">mlos_bench.schedulers.base_scheduler module</a><ul>

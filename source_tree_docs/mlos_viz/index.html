@@ -1,23 +1,23 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../../">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_viz &mdash; MLOS 0.6.2.dev15+gdbaccea503 documentation</title>
+  <title>mlos_viz &mdash; MLOS 0.6.2.dev17+ged7a6146eb documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../../_static/documentation_options.js?v=3fe951e2"></script>
-        <script src="../../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=55ffbb98"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -36,9 +36,6 @@
           <a href="../../index.html" class="icon icon-home">
             MLOS
           </a>
-              <div class="version">
-                0.6.2.dev15+gdbaccea503
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -97,7 +94,7 @@
            <div itemprop="articleBody">
              
   <section id="mlos-viz">
-<h1>mlos_viz<a class="headerlink" href="#mlos-viz" title="Link to this heading">¶</a></h1>
+<h1>mlos_viz<a class="headerlink" href="#mlos-viz" title="Link to this heading"></a></h1>
 <p>The <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_viz/./"><code class="docutils literal notranslate"><span class="pre">mlos_viz</span></code></a> module is an aid to visualizing experiment benchmarking and optimization results generated and stored by <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_viz/../mlos_bench/"><code class="docutils literal notranslate"><span class="pre">mlos_bench</span></code></a>.</p>
 <p>Its core API is <code class="docutils literal notranslate"><span class="pre">mlos_viz.plot(experiment)</span></code>, initially implemented as a wrapper around <a class="reference external" href="https://github.com/dabl/dabl"><code class="docutils literal notranslate"><span class="pre">dabl</span></code></a> to provide a basic visual overview of the results, where <code class="docutils literal notranslate"><span class="pre">experiment</span></code> is an <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_viz/../mlos_bench/mlos_bench/storage/base_experiment_data.py"><code class="docutils literal notranslate"><span class="pre">ExperimentData</span></code></a> objected returned from the <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_viz/../mlos_bench/mlos_bench/storage/"><code class="docutils literal notranslate"><span class="pre">mlos_bench.storage</span></code></a> layer APIs.</p>
 <p>In the future, we plan to add more automatic visualizations, interactive visualizations, feedback to the <code class="docutils literal notranslate"><span class="pre">mlos_bench</span></code> experiment trial scheduler, etc.</p>

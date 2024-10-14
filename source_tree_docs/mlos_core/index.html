@@ -1,23 +1,23 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../../">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos-core &mdash; MLOS 0.6.2.dev15+gdbaccea503 documentation</title>
+  <title>mlos-core &mdash; MLOS 0.6.2.dev17+ged7a6146eb documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../../_static/documentation_options.js?v=3fe951e2"></script>
-        <script src="../../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=55ffbb98"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -36,9 +36,6 @@
           <a href="../../index.html" class="icon icon-home">
             MLOS
           </a>
-              <div class="version">
-                0.6.2.dev15+gdbaccea503
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -101,16 +98,16 @@
            <div itemprop="articleBody">
              
   <section id="mlos-core">
-<h1>mlos-core<a class="headerlink" href="#mlos-core" title="Link to this heading">¶</a></h1>
+<h1>mlos-core<a class="headerlink" href="#mlos-core" title="Link to this heading"></a></h1>
 <p>This <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_core/./">directory</a> contains the code for the <code class="docutils literal notranslate"><span class="pre">mlos-core</span></code> optimizer package.</p>
 <p>It’s available for <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span></code> via the pypi repository at <a class="reference external" href="https://pypi.org/project/mlos-core/">mlos-core</a>.</p>
 <section id="description">
-<h2>Description<a class="headerlink" href="#description" title="Link to this heading">¶</a></h2>
+<h2>Description<a class="headerlink" href="#description" title="Link to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">mlos-core</span></code> is an optimizer package, wrapping other libraries like FLAML and SMAC to use techniques like Bayesian optimization and others to identify &amp; sample tunable configuration parameters and propose optimal parameter values with a consistent API: <code class="docutils literal notranslate"><span class="pre">suggest</span></code> and <code class="docutils literal notranslate"><span class="pre">register</span></code>.</p>
 <p>These can be evaluated by <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_core/../mlos_bench/"><code class="docutils literal notranslate"><span class="pre">mlos-bench</span></code></a>, generating and tracking experiment results (proposed parameters, benchmark results &amp; telemetry) to update the optimization loop, or used independently.</p>
 </section>
 <section id="features">
-<h2>Features<a class="headerlink" href="#features" title="Link to this heading">¶</a></h2>
+<h2>Features<a class="headerlink" href="#features" title="Link to this heading"></a></h2>
 <p>Since the tunable parameter search space is often extremely large, <code class="docutils literal notranslate"><span class="pre">mlos-core</span></code> automates the following steps to efficiently generate optimal task-specific kernel and application configurations.</p>
 <ol class="arabic simple">
 <li><p>Reduce the search space by identifying a promising set of tunable parameters</p>

@@ -1,23 +1,23 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../../">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.services.remote.ssh.ssh_service module &mdash; MLOS 0.6.2.dev15+gdbaccea503 documentation</title>
+  <title>mlos_bench.services.remote.ssh.ssh_service module &mdash; MLOS 0.6.2.dev17+ged7a6146eb documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../../_static/documentation_options.js?v=3fe951e2"></script>
-        <script src="../../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=55ffbb98"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -36,9 +36,6 @@
           <a href="../../index.html" class="icon icon-home">
             MLOS
           </a>
-              <div class="version">
-                0.6.2.dev15+gdbaccea503
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -118,11 +115,11 @@
            <div itemprop="articleBody">
              
   <section id="module-mlos_bench.services.remote.ssh.ssh_service">
-<span id="mlos-bench-services-remote-ssh-ssh-service-module"></span><h1>mlos_bench.services.remote.ssh.ssh_service module<a class="headerlink" href="#module-mlos_bench.services.remote.ssh.ssh_service" title="Link to this heading">¶</a></h1>
+<span id="mlos-bench-services-remote-ssh-ssh-service-module"></span><h1>mlos_bench.services.remote.ssh.ssh_service module<a class="headerlink" href="#module-mlos_bench.services.remote.ssh.ssh_service" title="Link to this heading"></a></h1>
 <p>A collection functions for interacting with SSH servers as file shares.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.ssh_service.SshClient">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.services.remote.ssh.ssh_service.</span></span><span class="sig-name descname"><span class="pre">SshClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClient" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.services.remote.ssh.ssh_service.</span></span><span class="sig-name descname"><span class="pre">SshClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClient" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">SSHClient</span></code></p>
 <p>Wrapper around SSHClient to help provide connection caching and reconnect logic.</p>
 <p>Used by the SshService to try and maintain a single connection to hosts, handle
@@ -186,13 +183,13 @@ command.</p>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.ssh_service.SshClient.connection">
-<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">connection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">SSHClientConnection</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClient.connection" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">connection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">SSHClientConnection</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClient.connection" title="Link to this definition"></a></dt>
 <dd><p>Waits for and returns the SSHClientConnection to be established or lost.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.ssh_service.SshClient.connection_lost">
-<span class="sig-name descname"><span class="pre">connection_lost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Exception</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClient.connection_lost" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">connection_lost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Exception</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClient.connection_lost" title="Link to this definition"></a></dt>
 <dd><p>Called when a connection is lost or closed</p>
 <p>This method is called when a connection is closed. If the
 connection is shut down cleanly, <em>exc</em> will be <cite>None</cite>.
@@ -208,20 +205,20 @@ the disconnect.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.ssh_service.SshClient.connection_made">
-<span class="sig-name descname"><span class="pre">connection_made</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SSHClientConnection</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClient.connection_made" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">connection_made</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SSHClientConnection</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClient.connection_made" title="Link to this definition"></a></dt>
 <dd><p>Override hook provided by asyncssh.SSHClient.</p>
 <p>Changes the connection_id from _CONNECTION_PENDING to a unique id repr.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.ssh_service.SshClient.id_from_connection">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id_from_connection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SSHClientConnection</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClient.id_from_connection" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id_from_connection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SSHClientConnection</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClient.id_from_connection" title="Link to this definition"></a></dt>
 <dd><p>Gets a unique id repr for the connection.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.ssh_service.SshClient.id_from_params">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id_from_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connect_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClient.id_from_params" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id_from_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connect_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClient.id_from_params" title="Link to this definition"></a></dt>
 <dd><p>Gets a unique id repr for the connection.</p>
 </dd></dl>
 
@@ -229,7 +226,7 @@ the disconnect.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.ssh_service.SshClientCache">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.services.remote.ssh.ssh_service.</span></span><span class="sig-name descname"><span class="pre">SshClientCache</span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClientCache" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.services.remote.ssh.ssh_service.</span></span><span class="sig-name descname"><span class="pre">SshClientCache</span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClientCache" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Manages a cache of SshClient connections.</p>
 <p>Note: Only one per event loop thread supported.
@@ -253,27 +250,27 @@ See additional details in SshService comments.</p>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.ssh_service.SshClientCache.cleanup">
-<span class="sig-name descname"><span class="pre">cleanup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClientCache.cleanup" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">cleanup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClientCache.cleanup" title="Link to this definition"></a></dt>
 <dd><p>Closes all cached connections.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.ssh_service.SshClientCache.enter">
-<span class="sig-name descname"><span class="pre">enter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClientCache.enter" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">enter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClientCache.enter" title="Link to this definition"></a></dt>
 <dd><p>Manages the cache lifecycle with reference counting.</p>
 <p>To be used in the __enter__ method of a caller’s context manager.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.ssh_service.SshClientCache.exit">
-<span class="sig-name descname"><span class="pre">exit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClientCache.exit" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">exit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClientCache.exit" title="Link to this definition"></a></dt>
 <dd><p>Manages the cache lifecycle with reference counting.</p>
 <p>To be used in the __exit__ method of a caller’s context manager.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.ssh_service.SshClientCache.get_client_connection">
-<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_client_connection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connect_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">SSHClientConnection</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#mlos_bench.services.remote.ssh.ssh_service.SshClient" title="mlos_bench.services.remote.ssh.ssh_service.SshClient"><span class="pre">SshClient</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClientCache.get_client_connection" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_client_connection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connect_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">SSHClientConnection</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#mlos_bench.services.remote.ssh.ssh_service.SshClient" title="mlos_bench.services.remote.ssh.ssh_service.SshClient"><span class="pre">SshClient</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshClientCache.get_client_connection" title="Link to this definition"></a></dt>
 <dd><p>Gets a (possibly cached) client connection.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -295,7 +292,7 @@ See additional details in SshService comments.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.ssh_service.SshService">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.services.remote.ssh.ssh_service.</span></span><span class="sig-name descname"><span class="pre">SshService</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.services.base_service.html#mlos_bench.services.base_service.Service" title="mlos_bench.services.base_service.Service"><span class="pre">Service</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">methods</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Callable</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshService" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.services.remote.ssh.ssh_service.</span></span><span class="sig-name descname"><span class="pre">SshService</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="mlos_bench.services.base_service.html#mlos_bench.services.base_service.Service" title="mlos_bench.services.base_service.Service"><span class="pre">Service</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">methods</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Callable</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshService" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="mlos_bench.services.base_service.html#mlos_bench.services.base_service.Service" title="mlos_bench.services.base_service.Service"><code class="xref py py-class docutils literal notranslate"><span class="pre">Service</span></code></a></p>
 <p>Base class for SSH services.</p>
 <dl class="field-list simple">
@@ -331,7 +328,7 @@ See additional details in SshService comments.</p>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.services.remote.ssh.ssh_service.SshService.clear_client_cache">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">clear_client_cache</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshService.clear_client_cache" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">clear_client_cache</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlos_bench.services.remote.ssh.ssh_service.SshService.clear_client_cache" title="Link to this definition"></a></dt>
 <dd><p>Clears the cache of client connections.</p>
 <p>Note: This may cause in flight operations to fail.</p>
 </dd></dl>

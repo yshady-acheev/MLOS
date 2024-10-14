@@ -1,23 +1,23 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../../">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos-bench &mdash; MLOS 0.6.2.dev15+gdbaccea503 documentation</title>
+  <title>mlos-bench &mdash; MLOS 0.6.2.dev17+ged7a6146eb documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../../_static/documentation_options.js?v=3fe951e2"></script>
-        <script src="../../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=55ffbb98"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -36,9 +36,6 @@
           <a href="../../index.html" class="icon icon-home">
             MLOS
           </a>
-              <div class="version">
-                0.6.2.dev15+gdbaccea503
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -120,12 +117,12 @@
            <div itemprop="articleBody">
              
   <section id="mlos-bench">
-<h1>mlos-bench<a class="headerlink" href="#mlos-bench" title="Link to this heading">¶</a></h1>
+<h1>mlos-bench<a class="headerlink" href="#mlos-bench" title="Link to this heading"></a></h1>
 <p>This <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/./">directory</a> contains the code for the <code class="docutils literal notranslate"><span class="pre">mlos-bench</span></code> experiment runner package.</p>
 <p>It makes use of the <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/../mlos_core/"><code class="docutils literal notranslate"><span class="pre">mlos-core</span></code></a> package for its optimizer.</p>
 <p>It’s available for <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span></code> via the pypi repository at <a class="reference external" href="https://pypi.org/project/mlos-bench/">mlos-bench</a>.</p>
 <section id="table-of-contents">
-<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Link to this heading">¶</a></h2>
+<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Link to this heading"></a></h2>
 <!-- markdownlint-disable MD007 -->
 <!-- TOC -->
 <ul class="simple">
@@ -162,13 +159,13 @@
 <!-- markdownlint-enable MD007 -->
 </section>
 <section id="description">
-<h2>Description<a class="headerlink" href="#description" title="Link to this heading">¶</a></h2>
+<h2>Description<a class="headerlink" href="#description" title="Link to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">mlos-bench</span></code> is an end-to-end benchmarking service that can be independently launched for experimentation but is also integrated with <code class="docutils literal notranslate"><span class="pre">mlos-core</span></code> as its optimizer for OS tuning.
 Given a user-provided VM configuration, <code class="docutils literal notranslate"><span class="pre">mlos-bench</span></code> provisions a configured environment and remotely executes benchmarks on the cloud.
 Experiment results (benchmark results &amp; telemetry) are stored as input to the <code class="docutils literal notranslate"><span class="pre">mlos-core</span></code> optimization engine loop to evaluate proposed configuration parameters and produce new results.</p>
 </section>
 <section id="features">
-<h2>Features<a class="headerlink" href="#features" title="Link to this heading">¶</a></h2>
+<h2>Features<a class="headerlink" href="#features" title="Link to this heading"></a></h2>
 <p>With a <a class="reference external" href="https://spec.json5.org">JSON5</a> <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/./mlos_bench/config/">config file</a> and command line parameters as input, <code class="docutils literal notranslate"><span class="pre">mlos-bench</span></code> streamlines workload performance measurement by automating the following benchmarking steps:</p>
 <ol class="arabic simple">
 <li><p>Set up &amp; clean up benchmark and application configuration</p>
@@ -190,11 +187,11 @@ Experiment results (benchmark results &amp; telemetry) are stored as input to th
 </ol>
 </section>
 <section id="quickstart">
-<h2>Quickstart<a class="headerlink" href="#quickstart" title="Link to this heading">¶</a></h2>
+<h2>Quickstart<a class="headerlink" href="#quickstart" title="Link to this heading"></a></h2>
 <p>To get started, we can adapt an example configuration to test out running <code class="docutils literal notranslate"><span class="pre">mlos-bench</span></code>.
 For these instructions, we will be using Azure for our resources.</p>
 <section id="install-and-activate-the-conda-environment">
-<h3>1. Install and activate the conda environment<a class="headerlink" href="#install-and-activate-the-conda-environment" title="Link to this heading">¶</a></h3>
+<h3>1. Install and activate the conda environment<a class="headerlink" href="#install-and-activate-the-conda-environment" title="Link to this heading"></a></h3>
 <p>From here onwards we assume we are in the project root directory.
 Ensure you have a conda environment (<code class="docutils literal notranslate"><span class="pre">mlos</span></code>) set up for executing <code class="docutils literal notranslate"><span class="pre">mlos_bench</span></code>.
 Create and activate the environment with:</p>
@@ -207,7 +204,7 @@ conda<span class="w"> </span>activate<span class="w"> </span>mlos
 </div></blockquote>
 </section>
 <section id="make-sure-that-you-have-azure-cli-tool-installed-and-working">
-<h3>2. Make sure that you have Azure CLI tool installed and working<a class="headerlink" href="#make-sure-that-you-have-azure-cli-tool-installed-and-working" title="Link to this heading">¶</a></h3>
+<h3>2. Make sure that you have Azure CLI tool installed and working<a class="headerlink" href="#make-sure-that-you-have-azure-cli-tool-installed-and-working" title="Link to this heading"></a></h3>
 <blockquote>
 <div><p>Installation instructions for <code class="docutils literal notranslate"><span class="pre">az</span></code> (Azure CLI) <a class="reference external" href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli">can be found here</a>.</p>
 <p>Note: <code class="docutils literal notranslate"><span class="pre">az</span></code> comes preinstalled inside the devcontainer.</p>
@@ -225,7 +222,7 @@ az<span class="w"> </span>account<span class="w"> </span><span class="nb">set</s
 </div>
 </section>
 <section id="generate-access-tokens-to-interact-with-azure-resources">
-<h3>3. Generate access tokens to interact with Azure resources<a class="headerlink" href="#generate-access-tokens-to-interact-with-azure-resources" title="Link to this heading">¶</a></h3>
+<h3>3. Generate access tokens to interact with Azure resources<a class="headerlink" href="#generate-access-tokens-to-interact-with-azure-resources" title="Link to this heading"></a></h3>
 <p>A script at <code class="docutils literal notranslate"><span class="pre">./scripts/generate-azure-credentials-config</span></code> produces a JSON config snippet with necessary Azure credentials.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>./scripts/generate-azure-credentials-config<span class="w"> </span>&gt;<span class="w"> </span>./global_config_azure.jsonc
 </pre></div>
@@ -243,7 +240,7 @@ az<span class="w"> </span>account<span class="w"> </span><span class="nb">set</s
 </div></blockquote>
 </section>
 <section id="create-a-json-config-with-db-credentials-optional">
-<h3>4. Create a JSON config with DB credentials (Optional)<a class="headerlink" href="#create-a-json-config-with-db-credentials-optional" title="Link to this heading">¶</a></h3>
+<h3>4. Create a JSON config with DB credentials (Optional)<a class="headerlink" href="#create-a-json-config-with-db-credentials-optional" title="Link to this heading"></a></h3>
 <p>If you plan to store the information about experiments and benchmarks in a (remote) database like PostgreSQL or MySQL, create a JSON/JSONC file with the DB hostname and password.
 See <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/./mlos_bench/config/storage/mysql.jsonc"><code class="docutils literal notranslate"><span class="pre">mysql.jsonc</span></code></a> or <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/./mlos_bench/config/storage/postgresql.jsonc"><code class="docutils literal notranslate"><span class="pre">postgresql.jsonc</span></code></a> configuration files for examples with a more complete list of DB parameters supported by underlying the <a class="reference external" href="https://www.sqlalchemy.org/library.html#reference">SqlAlchemy</a> library.
 Save your config in <code class="docutils literal notranslate"><span class="pre">./global_config_storage.jsonc</span></code> file.
@@ -263,7 +260,7 @@ See <a class="reference external" href="https://github.com/microsoft/MLOS/tree/m
 </div></blockquote>
 </section>
 <section id="create-a-top-level-configuration-file-for-your-mlos-setup">
-<h3>5. Create a top-level configuration file for your MLOS setup<a class="headerlink" href="#create-a-top-level-configuration-file-for-your-mlos-setup" title="Link to this heading">¶</a></h3>
+<h3>5. Create a top-level configuration file for your MLOS setup<a class="headerlink" href="#create-a-top-level-configuration-file-for-your-mlos-setup" title="Link to this heading"></a></h3>
 <p>We provide a few examples of such files in <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/./mlos_bench/config/cli"><code class="docutils literal notranslate"><span class="pre">./mlos_bench/config/cli/</span></code></a>.
 For example, <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/./mlos_bench/config/cli/azure-redis-opt.jsonc"><code class="docutils literal notranslate"><span class="pre">azure-redis-opt.jsonc</span></code></a> is a configuration for optimizing Redis VM on Azure and saving the results in a local SQLite database.
 Likewise, <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/./mlos_bench/config/cli/azure-redis-bench.jsonc"><code class="docutils literal notranslate"><span class="pre">azure-redis-bench.jsonc</span></code></a> is a setup to run a single Redis benchmark (and, again, save the results in SQLite).</p>
@@ -286,7 +283,7 @@ In a more realistic scenario, however, you might need to change and/or create ne
 We’ll give more details on that below.</p>
 </section>
 <section id="create-another-config-file-for-the-parameters-specific-to-your-experiment">
-<h3>5. Create another config file for the parameters specific to your experiment<a class="headerlink" href="#create-another-config-file-for-the-parameters-specific-to-your-experiment" title="Link to this heading">¶</a></h3>
+<h3>5. Create another config file for the parameters specific to your experiment<a class="headerlink" href="#create-another-config-file-for-the-parameters-specific-to-your-experiment" title="Link to this heading"></a></h3>
 <p>Copy one of our examples, e.g., <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/./mlos_bench/config/experiments/experiment_RedisBench.jsonc"><code class="docutils literal notranslate"><span class="pre">experiment_RedisBench.jsonc</span></code></a> and name it after your experiment, e.g. <code class="docutils literal notranslate"><span class="pre">experiment_MyBenchmark.jsonc</span></code>.</p>
 <p>In that file, you can specify any parameters that occur in your other configs, namely in <code class="docutils literal notranslate"><span class="pre">&quot;const_args&quot;</span></code> section of the Environment configs, or in <code class="docutils literal notranslate"><span class="pre">&quot;config&quot;</span></code> sections of your Service, Storage, or Optimizer configurations.</p>
 <blockquote>
@@ -294,7 +291,7 @@ We’ll give more details on that below.</p>
 That allows us to propagate the values of the parameters that are specific to the experiment into other components of the framework and keep the majority of the config files in our library immutable and reusable.</p>
 </div></blockquote>
 <section id="importance-of-the-experiment-id-config">
-<h4>Importance of the Experiment ID config<a class="headerlink" href="#importance-of-the-experiment-id-config" title="Link to this heading">¶</a></h4>
+<h4>Importance of the Experiment ID config<a class="headerlink" href="#importance-of-the-experiment-id-config" title="Link to this heading"></a></h4>
 <p>An important part of this file is the value of <code class="docutils literal notranslate"><span class="pre">experiment_id</span></code> which controls the storage and retrieval of trial data.
 Should the experiment be interrupted, the <code class="docutils literal notranslate"><span class="pre">experiment_id</span></code> will be used to resume the experiment from the last completed trial, reloading the optimizer with data from the previously completed trial data.</p>
 <p>As such this value should be unique for each experiment.
@@ -303,7 +300,7 @@ Unfortunately, determining what constitutes and <em>“incompatible”</em> chan
 </section>
 </section>
 <section id="run-the-benchmark">
-<h3>6. Run the benchmark<a class="headerlink" href="#run-the-benchmark" title="Link to this heading">¶</a></h3>
+<h3>6. Run the benchmark<a class="headerlink" href="#run-the-benchmark" title="Link to this heading"></a></h3>
 <p>Now we can run our configuration with <code class="docutils literal notranslate"><span class="pre">mlos_bench</span></code>:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mlos_bench<span class="w"> </span>--config<span class="w"> </span><span class="s2">&quot;./mlos_bench/mlos_bench/config/cli/azure-redis-bench.jsonc&quot;</span><span class="w"> </span>--globals<span class="w"> </span><span class="s2">&quot;experiment_MyBenchmark.jsonc&quot;</span>
 </pre></div>
@@ -315,7 +312,7 @@ Same applies to all other CLI parameters - e.g., you can change the log level by
 </section>
 </section>
 <section id="optimization">
-<h2>Optimization<a class="headerlink" href="#optimization" title="Link to this heading">¶</a></h2>
+<h2>Optimization<a class="headerlink" href="#optimization" title="Link to this heading"></a></h2>
 <p>Searching for an optimal set of tunable parameters is very similar to running a single benchmark.
 All we have to do is specifying the <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/./mlos_bench/optimizers/"><code class="docutils literal notranslate"><span class="pre">Optimizer</span></code></a> in the top-level configuration, like in our <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/./mlos_bench/config/cli/azure-redis-opt.jsonc"><code class="docutils literal notranslate"><span class="pre">azure-redis-opt.jsonc</span></code></a> example.</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mlos_bench<span class="w"> </span>--config<span class="w"> </span><span class="s2">&quot;./mlos_bench/mlos_bench/config/cli/azure-redis-opt.jsonc&quot;</span><span class="w"> </span>--globals<span class="w"> </span><span class="s2">&quot;experiment_MyBenchmark.jsonc&quot;</span><span class="w"> </span>--max_suggestions<span class="w"> </span><span class="m">10</span><span class="w"> </span>--trial-config-repeat-count<span class="w"> </span><span class="m">3</span>
@@ -326,7 +323,7 @@ We also use <code class="docutils literal notranslate"><span class="pre">--trial
 That means, we will run 30 trials in total, 3 for each of the 10 suggested configurations.</p>
 <p>We don’t have to specify the <code class="docutils literal notranslate"><span class="pre">&quot;tunable_values&quot;</span></code> for the optimization: the optimizer will suggest new values on each iteration and the framework will feed this data into the benchmarking environment.</p>
 <section id="resuming-interrupted-experiments">
-<h3>Resuming interrupted experiments<a class="headerlink" href="#resuming-interrupted-experiments" title="Link to this heading">¶</a></h3>
+<h3>Resuming interrupted experiments<a class="headerlink" href="#resuming-interrupted-experiments" title="Link to this heading"></a></h3>
 <p>Experiments sometimes get interrupted, e.g., due to errors in automation scripts or other failures in the system.</p>
 <!-- TODO: Document retry logic once implemented: #523 -->
 <p>To resume an interrupted experiment, simply run the same command as before.</p>
@@ -334,7 +331,7 @@ That means, we will run 30 trials in total, 3 for each of the 10 suggested confi
 </section>
 </section>
 <section id="analyzing-results">
-<h2>Analyzing Results<a class="headerlink" href="#analyzing-results" title="Link to this heading">¶</a></h2>
+<h2>Analyzing Results<a class="headerlink" href="#analyzing-results" title="Link to this heading"></a></h2>
 <p>The results of the experiment are stored in the database as specified in experiment configs (see above).</p>
 <p>After running the experiment, you can use the <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/../mlos_viz/"><code class="docutils literal notranslate"><span class="pre">mlos-viz</span></code></a> package to analyze the results in a Jupyter notebook, for instance.
 See the <a class="reference external" href="https://github.com/Microsoft-CISL/sqlite-autotuning"><code class="docutils literal notranslate"><span class="pre">sqlite-autotuning</span></code></a> repository for a full example.</p>

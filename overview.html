@@ -1,23 +1,23 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="./">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MLOS Package APIs Overview &mdash; MLOS 0.6.2.dev15+gdbaccea503 documentation</title>
+  <title>MLOS Package APIs Overview &mdash; MLOS 0.6.2.dev17+ged7a6146eb documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
 
   
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="_static/documentation_options.js?v=3fe951e2"></script>
-        <script src="_static/doctools.js?v=9a2dae69"></script>
-        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=55ffbb98"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -36,9 +36,6 @@
           <a href="index.html" class="icon icon-home">
             MLOS
           </a>
-              <div class="version">
-                0.6.2.dev15+gdbaccea503
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -197,14 +194,14 @@
            <div itemprop="articleBody">
              
   <section id="mlos-package-apis-overview">
-<h1>MLOS Package APIs Overview<a class="headerlink" href="#mlos-package-apis-overview" title="Link to this heading">¶</a></h1>
+<h1>MLOS Package APIs Overview<a class="headerlink" href="#mlos-package-apis-overview" title="Link to this heading"></a></h1>
 <p>This is a list of major functions and classes provided by the MLOS packages.</p>
 </section>
 <section id="mlos-core-api">
-<h1>mlos-core API<a class="headerlink" href="#mlos-core-api" title="Link to this heading">¶</a></h1>
+<h1>mlos-core API<a class="headerlink" href="#mlos-core-api" title="Link to this heading"></a></h1>
 <p>This is a list of major functions and classes provided by <cite>mlos_core</cite>.</p>
 <section id="optimizers">
-<h2>Optimizers<a class="headerlink" href="#optimizers" title="Link to this heading">¶</a></h2>
+<h2>Optimizers<a class="headerlink" href="#optimizers" title="Link to this heading"></a></h2>
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_core.optimizers.OptimizerType.html#mlos_core.optimizers.OptimizerType" title="mlos_core.optimizers.OptimizerType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OptimizerType</span></code></a>(value[, names, module, ...])</p></td>
@@ -251,9 +248,9 @@
 </table>
 </section>
 <section id="spaces">
-<h2>Spaces<a class="headerlink" href="#spaces" title="Link to this heading">¶</a></h2>
+<h2>Spaces<a class="headerlink" href="#spaces" title="Link to this heading"></a></h2>
 <section id="converters">
-<h3>Converters<a class="headerlink" href="#converters" title="Link to this heading">¶</a></h3>
+<h3>Converters<a class="headerlink" href="#converters" title="Link to this heading"></a></h3>
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_core.spaces.converters.flaml.configspace_to_flaml_space.html#mlos_core.spaces.converters.flaml.configspace_to_flaml_space" title="mlos_core.spaces.converters.flaml.configspace_to_flaml_space"><code class="xref py py-obj docutils literal notranslate"><span class="pre">configspace_to_flaml_space</span></code></a>(config_space)</p></td>
@@ -263,7 +260,7 @@
 </table>
 </section>
 <section id="space-adapters">
-<h3>Space Adapters<a class="headerlink" href="#space-adapters" title="Link to this heading">¶</a></h3>
+<h3>Space Adapters<a class="headerlink" href="#space-adapters" title="Link to this heading"></a></h3>
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_core.spaces.adapters.SpaceAdapterType.html#mlos_core.spaces.adapters.SpaceAdapterType" title="mlos_core.spaces.adapters.SpaceAdapterType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpaceAdapterType</span></code></a>(value[, names, module, ...])</p></td>
@@ -302,10 +299,10 @@
 </section>
 </section>
 <section id="mlos-bench-api">
-<h1>mlos-bench API<a class="headerlink" href="#mlos-bench-api" title="Link to this heading">¶</a></h1>
+<h1>mlos-bench API<a class="headerlink" href="#mlos-bench-api" title="Link to this heading"></a></h1>
 <p>This is a list of major functions and classes provided by <cite>mlos_bench</cite>.</p>
 <section id="main">
-<h2>Main<a class="headerlink" href="#main" title="Link to this heading">¶</a></h2>
+<h2>Main<a class="headerlink" href="#main" title="Link to this heading"></a></h2>
 <p><a class="reference internal" href="api/mlos_bench/mlos_bench.run.html"><span class="doc">run.py</span></a></p>
 <blockquote>
 <div><p>The script to run the benchmarks or the optimization loop.</p>
@@ -317,7 +314,7 @@
 </div>
 </section>
 <section id="benchmark-environments">
-<h2>Benchmark Environments<a class="headerlink" href="#benchmark-environments" title="Link to this heading">¶</a></h2>
+<h2>Benchmark Environments<a class="headerlink" href="#benchmark-environments" title="Link to this heading"></a></h2>
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.environments.Status.html#mlos_bench.environments.Status" title="mlos_bench.environments.Status"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Status</span></code></a>(value[, names, module, qualname, ...])</p></td>
@@ -335,7 +332,7 @@
 </tbody>
 </table>
 <section id="local-environments">
-<h3>Local Environments<a class="headerlink" href="#local-environments" title="Link to this heading">¶</a></h3>
+<h3>Local Environments<a class="headerlink" href="#local-environments" title="Link to this heading"></a></h3>
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.environments.local.LocalEnv.html#mlos_bench.environments.local.LocalEnv" title="mlos_bench.environments.local.LocalEnv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LocalEnv</span></code></a>(*, name, config[, global_config, ...])</p></td>
@@ -348,7 +345,7 @@
 </table>
 </section>
 <section id="remote-environments">
-<h3>Remote Environments<a class="headerlink" href="#remote-environments" title="Link to this heading">¶</a></h3>
+<h3>Remote Environments<a class="headerlink" href="#remote-environments" title="Link to this heading"></a></h3>
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.environments.remote.RemoteEnv.html#mlos_bench.environments.remote.RemoteEnv" title="mlos_bench.environments.remote.RemoteEnv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RemoteEnv</span></code></a>(*, name, config[, global_config, ...])</p></td>
@@ -368,7 +365,7 @@
 </section>
 </section>
 <section id="tunable-parameters">
-<h2>Tunable Parameters<a class="headerlink" href="#tunable-parameters" title="Link to this heading">¶</a></h2>
+<h2>Tunable Parameters<a class="headerlink" href="#tunable-parameters" title="Link to this heading"></a></h2>
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.tunables.Tunable.html#mlos_bench.tunables.Tunable" title="mlos_bench.tunables.Tunable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Tunable</span></code></a>(name, config)</p></td>
@@ -381,7 +378,7 @@
 </table>
 </section>
 <section id="service-mix-ins">
-<h2>Service Mix-ins<a class="headerlink" href="#service-mix-ins" title="Link to this heading">¶</a></h2>
+<h2>Service Mix-ins<a class="headerlink" href="#service-mix-ins" title="Link to this heading"></a></h2>
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.services.Service.html#mlos_bench.services.Service" title="mlos_bench.services.Service"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Service</span></code></a>([config, global_config, parent, methods])</p></td>
@@ -400,7 +397,7 @@
 </tbody>
 </table>
 <section id="local-services">
-<h3>Local Services<a class="headerlink" href="#local-services" title="Link to this heading">¶</a></h3>
+<h3>Local Services<a class="headerlink" href="#local-services" title="Link to this heading"></a></h3>
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.services.local.LocalExecService.html#mlos_bench.services.local.LocalExecService" title="mlos_bench.services.local.LocalExecService"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LocalExecService</span></code></a>([config, global_config, ...])</p></td>
@@ -410,7 +407,7 @@
 </table>
 </section>
 <section id="remote-azure-services">
-<h3>Remote Azure Services<a class="headerlink" href="#remote-azure-services" title="Link to this heading">¶</a></h3>
+<h3>Remote Azure Services<a class="headerlink" href="#remote-azure-services" title="Link to this heading"></a></h3>
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.services.remote.azure.AzureVMService.html#mlos_bench.services.remote.azure.AzureVMService" title="mlos_bench.services.remote.azure.AzureVMService"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AzureVMService</span></code></a>([config, global_config, ...])</p></td>
@@ -424,7 +421,7 @@
 </section>
 </section>
 <section id="optimizer-adapters">
-<h2>Optimizer Adapters<a class="headerlink" href="#optimizer-adapters" title="Link to this heading">¶</a></h2>
+<h2>Optimizer Adapters<a class="headerlink" href="#optimizer-adapters" title="Link to this heading"></a></h2>
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.optimizers.Optimizer.html#mlos_bench.optimizers.Optimizer" title="mlos_bench.optimizers.Optimizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optimizer</span></code></a>(tunables, config[, global_config, ...])</p></td>
@@ -440,9 +437,9 @@
 </table>
 </section>
 <section id="storage">
-<h2>Storage<a class="headerlink" href="#storage" title="Link to this heading">¶</a></h2>
+<h2>Storage<a class="headerlink" href="#storage" title="Link to this heading"></a></h2>
 <section id="base-runtime-backends">
-<h3>Base Runtime Backends<a class="headerlink" href="#base-runtime-backends" title="Link to this heading">¶</a></h3>
+<h3>Base Runtime Backends<a class="headerlink" href="#base-runtime-backends" title="Link to this heading"></a></h3>
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.storage.Storage.html#mlos_bench.storage.Storage" title="mlos_bench.storage.Storage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Storage</span></code></a>(config[, global_config, service])</p></td>
@@ -459,7 +456,7 @@
 </table>
 </section>
 <section id="sql-db-storage-backend">
-<h3>SQL DB Storage Backend<a class="headerlink" href="#sql-db-storage-backend" title="Link to this heading">¶</a></h3>
+<h3>SQL DB Storage Backend<a class="headerlink" href="#sql-db-storage-backend" title="Link to this heading"></a></h3>
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.storage.sql.storage.SqlStorage.html#mlos_bench.storage.sql.storage.SqlStorage" title="mlos_bench.storage.sql.storage.SqlStorage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SqlStorage</span></code></a>(config[, global_config, service])</p></td>
@@ -469,7 +466,7 @@
 </table>
 </section>
 <section id="analysis-client-access-apis">
-<h3>Analysis Client Access APIs<a class="headerlink" href="#analysis-client-access-apis" title="Link to this heading">¶</a></h3>
+<h3>Analysis Client Access APIs<a class="headerlink" href="#analysis-client-access-apis" title="Link to this heading"></a></h3>
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/mlos_bench.storage.base_experiment_data.ExperimentData.html#mlos_bench.storage.base_experiment_data.ExperimentData" title="mlos_bench.storage.base_experiment_data.ExperimentData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExperimentData</span></code></a>(*, experiment_id, ...)</p></td>
@@ -502,7 +499,7 @@
 </section>
 </section>
 <section id="mlos-viz-api">
-<h1>mlos-viz API<a class="headerlink" href="#mlos-viz-api" title="Link to this heading">¶</a></h1>
+<h1>mlos-viz API<a class="headerlink" href="#mlos-viz-api" title="Link to this heading"></a></h1>
 <p>This is a list of major functions and classes provided by <cite>mlos_viz</cite>.</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
