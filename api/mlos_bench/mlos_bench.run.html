@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.run module &mdash; MLOS 0.6.2.dev20+g72e10d1833 documentation</title>
+  <title>mlos_bench.run module &mdash; MLOS 0.6.2.dev21+g0055a49fad documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -14,7 +14,7 @@
   
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../_static/documentation_options.js?v=47df786f"></script>
+      <script src="../../_static/documentation_options.js?v=905a9d73"></script>
       <script src="../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -137,14 +137,14 @@ options:
                         the latter. See the `mlos_bench/config/` tree at
                         https://github.com/microsoft/MLOS/ for additional
                         config examples for this and other arguments.
-  --log_file LOG_FILE, --log-file LOG_FILE
+  --log_file, --log-file LOG_FILE
                         Path to the log file. Use stdout if omitted.
-  --log_level LOG_LEVEL, --log-level LOG_LEVEL
+  --log_level, --log-level LOG_LEVEL
                         Logging level. Default is INFO. Set to DEBUG for
                         debug, WARNING for warnings only.
-  --config_path CONFIG_PATH [CONFIG_PATH ...], --config-path CONFIG_PATH [CONFIG_PATH ...], --config-paths CONFIG_PATH [CONFIG_PATH ...], --config_paths CONFIG_PATH [CONFIG_PATH ...]
+  --config_path, --config-path, --config-paths, --config_paths CONFIG_PATH [CONFIG_PATH ...]
                         One or more locations of JSON config files.
-  --service SERVICE [SERVICE ...], --services SERVICE [SERVICE ...]
+  --service, --services SERVICE [SERVICE ...]
                         Path to JSON file with the configuration of the
                         service(s) for environment(s) to use.
   --environment ENVIRONMENT
@@ -154,7 +154,7 @@ options:
                         Path to the optimizer configuration file. If omitted,
                         run a single trial with default (or specified in
                         --tunable_values).
-  --trial_config_repeat_count TRIAL_CONFIG_REPEAT_COUNT, --trial-config-repeat-count TRIAL_CONFIG_REPEAT_COUNT
+  --trial_config_repeat_count, --trial-config-repeat-count TRIAL_CONFIG_REPEAT_COUNT
                         Number of times to repeat each config. Default is 1
                         trial per config, though more may be advised.
   --scheduler SCHEDULER
@@ -165,9 +165,9 @@ options:
   --random_init, --random-init
                         Initialize tunables with random values. (Before
                         applying --tunable_values).
-  --random_seed RANDOM_SEED, --random-seed RANDOM_SEED
+  --random_seed, --random-seed RANDOM_SEED
                         Seed to use with --random_init
-  --tunable_values TUNABLE_VALUES [TUNABLE_VALUES ...], --tunable-values TUNABLE_VALUES [TUNABLE_VALUES ...]
+  --tunable_values, --tunable-values TUNABLE_VALUES [TUNABLE_VALUES ...]
                         Path to one or more JSON files that contain values of
                         the tunable parameters. This can be used for a single
                         trial (when no --optimizer is specified) or as default
@@ -178,7 +178,7 @@ options:
   --no_teardown, --no-teardown
                         Disable teardown of the environment after the
                         benchmark.
-  --experiment_id EXPERIMENT_ID, --experiment-id EXPERIMENT_ID
+  --experiment_id, --experiment-id EXPERIMENT_ID
                         Experiment ID to use for the benchmark. If omitted,
                         the value from the --cli config or --globals is used.
                         This is used to store and reload trial results from
