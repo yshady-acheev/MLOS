@@ -1,0 +1,30 @@
+mlos_bench.optimizers
+=====================
+
+.. py:module:: mlos_bench.optimizers
+
+.. autoapi-nested-parse::
+
+   Interfaces and wrapper classes for optimizers to be used in mlos_bench for autotuning or
+   benchmarking.
+
+   TODO: Improve documentation here.
+
+
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   /autoapi/mlos_bench/optimizers/base_optimizer/index
+   /autoapi/mlos_bench/optimizers/convert_configspace/index
+   /autoapi/mlos_bench/optimizers/grid_search_optimizer/index
+   /autoapi/mlos_bench/optimizers/manual_optimizer/index
+   /autoapi/mlos_bench/optimizers/mlos_core_optimizer/index
+   /autoapi/mlos_bench/optimizers/mock_optimizer/index
+   /autoapi/mlos_bench/optimizers/one_shot_optimizer/index
+   /autoapi/mlos_bench/optimizers/track_best_optimizer/index
+
+

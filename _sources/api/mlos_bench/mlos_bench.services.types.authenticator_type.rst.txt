@@ -1,7 +1,0 @@
-mlos\_bench.services.types.authenticator\_type module
-=====================================================
-
-.. automodule:: mlos_bench.services.types.authenticator_type
-   :members:
-   :undoc-members:
-   :show-inheritance:

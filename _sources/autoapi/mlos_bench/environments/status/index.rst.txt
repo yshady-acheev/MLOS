@@ -1,0 +1,119 @@
+mlos_bench.environments.status
+==============================
+
+.. py:module:: mlos_bench.environments.status
+
+.. autoapi-nested-parse::
+
+   Enum for the status of the benchmark/environment.
+
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   mlos_bench.environments.status.Status
+
+
+Module Contents
+---------------
+
+.. py:class:: Status(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Enum for the status of the benchmark/environment.
+
+
+   .. py:method:: is_canceled() -> bool
+
+      Check if the status of the benchmark/environment is CANCELED.
+
+
+
+   .. py:method:: is_completed() -> bool
+
+      Check if the status of the benchmark/environment is one of {SUCCEEDED,
+      CANCELED, FAILED, TIMED_OUT}.
+
+
+
+   .. py:method:: is_failed() -> bool
+
+      Check if the status of the benchmark/environment is FAILED.
+
+
+
+   .. py:method:: is_good() -> bool
+
+      Check if the status of the benchmark/environment is good.
+
+
+
+   .. py:method:: is_pending() -> bool
+
+      Check if the status of the benchmark/environment is PENDING.
+
+
+
+   .. py:method:: is_ready() -> bool
+
+      Check if the status of the benchmark/environment is READY.
+
+
+
+   .. py:method:: is_succeeded() -> bool
+
+      Check if the status of the benchmark/environment is SUCCEEDED.
+
+
+
+   .. py:method:: is_timed_out() -> bool
+
+      Check if the status of the benchmark/environment is TIMED_OUT.
+
+
+
+   .. py:attribute:: CANCELED
+      :value: 5
+
+
+
+   .. py:attribute:: FAILED
+      :value: 6
+
+
+
+   .. py:attribute:: PENDING
+      :value: 1
+
+
+
+   .. py:attribute:: READY
+      :value: 2
+
+
+
+   .. py:attribute:: RUNNING
+      :value: 3
+
+
+
+   .. py:attribute:: SUCCEEDED
+      :value: 4
+
+
+
+   .. py:attribute:: TIMED_OUT
+      :value: 7
+
+
+
+   .. py:attribute:: UNKNOWN
+      :value: 0
+
+
+

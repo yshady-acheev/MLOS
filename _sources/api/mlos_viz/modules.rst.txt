@@ -1,7 +1,0 @@
-mlos_viz
-========
-
-.. toctree::
-   :maxdepth: 4
-
-   mlos_viz

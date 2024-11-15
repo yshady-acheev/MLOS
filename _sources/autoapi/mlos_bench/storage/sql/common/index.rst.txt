@@ -1,0 +1,39 @@
+mlos_bench.storage.sql.common
+=============================
+
+.. py:module:: mlos_bench.storage.sql.common
+
+.. autoapi-nested-parse::
+
+   Common SQL methods for accessing the stored benchmark data.
+
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   mlos_bench.storage.sql.common.get_results_df
+   mlos_bench.storage.sql.common.get_trials
+
+
+Module Contents
+---------------
+
+.. py:function:: get_results_df(engine: sqlalchemy.engine.Engine, schema: mlos_bench.storage.sql.schema.DbSchema, experiment_id: str, tunable_config_id: Optional[int] = None) -> pandas.DataFrame
+
+   Gets TrialData for the given experiment_data and optionally additionally restricted
+   by tunable_config_id.
+
+   Used by both TunableConfigTrialGroupSqlData and ExperimentSqlData.
+
+
+.. py:function:: get_trials(engine: sqlalchemy.engine.Engine, schema: mlos_bench.storage.sql.schema.DbSchema, experiment_id: str, tunable_config_id: Optional[int] = None) -> Dict[int, mlos_bench.storage.base_trial_data.TrialData]
+
+   Gets TrialData for the given experiment_data and optionally additionally restricted
+   by tunable_config_id.
+
+   Used by both TunableConfigTrialGroupSqlData and ExperimentSqlData.
+
+

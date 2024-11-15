@@ -1,7 +1,0 @@
-mlos\_bench.services.types.remote\_config\_type module
-======================================================
-
-.. automodule:: mlos_bench.services.types.remote_config_type
-   :members:
-   :undoc-members:
-   :show-inheritance:

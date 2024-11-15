@@ -1,7 +1,0 @@
-mlos\_core.optimizers.flaml\_optimizer module
-=============================================
-
-.. automodule:: mlos_core.optimizers.flaml_optimizer
-   :members:
-   :undoc-members:
-   :show-inheritance:

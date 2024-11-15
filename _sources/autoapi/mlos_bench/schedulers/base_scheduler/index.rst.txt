@@ -1,0 +1,165 @@
+mlos_bench.schedulers.base_scheduler
+====================================
+
+.. py:module:: mlos_bench.schedulers.base_scheduler
+
+.. autoapi-nested-parse::
+
+   Base class for the optimization loop scheduling policies.
+
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   mlos_bench.schedulers.base_scheduler.Scheduler
+
+
+Module Contents
+---------------
+
+.. py:class:: Scheduler(*, config: Dict[str, Any], global_config: Dict[str, Any], environment: mlos_bench.environments.base_environment.Environment, optimizer: mlos_bench.optimizers.base_optimizer.Optimizer, storage: mlos_bench.storage.base_storage.Storage, root_env_config: str)
+
+   Base class for the optimization loop scheduling policies.
+
+   Create a new instance of the scheduler. The constructor of this and the derived
+   classes is called by the persistence service after reading the class JSON
+   configuration. Other objects like the Environment and Optimizer are provided by
+   the Launcher.
+
+   :param config: The configuration for the scheduler.
+   :type config: dict
+   :param global_config: he global configuration for the experiment.
+   :type global_config: dict
+   :param environment: The environment to benchmark/optimize.
+   :type environment: Environment
+   :param optimizer: The optimizer to use.
+   :type optimizer: Optimizer
+   :param storage: The storage to use.
+   :type storage: Storage
+   :param root_env_config: Path to the root environment configuration.
+   :type root_env_config: str
+
+
+   .. py:method:: __enter__() -> Scheduler
+
+      Enter the scheduler's context.
+
+
+
+   .. py:method:: __exit__(ex_type: Optional[Type[BaseException]], ex_val: Optional[BaseException], ex_tb: Optional[types.TracebackType]) -> Literal[False]
+
+      Exit the context of the scheduler.
+
+
+
+   .. py:method:: __repr__() -> str
+
+      Produce a human-readable version of the Scheduler (mostly for logging).
+
+      :returns: **string** -- A human-readable version of the Scheduler.
+      :rtype: str
+
+
+
+   .. py:method:: get_best_observation() -> Tuple[Optional[Dict[str, float]], Optional[mlos_bench.tunables.tunable_groups.TunableGroups]]
+
+      Get the best observation from the optimizer.
+
+
+
+   .. py:method:: load_config(config_id: int) -> mlos_bench.tunables.tunable_groups.TunableGroups
+
+      Load the existing tunable configuration from the storage.
+
+
+
+   .. py:method:: not_done() -> bool
+
+      Check the stopping conditions.
+
+      By default, stop when the optimizer converges or max limit of trials reached.
+
+
+
+   .. py:method:: run_trial(trial: mlos_bench.storage.base_storage.Storage.Trial) -> None
+      :abstractmethod:
+
+
+      Set up and run a single trial.
+
+      Save the results in the storage.
+
+
+
+   .. py:method:: schedule_trial(tunables: mlos_bench.tunables.tunable_groups.TunableGroups) -> None
+
+      Add a configuration to the queue of trials.
+
+
+
+   .. py:method:: start() -> None
+      :abstractmethod:
+
+
+      Start the optimization loop.
+
+
+
+   .. py:method:: teardown() -> None
+
+      Tear down the environment.
+
+      Call it after the completion of the `.start()` in the scheduler context.
+
+
+
+   .. py:attribute:: environment
+
+
+   .. py:attribute:: experiment
+      :type:  Optional[mlos_bench.storage.base_storage.Storage.Experiment]
+      :value: None
+
+
+
+   .. py:attribute:: global_config
+
+
+   .. py:property:: max_trials
+      :type: int
+
+
+      Gets the maximum number of trials to run for a given experiment, or -1 for no
+      limit.
+
+
+   .. py:attribute:: optimizer
+
+
+   .. py:property:: ran_trials
+      :type: List[mlos_bench.storage.base_storage.Storage.Trial]
+
+
+      Get the list of trials that were run.
+
+
+   .. py:attribute:: storage
+
+
+   .. py:property:: trial_config_repeat_count
+      :type: int
+
+
+      Gets the number of trials to run for a given config.
+
+
+   .. py:property:: trial_count
+      :type: int
+
+
+      Gets the current number of trials run for the experiment.
+
+

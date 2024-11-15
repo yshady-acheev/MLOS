@@ -1,0 +1,481 @@
+mlos_bench.tunables.tunable
+===========================
+
+.. py:module:: mlos_bench.tunables.tunable
+
+.. autoapi-nested-parse::
+
+   Tunable parameter definition.
+
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   mlos_bench.tunables.tunable.DistributionName
+   mlos_bench.tunables.tunable.TunableValue
+   mlos_bench.tunables.tunable.TunableValueType
+   mlos_bench.tunables.tunable.TunableValueTypeName
+   mlos_bench.tunables.tunable.TunableValueTypeTuple
+   mlos_bench.tunables.tunable.TunableValuesDict
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   mlos_bench.tunables.tunable.DistributionDict
+   mlos_bench.tunables.tunable.Tunable
+   mlos_bench.tunables.tunable.TunableDict
+
+
+Module Contents
+---------------
+
+.. py:class:: DistributionDict
+
+   Bases: :py:obj:`TypedDict`
+
+
+   A typed dict for tunable parameters' distributions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+   .. py:attribute:: params
+      :type:  Optional[Dict[str, float]]
+
+
+   .. py:attribute:: type
+      :type:  DistributionName
+
+
+.. py:class:: Tunable(name: str, config: TunableDict)
+
+   A tunable parameter definition and its current value.
+
+   Create an instance of a new tunable parameter.
+
+   :param name: Human-readable identifier of the tunable parameter.
+   :type name: str
+   :param config: Python dict that represents a Tunable (e.g., deserialized from JSON)
+   :type config: dict
+
+
+   .. py:method:: __eq__(other: object) -> bool
+
+      Check if two Tunable objects are equal.
+
+      :param other: A tunable object to compare to.
+      :type other: Tunable
+
+      :returns: **is_equal** -- True if the Tunables correspond to the same parameter and have the same value and type.
+                NOTE: ranges and special values are not currently considered in the comparison.
+      :rtype: bool
+
+
+
+   .. py:method:: __lt__(other: object) -> bool
+
+      Compare the two Tunable objects. We mostly need this to create a canonical list
+      of tunable objects when hashing a TunableGroup.
+
+      :param other: A tunable object to compare to.
+      :type other: Tunable
+
+      :returns: **is_less** -- True if the current Tunable is less then the other one, False otherwise.
+      :rtype: bool
+
+
+
+   .. py:method:: __repr__() -> str
+
+      Produce a human-readable version of the Tunable (mostly for logging).
+
+      :returns: **string** -- A human-readable version of the Tunable.
+      :rtype: str
+
+
+
+   .. py:method:: copy() -> Tunable
+
+      Deep copy of the Tunable object.
+
+      :returns: **tunable** -- A new Tunable object that is a deep copy of the original one.
+      :rtype: Tunable
+
+
+
+   .. py:method:: in_range(value: Union[int, float, str, None]) -> bool
+
+      Check if the value is within the range of the tunable.
+
+      Do *NOT* check for special values. Return False if the tunable or value is
+      categorical or None.
+
+
+
+   .. py:method:: is_default() -> TunableValue
+
+      Checks whether the currently assigned value of the tunable is at its
+      default.
+
+
+
+   .. py:method:: is_valid(value: TunableValue) -> bool
+
+      Check if the value can be assigned to the tunable.
+
+      :param value: Value to validate.
+      :type value: Union[int, float, str]
+
+      :returns: **is_valid** -- True if the value is valid, False otherwise.
+      :rtype: bool
+
+
+
+   .. py:method:: update(value: TunableValue) -> bool
+
+      Assign the value to the tunable. Return True if it is a new value, False
+      otherwise.
+
+      :param value: Value to assign.
+      :type value: Union[int, float, str]
+
+      :returns: **is_updated** -- True if the new value is different from the previous one, False otherwise.
+      :rtype: bool
+
+
+
+   .. py:property:: cardinality
+      :type: Optional[int]
+
+
+      Gets the cardinality of elements in this tunable, or else None. (i.e., when the
+      tunable is continuous float and not quantized).
+
+      If the tunable has quantization set, this
+
+      :returns: **cardinality** -- Either the number of points in the tunable or else None.
+      :rtype: int
+
+
+   .. py:property:: categories
+      :type: List[Optional[str]]
+
+
+      Get the list of all possible values of a categorical tunable. Return None if the
+      tunable is not categorical.
+
+      :returns: **values** -- List of all possible values of a categorical tunable.
+      :rtype: List[str]
+
+
+   .. py:property:: category
+      :type: Optional[str]
+
+
+      Get the current value of the tunable as a string.
+
+
+   .. py:property:: default
+      :type: TunableValue
+
+
+      Get the default value of the tunable.
+
+
+   .. py:property:: distribution
+      :type: Optional[DistributionName]
+
+
+      Get the name of the distribution (uniform, normal, or beta) if specified.
+
+      :returns: **distribution** -- Name of the distribution (uniform, normal, or beta) or None.
+      :rtype: str
+
+
+   .. py:property:: distribution_params
+      :type: Dict[str, float]
+
+
+      Get the parameters of the distribution, if specified.
+
+      :returns: **distribution_params** -- Parameters of the distribution or None.
+      :rtype: Dict[str, float]
+
+
+   .. py:property:: dtype
+      :type: TunableValueType
+
+
+      Get the actual Python data type of the tunable.
+
+      This is useful for bulk conversions of the input data.
+
+      :returns: **dtype** -- Data type of the tunable - one of {int, float, str}.
+      :rtype: type
+
+
+   .. py:property:: is_categorical
+      :type: bool
+
+
+      Check if the tunable is categorical.
+
+      :returns: **is_categorical** -- True if the tunable is categorical, False otherwise.
+      :rtype: bool
+
+
+   .. py:property:: is_log
+      :type: Optional[bool]
+
+
+      Check if numeric tunable is log scale.
+
+      :returns: **log** -- True if numeric tunable is log scale, False if linear.
+      :rtype: bool
+
+
+   .. py:property:: is_numerical
+      :type: bool
+
+
+      Check if the tunable is an integer or float.
+
+      :returns: **is_int** -- True if the tunable is an integer or float, False otherwise.
+      :rtype: bool
+
+
+   .. py:property:: is_special
+      :type: bool
+
+
+      Check if the current value of the tunable is special.
+
+      :returns: **is_special** -- True if the current value of the tunable is special, False otherwise.
+      :rtype: bool
+
+
+   .. py:property:: meta
+      :type: Dict[str, Any]
+
+
+      Get the tunable's metadata.
+
+      This is a free-form dictionary that can be used to store any additional
+      information about the tunable (e.g., the unit information).
+
+
+   .. py:property:: name
+      :type: str
+
+
+      Get the name / string ID of the tunable.
+
+
+   .. py:property:: numerical_value
+      :type: Union[int, float]
+
+
+      Get the current value of the tunable as a number.
+
+
+   .. py:property:: quantization_bins
+      :type: Optional[int]
+
+
+      Get the number of quantization bins, if specified.
+
+      :returns: **quantization_bins** -- Number of quantization bins, or None.
+      :rtype: int | None
+
+
+   .. py:property:: quantized_values
+      :type: Optional[Union[Iterable[int], Iterable[float]]]
+
+
+      Get a sequence of quanitized values for this tunable.
+
+      :returns: If the Tunable is quantizable, returns a sequence of those elements,
+                else None (e.g., for unquantized float type tunables).
+      :rtype: Optional[Union[Iterable[int], Iterable[float]]]
+
+
+   .. py:property:: range
+      :type: Union[Tuple[int, int], Tuple[float, float]]
+
+
+      Get the range of the tunable if it is numerical, None otherwise.
+
+      :returns: **range** -- A 2-tuple of numbers that represents the range of the tunable.
+                Numbers can be int or float, depending on the type of the tunable.
+      :rtype: Union[Tuple[int, int], Tuple[float, float]]
+
+
+   .. py:property:: range_weight
+      :type: Optional[float]
+
+
+      Get weight of the range of the numeric tunable. Return None if there are no
+      weights or a tunable is categorical.
+
+      :returns: **weight** -- Weight of the range or None.
+      :rtype: float
+
+
+   .. py:property:: span
+      :type: Union[int, float]
+
+
+      Gets the span of the range.
+
+      Note: this does not take quantization into account.
+
+      :returns: (max - min) for numerical tunables.
+      :rtype: Union[int, float]
+
+
+   .. py:property:: special
+      :type: Union[List[int], List[float]]
+
+
+      Get the special values of the tunable. Return an empty list if there are none.
+
+      :returns: **special** -- A list of special values of the tunable. Can be empty.
+      :rtype: [int] | [float]
+
+
+   .. py:property:: type
+      :type: TunableValueTypeName
+
+
+      Get the data type of the tunable.
+
+      :returns: **type** -- Data type of the tunable - one of {'int', 'float', 'categorical'}.
+      :rtype: str
+
+
+   .. py:property:: value
+      :type: TunableValue
+
+
+      Get the current value of the tunable.
+
+
+   .. py:property:: values
+      :type: Optional[Union[Iterable[Optional[str]], Iterable[int], Iterable[float]]]
+
+
+      Gets the categories or quantized values for this tunable.
+
+      :returns: Categories or quantized values.
+      :rtype: Optional[Union[Iterable[Optional[str]], Iterable[int], Iterable[float]]]
+
+
+   .. py:property:: weights
+      :type: Optional[List[float]]
+
+
+      Get the weights of the categories or special values of the tunable. Return None
+      if there are none.
+
+      :returns: **weights** -- A list of weights or None.
+      :rtype: [float]
+
+
+.. py:class:: TunableDict
+
+   Bases: :py:obj:`TypedDict`
+
+
+   A typed dict for tunable parameters.
+
+   Mostly used for mypy type checking.
+
+   These are the types expected to be received from the json config.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+   .. py:attribute:: default
+      :type:  TunableValue
+
+
+   .. py:attribute:: description
+      :type:  Optional[str]
+
+
+   .. py:attribute:: distribution
+      :type:  Optional[DistributionDict]
+
+
+   .. py:attribute:: log
+      :type:  Optional[bool]
+
+
+   .. py:attribute:: meta
+      :type:  Dict[str, Any]
+
+
+   .. py:attribute:: quantization_bins
+      :type:  Optional[int]
+
+
+   .. py:attribute:: range
+      :type:  Optional[Union[Sequence[int], Sequence[float]]]
+
+
+   .. py:attribute:: range_weight
+      :type:  Optional[float]
+
+
+   .. py:attribute:: special
+      :type:  Optional[Union[List[int], List[float]]]
+
+
+   .. py:attribute:: special_weights
+      :type:  Optional[List[float]]
+
+
+   .. py:attribute:: type
+      :type:  TunableValueTypeName
+
+
+   .. py:attribute:: values
+      :type:  Optional[List[Optional[str]]]
+
+      Return an object providing a view on the dict's values.
+
+
+   .. py:attribute:: values_weights
+      :type:  Optional[List[float]]
+
+
+.. py:data:: DistributionName
+
+.. py:data:: TunableValue
+
+   Tunable value type.
+
+.. py:data:: TunableValueType
+
+   Tunable value type tuple.
+
+   For checking with isinstance()
+
+.. py:data:: TunableValueTypeName
+
+   Tunable values dictionary type.
+
+.. py:data:: TunableValueTypeTuple
+
+   The string name of a tunable value type.
+
+.. py:data:: TunableValuesDict
+
+   Tunable value distribution type.
+

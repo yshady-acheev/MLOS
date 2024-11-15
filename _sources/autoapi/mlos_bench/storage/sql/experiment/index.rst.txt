@@ -1,0 +1,91 @@
+mlos_bench.storage.sql.experiment
+=================================
+
+.. py:module:: mlos_bench.storage.sql.experiment
+
+.. autoapi-nested-parse::
+
+   :py:class:`.Storage.Experiment` interface implementation for saving and restoring
+   the benchmark experiment data using `SQLAlchemy <https://sqlalchemy.org>`_ backend.
+
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   mlos_bench.storage.sql.experiment.Experiment
+
+
+Module Contents
+---------------
+
+.. py:class:: Experiment(*, engine: sqlalchemy.engine.Engine, schema: mlos_bench.storage.sql.schema.DbSchema, tunables: mlos_bench.tunables.tunable_groups.TunableGroups, experiment_id: str, trial_id: int, root_env_config: str, description: str, opt_targets: Dict[str, Literal['min', 'max']])
+
+   Bases: :py:obj:`mlos_bench.storage.base_storage.Storage.Experiment`
+
+
+   Logic for retrieving and storing the results of a single experiment.
+
+
+   .. py:method:: load(last_trial_id: int = -1) -> Tuple[List[int], List[dict], List[Optional[Dict[str, Any]]], List[mlos_bench.environments.status.Status]]
+
+      Load (tunable values, benchmark scores, status) to warm-up the optimizer.
+
+      If `last_trial_id` is present, load only the data from the (completed) trials
+      that were scheduled *after* the given trial ID. Otherwise, return data from ALL
+      merged-in experiments and attempt to impute the missing tunable values.
+
+      :param last_trial_id: (Optional) Trial ID to start from.
+      :type last_trial_id: int
+
+      :returns: **(trial_ids, configs, scores, status)** -- Trial ids, Tunable values, benchmark scores, and status of the trials.
+      :rtype: ([int], [dict], [Optional[dict]], [Status])
+
+
+
+   .. py:method:: load_telemetry(trial_id: int) -> List[Tuple[datetime.datetime, str, Any]]
+
+      Retrieve the telemetry data for a given trial.
+
+      :param trial_id: Trial ID.
+      :type trial_id: int
+
+      :returns: **metrics** -- Telemetry data.
+      :rtype: List[Tuple[datetime.datetime, str, Any]]
+
+
+
+   .. py:method:: load_tunable_config(config_id: int) -> Dict[str, Any]
+
+      Load tunable values for a given config ID.
+
+
+
+   .. py:method:: merge(experiment_ids: List[str]) -> None
+
+      Merge in the results of other (compatible) experiments trials. Used to help
+      warm up the optimizer for this experiment.
+
+      :param experiment_ids: List of IDs of the experiments to merge in.
+      :type experiment_ids: List[str]
+
+
+
+   .. py:method:: pending_trials(timestamp: datetime.datetime, *, running: bool) -> Iterator[mlos_bench.storage.base_storage.Storage.Trial]
+
+      Return an iterator over the pending trials that are scheduled to run on or
+      before the specified timestamp.
+
+      :param timestamp: The time in UTC to check for scheduled trials.
+      :type timestamp: datetime.datetime
+      :param running: If True, include the trials that are already running.
+                      Otherwise, return only the scheduled trials.
+      :type running: bool
+
+      :returns: **trials** -- An iterator over the scheduled (and maybe running) trials.
+      :rtype: Iterator[Storage.Trial]
+
+
+

@@ -1,7 +1,0 @@
-mlos\_core.optimizers.optimizer module
-======================================
-
-.. automodule:: mlos_core.optimizers.optimizer
-   :members:
-   :undoc-members:
-   :show-inheritance:

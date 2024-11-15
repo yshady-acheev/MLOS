@@ -1,7 +1,0 @@
-mlos\_bench.services.types.config\_loader\_type module
-======================================================
-
-.. automodule:: mlos_bench.services.types.config_loader_type
-   :members:
-   :undoc-members:
-   :show-inheritance:

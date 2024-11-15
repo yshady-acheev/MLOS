@@ -1,0 +1,170 @@
+mlos_bench.storage.base_experiment_data
+=======================================
+
+.. py:module:: mlos_bench.storage.base_experiment_data
+
+.. autoapi-nested-parse::
+
+   Base interface for accessing the stored benchmark experiment data.
+
+   An experiment is a collection of trials that are run with a given set of scripts and
+   target system.
+
+   Each trial is associated with a configuration (e.g., set of tunable parameters), but
+   multiple trials may use the same config (e.g., for repeat run variability analysis).
+
+   .. seealso::
+
+      :obj:`ExperimentData.results_df`
+          Retrieves a pandas DataFrame of the Experiment's trials' results data.
+
+      :obj:`ExperimentData.trials`
+          Retrieves a dictionary of the Experiment's trials' data.
+
+      :obj:`ExperimentData.tunable_configs`
+          Retrieves a dictionary of the Experiment's sampled configs data.
+
+      :obj:`ExperimentData.tunable_config_trial_groups`
+          Retrieves a dictionary of the Experiment's trials' data, grouped by shared tunable config.
+
+      :obj:`mlos_bench.storage.base_trial_data.TrialData`
+          Base interface for accessing the stored benchmark trial data.
+
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   mlos_bench.storage.base_experiment_data.ExperimentData
+
+
+Module Contents
+---------------
+
+.. py:class:: ExperimentData(*, experiment_id: str, description: str, root_env_config: str, git_repo: str, git_commit: str)
+
+   Base interface for accessing the stored experiment benchmark data.
+
+   An experiment groups together a set of trials that are run with a given set of
+   scripts and mlos_bench configuration files.
+
+
+   .. py:method:: __repr__() -> str
+
+
+   .. py:attribute:: CONFIG_COLUMN_PREFIX
+      :value: 'config.'
+
+
+
+   .. py:attribute:: RESULT_COLUMN_PREFIX
+      :value: 'result.'
+
+
+
+   .. py:property:: default_tunable_config_id
+      :type: Optional[int]
+
+
+      Retrieves the (tunable) config id for the default tunable values for this
+      experiment.
+
+      Note: this is by *default* the first trial executed for this experiment.
+      However, it is currently possible that the user changed the tunables config
+      in between resumptions of an experiment.
+
+      :rtype: int
+
+
+   .. py:property:: description
+      :type: str
+
+
+      Description of the experiment.
+
+
+   .. py:property:: experiment_id
+      :type: str
+
+
+      ID of the experiment.
+
+
+   .. py:property:: objectives
+      :type: Dict[str, Literal['min', 'max']]
+
+      :abstractmethod:
+
+
+      Retrieve the experiment's objectives data from the storage.
+
+      :returns: **objectives** -- A dictionary of the experiment's objective names (optimization_targets)
+                and their directions (e.g., min or max).
+      :rtype: Dict[str, Literal["min", "max"]]
+
+
+   .. py:property:: results_df
+      :type: pandas.DataFrame
+
+      :abstractmethod:
+
+
+      Retrieve all experimental results as a single DataFrame.
+
+      :returns: **results** -- A DataFrame with configurations and results from all trials of the experiment.
+                Has columns
+                [trial_id, tunable_config_id, tunable_config_trial_group_id, ts_start, ts_end, status]
+                followed by tunable config parameters (prefixed with "config.") and
+                trial results (prefixed with "result."). The latter can be NULLs if the
+                trial was not successful.
+      :rtype: pandas.DataFrame
+
+
+   .. py:property:: root_env_config
+      :type: Tuple[str, str, str]
+
+
+      Root environment configuration.
+
+      :returns: **root_env_config** -- A tuple of (root_env_config, git_repo, git_commit) for the root environment.
+      :rtype: Tuple[str, str, str]
+
+
+   .. py:property:: trials
+      :type: Dict[int, mlos_bench.storage.base_trial_data.TrialData]
+
+      :abstractmethod:
+
+
+      Retrieve the experiment's trials' data from the storage.
+
+      :returns: **trials** -- A dictionary of the trials' data, keyed by trial id.
+      :rtype: Dict[int, TrialData]
+
+
+   .. py:property:: tunable_config_trial_groups
+      :type: Dict[int, mlos_bench.storage.base_tunable_config_trial_group_data.TunableConfigTrialGroupData]
+
+      :abstractmethod:
+
+
+      Retrieve the Experiment's (Tunable) Config Trial Group data from the storage.
+
+      :returns: **trials** -- A dictionary of the trials' data, keyed by (tunable) by config id.
+      :rtype: Dict[int, TunableConfigTrialGroupData]
+
+
+   .. py:property:: tunable_configs
+      :type: Dict[int, mlos_bench.storage.base_tunable_config_data.TunableConfigData]
+
+      :abstractmethod:
+
+
+      Retrieve the experiment's (tunable) configs' data from the storage.
+
+      :returns: **trials** -- A dictionary of the configs' data, keyed by (tunable) config id.
+      :rtype: Dict[int, TunableConfigData]
+
+

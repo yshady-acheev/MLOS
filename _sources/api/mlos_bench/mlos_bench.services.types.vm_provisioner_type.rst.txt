@@ -1,7 +1,0 @@
-mlos\_bench.services.types.vm\_provisioner\_type module
-=======================================================
-
-.. automodule:: mlos_bench.services.types.vm_provisioner_type
-   :members:
-   :undoc-members:
-   :show-inheritance:

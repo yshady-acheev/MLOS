@@ -1,0 +1,58 @@
+mlos_bench.optimizers.one_shot_optimizer
+========================================
+
+.. py:module:: mlos_bench.optimizers.one_shot_optimizer
+
+.. autoapi-nested-parse::
+
+   No-op optimizer for mlos_bench that proposes a single configuration.
+
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   mlos_bench.optimizers.one_shot_optimizer.OneShotOptimizer
+
+
+Module Contents
+---------------
+
+.. py:class:: OneShotOptimizer(tunables: mlos_bench.tunables.tunable_groups.TunableGroups, config: dict, global_config: Optional[dict] = None, service: Optional[mlos_bench.services.base_service.Service] = None)
+
+   Bases: :py:obj:`mlos_bench.optimizers.mock_optimizer.MockOptimizer`
+
+
+   No-op optimizer that proposes a single configuration and returns.
+
+   Explicit configs (partial or full) are possible using configuration files.
+
+   Create a new optimizer for the given configuration space defined by the
+   tunables.
+
+   :param tunables: The tunables to optimize.
+   :type tunables: TunableGroups
+   :param config: Free-format key/value pairs of configuration parameters to pass to the optimizer.
+   :type config: dict
+   :param global_config:
+   :type global_config: Optional[dict]
+   :param service:
+   :type service: Optional[Service]
+
+
+   .. py:method:: suggest() -> mlos_bench.tunables.tunable_groups.TunableGroups
+
+      Always produce the same (initial) suggestion.
+
+
+
+   .. py:property:: supports_preload
+      :type: bool
+
+
+      Return True if the optimizer supports pre-loading the data from previous
+      experiments.
+
+

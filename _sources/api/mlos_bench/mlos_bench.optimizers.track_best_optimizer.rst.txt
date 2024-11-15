@@ -1,7 +1,0 @@
-mlos\_bench.optimizers.track\_best\_optimizer module
-====================================================
-
-.. automodule:: mlos_bench.optimizers.track_best_optimizer
-   :members:
-   :undoc-members:
-   :show-inheritance:

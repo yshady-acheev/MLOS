@@ -1,0 +1,62 @@
+mlos_bench.schedulers.sync_scheduler
+====================================
+
+.. py:module:: mlos_bench.schedulers.sync_scheduler
+
+.. autoapi-nested-parse::
+
+   A simple single-threaded synchronous optimization loop implementation.
+
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   mlos_bench.schedulers.sync_scheduler.SyncScheduler
+
+
+Module Contents
+---------------
+
+.. py:class:: SyncScheduler(*, config: Dict[str, Any], global_config: Dict[str, Any], environment: mlos_bench.environments.base_environment.Environment, optimizer: mlos_bench.optimizers.base_optimizer.Optimizer, storage: mlos_bench.storage.base_storage.Storage, root_env_config: str)
+
+   Bases: :py:obj:`mlos_bench.schedulers.base_scheduler.Scheduler`
+
+
+   A simple single-threaded synchronous optimization loop implementation.
+
+   Create a new instance of the scheduler. The constructor of this and the derived
+   classes is called by the persistence service after reading the class JSON
+   configuration. Other objects like the Environment and Optimizer are provided by
+   the Launcher.
+
+   :param config: The configuration for the scheduler.
+   :type config: dict
+   :param global_config: he global configuration for the experiment.
+   :type global_config: dict
+   :param environment: The environment to benchmark/optimize.
+   :type environment: Environment
+   :param optimizer: The optimizer to use.
+   :type optimizer: Optimizer
+   :param storage: The storage to use.
+   :type storage: Storage
+   :param root_env_config: Path to the root environment configuration.
+   :type root_env_config: str
+
+
+   .. py:method:: run_trial(trial: mlos_bench.storage.base_storage.Storage.Trial) -> None
+
+      Set up and run a single trial.
+
+      Save the results in the storage.
+
+
+
+   .. py:method:: start() -> None
+
+      Start the optimization loop.
+
+
+

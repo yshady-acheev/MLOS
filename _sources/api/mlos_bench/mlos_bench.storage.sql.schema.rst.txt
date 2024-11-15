@@ -1,7 +1,0 @@
-mlos\_bench.storage.sql.schema module
-=====================================
-
-.. automodule:: mlos_bench.storage.sql.schema
-   :members:
-   :undoc-members:
-   :show-inheritance:

@@ -1,0 +1,62 @@
+mlos_core.util
+==============
+
+.. py:module:: mlos_core.util
+
+.. autoapi-nested-parse::
+
+   Internal helper functions for mlos_core package.
+
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   mlos_core.util.config_to_dataframe
+   mlos_core.util.drop_nulls
+   mlos_core.util.normalize_config
+
+
+Module Contents
+---------------
+
+.. py:function:: config_to_dataframe(config: ConfigSpace.Configuration) -> pandas.DataFrame
+
+   Converts a ConfigSpace config to a DataFrame.
+
+   :param config: The config to convert.
+   :type config: ConfigSpace.Configuration
+
+   :returns: A DataFrame with a single row, containing the config's parameters.
+   :rtype: pandas.DataFrame
+
+
+.. py:function:: drop_nulls(d: dict) -> dict
+
+   Remove all key-value pairs where the value is None.
+
+   :param d: The dictionary to clean.
+   :type d: dict
+
+   :returns: The cleaned dictionary.
+   :rtype: dict
+
+
+.. py:function:: normalize_config(config_space: ConfigSpace.ConfigurationSpace, config: Union[ConfigSpace.Configuration, dict]) -> ConfigSpace.Configuration
+
+   Convert a dictionary to a valid ConfigSpace configuration.
+
+   Some optimizers and adapters ignore ConfigSpace conditionals when proposing new
+   configurations. We have to manually remove inactive hyperparameters such suggestions.
+
+   :param config_space: The parameter space to use.
+   :type config_space: ConfigSpace.ConfigurationSpace
+   :param config: The configuration to convert.
+   :type config: dict
+
+   :returns: **cs_config** -- A valid ConfigSpace configuration with inactive parameters removed.
+   :rtype: ConfigSpace.Configuration
+
+

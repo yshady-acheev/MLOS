@@ -1,0 +1,344 @@
+mlos_bench.storage.base_storage
+===============================
+
+.. py:module:: mlos_bench.storage.base_storage
+
+.. autoapi-nested-parse::
+
+   Base interface for saving and restoring the benchmark data.
+
+   .. seealso::
+
+      :obj:`mlos_bench.storage.base_storage.Storage.experiments`
+          Retrieves a dictionary of the Experiments' data.
+
+      :obj:`mlos_bench.storage.base_experiment_data.ExperimentData.results_df`
+          Retrieves a pandas DataFrame of the Experiment's trials' results data.
+
+      :obj:`mlos_bench.storage.base_experiment_data.ExperimentData.trials`
+          Retrieves a dictionary of the Experiment's trials' data.
+
+      :obj:`mlos_bench.storage.base_experiment_data.ExperimentData.tunable_configs`
+          Retrieves a dictionary of the Experiment's sampled configs data.
+
+      :obj:`mlos_bench.storage.base_experiment_data.ExperimentData.tunable_config_trial_groups`
+          Retrieves a dictionary of the Experiment's trials' data, grouped by shared tunable config.
+
+      :obj:`mlos_bench.storage.base_trial_data.TrialData`
+          Base interface for accessing the stored benchmark trial data.
+
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   mlos_bench.storage.base_storage.Storage
+
+
+Module Contents
+---------------
+
+.. py:class:: Storage(config: Dict[str, Any], global_config: Optional[dict] = None, service: Optional[mlos_bench.services.base_service.Service] = None)
+
+   An abstract interface between the benchmarking framework and storage systems
+   (e.g., SQLite or MLFLow).
+
+   Create a new storage object.
+
+   :param config: Free-format key/value pairs of configuration parameters.
+   :type config: dict
+
+
+   .. py:class:: Experiment(*, tunables: mlos_bench.tunables.tunable_groups.TunableGroups, experiment_id: str, trial_id: int, root_env_config: str, description: str, opt_targets: Dict[str, Literal['min', 'max']])
+
+      Base interface for storing the results of the experiment.
+
+      This class is instantiated in the `Storage.experiment()` method.
+
+
+      .. py:method:: __enter__() -> Storage
+
+         Enter the context of the experiment.
+
+         Override the `_setup` method to add custom context initialization.
+
+
+
+      .. py:method:: __exit__(exc_type: Optional[Type[BaseException]], exc_val: Optional[BaseException], exc_tb: Optional[types.TracebackType]) -> Literal[False]
+
+         End the context of the experiment.
+
+         Override the `_teardown` method to add custom context teardown logic.
+
+
+
+      .. py:method:: __repr__() -> str
+
+
+      .. py:method:: load(last_trial_id: int = -1) -> Tuple[List[int], List[dict], List[Optional[Dict[str, Any]]], List[mlos_bench.environments.status.Status]]
+         :abstractmethod:
+
+
+         Load (tunable values, benchmark scores, status) to warm-up the optimizer.
+
+         If `last_trial_id` is present, load only the data from the (completed) trials
+         that were scheduled *after* the given trial ID. Otherwise, return data from ALL
+         merged-in experiments and attempt to impute the missing tunable values.
+
+         :param last_trial_id: (Optional) Trial ID to start from.
+         :type last_trial_id: int
+
+         :returns: **(trial_ids, configs, scores, status)** -- Trial ids, Tunable values, benchmark scores, and status of the trials.
+         :rtype: ([int], [dict], [Optional[dict]], [Status])
+
+
+
+      .. py:method:: load_telemetry(trial_id: int) -> List[Tuple[datetime.datetime, str, Any]]
+         :abstractmethod:
+
+
+         Retrieve the telemetry data for a given trial.
+
+         :param trial_id: Trial ID.
+         :type trial_id: int
+
+         :returns: **metrics** -- Telemetry data.
+         :rtype: List[Tuple[datetime.datetime, str, Any]]
+
+
+
+      .. py:method:: load_tunable_config(config_id: int) -> Dict[str, Any]
+         :abstractmethod:
+
+
+         Load tunable values for a given config ID.
+
+
+
+      .. py:method:: merge(experiment_ids: List[str]) -> None
+         :abstractmethod:
+
+
+         Merge in the results of other (compatible) experiments trials. Used to help
+         warm up the optimizer for this experiment.
+
+         :param experiment_ids: List of IDs of the experiments to merge in.
+         :type experiment_ids: List[str]
+
+
+
+      .. py:method:: new_trial(tunables: mlos_bench.tunables.tunable_groups.TunableGroups, ts_start: Optional[datetime.datetime] = None, config: Optional[Dict[str, Any]] = None) -> Storage
+
+         Create a new experiment run in the storage.
+
+         :param tunables: Tunable parameters to use for the trial.
+         :type tunables: TunableGroups
+         :param ts_start: Timestamp of the trial start (can be in the future).
+         :type ts_start: Optional[datetime.datetime]
+         :param config: Key/value pairs of additional non-tunable parameters of the trial.
+         :type config: dict
+
+         :returns: **trial** -- An object that allows to update the storage with
+                   the results of the experiment trial run.
+         :rtype: Storage.Trial
+
+
+
+      .. py:method:: pending_trials(timestamp: datetime.datetime, *, running: bool) -> Iterator[Storage]
+         :abstractmethod:
+
+
+         Return an iterator over the pending trials that are scheduled to run on or
+         before the specified timestamp.
+
+         :param timestamp: The time in UTC to check for scheduled trials.
+         :type timestamp: datetime.datetime
+         :param running: If True, include the trials that are already running.
+                         Otherwise, return only the scheduled trials.
+         :type running: bool
+
+         :returns: **trials** -- An iterator over the scheduled (and maybe running) trials.
+         :rtype: Iterator[Storage.Trial]
+
+
+
+      .. py:property:: description
+         :type: str
+
+
+         Get the Experiment's description.
+
+
+      .. py:property:: experiment_id
+         :type: str
+
+
+         Get the Experiment's ID.
+
+
+      .. py:property:: opt_targets
+         :type: Dict[str, Literal['min', 'max']]
+
+
+         Get the Experiment's optimization targets and directions.
+
+
+      .. py:property:: root_env_config
+         :type: str
+
+
+         Get the Experiment's root Environment config file path.
+
+
+      .. py:property:: trial_id
+         :type: int
+
+
+         Get the current Trial ID.
+
+
+      .. py:property:: tunables
+         :type: mlos_bench.tunables.tunable_groups.TunableGroups
+
+
+         Get the Experiment's tunables.
+
+
+
+   .. py:class:: Trial(*, tunables: mlos_bench.tunables.tunable_groups.TunableGroups, experiment_id: str, trial_id: int, tunable_config_id: int, opt_targets: Dict[str, Literal['min', 'max']], config: Optional[Dict[str, Any]] = None)
+
+      Base interface for storing the results of a single run of the experiment.
+
+      This class is instantiated in the `Storage.Experiment.trial()` method.
+
+
+      .. py:method:: __repr__() -> str
+
+
+      .. py:method:: config(global_config: Optional[Dict[str, Any]] = None) -> Dict[str, Any]
+
+         Produce a copy of the global configuration updated with the parameters of
+         the current trial.
+
+         Note: this is not the target Environment's "config" (i.e., tunable
+         params), but rather the internal "config" which consists of a
+         combination of somewhat more static variables defined in the json config
+         files.
+
+
+
+      .. py:method:: update(status: mlos_bench.environments.status.Status, timestamp: datetime.datetime, metrics: Optional[Dict[str, Any]] = None) -> Optional[Dict[str, Any]]
+         :abstractmethod:
+
+
+         Update the storage with the results of the experiment.
+
+         :param status: Status of the experiment run.
+         :type status: Status
+         :param timestamp: Timestamp of the status and metrics.
+         :type timestamp: datetime.datetime
+         :param metrics: One or several metrics of the experiment run.
+                         Must contain the (float) optimization target if the status is SUCCEEDED.
+         :type metrics: Optional[Dict[str, Any]]
+
+         :returns: **metrics** -- Same as `metrics`, but always in the dict format.
+         :rtype: Optional[Dict[str, Any]]
+
+
+
+      .. py:method:: update_telemetry(status: mlos_bench.environments.status.Status, timestamp: datetime.datetime, metrics: List[Tuple[datetime.datetime, str, Any]]) -> None
+         :abstractmethod:
+
+
+         Save the experiment's telemetry data and intermediate status.
+
+         :param status: Current status of the trial.
+         :type status: Status
+         :param timestamp: Timestamp of the status (but not the metrics).
+         :type timestamp: datetime.datetime
+         :param metrics: Telemetry data.
+         :type metrics: List[Tuple[datetime.datetime, str, Any]]
+
+
+
+      .. py:property:: opt_targets
+         :type: Dict[str, Literal['min', 'max']]
+
+
+         Get the Trial's optimization targets and directions.
+
+
+      .. py:property:: status
+         :type: mlos_bench.environments.status.Status
+
+
+         Get the status of the current trial.
+
+
+      .. py:property:: trial_id
+         :type: int
+
+
+         ID of the current trial.
+
+
+      .. py:property:: tunable_config_id
+         :type: int
+
+
+         ID of the current trial (tunable) configuration.
+
+
+      .. py:property:: tunables
+         :type: mlos_bench.tunables.tunable_groups.TunableGroups
+
+
+         Tunable parameters of the current trial.
+
+         (e.g., application Environment's "config")
+
+
+
+   .. py:method:: experiment(*, experiment_id: str, trial_id: int, root_env_config: str, description: str, tunables: mlos_bench.tunables.tunable_groups.TunableGroups, opt_targets: Dict[str, Literal['min', 'max']]) -> Storage
+      :abstractmethod:
+
+
+      Create a new experiment in the storage.
+
+      We need the `opt_target` parameter here to know what metric to retrieve
+      when we load the data from previous trials. Later we will replace it with
+      full metadata about the optimization direction, multiple objectives, etc.
+
+      :param experiment_id: Unique identifier of the experiment.
+      :type experiment_id: str
+      :param trial_id: Starting number of the trial.
+      :type trial_id: int
+      :param root_env_config: A path to the root JSON configuration file of the benchmarking environment.
+      :type root_env_config: str
+      :param description: Human-readable description of the experiment.
+      :type description: str
+      :param tunables:
+      :type tunables: TunableGroups
+      :param opt_targets: Names of metrics we're optimizing for and the optimization direction {min, max}.
+      :type opt_targets: Dict[str, Literal["min", "max"]]
+
+      :returns: **experiment** -- An object that allows to update the storage with
+                the results of the experiment and related data.
+      :rtype: Storage.Experiment
+
+
+
+   .. py:property:: experiments
+      :type: Dict[str, mlos_bench.storage.base_experiment_data.ExperimentData]
+
+      :abstractmethod:
+
+
+      Retrieve the experiments' data from the storage.
+
+      :returns: **experiments** -- A dictionary of the experiments' data, keyed by experiment id.
+      :rtype: Dict[str, ExperimentData]
+
+

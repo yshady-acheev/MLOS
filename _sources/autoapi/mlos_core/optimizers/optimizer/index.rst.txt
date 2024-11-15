@@ -1,0 +1,150 @@
+mlos_core.optimizers.optimizer
+==============================
+
+.. py:module:: mlos_core.optimizers.optimizer
+
+.. autoapi-nested-parse::
+
+   Contains the :py:class:`.BaseOptimizer` abstract class.
+
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   mlos_core.optimizers.optimizer.BaseOptimizer
+
+
+Module Contents
+---------------
+
+.. py:class:: BaseOptimizer(*, parameter_space: ConfigSpace.ConfigurationSpace, optimization_targets: List[str], objective_weights: Optional[List[float]] = None, space_adapter: Optional[mlos_core.spaces.adapters.adapter.BaseSpaceAdapter] = None)
+
+   Optimizer abstract base class defining the basic interface:
+   :py:meth:`~.BaseOptimizer.suggest`,
+   :py:meth:`~.BaseOptimizer.register`,
+
+   Create a new instance of the base optimizer.
+
+   :param parameter_space: The parameter space to optimize.
+   :type parameter_space: ConfigSpace.ConfigurationSpace
+   :param optimization_targets: The names of the optimization targets to minimize.
+                                To maximize a target, use the negative of the target when registering scores.
+   :type optimization_targets: List[str]
+   :param objective_weights: Optional list of weights of optimization targets.
+   :type objective_weights: Optional[List[float]]
+   :param space_adapter: The space adapter class to employ for parameter space transformations.
+   :type space_adapter: BaseSpaceAdapter
+
+
+   .. py:method:: __repr__() -> str
+
+
+   .. py:method:: cleanup() -> None
+
+      Remove temp files, release resources, etc.
+
+      after use. Default is no-op. Redefine this method in optimizers that require
+      cleanup.
+
+
+
+   .. py:method:: get_best_observations(*, n_max: int = 1) -> Tuple[pandas.DataFrame, pandas.DataFrame, Optional[pandas.DataFrame]]
+
+      Get the N best observations so far as a triplet of DataFrames (config, score,
+      context). Default is N=1. The columns are ordered in ASCENDING order of the
+      optimization targets. The function uses `pandas.DataFrame.nsmallest(...,
+      keep="first")` method under the hood.
+
+      :param n_max: Maximum number of best observations to return. Default is 1.
+      :type n_max: int
+
+      :returns: **observations** -- A triplet of best (config, score, context) DataFrames of best observations.
+      :rtype: Tuple[pandas.DataFrame, pandas.DataFrame, Optional[pandas.DataFrame]]
+
+
+
+   .. py:method:: get_observations() -> Tuple[pandas.DataFrame, pandas.DataFrame, Optional[pandas.DataFrame]]
+
+      Returns the observations as a triplet of DataFrames (config, score, context).
+
+      :returns: **observations** -- A triplet of (config, score, context) DataFrames of observations.
+      :rtype: Tuple[pandas.DataFrame, pandas.DataFrame, Optional[pandas.DataFrame]]
+
+
+
+   .. py:method:: register(*, configs: pandas.DataFrame, scores: pandas.DataFrame, context: Optional[pandas.DataFrame] = None, metadata: Optional[pandas.DataFrame] = None) -> None
+
+      Wrapper method, which employs the space adapter (if any), before registering the
+      configs and scores.
+
+      :param configs: Dataframe of configs / parameters. The columns are parameter names and
+                      the rows are the configs.
+      :type configs: pandas.DataFrame
+      :param scores: Scores from running the configs. The index is the same as the index of the configs.
+      :type scores: pandas.DataFrame
+      :param context: Not Yet Implemented.
+      :type context: pandas.DataFrame
+      :param metadata: Metadata returned by the backend optimizer's suggest method.
+      :type metadata: Optional[pandas.DataFrame]
+
+
+
+   .. py:method:: register_pending(*, configs: pandas.DataFrame, context: Optional[pandas.DataFrame] = None, metadata: Optional[pandas.DataFrame] = None) -> None
+      :abstractmethod:
+
+
+      Registers the given configs as "pending". That is it say, it has been suggested
+      by the optimizer, and an experiment trial has been started. This can be useful
+      for executing multiple trials in parallel, retry logic, etc.
+
+      :param configs: Dataframe of configs / parameters. The columns are parameter names and
+                      the rows are the configs.
+      :type configs: pandas.DataFrame
+      :param context: Not Yet Implemented.
+      :type context: pandas.DataFrame
+      :param metadata: Metadata returned by the backend optimizer's suggest method.
+      :type metadata: Optional[pandas.DataFrame]
+
+
+
+   .. py:method:: suggest(*, context: Optional[pandas.DataFrame] = None, defaults: bool = False) -> Tuple[pandas.DataFrame, Optional[pandas.DataFrame]]
+
+      Wrapper method, which employs the space adapter (if any), after suggesting a new
+      configuration.
+
+      :param context: Not Yet Implemented.
+      :type context: pandas.DataFrame
+      :param defaults: Whether or not to return the default config instead of an optimizer guided one.
+                       By default, use the one from the optimizer.
+      :type defaults: bool
+
+      :returns: * **configuration** (*pandas.DataFrame*) -- Pandas dataframe with a single row. Column names are the parameter names.
+                * **metadata** (*Optional[pandas.DataFrame]*) -- The metadata associated with the given configuration used for evaluations.
+                  Backend optimizer specific.
+
+
+
+   .. py:attribute:: optimizer_parameter_space
+      :type:  ConfigSpace.ConfigurationSpace
+
+      The parameter space actually used by the optimizer.
+
+      (in case a :py:mod:`SpaceAdapter <mlos_core.spaces.adapters>` is used)
+
+
+   .. py:attribute:: parameter_space
+      :type:  ConfigSpace.ConfigurationSpace
+
+      The parameter space to optimize.
+
+
+   .. py:property:: space_adapter
+      :type: Optional[mlos_core.spaces.adapters.adapter.BaseSpaceAdapter]
+
+
+      Get the space adapter instance (if any).
+
+

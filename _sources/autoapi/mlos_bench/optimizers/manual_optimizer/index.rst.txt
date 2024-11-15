@@ -1,0 +1,62 @@
+mlos_bench.optimizers.manual_optimizer
+======================================
+
+.. py:module:: mlos_bench.optimizers.manual_optimizer
+
+.. autoapi-nested-parse::
+
+   Manual config suggestor (Optimizer) for mlos_bench that proposes an explicit sequence of
+   configurations.
+
+   This is useful for testing and validation, as it allows you to run a sequence of
+   configurations in a cyclic fashion.
+
+   TODO: Add an example configuration.
+
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   mlos_bench.optimizers.manual_optimizer.ManualOptimizer
+
+
+Module Contents
+---------------
+
+.. py:class:: ManualOptimizer(tunables: mlos_bench.tunables.tunable_groups.TunableGroups, config: dict, global_config: Optional[dict] = None, service: Optional[mlos_bench.services.base_service.Service] = None)
+
+   Bases: :py:obj:`mlos_bench.optimizers.mock_optimizer.MockOptimizer`
+
+
+   Optimizer that proposes an explicit sequence of tunable values.
+
+   Create a new optimizer for the given configuration space defined by the
+   tunables.
+
+   :param tunables: The tunables to optimize.
+   :type tunables: TunableGroups
+   :param config: Free-format key/value pairs of configuration parameters to pass to the optimizer.
+   :type config: dict
+   :param global_config:
+   :type global_config: Optional[dict]
+   :param service:
+   :type service: Optional[Service]
+
+
+   .. py:method:: suggest() -> mlos_bench.tunables.tunable_groups.TunableGroups
+
+      Always produce the same sequence of explicit suggestions, in a cycle.
+
+
+
+   .. py:property:: supports_preload
+      :type: bool
+
+
+      Return True if the optimizer supports pre-loading the data from previous
+      experiments.
+
+

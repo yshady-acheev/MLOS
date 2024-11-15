@@ -64,8 +64,8 @@
             <a id="indexLink" class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
             <a id="nextFileLink" class="nav" href="z_94faf145c9e5d9d2_tunable_groups_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
-            <a class="nav" href="https://coverage.readthedocs.io/en/7.6.5">coverage.py v7.6.5</a>,
-            created at 2024-11-15 00:47 +0000
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.6.7">coverage.py v7.6.7</a>,
+            created at 2024-11-15 19:14 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -488,7 +488,7 @@
     <p class="pln"><span class="n"><a id="t406" href="#t406">406</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t407" href="#t407">407</a></span><span class="t">    <span class="op">@</span><span class="nam">property</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t408" href="#t408">408</a></span><span class="t">    <span class="key">def</span> <span class="nam">category</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span> <span class="op">-></span> <span class="nam">Optional</span><span class="op">[</span><span class="nam">str</span><span class="op">]</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t409" href="#t409">409</a></span><span class="t">        <span class="str">"""Get the current value of the tunable as a number."""</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t409" href="#t409">409</a></span><span class="t">        <span class="str">"""Get the current value of the tunable as a string."""</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t410" href="#t410">410</a></span><span class="t">        <span class="key">if</span> <span class="nam">self</span><span class="op">.</span><span class="nam">is_categorical</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t411" href="#t411">411</a></span><span class="t">            <span class="key">return</span> <span class="nam">nullable</span><span class="op">(</span><span class="nam">str</span><span class="op">,</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_current_value</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t412" href="#t412">412</a></span><span class="t">        <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
@@ -638,7 +638,7 @@
     <p class="pln"><span class="n"><a id="t556" href="#t556">556</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t557" href="#t557">557</a></span><span class="t"><span class="str">        Returns</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t558" href="#t558">558</a></span><span class="t"><span class="str">        -------</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t559" href="#t559">559</a></span><span class="t"><span class="str">        range : (number, number)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t559" href="#t559">559</a></span><span class="t"><span class="str">        range : Union[Tuple[int, int], Tuple[float, float]]</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t560" href="#t560">560</a></span><span class="t"><span class="str">            A 2-tuple of numbers that represents the range of the tunable.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t561" href="#t561">561</a></span><span class="t"><span class="str">            Numbers can be int or float, depending on the type of the tunable.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t562" href="#t562">562</a></span><span class="t"><span class="str">        """</span>&nbsp;</span><span class="r"></span></p>
@@ -813,8 +813,8 @@
             <a class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
             <a class="nav" href="z_94faf145c9e5d9d2_tunable_groups_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
-            <a class="nav" href="https://coverage.readthedocs.io/en/7.6.5">coverage.py v7.6.5</a>,
-            created at 2024-11-15 00:47 +0000
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.6.7">coverage.py v7.6.7</a>,
+            created at 2024-11-15 19:14 +0000
         </p>
     </div>
 </footer>

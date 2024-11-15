@@ -1,7 +1,0 @@
-mlos\_core.version module
-=========================
-
-.. automodule:: mlos_core.version
-   :members:
-   :undoc-members:
-   :show-inheritance:
