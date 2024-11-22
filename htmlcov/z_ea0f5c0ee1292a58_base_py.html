@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="z_ea0f5c0ee1292a58_dabl_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.7">coverage.py v7.6.7</a>,
-            created at 2024-11-22 00:46 +0000
+            created at 2024-11-22 01:18 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -152,7 +152,7 @@
     <p class="run"><span class="n"><a id="t70" href="#t70">70</a></span><span class="t">        <span class="nam">groupby_columns</span> <span class="op">=</span> <span class="op">[</span><span class="str">"tunable_config_trial_group_id"</span><span class="op">,</span> <span class="str">"tunable_config_id"</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t71" href="#t71">71</a></span><span class="t">    <span class="nam">groupby_column</span> <span class="op">=</span> <span class="str">","</span><span class="op">.</span><span class="nam">join</span><span class="op">(</span><span class="nam">groupby_columns</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t72" href="#t72">72</a></span><span class="t">    <span class="nam">results_df</span><span class="op">[</span><span class="nam">groupby_column</span><span class="op">]</span> <span class="op">=</span> <span class="op">(</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t73" href="#t73">73</a></span><span class="t">        <span class="nam">results_df</span><span class="op">[</span><span class="nam">groupby_columns</span><span class="op">]</span><span class="op">.</span><span class="nam">astype</span><span class="op">(</span><span class="nam">str</span><span class="op">)</span><span class="op">.</span><span class="nam">apply</span><span class="op">(</span><span class="key">lambda</span> <span class="nam">x</span><span class="op">:</span> <span class="str">","</span><span class="op">.</span><span class="nam">join</span><span class="op">(</span><span class="nam">x</span><span class="op">)</span><span class="op">,</span> <span class="nam">axis</span><span class="op">=</span><span class="num">1</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t73" href="#t73">73</a></span><span class="t">        <span class="nam">results_df</span><span class="op">[</span><span class="nam">groupby_columns</span><span class="op">]</span><span class="op">.</span><span class="nam">astype</span><span class="op">(</span><span class="nam">str</span><span class="op">)</span><span class="op">.</span><span class="nam">apply</span><span class="op">(</span><span class="str">","</span><span class="op">.</span><span class="nam">join</span><span class="op">,</span> <span class="nam">axis</span><span class="op">=</span><span class="num">1</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t74" href="#t74">74</a></span><span class="t">    <span class="op">)</span>  <span class="com"># pylint: disable=unnecessary-lambda</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t75" href="#t75">75</a></span><span class="t">    <span class="nam">groupby_columns</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="nam">groupby_column</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t76" href="#t76">76</a></span><span class="t">    <span class="key">return</span> <span class="op">(</span><span class="nam">results_df</span><span class="op">,</span> <span class="nam">groupby_columns</span><span class="op">,</span> <span class="nam">groupby_column</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -500,7 +500,7 @@
     <p class="pln"><span class="n"><a id="t418" href="#t418">418</a></span><span class="t">            <span class="key">else</span> <span class="str">""</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t419" href="#t419">419</a></span><span class="t">        <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t420" href="#t420">420</a></span><span class="t">        <span class="nam">plt</span><span class="op">.</span><span class="nam">grid</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t421" href="#t421">421</a></span><span class="t">        <span class="nam">plt</span><span class="op">.</span><span class="nam">show</span><span class="op">(</span><span class="op">)</span>  <span class="com"># type: ignore[no-untyped-call]</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t421" href="#t421">421</a></span><span class="t">        <span class="nam">plt</span><span class="op">.</span><span class="nam">show</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t422" href="#t422">422</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t423" href="#t423">423</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t424" href="#t424">424</a></span><span class="t"><span class="key">def</span> <span class="nam">plot_top_n_configs</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
@@ -578,7 +578,7 @@
     <p class="run"><span class="n"><a id="t496" href="#t496">496</a></span><span class="t">        <span class="nam">plt</span><span class="op">.</span><span class="nam">yscale</span><span class="op">(</span><span class="str">"log"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t497" href="#t497">497</a></span><span class="t">        <span class="nam">extra_title</span> <span class="op">=</span> <span class="str">"(lower is better)"</span> <span class="key">if</span> <span class="nam">ascending</span> <span class="key">else</span> <span class="str">"(lower is better)"</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t498" href="#t498">498</a></span><span class="t">        <span class="nam">plt</span><span class="op">.</span><span class="nam">title</span><span class="op">(</span><span class="fst">f"</span><span class="fst">Top </span><span class="op">{</span><span class="nam">top_n</span><span class="op">}</span><span class="fst"> configs </span><span class="op">{</span><span class="nam">opt_tgt</span><span class="op">}</span><span class="fst"> </span><span class="op">{</span><span class="nam">extra_title</span><span class="op">}</span><span class="fst">"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t499" href="#t499">499</a></span><span class="t">        <span class="nam">plt</span><span class="op">.</span><span class="nam">show</span><span class="op">(</span><span class="op">)</span>  <span class="com"># type: ignore[no-untyped-call]</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t499" href="#t499">499</a></span><span class="t">        <span class="nam">plt</span><span class="op">.</span><span class="nam">show</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
 </main>
 <footer>
     <div class="content">
@@ -588,7 +588,7 @@
             <a class="nav" href="z_ea0f5c0ee1292a58_dabl_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.7">coverage.py v7.6.7</a>,
-            created at 2024-11-22 00:46 +0000
+            created at 2024-11-22 01:18 +0000
         </p>
     </div>
 </footer>
