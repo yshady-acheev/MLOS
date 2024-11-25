@@ -51,79 +51,66 @@ Module Contents
 
 
 
-   .. py:method:: get_best_observations(*, n_max: int = 1) -> Tuple[pandas.DataFrame, pandas.DataFrame, Optional[pandas.DataFrame]]
+   .. py:method:: get_best_observations(n_max: int = 1) -> mlos_core.data_classes.Observations
 
-      Get the N best observations so far as a triplet of DataFrames (config, score,
-      context). Default is N=1. The columns are ordered in ASCENDING order of the
-      optimization targets. The function uses `pandas.DataFrame.nsmallest(...,
-      keep="first")` method under the hood.
+      Get the N best observations so far as a filtered version of Observations.
+      Default is N=1. The columns are ordered in ASCENDING order of the optimization
+      targets. The function uses `pandas.DataFrame.nsmallest(..., keep="first")`
+      method under the hood.
 
       :param n_max: Maximum number of best observations to return. Default is 1.
       :type n_max: int
 
-      :returns: **observations** -- A triplet of best (config, score, context) DataFrames of best observations.
-      :rtype: Tuple[pandas.DataFrame, pandas.DataFrame, Optional[pandas.DataFrame]]
+      :returns: **observations** -- A filtered version of Observations with the best N observations.
+      :rtype: Observations
 
 
 
-   .. py:method:: get_observations() -> Tuple[pandas.DataFrame, pandas.DataFrame, Optional[pandas.DataFrame]]
+   .. py:method:: get_observations() -> mlos_core.data_classes.Observations
 
       Returns the observations as a triplet of DataFrames (config, score, context).
 
-      :returns: **observations** -- A triplet of (config, score, context) DataFrames of observations.
-      :rtype: Tuple[pandas.DataFrame, pandas.DataFrame, Optional[pandas.DataFrame]]
+      :returns: **observations** -- All the observations registered so far.
+      :rtype: Observations
 
 
 
-   .. py:method:: register(*, configs: pandas.DataFrame, scores: pandas.DataFrame, context: Optional[pandas.DataFrame] = None, metadata: Optional[pandas.DataFrame] = None) -> None
+   .. py:method:: register(observations: Union[mlos_core.data_classes.Observation, mlos_core.data_classes.Observations]) -> None
 
-      Wrapper method, which employs the space adapter (if any), before registering the
-      configs and scores.
+      Register all observations at once. Exactly one of observations or observation
+      must be provided.
 
-      :param configs: Dataframe of configs / parameters. The columns are parameter names and
-                      the rows are the configs.
-      :type configs: pandas.DataFrame
-      :param scores: Scores from running the configs. The index is the same as the index of the configs.
-      :type scores: pandas.DataFrame
-      :param context: Not Yet Implemented.
-      :type context: pandas.DataFrame
-      :param metadata: Metadata returned by the backend optimizer's suggest method.
-      :type metadata: Optional[pandas.DataFrame]
+      :param observations: The observations to register.
+      :type observations: Optional[Union[Observation, Observations]]
 
 
 
-   .. py:method:: register_pending(*, configs: pandas.DataFrame, context: Optional[pandas.DataFrame] = None, metadata: Optional[pandas.DataFrame] = None) -> None
+   .. py:method:: register_pending(pending: mlos_core.data_classes.Suggestion) -> None
       :abstractmethod:
 
 
-      Registers the given configs as "pending". That is it say, it has been suggested
-      by the optimizer, and an experiment trial has been started. This can be useful
-      for executing multiple trials in parallel, retry logic, etc.
+      Registers the given suggestion as "pending". That is it say, it has been
+      suggested by the optimizer, and an experiment trial has been started. This can
+      be useful for executing multiple trials in parallel, retry logic, etc.
 
-      :param configs: Dataframe of configs / parameters. The columns are parameter names and
-                      the rows are the configs.
-      :type configs: pandas.DataFrame
-      :param context: Not Yet Implemented.
-      :type context: pandas.DataFrame
-      :param metadata: Metadata returned by the backend optimizer's suggest method.
-      :type metadata: Optional[pandas.DataFrame]
+      :param pending: The pending suggestion to register.
+      :type pending: Suggestion
 
 
 
-   .. py:method:: suggest(*, context: Optional[pandas.DataFrame] = None, defaults: bool = False) -> Tuple[pandas.DataFrame, Optional[pandas.DataFrame]]
+   .. py:method:: suggest(*, context: Optional[pandas.Series] = None, defaults: bool = False) -> mlos_core.data_classes.Suggestion
 
       Wrapper method, which employs the space adapter (if any), after suggesting a new
       configuration.
 
       :param context: Not Yet Implemented.
-      :type context: pandas.DataFrame
+      :type context: pandas.Series
       :param defaults: Whether or not to return the default config instead of an optimizer guided one.
                        By default, use the one from the optimizer.
       :type defaults: bool
 
-      :returns: * **configuration** (*pandas.DataFrame*) -- Pandas dataframe with a single row. Column names are the parameter names.
-                * **metadata** (*Optional[pandas.DataFrame]*) -- The metadata associated with the given configuration used for evaluations.
-                  Backend optimizer specific.
+      :returns: **suggestion** -- The suggested point to evaluate.
+      :rtype: Suggestion
 
 
 

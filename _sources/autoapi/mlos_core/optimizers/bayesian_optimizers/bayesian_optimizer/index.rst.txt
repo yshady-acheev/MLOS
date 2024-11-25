@@ -40,33 +40,27 @@ Module Contents
    :type space_adapter: BaseSpaceAdapter
 
 
-   .. py:method:: acquisition_function(*, configs: pandas.DataFrame, context: Optional[pandas.DataFrame] = None) -> numpy.typing.NDArray
+   .. py:method:: acquisition_function(suggestion: mlos_core.data_classes.Suggestion) -> numpy.typing.NDArray
       :abstractmethod:
 
 
       Invokes the acquisition function from this Bayesian optimizer for the given
       configuration.
 
-      :param configs: Dataframe of configs / parameters. The columns are parameter names and
-                      the rows are the configs.
-      :type configs: pandas.DataFrame
-      :param context: Not Yet Implemented.
-      :type context: pandas.DataFrame
+      :param suggestion: The suggestion containing the configuration(s) to evaluate.
+      :type suggestion: Suggestion
 
 
 
-   .. py:method:: surrogate_predict(*, configs: pandas.DataFrame, context: Optional[pandas.DataFrame] = None) -> numpy.typing.NDArray
+   .. py:method:: surrogate_predict(suggestion: mlos_core.data_classes.Suggestion) -> numpy.typing.NDArray
       :abstractmethod:
 
 
       Obtain a prediction from this Bayesian optimizer's surrogate model for the given
       configuration(s).
 
-      :param configs: Dataframe of configs / parameters. The columns are parameter names and
-                      the rows are the configs.
-      :type configs: pandas.DataFrame
-      :param context: Not Yet Implemented.
-      :type context: pandas.DataFrame
+      :param suggestion: The suggestion containing the configuration(s) to predict.
+      :type suggestion: Suggestion
 
 
 

@@ -14,7 +14,9 @@ Functions
 
 .. autoapisummary::
 
-   mlos_core.util.config_to_dataframe
+   mlos_core.util.compare_optional_dataframe
+   mlos_core.util.compare_optional_series
+   mlos_core.util.config_to_series
    mlos_core.util.drop_nulls
    mlos_core.util.normalize_config
 
@@ -22,15 +24,41 @@ Functions
 Module Contents
 ---------------
 
-.. py:function:: config_to_dataframe(config: ConfigSpace.Configuration) -> pandas.DataFrame
+.. py:function:: compare_optional_dataframe(left: Optional[pandas.DataFrame], right: Optional[pandas.DataFrame]) -> bool
 
-   Converts a ConfigSpace config to a DataFrame.
+   Compare DataFrames that may also be None.
+
+   :param left: The left DataFrame to compare
+   :type left: Optional[pandas.DataFrame]
+   :param right: The right DataFrame to compare
+   :type right: Optional[pandas.DataFrame]
+
+   :returns: Compare the equality of two Optional[pd.DataFrame] objects
+   :rtype: bool
+
+
+.. py:function:: compare_optional_series(left: Optional[pandas.Series], right: Optional[pandas.Series]) -> bool
+
+   Compare Series that may also be None.
+
+   :param left: The left Series to compare
+   :type left: Optional[pandas.Series]
+   :param right: The right Series to compare
+   :type right: Optional[pandas.Series]
+
+   :returns: Compare the equality of two Optional[pd.Series] objects
+   :rtype: bool
+
+
+.. py:function:: config_to_series(config: ConfigSpace.Configuration) -> pandas.Series
+
+   Converts a ConfigSpace config to a Series.
 
    :param config: The config to convert.
    :type config: ConfigSpace.Configuration
 
-   :returns: A DataFrame with a single row, containing the config's parameters.
-   :rtype: pandas.DataFrame
+   :returns: A Series, containing the config's parameters.
+   :rtype: pandas.Series
 
 
 .. py:function:: drop_nulls(d: dict) -> dict

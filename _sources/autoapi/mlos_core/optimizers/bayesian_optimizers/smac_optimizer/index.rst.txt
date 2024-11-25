@@ -77,16 +77,13 @@ Module Contents
    .. py:method:: __del__() -> None
 
 
-   .. py:method:: acquisition_function(*, configs: pandas.DataFrame, context: Optional[pandas.DataFrame] = None) -> numpy.typing.NDArray
+   .. py:method:: acquisition_function(suggestion: mlos_core.data_classes.Suggestion) -> numpy.typing.NDArray
 
       Invokes the acquisition function from this Bayesian optimizer for the given
       configuration.
 
-      :param configs: Dataframe of configs / parameters. The columns are parameter names and
-                      the rows are the configs.
-      :type configs: pandas.DataFrame
-      :param context: Not Yet Implemented.
-      :type context: pandas.DataFrame
+      :param suggestion: The suggestion containing the configuration(s) to evaluate.
+      :type suggestion: Suggestion
 
 
 
@@ -99,34 +96,26 @@ Module Contents
 
 
 
-   .. py:method:: register_pending(*, configs: pandas.DataFrame, context: Optional[pandas.DataFrame] = None, metadata: Optional[pandas.DataFrame] = None) -> None
+   .. py:method:: register_pending(pending: mlos_core.data_classes.Suggestion) -> None
       :abstractmethod:
 
 
-      Registers the given configs as "pending". That is it say, it has been suggested
-      by the optimizer, and an experiment trial has been started. This can be useful
-      for executing multiple trials in parallel, retry logic, etc.
+      Registers the given suggestion as "pending". That is it say, it has been
+      suggested by the optimizer, and an experiment trial has been started. This can
+      be useful for executing multiple trials in parallel, retry logic, etc.
 
-      :param configs: Dataframe of configs / parameters. The columns are parameter names and
-                      the rows are the configs.
-      :type configs: pandas.DataFrame
-      :param context: Not Yet Implemented.
-      :type context: pandas.DataFrame
-      :param metadata: Metadata returned by the backend optimizer's suggest method.
-      :type metadata: Optional[pandas.DataFrame]
+      :param pending: The pending suggestion to register.
+      :type pending: Suggestion
 
 
 
-   .. py:method:: surrogate_predict(*, configs: pandas.DataFrame, context: Optional[pandas.DataFrame] = None) -> numpy.typing.NDArray
+   .. py:method:: surrogate_predict(suggestion: mlos_core.data_classes.Suggestion) -> numpy.typing.NDArray
 
       Obtain a prediction from this Bayesian optimizer's surrogate model for the given
       configuration(s).
 
-      :param configs: Dataframe of configs / parameters. The columns are parameter names and
-                      the rows are the configs.
-      :type configs: pandas.DataFrame
-      :param context: Not Yet Implemented.
-      :type context: pandas.DataFrame
+      :param suggestion: The suggestion containing the configuration(s) to predict.
+      :type suggestion: Suggestion
 
 
 

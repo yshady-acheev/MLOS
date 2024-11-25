@@ -49,7 +49,7 @@ Module Contents
    :type max_unique_values_per_param: Optional[int]
 
 
-   .. py:method:: inverse_transform(configurations: pandas.DataFrame) -> pandas.DataFrame
+   .. py:method:: inverse_transform(configuration: pandas.Series) -> pandas.Series
 
       Translates a configuration, which belongs to the original parameter space, to
       the target parameter space. This method is called by the `register` method of
@@ -57,32 +57,32 @@ Module Contents
       performs the inverse operation of :py:meth:`~.BaseSpaceAdapter.transform`
       method.
 
-      :param configurations: Dataframe of configurations / parameters, which belong to the original parameter space.
-                             The columns are the parameter names the original parameter space and the
-                             rows are the configurations.
-      :type configurations: pandas.DataFrame
+      :param configuration: A Series of configuration parameters, which belong to the original parameter space.
+                            The indices are the parameter names the original parameter space and the
+                            rows are the configurations.
+      :type configuration: pandas.Series
 
-      :returns: **configurations** -- Dataframe of the translated configurations / parameters.
-                The columns are the parameter names of the target parameter space and
+      :returns: **configuration** -- Series of the translated configurations / parameters.
+                The indices are the parameter names of the target parameter space and
                 the rows are the configurations.
-      :rtype: pandas.DataFrame
+      :rtype: pandas.Series
 
 
 
-   .. py:method:: transform(configuration: pandas.DataFrame) -> pandas.DataFrame
+   .. py:method:: transform(configuration: pandas.Series) -> pandas.Series
 
       Translates a configuration, which belongs to the target parameter space, to the
       original parameter space. This method is called by the
       :py:meth:`~mlos_core.optimizers.optimizer.BaseOptimizer.suggest` method of the
       :py:class:`~mlos_core.optimizers.optimizer.BaseOptimizer` class.
 
-      :param configuration: Pandas dataframe with a single row. Column names are the parameter names
+      :param configuration: Pandas series. Column names are the parameter names
                             of the target parameter space.
-      :type configuration: pandas.DataFrame
+      :type configuration: pandas.Series
 
-      :returns: **configuration** -- Pandas dataframe with a single row, containing the translated configuration.
+      :returns: **configuration** -- Pandas series, containing the translated configuration.
                 Column names are the parameter names of the original parameter space.
-      :rtype: pandas.DataFrame
+      :rtype: pandas.Series
 
 
 

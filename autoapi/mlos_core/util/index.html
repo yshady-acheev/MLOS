@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_core.util &mdash; MLOS 0.6.2.dev30+g644a718453 documentation</title>
+  <title>mlos_core.util &mdash; MLOS 0.6.2.dev31+gb66e1347ad documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
@@ -15,7 +15,7 @@
   
       <script src="../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../_static/documentation_options.js?v=4749105e"></script>
+      <script src="../../../_static/documentation_options.js?v=3f39c07a"></script>
       <script src="../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -55,6 +55,7 @@
 <p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">mlos_core</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../data_classes/index.html">mlos_core.data_classes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../optimizers/index.html">mlos_core.optimizers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../spaces/index.html">mlos_core.spaces</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">mlos_core.util</a></li>
@@ -105,8 +106,14 @@
 <h2>Functions<a class="headerlink" href="#functions" title="Link to this heading"></a></h2>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_core.util.config_to_dataframe" title="mlos_core.util.config_to_dataframe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">config_to_dataframe</span></code></a>(→ pandas.DataFrame)</p></td>
-<td><p>Converts a ConfigSpace config to a DataFrame.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_core.util.compare_optional_dataframe" title="mlos_core.util.compare_optional_dataframe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compare_optional_dataframe</span></code></a>(→ bool)</p></td>
+<td><p>Compare DataFrames that may also be None.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mlos_core.util.compare_optional_series" title="mlos_core.util.compare_optional_series"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compare_optional_series</span></code></a>(→ bool)</p></td>
+<td><p>Compare Series that may also be None.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_core.util.config_to_series" title="mlos_core.util.config_to_series"><code class="xref py py-obj docutils literal notranslate"><span class="pre">config_to_series</span></code></a>(→ pandas.Series)</p></td>
+<td><p>Converts a ConfigSpace config to a Series.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#mlos_core.util.drop_nulls" title="mlos_core.util.drop_nulls"><code class="xref py py-obj docutils literal notranslate"><span class="pre">drop_nulls</span></code></a>(→ dict)</p></td>
 <td><p>Remove all key-value pairs where the value is None.</p></td>
@@ -120,18 +127,58 @@
 <section id="module-contents">
 <h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="mlos_core.util.config_to_dataframe">
-<span class="sig-prename descclassname"><span class="pre">mlos_core.util.</span></span><span class="sig-name descname"><span class="pre">config_to_dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://automl.github.io/ConfigSpace/latest/api/ConfigSpace/configuration/#ConfigSpace.configuration.Configuration" title="(in ConfigSpace v0.0.0)"><span class="pre">ConfigSpace.Configuration</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.2.3)"><span class="pre">pandas.DataFrame</span></a></span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_core/mlos_core/util.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_core.util.config_to_dataframe" title="Link to this definition"></a></dt>
-<dd><p>Converts a ConfigSpace config to a DataFrame.</p>
+<dt class="sig sig-object py" id="mlos_core.util.compare_optional_dataframe">
+<span class="sig-prename descclassname"><span class="pre">mlos_core.util.</span></span><span class="sig-name descname"><span class="pre">compare_optional_dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">left</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.2.3)"><span class="pre">pandas.DataFrame</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">right</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.2.3)"><span class="pre">pandas.DataFrame</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_core/mlos_core/util.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_core.util.compare_optional_dataframe" title="Link to this definition"></a></dt>
+<dd><p>Compare DataFrames that may also be None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>left</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.2.3)"><em>pandas.DataFrame</em></a><em>]</em>) – The left DataFrame to compare</p></li>
+<li><p><strong>right</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.2.3)"><em>pandas.DataFrame</em></a><em>]</em>) – The right DataFrame to compare</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Compare the equality of two Optional[pd.DataFrame] objects</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mlos_core.util.compare_optional_series">
+<span class="sig-prename descclassname"><span class="pre">mlos_core.util.</span></span><span class="sig-name descname"><span class="pre">compare_optional_series</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">left</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.Series.html#pandas.Series" title="(in pandas v2.2.3)"><span class="pre">pandas.Series</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">right</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.Series.html#pandas.Series" title="(in pandas v2.2.3)"><span class="pre">pandas.Series</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_core/mlos_core/util.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_core.util.compare_optional_series" title="Link to this definition"></a></dt>
+<dd><p>Compare Series that may also be None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>left</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.Series.html#pandas.Series" title="(in pandas v2.2.3)"><em>pandas.Series</em></a><em>]</em>) – The left Series to compare</p></li>
+<li><p><strong>right</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.Series.html#pandas.Series" title="(in pandas v2.2.3)"><em>pandas.Series</em></a><em>]</em>) – The right Series to compare</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Compare the equality of two Optional[pd.Series] objects</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mlos_core.util.config_to_series">
+<span class="sig-prename descclassname"><span class="pre">mlos_core.util.</span></span><span class="sig-name descname"><span class="pre">config_to_series</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://automl.github.io/ConfigSpace/latest/api/ConfigSpace/configuration/#ConfigSpace.configuration.Configuration" title="(in ConfigSpace v0.0.0)"><span class="pre">ConfigSpace.Configuration</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.Series.html#pandas.Series" title="(in pandas v2.2.3)"><span class="pre">pandas.Series</span></a></span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_core/mlos_core/util.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_core.util.config_to_series" title="Link to this definition"></a></dt>
+<dd><p>Converts a ConfigSpace config to a Series.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>config</strong> (<a class="reference external" href="https://automl.github.io/ConfigSpace/latest/api/ConfigSpace/configuration/#ConfigSpace.configuration.Configuration" title="(in ConfigSpace v0.0.0)"><em>ConfigSpace.Configuration</em></a>) – The config to convert.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A DataFrame with a single row, containing the config’s parameters.</p>
+<dd class="field-even"><p>A Series, containing the config’s parameters.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.2.3)">pandas.DataFrame</a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.Series.html#pandas.Series" title="(in pandas v2.2.3)">pandas.Series</a></p>
 </dd>
 </dl>
 </dd></dl>
