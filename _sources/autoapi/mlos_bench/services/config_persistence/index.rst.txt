@@ -258,6 +258,8 @@ Module Contents
 
 
    .. py:attribute:: BUILTIN_CONFIG_PATH
+      :value: ''
+
 
 
    .. py:property:: config_paths

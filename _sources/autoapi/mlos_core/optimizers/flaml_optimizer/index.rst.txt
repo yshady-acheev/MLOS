@@ -90,5 +90,7 @@ Module Contents
 
 
    .. py:attribute:: low_cost_partial_config
+      :value: None
+
 
 
