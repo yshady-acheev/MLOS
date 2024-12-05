@@ -71,6 +71,8 @@ Module Contents
                 trial was not successful.
       :rtype: pandas.DataFrame
 
+      .. seealso:: :py:attr:`.ExperimentData.CONFIG_COLUMN_PREFIX`, :py:attr:`.ExperimentData.RESULT_COLUMN_PREFIX`
+
 
    .. py:property:: trials
       :type: Dict[int, mlos_bench.storage.base_trial_data.TrialData]

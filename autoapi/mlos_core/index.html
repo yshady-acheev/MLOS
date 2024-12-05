@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_core &mdash; MLOS 0.6.2.dev32+gc9fa067026 documentation</title>
+  <title>mlos_core &mdash; MLOS 0.6.2.dev33+geb755b90e7 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
@@ -15,7 +15,7 @@
   
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../_static/documentation_options.js?v=d5ce53e8"></script>
+      <script src="../../_static/documentation_options.js?v=3fc5050a"></script>
       <script src="../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -55,11 +55,26 @@
 <p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">mlos_core</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="data_classes/index.html">mlos_core.data_classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="optimizers/index.html">mlos_core.optimizers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spaces/index.html">mlos_core.spaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="util/index.html">mlos_core.util</a></li>
-<li class="toctree-l2"><a class="reference internal" href="version/index.html">mlos_core.version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-classes">Data Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#spaces">Spaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#space-adapters">Space Adapters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#classes-overview">Classes Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="data_classes/index.html">mlos_core.data_classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimizers/index.html">mlos_core.optimizers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="spaces/index.html">mlos_core.spaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="util/index.html">mlos_core.util</a></li>
+<li class="toctree-l3"><a class="reference internal" href="version/index.html">mlos_core.version</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#attributes">Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#package-contents">Package Contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#mlos_core.__version__"><code class="docutils literal notranslate"><span class="pre">__version__</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../mlos_bench/index.html">mlos_bench</a></li>
@@ -99,20 +114,105 @@
            <div itemprop="articleBody">
              
   <section id="module-mlos_core">
-<span id="mlos-core"></span><h1>mlos_core<a class="headerlink" href="#module-mlos_core" title="Link to this heading"></a></h1>
+<span id="mlos-core"></span><h1><a class="toc-backref" href="#id1" role="doc-backlink">mlos_core</a><a class="headerlink" href="#module-mlos_core" title="Link to this heading"></a></h1>
 <p>mlos_core is a wrapper around other OSS tuning libraries to provide a consistent
 interface for autotuning experimentation.</p>
+<p><code class="docutils literal notranslate"><span class="pre">mlos_core</span></code> focuses on the optimization portion of the autotuning process.</p>
+<nav class="contents" id="table-of-contents">
+<p class="topic-title">Table of Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#module-mlos_core" id="id1">mlos_core</a></p>
+<ul>
+<li><p><a class="reference internal" href="#overview" id="id2">Overview</a></p></li>
+<li><p><a class="reference internal" href="#data-classes" id="id3">Data Classes</a></p></li>
+<li><p><a class="reference internal" href="#spaces" id="id4">Spaces</a></p>
+<ul>
+<li><p><a class="reference internal" href="#space-adapters" id="id5">Space Adapters</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#classes-overview" id="id6">Classes Overview</a></p></li>
+<li><p><a class="reference internal" href="#submodules" id="id7">Submodules</a></p></li>
+<li><p><a class="reference internal" href="#attributes" id="id8">Attributes</a></p></li>
+<li><p><a class="reference internal" href="#package-contents" id="id9">Package Contents</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="overview">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Overview</a><a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
 <p><a class="reference internal" href="#module-mlos_core" title="mlos_core"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core</span></code></a> can be installed from <a class="reference external" href="https://pypi.org/project/mlos-core">pypi</a>
 with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">mlos-core</span></code> from and provides the main
 <a class="reference internal" href="optimizers/index.html#module-mlos_core.optimizers" title="mlos_core.optimizers"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Optimizer</span></code></a> portions of the MLOS project for use with
 autotuning purposes.
 Although it is generally intended to be used with <a class="reference internal" href="../mlos_bench/index.html#module-mlos_bench" title="mlos_bench"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench</span></code></a> to help
-automate the generation of <code class="docutils literal notranslate"><span class="pre">(config,</span> <span class="pre">score)</span></code> pairs to register with the Optimizer,
-it can be used independently as well.</p>
-<p>To do this it provides a small set of wrapper classes around other OSS tuning
-libraries in order to provide a consistent interface so that the rest of the code
-using it can easily exchange one optimizer for another (or even stack them).</p>
-<p>Specifically:</p>
+automate the generation of <code class="docutils literal notranslate"><span class="pre">(config,</span> <span class="pre">score)</span></code> pairs (which we call
+<a class="reference internal" href="data_classes/index.html#mlos_core.data_classes.Observations" title="mlos_core.data_classes.Observations"><code class="xref py py-class docutils literal notranslate"><span class="pre">Observations</span></code></a>) to
+<a class="reference internal" href="optimizers/optimizer/index.html#mlos_core.optimizers.optimizer.BaseOptimizer.register" title="mlos_core.optimizers.optimizer.BaseOptimizer.register"><code class="xref py py-meth docutils literal notranslate"><span class="pre">register()</span></code></a> with the
+Optimizer, it can be used independently as well.
+In that case, a <a class="reference internal" href="data_classes/index.html#mlos_core.data_classes.Suggestion" title="mlos_core.data_classes.Suggestion"><code class="xref py py-class docutils literal notranslate"><span class="pre">Suggestion</span></code></a> is returned from a
+<a class="reference internal" href="optimizers/optimizer/index.html#mlos_core.optimizers.optimizer.BaseOptimizer.suggest" title="mlos_core.optimizers.optimizer.BaseOptimizer.suggest"><code class="xref py py-meth docutils literal notranslate"><span class="pre">suggest()</span></code></a> call.
+The caller is expected to score the associated config manually (or provide a
+historical value) and <a class="reference internal" href="data_classes/index.html#mlos_core.data_classes.Suggestion.complete" title="mlos_core.data_classes.Suggestion.complete"><code class="xref py py-meth docutils literal notranslate"><span class="pre">complete()</span></code></a> it
+convert it to an <a class="reference internal" href="data_classes/index.html#mlos_core.data_classes.Observation" title="mlos_core.data_classes.Observation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Observation</span></code></a> that can be
+registered with the Optimizer before repeating.
+In doing so, the Optimizer will attempt to find the best configuration to minimize
+the score provided, ideally learning from the previous observations in order to
+converge to the best possible configuration as quickly as possible.</p>
+<p>To do this <code class="docutils literal notranslate"><span class="pre">mlos_core</span></code> provides a small set of wrapper classes around other OSS
+tuning libraries (e.g.,
+<a class="reference internal" href="optimizers/bayesian_optimizers/smac_optimizer/index.html#mlos_core.optimizers.bayesian_optimizers.smac_optimizer.SmacOptimizer" title="mlos_core.optimizers.bayesian_optimizers.smac_optimizer.SmacOptimizer"><code class="xref py py-mod docutils literal notranslate"><span class="pre">SmacOptimizer</span></code></a>,
+<a class="reference internal" href="optimizers/flaml_optimizer/index.html#mlos_core.optimizers.flaml_optimizer.FlamlOptimizer" title="mlos_core.optimizers.flaml_optimizer.FlamlOptimizer"><code class="xref py py-mod docutils literal notranslate"><span class="pre">FlamlOptimizer</span></code></a>, etc.) in order to
+provide a consistent interface so that the rest of the code
+using it can easily exchange one optimizer for another (or even stack them).
+This allows for easy experimentation with different optimizers, each of which have
+their own strengths and weaknesses.</p>
+<p>When used with <a class="reference internal" href="../mlos_bench/index.html#module-mlos_bench" title="mlos_bench"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench</span></code></a> doing this is as simple as a one line json
+config change for the <code class="docutils literal notranslate"><span class="pre">mlos_bench</span></code>
+<a class="reference internal" href="../mlos_bench/optimizers/base_optimizer/index.html#mlos_bench.optimizers.base_optimizer.Optimizer" title="mlos_bench.optimizers.base_optimizer.Optimizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Optimizer</span></code></a> config.</p>
+</section>
+<section id="data-classes">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Data Classes</a><a class="headerlink" href="#data-classes" title="Link to this heading"></a></h2>
+<p>The <a class="reference internal" href="data_classes/index.html#mlos_core.data_classes.Suggestion" title="mlos_core.data_classes.Suggestion"><code class="xref py py-class docutils literal notranslate"><span class="pre">Suggestion</span></code></a> and
+<a class="reference internal" href="data_classes/index.html#mlos_core.data_classes.Observation" title="mlos_core.data_classes.Observation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Observation</span></code></a> <a class="reference internal" href="data_classes/index.html#module-mlos_core.data_classes" title="mlos_core.data_classes"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core.data_classes</span></code></a>
+mentioned above internally use <a class="reference external" href="https://pandas.pydata.org/docs/index.html#module-pandas" title="(in pandas v2.2.3)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pandas</span></code></a> as the acknowledged lingua
+franca of data science tasks, as is the focus of the <code class="docutils literal notranslate"><span class="pre">mlos_core</span></code> package.</p>
+</section>
+<section id="spaces">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Spaces</a><a class="headerlink" href="#spaces" title="Link to this heading"></a></h2>
+<p>In <code class="docutils literal notranslate"><span class="pre">mlos_core</span></code> parameter <a class="reference internal" href="spaces/index.html#module-mlos_core.spaces" title="mlos_core.spaces"><code class="xref py py-mod docutils literal notranslate"><span class="pre">spaces</span></code></a> telling the optimizers which
+configs to search over are specified using
+<a class="reference external" href="https://automl.github.io/ConfigSpace/latest/api/ConfigSpace/configuration_space/#ConfigSpace.configuration_space.ConfigurationSpace" title="(in ConfigSpace v0.0.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigSpace.ConfigurationSpace</span></code></a> s which provide features like</p>
+<ul class="simple">
+<li><p>log sampling</p></li>
+<li><p>quantization</p></li>
+<li><p>weighted distributions</p></li>
+<li><p>etc.</p></li>
+</ul>
+<p>Refer to the <a class="reference external" href="https://automl.github.org/ConfigSpace/">ConfigSpace documentation</a>
+for additional details.</p>
+<p>Internally, <a class="reference internal" href="spaces/converters/index.html#module-mlos_core.spaces.converters" title="mlos_core.spaces.converters"><code class="xref py py-mod docutils literal notranslate"><span class="pre">converters</span></code></a> are used to adapt those to
+whatever the underlying Optimizer needs (in case it isn’t using ConfigSpace).</p>
+<p><em>However</em>, note that in <a class="reference internal" href="../mlos_bench/index.html#module-mlos_bench" title="mlos_bench"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench</span></code></a>, a separate
+<a class="reference internal" href="../mlos_bench/tunables/tunable_groups/index.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><code class="xref py py-mod docutils literal notranslate"><span class="pre">TunableGroups</span></code></a> configuration language
+is currently used instead (which is then internally converted into a
+<a class="reference external" href="https://automl.github.io/ConfigSpace/latest/api/ConfigSpace/configuration_space/#ConfigSpace.configuration_space.ConfigurationSpace" title="(in ConfigSpace v0.0.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigSpace.ConfigurationSpace</span></code></a>).</p>
+<section id="space-adapters">
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">Space Adapters</a><a class="headerlink" href="#space-adapters" title="Link to this heading"></a></h3>
+<p>MLOS also provides <a class="reference internal" href="spaces/adapters/index.html#module-mlos_core.spaces.adapters" title="mlos_core.spaces.adapters"><code class="xref py py-mod docutils literal notranslate"><span class="pre">space</span> <span class="pre">adapters</span></code></a> to help transform
+one space to another.</p>
+<p>This can be done for a variety for reasons.</p>
+<p>One example is for automatic search space reduction (e.g., using
+<a class="reference internal" href="spaces/adapters/llamatune/index.html#module-mlos_core.spaces.adapters.llamatune" title="mlos_core.spaces.adapters.llamatune"><code class="xref py py-mod docutils literal notranslate"><span class="pre">llamatune</span></code></a>) in order to try and improve search
+effeciency (see the <a class="reference internal" href="spaces/adapters/llamatune/index.html#module-mlos_core.spaces.adapters.llamatune" title="mlos_core.spaces.adapters.llamatune"><code class="xref py py-mod docutils literal notranslate"><span class="pre">llamatune</span></code></a> and
+<a class="reference internal" href="spaces/adapters/index.html#module-mlos_core.spaces.adapters" title="mlos_core.spaces.adapters"><code class="xref py py-mod docutils literal notranslate"><span class="pre">space</span> <span class="pre">adapters</span></code></a> modules for additional
+documentation.)</p>
+<p>As with the Optimizers, the Space Adapters are designed to be easily swappable,
+especially in the <a class="reference internal" href="../mlos_bench/index.html#module-mlos_bench" title="mlos_bench"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench</span></code></a>
+<a class="reference internal" href="../mlos_bench/optimizers/base_optimizer/index.html#mlos_bench.optimizers.base_optimizer.Optimizer" title="mlos_bench.optimizers.base_optimizer.Optimizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Optimizer</span></code></a> config.</p>
+</section>
+</section>
+<section id="classes-overview">
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Classes Overview</a><a class="headerlink" href="#classes-overview" title="Link to this heading"></a></h2>
 <ul>
 <li><p><a class="reference internal" href="optimizers/optimizer/index.html#mlos_core.optimizers.optimizer.BaseOptimizer" title="mlos_core.optimizers.optimizer.BaseOptimizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseOptimizer</span></code></a> is the base class for all Optimizers</p>
 <blockquote>
@@ -150,7 +250,7 @@ specify which underlying optimizer to use (e.g.,
 <span class="gp">&gt;&gt;&gt; </span><span class="n">opt</span> <span class="o">=</span> <span class="n">OptimizerFactory</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
 <span class="gp">... </span>    <span class="n">parameter_space</span><span class="o">=</span><span class="n">cs</span><span class="p">,</span>
 <span class="gp">... </span>    <span class="n">optimization_targets</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;y&quot;</span><span class="p">],</span>
-<span class="gp">... </span>    <span class="n">optimizer_type</span><span class="o">=</span><span class="n">OptimizerType</span><span class="o">.</span><span class="n">SMAC</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">optimizer_type</span><span class="o">=</span><span class="n">OptimizerType</span><span class="o">.</span><span class="n">SMAC</span><span class="p">,</span>  <span class="c1"># or FLAML, etc.</span>
 <span class="gp">... </span>    <span class="n">optimizer_kwargs</span><span class="o">=</span><span class="n">opt_args</span><span class="p">,</span>
 <span class="gp">... </span>    <span class="n">space_adapter_type</span><span class="o">=</span><span class="n">SpaceAdapterType</span><span class="o">.</span><span class="n">IDENTITY</span><span class="p">,</span>   <span class="c1"># or LLAMATUNE</span>
 <span class="gp">... </span>    <span class="n">space_adapter_kwargs</span><span class="o">=</span><span class="n">space_adpaters_kwargs</span><span class="p">,</span>
@@ -193,8 +293,9 @@ specify which underlying optimizer to use (e.g.,
 <p class="rubric">Notes</p>
 <p>See <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_core/">mlos_core/README.md</a>
 for additional documentation and examples in the source tree.</p>
+</section>
 <section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Submodules</a><a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="data_classes/index.html">mlos_core.data_classes</a></li>
@@ -206,7 +307,7 @@ for additional documentation and examples in the source tree.</p>
 </div>
 </section>
 <section id="attributes">
-<h2>Attributes<a class="headerlink" href="#attributes" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Attributes</a><a class="headerlink" href="#attributes" title="Link to this heading"></a></h2>
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#mlos_core.__version__" title="mlos_core.__version__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__version__</span></code></a></p></td>
@@ -216,7 +317,7 @@ for additional documentation and examples in the source tree.</p>
 </table>
 </section>
 <section id="package-contents">
-<h2>Package Contents<a class="headerlink" href="#package-contents" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Package Contents</a><a class="headerlink" href="#package-contents" title="Link to this heading"></a></h2>
 <dl class="py data">
 <dt class="sig sig-object py" id="mlos_core.__version__">
 <span class="sig-prename descclassname"><span class="pre">mlos_core.</span></span><span class="sig-name descname"><span class="pre">__version__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'0.6.1'</span></em><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_core/mlos_core/__init__.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_core.__version__" title="Link to this definition"></a></dt>

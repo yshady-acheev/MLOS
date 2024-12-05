@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_viz &mdash; MLOS 0.6.2.dev32+gc9fa067026 documentation</title>
+  <title>mlos_viz &mdash; MLOS 0.6.2.dev33+geb755b90e7 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
@@ -15,7 +15,7 @@
   
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../_static/documentation_options.js?v=d5ce53e8"></script>
+      <script src="../../_static/documentation_options.js?v=3fc5050a"></script>
       <script src="../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -57,10 +57,28 @@
 <li class="toctree-l1"><a class="reference internal" href="../mlos_core/index.html">mlos_core</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../mlos_bench/index.html">mlos_bench</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">mlos_viz</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="base/index.html">mlos_viz.base</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dabl/index.html">mlos_viz.dabl</a></li>
-<li class="toctree-l2"><a class="reference internal" href="util/index.html">mlos_viz.util</a></li>
-<li class="toctree-l2"><a class="reference internal" href="version/index.html">mlos_viz.version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="base/index.html">mlos_viz.base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dabl/index.html">mlos_viz.dabl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="util/index.html">mlos_viz.util</a></li>
+<li class="toctree-l3"><a class="reference internal" href="version/index.html">mlos_viz.version</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#attributes">Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#package-contents">Package Contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#mlos_viz.MlosVizMethod"><code class="docutils literal notranslate"><span class="pre">MlosVizMethod</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#mlos_viz.MlosVizMethod.AUTO"><code class="docutils literal notranslate"><span class="pre">MlosVizMethod.AUTO</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mlos_viz.MlosVizMethod.DABL"><code class="docutils literal notranslate"><span class="pre">MlosVizMethod.DABL</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#mlos_viz.ignore_plotter_warnings"><code class="docutils literal notranslate"><span class="pre">ignore_plotter_warnings()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mlos_viz.plot"><code class="docutils literal notranslate"><span class="pre">plot()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mlos_viz.__version__"><code class="docutils literal notranslate"><span class="pre">__version__</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -101,10 +119,15 @@
 <span id="mlos-viz"></span><h1>mlos_viz<a class="headerlink" href="#module-mlos_viz" title="Link to this heading"></a></h1>
 <p>mlos_viz is a framework to help visualizing, explain, and gain insights from results
 from the <a class="reference internal" href="../mlos_bench/index.html#module-mlos_bench" title="mlos_bench"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench</span></code></a> framework for benchmarking and optimization automation.</p>
+<p>It can be installed from <a class="reference external" href="https://pypi.org/project/mlos-viz">pypi</a> via <code class="docutils literal notranslate"><span class="pre">pip</span>
+<span class="pre">install</span> <span class="pre">mlos-viz</span></code>.</p>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
 <p>Its main entrypoint is the <a class="reference internal" href="#mlos_viz.plot" title="mlos_viz.plot"><code class="xref py py-func docutils literal notranslate"><span class="pre">plot()</span></code></a> function, which can be used to
 automatically visualize <a class="reference internal" href="../mlos_bench/storage/base_experiment_data/index.html#mlos_bench.storage.base_experiment_data.ExperimentData" title="mlos_bench.storage.base_experiment_data.ExperimentData"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExperimentData</span></code></a> from <a class="reference internal" href="../mlos_bench/index.html#module-mlos_bench" title="mlos_bench"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench</span></code></a> using
 other libraries for automatic data correlation and visualization like
 <a class="reference external" href="https://dabl.github.io/stable/generated/dabl.plot.html#dabl.plot" title="(in dabl v0.2.5)"><code class="xref py py-func docutils literal notranslate"><span class="pre">dabl</span></code></a>.</p>
+</section>
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
 <div class="toctree-wrapper compound">

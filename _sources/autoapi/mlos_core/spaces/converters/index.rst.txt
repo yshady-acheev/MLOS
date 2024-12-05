@@ -12,6 +12,8 @@ mlos_core.spaces.converters
    as input to the underlying Optimizer's parameter description language (in case it
    doesn't use :py:class:`ConfigSpace.ConfigurationSpace`).
 
+   They are not generally intended to be used directly by the user.
+
 
 
 Submodules

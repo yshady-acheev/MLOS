@@ -58,10 +58,21 @@ Module Contents
       :value: 'config.'
 
 
+      Prefix given to columns in :py:attr:`.ExperimentData.results_df` that contain trial
+      config parameters.
+
+      For example, if the config parameter name is "param1", the column name will be
+      "config.param1".
+
 
    .. py:attribute:: RESULT_COLUMN_PREFIX
       :value: 'result.'
 
+
+      Prefix given to columns in :py:attr:`.ExperimentData.results_df` that contain trial
+      results metrics.
+
+      For example, if the result metric is "time", the column name will be "result.time".
 
 
    .. py:property:: default_tunable_config_id
@@ -121,6 +132,8 @@ Module Contents
                 trial was not successful.
       :rtype: pandas.DataFrame
 
+      .. seealso:: :py:attr:`.ExperimentData.CONFIG_COLUMN_PREFIX`, :py:attr:`.ExperimentData.RESULT_COLUMN_PREFIX`
+
 
    .. py:property:: root_env_config
       :type: Tuple[str, str, str]
@@ -128,7 +141,7 @@ Module Contents
 
       Root environment configuration.
 
-      :returns: **root_env_config** -- A tuple of (root_env_config, git_repo, git_commit) for the root environment.
+      :returns: **(root_env_config, git_repo, git_commit)** -- A tuple of (root_env_config, git_repo, git_commit) for the root environment.
       :rtype: Tuple[str, str, str]
 
 

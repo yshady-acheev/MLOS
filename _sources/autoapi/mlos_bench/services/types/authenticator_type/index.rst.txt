@@ -65,3 +65,5 @@ Module Contents
 
 .. py:data:: T_co
 
+   Type variable for the return type of the credential object.
+
