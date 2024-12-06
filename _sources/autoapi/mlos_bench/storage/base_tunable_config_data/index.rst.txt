@@ -10,6 +10,11 @@ mlos_bench.storage.base_tunable_config_data
    Note: a configuration in this context is the set of tunable parameter values and can
    be used by one or more trials.
 
+   .. seealso::
+
+      :py:mod:`mlos_bench.storage`
+          The base storage module for mlos_bench, which includes some basic examples in the documentation.
+
 
 
 Classes

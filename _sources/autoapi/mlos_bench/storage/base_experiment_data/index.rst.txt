@@ -15,6 +15,9 @@ mlos_bench.storage.base_experiment_data
 
    .. seealso::
 
+      :obj:`mlos_bench.storage`
+          The base storage module for mlos_bench, which includes some basic examples in the documentation.
+
       :obj:`ExperimentData.results_df`
           Retrieves a pandas DataFrame of the Experiment's trials' results data.
 

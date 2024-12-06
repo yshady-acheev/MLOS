@@ -64,6 +64,11 @@ Module Contents
    :param config: Python dict that represents a Tunable (e.g., deserialized from JSON)
    :type config: dict
 
+   .. seealso::
+
+      :py:mod:`mlos_bench.tunables`
+          for more information on tunable parameters and their configuration.
+
 
    .. py:method:: __eq__(other: object) -> bool
 
@@ -457,25 +462,27 @@ Module Contents
 
 .. py:data:: DistributionName
 
+   Tunable value distribution type.
+
 .. py:data:: TunableValue
+
+   A tunable parameter value type alias.
+
+.. py:data:: TunableValueType
 
    Tunable value type.
 
-.. py:data:: TunableValueType
+.. py:data:: TunableValueTypeName
+
+   The string name of a tunable value type.
+
+.. py:data:: TunableValueTypeTuple
 
    Tunable value type tuple.
 
    For checking with isinstance()
 
-.. py:data:: TunableValueTypeName
-
-   Tunable values dictionary type.
-
-.. py:data:: TunableValueTypeTuple
-
-   The string name of a tunable value type.
-
 .. py:data:: TunableValuesDict
 
-   Tunable value distribution type.
+   Tunable values dictionary type.
 

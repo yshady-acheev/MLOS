@@ -10,6 +10,11 @@ mlos_bench.storage.base_tunable_config_trial_group_data
    Since a single config may be used by multiple trials, we can group them together for
    easier analysis.
 
+   .. seealso::
+
+      :py:mod:`mlos_bench.storage`
+          The base storage module for mlos_bench, which includes some basic examples in the documentation.
+
 
 
 Classes

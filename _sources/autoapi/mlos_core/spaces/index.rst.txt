@@ -7,6 +7,11 @@ mlos_core.spaces
 
    Space adapters and converters.
 
+   .. seealso::
+
+      :py:mod:`mlos_core`
+          for an overview of configuration spaces in ``mlos_core``.
+
 
 
 Submodules

@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.storage &mdash; MLOS 0.6.2.dev33+geb755b90e7 documentation</title>
+  <title>mlos_bench.storage &mdash; MLOS 0.6.2.dev34+g74665c64c9 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
@@ -15,7 +15,7 @@
   
       <script src="../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../_static/documentation_options.js?v=3fc5050a"></script>
+      <script src="../../../_static/documentation_options.js?v=ef5cbcce"></script>
       <script src="../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -151,7 +151,114 @@ in a Jupyter Notebook interface, for instance.</p>
 <a class="reference internal" href="../config/schemas/config_schemas/index.html#mlos_bench.config.schemas.config_schemas.ConfigSchema.STORAGE" title="mlos_bench.config.schemas.config_schemas.ConfigSchema.STORAGE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">STORAGE</span></code></a> type json
 config.</p>
 <p class="rubric">Example</p>
-<p>TODO: Add example usage.</p>
+<p>Here’s a very basic example of the Storage APIs.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Create a new storage object from a JSON config.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Normally, we&#39;d load these from a file, but for this example we&#39;ll use a string.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">global_config</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="gp">... </span><span class="s1">{</span>
+<span class="gp">... </span><span class="s1">    // Additional global configuration parameters can be added here.</span>
+<span class="gp">... </span><span class="s1">    /* For instance:</span>
+<span class="gp">... </span><span class="s1">    &quot;storage_host&quot;: &quot;some-remote-host&quot;,</span>
+<span class="gp">... </span><span class="s1">    &quot;storage_user&quot;: &quot;mlos_bench&quot;,</span>
+<span class="gp">... </span><span class="s1">    &quot;storage_pass&quot;: &quot;SuperSecretPassword&quot;,</span>
+<span class="gp">... </span><span class="s1">    */</span>
+<span class="gp">... </span><span class="s1">}</span>
+<span class="gp">... </span><span class="s1">&#39;&#39;&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">storage_config</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="gp">... </span><span class="s1">{</span>
+<span class="gp">... </span><span class="s1">    &quot;class&quot;: &quot;mlos_bench.storage.sql.storage.SqlStorage&quot;,</span>
+<span class="gp">... </span><span class="s1">    &quot;config&quot;: {</span>
+<span class="gp">... </span><span class="s1">        // Don&#39;t create the schema until we actually need it.</span>
+<span class="gp">... </span><span class="s1">        // (helps speed up initial launch and tests)</span>
+<span class="gp">... </span><span class="s1">        &quot;lazy_schema_create&quot;: true,</span>
+<span class="gp">... </span><span class="s1">        // Parameters below must match kwargs of `sqlalchemy.URL.create()`:</span>
+<span class="gp">... </span><span class="s1">        // Normally, we&#39;d specify a real database, but for testing examples</span>
+<span class="gp">... </span><span class="s1">        // we&#39;ll use an in-memory one.</span>
+<span class="gp">... </span><span class="s1">        &quot;drivername&quot;: &quot;sqlite&quot;,</span>
+<span class="gp">... </span><span class="s1">        &quot;database&quot;: &quot;:memory:&quot;</span>
+<span class="gp">... </span><span class="s1">        // Otherwise we might use something like the following</span>
+<span class="gp">... </span><span class="s1">        // to pull the values from the globals:</span>
+<span class="gp">... </span><span class="s1">        /*</span>
+<span class="gp">... </span><span class="s1">        &quot;host&quot;: &quot;$storage_host&quot;,</span>
+<span class="gp">... </span><span class="s1">        &quot;username&quot;: &quot;$storage_user&quot;,</span>
+<span class="gp">... </span><span class="s1">        &quot;password&quot;: &quot;$storage_pass&quot;,</span>
+<span class="gp">... </span><span class="s1">        */</span>
+<span class="gp">... </span><span class="s1">    }</span>
+<span class="gp">... </span><span class="s1">}</span>
+<span class="gp">... </span><span class="s1">&#39;&#39;&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">mlos_bench.storage</span> <span class="kn">import</span> <span class="n">from_config</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">storage</span> <span class="o">=</span> <span class="n">from_config</span><span class="p">(</span><span class="n">storage_config</span><span class="p">,</span> <span class="n">global_configs</span><span class="o">=</span><span class="p">[</span><span class="n">global_config</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">storage</span>
+<span class="go">sqlite::memory:</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Internally, mlos_bench will use this config and storage backend to track</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Experiments and Trials it creates.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Most users won&#39;t need to do that, but it works something like the following:</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Create a new experiment with a single trial.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># (Normally, we&#39;d use a real environment config, but for this example we&#39;ll use a string.)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Create a dummy tunable group.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">mlos_bench.services.config_persistence</span> <span class="kn">import</span> <span class="n">ConfigPersistenceService</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">config_persistence_service</span> <span class="o">=</span> <span class="n">ConfigPersistenceService</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tunables_config</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="gp">... </span><span class="s1">{</span>
+<span class="gp">... </span><span class="s1">  &quot;param_group&quot;: {</span>
+<span class="gp">... </span><span class="s1">    &quot;cost&quot;: 1,</span>
+<span class="gp">... </span><span class="s1">    &quot;params&quot;: {</span>
+<span class="gp">... </span><span class="s1">      &quot;param1&quot;: {</span>
+<span class="gp">... </span><span class="s1">        &quot;type&quot;: &quot;int&quot;,</span>
+<span class="gp">... </span><span class="s1">        &quot;range&quot;: [0, 100],</span>
+<span class="gp">... </span><span class="s1">        &quot;default&quot;: 50</span>
+<span class="gp">... </span><span class="s1">      }</span>
+<span class="gp">... </span><span class="s1">    }</span>
+<span class="gp">... </span><span class="s1">  }</span>
+<span class="gp">... </span><span class="s1">}</span>
+<span class="gp">... </span><span class="s1">&#39;&#39;&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tunables</span> <span class="o">=</span> <span class="n">config_persistence_service</span><span class="o">.</span><span class="n">load_tunables</span><span class="p">([</span><span class="n">tunables_config</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">mlos_bench.environments.status</span> <span class="kn">import</span> <span class="n">Status</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">storage</span><span class="o">.</span><span class="n">experiment</span><span class="p">(</span>
+<span class="gp">... </span>  <span class="n">experiment_id</span><span class="o">=</span><span class="s2">&quot;my_experiment_id&quot;</span><span class="p">,</span>
+<span class="gp">... </span>  <span class="n">trial_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+<span class="gp">... </span>  <span class="n">root_env_config</span><span class="o">=</span><span class="s2">&quot;root_env_config_info&quot;</span><span class="p">,</span>
+<span class="gp">... </span>  <span class="n">description</span><span class="o">=</span><span class="s2">&quot;some description&quot;</span><span class="p">,</span>
+<span class="gp">... </span>  <span class="n">tunables</span><span class="o">=</span><span class="n">tunables</span><span class="p">,</span>
+<span class="gp">... </span>  <span class="n">opt_targets</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;objective_metric&quot;</span><span class="p">:</span> <span class="s2">&quot;min&quot;</span><span class="p">},</span>
+<span class="gp">... </span><span class="p">)</span> <span class="k">as</span> <span class="n">experiment</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="c1"># Create a dummy trial.</span>
+<span class="gp">... </span>    <span class="n">trial</span> <span class="o">=</span> <span class="n">experiment</span><span class="o">.</span><span class="n">new_trial</span><span class="p">(</span><span class="n">tunables</span><span class="o">=</span><span class="n">tunables</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="c1"># Pretend something ran with that trial and we have the results now.</span>
+<span class="gp">... </span>    <span class="n">_</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">Status</span><span class="o">.</span><span class="n">SUCCEEDED</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(),</span> <span class="p">{</span><span class="s2">&quot;objective_metric&quot;</span><span class="p">:</span> <span class="mi">42</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Now, once there&#39;s data to look at, in a Jupyter notebook or similar,</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># we can also use the storage object to view the results.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">storage</span><span class="o">.</span><span class="n">experiments</span>
+<span class="go">{&#39;my_experiment_id&#39;: Experiment :: my_experiment_id: &#39;some description&#39;}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Access ExperimentData by experiment id.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">experiment_data</span> <span class="o">=</span> <span class="n">storage</span><span class="o">.</span><span class="n">experiments</span><span class="p">[</span><span class="s2">&quot;my_experiment_id&quot;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">experiment_data</span><span class="o">.</span><span class="n">trials</span>
+<span class="go">{1: Trial :: my_experiment_id:1 cid:1 SUCCEEDED}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Access TrialData for an Experiment by trial id.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">trial_data</span> <span class="o">=</span> <span class="n">experiment_data</span><span class="o">.</span><span class="n">trials</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">assert</span> <span class="n">trial_data</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="n">Status</span><span class="o">.</span><span class="n">SUCCEEDED</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Retrieve the tunable configuration from the TrialData as a dictionary.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">trial_config_data</span> <span class="o">=</span> <span class="n">trial_data</span><span class="o">.</span><span class="n">tunable_config</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">trial_config_data</span><span class="o">.</span><span class="n">config_dict</span>
+<span class="go">{&#39;param1&#39;: 50}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Retrieve the results from the TrialData as a dictionary.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">trial_data</span><span class="o">.</span><span class="n">results_dict</span>
+<span class="go">{&#39;objective_metric&#39;: 42}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Retrieve the results of all Trials in the Experiment as a DataFrame.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">experiment_data</span><span class="o">.</span><span class="n">results_df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="go">[&#39;trial_id&#39;, &#39;ts_start&#39;, &#39;ts_end&#39;, &#39;tunable_config_id&#39;, &#39;tunable_config_trial_group_id&#39;, &#39;status&#39;, &#39;config.param1&#39;, &#39;result.objective_metric&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">experiment_data</span><span class="o">.</span><span class="n">results_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ts_start&quot;</span><span class="p">])</span>
+<span class="go">   trial_id  ... result.objective_metric</span>
+<span class="go">0         1  ...                      42</span>
+
+<span class="go">[1 rows x 7 columns]</span>
+</pre></div>
+</div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">

@@ -6,7 +6,8 @@ mlos_bench.services.config_persistence
 .. autoapi-nested-parse::
 
    Helper functions to load, instantiate, and serialize Python objects that encapsulate
-   benchmark environments, tunable parameters, and service functions.
+   a benchmark :py:class:`.Environment`, :py:mod:`~mlos_bench.tunables`,
+   :py:class:`.Service` functions, etc from JSON configuration files and strings.
 
 
 
@@ -44,7 +45,7 @@ Module Contents
 
    .. py:method:: build_environment(config: Dict[str, Any], tunables: mlos_bench.tunables.tunable_groups.TunableGroups, global_config: Optional[Dict[str, Any]] = None, parent_args: Optional[Dict[str, mlos_bench.tunables.tunable.TunableValue]] = None, service: Optional[mlos_bench.services.base_service.Service] = None) -> mlos_bench.environments.base_environment.Environment
 
-      Factory method for a new environment with a given config.
+      Factory method for a new :py:class:`.Environment` with a given config.
 
       :param config:
                      A dictionary with three mandatory fields:
@@ -64,17 +65,15 @@ Module Contents
                       deploy or reboot a VM, etc.).
       :type service: Service
 
-      :returns: **env** -- An instance of the `Environment` class initialized with `config`.
+      :returns: **env** -- An instance of the ``Environment`` class initialized with ``config``.
       :rtype: Environment
 
 
 
    .. py:method:: build_optimizer(*, tunables: mlos_bench.tunables.tunable_groups.TunableGroups, service: mlos_bench.services.base_service.Service, config: Dict[str, Any], global_config: Optional[Dict[str, Any]] = None) -> mlos_bench.optimizers.base_optimizer.Optimizer
 
-      Instantiation of mlos_bench Optimizer that depend on Service and TunableGroups.
-
-      A class *MUST* have a constructor that takes four named arguments:
-      (tunables, config, global_config, service)
+      Instantiation of :py:mod:`mlos_bench` :py:class:`.Optimizer` that depend on
+      :py:class:`.Service` and :py:class:`.TunableGroups`.
 
       :param tunables: Tunable parameters of the environment. We need them to validate the
                        configurations of merged-in experiments and restored/pending trials.
@@ -93,7 +92,7 @@ Module Contents
 
    .. py:method:: build_scheduler(*, config: Dict[str, Any], global_config: Dict[str, Any], environment: mlos_bench.environments.base_environment.Environment, optimizer: mlos_bench.optimizers.base_optimizer.Optimizer, storage: mlos_bench.storage.base_storage.Storage, root_env_config: str) -> mlos_bench.schedulers.base_scheduler.Scheduler
 
-      Instantiation of mlos_bench Scheduler.
+      Instantiation of mlos_bench :py:class:`.Scheduler`.
 
       :param config: Configuration of the class to instantiate, as loaded from JSON.
       :type config: dict
@@ -135,7 +134,7 @@ Module Contents
 
    .. py:method:: build_storage(*, service: mlos_bench.services.base_service.Service, config: Dict[str, Any], global_config: Optional[Dict[str, Any]] = None) -> mlos_bench.storage.base_storage.Storage
 
-      Instantiation of mlos_bench Storage objects.
+      Instantiation of mlos_bench :py:class:`.Storage` objects.
 
       :param service: An optional service object (e.g., providing methods to load config files, etc.)
       :type service: Service
@@ -149,13 +148,15 @@ Module Contents
 
 
 
-   .. py:method:: load_config(json_file_name: str, schema_type: Optional[mlos_bench.config.schemas.config_schemas.ConfigSchema]) -> Dict[str, Any]
+   .. py:method:: load_config(json: str, schema_type: Optional[mlos_bench.config.schemas.config_schemas.ConfigSchema]) -> Dict[str, Any]
 
-      Load JSON config file. Search for a file relative to `_config_path` if the input
-      path is not absolute. This method is exported to be used as a service.
+      Load JSON config file or JSON string. Search for a file relative to
+      :py:attr:`.config_paths` if the input path is not absolute. This method is
+      exported to be used as a :py:class:`.SupportsConfigLoading` type
+      :py:class:`.Service`.
 
-      :param json_file_name: Path to the input config file.
-      :type json_file_name: str
+      :param json: Path to the input config file or a JSON string.
+      :type json: str
       :param schema_type: The schema type to validate the config against.
       :type schema_type: Optional[ConfigSchema]
 
@@ -164,12 +165,12 @@ Module Contents
 
 
 
-   .. py:method:: load_environment(json_file_name: str, tunables: mlos_bench.tunables.tunable_groups.TunableGroups, global_config: Optional[Dict[str, Any]] = None, parent_args: Optional[Dict[str, mlos_bench.tunables.tunable.TunableValue]] = None, service: Optional[mlos_bench.services.base_service.Service] = None) -> mlos_bench.environments.base_environment.Environment
+   .. py:method:: load_environment(json: str, tunables: mlos_bench.tunables.tunable_groups.TunableGroups, global_config: Optional[Dict[str, Any]] = None, parent_args: Optional[Dict[str, mlos_bench.tunables.tunable.TunableValue]] = None, service: Optional[mlos_bench.services.base_service.Service] = None) -> mlos_bench.environments.base_environment.Environment
 
-      Load and build new environment from the config file.
+      Load and build new :py:class:`.Environment` from the config file or JSON string.
 
-      :param json_file_name: The environment JSON configuration file.
-      :type json_file_name: str
+      :param json: The environment JSON configuration file or JSON string.
+      :type json: str
       :param tunables: A (possibly empty) collection of tunables to add to the environment.
       :type tunables: TunableGroups
       :param global_config: Global parameters to add to the environment config.
@@ -185,13 +186,13 @@ Module Contents
 
 
 
-   .. py:method:: load_environment_list(json_file_name: str, tunables: mlos_bench.tunables.tunable_groups.TunableGroups, global_config: Optional[Dict[str, Any]] = None, parent_args: Optional[Dict[str, mlos_bench.tunables.tunable.TunableValue]] = None, service: Optional[mlos_bench.services.base_service.Service] = None) -> List[mlos_bench.environments.base_environment.Environment]
+   .. py:method:: load_environment_list(json: str, tunables: mlos_bench.tunables.tunable_groups.TunableGroups, global_config: Optional[Dict[str, Any]] = None, parent_args: Optional[Dict[str, mlos_bench.tunables.tunable.TunableValue]] = None, service: Optional[mlos_bench.services.base_service.Service] = None) -> List[mlos_bench.environments.base_environment.Environment]
 
-      Load and build a list of environments from the config file.
+      Load and build a list of Environments from the config file or JSON string.
 
-      :param json_file_name: The environment JSON configuration file.
-                             Can contain either one environment or a list of environments.
-      :type json_file_name: str
+      :param json: The environment JSON configuration file or a JSON string.
+                   Can contain either one environment or a list of environments.
+      :type json: str
       :param tunables: An (possibly empty) collection of tunables to add to the environment.
       :type tunables: TunableGroups
       :param global_config: Global parameters to add to the environment config.
@@ -207,13 +208,18 @@ Module Contents
 
 
 
-   .. py:method:: load_services(json_file_names: Iterable[str], global_config: Optional[Dict[str, Any]] = None, parent: Optional[mlos_bench.services.base_service.Service] = None) -> mlos_bench.services.base_service.Service
+   .. py:method:: load_services(jsons: Iterable[str], global_config: Optional[Dict[str, Any]] = None, parent: Optional[mlos_bench.services.base_service.Service] = None) -> mlos_bench.services.base_service.Service
 
-      Read the configuration files and bundle all service methods from those configs
-      into a single Service object.
+      Read the configuration files or JSON strings and bundle all Service methods from
+      those configs into a single Service object.
 
-      :param json_file_names: A list of service JSON configuration files.
-      :type json_file_names: list of str
+      .. rubric:: Notes
+
+      Order of the services in the list matters. If multiple Services export the
+      same method, the last one in the list will be used.
+
+      :param jsons: A list of service JSON configuration files or JSON strings.
+      :type jsons: list of str
       :param global_config: Global parameters to add to the service config.
       :type global_config: dict
       :param parent: An optional reference of the parent service to mix in.
@@ -221,6 +227,25 @@ Module Contents
 
       :returns: **service** -- A collection of service methods.
       :rtype: Service
+
+
+
+   .. py:method:: load_tunables(jsons: Iterable[str], parent: Optional[mlos_bench.tunables.tunable_groups.TunableGroups] = None) -> mlos_bench.tunables.tunable_groups.TunableGroups
+
+      Load a collection of tunable parameters from JSON files or strings into the
+      parent TunableGroup.
+
+      This helps allow standalone environment configs to reference
+      overlapping tunable groups configs but still allow combining them into
+      a single instance that each environment can reference.
+
+      :param jsons: A list of JSON files or JSON strings to load.
+      :type jsons: list of str
+      :param parent: A (possibly empty) collection of tunables to add to the new collection.
+      :type parent: TunableGroups
+
+      :returns: **tunables** -- The larger collection of tunable parameters.
+      :rtype: TunableGroups
 
 
 
@@ -244,12 +269,14 @@ Module Contents
 
    .. py:method:: resolve_path(file_path: str, extra_paths: Optional[Iterable[str]] = None) -> str
 
-      Prepend the suitable `_config_path` to `path` if the latter is not absolute. If
-      `_config_path` is `None` or `path` is absolute, return `path` as is.
+      Resolves and prepends the suitable :py:attr:`.config_paths` to ``file_path`` if
+      the latter is not absolute. If :py:attr:`.config_paths` is ``None`` or
+      ``file_path`` is absolute, return ``file_path`` as is.
 
       :param file_path: Path to the input config file.
       :type file_path: str
-      :param extra_paths: Additional directories to prepend to the list of search paths.
+      :param extra_paths: Additional directories to prepend to the list of
+                          :py:attr:`.config_paths` search paths.
       :type extra_paths: Iterable[str]
 
       :returns: **path** -- An actual path to the config or script.
@@ -260,6 +287,9 @@ Module Contents
    .. py:attribute:: BUILTIN_CONFIG_PATH
       :value: ''
 
+
+      A calculated path to the built-in configuration files shipped with the mlos_bench
+      package.
 
 
    .. py:property:: config_paths

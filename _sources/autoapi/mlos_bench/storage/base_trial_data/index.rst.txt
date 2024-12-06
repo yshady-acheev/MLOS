@@ -10,6 +10,11 @@ mlos_bench.storage.base_trial_data
    A single trial is a single run of an experiment with a given configuration (e.g., set of
    tunable parameters).
 
+   .. seealso::
+
+      :py:mod:`mlos_bench.storage`
+          The base storage module for mlos_bench, which includes some basic examples in the documentation.
+
 
 
 Classes

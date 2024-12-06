@@ -22,12 +22,18 @@ Module Contents
 
 .. py:class:: TunableGroups(config: Optional[dict] = None)
 
-   A collection of covariant groups of tunable parameters.
+   A collection of :py:class:`.CovariantTunableGroup` s of :py:class:`.Tunable`
+   parameters.
 
    Create a new group of tunable parameters.
 
    :param config: Python dict of serialized representation of the covariant tunable groups.
    :type config: dict
+
+   .. seealso::
+
+      :py:mod:`mlos_bench.tunables`
+          for more information on tunable parameters and their configuration.
 
 
    .. py:method:: __bool__() -> bool
