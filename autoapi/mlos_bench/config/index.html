@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.config &mdash; MLOS 0.6.2.dev35+g25bf9a0abc documentation</title>
+  <title>mlos_bench.config &mdash; MLOS 0.6.2.dev36+g3faaa56d2f documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
@@ -15,7 +15,7 @@
   
       <script src="../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../_static/documentation_options.js?v=0cd1461b"></script>
+      <script src="../../../_static/documentation_options.js?v=e7886543"></script>
       <script src="../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -125,38 +125,38 @@
            <div itemprop="articleBody">
              
   <section id="module-mlos_bench.config">
-<span id="mlos-bench-config"></span><h1><a class="toc-backref" href="#id2" role="doc-backlink">mlos_bench.config</a><a class="headerlink" href="#module-mlos_bench.config" title="Link to this heading"></a></h1>
-<p>A module for and documentation about the structure and mangement of json configs, their
+<span id="mlos-bench-config"></span><h1><a class="toc-backref" href="#id1" role="doc-backlink">mlos_bench.config</a><a class="headerlink" href="#module-mlos_bench.config" title="Link to this heading"></a></h1>
+<p>A module for and documentation about the structure and management of json configs, their
 schemas and validation for various components of MLOS.</p>
 <nav class="contents" id="table-of-contents">
 <p class="topic-title">Table of Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#module-mlos_bench.config" id="id2">mlos_bench.config</a></p>
+<li><p><a class="reference internal" href="#module-mlos_bench.config" id="id1">mlos_bench.config</a></p>
 <ul>
-<li><p><a class="reference internal" href="#overview" id="id3">Overview</a></p></li>
-<li><p><a class="reference internal" href="#general-json-config-structure" id="id4">General JSON Config Structure</a></p>
+<li><p><a class="reference internal" href="#overview" id="id2">Overview</a></p></li>
+<li><p><a class="reference internal" href="#general-json-config-structure" id="id3">General JSON Config Structure</a></p>
 <ul>
-<li><p><a class="reference internal" href="#organization" id="id5">Organization</a></p></li>
-<li><p><a class="reference internal" href="#cli-configs" id="id6">CLI Configs</a></p></li>
+<li><p><a class="reference internal" href="#organization" id="id4">Organization</a></p></li>
+<li><p><a class="reference internal" href="#cli-configs" id="id5">CLI Configs</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#globals-and-variable-substitution" id="id7">Globals and Variable Substitution</a></p>
+<li><p><a class="reference internal" href="#globals-and-variable-substitution" id="id6">Globals and Variable Substitution</a></p>
 <ul>
-<li><p><a class="reference internal" href="#well-known-variables" id="id8">Well Known Variables</a></p></li>
-<li><p><a class="reference internal" href="#tunable-configs" id="id9">Tunable Configs</a></p></li>
-<li><p><a class="reference internal" href="#class-configs" id="id10">Class Configs</a></p></li>
+<li><p><a class="reference internal" href="#well-known-variables" id="id7">Well Known Variables</a></p></li>
+<li><p><a class="reference internal" href="#tunable-configs" id="id8">Tunable Configs</a></p></li>
+<li><p><a class="reference internal" href="#class-configs" id="id9">Class Configs</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#config-processing" id="id11">Config Processing</a></p></li>
-<li><p><a class="reference internal" href="#schema-definitions" id="id12">Schema Definitions</a></p></li>
-<li><p><a class="reference internal" href="#debugging" id="id13">Debugging</a></p></li>
-<li><p><a class="reference internal" href="#submodules" id="id14">Submodules</a></p></li>
+<li><p><a class="reference internal" href="#config-processing" id="id10">Config Processing</a></p></li>
+<li><p><a class="reference internal" href="#schema-definitions" id="id11">Schema Definitions</a></p></li>
+<li><p><a class="reference internal" href="#debugging" id="id12">Debugging</a></p></li>
+<li><p><a class="reference internal" href="#submodules" id="id13">Submodules</a></p></li>
 </ul>
 </li>
 </ul>
 </nav>
 <section id="overview">
-<h2><a class="toc-backref" href="#id3" role="doc-backlink">Overview</a><a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Overview</a><a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
 <p>MLOS is a framework for doing benchmarking and autotuning for systems.
 The bulk of the code to do that is written in python. As such, all of the code
 classes documented here take python objects in their construction.</p>
@@ -165,7 +165,7 @@ and its json config files and their own scripts for MLOS to invoke. This module
 attempts to document some of those high level interactions.</p>
 </section>
 <section id="general-json-config-structure">
-<h2><a class="toc-backref" href="#id4" role="doc-backlink">General JSON Config Structure</a><a class="headerlink" href="#general-json-config-structure" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">General JSON Config Structure</a><a class="headerlink" href="#general-json-config-structure" title="Link to this heading"></a></h2>
 <p>We use <a class="reference external" href="https://pypi.org/project/json5/">json5</a> to parse the json files, since it
 allows for inline C style comments (e.g., <code class="docutils literal notranslate"><span class="pre">//</span></code>, <code class="docutils literal notranslate"><span class="pre">/*</span> <span class="pre">*/</span></code>), trailing commas, etc.,
 so it is slightly more user friendly than strict json.</p>
@@ -174,13 +174,13 @@ indicate that they are an <code class="docutils literal notranslate"><span class
 <p>This allows tools that support <a class="reference external" href="https://www.schemastore.org/json/">JSON Schema Store</a> (e.g., <a class="reference external" href="https://code.visualstudio.com/">VSCode</a> with an <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=remcohaszing.schemastore">extension</a>) to
 provide helpful autocomplete and validation of the json configs while editing.</p>
 <section id="organization">
-<h3><a class="toc-backref" href="#id5" role="doc-backlink">Organization</a><a class="headerlink" href="#organization" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">Organization</a><a class="headerlink" href="#organization" title="Link to this heading"></a></h3>
 <p>Ultimately, each experiment is slightly different so it can take some time to get
 the automation right.</p>
 <p>Therefore the configs are intended to be modular and reusable to reduce the time to
 do that for the next set.
 Hence, they are usually split into several files and directory structures.</p>
-<p>We attempt to provide some examples and reuable templates in the core <code class="docutils literal notranslate"><span class="pre">mlos_bench</span></code>
+<p>We attempt to provide some examples and reusable templates in the core <code class="docutils literal notranslate"><span class="pre">mlos_bench</span></code>
 package, but users are encouraged to create their own configs as needed, or to
 <a class="reference external" href="https://github.com/microsoft/MLOS/CONTRIBUTING.md">submit PRs or Issues</a> to add
 additional ones.</p>
@@ -198,7 +198,7 @@ associated scripts (if relevant, e.g., for
 <a class="reference internal" href="../environments/remote/remote_env/index.html#mlos_bench.environments.remote.remote_env.RemoteEnv" title="mlos_bench.environments.remote.remote_env.RemoteEnv"><code class="xref py py-class docutils literal notranslate"><span class="pre">RemoteEnv</span></code></a> or
 <a class="reference internal" href="../environments/script_env/index.html#mlos_bench.environments.script_env.ScriptEnv" title="mlos_bench.environments.script_env.ScriptEnv"><code class="xref py py-class docutils literal notranslate"><span class="pre">ScriptEnv</span></code></a>) and
 <a class="reference internal" href="../tunables/index.html#module-mlos_bench.tunables" title="mlos_bench.tunables"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tunables</span></code></a>.</p>
-<p>There is usally one <em>root</em> environment that chains the others together to build
+<p>There is usually one <em>root</em> environment that chains the others together to build
 a full experiment (e.g., via
 <a class="reference internal" href="../environments/composite_env/index.html#mlos_bench.environments.composite_env.CompositeEnv" title="mlos_bench.environments.composite_env.CompositeEnv"><code class="xref py py-class docutils literal notranslate"><span class="pre">CompositeEnv</span></code></a> and the
 <code class="docutils literal notranslate"><span class="pre">include_children</span></code> field).
@@ -235,7 +235,7 @@ This config controls which optimizer to use and any custom settings for it.</p>
 </li>
 <li><dl>
 <dt><code class="docutils literal notranslate"><span class="pre">services/</span></code>:</dt><dd><p>Contains the configs for <a class="reference internal" href="../services/index.html#module-mlos_bench.services" title="mlos_bench.services"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.services</span></code></a>.</p>
-<p>In general servies can simply be referenced in the CLI config’s <code class="docutils literal notranslate"><span class="pre">services</span></code>
+<p>In general services can simply be referenced in the CLI config’s <code class="docutils literal notranslate"><span class="pre">services</span></code>
 field, though sometimes additional settings are required, possibly provided by
 an additional <code class="docutils literal notranslate"><span class="pre">globals</span></code> config in the CLI config.</p>
 </dd>
@@ -252,7 +252,7 @@ controls how data is stored and retrieved for the experiments and trials.</p>
 <p>See below for additional details about each configuration type.</p>
 </section>
 <section id="cli-configs">
-<h3><a class="toc-backref" href="#id6" role="doc-backlink">CLI Configs</a><a class="headerlink" href="#cli-configs" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">CLI Configs</a><a class="headerlink" href="#cli-configs" title="Link to this heading"></a></h3>
 <p><a class="reference internal" href="schemas/config_schemas/index.html#mlos_bench.config.schemas.config_schemas.ConfigSchema.CLI" title="mlos_bench.config.schemas.config_schemas.ConfigSchema.CLI"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CLI</span></code></a> style configs
 are typically used to start the <code class="docutils literal notranslate"><span class="pre">mlos_bench</span></code> CLI using the <code class="docutils literal notranslate"><span class="pre">--config</span></code> argument
 and a restricted key-value dict form where each key corresponds to a CLI argument.</p>
@@ -295,7 +295,7 @@ themselves.</p>
 <p>See below for examples.</p>
 <p class="rubric">Notes</p>
 <ul class="simple">
-<li><p>See <a class="reference external" href="/mlos_bench.run.usage.html">mlos_bench CLI usage</a> for more details on the
+<li><p>See <a class="reference external" href="../../../mlos_bench.run.usage.html">mlos_bench CLI usage</a> for more details on the
 CLI arguments.</p></li>
 <li><p>See <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/config/cli">mlos_bench/config/cli</a>
 and <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/tests/config/cli">mlos_bench/tests/config/cli</a>
@@ -304,10 +304,10 @@ for some examples of CLI configs.</p></li>
 </section>
 </section>
 <section id="globals-and-variable-substitution">
-<h2><a class="toc-backref" href="#id7" role="doc-backlink">Globals and Variable Substitution</a><a class="headerlink" href="#globals-and-variable-substitution" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Globals and Variable Substitution</a><a class="headerlink" href="#globals-and-variable-substitution" title="Link to this heading"></a></h2>
 <p><a class="reference internal" href="schemas/config_schemas/index.html#mlos_bench.config.schemas.config_schemas.ConfigSchema.GLOBALS" title="mlos_bench.config.schemas.config_schemas.ConfigSchema.GLOBALS"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Globals</span></code></a>
 are basically just key-value variables that can be used in other configs using
-<code class="docutils literal notranslate"><span class="pre">$variable</span></code> substituion via the
+<code class="docutils literal notranslate"><span class="pre">$variable</span></code> substitution via the
 <a class="reference internal" href="../dict_templater/index.html#mlos_bench.dict_templater.DictTemplater.expand_vars" title="mlos_bench.dict_templater.DictTemplater.expand_vars"><code class="xref py py-meth docutils literal notranslate"><span class="pre">expand_vars()</span></code></a> method.</p>
 <p>For instance:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="c1">// globals-config.mlos.json</span>
@@ -321,10 +321,10 @@ are basically just key-value variables that can be used in other configs using
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>There are additional details about variable propogation in the
+<p>There are additional details about variable propagation in the
 <a class="reference internal" href="../environments/index.html#module-mlos_bench.environments" title="mlos_bench.environments"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.environments</span></code></a> module.</p>
 <section id="well-known-variables">
-<h3><a class="toc-backref" href="#id8" role="doc-backlink">Well Known Variables</a><a class="headerlink" href="#well-known-variables" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Well Known Variables</a><a class="headerlink" href="#well-known-variables" title="Link to this heading"></a></h3>
 <p>Here is a list of some well known variables that are provided or required by the
 system and may be used in the config files:</p>
 <ul class="simple">
@@ -343,7 +343,7 @@ instance (e.g., when writing scripts).</p>
 </ul>
 </section>
 <section id="tunable-configs">
-<h3><a class="toc-backref" href="#id9" role="doc-backlink">Tunable Configs</a><a class="headerlink" href="#tunable-configs" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">Tunable Configs</a><a class="headerlink" href="#tunable-configs" title="Link to this heading"></a></h3>
 <p>There are two forms of tunable configs:</p>
 <ul>
 <li><p>“TunableParams”  style configs</p>
@@ -405,7 +405,7 @@ benchmark with a particular config or set of configs.</p>
 module.</p>
 </section>
 <section id="class-configs">
-<h3><a class="toc-backref" href="#id10" role="doc-backlink">Class Configs</a><a class="headerlink" href="#class-configs" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">Class Configs</a><a class="headerlink" href="#class-configs" title="Link to this heading"></a></h3>
 <p>Class style configs include most anything else and roughly take this form:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="c1">// class configs (environments, services, etc.)</span>
 <span class="p">{</span>
@@ -435,24 +435,24 @@ See various documentation in <a class="reference internal" href="../environments
 </section>
 </section>
 <section id="config-processing">
-<h2><a class="toc-backref" href="#id11" role="doc-backlink">Config Processing</a><a class="headerlink" href="#config-processing" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Config Processing</a><a class="headerlink" href="#config-processing" title="Link to this heading"></a></h2>
 <p>Config files are processed by the <a class="reference internal" href="../launcher/index.html#mlos_bench.launcher.Launcher" title="mlos_bench.launcher.Launcher"><code class="xref py py-class docutils literal notranslate"><span class="pre">Launcher</span></code></a> and
 <a class="reference internal" href="../services/config_persistence/index.html#mlos_bench.services.config_persistence.ConfigPersistenceService" title="mlos_bench.services.config_persistence.ConfigPersistenceService"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigPersistenceService</span></code></a> classes
 at startup time by the <code class="docutils literal notranslate"><span class="pre">mlos_bench</span></code> CLI.</p>
 <p>The typical entrypoint is a CLI config which references other configs, especially
 the base Environment config, Services, Optimizer, and Storage.</p>
-<p>See <a class="reference external" href="/mlos_bench.run.usage.html">mlos_bench CLI usage</a> for more details on those
-arguments.</p>
+<p>See <a class="reference external" href="../../../mlos_bench.run.usage.html">mlos_bench CLI usage</a> for more details
+on those arguments.</p>
 </section>
 <section id="schema-definitions">
-<h2><a class="toc-backref" href="#id12" role="doc-backlink">Schema Definitions</a><a class="headerlink" href="#schema-definitions" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id11" role="doc-backlink">Schema Definitions</a><a class="headerlink" href="#schema-definitions" title="Link to this heading"></a></h2>
 <p>For further details on the schema definitions and validation, see the
 <a class="reference internal" href="schemas/config_schemas/index.html#mlos_bench.config.schemas.config_schemas.ConfigSchema" title="mlos_bench.config.schemas.config_schemas.ConfigSchema"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigSchema</span></code></a> class
 documentation, which also contains links to the actual schema definitions in the
 source tree (see below).</p>
 </section>
 <section id="debugging">
-<h2><a class="toc-backref" href="#id13" role="doc-backlink">Debugging</a><a class="headerlink" href="#debugging" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">Debugging</a><a class="headerlink" href="#debugging" title="Link to this heading"></a></h2>
 <p>Most of the time issues in running an Experiment involve issues with the json
 configs and/or user scripts that are being run by the framework.</p>
 <p>It can help to run <code class="docutils literal notranslate"><span class="pre">mlos_bench</span></code> with <code class="docutils literal notranslate"><span class="pre">--log-level</span> <span class="pre">DEBUG</span></code> to see more detailed
@@ -465,7 +465,7 @@ themselves to see what about the unique automation process is failing.</p>
 for additional documentation and examples in the source tree.</p>
 </section>
 <section id="submodules">
-<h2><a class="toc-backref" href="#id14" role="doc-backlink">Submodules</a><a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id13" role="doc-backlink">Submodules</a><a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="schemas/index.html">mlos_bench.config.schemas</a></li>

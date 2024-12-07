@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_core &mdash; MLOS 0.6.2.dev35+g25bf9a0abc documentation</title>
+  <title>mlos_core &mdash; MLOS 0.6.2.dev36+g3faaa56d2f documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
@@ -15,7 +15,7 @@
   
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../_static/documentation_options.js?v=0cd1461b"></script>
+      <script src="../../_static/documentation_options.js?v=e7886543"></script>
       <script src="../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -203,7 +203,7 @@ one space to another.</p>
 <p>This can be done for a variety for reasons.</p>
 <p>One example is for automatic search space reduction (e.g., using
 <a class="reference internal" href="spaces/adapters/llamatune/index.html#module-mlos_core.spaces.adapters.llamatune" title="mlos_core.spaces.adapters.llamatune"><code class="xref py py-mod docutils literal notranslate"><span class="pre">llamatune</span></code></a>) in order to try and improve search
-effeciency (see the <a class="reference internal" href="spaces/adapters/llamatune/index.html#module-mlos_core.spaces.adapters.llamatune" title="mlos_core.spaces.adapters.llamatune"><code class="xref py py-mod docutils literal notranslate"><span class="pre">llamatune</span></code></a> and
+efficiency (see the <a class="reference internal" href="spaces/adapters/llamatune/index.html#module-mlos_core.spaces.adapters.llamatune" title="mlos_core.spaces.adapters.llamatune"><code class="xref py py-mod docutils literal notranslate"><span class="pre">llamatune</span></code></a> and
 <a class="reference internal" href="spaces/adapters/index.html#module-mlos_core.spaces.adapters" title="mlos_core.spaces.adapters"><code class="xref py py-mod docutils literal notranslate"><span class="pre">space</span> <span class="pre">adapters</span></code></a> modules for additional
 documentation.)</p>
 <p>As with the Optimizers, the Space Adapters are designed to be easily swappable,
@@ -246,14 +246,14 @@ specify which underlying optimizer to use (e.g.,
 <span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">cs</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">UniformIntegerHyperparameter</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="n">lower</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">upper</span><span class="o">=</span><span class="mi">10</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># Create a new optimizer instance using the SMAC optimizer.</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">opt_args</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;seed&quot;</span><span class="p">:</span> <span class="mi">1234</span><span class="p">,</span> <span class="s2">&quot;max_trials&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">}</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">space_adpaters_kwargs</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1"># no additional args for this example</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">space_adapters_kwargs</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1"># no additional args for this example</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">opt</span> <span class="o">=</span> <span class="n">OptimizerFactory</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
 <span class="gp">... </span>    <span class="n">parameter_space</span><span class="o">=</span><span class="n">cs</span><span class="p">,</span>
 <span class="gp">... </span>    <span class="n">optimization_targets</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;y&quot;</span><span class="p">],</span>
 <span class="gp">... </span>    <span class="n">optimizer_type</span><span class="o">=</span><span class="n">OptimizerType</span><span class="o">.</span><span class="n">SMAC</span><span class="p">,</span>  <span class="c1"># or FLAML, etc.</span>
 <span class="gp">... </span>    <span class="n">optimizer_kwargs</span><span class="o">=</span><span class="n">opt_args</span><span class="p">,</span>
 <span class="gp">... </span>    <span class="n">space_adapter_type</span><span class="o">=</span><span class="n">SpaceAdapterType</span><span class="o">.</span><span class="n">IDENTITY</span><span class="p">,</span>   <span class="c1"># or LLAMATUNE</span>
-<span class="gp">... </span>    <span class="n">space_adapter_kwargs</span><span class="o">=</span><span class="n">space_adpaters_kwargs</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">space_adapter_kwargs</span><span class="o">=</span><span class="n">space_adapters_kwargs</span><span class="p">,</span>
 <span class="gp">... </span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># Get a new configuration suggestion.</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">suggestion</span> <span class="o">=</span> <span class="n">opt</span><span class="o">.</span><span class="n">suggest</span><span class="p">()</span>

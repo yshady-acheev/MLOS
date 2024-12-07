@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench &mdash; MLOS 0.6.2.dev35+g25bf9a0abc documentation</title>
+  <title>mlos_bench &mdash; MLOS 0.6.2.dev36+g3faaa56d2f documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
@@ -15,7 +15,7 @@
   
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../_static/documentation_options.js?v=0cd1461b"></script>
+      <script src="../../_static/documentation_options.js?v=e7886543"></script>
       <script src="../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -150,7 +150,7 @@ autotuning and the data management of the results.</p>
 via <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">mlos-bench</span></code> and executed using the <code class="docutils literal notranslate"><span class="pre">mlos_bench</span></code> <a class="reference external" href="../../mlos_bench.run.usage.html">command</a> using a collection of <cite>json</cite> <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/config/">configs</a>.</p>
 <p>It is intended to be used with <a class="reference internal" href="../mlos_core/index.html#module-mlos_core" title="mlos_core"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core</span></code></a> via
 <a class="reference internal" href="optimizers/mlos_core_optimizer/index.html#mlos_bench.optimizers.mlos_core_optimizer.MlosCoreOptimizer" title="mlos_bench.optimizers.mlos_core_optimizer.MlosCoreOptimizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">MlosCoreOptimizer</span></code></a> to help
-navigate complex parameter spaces more effeciently, though other
+navigate complex parameter spaces more efficiently, though other
 <a class="reference internal" href="optimizers/index.html#module-mlos_bench.optimizers" title="mlos_bench.optimizers"><code class="xref py py-mod docutils literal notranslate"><span class="pre">optimizers</span></code></a> are also available to help customize the search
 process easily by simply swapping out the
 <a class="reference internal" href="optimizers/base_optimizer/index.html#mlos_bench.optimizers.base_optimizer.Optimizer" title="mlos_bench.optimizers.base_optimizer.Optimizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Optimizer</span></code></a> class in the associated
@@ -161,9 +161,9 @@ and <code class="docutils literal notranslate"><span class="pre">mlos_bench</spa
 <section id="goals">
 <h3><a class="toc-backref" href="#id3" role="doc-backlink">Goals</a><a class="headerlink" href="#goals" title="Link to this heading"></a></h3>
 <p>The overall goal of the MLOS project is to enable <em>reproducible</em> and <em>trackable</em>
-benchmarking and <em>effecient</em> autotuning for systems software.</p>
+benchmarking and <em>efficient</em> autotuning for systems software.</p>
 <p>In this, automation of the benchmarking process is a key component that
-<code class="docutils literal notranslate"><span class="pre">mlos_bench</span></code> seaks to enable.</p>
+<code class="docutils literal notranslate"><span class="pre">mlos_bench</span></code> seeks to enable.</p>
 </section>
 <section id="interaction">
 <h3><a class="toc-backref" href="#id4" role="doc-backlink">Interaction</a><a class="headerlink" href="#interaction" title="Link to this heading"></a></h3>
@@ -245,7 +245,7 @@ harder to scale to many users.</p>
 and hence sometimes more focused on the implementation details, most user
 interactions with the package will be through the <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/config/">json configs</a>. Even
 so it may be useful to look at the source code to understand how those are
-interpretted.</p>
+interpreted.</p>
 <p class="rubric">Examples</p>
 <p>Here is an example that shows how to run a simple benchmark using the command line.</p>
 <p>The entry point for these configs can be found <a class="reference external" href="https://github.com/microsoft/MLOS/blob/main/mlos_bench/mlos_bench/tests/config/cli/test-cli-local-env-bench.jsonc">here</a>.</p>

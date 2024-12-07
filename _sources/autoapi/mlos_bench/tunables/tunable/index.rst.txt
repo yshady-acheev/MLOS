@@ -303,7 +303,7 @@ Module Contents
       :type: Optional[Union[Iterable[int], Iterable[float]]]
 
 
-      Get a sequence of quanitized values for this tunable.
+      Get a sequence of quantized values for this tunable.
 
       :returns: If the Tunable is quantizable, returns a sequence of those elements,
                 else None (e.g., for unquantized float type tunables).
