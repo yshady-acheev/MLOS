@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.storage &mdash; MLOS 0.6.2.dev34+g74665c64c9 documentation</title>
+  <title>mlos_bench.storage &mdash; MLOS 0.6.2.dev35+g25bf9a0abc documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
@@ -15,7 +15,7 @@
   
       <script src="../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../_static/documentation_options.js?v=ef5cbcce"></script>
+      <script src="../../../_static/documentation_options.js?v=0cd1461b"></script>
       <script src="../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -252,13 +252,13 @@ config.</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># Retrieve the results of all Trials in the Experiment as a DataFrame.</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">experiment_data</span><span class="o">.</span><span class="n">results_df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="go">[&#39;trial_id&#39;, &#39;ts_start&#39;, &#39;ts_end&#39;, &#39;tunable_config_id&#39;, &#39;tunable_config_trial_group_id&#39;, &#39;status&#39;, &#39;config.param1&#39;, &#39;result.objective_metric&#39;]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">experiment_data</span><span class="o">.</span><span class="n">results_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ts_start&quot;</span><span class="p">])</span>
-<span class="go">   trial_id  ... result.objective_metric</span>
-<span class="go">0         1  ...                      42</span>
-
-<span class="go">[1 rows x 7 columns]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Drop the timestamp columns to make it a repeatable test.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">experiment_data</span><span class="o">.</span><span class="n">results_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ts_start&quot;</span><span class="p">,</span> <span class="s2">&quot;ts_end&quot;</span><span class="p">])</span>
+<span class="go">   trial_id  tunable_config_id  tunable_config_trial_group_id     status  config.param1  result.objective_metric</span>
+<span class="go">0         1                  1                              1  SUCCEEDED             50                       42</span>
 </pre></div>
 </div>
+<p>[1 rows x 6 columns]</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">
