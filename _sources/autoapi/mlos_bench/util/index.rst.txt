@@ -16,6 +16,7 @@ Attributes
 
    mlos_bench.util.BaseTypeVar
    mlos_bench.util.BaseTypes
+   mlos_bench.util.NullableT
 
 
 Functions
@@ -128,7 +129,7 @@ Module Contents
    :rtype: dict
 
 
-.. py:function:: nullable(func: Callable, value: Optional[Any]) -> Optional[Any]
+.. py:function:: nullable(func: Callable[Ellipsis, NullableT], value: Optional[Any]) -> Optional[NullableT]
 
    Poor man's Maybe monad: apply the function to the value if it's not None.
 
@@ -139,6 +140,15 @@ Module Contents
 
    :returns: **value** -- The result of the function application or None if the value is None.
    :rtype: Optional[Any]
+
+   .. rubric:: Examples
+
+   >>> nullable(int, "1")
+   1
+   >>> nullable(int, None)
+   ...
+   >>> nullable(str, 1)
+   '1'
 
 
 .. py:function:: path_join(*args: str, abs_path: bool = False) -> str
@@ -242,4 +252,8 @@ Module Contents
 .. py:data:: BaseTypes
 
    Similar to :py:data:`.BaseTypeVar`, BaseTypes is a Union of the main base classes.
+
+.. py:data:: NullableT
+
+   A generic type variable for :py:func:`nullable` return types.
 

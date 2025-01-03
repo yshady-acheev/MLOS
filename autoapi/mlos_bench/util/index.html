@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.util &mdash; MLOS 0.6.2.dev38+g0a94138a2d documentation</title>
+  <title>mlos_bench.util &mdash; MLOS 0.6.2.dev40+ga6b716f973 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
@@ -15,7 +15,7 @@
   
       <script src="../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../_static/documentation_options.js?v=cc2114ed"></script>
+      <script src="../../../_static/documentation_options.js?v=31424044"></script>
       <script src="../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -133,6 +133,9 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.util.BaseTypes" title="mlos_bench.util.BaseTypes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseTypes</span></code></a></p></td>
 <td><p>Similar to <a class="reference internal" href="#mlos_bench.util.BaseTypeVar" title="mlos_bench.util.BaseTypeVar"><code class="xref py py-data docutils literal notranslate"><span class="pre">BaseTypeVar</span></code></a>, BaseTypes is a Union of the main base classes.</p></td>
 </tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.util.NullableT" title="mlos_bench.util.NullableT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NullableT</span></code></a></p></td>
+<td><p>A generic type variable for <a class="reference internal" href="#mlos_bench.util.nullable" title="mlos_bench.util.nullable"><code class="xref py py-func docutils literal notranslate"><span class="pre">nullable()</span></code></a> return types.</p></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -158,7 +161,7 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.util.merge_parameters" title="mlos_bench.util.merge_parameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">merge_parameters</span></code></a>(→ dict)</p></td>
 <td><p>Merge the source config dict into the destination config. Pick from the source</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.util.nullable" title="mlos_bench.util.nullable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nullable</span></code></a>(→ Optional[Any])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.util.nullable" title="mlos_bench.util.nullable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nullable</span></code></a>(→ Optional[NullableT])</p></td>
 <td><p>Poor man's Maybe monad: apply the function to the value if it's not None.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.util.path_join" title="mlos_bench.util.path_join"><code class="xref py py-obj docutils literal notranslate"><span class="pre">path_join</span></code></a>(→ str)</p></td>
@@ -313,7 +316,7 @@ configs <em>ONLY</em> the keys that are already present in the destination confi
 
 <dl class="py function">
 <dt class="sig sig-object py" id="mlos_bench.util.nullable">
-<span class="sig-prename descclassname"><span class="pre">mlos_bench.util.</span></span><span class="sig-name descname"><span class="pre">nullable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/util.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.util.nullable" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">mlos_bench.util.</span></span><span class="sig-name descname"><span class="pre">nullable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="pre">Ellipsis</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#mlos_bench.util.NullableT" title="mlos_bench.util.NullableT"><span class="pre">NullableT</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#mlos_bench.util.NullableT" title="mlos_bench.util.NullableT"><span class="pre">NullableT</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/util.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.util.nullable" title="Link to this definition"></a></dt>
 <dd><p>Poor man’s Maybe monad: apply the function to the value if it’s not None.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -329,6 +332,15 @@ configs <em>ONLY</em> the keys that are already present in the destination confi
 <dd class="field-odd"><p>Optional[Any]</p>
 </dd>
 </dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">nullable</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">)</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nullable</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nullable</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="go">&#39;1&#39;</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py function">
@@ -487,6 +499,12 @@ convert the timestamp to UTC if it’s not already.</p></li>
 <dt class="sig sig-object py" id="mlos_bench.util.BaseTypes">
 <span class="sig-prename descclassname"><span class="pre">mlos_bench.util.</span></span><span class="sig-name descname"><span class="pre">BaseTypes</span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/util.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.util.BaseTypes" title="Link to this definition"></a></dt>
 <dd><p>Similar to <a class="reference internal" href="#mlos_bench.util.BaseTypeVar" title="mlos_bench.util.BaseTypeVar"><code class="xref py py-data docutils literal notranslate"><span class="pre">BaseTypeVar</span></code></a>, BaseTypes is a Union of the main base classes.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="mlos_bench.util.NullableT">
+<span class="sig-prename descclassname"><span class="pre">mlos_bench.util.</span></span><span class="sig-name descname"><span class="pre">NullableT</span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/util.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.util.NullableT" title="Link to this definition"></a></dt>
+<dd><p>A generic type variable for <a class="reference internal" href="#mlos_bench.util.nullable" title="mlos_bench.util.nullable"><code class="xref py py-func docutils literal notranslate"><span class="pre">nullable()</span></code></a> return types.</p>
 </dd></dl>
 
 </section>
