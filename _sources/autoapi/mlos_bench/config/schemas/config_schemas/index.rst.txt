@@ -179,7 +179,7 @@ Module Contents
 
 .. py:class:: SchemaStore
 
-   Bases: :py:obj:`Mapping`
+   Bases: :py:obj:`collections.abc.Mapping`
 
 
    A simple class for storing schemas and subschemas for the validator to
@@ -192,7 +192,7 @@ Module Contents
 
 
 
-   .. py:method:: __iter__() -> Iterator
+   .. py:method:: __iter__() -> collections.abc.Iterator
 
 
    .. py:method:: __len__() -> int

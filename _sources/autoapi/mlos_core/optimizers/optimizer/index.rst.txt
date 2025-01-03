@@ -20,7 +20,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: BaseOptimizer(*, parameter_space: ConfigSpace.ConfigurationSpace, optimization_targets: List[str], objective_weights: Optional[List[float]] = None, space_adapter: Optional[mlos_core.spaces.adapters.adapter.BaseSpaceAdapter] = None)
+.. py:class:: BaseOptimizer(*, parameter_space: ConfigSpace.ConfigurationSpace, optimization_targets: list[str], objective_weights: list[float] | None = None, space_adapter: mlos_core.spaces.adapters.adapter.BaseSpaceAdapter | None = None)
 
    Optimizer abstract base class defining the basic interface:
    :py:meth:`~.BaseOptimizer.suggest`,
@@ -32,9 +32,9 @@ Module Contents
    :type parameter_space: ConfigSpace.ConfigurationSpace
    :param optimization_targets: The names of the optimization targets to minimize.
                                 To maximize a target, use the negative of the target when registering scores.
-   :type optimization_targets: List[str]
+   :type optimization_targets: list[str]
    :param objective_weights: Optional list of weights of optimization targets.
-   :type objective_weights: Optional[List[float]]
+   :type objective_weights: Optional[list[float]]
    :param space_adapter: The space adapter class to employ for parameter space transformations.
    :type space_adapter: BaseSpaceAdapter
 
@@ -75,7 +75,7 @@ Module Contents
 
 
 
-   .. py:method:: register(observations: Union[mlos_core.data_classes.Observation, mlos_core.data_classes.Observations]) -> None
+   .. py:method:: register(observations: mlos_core.data_classes.Observation | mlos_core.data_classes.Observations) -> None
 
       Register all observations at once. Exactly one of observations or observation
       must be provided.
@@ -98,7 +98,7 @@ Module Contents
 
 
 
-   .. py:method:: suggest(*, context: Optional[pandas.Series] = None, defaults: bool = False) -> mlos_core.data_classes.Suggestion
+   .. py:method:: suggest(*, context: pandas.Series | None = None, defaults: bool = False) -> mlos_core.data_classes.Suggestion
 
       Wrapper method, which employs the space adapter (if any), after suggesting a new
       configuration.
@@ -129,7 +129,7 @@ Module Contents
 
 
    .. py:property:: space_adapter
-      :type: Optional[mlos_core.spaces.adapters.adapter.BaseSpaceAdapter]
+      :type: mlos_core.spaces.adapters.adapter.BaseSpaceAdapter | None
 
 
       Get the space adapter instance (if any).

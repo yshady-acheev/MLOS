@@ -37,7 +37,7 @@ Module Contents
    .. py:method:: __repr__() -> str
 
 
-   .. py:method:: connection() -> Optional[asyncssh.connection.SSHClientConnection]
+   .. py:method:: connection() -> asyncssh.connection.SSHClientConnection | None
       :async:
 
 
@@ -46,7 +46,7 @@ Module Contents
 
 
 
-   .. py:method:: connection_lost(exc: Optional[Exception]) -> None
+   .. py:method:: connection_lost(exc: Exception | None) -> None
 
       Called when a connection is lost or closed
 
@@ -123,7 +123,7 @@ Module Contents
 
 
 
-   .. py:method:: get_client_connection(connect_params: dict) -> Tuple[asyncssh.connection.SSHClientConnection, SshClient]
+   .. py:method:: get_client_connection(connect_params: dict) -> tuple[asyncssh.connection.SSHClientConnection, SshClient]
       :async:
 
 
@@ -133,11 +133,11 @@ Module Contents
       :type connect_params: dict
 
       :returns: A tuple of (SSHClientConnection, SshClient).
-      :rtype: Tuple[asyncssh.connection.SSHClientConnection, SshClient]
+      :rtype: tuple[asyncssh.connection.SSHClientConnection, SshClient]
 
 
 
-.. py:class:: SshService(config: Optional[Dict[str, Any]] = None, global_config: Optional[Dict[str, Any]] = None, parent: Optional[mlos_bench.services.base_service.Service] = None, methods: Union[Dict[str, Callable], List[Callable], None] = None)
+.. py:class:: SshService(config: dict[str, Any] | None = None, global_config: dict[str, Any] | None = None, parent: mlos_bench.services.base_service.Service | None = None, methods: dict[str, collections.abc.Callable] | list[collections.abc.Callable] | None = None)
 
    Bases: :py:obj:`mlos_bench.services.base_service.Service`
 
@@ -155,7 +155,7 @@ Module Contents
    :param parent: An optional parent service that can provide mixin functions.
    :type parent: Service
    :param methods: New methods to register with the service.
-   :type methods: Union[Dict[str, Callable], List[Callable], None]
+   :type methods: Union[dict[str, Callable], list[Callable], None]
 
 
    .. py:method:: clear_client_cache() -> None

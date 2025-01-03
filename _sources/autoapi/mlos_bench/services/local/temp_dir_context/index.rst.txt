@@ -20,7 +20,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: TempDirContextService(config: Optional[Dict[str, Any]] = None, global_config: Optional[Dict[str, Any]] = None, parent: Optional[mlos_bench.services.base_service.Service] = None, methods: Union[Dict[str, Callable], List[Callable], None] = None)
+.. py:class:: TempDirContextService(config: dict[str, Any] | None = None, global_config: dict[str, Any] | None = None, parent: mlos_bench.services.base_service.Service | None = None, methods: dict[str, collections.abc.Callable] | list[collections.abc.Callable] | None = None)
 
    Bases: :py:obj:`mlos_bench.services.base_service.Service`
 
@@ -42,10 +42,10 @@ Module Contents
    :param parent: An optional parent service that can provide mixin functions.
    :type parent: Service
    :param methods: New methods to register with the service.
-   :type methods: Union[Dict[str, Callable], List[Callable], None]
+   :type methods: Union[dict[str, Callable], list[Callable], None]
 
 
-   .. py:method:: temp_dir_context(path: Optional[str] = None) -> Union[tempfile.TemporaryDirectory, contextlib.nullcontext]
+   .. py:method:: temp_dir_context(path: str | None = None) -> tempfile.TemporaryDirectory | contextlib.nullcontext
 
       Create a temp directory or use the provided path.
 

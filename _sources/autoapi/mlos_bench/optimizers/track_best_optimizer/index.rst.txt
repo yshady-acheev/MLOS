@@ -20,7 +20,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: TrackBestOptimizer(tunables: mlos_bench.tunables.tunable_groups.TunableGroups, config: dict, global_config: Optional[dict] = None, service: Optional[mlos_bench.services.base_service.Service] = None)
+.. py:class:: TrackBestOptimizer(tunables: mlos_bench.tunables.tunable_groups.TunableGroups, config: dict, global_config: dict | None = None, service: mlos_bench.services.base_service.Service | None = None)
 
    Bases: :py:obj:`mlos_bench.optimizers.base_optimizer.Optimizer`
 
@@ -35,22 +35,22 @@ Module Contents
    :param config: Free-format key/value pairs of configuration parameters to pass to the optimizer.
    :type config: dict
    :param global_config:
-   :type global_config: Optional[dict]
+   :type global_config: dict | None
    :param service:
-   :type service: Optional[Service]
+   :type service: Service | None
 
 
-   .. py:method:: get_best_observation() -> Union[Tuple[Dict[str, float], mlos_bench.tunables.tunable_groups.TunableGroups], Tuple[None, None]]
+   .. py:method:: get_best_observation() -> tuple[dict[str, float], mlos_bench.tunables.tunable_groups.TunableGroups] | tuple[None, None]
 
       Get the best observation so far.
 
       :returns: **(value, tunables)** -- The best value and the corresponding configuration.
                 (None, None) if no successful observation has been registered yet.
-      :rtype: Tuple[Dict[str, float], TunableGroups]
+      :rtype: tuple[dict[str, float], TunableGroups]
 
 
 
-   .. py:method:: register(tunables: mlos_bench.tunables.tunable_groups.TunableGroups, status: mlos_bench.environments.status.Status, score: Optional[Dict[str, mlos_bench.tunables.tunable.TunableValue]] = None) -> Optional[Dict[str, float]]
+   .. py:method:: register(tunables: mlos_bench.tunables.tunable_groups.TunableGroups, status: mlos_bench.environments.status.Status, score: dict[str, mlos_bench.tunables.tunable.TunableValue] | None = None) -> dict[str, float] | None
 
       Register the observation for the given configuration.
 
@@ -61,11 +61,11 @@ Module Contents
       :type status: Status
       :param score: A dict with the final benchmark results.
                     None if the experiment was not successful.
-      :type score: Optional[Dict[str, TunableValue]]
+      :type score: Optional[dict[str, TunableValue]]
 
       :returns: **value** -- Benchmark scores extracted (and possibly transformed)
                 from the dataframe that's being MINIMIZED.
-      :rtype: Optional[Dict[str, float]]
+      :rtype: Optional[dict[str, float]]
 
 
 

@@ -51,7 +51,7 @@ Module Contents
 
 
 
-.. py:function:: configspace_data_to_tunable_values(data: dict) -> Dict[str, mlos_bench.tunables.tunable.TunableValue]
+.. py:function:: configspace_data_to_tunable_values(data: dict) -> dict[str, mlos_bench.tunables.tunable.TunableValue]
 
    Remove the fields that correspond to special values in ConfigSpace.
 
@@ -84,7 +84,7 @@ Module Contents
    :rtype: str
 
 
-.. py:function:: special_param_names(name: str) -> Tuple[str, str]
+.. py:function:: special_param_names(name: str) -> tuple[str, str]
 
    Generate the names of the auxiliary hyperparameters that correspond to a tunable
    that can have special values.
@@ -98,14 +98,14 @@ Module Contents
              * **type_name** (*str*) -- The name of the hyperparameter that chooses between the regular and the special values.
 
 
-.. py:function:: tunable_groups_to_configspace(tunables: mlos_bench.tunables.tunable_groups.TunableGroups, seed: Optional[int] = None) -> ConfigSpace.ConfigurationSpace
+.. py:function:: tunable_groups_to_configspace(tunables: mlos_bench.tunables.tunable_groups.TunableGroups, seed: int | None = None) -> ConfigSpace.ConfigurationSpace
 
    Convert TunableGroups to  hyperparameters in ConfigurationSpace.
 
    :param tunables: A collection of tunable parameters.
    :type tunables: TunableGroups
    :param seed: Random seed to use.
-   :type seed: Optional[int]
+   :type seed: int | None
 
    :returns: **configspace** -- A new ConfigurationSpace instance that corresponds to the input TunableGroups.
    :rtype: ConfigSpace.ConfigurationSpace

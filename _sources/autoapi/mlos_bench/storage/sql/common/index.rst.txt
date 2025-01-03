@@ -21,7 +21,7 @@ Functions
 Module Contents
 ---------------
 
-.. py:function:: get_results_df(engine: sqlalchemy.engine.Engine, schema: mlos_bench.storage.sql.schema.DbSchema, experiment_id: str, tunable_config_id: Optional[int] = None) -> pandas.DataFrame
+.. py:function:: get_results_df(engine: sqlalchemy.engine.Engine, schema: mlos_bench.storage.sql.schema.DbSchema, experiment_id: str, tunable_config_id: int | None = None) -> pandas.DataFrame
 
    Gets TrialData for the given experiment_id and optionally additionally restricted by
    tunable_config_id.
@@ -34,7 +34,7 @@ Module Contents
    .. seealso:: :py:class:`~mlos_bench.storage.sql.tunable_config_trial_group_data.TunableConfigTrialGroupSqlData`, :py:class:`~mlos_bench.storage.sql.experiment_data.ExperimentSqlData`
 
 
-.. py:function:: get_trials(engine: sqlalchemy.engine.Engine, schema: mlos_bench.storage.sql.schema.DbSchema, experiment_id: str, tunable_config_id: Optional[int] = None) -> Dict[int, mlos_bench.storage.base_trial_data.TrialData]
+.. py:function:: get_trials(engine: sqlalchemy.engine.Engine, schema: mlos_bench.storage.sql.schema.DbSchema, experiment_id: str, tunable_config_id: int | None = None) -> dict[int, mlos_bench.storage.base_trial_data.TrialData]
 
    Gets :py:class:`~.TrialData` for the given ``experiment_id`` and optionally
    additionally restricted by ``tunable_config_id``.

@@ -28,7 +28,7 @@ Module Contents
    Protocol interface for Host/VM provisioning operations.
 
 
-   .. py:method:: deallocate_host(params: dict) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: deallocate_host(params: dict) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Deallocates the Host/VM by shutting it down then releasing the compute
       resources.
@@ -45,7 +45,7 @@ Module Contents
 
 
 
-   .. py:method:: deprovision_host(params: dict) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: deprovision_host(params: dict) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Deprovisions the Host/VM by deleting it.
 
@@ -58,7 +58,7 @@ Module Contents
 
 
 
-   .. py:method:: provision_host(params: dict) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: provision_host(params: dict) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Check if Host/VM is ready. Deploy a new Host/VM, if necessary.
 
@@ -73,7 +73,7 @@ Module Contents
 
 
 
-   .. py:method:: wait_host_deployment(params: dict, *, is_setup: bool) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: wait_host_deployment(params: dict, *, is_setup: bool) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Waits for a pending operation on a Host/VM to resolve to SUCCEEDED or FAILED.
       Return TIMED_OUT when timing out.

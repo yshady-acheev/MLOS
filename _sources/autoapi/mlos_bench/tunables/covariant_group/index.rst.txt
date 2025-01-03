@@ -35,7 +35,7 @@ Module Contents
    :type config: dict
 
 
-   .. py:method:: __contains__(tunable: Union[str, mlos_bench.tunables.tunable.Tunable]) -> bool
+   .. py:method:: __contains__(tunable: str | mlos_bench.tunables.tunable.Tunable) -> bool
 
 
    .. py:method:: __eq__(other: object) -> bool
@@ -50,7 +50,7 @@ Module Contents
 
 
 
-   .. py:method:: __getitem__(tunable: Union[str, mlos_bench.tunables.tunable.Tunable]) -> mlos_bench.tunables.tunable.TunableValue
+   .. py:method:: __getitem__(tunable: str | mlos_bench.tunables.tunable.Tunable) -> mlos_bench.tunables.tunable.TunableValue
 
 
    .. py:method:: __repr__() -> str
@@ -63,7 +63,7 @@ Module Contents
 
 
 
-   .. py:method:: __setitem__(tunable: Union[str, mlos_bench.tunables.tunable.Tunable], tunable_value: Union[mlos_bench.tunables.tunable.TunableValue, mlos_bench.tunables.tunable.Tunable]) -> mlos_bench.tunables.tunable.TunableValue
+   .. py:method:: __setitem__(tunable: str | mlos_bench.tunables.tunable.Tunable, tunable_value: mlos_bench.tunables.tunable.TunableValue | mlos_bench.tunables.tunable.Tunable) -> mlos_bench.tunables.tunable.TunableValue
 
 
    .. py:method:: copy() -> CovariantTunableGroup
@@ -99,13 +99,13 @@ Module Contents
 
 
 
-   .. py:method:: get_names() -> Iterable[str]
+   .. py:method:: get_names() -> collections.abc.Iterable[str]
 
       Get the names of all tunables in the group.
 
 
 
-   .. py:method:: get_tunable(tunable: Union[str, mlos_bench.tunables.tunable.Tunable]) -> mlos_bench.tunables.tunable.Tunable
+   .. py:method:: get_tunable(tunable: str | mlos_bench.tunables.tunable.Tunable) -> mlos_bench.tunables.tunable.Tunable
 
       Access the entire Tunable in a group (not just its value). Throw KeyError if the
       tunable is not in the group.
@@ -118,16 +118,16 @@ Module Contents
 
 
 
-   .. py:method:: get_tunable_values_dict() -> Dict[str, mlos_bench.tunables.tunable.TunableValue]
+   .. py:method:: get_tunable_values_dict() -> dict[str, mlos_bench.tunables.tunable.TunableValue]
 
       Get current values of all tunables in the group as a dict.
 
       :returns: **tunables**
-      :rtype: Dict[str, TunableValue]
+      :rtype: dict[str, TunableValue]
 
 
 
-   .. py:method:: get_tunables() -> Iterable[mlos_bench.tunables.tunable.Tunable]
+   .. py:method:: get_tunables() -> collections.abc.Iterable[mlos_bench.tunables.tunable.Tunable]
 
       Gets the set of tunables for this CovariantTunableGroup.
 

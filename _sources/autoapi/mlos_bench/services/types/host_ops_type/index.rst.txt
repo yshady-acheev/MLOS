@@ -28,7 +28,7 @@ Module Contents
    Protocol interface for Host/VM boot operations.
 
 
-   .. py:method:: restart_host(params: dict, force: bool = False) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: restart_host(params: dict, force: bool = False) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Restarts the host by initiating a (graceful) shutdown.
 
@@ -43,7 +43,7 @@ Module Contents
 
 
 
-   .. py:method:: start_host(params: dict) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: start_host(params: dict) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Start a Host/VM.
 
@@ -56,7 +56,7 @@ Module Contents
 
 
 
-   .. py:method:: stop_host(params: dict, force: bool = False) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: stop_host(params: dict, force: bool = False) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Stops the Host/VM by initiating a (graceful) shutdown.
 
@@ -71,7 +71,7 @@ Module Contents
 
 
 
-   .. py:method:: wait_host_operation(params: dict) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: wait_host_operation(params: dict) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Waits for a pending operation on a Host/VM to resolve to SUCCEEDED or FAILED.
       Return TIMED_OUT when timing out.

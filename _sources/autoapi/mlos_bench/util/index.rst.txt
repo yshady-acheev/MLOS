@@ -43,7 +43,7 @@ Functions
 Module Contents
 ---------------
 
-.. py:function:: check_required_params(config: Mapping[str, Any], required_params: Iterable[str]) -> None
+.. py:function:: check_required_params(config: collections.abc.Mapping[str, Any], required_params: collections.abc.Iterable[str]) -> None
 
    Check if all required parameters are present in the configuration. Raise ValueError
    if any of the parameters are missing.
@@ -82,7 +82,7 @@ Module Contents
    :rtype: type
 
 
-.. py:function:: get_git_info(path: str = __file__) -> Tuple[str, str, str]
+.. py:function:: get_git_info(path: str = __file__) -> tuple[str, str, str]
 
    Get the git repository, commit hash, and local path of the given file.
 
@@ -90,10 +90,10 @@ Module Contents
    :type path: str
 
    :returns: **(git_repo, git_commit, git_path)** -- Git repository URL, last commit hash, and relative file path.
-   :rtype: Tuple[str, str, str]
+   :rtype: tuple[str, str, str]
 
 
-.. py:function:: instantiate_from_config(base_class: Type[BaseTypeVar], class_name: str, *args: Any, **kwargs: Any) -> BaseTypeVar
+.. py:function:: instantiate_from_config(base_class: type[BaseTypeVar], class_name: str, *args: Any, **kwargs: Any) -> BaseTypeVar
 
    Factory method for a new class instantiated from config.
 
@@ -113,7 +113,7 @@ Module Contents
    :rtype: Union[Environment, Service, Optimizer, Storage]
 
 
-.. py:function:: merge_parameters(*, dest: dict, source: Optional[dict] = None, required_keys: Optional[Iterable[str]] = None) -> dict
+.. py:function:: merge_parameters(*, dest: dict, source: dict | None = None, required_keys: collections.abc.Iterable[str] | None = None) -> dict
 
    Merge the source config dict into the destination config. Pick from the source
    configs *ONLY* the keys that are already present in the destination config.
@@ -121,7 +121,7 @@ Module Contents
    :param dest: Destination config.
    :type dest: dict
    :param source: Source config.
-   :type source: Optional[dict]
+   :type source: dict | None
    :param required_keys: An optional list of keys that must be present in the destination config.
    :type required_keys: Optional[Iterable[str]]
 
@@ -129,17 +129,17 @@ Module Contents
    :rtype: dict
 
 
-.. py:function:: nullable(func: Callable[Ellipsis, NullableT], value: Optional[Any]) -> Optional[NullableT]
+.. py:function:: nullable(func: collections.abc.Callable[Ellipsis, NullableT], value: Any | None) -> NullableT | None
 
    Poor man's Maybe monad: apply the function to the value if it's not None.
 
    :param func: Function to apply to the value.
    :type func: Callable
    :param value: Value to apply the function to.
-   :type value: Optional[Any]
+   :type value: Any | None
 
    :returns: **value** -- The result of the function application or None if the value is None.
-   :rtype: Optional[Any]
+   :rtype: NullableT | None
 
    .. rubric:: Examples
 
@@ -164,7 +164,7 @@ Module Contents
    :rtype: str
 
 
-.. py:function:: prepare_class_load(config: dict, global_config: Optional[Dict[str, Any]] = None) -> Tuple[str, Dict[str, Any]]
+.. py:function:: prepare_class_load(config: dict, global_config: dict[str, Any] | None = None) -> tuple[str, dict[str, Any]]
 
    Extract the class instantiation parameters from the configuration.
 
@@ -177,7 +177,7 @@ Module Contents
    :rtype: (str, dict)
 
 
-.. py:function:: preprocess_dynamic_configs(*, dest: dict, source: Optional[dict] = None) -> dict
+.. py:function:: preprocess_dynamic_configs(*, dest: dict, source: dict | None = None) -> dict
 
    Replaces all ``$name`` values in the destination config with the corresponding value
    from the source config.
@@ -185,7 +185,7 @@ Module Contents
    :param dest: Destination config.
    :type dest: dict
    :param source: Source config.
-   :type source: Optional[dict]
+   :type source: dict | None
 
    :returns: **dest** -- A reference to the destination config after the preprocessing.
    :rtype: dict
@@ -202,7 +202,7 @@ Module Contents
    :raises ValueError: If 'val' is anything else.
 
 
-.. py:function:: try_parse_val(val: Optional[str]) -> Optional[Union[int, float, str]]
+.. py:function:: try_parse_val(val: str | None) -> int | float | str | None
 
    Try to parse the value as an int or float, otherwise return the string.
 
@@ -216,7 +216,7 @@ Module Contents
    :rtype: TunableValue
 
 
-.. py:function:: utcify_nullable_timestamp(timestamp: Optional[datetime.datetime], *, origin: Literal['utc', 'local']) -> Optional[datetime.datetime]
+.. py:function:: utcify_nullable_timestamp(timestamp: datetime.datetime | None, *, origin: Literal['utc', 'local']) -> datetime.datetime | None
 
    A nullable version of utcify_timestamp.
 

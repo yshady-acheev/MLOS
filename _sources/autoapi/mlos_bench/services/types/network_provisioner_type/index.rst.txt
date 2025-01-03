@@ -28,7 +28,7 @@ Module Contents
    Protocol interface for Network provisioning operations.
 
 
-   .. py:method:: deprovision_network(params: dict, ignore_errors: bool = True) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: deprovision_network(params: dict, ignore_errors: bool = True) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Deprovisions the Network by deleting it.
 
@@ -44,7 +44,7 @@ Module Contents
 
 
 
-   .. py:method:: provision_network(params: dict) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: provision_network(params: dict) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Check if Network is ready. Deploy a new Network, if necessary.
 
@@ -59,7 +59,7 @@ Module Contents
 
 
 
-   .. py:method:: wait_network_deployment(params: dict, *, is_setup: bool) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: wait_network_deployment(params: dict, *, is_setup: bool) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Waits for a pending operation on a Network to resolve to SUCCEEDED or FAILED.
       Return TIMED_OUT when timing out.

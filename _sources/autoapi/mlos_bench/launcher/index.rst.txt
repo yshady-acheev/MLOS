@@ -24,7 +24,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: Launcher(description: str, long_text: str = '', argv: Optional[List[str]] = None)
+.. py:class:: Launcher(description: str, long_text: str = '', argv: list[str] | None = None)
 
    Command line launcher for mlos_bench and mlos_core.
 

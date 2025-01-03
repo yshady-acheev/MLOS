@@ -24,7 +24,7 @@ Functions
 Module Contents
 ---------------
 
-.. py:function:: augment_results_df_with_config_trial_group_stats(exp_data: Optional[mlos_bench.storage.base_experiment_data.ExperimentData] = None, *, results_df: Optional[pandas.DataFrame] = None, requested_result_cols: Optional[Iterable[str]] = None) -> pandas.DataFrame
+.. py:function:: augment_results_df_with_config_trial_group_stats(exp_data: mlos_bench.storage.base_experiment_data.ExperimentData | None = None, *, results_df: pandas.DataFrame | None = None, requested_result_cols: collections.abc.Iterable[str] | None = None) -> pandas.DataFrame
 
    Add a number of useful statistical measure columns to the results dataframe.
 
@@ -59,7 +59,7 @@ Module Contents
    :param exp_data: The ExperimentData (e.g., obtained from the storage layer) to plot.
    :type exp_data: ExperimentData
    :param results_df: The results dataframe to augment, by default None to use the results_df property.
-   :type results_df: Optional[pandas.DataFrame]
+   :type results_df: pandas.DataFrame | None
    :param requested_result_cols: Which results columns to augment, by default None to use all results columns
                                  that look numeric.
    :type requested_result_cols: Optional[Iterable[str]]
@@ -74,16 +74,16 @@ Module Contents
    adding them to the warnings filter.
 
 
-.. py:function:: limit_top_n_configs(exp_data: Optional[mlos_bench.storage.base_experiment_data.ExperimentData] = None, *, results_df: Optional[pandas.DataFrame] = None, objectives: Optional[Dict[str, Literal['min', 'max']]] = None, top_n_configs: int = 10, method: Literal['mean', 'p50', 'p75', 'p90', 'p95', 'p99'] = 'mean') -> Tuple[pandas.DataFrame, List[int], Dict[str, bool]]
+.. py:function:: limit_top_n_configs(exp_data: mlos_bench.storage.base_experiment_data.ExperimentData | None = None, *, results_df: pandas.DataFrame | None = None, objectives: dict[str, Literal['min', 'max']] | None = None, top_n_configs: int = 10, method: Literal['mean', 'p50', 'p75', 'p90', 'p95', 'p99'] = 'mean') -> tuple[pandas.DataFrame, list[int], dict[str, bool]]
 
    Utility function to process the results and determine the best performing configs
    including potential repeats to help assess variability.
 
    :param exp_data: The ExperimentData (e.g., obtained from the storage layer) to operate on.
-   :type exp_data: Optional[ExperimentData]
+   :type exp_data: ExperimentData | None
    :param results_df: The results dataframe to augment, by default None to use
                       :py:attr:`.ExperimentData.results_df` property.
-   :type results_df: Optional[pandas.DataFrame]
+   :type results_df: pandas.DataFrame | None
    :param objectives: Which result column(s) to use for sorting the configs, and in which
                       direction ("min" or "max").
                       By default None to automatically select the :py:attr:`.ExperimentData.objectives`.
@@ -95,11 +95,11 @@ Module Contents
    :type method: Literal["mean", "median", "p50", "p75", "p90", "p95", "p99"] = "mean",
 
    :returns: * *(top_n_config_results_df, top_n_config_ids, orderby_cols)*
-             * *Tuple[pandas.DataFrame, List[int], Dict[str, bool]]* -- The filtered results dataframe, the config ids, and the columns used to
+             * *tuple[pandas.DataFrame, list[int], dict[str, bool]]* -- The filtered results dataframe, the config ids, and the columns used to
                order the configs.
 
 
-.. py:function:: plot_optimizer_trends(exp_data: Optional[mlos_bench.storage.base_experiment_data.ExperimentData] = None, *, results_df: Optional[pandas.DataFrame] = None, objectives: Optional[Dict[str, Literal['min', 'max']]] = None) -> None
+.. py:function:: plot_optimizer_trends(exp_data: mlos_bench.storage.base_experiment_data.ExperimentData | None = None, *, results_df: pandas.DataFrame | None = None, objectives: dict[str, Literal['min', 'max']] | None = None) -> None
 
    Plots the optimizer trends for the Experiment.
 
@@ -107,13 +107,13 @@ Module Contents
    :type exp_data: ExperimentData
    :param results_df: Optional results_df to plot.
                       If not provided, defaults to :py:attr:`.ExperimentData.results_df` property.
-   :type results_df: Optional[pandas.DataFrame]
+   :type results_df: pandas.DataFrame | None
    :param objectives: Optional objectives to plot.
                       If not provided, defaults to :py:attr:`.ExperimentData.objectives` property.
-   :type objectives: Optional[Dict[str, Literal["min", "max"]]]
+   :type objectives: Optional[dict[str, Literal["min", "max"]]]
 
 
-.. py:function:: plot_top_n_configs(exp_data: Optional[mlos_bench.storage.base_experiment_data.ExperimentData] = None, *, results_df: Optional[pandas.DataFrame] = None, objectives: Optional[Dict[str, Literal['min', 'max']]] = None, with_scatter_plot: bool = False, **kwargs: Any) -> None
+.. py:function:: plot_top_n_configs(exp_data: mlos_bench.storage.base_experiment_data.ExperimentData | None = None, *, results_df: pandas.DataFrame | None = None, objectives: dict[str, Literal['min', 'max']] | None = None, with_scatter_plot: bool = False, **kwargs: Any) -> None
 
    Plots the top-N configs along with the default config for the given
    :py:class:`.ExperimentData`.
@@ -124,10 +124,10 @@ Module Contents
    :type exp_data: ExperimentData
    :param results_df: Optional results_df to plot.
                       If not provided, defaults to :py:attr:`.ExperimentData.results_df` property.
-   :type results_df: Optional[pandas.DataFrame]
+   :type results_df: pandas.DataFrame | None
    :param objectives: Optional objectives to plot.
                       If not provided, defaults to :py:attr:`.ExperimentData.objectives` property.
-   :type objectives: Optional[Dict[str, Literal["min", "max"]]]
+   :type objectives: Optional[dict[str, Literal["min", "max"]]]
    :param with_scatter_plot: Whether to also add scatter plot to the output figure.
    :type with_scatter_plot: bool
    :param kwargs: Remaining keyword arguments are passed along to the

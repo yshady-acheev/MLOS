@@ -28,7 +28,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: TrialData(*, experiment_id: str, trial_id: int, tunable_config_id: int, ts_start: datetime.datetime, ts_end: Optional[datetime.datetime], status: mlos_bench.environments.status.Status)
+.. py:class:: TrialData(*, experiment_id: str, trial_id: int, tunable_config_id: int, ts_start: datetime.datetime, ts_end: datetime.datetime | None, status: mlos_bench.environments.status.Status)
 
    Base interface for accessing the stored experiment benchmark trial data.
 
@@ -92,7 +92,7 @@ Module Contents
 
 
    .. py:property:: results_dict
-      :type: Dict[str, Optional[mlos_bench.tunables.tunable.TunableValue]]
+      :type: dict[str, mlos_bench.tunables.tunable.TunableValue | None]
 
 
       Retrieve the trials' results from the storage as a dict.
@@ -131,7 +131,7 @@ Module Contents
 
 
    .. py:property:: ts_end
-      :type: Optional[datetime.datetime]
+      :type: datetime.datetime | None
 
 
       End timestamp of the trial (UTC).

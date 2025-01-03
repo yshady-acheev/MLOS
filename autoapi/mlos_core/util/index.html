@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_core.util &mdash; MLOS 0.6.2.dev42+g65cb0da2e8 documentation</title>
+  <title>mlos_core.util &mdash; MLOS 0.6.2.dev43+g795d1b03c6 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
@@ -15,7 +15,7 @@
   
       <script src="../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../_static/documentation_options.js?v=fcb913ad"></script>
+      <script src="../../../_static/documentation_options.js?v=39539cd3"></script>
       <script src="../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -146,12 +146,12 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>left</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.2.3)"><em>pandas.DataFrame</em></a><em>]</em>) – The left DataFrame to compare</p></li>
-<li><p><strong>right</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.2.3)"><em>pandas.DataFrame</em></a><em>]</em>) – The right DataFrame to compare</p></li>
+<li><p><strong>left</strong> (<a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.2.3)"><em>pandas.DataFrame</em></a><em> | </em><em>None</em>) – The left DataFrame to compare</p></li>
+<li><p><strong>right</strong> (<a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.2.3)"><em>pandas.DataFrame</em></a><em> | </em><em>None</em>) – The right DataFrame to compare</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Compare the equality of two Optional[pd.DataFrame] objects</p>
+<dd class="field-even"><p>Compare the equality of two pd.DataFrame | None objects</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)">bool</a></p>
@@ -166,12 +166,12 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>left</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.Series.html#pandas.Series" title="(in pandas v2.2.3)"><em>pandas.Series</em></a><em>]</em>) – The left Series to compare</p></li>
-<li><p><strong>right</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.Series.html#pandas.Series" title="(in pandas v2.2.3)"><em>pandas.Series</em></a><em>]</em>) – The right Series to compare</p></li>
+<li><p><strong>left</strong> (<a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.Series.html#pandas.Series" title="(in pandas v2.2.3)"><em>pandas.Series</em></a><em> | </em><em>None</em>) – The left Series to compare</p></li>
+<li><p><strong>right</strong> (<a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.Series.html#pandas.Series" title="(in pandas v2.2.3)"><em>pandas.Series</em></a><em> | </em><em>None</em>) – The right Series to compare</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Compare the equality of two Optional[pd.Series] objects</p>
+<dd class="field-even"><p>Compare the equality of two pd.Series | None objects</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)">bool</a></p>

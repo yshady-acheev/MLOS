@@ -86,7 +86,7 @@ Package Contents
    :type plotter_method: MlosVizMethod
 
 
-.. py:function:: plot(exp_data: Optional[mlos_bench.storage.base_experiment_data.ExperimentData] = None, *, results_df: Optional[pandas.DataFrame] = None, objectives: Optional[Dict[str, Literal['min', 'max']]] = None, plotter_method: MlosVizMethod = MlosVizMethod.AUTO, filter_warnings: bool = True, **kwargs: Any) -> None
+.. py:function:: plot(exp_data: mlos_bench.storage.base_experiment_data.ExperimentData | None = None, *, results_df: pandas.DataFrame | None = None, objectives: dict[str, Literal['min', 'max']] | None = None, plotter_method: MlosVizMethod = MlosVizMethod.AUTO, filter_warnings: bool = True, **kwargs: Any) -> None
 
    Plots the results of the experiment.
 
@@ -96,10 +96,10 @@ Package Contents
    :type exp_data: ExperimentData
    :param results_df: Optional `results_df` to plot.
                       If not provided, defaults to :py:attr:`.ExperimentData.results_df` property.
-   :type results_df: Optional[pandas.DataFrame]
+   :type results_df: pandas.DataFrame | None
    :param objectives: Optional objectives to plot.
                       If not provided, defaults to :py:attr:`.ExperimentData.objectives` property.
-   :type objectives: Optional[Dict[str, Literal["min", "max"]]]
+   :type objectives: Optional[dict[str, Literal["min", "max"]]]
    :param plotter_method: The method to use for visualizing the experiment results.
    :type plotter_method: MlosVizMethod
    :param filter_warnings: Whether or not to filter some warnings from the plotter.

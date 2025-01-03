@@ -28,7 +28,7 @@ Module Contents
    Protocol interface for Host/OS operations.
 
 
-   .. py:method:: reboot(params: dict, force: bool = False) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: reboot(params: dict, force: bool = False) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Initiates a (graceful) shutdown of the Host/VM OS.
 
@@ -43,7 +43,7 @@ Module Contents
 
 
 
-   .. py:method:: shutdown(params: dict, force: bool = False) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: shutdown(params: dict, force: bool = False) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Initiates a (graceful) shutdown of the Host/VM OS.
 
@@ -58,7 +58,7 @@ Module Contents
 
 
 
-   .. py:method:: wait_os_operation(params: dict) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: wait_os_operation(params: dict) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Waits for a pending operation on an OS to resolve to SUCCEEDED or FAILED. Return
       TIMED_OUT when timing out.

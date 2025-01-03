@@ -28,7 +28,7 @@ Module Contents
    Protocol interface for VM provisioning operations.
 
 
-   .. py:method:: vm_deprovision(params: dict) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: vm_deprovision(params: dict) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Deallocates the VM by shutting it down then releasing the compute resources.
 
@@ -41,7 +41,7 @@ Module Contents
 
 
 
-   .. py:method:: vm_provision(params: dict) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: vm_provision(params: dict) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Check if VM is ready. Deploy a new VM, if necessary.
 
@@ -56,7 +56,7 @@ Module Contents
 
 
 
-   .. py:method:: vm_restart(params: dict) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: vm_restart(params: dict) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Restarts the VM by initiating a graceful shutdown.
 
@@ -69,7 +69,7 @@ Module Contents
 
 
 
-   .. py:method:: vm_start(params: dict) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: vm_start(params: dict) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Start a VM.
 
@@ -82,7 +82,7 @@ Module Contents
 
 
 
-   .. py:method:: vm_stop(params: dict) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: vm_stop(params: dict) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Stops the VM by initiating a graceful shutdown.
 
@@ -95,7 +95,7 @@ Module Contents
 
 
 
-   .. py:method:: wait_vm_deployment(is_setup: bool, params: dict) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: wait_vm_deployment(is_setup: bool, params: dict) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Waits for a pending operation on an Azure VM to resolve to SUCCEEDED or FAILED.
       Return TIMED_OUT when timing out.
@@ -112,7 +112,7 @@ Module Contents
 
 
 
-   .. py:method:: wait_vm_operation(params: dict) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: wait_vm_operation(params: dict) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Waits for a pending operation on a VM to resolve to SUCCEEDED or FAILED. Return
       TIMED_OUT when timing out.

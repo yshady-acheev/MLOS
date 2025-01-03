@@ -20,7 +20,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: FileShareService(config: Optional[Dict[str, Any]] = None, global_config: Optional[Dict[str, Any]] = None, parent: Optional[mlos_bench.services.base_service.Service] = None, methods: Union[Dict[str, Callable], List[Callable], None] = None)
+.. py:class:: FileShareService(config: dict[str, Any] | None = None, global_config: dict[str, Any] | None = None, parent: mlos_bench.services.base_service.Service | None = None, methods: dict[str, collections.abc.Callable] | list[collections.abc.Callable] | None = None)
 
    Bases: :py:obj:`mlos_bench.services.base_service.Service`, :py:obj:`mlos_bench.services.types.fileshare_type.SupportsFileShareOps`
 
@@ -38,7 +38,7 @@ Module Contents
    :param parent: Parent service that can provide mixin functions.
    :type parent: Service
    :param methods: New methods to register with the service.
-   :type methods: Union[Dict[str, Callable], List[Callable], None]
+   :type methods: Union[dict[str, Callable], list[Callable], None]
 
 
    .. py:method:: download(params: dict, remote_path: str, local_path: str, recursive: bool = True) -> None

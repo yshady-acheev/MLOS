@@ -54,7 +54,7 @@ Module Contents
 
 
 
-   .. py:method:: run_coroutine(coro: Coroutine[Any, Any, CoroReturnType]) -> FutureReturnType
+   .. py:method:: run_coroutine(coro: collections.abc.Coroutine[Any, Any, CoroReturnType]) -> FutureReturnType
 
       Runs the given coroutine in the background event loop thread and returns a
       Future that can be used to wait for the result.

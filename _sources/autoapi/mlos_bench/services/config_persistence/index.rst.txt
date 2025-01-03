@@ -22,7 +22,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: ConfigPersistenceService(config: Optional[Dict[str, Any]] = None, global_config: Optional[Dict[str, Any]] = None, parent: Optional[mlos_bench.services.base_service.Service] = None, methods: Union[Dict[str, Callable], List[Callable], None] = None)
+.. py:class:: ConfigPersistenceService(config: dict[str, Any] | None = None, global_config: dict[str, Any] | None = None, parent: mlos_bench.services.base_service.Service | None = None, methods: dict[str, collections.abc.Callable] | list[collections.abc.Callable] | None = None)
 
    Bases: :py:obj:`mlos_bench.services.base_service.Service`, :py:obj:`mlos_bench.services.types.config_loader_type.SupportsConfigLoading`
 
@@ -40,10 +40,10 @@ Module Contents
    :param parent: An optional parent service that can provide mixin functions.
    :type parent: Service
    :param methods: New methods to register with the service.
-   :type methods: Union[Dict[str, Callable], List[Callable], None]
+   :type methods: Union[dict[str, Callable], list[Callable], None]
 
 
-   .. py:method:: build_environment(config: Dict[str, Any], tunables: mlos_bench.tunables.tunable_groups.TunableGroups, global_config: Optional[Dict[str, Any]] = None, parent_args: Optional[Dict[str, mlos_bench.tunables.tunable.TunableValue]] = None, service: Optional[mlos_bench.services.base_service.Service] = None) -> mlos_bench.environments.base_environment.Environment
+   .. py:method:: build_environment(config: dict[str, Any], tunables: mlos_bench.tunables.tunable_groups.TunableGroups, global_config: dict[str, Any] | None = None, parent_args: dict[str, mlos_bench.tunables.tunable.TunableValue] | None = None, service: mlos_bench.services.base_service.Service | None = None) -> mlos_bench.environments.base_environment.Environment
 
       Factory method for a new :py:class:`.Environment` with a given config.
 
@@ -60,7 +60,7 @@ Module Contents
       :type global_config: dict
       :param parent_args: An optional reference of the parent CompositeEnv's const_args used to
                           expand dynamic config parameters from.
-      :type parent_args: Dict[str, TunableValue]
+      :type parent_args: dict[str, TunableValue]
       :param service: An optional service object (e.g., providing methods to
                       deploy or reboot a VM, etc.).
       :type service: Service
@@ -70,7 +70,7 @@ Module Contents
 
 
 
-   .. py:method:: build_optimizer(*, tunables: mlos_bench.tunables.tunable_groups.TunableGroups, service: mlos_bench.services.base_service.Service, config: Dict[str, Any], global_config: Optional[Dict[str, Any]] = None) -> mlos_bench.optimizers.base_optimizer.Optimizer
+   .. py:method:: build_optimizer(*, tunables: mlos_bench.tunables.tunable_groups.TunableGroups, service: mlos_bench.services.base_service.Service, config: dict[str, Any], global_config: dict[str, Any] | None = None) -> mlos_bench.optimizers.base_optimizer.Optimizer
 
       Instantiation of :py:mod:`mlos_bench` :py:class:`.Optimizer` that depend on
       :py:class:`.Service` and :py:class:`.TunableGroups`.
@@ -90,7 +90,7 @@ Module Contents
 
 
 
-   .. py:method:: build_scheduler(*, config: Dict[str, Any], global_config: Dict[str, Any], environment: mlos_bench.environments.base_environment.Environment, optimizer: mlos_bench.optimizers.base_optimizer.Optimizer, storage: mlos_bench.storage.base_storage.Storage, root_env_config: str) -> mlos_bench.schedulers.base_scheduler.Scheduler
+   .. py:method:: build_scheduler(*, config: dict[str, Any], global_config: dict[str, Any], environment: mlos_bench.environments.base_environment.Environment, optimizer: mlos_bench.optimizers.base_optimizer.Optimizer, storage: mlos_bench.storage.base_storage.Storage, root_env_config: str) -> mlos_bench.schedulers.base_scheduler.Scheduler
 
       Instantiation of mlos_bench :py:class:`.Scheduler`.
 
@@ -112,7 +112,7 @@ Module Contents
 
 
 
-   .. py:method:: build_service(config: Dict[str, Any], global_config: Optional[Dict[str, Any]] = None, parent: Optional[mlos_bench.services.base_service.Service] = None) -> mlos_bench.services.base_service.Service
+   .. py:method:: build_service(config: dict[str, Any], global_config: dict[str, Any] | None = None, parent: mlos_bench.services.base_service.Service | None = None) -> mlos_bench.services.base_service.Service
 
       Factory method for a new service with a given config.
 
@@ -132,7 +132,7 @@ Module Contents
 
 
 
-   .. py:method:: build_storage(*, service: mlos_bench.services.base_service.Service, config: Dict[str, Any], global_config: Optional[Dict[str, Any]] = None) -> mlos_bench.storage.base_storage.Storage
+   .. py:method:: build_storage(*, service: mlos_bench.services.base_service.Service, config: dict[str, Any], global_config: dict[str, Any] | None = None) -> mlos_bench.storage.base_storage.Storage
 
       Instantiation of mlos_bench :py:class:`.Storage` objects.
 
@@ -148,7 +148,7 @@ Module Contents
 
 
 
-   .. py:method:: load_config(json: str, schema_type: Optional[mlos_bench.config.schemas.config_schemas.ConfigSchema]) -> Dict[str, Any]
+   .. py:method:: load_config(json: str, schema_type: mlos_bench.config.schemas.config_schemas.ConfigSchema | None) -> dict[str, Any]
 
       Load JSON config file or JSON string. Search for a file relative to
       :py:attr:`.config_paths` if the input path is not absolute. This method is
@@ -158,14 +158,14 @@ Module Contents
       :param json: Path to the input config file or a JSON string.
       :type json: str
       :param schema_type: The schema type to validate the config against.
-      :type schema_type: Optional[ConfigSchema]
+      :type schema_type: ConfigSchema | None
 
       :returns: **config** -- Free-format dictionary that contains the configuration.
-      :rtype: Union[dict, List[dict]]
+      :rtype: Union[dict, list[dict]]
 
 
 
-   .. py:method:: load_environment(json: str, tunables: mlos_bench.tunables.tunable_groups.TunableGroups, global_config: Optional[Dict[str, Any]] = None, parent_args: Optional[Dict[str, mlos_bench.tunables.tunable.TunableValue]] = None, service: Optional[mlos_bench.services.base_service.Service] = None) -> mlos_bench.environments.base_environment.Environment
+   .. py:method:: load_environment(json: str, tunables: mlos_bench.tunables.tunable_groups.TunableGroups, global_config: dict[str, Any] | None = None, parent_args: dict[str, mlos_bench.tunables.tunable.TunableValue] | None = None, service: mlos_bench.services.base_service.Service | None = None) -> mlos_bench.environments.base_environment.Environment
 
       Load and build new :py:class:`.Environment` from the config file or JSON string.
 
@@ -177,7 +177,7 @@ Module Contents
       :type global_config: dict
       :param parent_args: An optional reference of the parent CompositeEnv's const_args used to
                           expand dynamic config parameters from.
-      :type parent_args: Dict[str, TunableValue]
+      :type parent_args: dict[str, TunableValue]
       :param service: An optional reference of the parent service to mix in.
       :type service: Service
 
@@ -186,7 +186,7 @@ Module Contents
 
 
 
-   .. py:method:: load_environment_list(json: str, tunables: mlos_bench.tunables.tunable_groups.TunableGroups, global_config: Optional[Dict[str, Any]] = None, parent_args: Optional[Dict[str, mlos_bench.tunables.tunable.TunableValue]] = None, service: Optional[mlos_bench.services.base_service.Service] = None) -> List[mlos_bench.environments.base_environment.Environment]
+   .. py:method:: load_environment_list(json: str, tunables: mlos_bench.tunables.tunable_groups.TunableGroups, global_config: dict[str, Any] | None = None, parent_args: dict[str, mlos_bench.tunables.tunable.TunableValue] | None = None, service: mlos_bench.services.base_service.Service | None = None) -> list[mlos_bench.environments.base_environment.Environment]
 
       Load and build a list of Environments from the config file or JSON string.
 
@@ -201,14 +201,14 @@ Module Contents
       :type service: Service
       :param parent_args: An optional reference of the parent CompositeEnv's const_args used to
                           expand dynamic config parameters from.
-      :type parent_args: Dict[str, TunableValue]
+      :type parent_args: dict[str, TunableValue]
 
       :returns: **env** -- A list of new benchmarking environments.
-      :rtype: List[Environment]
+      :rtype: list[Environment]
 
 
 
-   .. py:method:: load_services(jsons: Iterable[str], global_config: Optional[Dict[str, Any]] = None, parent: Optional[mlos_bench.services.base_service.Service] = None) -> mlos_bench.services.base_service.Service
+   .. py:method:: load_services(jsons: collections.abc.Iterable[str], global_config: dict[str, Any] | None = None, parent: mlos_bench.services.base_service.Service | None = None) -> mlos_bench.services.base_service.Service
 
       Read the configuration files or JSON strings and bundle all Service methods from
       those configs into a single Service object.
@@ -230,7 +230,7 @@ Module Contents
 
 
 
-   .. py:method:: load_tunables(jsons: Iterable[str], parent: Optional[mlos_bench.tunables.tunable_groups.TunableGroups] = None) -> mlos_bench.tunables.tunable_groups.TunableGroups
+   .. py:method:: load_tunables(jsons: collections.abc.Iterable[str], parent: mlos_bench.tunables.tunable_groups.TunableGroups | None = None) -> mlos_bench.tunables.tunable_groups.TunableGroups
 
       Load a collection of tunable parameters from JSON files or strings into the
       parent TunableGroup.
@@ -249,7 +249,7 @@ Module Contents
 
 
 
-   .. py:method:: prepare_class_load(config: Dict[str, Any], global_config: Optional[Dict[str, Any]] = None, parent_args: Optional[Dict[str, mlos_bench.tunables.tunable.TunableValue]] = None) -> Tuple[str, Dict[str, Any]]
+   .. py:method:: prepare_class_load(config: dict[str, Any], global_config: dict[str, Any] | None = None, parent_args: dict[str, mlos_bench.tunables.tunable.TunableValue] | None = None) -> tuple[str, dict[str, Any]]
 
       Extract the class instantiation parameters from the configuration. Mix-in the
       global parameters and resolve the local file system paths, where it is required.
@@ -260,14 +260,14 @@ Module Contents
       :type global_config: dict
       :param parent_args: An optional reference of the parent CompositeEnv's const_args used to
                           expand dynamic config parameters from.
-      :type parent_args: Dict[str, TunableValue]
+      :type parent_args: dict[str, TunableValue]
 
       :returns: **(class_name, class_config)** -- Name of the class to instantiate and its configuration.
       :rtype: (str, dict)
 
 
 
-   .. py:method:: resolve_path(file_path: str, extra_paths: Optional[Iterable[str]] = None) -> str
+   .. py:method:: resolve_path(file_path: str, extra_paths: collections.abc.Iterable[str] | None = None) -> str
 
       Resolves and prepends the suitable :py:attr:`.config_paths` to ``file_path`` if
       the latter is not absolute. If :py:attr:`.config_paths` is ``None`` or
@@ -293,11 +293,11 @@ Module Contents
 
 
    .. py:property:: config_paths
-      :type: List[str]
+      :type: list[str]
 
 
       Gets the list of config paths this service will search for config files.
 
-      :rtype: List[str]
+      :rtype: list[str]
 
 

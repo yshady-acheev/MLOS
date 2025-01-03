@@ -20,7 +20,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: Service(config: Optional[Dict[str, Any]] = None, global_config: Optional[Dict[str, Any]] = None, parent: Optional[Service] = None, methods: Union[Dict[str, Callable], List[Callable], None] = None)
+.. py:class:: Service(config: dict[str, Any] | None = None, global_config: dict[str, Any] | None = None, parent: Service | None = None, methods: dict[str, collections.abc.Callable] | list[collections.abc.Callable] | None = None)
 
    An abstract base of all Environment Services and used to build up mix-ins.
 
@@ -35,7 +35,7 @@ Module Contents
    :param parent: An optional parent service that can provide mixin functions.
    :type parent: Service
    :param methods: New methods to register with the service.
-   :type methods: Union[Dict[str, Callable], List[Callable], None]
+   :type methods: Union[dict[str, Callable], list[Callable], None]
 
 
    .. py:method:: __enter__() -> Service
@@ -46,7 +46,7 @@ Module Contents
 
 
 
-   .. py:method:: __exit__(ex_type: Optional[Type[BaseException]], ex_val: Optional[BaseException], ex_tb: Optional[types.TracebackType]) -> Literal[False]
+   .. py:method:: __exit__(ex_type: type[BaseException] | None, ex_val: BaseException | None, ex_tb: types.TracebackType | None) -> Literal[False]
 
       Exit the Service mix-in context.
 
@@ -57,7 +57,7 @@ Module Contents
    .. py:method:: __repr__() -> str
 
 
-   .. py:method:: export() -> Dict[str, Callable]
+   .. py:method:: export() -> dict[str, collections.abc.Callable]
 
       Return a dictionary of functions available in this service.
 
@@ -66,7 +66,7 @@ Module Contents
 
 
 
-   .. py:method:: merge_methods(ext_methods: Union[Dict[str, Callable], List[Callable], None], local_methods: Union[Dict[str, Callable], List[Callable]]) -> Dict[str, Callable]
+   .. py:method:: merge_methods(ext_methods: dict[str, collections.abc.Callable] | list[collections.abc.Callable] | None, local_methods: dict[str, collections.abc.Callable] | list[collections.abc.Callable]) -> dict[str, collections.abc.Callable]
       :staticmethod:
 
 
@@ -77,7 +77,7 @@ Module Contents
 
 
 
-   .. py:method:: new(class_name: str, config: Optional[Dict[str, Any]] = None, global_config: Optional[Dict[str, Any]] = None, parent: Optional[Service] = None) -> Service
+   .. py:method:: new(class_name: str, config: dict[str, Any] | None = None, global_config: dict[str, Any] | None = None, parent: Service | None = None) -> Service
       :classmethod:
 
 
@@ -107,7 +107,7 @@ Module Contents
 
 
 
-   .. py:method:: register(services: Union[Dict[str, Callable], List[Callable]]) -> None
+   .. py:method:: register(services: dict[str, collections.abc.Callable] | list[collections.abc.Callable]) -> None
 
       Register new mix-in services.
 

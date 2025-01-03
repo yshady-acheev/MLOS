@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_core.spaces.adapters.llamatune &mdash; MLOS 0.6.2.dev42+g65cb0da2e8 documentation</title>
+  <title>mlos_core.spaces.adapters.llamatune &mdash; MLOS 0.6.2.dev43+g795d1b03c6 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../../../_static/graphviz.css?v=4ae1632d" />
@@ -15,7 +15,7 @@
   
       <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../../../_static/documentation_options.js?v=fcb913ad"></script>
+      <script src="../../../../../_static/documentation_options.js?v=39539cd3"></script>
       <script src="../../../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -145,10 +145,10 @@ aimed at improving the sample-efficiency of the underlying optimizer.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>orig_parameter_space</strong> (<a class="reference external" href="https://automl.github.io/ConfigSpace/latest/api/ConfigSpace/configuration_space/#ConfigSpace.configuration_space.ConfigurationSpace" title="(in ConfigSpace v0.0.0)"><em>ConfigSpace.ConfigurationSpace</em></a>) – The original (user-provided) parameter space to optimize.</p></li>
 <li><p><strong>num_low_dims</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – Number of dimensions used in the low-dimensional parameter search space.</p></li>
-<li><p><strong>special_param_values_dict</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em>]</em>) – Dictionary of special</p></li>
-<li><p><strong>max_unique_values_per_param</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>]</em>) – Number of unique values per parameter. Used to discretize the parameter space.
+<li><p><strong>special_param_values_dict</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em> | </em><em>None</em>) – Dictionary of special</p></li>
+<li><p><strong>max_unique_values_per_param</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em> | </em><em>None</em>) – Number of unique values per parameter. Used to discretize the parameter space.
 If <cite>None</cite> space discretization is disabled.</p></li>
-<li><p><strong>special_param_values</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em>]</em>)</p></li>
+<li><p><strong>special_param_values</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em> | </em><em>None</em>)</p></li>
 <li><p><strong>use_approximate_reverse_mapping</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>)</p></li>
 </ul>
 </dd>

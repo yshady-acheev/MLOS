@@ -28,7 +28,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: TunableConfigTrialGroupData(*, experiment_id: str, tunable_config_id: int, tunable_config_trial_group_id: Optional[int] = None)
+.. py:class:: TunableConfigTrialGroupData(*, experiment_id: str, tunable_config_id: int, tunable_config_trial_group_id: int | None = None)
 
    Base interface for accessing the stored experiment benchmark tunable config trial
    group data.
@@ -71,7 +71,7 @@ Module Contents
 
 
    .. py:property:: trials
-      :type: Dict[int, mlos_bench.storage.base_trial_data.TrialData]
+      :type: dict[int, mlos_bench.storage.base_trial_data.TrialData]
 
       :abstractmethod:
 
@@ -80,7 +80,7 @@ Module Contents
       storage.
 
       :returns: **trials** -- A dictionary of the trials' data, keyed by trial id.
-      :rtype: Dict[int, TrialData]
+      :rtype: dict[int, TrialData]
 
 
    .. py:property:: tunable_config

@@ -20,7 +20,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: AzureVMService(config: Optional[Dict[str, Any]] = None, global_config: Optional[Dict[str, Any]] = None, parent: Optional[mlos_bench.services.base_service.Service] = None, methods: Union[Dict[str, Callable], List[Callable], None] = None)
+.. py:class:: AzureVMService(config: dict[str, Any] | None = None, global_config: dict[str, Any] | None = None, parent: mlos_bench.services.base_service.Service | None = None, methods: dict[str, collections.abc.Callable] | list[collections.abc.Callable] | None = None)
 
    Bases: :py:obj:`mlos_bench.services.remote.azure.azure_deployment_services.AzureDeploymentService`, :py:obj:`mlos_bench.services.types.host_provisioner_type.SupportsHostProvisioning`, :py:obj:`mlos_bench.services.types.host_ops_type.SupportsHostOps`, :py:obj:`mlos_bench.services.types.os_ops_type.SupportsOSOps`, :py:obj:`mlos_bench.services.types.remote_exec_type.SupportsRemoteExec`
 
@@ -37,10 +37,10 @@ Module Contents
    :param parent: Parent service that can provide mixin functions.
    :type parent: Service
    :param methods: New methods to register with the service.
-   :type methods: Union[Dict[str, Callable], List[Callable], None]
+   :type methods: Union[dict[str, Callable], list[Callable], None]
 
 
-   .. py:method:: deallocate_host(params: dict) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: deallocate_host(params: dict) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Deallocates the VM on Azure by shutting it down then releasing the compute
       resources.
@@ -57,7 +57,7 @@ Module Contents
 
 
 
-   .. py:method:: deprovision_host(params: dict) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: deprovision_host(params: dict) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Deprovisions the VM on Azure by deleting it.
 
@@ -70,7 +70,7 @@ Module Contents
 
 
 
-   .. py:method:: get_remote_exec_results(config: dict) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: get_remote_exec_results(config: dict) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Get the results of the asynchronously running command.
 
@@ -87,7 +87,7 @@ Module Contents
 
 
 
-   .. py:method:: provision_host(params: dict) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: provision_host(params: dict) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Check if Azure VM is ready. Deploy a new VM, if necessary.
 
@@ -103,7 +103,7 @@ Module Contents
 
 
 
-   .. py:method:: reboot(params: dict, force: bool = False) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: reboot(params: dict, force: bool = False) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Initiates a (graceful) shutdown of the Host/VM OS.
 
@@ -118,7 +118,7 @@ Module Contents
 
 
 
-   .. py:method:: remote_exec(script: Iterable[str], config: dict, env_params: dict) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: remote_exec(script: collections.abc.Iterable[str], config: dict, env_params: dict) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Run a command on Azure VM.
 
@@ -138,7 +138,7 @@ Module Contents
 
 
 
-   .. py:method:: restart_host(params: dict, force: bool = False) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: restart_host(params: dict, force: bool = False) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Reboot the VM on Azure by initiating a graceful shutdown.
 
@@ -153,7 +153,7 @@ Module Contents
 
 
 
-   .. py:method:: shutdown(params: dict, force: bool = False) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: shutdown(params: dict, force: bool = False) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Initiates a (graceful) shutdown of the Host/VM OS.
 
@@ -168,7 +168,7 @@ Module Contents
 
 
 
-   .. py:method:: start_host(params: dict) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: start_host(params: dict) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Start the VM on Azure.
 
@@ -181,7 +181,7 @@ Module Contents
 
 
 
-   .. py:method:: stop_host(params: dict, force: bool = False) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: stop_host(params: dict, force: bool = False) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Stops the VM on Azure by initiating a graceful shutdown.
 
@@ -196,7 +196,7 @@ Module Contents
 
 
 
-   .. py:method:: wait_host_deployment(params: dict, *, is_setup: bool) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: wait_host_deployment(params: dict, *, is_setup: bool) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Waits for a pending operation on an Azure VM to resolve to SUCCEEDED or FAILED.
       Return TIMED_OUT when timing out.
@@ -213,7 +213,7 @@ Module Contents
 
 
 
-   .. py:method:: wait_host_operation(params: dict) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: wait_host_operation(params: dict) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Waits for a pending operation on an Azure VM to resolve to SUCCEEDED or FAILED.
       Return TIMED_OUT when timing out.
@@ -230,7 +230,7 @@ Module Contents
 
 
 
-   .. py:method:: wait_os_operation(params: dict) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: wait_os_operation(params: dict) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Waits for a pending operation on an OS to resolve to SUCCEEDED or FAILED. Return
       TIMED_OUT when timing out.
@@ -247,7 +247,7 @@ Module Contents
 
 
 
-   .. py:method:: wait_remote_exec_operation(params: dict) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: wait_remote_exec_operation(params: dict) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Waits for a pending remote execution on an Azure VM to resolve to SUCCEEDED or
       FAILED. Return TIMED_OUT when timing out.

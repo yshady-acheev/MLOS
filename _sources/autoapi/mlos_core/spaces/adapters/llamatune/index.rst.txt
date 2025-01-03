@@ -28,7 +28,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: LlamaTuneAdapter(*, orig_parameter_space: ConfigSpace.ConfigurationSpace, num_low_dims: int = DEFAULT_NUM_LOW_DIMS, special_param_values: Optional[dict] = None, max_unique_values_per_param: Optional[int] = DEFAULT_MAX_UNIQUE_VALUES_PER_PARAM, use_approximate_reverse_mapping: bool = False)
+.. py:class:: LlamaTuneAdapter(*, orig_parameter_space: ConfigSpace.ConfigurationSpace, num_low_dims: int = DEFAULT_NUM_LOW_DIMS, special_param_values: dict | None = None, max_unique_values_per_param: int | None = DEFAULT_MAX_UNIQUE_VALUES_PER_PARAM, use_approximate_reverse_mapping: bool = False)
 
    Bases: :py:obj:`mlos_core.spaces.adapters.adapter.BaseSpaceAdapter`
 
@@ -43,10 +43,10 @@ Module Contents
    :param num_low_dims: Number of dimensions used in the low-dimensional parameter search space.
    :type num_low_dims: int
    :param special_param_values_dict: Dictionary of special
-   :type special_param_values_dict: Optional[dict]
+   :type special_param_values_dict: dict | None
    :param max_unique_values_per_param: Number of unique values per parameter. Used to discretize the parameter space.
                                        If `None` space discretization is disabled.
-   :type max_unique_values_per_param: Optional[int]
+   :type max_unique_values_per_param: int | None
 
 
    .. py:method:: inverse_transform(configuration: pandas.Series) -> pandas.Series

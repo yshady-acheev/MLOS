@@ -28,7 +28,7 @@ Functions
 Module Contents
 ---------------
 
-.. py:class:: LocalExecService(config: Optional[Dict[str, Any]] = None, global_config: Optional[Dict[str, Any]] = None, parent: Optional[mlos_bench.services.base_service.Service] = None, methods: Union[Dict[str, Callable], List[Callable], None] = None)
+.. py:class:: LocalExecService(config: dict[str, Any] | None = None, global_config: dict[str, Any] | None = None, parent: mlos_bench.services.base_service.Service | None = None, methods: dict[str, collections.abc.Callable] | list[collections.abc.Callable] | None = None)
 
    Bases: :py:obj:`mlos_bench.services.local.temp_dir_context.TempDirContextService`, :py:obj:`mlos_bench.services.types.local_exec_type.SupportsLocalExec`
 
@@ -49,10 +49,10 @@ Module Contents
    :param parent: An optional parent service that can provide mixin functions.
    :type parent: Service
    :param methods: New methods to register with the service.
-   :type methods: Union[Dict[str, Callable], List[Callable], None]
+   :type methods: Union[dict[str, Callable], list[Callable], None]
 
 
-   .. py:method:: local_exec(script_lines: Iterable[str], env: Optional[Mapping[str, mlos_bench.tunables.tunable.TunableValue]] = None, cwd: Optional[str] = None) -> Tuple[int, str, str]
+   .. py:method:: local_exec(script_lines: collections.abc.Iterable[str], env: collections.abc.Mapping[str, mlos_bench.tunables.tunable.TunableValue] | None = None, cwd: str | None = None) -> tuple[int, str, str]
 
       Execute the script lines from `script_lines` in a local process.
 
@@ -73,7 +73,7 @@ Module Contents
    .. py:attribute:: abort_on_error
 
 
-.. py:function:: split_cmdline(cmdline: str) -> Iterable[List[str]]
+.. py:function:: split_cmdline(cmdline: str) -> collections.abc.Iterable[list[str]]
 
    A single command line may contain multiple commands separated by special characters
    (e.g., &&, ||, etc.) so further split the commandline into an array of subcommand
@@ -82,7 +82,7 @@ Module Contents
    :param cmdline: The commandline to split.
    :type cmdline: str
 
-   :Yields: *Iterable[List[str]]* -- A list of subcommands or separators, each one a list of tokens.
+   :Yields: *Iterable[list[str]]* -- A list of subcommands or separators, each one a list of tokens.
             Can be rejoined as a flattened array.
 
 

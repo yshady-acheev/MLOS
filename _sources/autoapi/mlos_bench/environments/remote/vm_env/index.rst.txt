@@ -20,7 +20,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: VMEnv(*, name: str, config: dict, global_config: Optional[dict] = None, tunables: Optional[mlos_bench.tunables.tunable_groups.TunableGroups] = None, service: Optional[mlos_bench.services.base_service.Service] = None)
+.. py:class:: VMEnv(*, name: str, config: dict, global_config: dict | None = None, tunables: mlos_bench.tunables.tunable_groups.TunableGroups | None = None, service: mlos_bench.services.base_service.Service | None = None)
 
    Bases: :py:obj:`mlos_bench.environments.remote.host_env.HostEnv`
 

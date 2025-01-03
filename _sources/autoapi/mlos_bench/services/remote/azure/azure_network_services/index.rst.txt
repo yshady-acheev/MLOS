@@ -20,7 +20,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: AzureNetworkService(config: Optional[Dict[str, Any]] = None, global_config: Optional[Dict[str, Any]] = None, parent: Optional[mlos_bench.services.base_service.Service] = None, methods: Union[Dict[str, Callable], List[Callable], None] = None)
+.. py:class:: AzureNetworkService(config: dict[str, Any] | None = None, global_config: dict[str, Any] | None = None, parent: mlos_bench.services.base_service.Service | None = None, methods: dict[str, collections.abc.Callable] | list[collections.abc.Callable] | None = None)
 
    Bases: :py:obj:`mlos_bench.services.remote.azure.azure_deployment_services.AzureDeploymentService`, :py:obj:`mlos_bench.services.types.network_provisioner_type.SupportsNetworkProvisioning`
 
@@ -37,10 +37,10 @@ Module Contents
    :param parent: Parent service that can provide mixin functions.
    :type parent: Service
    :param methods: New methods to register with the service.
-   :type methods: Union[Dict[str, Callable], List[Callable], None]
+   :type methods: Union[dict[str, Callable], list[Callable], None]
 
 
-   .. py:method:: deprovision_network(params: dict, ignore_errors: bool = True) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: deprovision_network(params: dict, ignore_errors: bool = True) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Deprovisions the virtual network on Azure by deleting it.
 
@@ -56,7 +56,7 @@ Module Contents
 
 
 
-   .. py:method:: provision_network(params: dict) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: provision_network(params: dict) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Deploy a virtual network, if necessary.
 
@@ -72,7 +72,7 @@ Module Contents
 
 
 
-   .. py:method:: wait_network_deployment(params: dict, *, is_setup: bool) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: wait_network_deployment(params: dict, *, is_setup: bool) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Waits for a pending operation on an Azure VM to resolve to SUCCEEDED or FAILED.
       Return TIMED_OUT when timing out.

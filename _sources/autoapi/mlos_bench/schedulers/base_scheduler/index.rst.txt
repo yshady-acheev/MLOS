@@ -20,7 +20,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: Scheduler(*, config: Dict[str, Any], global_config: Dict[str, Any], environment: mlos_bench.environments.base_environment.Environment, optimizer: mlos_bench.optimizers.base_optimizer.Optimizer, storage: mlos_bench.storage.base_storage.Storage, root_env_config: str)
+.. py:class:: Scheduler(*, config: dict[str, Any], global_config: dict[str, Any], environment: mlos_bench.environments.base_environment.Environment, optimizer: mlos_bench.optimizers.base_optimizer.Optimizer, storage: mlos_bench.storage.base_storage.Storage, root_env_config: str)
 
    Base class for the optimization loop scheduling policies.
 
@@ -49,7 +49,7 @@ Module Contents
 
 
 
-   .. py:method:: __exit__(ex_type: Optional[Type[BaseException]], ex_val: Optional[BaseException], ex_tb: Optional[types.TracebackType]) -> Literal[False]
+   .. py:method:: __exit__(ex_type: type[BaseException] | None, ex_val: BaseException | None, ex_tb: types.TracebackType | None) -> Literal[False]
 
       Exit the context of the scheduler.
 
@@ -64,7 +64,7 @@ Module Contents
 
 
 
-   .. py:method:: get_best_observation() -> Tuple[Optional[Dict[str, float]], Optional[mlos_bench.tunables.tunable_groups.TunableGroups]]
+   .. py:method:: get_best_observation() -> tuple[dict[str, float] | None, mlos_bench.tunables.tunable_groups.TunableGroups | None]
 
       Get the best observation from the optimizer.
 
@@ -120,7 +120,7 @@ Module Contents
 
 
    .. py:attribute:: experiment
-      :type:  Optional[mlos_bench.storage.base_storage.Storage.Experiment]
+      :type:  mlos_bench.storage.base_storage.Storage.Experiment | None
       :value: None
 
 
@@ -140,7 +140,7 @@ Module Contents
 
 
    .. py:property:: ran_trials
-      :type: List[mlos_bench.storage.base_storage.Storage.Trial]
+      :type: list[mlos_bench.storage.base_storage.Storage.Trial]
 
 
       Get the list of trials that were run.

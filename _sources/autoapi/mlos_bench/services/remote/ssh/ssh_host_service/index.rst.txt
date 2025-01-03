@@ -20,7 +20,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: SshHostService(config: Optional[Dict[str, Any]] = None, global_config: Optional[Dict[str, Any]] = None, parent: Optional[mlos_bench.services.base_service.Service] = None, methods: Union[Dict[str, Callable], List[Callable], None] = None)
+.. py:class:: SshHostService(config: dict[str, Any] | None = None, global_config: dict[str, Any] | None = None, parent: mlos_bench.services.base_service.Service | None = None, methods: dict[str, collections.abc.Callable] | list[collections.abc.Callable] | None = None)
 
    Bases: :py:obj:`mlos_bench.services.remote.ssh.ssh_service.SshService`, :py:obj:`mlos_bench.services.types.os_ops_type.SupportsOSOps`, :py:obj:`mlos_bench.services.types.remote_exec_type.SupportsRemoteExec`
 
@@ -37,10 +37,10 @@ Module Contents
    :param parent: Parent service that can provide mixin functions.
    :type parent: Service
    :param methods: New methods to register with the service.
-   :type methods: Union[Dict[str, Callable], List[Callable], None]
+   :type methods: Union[dict[str, Callable], list[Callable], None]
 
 
-   .. py:method:: get_remote_exec_results(config: dict) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: get_remote_exec_results(config: dict) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Get the results of the asynchronously running command.
 
@@ -55,7 +55,7 @@ Module Contents
 
 
 
-   .. py:method:: reboot(params: dict, force: bool = False) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: reboot(params: dict, force: bool = False) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Initiates a (graceful) shutdown of the Host/VM OS.
 
@@ -70,7 +70,7 @@ Module Contents
 
 
 
-   .. py:method:: remote_exec(script: Iterable[str], config: dict, env_params: dict) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: remote_exec(script: collections.abc.Iterable[str], config: dict, env_params: dict) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Start running a command on remote host OS.
 
@@ -90,7 +90,7 @@ Module Contents
 
 
 
-   .. py:method:: shutdown(params: dict, force: bool = False) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: shutdown(params: dict, force: bool = False) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Initiates a (graceful) shutdown of the Host/VM OS.
 
@@ -105,7 +105,7 @@ Module Contents
 
 
 
-   .. py:method:: wait_os_operation(params: dict) -> Tuple[mlos_bench.environments.status.Status, dict]
+   .. py:method:: wait_os_operation(params: dict) -> tuple[mlos_bench.environments.status.Status, dict]
 
       Waits for a pending operation on an OS to resolve to SUCCEEDED or FAILED. Return
       TIMED_OUT when timing out.

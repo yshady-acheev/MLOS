@@ -20,7 +20,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: MlosCoreOptimizer(tunables: mlos_bench.tunables.tunable_groups.TunableGroups, config: dict, global_config: Optional[dict] = None, service: Optional[mlos_bench.services.base_service.Service] = None)
+.. py:class:: MlosCoreOptimizer(tunables: mlos_bench.tunables.tunable_groups.TunableGroups, config: dict, global_config: dict | None = None, service: mlos_bench.services.base_service.Service | None = None)
 
    Bases: :py:obj:`mlos_bench.optimizers.base_optimizer.Optimizer`
 
@@ -35,25 +35,25 @@ Module Contents
    :param config: Free-format key/value pairs of configuration parameters to pass to the optimizer.
    :type config: dict
    :param global_config:
-   :type global_config: Optional[dict]
+   :type global_config: dict | None
    :param service:
-   :type service: Optional[Service]
+   :type service: Service | None
 
 
-   .. py:method:: __exit__(ex_type: Optional[Type[BaseException]], ex_val: Optional[BaseException], ex_tb: Optional[types.TracebackType]) -> Literal[False]
+   .. py:method:: __exit__(ex_type: type[BaseException] | None, ex_val: BaseException | None, ex_tb: types.TracebackType | None) -> Literal[False]
 
       Exit the context of the optimizer.
 
 
 
-   .. py:method:: bulk_register(configs: Sequence[dict], scores: Sequence[Optional[Dict[str, mlos_bench.tunables.tunable.TunableValue]]], status: Optional[Sequence[mlos_bench.environments.status.Status]] = None) -> bool
+   .. py:method:: bulk_register(configs: collections.abc.Sequence[dict], scores: collections.abc.Sequence[dict[str, mlos_bench.tunables.tunable.TunableValue] | None], status: collections.abc.Sequence[mlos_bench.environments.status.Status] | None = None) -> bool
 
       Pre-load the optimizer with the bulk data from previous experiments.
 
       :param configs: Records of tunable values from other experiments.
       :type configs: Sequence[dict]
       :param scores: Benchmark results from experiments that correspond to `configs`.
-      :type scores: Sequence[Optional[Dict[str, TunableValue]]]
+      :type scores: Sequence[Optional[dict[str, TunableValue]]]
       :param status: Status of the experiments that correspond to `configs`.
       :type status: Optional[Sequence[Status]]
 
@@ -62,17 +62,17 @@ Module Contents
 
 
 
-   .. py:method:: get_best_observation() -> Union[Tuple[Dict[str, float], mlos_bench.tunables.tunable_groups.TunableGroups], Tuple[None, None]]
+   .. py:method:: get_best_observation() -> tuple[dict[str, float], mlos_bench.tunables.tunable_groups.TunableGroups] | tuple[None, None]
 
       Get the best observation so far.
 
       :returns: **(value, tunables)** -- The best value and the corresponding configuration.
                 (None, None) if no successful observation has been registered yet.
-      :rtype: Tuple[Dict[str, float], TunableGroups]
+      :rtype: tuple[dict[str, float], TunableGroups]
 
 
 
-   .. py:method:: register(tunables: mlos_bench.tunables.tunable_groups.TunableGroups, status: mlos_bench.environments.status.Status, score: Optional[Dict[str, mlos_bench.tunables.tunable.TunableValue]] = None) -> Optional[Dict[str, float]]
+   .. py:method:: register(tunables: mlos_bench.tunables.tunable_groups.TunableGroups, status: mlos_bench.environments.status.Status, score: dict[str, mlos_bench.tunables.tunable.TunableValue] | None = None) -> dict[str, float] | None
 
       Register the observation for the given configuration.
 
@@ -83,11 +83,11 @@ Module Contents
       :type status: Status
       :param score: A dict with the final benchmark results.
                     None if the experiment was not successful.
-      :type score: Optional[Dict[str, TunableValue]]
+      :type score: Optional[dict[str, TunableValue]]
 
       :returns: **value** -- Benchmark scores extracted (and possibly transformed)
                 from the dataframe that's being MINIMIZED.
-      :rtype: Optional[Dict[str, float]]
+      :rtype: Optional[dict[str, float]]
 
 
 

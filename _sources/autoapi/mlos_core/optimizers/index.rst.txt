@@ -69,7 +69,7 @@ Package Contents
    :class:`~mlos_core.optimizers.optimizer.BaseOptimizer`-derived objects.
 
 
-   .. py:method:: create(*, parameter_space: ConfigSpace.ConfigurationSpace, optimization_targets: List[str], optimizer_type: OptimizerType = DEFAULT_OPTIMIZER_TYPE, optimizer_kwargs: Optional[dict] = None, space_adapter_type: mlos_core.spaces.adapters.SpaceAdapterType = SpaceAdapterType.IDENTITY, space_adapter_kwargs: Optional[dict] = None) -> ConcreteOptimizer
+   .. py:method:: create(*, parameter_space: ConfigSpace.ConfigurationSpace, optimization_targets: list[str], optimizer_type: OptimizerType = DEFAULT_OPTIMIZER_TYPE, optimizer_kwargs: dict | None = None, space_adapter_type: mlos_core.spaces.adapters.SpaceAdapterType = SpaceAdapterType.IDENTITY, space_adapter_kwargs: dict | None = None) -> ConcreteOptimizer
       :staticmethod:
 
 
@@ -79,15 +79,15 @@ Package Contents
       :param parameter_space: Input configuration space.
       :type parameter_space: ConfigSpace.ConfigurationSpace
       :param optimization_targets: The names of the optimization targets to minimize.
-      :type optimization_targets: List[str]
+      :type optimization_targets: list[str]
       :param optimizer_type: Optimizer class as defined by Enum.
       :type optimizer_type: OptimizerType
       :param optimizer_kwargs: Optional arguments passed in Optimizer class constructor.
-      :type optimizer_kwargs: Optional[dict]
+      :type optimizer_kwargs: dict | None
       :param space_adapter_type: Space adapter class to be used alongside the optimizer.
-      :type space_adapter_type: Optional[SpaceAdapterType]
+      :type space_adapter_type: SpaceAdapterType | None
       :param space_adapter_kwargs: Optional arguments passed in SpaceAdapter class constructor.
-      :type space_adapter_kwargs: Optional[dict]
+      :type space_adapter_kwargs: dict | None
 
       :returns: **optimizer** -- Instance of concrete optimizer class
                 (e.g., RandomOptimizer, FlamlOptimizer, SmacOptimizer, etc.).

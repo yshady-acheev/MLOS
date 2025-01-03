@@ -46,7 +46,7 @@ Module Contents
 
 
    .. py:attribute:: params
-      :type:  Optional[Dict[str, float]]
+      :type:  dict[str, float] | None
 
 
    .. py:attribute:: type
@@ -114,7 +114,7 @@ Module Contents
 
 
 
-   .. py:method:: in_range(value: Union[int, float, str, None]) -> bool
+   .. py:method:: in_range(value: int | float | str | None) -> bool
 
       Check if the value is within the range of the tunable.
 
@@ -135,7 +135,7 @@ Module Contents
       Check if the value can be assigned to the tunable.
 
       :param value: Value to validate.
-      :type value: Union[int, float, str]
+      :type value: int | float | str
 
       :returns: **is_valid** -- True if the value is valid, False otherwise.
       :rtype: bool
@@ -148,7 +148,7 @@ Module Contents
       otherwise.
 
       :param value: Value to assign.
-      :type value: Union[int, float, str]
+      :type value: int | float | str
 
       :returns: **is_updated** -- True if the new value is different from the previous one, False otherwise.
       :rtype: bool
@@ -156,7 +156,7 @@ Module Contents
 
 
    .. py:property:: cardinality
-      :type: Optional[int]
+      :type: int | None
 
 
       Gets the cardinality of elements in this tunable, or else None. (i.e., when the
@@ -169,18 +169,18 @@ Module Contents
 
 
    .. py:property:: categories
-      :type: List[Optional[str]]
+      :type: list[str | None]
 
 
       Get the list of all possible values of a categorical tunable. Return None if the
       tunable is not categorical.
 
       :returns: **values** -- List of all possible values of a categorical tunable.
-      :rtype: List[str]
+      :rtype: list[str]
 
 
    .. py:property:: category
-      :type: Optional[str]
+      :type: str | None
 
 
       Get the current value of the tunable as a string.
@@ -194,7 +194,7 @@ Module Contents
 
 
    .. py:property:: distribution
-      :type: Optional[DistributionName]
+      :type: DistributionName | None
 
 
       Get the name of the distribution (uniform, normal, or beta) if specified.
@@ -204,13 +204,13 @@ Module Contents
 
 
    .. py:property:: distribution_params
-      :type: Dict[str, float]
+      :type: dict[str, float]
 
 
       Get the parameters of the distribution, if specified.
 
       :returns: **distribution_params** -- Parameters of the distribution or None.
-      :rtype: Dict[str, float]
+      :rtype: dict[str, float]
 
 
    .. py:property:: dtype
@@ -236,7 +236,7 @@ Module Contents
 
 
    .. py:property:: is_log
-      :type: Optional[bool]
+      :type: bool | None
 
 
       Check if numeric tunable is log scale.
@@ -266,7 +266,7 @@ Module Contents
 
 
    .. py:property:: meta
-      :type: Dict[str, Any]
+      :type: dict[str, Any]
 
 
       Get the tunable's metadata.
@@ -283,14 +283,14 @@ Module Contents
 
 
    .. py:property:: numerical_value
-      :type: Union[int, float]
+      :type: int | float
 
 
       Get the current value of the tunable as a number.
 
 
    .. py:property:: quantization_bins
-      :type: Optional[int]
+      :type: int | None
 
 
       Get the number of quantization bins, if specified.
@@ -300,7 +300,7 @@ Module Contents
 
 
    .. py:property:: quantized_values
-      :type: Optional[Union[Iterable[int], Iterable[float]]]
+      :type: collections.abc.Iterable[int] | collections.abc.Iterable[float] | None
 
 
       Get a sequence of quantized values for this tunable.
@@ -311,18 +311,18 @@ Module Contents
 
 
    .. py:property:: range
-      :type: Union[Tuple[int, int], Tuple[float, float]]
+      :type: tuple[int, int] | tuple[float, float]
 
 
       Get the range of the tunable if it is numerical, None otherwise.
 
       :returns: **range** -- A 2-tuple of numbers that represents the range of the tunable.
                 Numbers can be int or float, depending on the type of the tunable.
-      :rtype: Union[Tuple[int, int], Tuple[float, float]]
+      :rtype: Union[tuple[int, int], tuple[float, float]]
 
 
    .. py:property:: range_weight
-      :type: Optional[float]
+      :type: float | None
 
 
       Get weight of the range of the numeric tunable. Return None if there are no
@@ -333,7 +333,7 @@ Module Contents
 
 
    .. py:property:: span
-      :type: Union[int, float]
+      :type: int | float
 
 
       Gets the span of the range.
@@ -345,7 +345,7 @@ Module Contents
 
 
    .. py:property:: special
-      :type: Union[List[int], List[float]]
+      :type: list[int] | list[float]
 
 
       Get the special values of the tunable. Return an empty list if there are none.
@@ -372,7 +372,7 @@ Module Contents
 
 
    .. py:property:: values
-      :type: Optional[Union[Iterable[Optional[str]], Iterable[int], Iterable[float]]]
+      :type: collections.abc.Iterable[str | None] | collections.abc.Iterable[int] | collections.abc.Iterable[float] | None
 
 
       Gets the categories or quantized values for this tunable.
@@ -382,7 +382,7 @@ Module Contents
 
 
    .. py:property:: weights
-      :type: Optional[List[float]]
+      :type: list[float] | None
 
 
       Get the weights of the categories or special values of the tunable. Return None
@@ -411,39 +411,39 @@ Module Contents
 
 
    .. py:attribute:: description
-      :type:  Optional[str]
+      :type:  str | None
 
 
    .. py:attribute:: distribution
-      :type:  Optional[DistributionDict]
+      :type:  DistributionDict | None
 
 
    .. py:attribute:: log
-      :type:  Optional[bool]
+      :type:  bool | None
 
 
    .. py:attribute:: meta
-      :type:  Dict[str, Any]
+      :type:  dict[str, Any]
 
 
    .. py:attribute:: quantization_bins
-      :type:  Optional[int]
+      :type:  int | None
 
 
    .. py:attribute:: range
-      :type:  Optional[Union[Sequence[int], Sequence[float]]]
+      :type:  collections.abc.Sequence[int] | collections.abc.Sequence[float] | None
 
 
    .. py:attribute:: range_weight
-      :type:  Optional[float]
+      :type:  float | None
 
 
    .. py:attribute:: special
-      :type:  Optional[Union[List[int], List[float]]]
+      :type:  list[int] | list[float] | None
 
 
    .. py:attribute:: special_weights
-      :type:  Optional[List[float]]
+      :type:  list[float] | None
 
 
    .. py:attribute:: type
@@ -451,13 +451,13 @@ Module Contents
 
 
    .. py:attribute:: values
-      :type:  Optional[List[Optional[str]]]
+      :type:  list[str | None] | None
 
       Return an object providing a view on the dict's values.
 
 
    .. py:attribute:: values_weights
-      :type:  Optional[List[float]]
+      :type:  list[float] | None
 
 
 .. py:data:: DistributionName

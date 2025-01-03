@@ -21,7 +21,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: TunableConfigTrialGroupSqlData(*, engine: sqlalchemy.engine.Engine, schema: mlos_bench.storage.sql.schema.DbSchema, experiment_id: str, tunable_config_id: int, tunable_config_trial_group_id: Optional[int] = None)
+.. py:class:: TunableConfigTrialGroupSqlData(*, engine: sqlalchemy.engine.Engine, schema: mlos_bench.storage.sql.schema.DbSchema, experiment_id: str, tunable_config_id: int, tunable_config_trial_group_id: int | None = None)
 
    Bases: :py:obj:`mlos_bench.storage.base_tunable_config_trial_group_data.TunableConfigTrialGroupData`
 
@@ -52,14 +52,14 @@ Module Contents
 
 
    .. py:property:: trials
-      :type: Dict[int, mlos_bench.storage.base_trial_data.TrialData]
+      :type: dict[int, mlos_bench.storage.base_trial_data.TrialData]
 
 
       Retrieve the trials' data for this (tunable) config trial group from the
       storage.
 
       :returns: **trials** -- A dictionary of the trials' data, keyed by trial id.
-      :rtype: Dict[int, TrialData]
+      :rtype: dict[int, TrialData]
 
 
    .. py:property:: tunable_config

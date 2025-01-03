@@ -71,7 +71,7 @@ Package Contents
    :class:`~mlos_core.spaces.adapters.adapter.BaseSpaceAdapter`-derived objects.
 
 
-   .. py:method:: create(*, parameter_space: ConfigSpace.ConfigurationSpace, space_adapter_type: SpaceAdapterType = SpaceAdapterType.IDENTITY, space_adapter_kwargs: Optional[dict] = None) -> ConcreteSpaceAdapter
+   .. py:method:: create(*, parameter_space: ConfigSpace.ConfigurationSpace, space_adapter_type: SpaceAdapterType = SpaceAdapterType.IDENTITY, space_adapter_kwargs: dict | None = None) -> ConcreteSpaceAdapter
       :staticmethod:
 
 
@@ -81,9 +81,9 @@ Package Contents
       :param parameter_space: Input configuration space.
       :type parameter_space: ConfigSpace.ConfigurationSpace
       :param space_adapter_type: Space adapter class to be used alongside the optimizer.
-      :type space_adapter_type: Optional[SpaceAdapterType]
+      :type space_adapter_type: SpaceAdapterType | None
       :param space_adapter_kwargs: Optional arguments passed in SpaceAdapter class constructor.
-      :type space_adapter_kwargs: Optional[dict]
+      :type space_adapter_kwargs: dict | None
 
       :returns: **space_adapter** -- Instance of concrete space adapter (e.g., None, LlamaTuneAdapter, etc.)
       :rtype: ConcreteSpaceAdapter

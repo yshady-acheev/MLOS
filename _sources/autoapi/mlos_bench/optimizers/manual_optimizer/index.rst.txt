@@ -26,7 +26,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: ManualOptimizer(tunables: mlos_bench.tunables.tunable_groups.TunableGroups, config: dict, global_config: Optional[dict] = None, service: Optional[mlos_bench.services.base_service.Service] = None)
+.. py:class:: ManualOptimizer(tunables: mlos_bench.tunables.tunable_groups.TunableGroups, config: dict, global_config: dict | None = None, service: mlos_bench.services.base_service.Service | None = None)
 
    Bases: :py:obj:`mlos_bench.optimizers.mock_optimizer.MockOptimizer`
 
@@ -41,9 +41,9 @@ Module Contents
    :param config: Free-format key/value pairs of configuration parameters to pass to the optimizer.
    :type config: dict
    :param global_config:
-   :type global_config: Optional[dict]
+   :type global_config: dict | None
    :param service:
-   :type service: Optional[Service]
+   :type service: Service | None
 
 
    .. py:method:: suggest() -> mlos_bench.tunables.tunable_groups.TunableGroups

@@ -20,7 +20,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: SyncScheduler(*, config: Dict[str, Any], global_config: Dict[str, Any], environment: mlos_bench.environments.base_environment.Environment, optimizer: mlos_bench.optimizers.base_optimizer.Optimizer, storage: mlos_bench.storage.base_storage.Storage, root_env_config: str)
+.. py:class:: SyncScheduler(*, config: dict[str, Any], global_config: dict[str, Any], environment: mlos_bench.environments.base_environment.Environment, optimizer: mlos_bench.optimizers.base_optimizer.Optimizer, storage: mlos_bench.storage.base_storage.Storage, root_env_config: str)
 
    Bases: :py:obj:`mlos_bench.schedulers.base_scheduler.Scheduler`
 

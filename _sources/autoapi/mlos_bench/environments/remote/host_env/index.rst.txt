@@ -20,7 +20,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: HostEnv(*, name: str, config: dict, global_config: Optional[dict] = None, tunables: Optional[mlos_bench.tunables.tunable_groups.TunableGroups] = None, service: Optional[mlos_bench.services.base_service.Service] = None)
+.. py:class:: HostEnv(*, name: str, config: dict, global_config: dict | None = None, tunables: mlos_bench.tunables.tunable_groups.TunableGroups | None = None, service: mlos_bench.services.base_service.Service | None = None)
 
    Bases: :py:obj:`mlos_bench.environments.base_environment.Environment`
 
@@ -45,7 +45,7 @@ Module Contents
    :type service: Service
 
 
-   .. py:method:: setup(tunables: mlos_bench.tunables.tunable_groups.TunableGroups, global_config: Optional[dict] = None) -> bool
+   .. py:method:: setup(tunables: mlos_bench.tunables.tunable_groups.TunableGroups, global_config: dict | None = None) -> bool
 
       Check if host is ready. (Re)provision and start it, if necessary.
 

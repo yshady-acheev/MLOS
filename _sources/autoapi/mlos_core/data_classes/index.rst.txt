@@ -29,7 +29,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: Observation(*, config: pandas.Series, score: pandas.Series = pd.Series(), context: Optional[pandas.Series] = None, metadata: Optional[pandas.Series] = None)
+.. py:class:: Observation(*, config: pandas.Series, score: pandas.Series = pd.Series(), context: pandas.Series | None = None, metadata: pandas.Series | None = None)
 
    A single observation of a configuration.
 
@@ -41,9 +41,9 @@ Module Contents
    :type score: pandas.Series
    :param context: The context in which the configuration was evaluated.
                    Not Yet Implemented.
-   :type context: Optional[pandas.Series]
+   :type context: pandas.Series | None
    :param metadata: The metadata in which the configuration was evaluated
-   :type metadata: Optional[pandas.Series]
+   :type metadata: pandas.Series | None
 
 
    .. py:method:: __eq__(other: Any) -> bool
@@ -72,14 +72,14 @@ Module Contents
 
 
    .. py:property:: context
-      :type: Optional[pandas.Series]
+      :type: pandas.Series | None
 
 
       Gets (a copy of) the context of the Observation.
 
 
    .. py:property:: metadata
-      :type: Optional[pandas.Series]
+      :type: pandas.Series | None
 
 
       Gets (a copy of) the metadata of the Observation.
@@ -92,7 +92,7 @@ Module Contents
       Gets (a copy of) the score of the Observation.
 
 
-.. py:class:: Observations(*, configs: pandas.DataFrame = pd.DataFrame(), scores: pandas.DataFrame = pd.DataFrame(), contexts: Optional[pandas.DataFrame] = None, metadata: Optional[pandas.DataFrame] = None, observations: Optional[Iterable[Observation]] = None)
+.. py:class:: Observations(*, configs: pandas.DataFrame = pd.DataFrame(), scores: pandas.DataFrame = pd.DataFrame(), contexts: pandas.DataFrame | None = None, metadata: pandas.DataFrame | None = None, observations: collections.abc.Iterable[Observation] | None = None)
 
    A set of observations of a configuration scores.
 
@@ -109,16 +109,16 @@ Module Contents
    :type scores: pandas.DataFrame
    :param contexts: The context in which the configuration was evaluated.
                     Not Yet Implemented.
-   :type contexts: Optional[pandas.DataFrame]
+   :type contexts: pandas.DataFrame | None
    :param metadata: The metadata in which the configuration was evaluated
                     Not Yet Implemented.
-   :type metadata: Optional[pandas.DataFrame]
+   :type metadata: pandas.DataFrame | None
 
 
    .. py:method:: __eq__(other: Any) -> bool
 
 
-   .. py:method:: __iter__() -> Iterator[Observation]
+   .. py:method:: __iter__() -> collections.abc.Iterator[Observation]
 
 
    .. py:method:: __len__() -> int
@@ -159,14 +159,14 @@ Module Contents
 
 
    .. py:property:: contexts
-      :type: Optional[pandas.DataFrame]
+      :type: pandas.DataFrame | None
 
 
       Gets a copy of the contexts of the Observations.
 
 
    .. py:property:: metadata
-      :type: Optional[pandas.DataFrame]
+      :type: pandas.DataFrame | None
 
 
       Gets a copy of the metadata of the Observations.
@@ -179,7 +179,7 @@ Module Contents
       Gets a copy of the scores of the Observations.
 
 
-.. py:class:: Suggestion(*, config: pandas.Series, context: Optional[pandas.Series] = None, metadata: Optional[pandas.Series] = None)
+.. py:class:: Suggestion(*, config: pandas.Series, context: pandas.Series | None = None, metadata: pandas.Series | None = None)
 
    A single suggestion for a configuration.
 
@@ -191,9 +191,9 @@ Module Contents
    :param config: The configuration suggested.
    :type config: pandas.Series
    :param context: The context for this suggestion, by default None
-   :type context: Optional[pandas.Series]
+   :type context: pandas.Series | None
    :param metadata: Any metadata provided by the underlying optimizer, by default None
-   :type metadata: Optional[pandas.Series]
+   :type metadata: pandas.Series | None
 
 
    .. py:method:: __eq__(other: Any) -> bool
@@ -237,14 +237,14 @@ Module Contents
 
 
    .. py:property:: context
-      :type: Optional[pandas.Series]
+      :type: pandas.Series | None
 
 
       Gets (a copy of) the context of the Suggestion.
 
 
    .. py:property:: metadata
-      :type: Optional[pandas.Series]
+      :type: pandas.Series | None
 
 
       Gets (a copy of) the metadata of the Suggestion.

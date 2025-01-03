@@ -42,7 +42,7 @@ Module Contents
       :type:  float
 
 
-.. py:class:: FlamlOptimizer(*, parameter_space: ConfigSpace.ConfigurationSpace, optimization_targets: List[str], objective_weights: Optional[List[float]] = None, space_adapter: Optional[mlos_core.spaces.adapters.adapter.BaseSpaceAdapter] = None, low_cost_partial_config: Optional[dict] = None, seed: Optional[int] = None)
+.. py:class:: FlamlOptimizer(*, parameter_space: ConfigSpace.ConfigurationSpace, optimization_targets: list[str], objective_weights: list[float] | None = None, space_adapter: mlos_core.spaces.adapters.adapter.BaseSpaceAdapter | None = None, low_cost_partial_config: dict | None = None, seed: int | None = None)
 
    Bases: :py:obj:`mlos_core.optimizers.optimizer.BaseOptimizer`
 
@@ -54,9 +54,9 @@ Module Contents
    :param parameter_space: The parameter space to optimize.
    :type parameter_space: ConfigSpace.ConfigurationSpace
    :param optimization_targets: The names of the optimization targets to minimize.
-   :type optimization_targets: List[str]
+   :type optimization_targets: list[str]
    :param objective_weights: Optional list of weights of optimization targets.
-   :type objective_weights: Optional[List[float]]
+   :type objective_weights: Optional[list[float]]
    :param space_adapter: The space adapter class to employ for parameter space transformations.
    :type space_adapter: BaseSpaceAdapter
    :param low_cost_partial_config: A dictionary from a subset of controlled dimensions to the initial low-cost values.
@@ -65,7 +65,7 @@ Module Contents
    :type low_cost_partial_config: dict
    :param seed: If provided, calls np.random.seed() with the provided value to set the
                 seed globally at init.
-   :type seed: Optional[int]
+   :type seed: int | None
 
 
    .. py:method:: register_pending(pending: mlos_core.data_classes.Suggestion) -> None
@@ -82,11 +82,11 @@ Module Contents
 
 
    .. py:attribute:: evaluated_samples
-      :type:  Dict[ConfigSpace.Configuration, EvaluatedSample]
+      :type:  dict[ConfigSpace.Configuration, EvaluatedSample]
 
 
    .. py:attribute:: flaml_parameter_space
-      :type:  Dict[str, mlos_core.spaces.converters.flaml.FlamlDomain]
+      :type:  dict[str, mlos_core.spaces.converters.flaml.FlamlDomain]
 
 
    .. py:attribute:: low_cost_partial_config

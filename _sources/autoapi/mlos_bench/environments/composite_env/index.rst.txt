@@ -20,7 +20,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: CompositeEnv(*, name: str, config: dict, global_config: Optional[dict] = None, tunables: Optional[mlos_bench.tunables.tunable_groups.TunableGroups] = None, service: Optional[mlos_bench.services.base_service.Service] = None)
+.. py:class:: CompositeEnv(*, name: str, config: dict, global_config: dict | None = None, tunables: mlos_bench.tunables.tunable_groups.TunableGroups | None = None, service: mlos_bench.services.base_service.Service | None = None)
 
    Bases: :py:obj:`mlos_bench.environments.base_environment.Environment`
 
@@ -50,7 +50,7 @@ Module Contents
 
 
 
-   .. py:method:: __exit__(ex_type: Optional[Type[BaseException]], ex_val: Optional[BaseException], ex_tb: Optional[types.TracebackType]) -> Literal[False]
+   .. py:method:: __exit__(ex_type: type[BaseException] | None, ex_val: BaseException | None, ex_tb: types.TracebackType | None) -> Literal[False]
 
       Exit the context of the benchmarking environment.
 
@@ -70,7 +70,7 @@ Module Contents
 
 
 
-   .. py:method:: run() -> Tuple[mlos_bench.environments.status.Status, datetime.datetime, Optional[Dict[str, mlos_bench.tunables.tunable.TunableValue]]]
+   .. py:method:: run() -> tuple[mlos_bench.environments.status.Status, datetime.datetime, dict[str, mlos_bench.tunables.tunable.TunableValue] | None]
 
       Submit a new experiment to the environment. Return the result of the *last*
       child environment if successful, or the status of the last failed environment
@@ -84,7 +84,7 @@ Module Contents
 
 
 
-   .. py:method:: setup(tunables: mlos_bench.tunables.tunable_groups.TunableGroups, global_config: Optional[dict] = None) -> bool
+   .. py:method:: setup(tunables: mlos_bench.tunables.tunable_groups.TunableGroups, global_config: dict | None = None) -> bool
 
       Set up the children environments.
 
@@ -100,7 +100,7 @@ Module Contents
 
 
 
-   .. py:method:: status() -> Tuple[mlos_bench.environments.status.Status, datetime.datetime, List[Tuple[datetime.datetime, str, Any]]]
+   .. py:method:: status() -> tuple[mlos_bench.environments.status.Status, datetime.datetime, list[tuple[datetime.datetime, str, Any]]]
 
       Check the status of the benchmark environment.
 
@@ -121,7 +121,7 @@ Module Contents
 
 
    .. py:property:: children
-      :type: List[mlos_bench.environments.base_environment.Environment]
+      :type: list[mlos_bench.environments.base_environment.Environment]
 
 
       Return the list of child environments.

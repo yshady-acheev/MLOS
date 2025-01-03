@@ -20,7 +20,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: MockEnv(*, name: str, config: dict, global_config: Optional[dict] = None, tunables: Optional[mlos_bench.tunables.tunable_groups.TunableGroups] = None, service: Optional[mlos_bench.services.base_service.Service] = None)
+.. py:class:: MockEnv(*, name: str, config: dict, global_config: dict | None = None, tunables: mlos_bench.tunables.tunable_groups.TunableGroups | None = None, service: mlos_bench.services.base_service.Service | None = None)
 
    Bases: :py:obj:`mlos_bench.environments.base_environment.Environment`
 
@@ -44,7 +44,7 @@ Module Contents
    :type service: Service
 
 
-   .. py:method:: run() -> Tuple[mlos_bench.environments.status.Status, datetime.datetime, Optional[Dict[str, mlos_bench.tunables.tunable.TunableValue]]]
+   .. py:method:: run() -> tuple[mlos_bench.environments.status.Status, datetime.datetime, dict[str, mlos_bench.tunables.tunable.TunableValue] | None]
 
       Produce mock benchmark data for one experiment.
 
@@ -57,7 +57,7 @@ Module Contents
 
 
 
-   .. py:method:: status() -> Tuple[mlos_bench.environments.status.Status, datetime.datetime, List[Tuple[datetime.datetime, str, Any]]]
+   .. py:method:: status() -> tuple[mlos_bench.environments.status.Status, datetime.datetime, list[tuple[datetime.datetime, str, Any]]]
 
       Produce mock benchmark status telemetry for one experiment.
 

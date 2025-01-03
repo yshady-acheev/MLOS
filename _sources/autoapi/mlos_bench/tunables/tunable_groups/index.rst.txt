@@ -20,7 +20,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: TunableGroups(config: Optional[dict] = None)
+.. py:class:: TunableGroups(config: dict | None = None)
 
    A collection of :py:class:`.CovariantTunableGroup` s of :py:class:`.Tunable`
    parameters.
@@ -39,7 +39,7 @@ Module Contents
    .. py:method:: __bool__() -> bool
 
 
-   .. py:method:: __contains__(tunable: Union[str, mlos_bench.tunables.tunable.Tunable]) -> bool
+   .. py:method:: __contains__(tunable: str | mlos_bench.tunables.tunable.Tunable) -> bool
 
       Checks if the given name/tunable is in this tunable group.
 
@@ -57,19 +57,19 @@ Module Contents
 
 
 
-   .. py:method:: __getitem__(tunable: Union[str, mlos_bench.tunables.tunable.Tunable]) -> mlos_bench.tunables.tunable.TunableValue
+   .. py:method:: __getitem__(tunable: str | mlos_bench.tunables.tunable.Tunable) -> mlos_bench.tunables.tunable.TunableValue
 
       Get the current value of a single tunable parameter.
 
 
 
-   .. py:method:: __iter__() -> Generator[Tuple[mlos_bench.tunables.tunable.Tunable, mlos_bench.tunables.covariant_group.CovariantTunableGroup], None, None]
+   .. py:method:: __iter__() -> collections.abc.Generator[tuple[mlos_bench.tunables.tunable.Tunable, mlos_bench.tunables.covariant_group.CovariantTunableGroup], None, None]
 
       An iterator over all tunables in the group.
 
       :returns: **[(tunable, group), ...]** -- An iterator over all tunables in all groups. Each element is a 2-tuple
                 of an instance of the Tunable parameter and covariant group it belongs to.
-      :rtype: Generator[Tuple[Tunable, CovariantTunableGroup], None, None]
+      :rtype: Generator[tuple[Tunable, CovariantTunableGroup], None, None]
 
 
 
@@ -85,13 +85,13 @@ Module Contents
 
 
 
-   .. py:method:: __setitem__(tunable: Union[str, mlos_bench.tunables.tunable.Tunable], tunable_value: Union[mlos_bench.tunables.tunable.TunableValue, mlos_bench.tunables.tunable.Tunable]) -> mlos_bench.tunables.tunable.TunableValue
+   .. py:method:: __setitem__(tunable: str | mlos_bench.tunables.tunable.Tunable, tunable_value: mlos_bench.tunables.tunable.TunableValue | mlos_bench.tunables.tunable.Tunable) -> mlos_bench.tunables.tunable.TunableValue
 
       Update the current value of a single tunable parameter.
 
 
 
-   .. py:method:: assign(param_values: Mapping[str, mlos_bench.tunables.tunable.TunableValue]) -> TunableGroups
+   .. py:method:: assign(param_values: collections.abc.Mapping[str, mlos_bench.tunables.tunable.TunableValue]) -> TunableGroups
 
       In-place update the values of the tunables from the dictionary of (key, value)
       pairs.
@@ -120,7 +120,7 @@ Module Contents
 
 
 
-   .. py:method:: get_covariant_group_names() -> Iterable[str]
+   .. py:method:: get_covariant_group_names() -> collections.abc.Iterable[str]
 
       Get the names of all covariance groups in the collection.
 
@@ -129,7 +129,7 @@ Module Contents
 
 
 
-   .. py:method:: get_param_values(group_names: Optional[Iterable[str]] = None, into_params: Optional[Dict[str, mlos_bench.tunables.tunable.TunableValue]] = None) -> Dict[str, mlos_bench.tunables.tunable.TunableValue]
+   .. py:method:: get_param_values(group_names: collections.abc.Iterable[str] | None = None, into_params: dict[str, mlos_bench.tunables.tunable.TunableValue] | None = None) -> dict[str, mlos_bench.tunables.tunable.TunableValue]
 
       Get the current values of the tunables that belong to the specified covariance
       groups.
@@ -145,7 +145,7 @@ Module Contents
 
 
 
-   .. py:method:: get_tunable(tunable: Union[str, mlos_bench.tunables.tunable.Tunable]) -> Tuple[mlos_bench.tunables.tunable.Tunable, mlos_bench.tunables.covariant_group.CovariantTunableGroup]
+   .. py:method:: get_tunable(tunable: str | mlos_bench.tunables.tunable.Tunable) -> tuple[mlos_bench.tunables.tunable.Tunable, mlos_bench.tunables.covariant_group.CovariantTunableGroup]
 
       Access the entire Tunable (not just its value) and its covariant group. Throw
       KeyError if the tunable is not found.
@@ -167,7 +167,7 @@ Module Contents
 
 
 
-   .. py:method:: is_updated(group_names: Optional[Iterable[str]] = None) -> bool
+   .. py:method:: is_updated(group_names: collections.abc.Iterable[str] | None = None) -> bool
 
       Check if any of the given covariant tunable groups has been updated.
 
@@ -199,7 +199,7 @@ Module Contents
 
 
 
-   .. py:method:: reset(group_names: Optional[Iterable[str]] = None) -> TunableGroups
+   .. py:method:: reset(group_names: collections.abc.Iterable[str] | None = None) -> TunableGroups
 
       Clear the update flag of given covariant groups.
 
@@ -211,7 +211,7 @@ Module Contents
 
 
 
-   .. py:method:: restore_defaults(group_names: Optional[Iterable[str]] = None) -> TunableGroups
+   .. py:method:: restore_defaults(group_names: collections.abc.Iterable[str] | None = None) -> TunableGroups
 
       Restore all tunable parameters to their default values.
 
@@ -223,7 +223,7 @@ Module Contents
 
 
 
-   .. py:method:: subgroup(group_names: Iterable[str]) -> TunableGroups
+   .. py:method:: subgroup(group_names: collections.abc.Iterable[str]) -> TunableGroups
 
       Select the covariance groups from the current set and create a new TunableGroups
       object that consists of those covariance groups.

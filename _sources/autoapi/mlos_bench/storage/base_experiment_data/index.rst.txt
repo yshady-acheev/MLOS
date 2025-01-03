@@ -79,7 +79,7 @@ Module Contents
 
 
    .. py:property:: default_tunable_config_id
-      :type: Optional[int]
+      :type: int | None
 
 
       Retrieves the (tunable) config id for the default tunable values for this
@@ -107,7 +107,7 @@ Module Contents
 
 
    .. py:property:: objectives
-      :type: Dict[str, Literal['min', 'max']]
+      :type: dict[str, Literal['min', 'max']]
 
       :abstractmethod:
 
@@ -116,7 +116,7 @@ Module Contents
 
       :returns: **objectives** -- A dictionary of the experiment's objective names (optimization_targets)
                 and their directions (e.g., min or max).
-      :rtype: Dict[str, Literal["min", "max"]]
+      :rtype: dict[str, Literal["min", "max"]]
 
 
    .. py:property:: results_df
@@ -139,17 +139,17 @@ Module Contents
 
 
    .. py:property:: root_env_config
-      :type: Tuple[str, str, str]
+      :type: tuple[str, str, str]
 
 
       Root environment configuration.
 
       :returns: **(root_env_config, git_repo, git_commit)** -- A tuple of (root_env_config, git_repo, git_commit) for the root environment.
-      :rtype: Tuple[str, str, str]
+      :rtype: tuple[str, str, str]
 
 
    .. py:property:: trials
-      :type: Dict[int, mlos_bench.storage.base_trial_data.TrialData]
+      :type: dict[int, mlos_bench.storage.base_trial_data.TrialData]
 
       :abstractmethod:
 
@@ -157,11 +157,11 @@ Module Contents
       Retrieve the experiment's trials' data from the storage.
 
       :returns: **trials** -- A dictionary of the trials' data, keyed by trial id.
-      :rtype: Dict[int, TrialData]
+      :rtype: dict[int, TrialData]
 
 
    .. py:property:: tunable_config_trial_groups
-      :type: Dict[int, mlos_bench.storage.base_tunable_config_trial_group_data.TunableConfigTrialGroupData]
+      :type: dict[int, mlos_bench.storage.base_tunable_config_trial_group_data.TunableConfigTrialGroupData]
 
       :abstractmethod:
 
@@ -169,11 +169,11 @@ Module Contents
       Retrieve the Experiment's (Tunable) Config Trial Group data from the storage.
 
       :returns: **trials** -- A dictionary of the trials' data, keyed by (tunable) by config id.
-      :rtype: Dict[int, TunableConfigTrialGroupData]
+      :rtype: dict[int, TunableConfigTrialGroupData]
 
 
    .. py:property:: tunable_configs
-      :type: Dict[int, mlos_bench.storage.base_tunable_config_data.TunableConfigData]
+      :type: dict[int, mlos_bench.storage.base_tunable_config_data.TunableConfigData]
 
       :abstractmethod:
 
@@ -181,6 +181,6 @@ Module Contents
       Retrieve the experiment's (tunable) configs' data from the storage.
 
       :returns: **trials** -- A dictionary of the configs' data, keyed by (tunable) config id.
-      :rtype: Dict[int, TunableConfigData]
+      :rtype: dict[int, TunableConfigData]
 
 
