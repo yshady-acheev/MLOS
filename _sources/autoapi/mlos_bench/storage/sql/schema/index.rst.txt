@@ -15,6 +15,9 @@ mlos_bench.storage.sql.schema
    The ``mlos_bench`` CLI will do this automatically if the logging level is set to
    ``DEBUG``.
 
+   Also see the `mlos_bench CLI usage <../../../../../mlos_bench.run.usage.html>`__ for
+   details on how to invoke only the schema creation/update routines.
+
 
 
 Classes
@@ -28,11 +31,18 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: DbSchema(engine: sqlalchemy.engine.Engine)
+.. py:class:: DbSchema(engine: sqlalchemy.engine.Engine | None)
 
    A class to define and create the DB schema.
 
    Declare the SQLAlchemy schema for the database.
+
+   :param engine: The SQLAlchemy engine to use for the DB schema.
+                  Listed as optional for `alembic <https://alembic.sqlalchemy.org>`_
+                  schema migration purposes so we can reference it inside it's ``env.py``
+                  config file for :attr:`~meta` data inspection, but won't generally be
+                  functional without one.
+   :type engine: sqlalchemy.engine.Engine | None
 
 
    .. py:method:: __repr__() -> str
@@ -55,30 +65,81 @@ Module Contents
 
 
 
+   .. py:method:: update() -> DbSchema
+
+      Updates the DB schema to the latest version.
+
+      .. rubric:: Notes
+
+      Also see the `mlos_bench CLI usage <../../../../../mlos_bench.run.usage.html>`__
+      for details on how to invoke only the schema creation/update routines.
+
+
+
    .. py:attribute:: config
+
+      The Table storing
+      :py:class:`~mlos_bench.storage.base_tunable_config_data.TunableConfigData`
+      info.
 
 
    .. py:attribute:: config_param
 
+      The Table storing
+      :py:class:`~mlos_bench.storage.base_tunable_config_data.TunableConfigData`
+      info.
+
 
    .. py:attribute:: experiment
+
+      The Table storing
+      :py:class:`~mlos_bench.storage.base_experiment_data.ExperimentData` info.
+
+
+   .. py:property:: meta
+      :type: sqlalchemy.MetaData
+
+
+      Return the SQLAlchemy MetaData object.
 
 
    .. py:attribute:: objectives
 
+      The Table storing
+      :py:class:`~mlos_bench.storage.base_storage.Storage.Experiment` optimization
+      objectives info.
+
 
    .. py:attribute:: trial
+
+      The Table storing :py:class:`~mlos_bench.storage.base_trial_data.TrialData`
+      info.
 
 
    .. py:attribute:: trial_param
 
+      The Table storing :py:class:`~mlos_bench.storage.base_trial_data.TrialData`
+      :py:attr:`metadata <mlos_bench.storage.base_trial_data.TrialData.metadata_dict>`
+      info.
+
 
    .. py:attribute:: trial_result
+
+      The Table storing :py:class:`~mlos_bench.storage.base_trial_data.TrialData`
+      :py:attr:`results <mlos_bench.storage.base_trial_data.TrialData.results_dict>`
+      info.
 
 
    .. py:attribute:: trial_status
 
+      The Table storing :py:class:`~mlos_bench.storage.base_trial_data.TrialData`
+      :py:class:`~mlos_bench.environments.status.Status` info.
+
 
    .. py:attribute:: trial_telemetry
+
+      The Table storing :py:class:`~mlos_bench.storage.base_trial_data.TrialData`
+      :py:attr:`telemetry <mlos_bench.storage.base_trial_data.TrialData.telemetry_df>`
+      info.
 
 

@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.storage.sql.schema &mdash; MLOS 0.6.2.dev44+gedb0a7c4cc documentation</title>
+  <title>mlos_bench.storage.sql.schema &mdash; MLOS 0.6.2.dev45+g43cc81afe2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../../../_static/graphviz.css?v=4ae1632d" />
@@ -15,7 +15,7 @@
   
       <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../../../_static/documentation_options.js?v=e45aa3ce"></script>
+      <script src="../../../../../_static/documentation_options.js?v=a44fdce8"></script>
       <script src="../../../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -129,6 +129,8 @@ backend.</p>
 <code class="docutils literal notranslate"><span class="pre">repr</span></code> or <code class="docutils literal notranslate"><span class="pre">str</span></code> (e.g., via <code class="docutils literal notranslate"><span class="pre">print()</span></code>) on this object.
 The <code class="docutils literal notranslate"><span class="pre">mlos_bench</span></code> CLI will do this automatically if the logging level is set to
 <code class="docutils literal notranslate"><span class="pre">DEBUG</span></code>.</p>
+<p>Also see the <a class="reference external" href="../../../../../mlos_bench.run.usage.html">mlos_bench CLI usage</a> for
+details on how to invoke only the schema creation/update routines.</p>
 <section id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Link to this heading"></a></h2>
 <table class="autosummary longtable docutils align-default">
@@ -143,12 +145,16 @@ The <code class="docutils literal notranslate"><span class="pre">mlos_bench</spa
 <h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="mlos_bench.storage.sql.schema.DbSchema">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.storage.sql.schema.</span></span><span class="sig-name descname"><span class="pre">DbSchema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">engine</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">sqlalchemy.engine.Engine</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/storage/sql/schema.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.storage.sql.schema.DbSchema" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.storage.sql.schema.</span></span><span class="sig-name descname"><span class="pre">DbSchema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">engine</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">sqlalchemy.engine.Engine</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/storage/sql/schema.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.storage.sql.schema.DbSchema" title="Link to this definition"></a></dt>
 <dd><p>A class to define and create the DB schema.</p>
 <p>Declare the SQLAlchemy schema for the database.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>engine</strong> (<em>sqlalchemy.engine.Engine</em>)</p>
+<dd class="field-odd"><p><strong>engine</strong> (<em>sqlalchemy.engine.Engine</em><em> | </em><em>None</em>) – The SQLAlchemy engine to use for the DB schema.
+Listed as optional for <a class="reference external" href="https://alembic.sqlalchemy.org">alembic</a>
+schema migration purposes so we can reference it inside it’s <code class="docutils literal notranslate"><span class="pre">env.py</span></code>
+config file for <a class="reference internal" href="#mlos_bench.storage.sql.schema.DbSchema.meta" title="mlos_bench.storage.sql.schema.DbSchema.meta"><code class="xref py py-attr docutils literal notranslate"><span class="pre">meta</span></code></a> data inspection, but won’t generally be
+functional without one.</p>
 </dd>
 </dl>
 <dl class="py method">
@@ -180,50 +186,99 @@ to log the schema, and if the logging level is set to DEBUG.</p>
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="mlos_bench.storage.sql.schema.DbSchema.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#mlos_bench.storage.sql.schema.DbSchema" title="mlos_bench.storage.sql.schema.DbSchema"><span class="pre">DbSchema</span></a></span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/storage/sql/schema.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.storage.sql.schema.DbSchema.update" title="Link to this definition"></a></dt>
+<dd><p>Updates the DB schema to the latest version.</p>
+<p class="rubric">Notes</p>
+<p>Also see the <a class="reference external" href="../../../../../mlos_bench.run.usage.html">mlos_bench CLI usage</a>
+for details on how to invoke only the schema creation/update routines.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#mlos_bench.storage.sql.schema.DbSchema" title="mlos_bench.storage.sql.schema.DbSchema">DbSchema</a></p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlos_bench.storage.sql.schema.DbSchema.config">
 <span class="sig-name descname"><span class="pre">config</span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/storage/sql/schema.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.storage.sql.schema.DbSchema.config" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>The Table storing
+<a class="reference internal" href="../../base_tunable_config_data/index.html#mlos_bench.storage.base_tunable_config_data.TunableConfigData" title="mlos_bench.storage.base_tunable_config_data.TunableConfigData"><code class="xref py py-class docutils literal notranslate"><span class="pre">TunableConfigData</span></code></a>
+info.</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlos_bench.storage.sql.schema.DbSchema.config_param">
 <span class="sig-name descname"><span class="pre">config_param</span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/storage/sql/schema.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.storage.sql.schema.DbSchema.config_param" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>The Table storing
+<a class="reference internal" href="../../base_tunable_config_data/index.html#mlos_bench.storage.base_tunable_config_data.TunableConfigData" title="mlos_bench.storage.base_tunable_config_data.TunableConfigData"><code class="xref py py-class docutils literal notranslate"><span class="pre">TunableConfigData</span></code></a>
+info.</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlos_bench.storage.sql.schema.DbSchema.experiment">
 <span class="sig-name descname"><span class="pre">experiment</span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/storage/sql/schema.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.storage.sql.schema.DbSchema.experiment" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>The Table storing
+<a class="reference internal" href="../../base_experiment_data/index.html#mlos_bench.storage.base_experiment_data.ExperimentData" title="mlos_bench.storage.base_experiment_data.ExperimentData"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExperimentData</span></code></a> info.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="mlos_bench.storage.sql.schema.DbSchema.meta">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">meta</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">sqlalchemy.MetaData</span></em><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/storage/sql/schema.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.storage.sql.schema.DbSchema.meta" title="Link to this definition"></a></dt>
+<dd><p>Return the SQLAlchemy MetaData object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>sqlalchemy.MetaData</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlos_bench.storage.sql.schema.DbSchema.objectives">
 <span class="sig-name descname"><span class="pre">objectives</span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/storage/sql/schema.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.storage.sql.schema.DbSchema.objectives" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>The Table storing
+<a class="reference internal" href="../../base_storage/index.html#mlos_bench.storage.base_storage.Storage.Experiment" title="mlos_bench.storage.base_storage.Storage.Experiment"><code class="xref py py-class docutils literal notranslate"><span class="pre">Experiment</span></code></a> optimization
+objectives info.</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlos_bench.storage.sql.schema.DbSchema.trial">
 <span class="sig-name descname"><span class="pre">trial</span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/storage/sql/schema.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.storage.sql.schema.DbSchema.trial" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>The Table storing <a class="reference internal" href="../../base_trial_data/index.html#mlos_bench.storage.base_trial_data.TrialData" title="mlos_bench.storage.base_trial_data.TrialData"><code class="xref py py-class docutils literal notranslate"><span class="pre">TrialData</span></code></a>
+info.</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlos_bench.storage.sql.schema.DbSchema.trial_param">
 <span class="sig-name descname"><span class="pre">trial_param</span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/storage/sql/schema.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.storage.sql.schema.DbSchema.trial_param" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>The Table storing <a class="reference internal" href="../../base_trial_data/index.html#mlos_bench.storage.base_trial_data.TrialData" title="mlos_bench.storage.base_trial_data.TrialData"><code class="xref py py-class docutils literal notranslate"><span class="pre">TrialData</span></code></a>
+<a class="reference internal" href="../../base_trial_data/index.html#mlos_bench.storage.base_trial_data.TrialData.metadata_dict" title="mlos_bench.storage.base_trial_data.TrialData.metadata_dict"><code class="xref py py-attr docutils literal notranslate"><span class="pre">metadata</span></code></a>
+info.</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlos_bench.storage.sql.schema.DbSchema.trial_result">
 <span class="sig-name descname"><span class="pre">trial_result</span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/storage/sql/schema.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.storage.sql.schema.DbSchema.trial_result" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>The Table storing <a class="reference internal" href="../../base_trial_data/index.html#mlos_bench.storage.base_trial_data.TrialData" title="mlos_bench.storage.base_trial_data.TrialData"><code class="xref py py-class docutils literal notranslate"><span class="pre">TrialData</span></code></a>
+<a class="reference internal" href="../../base_trial_data/index.html#mlos_bench.storage.base_trial_data.TrialData.results_dict" title="mlos_bench.storage.base_trial_data.TrialData.results_dict"><code class="xref py py-attr docutils literal notranslate"><span class="pre">results</span></code></a>
+info.</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlos_bench.storage.sql.schema.DbSchema.trial_status">
 <span class="sig-name descname"><span class="pre">trial_status</span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/storage/sql/schema.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.storage.sql.schema.DbSchema.trial_status" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>The Table storing <a class="reference internal" href="../../base_trial_data/index.html#mlos_bench.storage.base_trial_data.TrialData" title="mlos_bench.storage.base_trial_data.TrialData"><code class="xref py py-class docutils literal notranslate"><span class="pre">TrialData</span></code></a>
+<a class="reference internal" href="../../../environments/status/index.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><code class="xref py py-class docutils literal notranslate"><span class="pre">Status</span></code></a> info.</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlos_bench.storage.sql.schema.DbSchema.trial_telemetry">
 <span class="sig-name descname"><span class="pre">trial_telemetry</span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/storage/sql/schema.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.storage.sql.schema.DbSchema.trial_telemetry" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>The Table storing <a class="reference internal" href="../../base_trial_data/index.html#mlos_bench.storage.base_trial_data.TrialData" title="mlos_bench.storage.base_trial_data.TrialData"><code class="xref py py-class docutils literal notranslate"><span class="pre">TrialData</span></code></a>
+<a class="reference internal" href="../../base_trial_data/index.html#mlos_bench.storage.base_trial_data.TrialData.telemetry_df" title="mlos_bench.storage.base_trial_data.TrialData.telemetry_df"><code class="xref py py-attr docutils literal notranslate"><span class="pre">telemetry</span></code></a>
+info.</p>
+</dd></dl>
 
 </dd></dl>
 
