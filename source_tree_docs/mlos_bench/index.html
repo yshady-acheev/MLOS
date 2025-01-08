@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>mlos-bench &mdash; MLOS 0.6.3.dev1+gd7294fa887 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -340,7 +340,7 @@ That means, we will run 30 trials in total, 3 for each of the 10 suggested confi
 See the <a class="reference external" href="https://github.com/Microsoft-CISL/sqlite-autotuning"><code class="docutils literal notranslate"><span class="pre">sqlite-autotuning</span></code></a> repository for a full example.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">mlos-viz</span></code> package uses the <code class="docutils literal notranslate"><span class="pre">ExperimentData</span></code> and <code class="docutils literal notranslate"><span class="pre">TrialData</span></code> <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/./mlos_bench/storage/"><code class="docutils literal notranslate"><span class="pre">mlos_bench.storage</span></code> APIs</a> to load the data from the database and visualize it.</p>
 <p>For example:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">mlos_bench.storage</span> <span class="kn">import</span> <span class="n">from_config</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">mlos_bench.storage</span><span class="w"> </span><span class="kn">import</span> <span class="n">from_config</span>
 <span class="c1"># Specify the experiment_id used for your experiment.</span>
 <span class="n">experiment_id</span> <span class="o">=</span> <span class="s2">&quot;YourExperimentId&quot;</span>
 <span class="n">trial_id</span> <span class="o">=</span> <span class="mi">1</span>
