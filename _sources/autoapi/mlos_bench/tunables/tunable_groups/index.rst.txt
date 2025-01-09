@@ -63,13 +63,13 @@ Module Contents
 
 
 
-   .. py:method:: __iter__() -> collections.abc.Generator[tuple[mlos_bench.tunables.tunable.Tunable, mlos_bench.tunables.covariant_group.CovariantTunableGroup], None, None]
+   .. py:method:: __iter__() -> collections.abc.Generator[tuple[mlos_bench.tunables.tunable.Tunable, mlos_bench.tunables.covariant_group.CovariantTunableGroup]]
 
       An iterator over all tunables in the group.
 
       :returns: **[(tunable, group), ...]** -- An iterator over all tunables in all groups. Each element is a 2-tuple
                 of an instance of the Tunable parameter and covariant group it belongs to.
-      :rtype: Generator[tuple[Tunable, CovariantTunableGroup], None, None]
+      :rtype: Generator[tuple[Tunable, CovariantTunableGroup]]
 
 
 

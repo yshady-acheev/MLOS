@@ -22,6 +22,9 @@ Module Contents
 
 .. py:class:: Service(config: dict[str, Any] | None = None, global_config: dict[str, Any] | None = None, parent: Service | None = None, methods: dict[str, collections.abc.Callable] | list[collections.abc.Callable] | None = None)
 
+   Bases: :py:obj:`contextlib.AbstractContextManager`
+
+
    An abstract base of all Environment Services and used to build up mix-ins.
 
    Create a new service with a given config.

@@ -22,6 +22,9 @@ Module Contents
 
 .. py:class:: Scheduler(*, config: dict[str, Any], global_config: dict[str, Any], environment: mlos_bench.environments.base_environment.Environment, optimizer: mlos_bench.optimizers.base_optimizer.Optimizer, storage: mlos_bench.storage.base_storage.Storage, root_env_config: str)
 
+   Bases: :py:obj:`contextlib.AbstractContextManager`
+
+
    Base class for the optimization loop scheduling policies.
 
    Create a new instance of the scheduler. The constructor of this and the derived

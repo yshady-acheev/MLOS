@@ -53,6 +53,9 @@ Module Contents
 
    .. py:class:: Experiment(*, tunables: mlos_bench.tunables.tunable_groups.TunableGroups, experiment_id: str, trial_id: int, root_env_config: str, description: str, opt_targets: dict[str, Literal['min', 'max']])
 
+      Bases: :py:obj:`contextlib.AbstractContextManager`
+
+
       Base interface for storing the results of the experiment.
 
       This class is instantiated in the `Storage.experiment()` method.

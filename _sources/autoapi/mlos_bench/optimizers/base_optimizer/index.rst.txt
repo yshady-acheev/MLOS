@@ -23,6 +23,9 @@ Module Contents
 
 .. py:class:: Optimizer(tunables: mlos_bench.tunables.tunable_groups.TunableGroups, config: dict, global_config: dict | None = None, service: mlos_bench.services.base_service.Service | None = None)
 
+   Bases: :py:obj:`contextlib.AbstractContextManager`
+
+
    An abstract interface between the benchmarking framework and mlos_core
    optimizers.
 

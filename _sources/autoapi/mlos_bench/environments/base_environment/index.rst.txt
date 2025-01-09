@@ -22,6 +22,9 @@ Module Contents
 
 .. py:class:: Environment(*, name: str, config: dict, global_config: dict | None = None, tunables: mlos_bench.tunables.tunable_groups.TunableGroups | None = None, service: mlos_bench.services.base_service.Service | None = None)
 
+   Bases: :py:obj:`contextlib.AbstractContextManager`
+
+
    An abstract base of all benchmark environments.
 
    Create a new environment with a given config.

@@ -40,7 +40,7 @@ Module Contents
    :param parent: An optional parent service that can provide mixin functions.
    :type parent: Service
    :param methods: New methods to register with the service.
-   :type methods: Union[dict[str, Callable], list[Callable], None]
+   :type methods: dict[str, Callable] | list[Callable] | None
 
 
    .. py:method:: build_environment(config: dict[str, Any], tunables: mlos_bench.tunables.tunable_groups.TunableGroups, global_config: dict[str, Any] | None = None, parent_args: dict[str, mlos_bench.tunables.tunable.TunableValue] | None = None, service: mlos_bench.services.base_service.Service | None = None) -> mlos_bench.environments.base_environment.Environment
@@ -161,7 +161,7 @@ Module Contents
       :type schema_type: ConfigSchema | None
 
       :returns: **config** -- Free-format dictionary that contains the configuration.
-      :rtype: Union[dict, list[dict]]
+      :rtype: dict | list[dict]
 
 
 
