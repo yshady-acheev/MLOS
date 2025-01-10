@@ -164,6 +164,16 @@ Module Contents
    .. py:attribute:: config
 
 
+   .. py:property:: const_args
+      :type: dict[str, mlos_bench.tunables.tunable.TunableValue]
+
+
+      Get the constant arguments for this Environment.
+
+      :returns: **parameters** -- Key/value pairs of all environment const_args parameters.
+      :rtype: Dict[str, TunableValue]
+
+
    .. py:attribute:: name
 
 

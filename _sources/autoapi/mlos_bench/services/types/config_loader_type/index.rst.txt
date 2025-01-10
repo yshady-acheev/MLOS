@@ -45,13 +45,21 @@ Module Contents
       :type global_config: dict | None
       :param parent_args: An optional reference of the parent CompositeEnv's const_args used to
                           expand dynamic config parameters from.
-      :type parent_args: Optional[dict[str, TunableValue]]
+      :type parent_args: dict[str, TunableValue] | None
       :param service: An optional service object (e.g., providing methods to
                       deploy or reboot a VM, etc.).
       :type service: Service | None
 
       :returns: **env** -- An instance of the `Environment` class initialized with `config`.
       :rtype: Environment
+
+
+
+   .. py:method:: get_config_paths() -> list[str]
+
+      Gets the list of config paths this service will search for config files.
+
+      :rtype: list[str]
 
 
 
@@ -70,6 +78,27 @@ Module Contents
 
 
 
+   .. py:method:: load_environment(json: str, tunables: mlos_bench.tunables.tunable_groups.TunableGroups, global_config: dict[str, Any] | None = None, parent_args: dict[str, mlos_bench.tunables.tunable.TunableValue] | None = None, service: mlos_bench.services.base_service.Service | None = None) -> mlos_bench.environments.base_environment.Environment
+
+      Load and build new :py:class:`.Environment` from the config file or JSON string.
+
+      :param json: The environment JSON configuration file or JSON string.
+      :type json: str
+      :param tunables: A (possibly empty) collection of tunables to add to the environment.
+      :type tunables: TunableGroups
+      :param global_config: Global parameters to add to the environment config.
+      :type global_config: dict
+      :param parent_args: An optional reference of the parent CompositeEnv's const_args used to
+                          expand dynamic config parameters from.
+      :type parent_args: dict[str, TunableValue]
+      :param service: An optional reference of the parent service to mix in.
+      :type service: Service
+
+      :returns: **env** -- A new benchmarking environment.
+      :rtype: Environment
+
+
+
    .. py:method:: load_environment_list(json: str, tunables: mlos_bench.tunables.tunable_groups.TunableGroups, global_config: dict | None = None, parent_args: dict[str, mlos_bench.tunables.tunable.TunableValue] | None = None, service: mlos_bench.services.base_service.Service | None = None) -> list[mlos_bench.environments.base_environment.Environment]
 
       Load and build a list of environments from the config file.
@@ -83,7 +112,7 @@ Module Contents
       :type global_config: dict | None
       :param parent_args: An optional reference of the parent CompositeEnv's const_args used to
                           expand dynamic config parameters from.
-      :type parent_args: Optional[dict[str, TunableValue]]
+      :type parent_args: dict[str, TunableValue] | None
       :param service: An optional reference of the parent service to mix in.
       :type service: Service | None
 

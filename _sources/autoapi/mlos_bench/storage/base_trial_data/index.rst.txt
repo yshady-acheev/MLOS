@@ -28,7 +28,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: TrialData(*, experiment_id: str, trial_id: int, tunable_config_id: int, ts_start: datetime.datetime, ts_end: datetime.datetime | None, status: mlos_bench.environments.status.Status)
+.. py:class:: TrialData(*, experiment_id: str, trial_id: int, tunable_config_id: int, ts_start: datetime.datetime, ts_end: datetime.datetime | None, status: mlos_bench.environments.status.Status, trial_runner_id: int | None = None)
 
    Base interface for accessing the stored experiment benchmark trial data.
 
@@ -128,6 +128,13 @@ Module Contents
 
 
       ID of the trial.
+
+
+   .. py:property:: trial_runner_id
+      :type: int | None
+
+
+      ID of the TrialRunner.
 
 
    .. py:property:: ts_end

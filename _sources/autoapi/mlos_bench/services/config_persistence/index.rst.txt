@@ -90,7 +90,7 @@ Module Contents
 
 
 
-   .. py:method:: build_scheduler(*, config: dict[str, Any], global_config: dict[str, Any], environment: mlos_bench.environments.base_environment.Environment, optimizer: mlos_bench.optimizers.base_optimizer.Optimizer, storage: mlos_bench.storage.base_storage.Storage, root_env_config: str) -> mlos_bench.schedulers.base_scheduler.Scheduler
+   .. py:method:: build_scheduler(*, config: dict[str, Any], global_config: dict[str, Any], trial_runners: list[mlos_bench.schedulers.trial_runner.TrialRunner], optimizer: mlos_bench.optimizers.base_optimizer.Optimizer, storage: mlos_bench.storage.base_storage.Storage, root_env_config: str) -> mlos_bench.schedulers.base_scheduler.Scheduler
 
       Instantiation of mlos_bench :py:class:`.Scheduler`.
 
@@ -98,8 +98,8 @@ Module Contents
       :type config: dict
       :param global_config: Global configuration parameters.
       :type global_config: dict
-      :param environment: The environment to benchmark/optimize.
-      :type environment: Environment
+      :param trial_runners: The TrialRunners (Environments) to use.
+      :type trial_runners: List[TrialRunner]
       :param optimizer: The optimizer to use.
       :type optimizer: Optimizer
       :param storage: The storage to use.
@@ -145,6 +145,14 @@ Module Contents
 
       :returns: **inst** -- A new instance of the Storage class.
       :rtype: Storage
+
+
+
+   .. py:method:: get_config_paths() -> list[str]
+
+      Gets the list of config paths this service will search for config files.
+
+      :rtype: list[str]
 
 
 

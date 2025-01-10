@@ -17,5 +17,6 @@ Submodules
 
    /autoapi/mlos_bench/schedulers/base_scheduler/index
    /autoapi/mlos_bench/schedulers/sync_scheduler/index
+   /autoapi/mlos_bench/schedulers/trial_runner/index
 
 

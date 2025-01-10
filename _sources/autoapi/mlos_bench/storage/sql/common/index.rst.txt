@@ -16,6 +16,7 @@ Functions
 
    mlos_bench.storage.sql.common.get_results_df
    mlos_bench.storage.sql.common.get_trials
+   mlos_bench.storage.sql.common.save_params
 
 
 Module Contents
@@ -40,5 +41,19 @@ Module Contents
    additionally restricted by ``tunable_config_id``.
 
    .. seealso:: :py:class:`~mlos_bench.storage.sql.tunable_config_trial_group_data.TunableConfigTrialGroupSqlData`, :py:class:`~mlos_bench.storage.sql.experiment_data.ExperimentSqlData`
+
+
+.. py:function:: save_params(conn: sqlalchemy.engine.Connection, table: sqlalchemy.schema.Table, params: collections.abc.Mapping[str, Any], **kwargs: Any) -> None
+
+   Updates a set of (param_id, param_value) tuples in the given Table.
+
+   :param conn: A connection to the backend database.
+   :type conn: sqlalchemy.engine.Connection
+   :param table: The table to update.
+   :type table: sqlalchemy.schema.Table
+   :param params: The new (param_id, param_value) tuples to upsert to the Table.
+   :type params: dict[str, Any]
+   :param \*\*kwargs: Primary key info for the given table.
+   :type \*\*kwargs: dict[str, Any]
 
 

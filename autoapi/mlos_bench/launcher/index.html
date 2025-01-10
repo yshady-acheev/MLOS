@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.launcher &mdash; MLOS 0.6.3.dev2+g6d91add928 documentation</title>
+  <title>mlos_bench.launcher &mdash; MLOS 0.6.3.dev5+g6ffe5465ed documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
@@ -15,7 +15,7 @@
   
       <script src="../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../_static/documentation_options.js?v=80132c64"></script>
+      <script src="../../../_static/documentation_options.js?v=911b1d0c"></script>
       <script src="../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -162,11 +162,6 @@ from the command line.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="mlos_bench.launcher.Launcher.environment">
-<span class="sig-name descname"><span class="pre">environment</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../environments/base_environment/index.html#mlos_bench.environments.base_environment.Environment" title="mlos_bench.environments.base_environment.Environment"><span class="pre">mlos_bench.environments.base_environment.Environment</span></a></em><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/launcher.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.launcher.Launcher.environment" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
 <dt class="sig sig-object py" id="mlos_bench.launcher.Launcher.global_config">
 <span class="sig-name descname"><span class="pre">global_config</span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/launcher.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.launcher.Launcher.global_config" title="Link to this definition"></a></dt>
 <dd></dd></dl>
@@ -180,6 +175,22 @@ from the command line.</p>
 <dt class="sig sig-object py" id="mlos_bench.launcher.Launcher.root_env_config">
 <span class="sig-name descname"><span class="pre">root_env_config</span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/launcher.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.launcher.Launcher.root_env_config" title="Link to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="mlos_bench.launcher.Launcher.root_environment">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">root_environment</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../environments/base_environment/index.html#mlos_bench.environments.base_environment.Environment" title="mlos_bench.environments.base_environment.Environment"><span class="pre">mlos_bench.environments.base_environment.Environment</span></a></em><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/launcher.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.launcher.Launcher.root_environment" title="Link to this definition"></a></dt>
+<dd><p>Gets the root (prototypical) Environment from the first TrialRunner.</p>
+<p>Note: All TrialRunners have the same Environment config and are made
+unique by their use of the unique trial_runner_id assigned to each
+TrialRunner’s Environment’s global_config.</p>
+<p class="rubric">Notes</p>
+<p>This is mostly for convenience and backwards compatibility.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="../environments/base_environment/index.html#mlos_bench.environments.base_environment.Environment" title="mlos_bench.environments.base_environment.Environment">mlos_bench.environments.base_environment.Environment</a></p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlos_bench.launcher.Launcher.scheduler">
@@ -205,6 +216,11 @@ from the command line.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlos_bench.launcher.Launcher.teardown">
 <span class="sig-name descname"><span class="pre">teardown</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></em><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/launcher.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.launcher.Launcher.teardown" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mlos_bench.launcher.Launcher.trial_runners">
+<span class="sig-name descname"><span class="pre">trial_runners</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/launcher.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.launcher.Launcher.trial_runners" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">

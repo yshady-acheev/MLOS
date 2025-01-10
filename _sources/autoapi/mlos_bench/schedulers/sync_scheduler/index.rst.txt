@@ -20,7 +20,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: SyncScheduler(*, config: dict[str, Any], global_config: dict[str, Any], environment: mlos_bench.environments.base_environment.Environment, optimizer: mlos_bench.optimizers.base_optimizer.Optimizer, storage: mlos_bench.storage.base_storage.Storage, root_env_config: str)
+.. py:class:: SyncScheduler(*, config: dict[str, Any], global_config: dict[str, Any], trial_runners: collections.abc.Iterable[mlos_bench.schedulers.trial_runner.TrialRunner], optimizer: mlos_bench.optimizers.base_optimizer.Optimizer, storage: mlos_bench.storage.base_storage.Storage, root_env_config: str)
 
    Bases: :py:obj:`mlos_bench.schedulers.base_scheduler.Scheduler`
 
@@ -29,20 +29,20 @@ Module Contents
 
    Create a new instance of the scheduler. The constructor of this and the derived
    classes is called by the persistence service after reading the class JSON
-   configuration. Other objects like the Environment and Optimizer are provided by
-   the Launcher.
+   configuration. Other objects like the TrialRunner(s) and their Environment(s)
+   and Optimizer are provided by the Launcher.
 
-   :param config: The configuration for the scheduler.
+   :param config: The configuration for the Scheduler.
    :type config: dict
-   :param global_config: he global configuration for the experiment.
+   :param global_config: The global configuration for the Experiment.
    :type global_config: dict
-   :param environment: The environment to benchmark/optimize.
-   :type environment: Environment
-   :param optimizer: The optimizer to use.
+   :param trial_runner: The set of TrialRunner(s) (and associated Environment(s)) to benchmark/optimize.
+   :type trial_runner: Iterable[TrialRunner]
+   :param optimizer: The Optimizer to use.
    :type optimizer: Optimizer
-   :param storage: The storage to use.
+   :param storage: The Storage to use.
    :type storage: Storage
-   :param root_env_config: Path to the root environment configuration.
+   :param root_env_config: Path to the root Environment configuration.
    :type root_env_config: str
 
 

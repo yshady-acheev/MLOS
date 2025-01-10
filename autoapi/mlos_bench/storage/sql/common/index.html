@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.storage.sql.common &mdash; MLOS 0.6.3.dev2+g6d91add928 documentation</title>
+  <title>mlos_bench.storage.sql.common &mdash; MLOS 0.6.3.dev5+g6ffe5465ed documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../../../_static/graphviz.css?v=4ae1632d" />
@@ -15,7 +15,7 @@
   
       <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../../../_static/documentation_options.js?v=80132c64"></script>
+      <script src="../../../../../_static/documentation_options.js?v=911b1d0c"></script>
       <script src="../../../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -133,6 +133,9 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#mlos_bench.storage.sql.common.get_trials" title="mlos_bench.storage.sql.common.get_trials"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_trials</span></code></a>(→ dict[int, ...)</p></td>
 <td><p>Gets <a class="reference internal" href="../../base_trial_data/index.html#mlos_bench.storage.base_trial_data.TrialData" title="mlos_bench.storage.base_trial_data.TrialData"><code class="xref py py-class docutils literal notranslate"><span class="pre">TrialData</span></code></a> for the given <code class="docutils literal notranslate"><span class="pre">experiment_id</span></code> and optionally</p></td>
 </tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.storage.sql.common.save_params" title="mlos_bench.storage.sql.common.save_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_params</span></code></a>(→ None)</p></td>
+<td><p>Updates a set of (param_id, param_value) tuples in the given Table.</p></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -186,6 +189,25 @@ additionally restricted by <code class="docutils literal notranslate"><span clas
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)">dict</a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a>, <a class="reference internal" href="../../base_trial_data/index.html#mlos_bench.storage.base_trial_data.TrialData" title="mlos_bench.storage.base_trial_data.TrialData">mlos_bench.storage.base_trial_data.TrialData</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mlos_bench.storage.sql.common.save_params">
+<span class="sig-prename descclassname"><span class="pre">mlos_bench.storage.sql.common.</span></span><span class="sig-name descname"><span class="pre">save_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">sqlalchemy.engine.Connection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">sqlalchemy.schema.Table</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping" title="(in Python v3.13)"><span class="pre">collections.abc.Mapping</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/storage/sql/common.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.storage.sql.common.save_params" title="Link to this definition"></a></dt>
+<dd><p>Updates a set of (param_id, param_value) tuples in the given Table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>conn</strong> (<em>sqlalchemy.engine.Connection</em>) – A connection to the backend database.</p></li>
+<li><p><strong>table</strong> (<em>sqlalchemy.schema.Table</em>) – The table to update.</p></li>
+<li><p><strong>params</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><em>Any</em><em>]</em>) – The new (param_id, param_value) tuples to upsert to the Table.</p></li>
+<li><p><strong>**kwargs</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><em>Any</em><em>]</em>) – Primary key info for the given table.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
 </dd>
 </dl>
 </dd></dl>
