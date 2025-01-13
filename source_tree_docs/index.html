@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MLOS &mdash; MLOS 0.6.3.dev9+g440b2378d2 documentation</title>
+  <title>MLOS &mdash; MLOS 0.6.3.dev11+g3c319cd970 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
@@ -15,7 +15,7 @@
   
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=30cc6b90"></script>
+      <script src="../_static/documentation_options.js?v=c1f83fe9"></script>
       <script src="../_static/doctools.js?v=9bcbadda"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -123,10 +123,8 @@
 <p>MLOS is a project to enable autotuning for systems.</p>
 <section id="contents">
 <h2>Contents<a class="headerlink" href="#contents" title="Link to this heading"></a></h2>
-<!-- TOC -->
+<!-- mdformat-toc start --slug=github --no-anchors --maxlevel=4 --minlevel=2 -->
 <ul class="simple">
-<li><p><a class="reference internal" href="#mlos"><span class="std std-ref">MLOS</span></a></p>
-<ul>
 <li><p><a class="reference internal" href="#contents"><span class="std std-ref">Contents</span></a></p></li>
 <li><p><a class="reference internal" href="#overview"><span class="std std-ref">Overview</span></a></p></li>
 <li><p><a class="reference internal" href="#organization"><span class="std std-ref">Organization</span></a></p></li>
@@ -151,9 +149,7 @@
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-<!-- /TOC -->
+<!-- mdformat-toc end -->
 </section>
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
@@ -167,8 +163,9 @@
 <li><p>Apply that configuration to the target system.</p></li>
 <li><p>Repeat until either the exploration budget is consumed or the configurations’ performance appear to have converged.</p></li>
 </ul>
-<!-- markdownlint-disable-next-line MD033 -->
+<!-- markdownlint-disable MD033 -->
 <img src="../_static/llamatune-loop.png" style="width:700px" alt="optimization loop" />
+<!-- markdownlint-enable MD033 -->
 <blockquote>
 <div><p>Source: <a class="reference external" href="https://arxiv.org/abs/2203.05128">LlamaTune: VLDB 2022</a></p>
 </div></blockquote>

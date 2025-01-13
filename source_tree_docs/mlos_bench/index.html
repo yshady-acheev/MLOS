@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos-bench &mdash; MLOS 0.6.3.dev9+g440b2378d2 documentation</title>
+  <title>mlos-bench &mdash; MLOS 0.6.3.dev11+g3c319cd970 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
@@ -15,7 +15,7 @@
   
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../_static/documentation_options.js?v=30cc6b90"></script>
+      <script src="../../_static/documentation_options.js?v=c1f83fe9"></script>
       <script src="../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -54,16 +54,16 @@
 <li class="toctree-l2"><a class="reference internal" href="#description">Description</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#features">Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#quickstart">Quickstart</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#install-and-activate-the-conda-environment">1. Install and activate the conda environment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#make-sure-that-you-have-azure-cli-tool-installed-and-working">2. Make sure that you have Azure CLI tool installed and working</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#generate-access-tokens-to-interact-with-azure-resources">3. Generate access tokens to interact with Azure resources</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#create-a-json-config-with-db-credentials-optional">4. Create a JSON config with DB credentials (Optional)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#create-a-top-level-configuration-file-for-your-mlos-setup">5. Create a top-level configuration file for your MLOS setup</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#create-another-config-file-for-the-parameters-specific-to-your-experiment">5. Create another config file for the parameters specific to your experiment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#install-and-activate-the-conda-environment">Install and activate the conda environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#make-sure-that-you-have-azure-cli-tool-installed-and-working">Make sure that you have Azure CLI tool installed and working</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#generate-access-tokens-to-interact-with-azure-resources">Generate access tokens to interact with Azure resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-a-json-config-with-db-credentials-optional">Create a JSON config with DB credentials (Optional)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-a-top-level-configuration-file-for-your-mlos-setup">Create a top-level configuration file for your MLOS setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-another-config-file-for-the-parameters-specific-to-your-experiment">Create another config file for the parameters specific to your experiment</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#importance-of-the-experiment-id-config">Importance of the Experiment ID config</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#run-the-benchmark">6. Run the benchmark</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#run-the-benchmark">Run the benchmark</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#optimization">Optimization</a><ul>
@@ -124,10 +124,8 @@
 <section id="table-of-contents">
 <h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Link to this heading"></a></h2>
 <!-- markdownlint-disable MD007 -->
-<!-- TOC -->
+<!-- mdformat-toc start --slug=github --no-anchors --maxlevel=4 --minlevel=2 -->
 <ul class="simple">
-<li><p><a class="reference internal" href="#mlos-bench"><span class="std std-ref">mlos-bench</span></a></p>
-<ul>
 <li><p><a class="reference internal" href="#table-of-contents"><span class="std std-ref">Table of Contents</span></a></p></li>
 <li><p><a class="reference internal" href="#description"><span class="std std-ref">Description</span></a></p></li>
 <li><p><a class="reference internal" href="#features"><span class="std std-ref">Features</span></a></p></li>
@@ -136,7 +134,7 @@
 <li><p><a class="reference internal" href="#install-and-activate-the-conda-environment"><span class="std std-ref">Install and activate the conda environment</span></a></p></li>
 <li><p><a class="reference internal" href="#make-sure-that-you-have-azure-cli-tool-installed-and-working"><span class="std std-ref">Make sure that you have Azure CLI tool installed and working</span></a></p></li>
 <li><p><a class="reference internal" href="#generate-access-tokens-to-interact-with-azure-resources"><span class="std std-ref">Generate access tokens to interact with Azure resources</span></a></p></li>
-<li><p><a class="reference internal" href="#create-a-json-config-with-db-credentials-optional"><span class="std std-ref">Create a JSON config with DB credentials Optional</span></a></p></li>
+<li><p><a class="reference internal" href="#create-a-json-config-with-db-credentials-optional"><span class="std std-ref">Create a JSON config with DB credentials (Optional)</span></a></p></li>
 <li><p><a class="reference internal" href="#create-a-top-level-configuration-file-for-your-mlos-setup"><span class="std std-ref">Create a top-level configuration file for your MLOS setup</span></a></p></li>
 <li><p><a class="reference internal" href="#create-another-config-file-for-the-parameters-specific-to-your-experiment"><span class="std std-ref">Create another config file for the parameters specific to your experiment</span></a></p>
 <ul>
@@ -155,10 +153,7 @@
 <li><p><a class="reference internal" href="#debugging"><span class="std std-ref">Debugging</span></a></p></li>
 <li><p><a class="reference internal" href="#see-also"><span class="std std-ref">See Also</span></a></p></li>
 </ul>
-</li>
-</ul>
-<!-- /TOC -->
-<!-- /TOC -->
+<!-- mdformat-toc end -->
 <!-- markdownlint-enable MD007 -->
 </section>
 <section id="description">
@@ -194,7 +189,7 @@ Experiment results (benchmark results &amp; telemetry) are stored as input to th
 <p>To get started, we can adapt an example configuration to test out running <code class="docutils literal notranslate"><span class="pre">mlos-bench</span></code>.
 For these instructions, we will be using Azure for our resources.</p>
 <section id="install-and-activate-the-conda-environment">
-<h3>1. Install and activate the conda environment<a class="headerlink" href="#install-and-activate-the-conda-environment" title="Link to this heading"></a></h3>
+<h3>Install and activate the conda environment<a class="headerlink" href="#install-and-activate-the-conda-environment" title="Link to this heading"></a></h3>
 <p>From here onwards we assume we are in the project root directory.
 Ensure you have a conda environment (<code class="docutils literal notranslate"><span class="pre">mlos</span></code>) set up for executing <code class="docutils literal notranslate"><span class="pre">mlos_bench</span></code>.
 Create and activate the environment with:</p>
@@ -207,7 +202,7 @@ conda<span class="w"> </span>activate<span class="w"> </span>mlos
 </div></blockquote>
 </section>
 <section id="make-sure-that-you-have-azure-cli-tool-installed-and-working">
-<h3>2. Make sure that you have Azure CLI tool installed and working<a class="headerlink" href="#make-sure-that-you-have-azure-cli-tool-installed-and-working" title="Link to this heading"></a></h3>
+<h3>Make sure that you have Azure CLI tool installed and working<a class="headerlink" href="#make-sure-that-you-have-azure-cli-tool-installed-and-working" title="Link to this heading"></a></h3>
 <blockquote>
 <div><p>Installation instructions for <code class="docutils literal notranslate"><span class="pre">az</span></code> (Azure CLI) <a class="reference external" href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli">can be found here</a>.</p>
 <p>Note: <code class="docutils literal notranslate"><span class="pre">az</span></code> comes preinstalled inside the devcontainer.</p>
@@ -225,7 +220,7 @@ az<span class="w"> </span>account<span class="w"> </span><span class="nb">set</s
 </div>
 </section>
 <section id="generate-access-tokens-to-interact-with-azure-resources">
-<h3>3. Generate access tokens to interact with Azure resources<a class="headerlink" href="#generate-access-tokens-to-interact-with-azure-resources" title="Link to this heading"></a></h3>
+<h3>Generate access tokens to interact with Azure resources<a class="headerlink" href="#generate-access-tokens-to-interact-with-azure-resources" title="Link to this heading"></a></h3>
 <p>A script at <code class="docutils literal notranslate"><span class="pre">./scripts/generate-azure-credentials-config</span></code> produces a JSON config snippet with necessary Azure credentials.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>./scripts/generate-azure-credentials-config<span class="w"> </span>&gt;<span class="w"> </span>./global_config_azure.jsonc
 </pre></div>
@@ -243,7 +238,7 @@ az<span class="w"> </span>account<span class="w"> </span><span class="nb">set</s
 </div></blockquote>
 </section>
 <section id="create-a-json-config-with-db-credentials-optional">
-<h3>4. Create a JSON config with DB credentials (Optional)<a class="headerlink" href="#create-a-json-config-with-db-credentials-optional" title="Link to this heading"></a></h3>
+<h3>Create a JSON config with DB credentials (Optional)<a class="headerlink" href="#create-a-json-config-with-db-credentials-optional" title="Link to this heading"></a></h3>
 <p>If you plan to store the information about experiments and benchmarks in a (remote) database like PostgreSQL or MySQL, create a JSON/JSONC file with the DB hostname and password.
 See <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/./mlos_bench/config/storage/mysql.jsonc"><code class="docutils literal notranslate"><span class="pre">mysql.jsonc</span></code></a> or <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/./mlos_bench/config/storage/postgresql.jsonc"><code class="docutils literal notranslate"><span class="pre">postgresql.jsonc</span></code></a> configuration files for examples with a more complete list of DB parameters supported by underlying the <a class="reference external" href="https://www.sqlalchemy.org/library.html#reference">SqlAlchemy</a> library.
 Save your config in <code class="docutils literal notranslate"><span class="pre">./global_config_storage.jsonc</span></code> file.
@@ -263,7 +258,7 @@ See <a class="reference external" href="https://github.com/microsoft/MLOS/tree/m
 </div></blockquote>
 </section>
 <section id="create-a-top-level-configuration-file-for-your-mlos-setup">
-<h3>5. Create a top-level configuration file for your MLOS setup<a class="headerlink" href="#create-a-top-level-configuration-file-for-your-mlos-setup" title="Link to this heading"></a></h3>
+<h3>Create a top-level configuration file for your MLOS setup<a class="headerlink" href="#create-a-top-level-configuration-file-for-your-mlos-setup" title="Link to this heading"></a></h3>
 <p>We provide a few examples of such files in <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/./mlos_bench/config/cli"><code class="docutils literal notranslate"><span class="pre">./mlos_bench/config/cli/</span></code></a>.
 For example, <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/./mlos_bench/config/cli/azure-redis-opt.jsonc"><code class="docutils literal notranslate"><span class="pre">azure-redis-opt.jsonc</span></code></a> is a configuration for optimizing Redis VM on Azure and saving the results in a local SQLite database.
 Likewise, <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/./mlos_bench/config/cli/azure-redis-bench.jsonc"><code class="docutils literal notranslate"><span class="pre">azure-redis-bench.jsonc</span></code></a> is a setup to run a single Redis benchmark (and, again, save the results in SQLite).</p>
@@ -286,7 +281,7 @@ In a more realistic scenario, however, you might need to change and/or create ne
 We’ll give more details on that below.</p>
 </section>
 <section id="create-another-config-file-for-the-parameters-specific-to-your-experiment">
-<h3>5. Create another config file for the parameters specific to your experiment<a class="headerlink" href="#create-another-config-file-for-the-parameters-specific-to-your-experiment" title="Link to this heading"></a></h3>
+<h3>Create another config file for the parameters specific to your experiment<a class="headerlink" href="#create-another-config-file-for-the-parameters-specific-to-your-experiment" title="Link to this heading"></a></h3>
 <p>Copy one of our examples, e.g., <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/./mlos_bench/config/experiments/experiment_RedisBench.jsonc"><code class="docutils literal notranslate"><span class="pre">experiment_RedisBench.jsonc</span></code></a> and name it after your experiment, e.g. <code class="docutils literal notranslate"><span class="pre">experiment_MyBenchmark.jsonc</span></code>.</p>
 <p>In that file, you can specify any parameters that occur in your other configs, namely in <code class="docutils literal notranslate"><span class="pre">&quot;const_args&quot;</span></code> section of the Environment configs, or in <code class="docutils literal notranslate"><span class="pre">&quot;config&quot;</span></code> sections of your Service, Storage, or Optimizer configurations.</p>
 <blockquote>
@@ -303,7 +298,7 @@ Unfortunately, determining what constitutes and <em>“incompatible”</em> chan
 </section>
 </section>
 <section id="run-the-benchmark">
-<h3>6. Run the benchmark<a class="headerlink" href="#run-the-benchmark" title="Link to this heading"></a></h3>
+<h3>Run the benchmark<a class="headerlink" href="#run-the-benchmark" title="Link to this heading"></a></h3>
 <p>Now we can run our configuration with <code class="docutils literal notranslate"><span class="pre">mlos_bench</span></code>:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mlos_bench<span class="w"> </span>--config<span class="w"> </span><span class="s2">&quot;./mlos_bench/mlos_bench/config/cli/azure-redis-bench.jsonc&quot;</span><span class="w"> </span>--globals<span class="w"> </span><span class="s2">&quot;experiment_MyBenchmark.jsonc&quot;</span>
 </pre></div>
@@ -341,6 +336,7 @@ See the <a class="reference external" href="https://github.com/Microsoft-CISL/sq
 <p>The <code class="docutils literal notranslate"><span class="pre">mlos-viz</span></code> package uses the <code class="docutils literal notranslate"><span class="pre">ExperimentData</span></code> and <code class="docutils literal notranslate"><span class="pre">TrialData</span></code> <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/./mlos_bench/storage/"><code class="docutils literal notranslate"><span class="pre">mlos_bench.storage</span></code> APIs</a> to load the data from the database and visualize it.</p>
 <p>For example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">mlos_bench.storage</span><span class="w"> </span><span class="kn">import</span> <span class="n">from_config</span>
+
 <span class="c1"># Specify the experiment_id used for your experiment.</span>
 <span class="n">experiment_id</span> <span class="o">=</span> <span class="s2">&quot;YourExperimentId&quot;</span>
 <span class="n">trial_id</span> <span class="o">=</span> <span class="mi">1</span>
