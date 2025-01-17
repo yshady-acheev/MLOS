@@ -71,7 +71,7 @@ Package Contents
    :class:`~mlos_core.spaces.adapters.adapter.BaseSpaceAdapter`-derived objects.
 
 
-   .. py:method:: create(*, parameter_space: ConfigSpace.ConfigurationSpace, space_adapter_type: SpaceAdapterType = SpaceAdapterType.IDENTITY, space_adapter_kwargs: dict | None = None) -> ConcreteSpaceAdapter
+   .. py:method:: create(*, parameter_space: ConfigSpace.ConfigurationSpace, space_adapter_type: SpaceAdapterType | None = SpaceAdapterType.IDENTITY, space_adapter_kwargs: dict | None = None) -> ConcreteSpaceAdapter
       :staticmethod:
 
 
@@ -110,6 +110,6 @@ Package Contents
 
 .. py:data:: ConcreteSpaceAdapter
 
-   Type variable for concrete SpaceAdapter classes (e.g.,
+   Type alias for concrete SpaceAdapter classes (e.g.,
    :class:`~mlos_core.spaces.adapters.identity_adapter.IdentityAdapter`, etc.)
 

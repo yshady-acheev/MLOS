@@ -124,7 +124,7 @@ Package Contents
 
 .. py:data:: ConcreteOptimizer
 
-   Type variable for concrete optimizer classes.
+   Type alias for concrete optimizer classes.
 
    (e.g., :class:`~mlos_core.optimizers.bayesian_optimizers.smac_optimizer.SmacOptimizer`, etc.)
 

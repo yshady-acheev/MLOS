@@ -17,6 +17,7 @@ Submodules
    :maxdepth: 1
 
    /autoapi/mlos_bench/services/types/authenticator_type/index
+   /autoapi/mlos_bench/services/types/bound_method/index
    /autoapi/mlos_bench/services/types/config_loader_type/index
    /autoapi/mlos_bench/services/types/fileshare_type/index
    /autoapi/mlos_bench/services/types/host_ops_type/index

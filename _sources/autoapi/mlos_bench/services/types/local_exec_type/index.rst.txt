@@ -56,7 +56,7 @@ Module Contents
       Create a temp directory or use the provided path.
 
       :param path: A path to the temporary directory. Create a new one if None.
-      :type path: str
+      :type path: str | None
 
       :returns: **temp_dir_context** -- Temporary directory context to use in the `with` clause.
       :rtype: tempfile.TemporaryDirectory

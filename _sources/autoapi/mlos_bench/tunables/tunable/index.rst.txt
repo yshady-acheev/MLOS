@@ -28,8 +28,18 @@ Classes
 .. autoapisummary::
 
    mlos_bench.tunables.tunable.DistributionDict
+   mlos_bench.tunables.tunable.DistributionDictOpt
    mlos_bench.tunables.tunable.Tunable
    mlos_bench.tunables.tunable.TunableDict
+   mlos_bench.tunables.tunable.TunableDictOpt
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   mlos_bench.tunables.tunable.tunable_dict_from_dict
 
 
 Module Contents
@@ -37,10 +47,32 @@ Module Contents
 
 .. py:class:: DistributionDict
 
+   Bases: :py:obj:`DistributionDictOpt`
+
+
+   A TypedDict for a :py:class:`.Tunable` parameter's required ``distribution``'s
+   config parameters.
+
+   Mostly used by type checking. These are the types expected to be received from the
+   json config.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+   .. py:attribute:: type
+      :type:  DistributionName
+
+
+.. py:class:: DistributionDictOpt
+
    Bases: :py:obj:`TypedDict`
 
 
-   A typed dict for tunable parameters' distributions.
+   A TypedDict for a :py:class:`.Tunable` parameter's optional ``distribution``'s
+   config parameters.
+
+   Mostly used by type checking. These are the types expected to be received from the
+   json config.
 
    Initialize self.  See help(type(self)) for accurate signature.
 
@@ -49,11 +81,7 @@ Module Contents
       :type:  dict[str, float] | None
 
 
-   .. py:attribute:: type
-      :type:  DistributionName
-
-
-.. py:class:: Tunable(name: str, config: TunableDict)
+.. py:class:: Tunable(name: str, config: dict)
 
    A tunable parameter definition and its current value.
 
@@ -153,6 +181,12 @@ Module Contents
       :returns: **is_updated** -- True if the new value is different from the previous one, False otherwise.
       :rtype: bool
 
+
+
+   .. py:attribute:: DTYPE
+      :type:  dict[TunableValueTypeName, TunableValueType]
+
+      Maps Tunable types to their corresponding Python types by name.
 
 
    .. py:property:: cardinality
@@ -394,20 +428,36 @@ Module Contents
 
 .. py:class:: TunableDict
 
-   Bases: :py:obj:`TypedDict`
+   Bases: :py:obj:`TunableDictOpt`
 
 
-   A typed dict for tunable parameters.
+   A TypedDict for a :py:class:`.Tunable` parameter's required config parameters.
 
-   Mostly used for mypy type checking.
-
-   These are the types expected to be received from the json config.
+   Mostly used for mypy type checking. These are the types expected to be received from
+   the json config.
 
    Initialize self.  See help(type(self)) for accurate signature.
 
 
    .. py:attribute:: default
       :type:  TunableValue
+
+
+   .. py:attribute:: type
+      :type:  TunableValueTypeName
+
+
+.. py:class:: TunableDictOpt
+
+   Bases: :py:obj:`TypedDict`
+
+
+   A TypedDict for a :py:class:`.Tunable` parameter's optional config parameters.
+
+   Mostly used for mypy type checking. These are the types expected to be received from
+   the json config.
+
+   Initialize self.  See help(type(self)) for accurate signature.
 
 
    .. py:attribute:: description
@@ -446,10 +496,6 @@ Module Contents
       :type:  list[float] | None
 
 
-   .. py:attribute:: type
-      :type:  TunableValueTypeName
-
-
    .. py:attribute:: values
       :type:  list[str | None] | None
 
@@ -458,6 +504,16 @@ Module Contents
 
    .. py:attribute:: values_weights
       :type:  list[float] | None
+
+
+.. py:function:: tunable_dict_from_dict(config: dict[str, Any]) -> TunableDict
+
+   Creates a TunableDict from a regular dict.
+
+   :param config: A regular dict that represents a TunableDict.
+   :type config: dict[str, Any]
+
+   :rtype: TunableDict
 
 
 .. py:data:: DistributionName
