@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.environments.status &mdash; MLOS 0.6.3.dev11+g3c319cd970 documentation</title>
+  <title>mlos_bench.environments.status &mdash; MLOS 0.6.3.dev12+g0cab884c09 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=4ae1632d" />
@@ -15,7 +15,7 @@
   
       <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../../_static/documentation_options.js?v=c1f83fe9"></script>
+      <script src="../../../../_static/documentation_options.js?v=b8e18059"></script>
       <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -125,13 +125,13 @@
              
   <section id="module-mlos_bench.environments.status">
 <span id="mlos-bench-environments-status"></span><h1>mlos_bench.environments.status<a class="headerlink" href="#module-mlos_bench.environments.status" title="Link to this heading"></a></h1>
-<p>Enum for the status of the benchmark/environment.</p>
+<p>Enum for the status of the benchmark/environment Trial or Experiment.</p>
 <section id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Link to this heading"></a></h2>
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Status</span></code></a></p></td>
-<td><p>Enum for the status of the benchmark/environment.</p></td>
+<td><p>Enum for the status of the benchmark/environment Trial or Experiment.</p></td>
 </tr>
 </tbody>
 </table>
@@ -142,11 +142,12 @@
 <dt class="sig sig-object py" id="mlos_bench.environments.status.Status">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.environments.status.</span></span><span class="sig-name descname"><span class="pre">Status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/environments/status.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.environments.status.Status" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
-<p>Enum for the status of the benchmark/environment.</p>
+<p>Enum for the status of the benchmark/environment Trial or Experiment.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.environments.status.Status.is_canceled">
 <span class="sig-name descname"><span class="pre">is_canceled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/environments/status.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.environments.status.Status.is_canceled" title="Link to this definition"></a></dt>
-<dd><p>Check if the status of the benchmark/environment is CANCELED.</p>
+<dd><p>Check if the status of the benchmark/environment Trial or Experiment is
+CANCELED.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)">bool</a></p>
@@ -157,8 +158,8 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.environments.status.Status.is_completed">
 <span class="sig-name descname"><span class="pre">is_completed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/environments/status.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.environments.status.Status.is_completed" title="Link to this definition"></a></dt>
-<dd><p>Check if the status of the benchmark/environment is one of {SUCCEEDED,
-CANCELED, FAILED, TIMED_OUT}.</p>
+<dd><p>Check if the status of the benchmark/environment Trial or Experiment is one
+of {SUCCEEDED, CANCELED, FAILED, TIMED_OUT}.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)">bool</a></p>
@@ -169,7 +170,8 @@ CANCELED, FAILED, TIMED_OUT}.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.environments.status.Status.is_failed">
 <span class="sig-name descname"><span class="pre">is_failed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/environments/status.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.environments.status.Status.is_failed" title="Link to this definition"></a></dt>
-<dd><p>Check if the status of the benchmark/environment is FAILED.</p>
+<dd><p>Check if the status of the benchmark/environment Trial or Experiment is
+FAILED.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)">bool</a></p>
@@ -191,7 +193,8 @@ CANCELED, FAILED, TIMED_OUT}.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.environments.status.Status.is_pending">
 <span class="sig-name descname"><span class="pre">is_pending</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/environments/status.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.environments.status.Status.is_pending" title="Link to this definition"></a></dt>
-<dd><p>Check if the status of the benchmark/environment is PENDING.</p>
+<dd><p>Check if the status of the benchmark/environment Trial or Experiment is
+PENDING.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)">bool</a></p>
@@ -202,7 +205,8 @@ CANCELED, FAILED, TIMED_OUT}.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.environments.status.Status.is_ready">
 <span class="sig-name descname"><span class="pre">is_ready</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/environments/status.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.environments.status.Status.is_ready" title="Link to this definition"></a></dt>
-<dd><p>Check if the status of the benchmark/environment is READY.</p>
+<dd><p>Check if the status of the benchmark/environment Trial or Experiment is
+READY.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)">bool</a></p>
@@ -213,7 +217,8 @@ CANCELED, FAILED, TIMED_OUT}.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.environments.status.Status.is_succeeded">
 <span class="sig-name descname"><span class="pre">is_succeeded</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/environments/status.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.environments.status.Status.is_succeeded" title="Link to this definition"></a></dt>
-<dd><p>Check if the status of the benchmark/environment is SUCCEEDED.</p>
+<dd><p>Check if the status of the benchmark/environment Trial or Experiment is
+SUCCEEDED.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)">bool</a></p>
@@ -224,7 +229,8 @@ CANCELED, FAILED, TIMED_OUT}.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.environments.status.Status.is_timed_out">
 <span class="sig-name descname"><span class="pre">is_timed_out</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/environments/status.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.environments.status.Status.is_timed_out" title="Link to this definition"></a></dt>
-<dd><p>Check if the status of the benchmark/environment is TIMED_OUT.</p>
+<dd><p>Check if the status of the benchmark/environment Trial or Experiment is
+TIMED_OUT.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)">bool</a></p>

@@ -5,7 +5,7 @@ mlos_bench.environments.status
 
 .. autoapi-nested-parse::
 
-   Enum for the status of the benchmark/environment.
+   Enum for the status of the benchmark/environment Trial or Experiment.
 
 
 
@@ -25,25 +25,27 @@ Module Contents
    Bases: :py:obj:`enum.Enum`
 
 
-   Enum for the status of the benchmark/environment.
+   Enum for the status of the benchmark/environment Trial or Experiment.
 
 
    .. py:method:: is_canceled() -> bool
 
-      Check if the status of the benchmark/environment is CANCELED.
+      Check if the status of the benchmark/environment Trial or Experiment is
+      CANCELED.
 
 
 
    .. py:method:: is_completed() -> bool
 
-      Check if the status of the benchmark/environment is one of {SUCCEEDED,
-      CANCELED, FAILED, TIMED_OUT}.
+      Check if the status of the benchmark/environment Trial or Experiment is one
+      of {SUCCEEDED, CANCELED, FAILED, TIMED_OUT}.
 
 
 
    .. py:method:: is_failed() -> bool
 
-      Check if the status of the benchmark/environment is FAILED.
+      Check if the status of the benchmark/environment Trial or Experiment is
+      FAILED.
 
 
 
@@ -55,25 +57,29 @@ Module Contents
 
    .. py:method:: is_pending() -> bool
 
-      Check if the status of the benchmark/environment is PENDING.
+      Check if the status of the benchmark/environment Trial or Experiment is
+      PENDING.
 
 
 
    .. py:method:: is_ready() -> bool
 
-      Check if the status of the benchmark/environment is READY.
+      Check if the status of the benchmark/environment Trial or Experiment is
+      READY.
 
 
 
    .. py:method:: is_succeeded() -> bool
 
-      Check if the status of the benchmark/environment is SUCCEEDED.
+      Check if the status of the benchmark/environment Trial or Experiment is
+      SUCCEEDED.
 
 
 
    .. py:method:: is_timed_out() -> bool
 
-      Check if the status of the benchmark/environment is TIMED_OUT.
+      Check if the status of the benchmark/environment Trial or Experiment is
+      TIMED_OUT.
 
 
 
