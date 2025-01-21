@@ -6,16 +6,17 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_core.spaces.adapters &mdash; MLOS 0.6.3.dev16+g6b30ee0177 documentation</title>
+  <title>mlos_core.spaces.adapters &mdash; MLOS 0.6.3.dev17+gf2b3e814c7 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/plot_directive.css" />
 
   
+    <link rel="canonical" href="https://microsoft.github.io/MLOS/autoapi/mlos_core/spaces/adapters/index.html"/>
       <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../../_static/documentation_options.js?v=b24ad4b2"></script>
+      <script src="../../../../_static/documentation_options.js?v=5e0c880b"></script>
       <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -63,7 +64,34 @@
 <li class="toctree-l3"><a class="reference internal" href="../../data_classes/index.html">mlos_core.data_classes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../optimizers/index.html">mlos_core.optimizers</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html">mlos_core.spaces</a><ul class="current">
-<li class="toctree-l4 current"><a class="reference internal" href="../index.html#submodules">Submodules</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l5 current"><a class="current reference internal" href="#">mlos_core.spaces.adapters</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#submodules">Submodules</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="adapter/index.html">mlos_core.spaces.adapters.adapter</a></li>
+<li class="toctree-l7"><a class="reference internal" href="identity_adapter/index.html">mlos_core.spaces.adapters.identity_adapter</a></li>
+<li class="toctree-l7"><a class="reference internal" href="llamatune/index.html">mlos_core.spaces.adapters.llamatune</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#attributes">Attributes</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#classes">Classes</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#package-contents">Package Contents</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#mlos_core.spaces.adapters.SpaceAdapterFactory"><code class="docutils literal notranslate"><span class="pre">SpaceAdapterFactory</span></code></a><ul>
+<li class="toctree-l8"><a class="reference internal" href="#mlos_core.spaces.adapters.SpaceAdapterFactory.create"><code class="docutils literal notranslate"><span class="pre">SpaceAdapterFactory.create()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="#mlos_core.spaces.adapters.SpaceAdapterType"><code class="docutils literal notranslate"><span class="pre">SpaceAdapterType</span></code></a><ul>
+<li class="toctree-l8"><a class="reference internal" href="#mlos_core.spaces.adapters.SpaceAdapterType.IDENTITY"><code class="docutils literal notranslate"><span class="pre">SpaceAdapterType.IDENTITY</span></code></a></li>
+<li class="toctree-l8"><a class="reference internal" href="#mlos_core.spaces.adapters.SpaceAdapterType.LLAMATUNE"><code class="docutils literal notranslate"><span class="pre">SpaceAdapterType.LLAMATUNE</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="#mlos_core.spaces.adapters.ConcreteSpaceAdapter"><code class="docutils literal notranslate"><span class="pre">ConcreteSpaceAdapter</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../converters/index.html">mlos_core.spaces.converters</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../util/index.html">mlos_core.util</a></li>
@@ -126,8 +154,16 @@ transform the space to a lower dimensional one.</p>
 information on how to do this with <a class="reference internal" href="../../../mlos_bench/index.html#module-mlos_bench" title="mlos_bench"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench</span></code></a>.</p>
 <p>This module provides a simple <a class="reference internal" href="#mlos_core.spaces.adapters.SpaceAdapterFactory" title="mlos_core.spaces.adapters.SpaceAdapterFactory"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceAdapterFactory</span></code></a> class to
 <a class="reference internal" href="#mlos_core.spaces.adapters.SpaceAdapterFactory.create" title="mlos_core.spaces.adapters.SpaceAdapterFactory.create"><code class="xref py py-meth docutils literal notranslate"><span class="pre">create()</span></code></a> space adapters.</p>
-<p class="rubric">Examples</p>
-<p>TODO: Add example usage here.</p>
+<p>Generally speaking, the <a class="reference internal" href="../../index.html#module-mlos_core" title="mlos_core"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_core</span></code></a> package is intended to be used in
+conjunction with the <a class="reference internal" href="../../../mlos_bench/index.html#module-mlos_bench" title="mlos_bench"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench</span></code></a> package, which provides a higher-level
+interface for running benchmarks and autotuning experiments.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="../../../mlos_bench/optimizers/mlos_core_optimizer/index.html#module-mlos_bench.optimizers.mlos_core_optimizer" title="mlos_bench.optimizers.mlos_core_optimizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mlos_bench.optimizers.mlos_core_optimizer</span></code></a></dt><dd><p>The mlos_bench Optimizer class that uses the mlos_core Optimizers and SpaceAdapters to run autotuning experiments.</p>
+</dd>
+</dl>
+</div>
 <p class="rubric">Notes</p>
 <p>See <a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_core/mlos_core/spaces/adapters">mlos_core/spaces/adapters/README.md</a>
 for additional documentation and examples in the source tree.</p>

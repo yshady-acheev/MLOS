@@ -5,7 +5,7 @@ mlos_bench.optimizers.track_best_optimizer
 
 .. autoapi-nested-parse::
 
-   Mock optimizer for mlos_bench.
+   TrackBestOptimizer base class for mlos_bench.
 
 
 
@@ -50,7 +50,7 @@ Module Contents
 
 
 
-   .. py:method:: register(tunables: mlos_bench.tunables.tunable_groups.TunableGroups, status: mlos_bench.environments.status.Status, score: dict[str, mlos_bench.tunables.tunable.TunableValue] | None = None) -> dict[str, float] | None
+   .. py:method:: register(tunables: mlos_bench.tunables.tunable_groups.TunableGroups, status: mlos_bench.environments.status.Status, score: dict[str, mlos_bench.tunables.tunable_types.TunableValue] | None = None) -> dict[str, float] | None
 
       Register the observation for the given configuration.
 

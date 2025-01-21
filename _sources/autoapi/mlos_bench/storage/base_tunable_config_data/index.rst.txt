@@ -57,7 +57,7 @@ Module Contents
 
 
    .. py:property:: config_dict
-      :type: dict[str, mlos_bench.tunables.tunable.TunableValue | None]
+      :type: dict[str, mlos_bench.tunables.tunable_types.TunableValue | None]
 
 
       Retrieve the trials' tunable configuration from the storage as a dict.

@@ -5,8 +5,9 @@ mlos_bench.optimizers.convert_configspace
 
 .. autoapi-nested-parse::
 
-   Functions to convert TunableGroups to ConfigSpace for use with the mlos_core
-   optimizers.
+   Functions to convert :py:class:`.TunableGroups` that :py:mod:`mlos_bench` uses to to
+   :py:class:`ConfigSpace.ConfigurationSpace` for use with the
+   :py:mod:`mlos_core.optimizers`.
 
 
 
@@ -34,11 +35,12 @@ Functions
 Module Contents
 ---------------
 
-.. py:class:: TunableValueKind
+.. py:class:: TunableValueKind(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
 
    Enum for the kind of the tunable value (special or not).
-
-   It is not a true enum because ConfigSpace wants string values.
 
 
    .. py:attribute:: RANGE
@@ -51,7 +53,7 @@ Module Contents
 
 
 
-.. py:function:: configspace_data_to_tunable_values(data: dict) -> dict[str, mlos_bench.tunables.tunable.TunableValue]
+.. py:function:: configspace_data_to_tunable_values(data: dict) -> dict[str, mlos_bench.tunables.tunable_types.TunableValue]
 
    Remove the fields that correspond to special values in ConfigSpace.
 
@@ -62,7 +64,8 @@ Module Contents
 
    Check if name corresponds to a temporary ConfigSpace parameter.
 
-   NOTE: `!` characters are currently disallowed in Tunable names in order handle this logic.
+   NOTE: ``!`` characters are currently disallowed in :py:class:`.Tunable` names in
+   order handle this logic.
 
    :param name: The name of the hyperparameter.
    :type name: str
@@ -75,7 +78,8 @@ Module Contents
 
    Remove the temporary suffix from a special parameter name.
 
-   NOTE: `!` characters are currently disallowed in Tunable names in order handle this logic.
+   NOTE: ``!`` characters are currently disallowed in :py:class:`.Tunable` names in
+   order handle this logic.
 
    :param name: The name of the hyperparameter.
    :type name: str
@@ -89,7 +93,8 @@ Module Contents
    Generate the names of the auxiliary hyperparameters that correspond to a tunable
    that can have special values.
 
-   NOTE: `!` characters are currently disallowed in Tunable names in order handle this logic.
+   NOTE: ``!`` characters are currently disallowed in :py:class:`.Tunable` names in
+   order handle this logic.
 
    :param name: The name of the tunable parameter.
    :type name: str

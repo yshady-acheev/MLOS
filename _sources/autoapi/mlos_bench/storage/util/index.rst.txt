@@ -20,7 +20,7 @@ Functions
 Module Contents
 ---------------
 
-.. py:function:: kv_df_to_dict(dataframe: pandas.DataFrame) -> dict[str, mlos_bench.tunables.tunable.TunableValue | None]
+.. py:function:: kv_df_to_dict(dataframe: pandas.DataFrame) -> dict[str, mlos_bench.tunables.tunable_types.TunableValue | None]
 
    Utility function to convert certain flat key-value dataframe formats used by the
    mlos_bench.storage modules to a dict.

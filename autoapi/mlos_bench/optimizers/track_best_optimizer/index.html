@@ -6,16 +6,17 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.optimizers.track_best_optimizer &mdash; MLOS 0.6.3.dev16+g6b30ee0177 documentation</title>
+  <title>mlos_bench.optimizers.track_best_optimizer &mdash; MLOS 0.6.3.dev17+gf2b3e814c7 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/plot_directive.css" />
 
   
+    <link rel="canonical" href="https://microsoft.github.io/MLOS/autoapi/mlos_bench/optimizers/track_best_optimizer/index.html"/>
       <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../../_static/documentation_options.js?v=b24ad4b2"></script>
+      <script src="../../../../_static/documentation_options.js?v=5e0c880b"></script>
       <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -65,7 +66,32 @@
 <li class="toctree-l3"><a class="reference internal" href="../../event_loop_context/index.html">mlos_bench.event_loop_context</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../launcher/index.html">mlos_bench.launcher</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html">mlos_bench.optimizers</a><ul class="current">
-<li class="toctree-l4 current"><a class="reference internal" href="../index.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#api">API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#spaces">Spaces</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#config">Config</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="../base_optimizer/index.html">mlos_bench.optimizers.base_optimizer</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../convert_configspace/index.html">mlos_bench.optimizers.convert_configspace</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../grid_search_optimizer/index.html">mlos_bench.optimizers.grid_search_optimizer</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../manual_optimizer/index.html">mlos_bench.optimizers.manual_optimizer</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../mlos_core_optimizer/index.html">mlos_bench.optimizers.mlos_core_optimizer</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../mock_optimizer/index.html">mlos_bench.optimizers.mock_optimizer</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../one_shot_optimizer/index.html">mlos_bench.optimizers.one_shot_optimizer</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">mlos_bench.optimizers.track_best_optimizer</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#classes">Classes</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#module-contents">Module Contents</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#mlos_bench.optimizers.track_best_optimizer.TrackBestOptimizer"><code class="docutils literal notranslate"><span class="pre">TrackBestOptimizer</span></code></a><ul>
+<li class="toctree-l8"><a class="reference internal" href="#mlos_bench.optimizers.track_best_optimizer.TrackBestOptimizer.get_best_observation"><code class="docutils literal notranslate"><span class="pre">TrackBestOptimizer.get_best_observation()</span></code></a></li>
+<li class="toctree-l8"><a class="reference internal" href="#mlos_bench.optimizers.track_best_optimizer.TrackBestOptimizer.register"><code class="docutils literal notranslate"><span class="pre">TrackBestOptimizer.register()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../os_environ/index.html">mlos_bench.os_environ</a></li>
@@ -121,7 +147,7 @@
              
   <section id="module-mlos_bench.optimizers.track_best_optimizer">
 <span id="mlos-bench-optimizers-track-best-optimizer"></span><h1>mlos_bench.optimizers.track_best_optimizer<a class="headerlink" href="#module-mlos_bench.optimizers.track_best_optimizer" title="Link to this heading"></a></h1>
-<p>Mock optimizer for mlos_bench.</p>
+<p>TrackBestOptimizer base class for mlos_bench.</p>
 <section id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Link to this heading"></a></h2>
 <table class="autosummary longtable docutils align-default">
@@ -168,7 +194,7 @@ tunables.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.optimizers.track_best_optimizer.TrackBestOptimizer.register">
-<span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../tunables/tunable_groups/index.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">mlos_bench.tunables.tunable_groups.TunableGroups</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../environments/status/index.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">mlos_bench.environments.status.Status</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../../tunables/tunable/index.html#mlos_bench.tunables.tunable.TunableValue" title="mlos_bench.tunables.tunable.TunableValue"><span class="pre">mlos_bench.tunables.tunable.TunableValue</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/optimizers/track_best_optimizer.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.optimizers.track_best_optimizer.TrackBestOptimizer.register" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tunables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../tunables/tunable_groups/index.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><span class="pre">mlos_bench.tunables.tunable_groups.TunableGroups</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../environments/status/index.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">mlos_bench.environments.status.Status</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../../tunables/tunable_types/index.html#mlos_bench.tunables.tunable_types.TunableValue" title="mlos_bench.tunables.tunable_types.TunableValue"><span class="pre">mlos_bench.tunables.tunable_types.TunableValue</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/optimizers/track_best_optimizer.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.optimizers.track_best_optimizer.TrackBestOptimizer.register" title="Link to this definition"></a></dt>
 <dd><p>Register the observation for the given configuration.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -176,7 +202,7 @@ tunables.</p>
 <li><p><strong>tunables</strong> (<a class="reference internal" href="../../tunables/tunable_groups/index.html#mlos_bench.tunables.tunable_groups.TunableGroups" title="mlos_bench.tunables.tunable_groups.TunableGroups"><em>TunableGroups</em></a>) – The configuration that has been benchmarked.
 Usually it’s the same config that the <cite>.suggest()</cite> method returned.</p></li>
 <li><p><strong>status</strong> (<a class="reference internal" href="../../environments/status/index.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><em>Status</em></a>) – Final status of the experiment (e.g., SUCCEEDED or FAILED).</p></li>
-<li><p><strong>score</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><a class="reference internal" href="../../tunables/tunable/index.html#mlos_bench.tunables.tunable.TunableValue" title="mlos_bench.tunables.tunable.TunableValue"><em>TunableValue</em></a><em>]</em><em>]</em>) – A dict with the final benchmark results.
+<li><p><strong>score</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><a class="reference internal" href="../../tunables/tunable_types/index.html#mlos_bench.tunables.tunable_types.TunableValue" title="mlos_bench.tunables.tunable_types.TunableValue"><em>TunableValue</em></a><em>]</em><em>]</em>) – A dict with the final benchmark results.
 None if the experiment was not successful.</p></li>
 </ul>
 </dd>

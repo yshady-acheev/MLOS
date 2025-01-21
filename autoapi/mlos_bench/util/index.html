@@ -6,16 +6,17 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.util &mdash; MLOS 0.6.3.dev16+g6b30ee0177 documentation</title>
+  <title>mlos_bench.util &mdash; MLOS 0.6.3.dev17+gf2b3e814c7 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
 
   
+    <link rel="canonical" href="https://microsoft.github.io/MLOS/autoapi/mlos_bench/util/index.html"/>
       <script src="../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../_static/documentation_options.js?v=b24ad4b2"></script>
+      <script src="../../../_static/documentation_options.js?v=5e0c880b"></script>
       <script src="../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -23,7 +24,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="mlos_bench.version" href="../version/index.html" />
-    <link rel="prev" title="mlos_bench.tunables.tunable_groups" href="../tunables/tunable_groups/index.html" /> 
+    <link rel="prev" title="mlos_bench.tunables.tunable_types" href="../tunables/tunable_types/index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -74,7 +75,26 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">mlos_bench.util</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#attributes">Attributes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#functions">Functions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-contents">Module Contents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-contents">Module Contents</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#mlos_bench.util.check_required_params"><code class="docutils literal notranslate"><span class="pre">check_required_params()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#mlos_bench.util.datetime_parser"><code class="docutils literal notranslate"><span class="pre">datetime_parser()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#mlos_bench.util.get_class_from_name"><code class="docutils literal notranslate"><span class="pre">get_class_from_name()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#mlos_bench.util.get_git_info"><code class="docutils literal notranslate"><span class="pre">get_git_info()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#mlos_bench.util.instantiate_from_config"><code class="docutils literal notranslate"><span class="pre">instantiate_from_config()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#mlos_bench.util.merge_parameters"><code class="docutils literal notranslate"><span class="pre">merge_parameters()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#mlos_bench.util.nullable"><code class="docutils literal notranslate"><span class="pre">nullable()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#mlos_bench.util.path_join"><code class="docutils literal notranslate"><span class="pre">path_join()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#mlos_bench.util.prepare_class_load"><code class="docutils literal notranslate"><span class="pre">prepare_class_load()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#mlos_bench.util.preprocess_dynamic_configs"><code class="docutils literal notranslate"><span class="pre">preprocess_dynamic_configs()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#mlos_bench.util.strtobool"><code class="docutils literal notranslate"><span class="pre">strtobool()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#mlos_bench.util.try_parse_val"><code class="docutils literal notranslate"><span class="pre">try_parse_val()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#mlos_bench.util.utcify_nullable_timestamp"><code class="docutils literal notranslate"><span class="pre">utcify_nullable_timestamp()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#mlos_bench.util.utcify_timestamp"><code class="docutils literal notranslate"><span class="pre">utcify_timestamp()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#mlos_bench.util.BaseTypeVar"><code class="docutils literal notranslate"><span class="pre">BaseTypeVar</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#mlos_bench.util.BaseTypes"><code class="docutils literal notranslate"><span class="pre">BaseTypes</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#mlos_bench.util.NullableT"><code class="docutils literal notranslate"><span class="pre">NullableT</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../version/index.html">mlos_bench.version</a></li>
@@ -436,7 +456,7 @@ the args we’re expecting are the right type.</p>
 <dd class="field-even"><p>The parsed value.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="../tunables/tunable/index.html#mlos_bench.tunables.tunable.TunableValue" title="mlos_bench.tunables.tunable.TunableValue">TunableValue</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="../tunables/tunable_types/index.html#mlos_bench.tunables.tunable_types.TunableValue" title="mlos_bench.tunables.tunable_types.TunableValue">TunableValue</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -514,7 +534,7 @@ convert the timestamp to UTC if it’s not already.</p></li>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../tunables/tunable_groups/index.html" class="btn btn-neutral float-left" title="mlos_bench.tunables.tunable_groups" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../tunables/tunable_types/index.html" class="btn btn-neutral float-left" title="mlos_bench.tunables.tunable_types" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="../version/index.html" class="btn btn-neutral float-right" title="mlos_bench.version" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

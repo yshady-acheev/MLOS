@@ -5,9 +5,14 @@ mlos_bench.services.config_persistence
 
 .. autoapi-nested-parse::
 
-   Helper functions to load, instantiate, and serialize Python objects that encapsulate
-   a benchmark :py:class:`.Environment`, :py:mod:`~mlos_bench.tunables`,
-   :py:class:`.Service` functions, etc from JSON configuration files and strings.
+   Helper functions to load, instantiate, and serialize Python objects that encapsulate a
+   benchmark :py:class:`.Environment`, :py:mod:`~mlos_bench.tunables`, :py:class:`.Service`
+   functions, etc from JSON configuration files and strings.
+
+   .. seealso::
+
+      :obj:`mlos_bench.config`
+          Overview of the configuration system.
 
 
 
@@ -43,7 +48,7 @@ Module Contents
    :type methods: dict[str, Callable] | list[Callable] | None
 
 
-   .. py:method:: build_environment(config: dict[str, Any], tunables: mlos_bench.tunables.tunable_groups.TunableGroups, global_config: dict[str, Any] | None = None, parent_args: dict[str, mlos_bench.tunables.tunable.TunableValue] | None = None, service: mlos_bench.services.base_service.Service | None = None) -> mlos_bench.environments.base_environment.Environment
+   .. py:method:: build_environment(config: dict[str, Any], tunables: mlos_bench.tunables.tunable_groups.TunableGroups, global_config: dict[str, Any] | None = None, parent_args: dict[str, mlos_bench.tunables.tunable_types.TunableValue] | None = None, service: mlos_bench.services.base_service.Service | None = None) -> mlos_bench.environments.base_environment.Environment
 
       Factory method for a new :py:class:`.Environment` with a given config.
 
@@ -173,7 +178,7 @@ Module Contents
 
 
 
-   .. py:method:: load_environment(json: str, tunables: mlos_bench.tunables.tunable_groups.TunableGroups, global_config: dict[str, Any] | None = None, parent_args: dict[str, mlos_bench.tunables.tunable.TunableValue] | None = None, service: mlos_bench.services.base_service.Service | None = None) -> mlos_bench.environments.base_environment.Environment
+   .. py:method:: load_environment(json: str, tunables: mlos_bench.tunables.tunable_groups.TunableGroups, global_config: dict[str, Any] | None = None, parent_args: dict[str, mlos_bench.tunables.tunable_types.TunableValue] | None = None, service: mlos_bench.services.base_service.Service | None = None) -> mlos_bench.environments.base_environment.Environment
 
       Load and build new :py:class:`.Environment` from the config file or JSON string.
 
@@ -192,9 +197,14 @@ Module Contents
       :returns: **env** -- A new benchmarking environment.
       :rtype: Environment
 
+      .. seealso::
+
+         :obj:`mlos_bench.environments`
+             Examples of environment configurations.
 
 
-   .. py:method:: load_environment_list(json: str, tunables: mlos_bench.tunables.tunable_groups.TunableGroups, global_config: dict[str, Any] | None = None, parent_args: dict[str, mlos_bench.tunables.tunable.TunableValue] | None = None, service: mlos_bench.services.base_service.Service | None = None) -> list[mlos_bench.environments.base_environment.Environment]
+
+   .. py:method:: load_environment_list(json: str, tunables: mlos_bench.tunables.tunable_groups.TunableGroups, global_config: dict[str, Any] | None = None, parent_args: dict[str, mlos_bench.tunables.tunable_types.TunableValue] | None = None, service: mlos_bench.services.base_service.Service | None = None) -> list[mlos_bench.environments.base_environment.Environment]
 
       Load and build a list of Environments from the config file or JSON string.
 
@@ -213,6 +223,11 @@ Module Contents
 
       :returns: **env** -- A list of new benchmarking environments.
       :rtype: list[Environment]
+
+      .. seealso::
+
+         :obj:`mlos_bench.environments`
+             Examples of environment configurations.
 
 
 
@@ -236,6 +251,11 @@ Module Contents
       :returns: **service** -- A collection of service methods.
       :rtype: Service
 
+      .. seealso::
+
+         :obj:`mlos_bench.services`
+             Examples of service configurations.
+
 
 
    .. py:method:: load_tunables(jsons: collections.abc.Iterable[str], parent: mlos_bench.tunables.tunable_groups.TunableGroups | None = None) -> mlos_bench.tunables.tunable_groups.TunableGroups
@@ -255,9 +275,14 @@ Module Contents
       :returns: **tunables** -- The larger collection of tunable parameters.
       :rtype: TunableGroups
 
+      .. seealso::
+
+         :obj:`mlos_bench.tunables`
+             Examples of tunable parameter configurations.
 
 
-   .. py:method:: prepare_class_load(config: dict[str, Any], global_config: dict[str, Any] | None = None, parent_args: dict[str, mlos_bench.tunables.tunable.TunableValue] | None = None) -> tuple[str, dict[str, Any]]
+
+   .. py:method:: prepare_class_load(config: dict[str, Any], global_config: dict[str, Any] | None = None, parent_args: dict[str, mlos_bench.tunables.tunable_types.TunableValue] | None = None) -> tuple[str, dict[str, Any]]
 
       Extract the class instantiation parameters from the configuration. Mix-in the
       global parameters and resolve the local file system paths, where it is required.

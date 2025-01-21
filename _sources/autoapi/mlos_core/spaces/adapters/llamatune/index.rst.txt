@@ -42,11 +42,17 @@ Module Contents
    :type orig_parameter_space: ConfigSpace.ConfigurationSpace
    :param num_low_dims: Number of dimensions used in the low-dimensional parameter search space.
    :type num_low_dims: int
-   :param special_param_values_dict: Dictionary of special
-   :type special_param_values_dict: dict | None
+   :param special_param_values: Dictionary of special parameter values.
+                                Each key is the name of a parameter, and the value is either:
+                                - an integer (special value), or
+                                - a tuple of an integer and a float (special integer value and biasing percentage)
+   :type special_param_values: dict | None
    :param max_unique_values_per_param: Number of unique values per parameter. Used to discretize the parameter space.
                                        If `None` space discretization is disabled.
    :type max_unique_values_per_param: int | None
+   :param use_approximate_reverse_mapping: Whether to use an approximate reverse mapping to help register
+                                           configurations during resume.
+   :type use_approximate_reverse_mapping: bool
 
 
    .. py:method:: inverse_transform(configuration: pandas.Series) -> pandas.Series

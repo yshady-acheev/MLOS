@@ -52,7 +52,7 @@ Module Contents
    :type methods: Union[dict[str, Callable], list[Callable], None]
 
 
-   .. py:method:: local_exec(script_lines: collections.abc.Iterable[str], env: collections.abc.Mapping[str, mlos_bench.tunables.tunable.TunableValue] | None = None, cwd: str | None = None) -> tuple[int, str, str]
+   .. py:method:: local_exec(script_lines: collections.abc.Iterable[str], env: collections.abc.Mapping[str, mlos_bench.tunables.tunable_types.TunableValue] | None = None, cwd: str | None = None) -> tuple[int, str, str]
 
       Execute the script lines from `script_lines` in a local process.
 

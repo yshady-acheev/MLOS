@@ -66,15 +66,20 @@ Package Contents
    Bases: :py:obj:`enum.Enum`
 
 
-   What method to use for visualizing the experiment results.
+   What method to use for visualizing the Experiment results.
 
 
    .. py:attribute:: AUTO
+
+      The default automatic :py:class:`~.ExperimentData` visualization method.
 
 
    .. py:attribute:: DABL
       :value: 'dabl'
 
+
+      Use DABL for automatic data correlation and visualization of
+      :py:class:`~.ExperimentData`.
 
 
 .. py:function:: ignore_plotter_warnings(plotter_method: MlosVizMethod = MlosVizMethod.AUTO) -> None
@@ -82,17 +87,17 @@ Package Contents
    Suppress some annoying warnings from third-party data visualization packages by
    adding them to the warnings filter.
 
-   :param plotter_method: The method to use for visualizing the experiment results.
+   :param plotter_method: The method to use for visualizing the Experiment results.
    :type plotter_method: MlosVizMethod
 
 
 .. py:function:: plot(exp_data: mlos_bench.storage.base_experiment_data.ExperimentData | None = None, *, results_df: pandas.DataFrame | None = None, objectives: dict[str, Literal['min', 'max']] | None = None, plotter_method: MlosVizMethod = MlosVizMethod.AUTO, filter_warnings: bool = True, **kwargs: Any) -> None
 
-   Plots the results of the experiment.
+   Plots the results of the given :py:class:`~.ExperimentData`.
 
    Intended to be used from a Jupyter notebook.
 
-   :param exp_data: The experiment data to plot.
+   :param exp_data: The Experiment data to plot.
    :type exp_data: ExperimentData
    :param results_df: Optional `results_df` to plot.
                       If not provided, defaults to :py:attr:`.ExperimentData.results_df` property.
@@ -100,7 +105,7 @@ Package Contents
    :param objectives: Optional objectives to plot.
                       If not provided, defaults to :py:attr:`.ExperimentData.objectives` property.
    :type objectives: Optional[dict[str, Literal["min", "max"]]]
-   :param plotter_method: The method to use for visualizing the experiment results.
+   :param plotter_method: The method to use for visualizing the Experiment results.
    :type plotter_method: MlosVizMethod
    :param filter_warnings: Whether or not to filter some warnings from the plotter.
    :type filter_warnings: bool

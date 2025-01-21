@@ -6,16 +6,17 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.environments.local.local_fileshare_env &mdash; MLOS 0.6.3.dev16+g6b30ee0177 documentation</title>
+  <title>mlos_bench.environments.local.local_fileshare_env &mdash; MLOS 0.6.3.dev17+gf2b3e814c7 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../../../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../../../../../_static/plot_directive.css" />
 
   
+    <link rel="canonical" href="https://microsoft.github.io/MLOS/autoapi/mlos_bench/environments/local/local_fileshare_env/index.html"/>
       <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../../../_static/documentation_options.js?v=b24ad4b2"></script>
+      <script src="../../../../../_static/documentation_options.js?v=5e0c880b"></script>
       <script src="../../../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -66,7 +67,35 @@
 <li class="toctree-l4"><a class="reference internal" href="../../index.html#environment-tunables">Environment Tunables</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../index.html#environment-services">Environment Services</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../index.html#variable-propagation">Variable Propagation</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../index.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="../../base_environment/index.html">mlos_bench.environments.base_environment</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../composite_env/index.html">mlos_bench.environments.composite_env</a></li>
+<li class="toctree-l5 current"><a class="reference internal" href="../index.html">mlos_bench.environments.local</a><ul class="current">
+<li class="toctree-l6 current"><a class="reference internal" href="../index.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l7"><a class="reference internal" href="../local_env/index.html">mlos_bench.environments.local.local_env</a></li>
+<li class="toctree-l7 current"><a class="current reference internal" href="#">mlos_bench.environments.local.local_fileshare_env</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="#classes">Classes</a></li>
+<li class="toctree-l8"><a class="reference internal" href="#module-contents">Module Contents</a><ul>
+<li class="toctree-l9"><a class="reference internal" href="#mlos_bench.environments.local.local_fileshare_env.LocalFileShareEnv"><code class="docutils literal notranslate"><span class="pre">LocalFileShareEnv</span></code></a><ul>
+<li class="toctree-l10"><a class="reference internal" href="#mlos_bench.environments.local.local_fileshare_env.LocalFileShareEnv.run"><code class="docutils literal notranslate"><span class="pre">LocalFileShareEnv.run()</span></code></a></li>
+<li class="toctree-l10"><a class="reference internal" href="#mlos_bench.environments.local.local_fileshare_env.LocalFileShareEnv.setup"><code class="docutils literal notranslate"><span class="pre">LocalFileShareEnv.setup()</span></code></a></li>
+<li class="toctree-l10"><a class="reference internal" href="#mlos_bench.environments.local.local_fileshare_env.LocalFileShareEnv.status"><code class="docutils literal notranslate"><span class="pre">LocalFileShareEnv.status()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../mock_env/index.html">mlos_bench.environments.mock_env</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../remote/index.html">mlos_bench.environments.remote</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../script_env/index.html">mlos_bench.environments.script_env</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../status/index.html">mlos_bench.environments.status</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../event_loop_context/index.html">mlos_bench.event_loop_context</a></li>
@@ -167,7 +196,7 @@ deploy or reboot a VM, etc.).</p></li>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.environments.local.local_fileshare_env.LocalFileShareEnv.run">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../status/index.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">mlos_bench.environments.status.Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.13)"><span class="pre">datetime.datetime</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../../../tunables/tunable/index.html#mlos_bench.tunables.tunable.TunableValue" title="mlos_bench.tunables.tunable.TunableValue"><span class="pre">mlos_bench.tunables.tunable.TunableValue</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/environments/local/local_fileshare_env.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.environments.local.local_fileshare_env.LocalFileShareEnv.run" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../status/index.html#mlos_bench.environments.status.Status" title="mlos_bench.environments.status.Status"><span class="pre">mlos_bench.environments.status.Status</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.13)"><span class="pre">datetime.datetime</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../../../tunables/tunable_types/index.html#mlos_bench.tunables.tunable_types.TunableValue" title="mlos_bench.tunables.tunable_types.TunableValue"><span class="pre">mlos_bench.tunables.tunable_types.TunableValue</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/environments/local/local_fileshare_env.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.environments.local.local_fileshare_env.LocalFileShareEnv.run" title="Link to this definition"></a></dt>
 <dd><p>Download benchmark results from the shared storage and run post-processing
 scripts locally.</p>
 <dl class="field-list simple">

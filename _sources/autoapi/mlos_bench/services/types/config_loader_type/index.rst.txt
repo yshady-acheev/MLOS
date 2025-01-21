@@ -28,7 +28,7 @@ Module Contents
    Protocol interface for helper functions to lookup and load configs.
 
 
-   .. py:method:: build_environment(config: dict, tunables: mlos_bench.tunables.tunable_groups.TunableGroups, global_config: dict | None = None, parent_args: dict[str, mlos_bench.tunables.tunable.TunableValue] | None = None, service: mlos_bench.services.base_service.Service | None = None) -> mlos_bench.environments.base_environment.Environment
+   .. py:method:: build_environment(config: dict, tunables: mlos_bench.tunables.tunable_groups.TunableGroups, global_config: dict | None = None, parent_args: dict[str, mlos_bench.tunables.tunable_types.TunableValue] | None = None, service: mlos_bench.services.base_service.Service | None = None) -> mlos_bench.environments.base_environment.Environment
 
       Factory method for a new environment with a given config.
 
@@ -78,7 +78,7 @@ Module Contents
 
 
 
-   .. py:method:: load_environment(json: str, tunables: mlos_bench.tunables.tunable_groups.TunableGroups, global_config: dict[str, Any] | None = None, parent_args: dict[str, mlos_bench.tunables.tunable.TunableValue] | None = None, service: mlos_bench.services.base_service.Service | None = None) -> mlos_bench.environments.base_environment.Environment
+   .. py:method:: load_environment(json: str, tunables: mlos_bench.tunables.tunable_groups.TunableGroups, global_config: dict[str, Any] | None = None, parent_args: dict[str, mlos_bench.tunables.tunable_types.TunableValue] | None = None, service: mlos_bench.services.base_service.Service | None = None) -> mlos_bench.environments.base_environment.Environment
 
       Load and build new :py:class:`.Environment` from the config file or JSON string.
 
@@ -99,7 +99,7 @@ Module Contents
 
 
 
-   .. py:method:: load_environment_list(json: str, tunables: mlos_bench.tunables.tunable_groups.TunableGroups, global_config: dict | None = None, parent_args: dict[str, mlos_bench.tunables.tunable.TunableValue] | None = None, service: mlos_bench.services.base_service.Service | None = None) -> list[mlos_bench.environments.base_environment.Environment]
+   .. py:method:: load_environment_list(json: str, tunables: mlos_bench.tunables.tunable_groups.TunableGroups, global_config: dict | None = None, parent_args: dict[str, mlos_bench.tunables.tunable_types.TunableValue] | None = None, service: mlos_bench.services.base_service.Service | None = None) -> list[mlos_bench.environments.base_environment.Environment]
 
       Load and build a list of environments from the config file.
 

@@ -6,16 +6,17 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.config &mdash; MLOS 0.6.3.dev16+g6b30ee0177 documentation</title>
+  <title>mlos_bench.config &mdash; MLOS 0.6.3.dev17+gf2b3e814c7 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
 
   
+    <link rel="canonical" href="https://microsoft.github.io/MLOS/autoapi/mlos_bench/config/index.html"/>
       <script src="../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../_static/documentation_options.js?v=b24ad4b2"></script>
+      <script src="../../../_static/documentation_options.js?v=5e0c880b"></script>
       <script src="../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -61,12 +62,24 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#submodules">Submodules</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">mlos_bench.config</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#general-json-config-structure">General JSON Config Structure</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#globals-and-variable-substitution">Globals and Variable Substitution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#general-json-config-structure">General JSON Config Structure</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#organization">Organization</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#cli-configs">CLI Configs</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#globals-and-variable-substitution">Globals and Variable Substitution</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#well-known-variables">Well Known Variables</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#tunable-configs">Tunable Configs</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#class-configs">Class Configs</a></li>
+</ul>
+</li>
 <li class="toctree-l4"><a class="reference internal" href="#config-processing">Config Processing</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#schema-definitions">Schema Definitions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#debugging">Debugging</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="schemas/index.html">mlos_bench.config.schemas</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../dict_templater/index.html">mlos_bench.dict_templater</a></li>
@@ -329,17 +342,22 @@ are basically just key-value variables that can be used in other configs using
 system and may be used in the config files:</p>
 <ul class="simple">
 <li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">$experiment_id</span></code>: A unique identifier for the experiment.</dt><dd><p>Typically provided in globals.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">$experiment_id</span></code>: A unique identifier for the <code class="docutils literal notranslate"><span class="pre">Experiment</span></code>.</dt><dd><p>Typically provided in globals.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">$trial_id</span></code>: A unique identifier for the trial currently being executed.</dt><dd><p>This can be useful in the configs for <a class="reference internal" href="../environments/index.html#module-mlos_bench.environments" title="mlos_bench.environments"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.environments</span></code></a> for
+<dt><code class="docutils literal notranslate"><span class="pre">$trial_id</span></code>: A unique identifier for the <code class="docutils literal notranslate"><span class="pre">Trial</span></code> currently being executed.</dt><dd><p>This can be useful in the configs for <a class="reference internal" href="../environments/index.html#module-mlos_bench.environments" title="mlos_bench.environments"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mlos_bench.environments</span></code></a> for
 instance (e.g., when writing scripts).</p>
 </dd>
 </dl>
 </li>
-<li><p>TODO: Document more variables here.</p></li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">$trial_runner_id</span></code>: A unique identifier for the <code class="docutils literal notranslate"><span class="pre">TrialRunner</span></code>.</dt><dd><p>This can be useful when running multiple trials in parallel (e.g., to
+provision a numbered VM per worker).</p>
+</dd>
+</dl>
+</li>
 </ul>
 </section>
 <section id="tunable-configs">

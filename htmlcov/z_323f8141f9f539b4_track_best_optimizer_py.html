@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="z_5396f41af8b1e4bd_os_environ_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.10">coverage.py v7.6.10</a>,
-            created at 2025-01-21 23:19 +0000
+            created at 2025-01-21 23:48 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -84,7 +84,7 @@
     <p class="pln"><span class="n"><a id="t2" href="#t2">2</a></span><span class="t"><span class="com"># Copyright (c) Microsoft Corporation.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t3" href="#t3">3</a></span><span class="t"><span class="com"># Licensed under the MIT License.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t4" href="#t4">4</a></span><span class="t"><span class="com">#</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t5" href="#t5">5</a></span><span class="t"><span class="str">"""Mock optimizer for mlos_bench."""</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t5" href="#t5">5</a></span><span class="t"><span class="str">"""TrackBestOptimizer base class for mlos_bench."""</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t6" href="#t6">6</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t7" href="#t7">7</a></span><span class="t"><span class="key">import</span> <span class="nam">logging</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t8" href="#t8">8</a></span><span class="t"><span class="key">from</span> <span class="nam">abc</span> <span class="key">import</span> <span class="nam">ABCMeta</span>&nbsp;</span><span class="r"></span></p>
@@ -92,8 +92,8 @@
     <p class="run"><span class="n"><a id="t10" href="#t10">10</a></span><span class="t"><span class="key">from</span> <span class="nam">mlos_bench</span><span class="op">.</span><span class="nam">environments</span><span class="op">.</span><span class="nam">status</span> <span class="key">import</span> <span class="nam">Status</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t11" href="#t11">11</a></span><span class="t"><span class="key">from</span> <span class="nam">mlos_bench</span><span class="op">.</span><span class="nam">optimizers</span><span class="op">.</span><span class="nam">base_optimizer</span> <span class="key">import</span> <span class="nam">Optimizer</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t12" href="#t12">12</a></span><span class="t"><span class="key">from</span> <span class="nam">mlos_bench</span><span class="op">.</span><span class="nam">services</span><span class="op">.</span><span class="nam">base_service</span> <span class="key">import</span> <span class="nam">Service</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t13" href="#t13">13</a></span><span class="t"><span class="key">from</span> <span class="nam">mlos_bench</span><span class="op">.</span><span class="nam">tunables</span><span class="op">.</span><span class="nam">tunable</span> <span class="key">import</span> <span class="nam">TunableValue</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t14" href="#t14">14</a></span><span class="t"><span class="key">from</span> <span class="nam">mlos_bench</span><span class="op">.</span><span class="nam">tunables</span><span class="op">.</span><span class="nam">tunable_groups</span> <span class="key">import</span> <span class="nam">TunableGroups</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t13" href="#t13">13</a></span><span class="t"><span class="key">from</span> <span class="nam">mlos_bench</span><span class="op">.</span><span class="nam">tunables</span><span class="op">.</span><span class="nam">tunable_groups</span> <span class="key">import</span> <span class="nam">TunableGroups</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t14" href="#t14">14</a></span><span class="t"><span class="key">from</span> <span class="nam">mlos_bench</span><span class="op">.</span><span class="nam">tunables</span><span class="op">.</span><span class="nam">tunable_types</span> <span class="key">import</span> <span class="nam">TunableValue</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t15" href="#t15">15</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t16" href="#t16">16</a></span><span class="t"><span class="nam">_LOG</span> <span class="op">=</span> <span class="nam">logging</span><span class="op">.</span><span class="nam">getLogger</span><span class="op">(</span><span class="nam">__name__</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t17" href="#t17">17</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -155,7 +155,7 @@
             <a class="nav" href="z_5396f41af8b1e4bd_os_environ_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.10">coverage.py v7.6.10</a>,
-            created at 2025-01-21 23:19 +0000
+            created at 2025-01-21 23:48 +0000
         </p>
     </div>
 </footer>

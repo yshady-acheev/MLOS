@@ -7,6 +7,11 @@ mlos_bench.optimizers.mock_optimizer
 
    Mock optimizer for mlos_bench.
 
+   Mostly intended for testing and validation. This optimizer produces random suggestions.
+   The range of the suggestions can be controlled by a config.
+
+   See the test cases or example json configs for more details.
+
 
 
 Classes
@@ -40,7 +45,7 @@ Module Contents
    :type service: Service | None
 
 
-   .. py:method:: bulk_register(configs: collections.abc.Sequence[dict], scores: collections.abc.Sequence[dict[str, mlos_bench.tunables.tunable.TunableValue] | None], status: collections.abc.Sequence[mlos_bench.environments.status.Status] | None = None) -> bool
+   .. py:method:: bulk_register(configs: collections.abc.Sequence[dict], scores: collections.abc.Sequence[dict[str, mlos_bench.tunables.tunable_types.TunableValue] | None], status: collections.abc.Sequence[mlos_bench.environments.status.Status] | None = None) -> bool
 
       Pre-load the optimizer with the bulk data from previous experiments.
 

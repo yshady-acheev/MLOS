@@ -53,7 +53,7 @@ Module Contents
    :type service: Service
 
 
-   .. py:method:: run() -> tuple[mlos_bench.environments.status.Status, datetime.datetime, dict[str, mlos_bench.tunables.tunable.TunableValue] | None]
+   .. py:method:: run() -> tuple[mlos_bench.environments.status.Status, datetime.datetime, dict[str, mlos_bench.tunables.tunable_types.TunableValue] | None]
 
       Runs the run script on the remote environment.
 

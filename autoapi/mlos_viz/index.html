@@ -6,16 +6,17 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_viz &mdash; MLOS 0.6.3.dev16+g6b30ee0177 documentation</title>
+  <title>mlos_viz &mdash; MLOS 0.6.3.dev17+gf2b3e814c7 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
 
   
+    <link rel="canonical" href="https://microsoft.github.io/MLOS/autoapi/mlos_viz/index.html"/>
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../_static/documentation_options.js?v=b24ad4b2"></script>
+      <script src="../../_static/documentation_options.js?v=5e0c880b"></script>
       <script src="../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -154,7 +155,7 @@ other libraries for automatic data correlation and visualization like
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#mlos_viz.MlosVizMethod" title="mlos_viz.MlosVizMethod"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MlosVizMethod</span></code></a></p></td>
-<td><p>What method to use for visualizing the experiment results.</p></td>
+<td><p>What method to use for visualizing the Experiment results.</p></td>
 </tr>
 </tbody>
 </table>
@@ -167,7 +168,7 @@ other libraries for automatic data correlation and visualization like
 <td><p>Suppress some annoying warnings from third-party data visualization packages by</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#mlos_viz.plot" title="mlos_viz.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code></a>(→ None)</p></td>
-<td><p>Plots the results of the experiment.</p></td>
+<td><p>Plots the results of the given <a class="reference internal" href="../mlos_bench/storage/base_experiment_data/index.html#mlos_bench.storage.base_experiment_data.ExperimentData" title="mlos_bench.storage.base_experiment_data.ExperimentData"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExperimentData</span></code></a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -178,16 +179,19 @@ other libraries for automatic data correlation and visualization like
 <dt class="sig sig-object py" id="mlos_viz.MlosVizMethod">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_viz.</span></span><span class="sig-name descname"><span class="pre">MlosVizMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_viz/mlos_viz/__init__.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_viz.MlosVizMethod" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
-<p>What method to use for visualizing the experiment results.</p>
+<p>What method to use for visualizing the Experiment results.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlos_viz.MlosVizMethod.AUTO">
 <span class="sig-name descname"><span class="pre">AUTO</span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_viz/mlos_viz/__init__.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_viz.MlosVizMethod.AUTO" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>The default automatic <a class="reference internal" href="../mlos_bench/storage/base_experiment_data/index.html#mlos_bench.storage.base_experiment_data.ExperimentData" title="mlos_bench.storage.base_experiment_data.ExperimentData"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExperimentData</span></code></a> visualization method.</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlos_viz.MlosVizMethod.DABL">
 <span class="sig-name descname"><span class="pre">DABL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'dabl'</span></em><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_viz/mlos_viz/__init__.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_viz.MlosVizMethod.DABL" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Use DABL for automatic data correlation and visualization of
+<a class="reference internal" href="../mlos_bench/storage/base_experiment_data/index.html#mlos_bench.storage.base_experiment_data.ExperimentData" title="mlos_bench.storage.base_experiment_data.ExperimentData"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExperimentData</span></code></a>.</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -198,7 +202,7 @@ other libraries for automatic data correlation and visualization like
 adding them to the warnings filter.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>plotter_method</strong> (<a class="reference internal" href="#mlos_viz.MlosVizMethod" title="mlos_viz.MlosVizMethod"><em>MlosVizMethod</em></a>) – The method to use for visualizing the experiment results.</p>
+<dd class="field-odd"><p><strong>plotter_method</strong> (<a class="reference internal" href="#mlos_viz.MlosVizMethod" title="mlos_viz.MlosVizMethod"><em>MlosVizMethod</em></a>) – The method to use for visualizing the Experiment results.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
@@ -209,17 +213,17 @@ adding them to the warnings filter.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="mlos_viz.plot">
 <span class="sig-prename descclassname"><span class="pre">mlos_viz.</span></span><span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exp_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../mlos_bench/storage/base_experiment_data/index.html#mlos_bench.storage.base_experiment_data.ExperimentData" title="mlos_bench.storage.base_experiment_data.ExperimentData"><span class="pre">mlos_bench.storage.base_experiment_data.ExperimentData</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">results_df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.2.3)"><span class="pre">pandas.DataFrame</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objectives</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'min'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'max'</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plotter_method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mlos_viz.MlosVizMethod" title="mlos_viz.MlosVizMethod"><span class="pre">MlosVizMethod</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">MlosVizMethod.AUTO</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_warnings</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_viz/mlos_viz/__init__.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_viz.plot" title="Link to this definition"></a></dt>
-<dd><p>Plots the results of the experiment.</p>
+<dd><p>Plots the results of the given <a class="reference internal" href="../mlos_bench/storage/base_experiment_data/index.html#mlos_bench.storage.base_experiment_data.ExperimentData" title="mlos_bench.storage.base_experiment_data.ExperimentData"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExperimentData</span></code></a>.</p>
 <p>Intended to be used from a Jupyter notebook.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>exp_data</strong> (<a class="reference internal" href="../mlos_bench/storage/base_experiment_data/index.html#mlos_bench.storage.base_experiment_data.ExperimentData" title="mlos_bench.storage.base_experiment_data.ExperimentData"><em>ExperimentData</em></a>) – The experiment data to plot.</p></li>
+<li><p><strong>exp_data</strong> (<a class="reference internal" href="../mlos_bench/storage/base_experiment_data/index.html#mlos_bench.storage.base_experiment_data.ExperimentData" title="mlos_bench.storage.base_experiment_data.ExperimentData"><em>ExperimentData</em></a>) – The Experiment data to plot.</p></li>
 <li><p><strong>results_df</strong> (<a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v2.2.3)"><em>pandas.DataFrame</em></a><em> | </em><em>None</em>) – Optional <cite>results_df</cite> to plot.
 If not provided, defaults to <a class="reference internal" href="../mlos_bench/storage/base_experiment_data/index.html#mlos_bench.storage.base_experiment_data.ExperimentData.results_df" title="mlos_bench.storage.base_experiment_data.ExperimentData.results_df"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ExperimentData.results_df</span></code></a> property.</p></li>
 <li><p><strong>objectives</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><em>Literal</em><em>[</em><em>&quot;min&quot;</em><em>, </em><em>&quot;max&quot;</em><em>]</em><em>]</em><em>]</em>) – Optional objectives to plot.
 If not provided, defaults to <a class="reference internal" href="../mlos_bench/storage/base_experiment_data/index.html#mlos_bench.storage.base_experiment_data.ExperimentData.objectives" title="mlos_bench.storage.base_experiment_data.ExperimentData.objectives"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ExperimentData.objectives</span></code></a> property.</p></li>
-<li><p><strong>plotter_method</strong> (<a class="reference internal" href="#mlos_viz.MlosVizMethod" title="mlos_viz.MlosVizMethod"><em>MlosVizMethod</em></a>) – The method to use for visualizing the experiment results.</p></li>
+<li><p><strong>plotter_method</strong> (<a class="reference internal" href="#mlos_viz.MlosVizMethod" title="mlos_viz.MlosVizMethod"><em>MlosVizMethod</em></a>) – The method to use for visualizing the Experiment results.</p></li>
 <li><p><strong>filter_warnings</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – Whether or not to filter some warnings from the plotter.</p></li>
 <li><p><strong>kwargs</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a>) – Remaining keyword arguments are passed along to the underlying plotter(s).</p></li>
 </ul>

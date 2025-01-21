@@ -5,7 +5,15 @@ mlos_bench.tunables.covariant_group
 
 .. autoapi-nested-parse::
 
-   Tunable parameter definition.
+   CovariantTunableGroup class definition.
+
+   A collection of :py:class:`.Tunable` parameters that are updated together (e.g.,
+   with the same cost).
+
+   .. seealso::
+
+      :obj:`mlos_bench.tunables.tunable_groups`
+          TunableGroups class definition.
 
 
 
@@ -22,17 +30,21 @@ Module Contents
 
 .. py:class:: CovariantTunableGroup(name: str, config: dict)
 
-   A collection of tunable parameters.
+   A collection of :py:class:`.Tunable` parameters.
 
    Changing any of the parameters in the group incurs the same cost of the experiment.
 
-   Create a new group of tunable parameters.
+   .. seealso::
 
-   :param name: Human-readable identifier of the tunable parameters group.
-   :type name: str
-   :param config: Python dict that represents a CovariantTunableGroup
-                  (e.g., deserialized from JSON).
-   :type config: dict
+      mlos_bench.tunables.tunable_groups : TunableGroups class definition.
+
+      Create a new group of tunable parameters.
+
+      :param name: Human-readable identifier of the tunable parameters group.
+      :type name: str
+      :param config: Python dict that represents a CovariantTunableGroup
+                     (e.g., deserialized from JSON).
+      :type config: dict
 
 
    .. py:method:: __contains__(tunable: str | mlos_bench.tunables.tunable.Tunable) -> bool
@@ -50,7 +62,7 @@ Module Contents
 
 
 
-   .. py:method:: __getitem__(tunable: str | mlos_bench.tunables.tunable.Tunable) -> mlos_bench.tunables.tunable.TunableValue
+   .. py:method:: __getitem__(tunable: str | mlos_bench.tunables.tunable.Tunable) -> mlos_bench.tunables.tunable_types.TunableValue
 
 
    .. py:method:: __repr__() -> str
@@ -63,7 +75,7 @@ Module Contents
 
 
 
-   .. py:method:: __setitem__(tunable: str | mlos_bench.tunables.tunable.Tunable, tunable_value: mlos_bench.tunables.tunable.TunableValue | mlos_bench.tunables.tunable.Tunable) -> mlos_bench.tunables.tunable.TunableValue
+   .. py:method:: __setitem__(tunable: str | mlos_bench.tunables.tunable.Tunable, tunable_value: mlos_bench.tunables.tunable_types.TunableValue | mlos_bench.tunables.tunable.Tunable) -> mlos_bench.tunables.tunable_types.TunableValue
 
 
    .. py:method:: copy() -> CovariantTunableGroup
@@ -118,7 +130,7 @@ Module Contents
 
 
 
-   .. py:method:: get_tunable_values_dict() -> dict[str, mlos_bench.tunables.tunable.TunableValue]
+   .. py:method:: get_tunable_values_dict() -> dict[str, mlos_bench.tunables.tunable_types.TunableValue]
 
       Get current values of all tunables in the group as a dict.
 

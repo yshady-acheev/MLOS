@@ -6,16 +6,17 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.services.types.fileshare_type &mdash; MLOS 0.6.3.dev16+g6b30ee0177 documentation</title>
+  <title>mlos_bench.services.types.fileshare_type &mdash; MLOS 0.6.3.dev17+gf2b3e814c7 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../../../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../../../../../_static/plot_directive.css" />
 
   
+    <link rel="canonical" href="https://microsoft.github.io/MLOS/autoapi/mlos_bench/services/types/fileshare_type/index.html"/>
       <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../../../_static/documentation_options.js?v=b24ad4b2"></script>
+      <script src="../../../../../_static/documentation_options.js?v=5e0c880b"></script>
       <script src="../../../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -69,7 +70,43 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../run/index.html">mlos_bench.run</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../schedulers/index.html">mlos_bench.schedulers</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../../index.html">mlos_bench.services</a><ul class="current">
-<li class="toctree-l4 current"><a class="reference internal" href="../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../index.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="../../base_fileshare/index.html">mlos_bench.services.base_fileshare</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../base_service/index.html">mlos_bench.services.base_service</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../config_persistence/index.html">mlos_bench.services.config_persistence</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../local/index.html">mlos_bench.services.local</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../remote/index.html">mlos_bench.services.remote</a></li>
+<li class="toctree-l5 current"><a class="reference internal" href="../index.html">mlos_bench.services.types</a><ul class="current">
+<li class="toctree-l6 current"><a class="reference internal" href="../index.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l7"><a class="reference internal" href="../authenticator_type/index.html">mlos_bench.services.types.authenticator_type</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../bound_method/index.html">mlos_bench.services.types.bound_method</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../config_loader_type/index.html">mlos_bench.services.types.config_loader_type</a></li>
+<li class="toctree-l7 current"><a class="current reference internal" href="#">mlos_bench.services.types.fileshare_type</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="#classes">Classes</a></li>
+<li class="toctree-l8"><a class="reference internal" href="#module-contents">Module Contents</a><ul>
+<li class="toctree-l9"><a class="reference internal" href="#mlos_bench.services.types.fileshare_type.SupportsFileShareOps"><code class="docutils literal notranslate"><span class="pre">SupportsFileShareOps</span></code></a><ul>
+<li class="toctree-l10"><a class="reference internal" href="#mlos_bench.services.types.fileshare_type.SupportsFileShareOps.download"><code class="docutils literal notranslate"><span class="pre">SupportsFileShareOps.download()</span></code></a></li>
+<li class="toctree-l10"><a class="reference internal" href="#mlos_bench.services.types.fileshare_type.SupportsFileShareOps.upload"><code class="docutils literal notranslate"><span class="pre">SupportsFileShareOps.upload()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="../host_ops_type/index.html">mlos_bench.services.types.host_ops_type</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../host_provisioner_type/index.html">mlos_bench.services.types.host_provisioner_type</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../local_exec_type/index.html">mlos_bench.services.types.local_exec_type</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../network_provisioner_type/index.html">mlos_bench.services.types.network_provisioner_type</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../os_ops_type/index.html">mlos_bench.services.types.os_ops_type</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../remote_config_type/index.html">mlos_bench.services.types.remote_config_type</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../remote_exec_type/index.html">mlos_bench.services.types.remote_exec_type</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../vm_provisioner_type/index.html">mlos_bench.services.types.vm_provisioner_type</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../storage/index.html">mlos_bench.storage</a></li>

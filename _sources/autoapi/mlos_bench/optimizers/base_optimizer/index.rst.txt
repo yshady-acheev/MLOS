@@ -5,8 +5,13 @@ mlos_bench.optimizers.base_optimizer
 
 .. autoapi-nested-parse::
 
-   Base class for an interface between the benchmarking framework and mlos_core
-   optimizers.
+   Base class for an interface between the benchmarking framework and :py:mod:`mlos_core`
+   optimizers and other config suggestion methods.
+
+   .. seealso::
+
+      :obj:`mlos_bench.optimizers`
+          For more information on the available optimizers and their usage.
 
 
 
@@ -26,8 +31,8 @@ Module Contents
    Bases: :py:obj:`contextlib.AbstractContextManager`
 
 
-   An abstract interface between the benchmarking framework and mlos_core
-   optimizers.
+   An abstract interface between the benchmarking framework and :py:mod:`mlos_core`
+   optimizers and other config suggestion methods.
 
    Create a new optimizer for the given configuration space defined by the
    tunables.
@@ -57,7 +62,7 @@ Module Contents
    .. py:method:: __repr__() -> str
 
 
-   .. py:method:: bulk_register(configs: collections.abc.Sequence[dict], scores: collections.abc.Sequence[dict[str, mlos_bench.tunables.tunable.TunableValue] | None], status: collections.abc.Sequence[mlos_bench.environments.status.Status] | None = None) -> bool
+   .. py:method:: bulk_register(configs: collections.abc.Sequence[dict], scores: collections.abc.Sequence[dict[str, mlos_bench.tunables.tunable_types.TunableValue] | None], status: collections.abc.Sequence[mlos_bench.environments.status.Status] | None = None) -> bool
       :abstractmethod:
 
 
@@ -95,7 +100,7 @@ Module Contents
 
 
 
-   .. py:method:: register(tunables: mlos_bench.tunables.tunable_groups.TunableGroups, status: mlos_bench.environments.status.Status, score: dict[str, mlos_bench.tunables.tunable.TunableValue] | None = None) -> dict[str, float] | None
+   .. py:method:: register(tunables: mlos_bench.tunables.tunable_groups.TunableGroups, status: mlos_bench.environments.status.Status, score: dict[str, mlos_bench.tunables.tunable_types.TunableValue] | None = None) -> dict[str, float] | None
       :abstractmethod:
 
 

@@ -6,16 +6,17 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.tunables.covariant_group &mdash; MLOS 0.6.3.dev16+g6b30ee0177 documentation</title>
+  <title>mlos_bench.tunables.covariant_group &mdash; MLOS 0.6.3.dev17+gf2b3e814c7 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/plot_directive.css" />
 
   
+    <link rel="canonical" href="https://microsoft.github.io/MLOS/autoapi/mlos_bench/tunables/covariant_group/index.html"/>
       <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../../_static/documentation_options.js?v=b24ad4b2"></script>
+      <script src="../../../../_static/documentation_options.js?v=5e0c880b"></script>
       <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -74,7 +75,40 @@
 <li class="toctree-l4"><a class="reference internal" href="../index.html#overview">Overview</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../index.html#classes">Classes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../index.html#usage">Usage</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="../index.html#submodules">Submodules</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l5 current"><a class="current reference internal" href="#">mlos_bench.tunables.covariant_group</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#classes">Classes</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#module-contents">Module Contents</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup"><code class="docutils literal notranslate"><span class="pre">CovariantTunableGroup</span></code></a><ul>
+<li class="toctree-l8"><a class="reference internal" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup.__contains__"><code class="docutils literal notranslate"><span class="pre">CovariantTunableGroup.__contains__()</span></code></a></li>
+<li class="toctree-l8"><a class="reference internal" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup.__eq__"><code class="docutils literal notranslate"><span class="pre">CovariantTunableGroup.__eq__()</span></code></a></li>
+<li class="toctree-l8"><a class="reference internal" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup.__getitem__"><code class="docutils literal notranslate"><span class="pre">CovariantTunableGroup.__getitem__()</span></code></a></li>
+<li class="toctree-l8"><a class="reference internal" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup.__repr__"><code class="docutils literal notranslate"><span class="pre">CovariantTunableGroup.__repr__()</span></code></a></li>
+<li class="toctree-l8"><a class="reference internal" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup.__setitem__"><code class="docutils literal notranslate"><span class="pre">CovariantTunableGroup.__setitem__()</span></code></a></li>
+<li class="toctree-l8"><a class="reference internal" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup.copy"><code class="docutils literal notranslate"><span class="pre">CovariantTunableGroup.copy()</span></code></a></li>
+<li class="toctree-l8"><a class="reference internal" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup.equals_defaults"><code class="docutils literal notranslate"><span class="pre">CovariantTunableGroup.equals_defaults()</span></code></a></li>
+<li class="toctree-l8"><a class="reference internal" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup.get_current_cost"><code class="docutils literal notranslate"><span class="pre">CovariantTunableGroup.get_current_cost()</span></code></a></li>
+<li class="toctree-l8"><a class="reference internal" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup.get_names"><code class="docutils literal notranslate"><span class="pre">CovariantTunableGroup.get_names()</span></code></a></li>
+<li class="toctree-l8"><a class="reference internal" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup.get_tunable"><code class="docutils literal notranslate"><span class="pre">CovariantTunableGroup.get_tunable()</span></code></a></li>
+<li class="toctree-l8"><a class="reference internal" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup.get_tunable_values_dict"><code class="docutils literal notranslate"><span class="pre">CovariantTunableGroup.get_tunable_values_dict()</span></code></a></li>
+<li class="toctree-l8"><a class="reference internal" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup.get_tunables"><code class="docutils literal notranslate"><span class="pre">CovariantTunableGroup.get_tunables()</span></code></a></li>
+<li class="toctree-l8"><a class="reference internal" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup.is_defaults"><code class="docutils literal notranslate"><span class="pre">CovariantTunableGroup.is_defaults()</span></code></a></li>
+<li class="toctree-l8"><a class="reference internal" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup.is_updated"><code class="docutils literal notranslate"><span class="pre">CovariantTunableGroup.is_updated()</span></code></a></li>
+<li class="toctree-l8"><a class="reference internal" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup.reset_is_updated"><code class="docutils literal notranslate"><span class="pre">CovariantTunableGroup.reset_is_updated()</span></code></a></li>
+<li class="toctree-l8"><a class="reference internal" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup.restore_defaults"><code class="docutils literal notranslate"><span class="pre">CovariantTunableGroup.restore_defaults()</span></code></a></li>
+<li class="toctree-l8"><a class="reference internal" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup.cost"><code class="docutils literal notranslate"><span class="pre">CovariantTunableGroup.cost</span></code></a></li>
+<li class="toctree-l8"><a class="reference internal" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup.name"><code class="docutils literal notranslate"><span class="pre">CovariantTunableGroup.name</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../tunable/index.html">mlos_bench.tunables.tunable</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../tunable_groups/index.html">mlos_bench.tunables.tunable_groups</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../tunable_types/index.html">mlos_bench.tunables.tunable_types</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../util/index.html">mlos_bench.util</a></li>
@@ -124,13 +158,22 @@
              
   <section id="module-mlos_bench.tunables.covariant_group">
 <span id="mlos-bench-tunables-covariant-group"></span><h1>mlos_bench.tunables.covariant_group<a class="headerlink" href="#module-mlos_bench.tunables.covariant_group" title="Link to this heading"></a></h1>
-<p>Tunable parameter definition.</p>
+<p>CovariantTunableGroup class definition.</p>
+<p>A collection of <a class="reference internal" href="../tunable/index.html#mlos_bench.tunables.tunable.Tunable" title="mlos_bench.tunables.tunable.Tunable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Tunable</span></code></a> parameters that are updated together (e.g.,
+with the same cost).</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="../tunable_groups/index.html#module-mlos_bench.tunables.tunable_groups" title="mlos_bench.tunables.tunable_groups"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mlos_bench.tunables.tunable_groups</span></code></a></dt><dd><p>TunableGroups class definition.</p>
+</dd>
+</dl>
+</div>
 <section id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Link to this heading"></a></h2>
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup" title="mlos_bench.tunables.covariant_group.CovariantTunableGroup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CovariantTunableGroup</span></code></a></p></td>
-<td><p>A collection of tunable parameters.</p></td>
+<td><p>A collection of <a class="reference internal" href="../tunable/index.html#mlos_bench.tunables.tunable.Tunable" title="mlos_bench.tunables.tunable.Tunable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Tunable</span></code></a> parameters.</p></td>
 </tr>
 </tbody>
 </table>
@@ -140,15 +183,33 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="mlos_bench.tunables.covariant_group.CovariantTunableGroup">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlos_bench.tunables.covariant_group.</span></span><span class="sig-name descname"><span class="pre">CovariantTunableGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/tunables/covariant_group.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup" title="Link to this definition"></a></dt>
-<dd><p>A collection of tunable parameters.</p>
+<dd><p>A collection of <a class="reference internal" href="../tunable/index.html#mlos_bench.tunables.tunable.Tunable" title="mlos_bench.tunables.tunable.Tunable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Tunable</span></code></a> parameters.</p>
 <p>Changing any of the parameters in the group incurs the same cost of the experiment.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>mlos_bench.tunables.tunable_groups : TunableGroups class definition.</p>
 <p>Create a new group of tunable parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">param name<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Human-readable identifier of the tunable parameters group.</p>
+</dd>
+<dt class="field-even">type name<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">param config<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Python dict that represents a CovariantTunableGroup
+(e.g., deserialized from JSON).</p>
+</dd>
+<dt class="field-even">type config<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – Human-readable identifier of the tunable parameters group.</p></li>
-<li><p><strong>config</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a>) – Python dict that represents a CovariantTunableGroup
-(e.g., deserialized from JSON).</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>)</p></li>
+<li><p><strong>config</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a>)</p></li>
 </ul>
 </dd>
 </dl>
@@ -184,13 +245,13 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.tunables.covariant_group.CovariantTunableGroup.__getitem__">
-<span class="sig-name descname"><span class="pre">__getitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tunable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="../tunable/index.html#mlos_bench.tunables.tunable.Tunable" title="mlos_bench.tunables.tunable.Tunable"><span class="pre">mlos_bench.tunables.tunable.Tunable</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../tunable/index.html#mlos_bench.tunables.tunable.TunableValue" title="mlos_bench.tunables.tunable.TunableValue"><span class="pre">mlos_bench.tunables.tunable.TunableValue</span></a></span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/tunables/covariant_group.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup.__getitem__" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__getitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tunable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="../tunable/index.html#mlos_bench.tunables.tunable.Tunable" title="mlos_bench.tunables.tunable.Tunable"><span class="pre">mlos_bench.tunables.tunable.Tunable</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../tunable_types/index.html#mlos_bench.tunables.tunable_types.TunableValue" title="mlos_bench.tunables.tunable_types.TunableValue"><span class="pre">mlos_bench.tunables.tunable_types.TunableValue</span></a></span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/tunables/covariant_group.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup.__getitem__" title="Link to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>tunable</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em> | </em><a class="reference internal" href="../tunable/index.html#mlos_bench.tunables.tunable.Tunable" title="mlos_bench.tunables.tunable.Tunable"><em>mlos_bench.tunables.tunable.Tunable</em></a>)</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="../tunable/index.html#mlos_bench.tunables.tunable.TunableValue" title="mlos_bench.tunables.tunable.TunableValue">mlos_bench.tunables.tunable.TunableValue</a></p>
+<dd class="field-even"><p><a class="reference internal" href="../tunable_types/index.html#mlos_bench.tunables.tunable_types.TunableValue" title="mlos_bench.tunables.tunable_types.TunableValue">mlos_bench.tunables.tunable_types.TunableValue</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -212,16 +273,16 @@ logging).</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.tunables.covariant_group.CovariantTunableGroup.__setitem__">
-<span class="sig-name descname"><span class="pre">__setitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tunable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="../tunable/index.html#mlos_bench.tunables.tunable.Tunable" title="mlos_bench.tunables.tunable.Tunable"><span class="pre">mlos_bench.tunables.tunable.Tunable</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">tunable_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../tunable/index.html#mlos_bench.tunables.tunable.TunableValue" title="mlos_bench.tunables.tunable.TunableValue"><span class="pre">mlos_bench.tunables.tunable.TunableValue</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="../tunable/index.html#mlos_bench.tunables.tunable.Tunable" title="mlos_bench.tunables.tunable.Tunable"><span class="pre">mlos_bench.tunables.tunable.Tunable</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../tunable/index.html#mlos_bench.tunables.tunable.TunableValue" title="mlos_bench.tunables.tunable.TunableValue"><span class="pre">mlos_bench.tunables.tunable.TunableValue</span></a></span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/tunables/covariant_group.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup.__setitem__" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__setitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tunable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="../tunable/index.html#mlos_bench.tunables.tunable.Tunable" title="mlos_bench.tunables.tunable.Tunable"><span class="pre">mlos_bench.tunables.tunable.Tunable</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">tunable_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../tunable_types/index.html#mlos_bench.tunables.tunable_types.TunableValue" title="mlos_bench.tunables.tunable_types.TunableValue"><span class="pre">mlos_bench.tunables.tunable_types.TunableValue</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="../tunable/index.html#mlos_bench.tunables.tunable.Tunable" title="mlos_bench.tunables.tunable.Tunable"><span class="pre">mlos_bench.tunables.tunable.Tunable</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../tunable_types/index.html#mlos_bench.tunables.tunable_types.TunableValue" title="mlos_bench.tunables.tunable_types.TunableValue"><span class="pre">mlos_bench.tunables.tunable_types.TunableValue</span></a></span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/tunables/covariant_group.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup.__setitem__" title="Link to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>tunable</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em> | </em><a class="reference internal" href="../tunable/index.html#mlos_bench.tunables.tunable.Tunable" title="mlos_bench.tunables.tunable.Tunable"><em>mlos_bench.tunables.tunable.Tunable</em></a>)</p></li>
-<li><p><strong>tunable_value</strong> (<a class="reference internal" href="../tunable/index.html#mlos_bench.tunables.tunable.TunableValue" title="mlos_bench.tunables.tunable.TunableValue"><em>mlos_bench.tunables.tunable.TunableValue</em></a><em> | </em><a class="reference internal" href="../tunable/index.html#mlos_bench.tunables.tunable.Tunable" title="mlos_bench.tunables.tunable.Tunable"><em>mlos_bench.tunables.tunable.Tunable</em></a>)</p></li>
+<li><p><strong>tunable_value</strong> (<a class="reference internal" href="../tunable_types/index.html#mlos_bench.tunables.tunable_types.TunableValue" title="mlos_bench.tunables.tunable_types.TunableValue"><em>mlos_bench.tunables.tunable_types.TunableValue</em></a><em> | </em><a class="reference internal" href="../tunable/index.html#mlos_bench.tunables.tunable.Tunable" title="mlos_bench.tunables.tunable.Tunable"><em>mlos_bench.tunables.tunable.Tunable</em></a>)</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="../tunable/index.html#mlos_bench.tunables.tunable.TunableValue" title="mlos_bench.tunables.tunable.TunableValue">mlos_bench.tunables.tunable.TunableValue</a></p>
+<dd class="field-even"><p><a class="reference internal" href="../tunable_types/index.html#mlos_bench.tunables.tunable_types.TunableValue" title="mlos_bench.tunables.tunable_types.TunableValue">mlos_bench.tunables.tunable_types.TunableValue</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -305,14 +366,14 @@ tunable is not in the group.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlos_bench.tunables.covariant_group.CovariantTunableGroup.get_tunable_values_dict">
-<span class="sig-name descname"><span class="pre">get_tunable_values_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../tunable/index.html#mlos_bench.tunables.tunable.TunableValue" title="mlos_bench.tunables.tunable.TunableValue"><span class="pre">mlos_bench.tunables.tunable.TunableValue</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/tunables/covariant_group.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup.get_tunable_values_dict" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_tunable_values_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../tunable_types/index.html#mlos_bench.tunables.tunable_types.TunableValue" title="mlos_bench.tunables.tunable_types.TunableValue"><span class="pre">mlos_bench.tunables.tunable_types.TunableValue</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference external" href="https://github.com/microsoft/MLOS/tree/main/mlos_bench/mlos_bench/tunables/covariant_group.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mlos_bench.tunables.covariant_group.CovariantTunableGroup.get_tunable_values_dict" title="Link to this definition"></a></dt>
 <dd><p>Get current values of all tunables in the group as a dict.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>tunables</strong></p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)">dict</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a>, <a class="reference internal" href="../tunable/index.html#mlos_bench.tunables.tunable.TunableValue" title="mlos_bench.tunables.tunable.TunableValue">TunableValue</a>]</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)">dict</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a>, <a class="reference internal" href="../tunable_types/index.html#mlos_bench.tunables.tunable_types.TunableValue" title="mlos_bench.tunables.tunable_types.TunableValue">TunableValue</a>]</p>
 </dd>
 </dl>
 </dd></dl>

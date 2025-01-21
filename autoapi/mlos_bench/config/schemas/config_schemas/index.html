@@ -6,16 +6,17 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_bench.config.schemas.config_schemas &mdash; MLOS 0.6.3.dev16+g6b30ee0177 documentation</title>
+  <title>mlos_bench.config.schemas.config_schemas &mdash; MLOS 0.6.3.dev17+gf2b3e814c7 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../../../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../../../../../_static/plot_directive.css" />
 
   
+    <link rel="canonical" href="https://microsoft.github.io/MLOS/autoapi/mlos_bench/config/schemas/config_schemas/index.html"/>
       <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../../../_static/documentation_options.js?v=b24ad4b2"></script>
+      <script src="../../../../../_static/documentation_options.js?v=5e0c880b"></script>
       <script src="../../../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -66,7 +67,48 @@
 <li class="toctree-l4"><a class="reference internal" href="../../index.html#config-processing">Config Processing</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../index.html#schema-definitions">Schema Definitions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../index.html#debugging">Debugging</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../index.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l5 current"><a class="reference internal" href="../index.html">mlos_bench.config.schemas</a><ul class="current">
+<li class="toctree-l6 current"><a class="reference internal" href="../index.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l7 current"><a class="current reference internal" href="#">mlos_bench.config.schemas.config_schemas</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="#attributes">Attributes</a></li>
+<li class="toctree-l8"><a class="reference internal" href="#classes">Classes</a></li>
+<li class="toctree-l8"><a class="reference internal" href="#module-contents">Module Contents</a><ul>
+<li class="toctree-l9"><a class="reference internal" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema"><code class="docutils literal notranslate"><span class="pre">ConfigSchema</span></code></a><ul>
+<li class="toctree-l10"><a class="reference internal" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema.validate"><code class="docutils literal notranslate"><span class="pre">ConfigSchema.validate()</span></code></a></li>
+<li class="toctree-l10"><a class="reference internal" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema.CLI"><code class="docutils literal notranslate"><span class="pre">ConfigSchema.CLI</span></code></a></li>
+<li class="toctree-l10"><a class="reference internal" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema.ENVIRONMENT"><code class="docutils literal notranslate"><span class="pre">ConfigSchema.ENVIRONMENT</span></code></a></li>
+<li class="toctree-l10"><a class="reference internal" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema.GLOBALS"><code class="docutils literal notranslate"><span class="pre">ConfigSchema.GLOBALS</span></code></a></li>
+<li class="toctree-l10"><a class="reference internal" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema.OPTIMIZER"><code class="docutils literal notranslate"><span class="pre">ConfigSchema.OPTIMIZER</span></code></a></li>
+<li class="toctree-l10"><a class="reference internal" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema.SCHEDULER"><code class="docutils literal notranslate"><span class="pre">ConfigSchema.SCHEDULER</span></code></a></li>
+<li class="toctree-l10"><a class="reference internal" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema.SERVICE"><code class="docutils literal notranslate"><span class="pre">ConfigSchema.SERVICE</span></code></a></li>
+<li class="toctree-l10"><a class="reference internal" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema.STORAGE"><code class="docutils literal notranslate"><span class="pre">ConfigSchema.STORAGE</span></code></a></li>
+<li class="toctree-l10"><a class="reference internal" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema.TUNABLE_PARAMS"><code class="docutils literal notranslate"><span class="pre">ConfigSchema.TUNABLE_PARAMS</span></code></a></li>
+<li class="toctree-l10"><a class="reference internal" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema.TUNABLE_VALUES"><code class="docutils literal notranslate"><span class="pre">ConfigSchema.TUNABLE_VALUES</span></code></a></li>
+<li class="toctree-l10"><a class="reference internal" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema.UNIFIED"><code class="docutils literal notranslate"><span class="pre">ConfigSchema.UNIFIED</span></code></a></li>
+<li class="toctree-l10"><a class="reference internal" href="#mlos_bench.config.schemas.config_schemas.ConfigSchema.schema"><code class="docutils literal notranslate"><span class="pre">ConfigSchema.schema</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l9"><a class="reference internal" href="#mlos_bench.config.schemas.config_schemas.SchemaStore"><code class="docutils literal notranslate"><span class="pre">SchemaStore</span></code></a><ul>
+<li class="toctree-l10"><a class="reference internal" href="#mlos_bench.config.schemas.config_schemas.SchemaStore.__getitem__"><code class="docutils literal notranslate"><span class="pre">SchemaStore.__getitem__()</span></code></a></li>
+<li class="toctree-l10"><a class="reference internal" href="#mlos_bench.config.schemas.config_schemas.SchemaStore.__iter__"><code class="docutils literal notranslate"><span class="pre">SchemaStore.__iter__()</span></code></a></li>
+<li class="toctree-l10"><a class="reference internal" href="#mlos_bench.config.schemas.config_schemas.SchemaStore.__len__"><code class="docutils literal notranslate"><span class="pre">SchemaStore.__len__()</span></code></a></li>
+<li class="toctree-l10"><a class="reference internal" href="#mlos_bench.config.schemas.config_schemas.SchemaStore.registry"><code class="docutils literal notranslate"><span class="pre">SchemaStore.registry</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l9"><a class="reference internal" href="#mlos_bench.config.schemas.config_schemas.CONFIG_SCHEMA_DIR"><code class="docutils literal notranslate"><span class="pre">CONFIG_SCHEMA_DIR</span></code></a></li>
+<li class="toctree-l9"><a class="reference internal" href="#mlos_bench.config.schemas.config_schemas.SCHEMA_STORE"><code class="docutils literal notranslate"><span class="pre">SCHEMA_STORE</span></code></a></li>
+<li class="toctree-l9"><a class="reference internal" href="#mlos_bench.config.schemas.config_schemas.VALIDATION_ENV_FLAG"><code class="docutils literal notranslate"><span class="pre">VALIDATION_ENV_FLAG</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../dict_templater/index.html">mlos_bench.dict_templater</a></li>

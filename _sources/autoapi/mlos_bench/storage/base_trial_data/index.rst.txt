@@ -92,7 +92,7 @@ Module Contents
 
 
    .. py:property:: results_dict
-      :type: dict[str, mlos_bench.tunables.tunable.TunableValue | None]
+      :type: dict[str, mlos_bench.tunables.tunable_types.TunableValue | None]
 
 
       Retrieve the trials' results from the storage as a dict.

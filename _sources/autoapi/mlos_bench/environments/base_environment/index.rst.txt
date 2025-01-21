@@ -109,7 +109,7 @@ Module Contents
 
 
 
-   .. py:method:: run() -> tuple[mlos_bench.environments.status.Status, datetime.datetime, dict[str, mlos_bench.tunables.tunable.TunableValue] | None]
+   .. py:method:: run() -> tuple[mlos_bench.environments.status.Status, datetime.datetime, dict[str, mlos_bench.tunables.tunable_types.TunableValue] | None]
 
       Execute the run script for this environment.
 
@@ -165,7 +165,7 @@ Module Contents
 
 
    .. py:property:: const_args
-      :type: dict[str, mlos_bench.tunables.tunable.TunableValue]
+      :type: dict[str, mlos_bench.tunables.tunable_types.TunableValue]
 
 
       Get the constant arguments for this Environment.
@@ -178,7 +178,7 @@ Module Contents
 
 
    .. py:property:: parameters
-      :type: dict[str, mlos_bench.tunables.tunable.TunableValue]
+      :type: dict[str, mlos_bench.tunables.tunable_types.TunableValue]
 
 
       Key/value pairs of all environment parameters (i.e., `const_args` and

@@ -6,16 +6,17 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlos_core.data_classes &mdash; MLOS 0.6.3.dev16+g6b30ee0177 documentation</title>
+  <title>mlos_core.data_classes &mdash; MLOS 0.6.3.dev17+gf2b3e814c7 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
 
   
+    <link rel="canonical" href="https://microsoft.github.io/MLOS/autoapi/mlos_core/data_classes/index.html"/>
       <script src="../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../_static/documentation_options.js?v=b24ad4b2"></script>
+      <script src="../../../_static/documentation_options.js?v=5e0c880b"></script>
       <script src="../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -62,7 +63,45 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#submodules">Submodules</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">mlos_core.data_classes</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#classes">Classes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-contents">Module Contents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-contents">Module Contents</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#mlos_core.data_classes.Observation"><code class="docutils literal notranslate"><span class="pre">Observation</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#mlos_core.data_classes.Observation.__eq__"><code class="docutils literal notranslate"><span class="pre">Observation.__eq__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#mlos_core.data_classes.Observation.__ne__"><code class="docutils literal notranslate"><span class="pre">Observation.__ne__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#mlos_core.data_classes.Observation.__repr__"><code class="docutils literal notranslate"><span class="pre">Observation.__repr__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#mlos_core.data_classes.Observation.to_suggestion"><code class="docutils literal notranslate"><span class="pre">Observation.to_suggestion()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#mlos_core.data_classes.Observation.config"><code class="docutils literal notranslate"><span class="pre">Observation.config</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#mlos_core.data_classes.Observation.context"><code class="docutils literal notranslate"><span class="pre">Observation.context</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#mlos_core.data_classes.Observation.metadata"><code class="docutils literal notranslate"><span class="pre">Observation.metadata</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#mlos_core.data_classes.Observation.score"><code class="docutils literal notranslate"><span class="pre">Observation.score</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#mlos_core.data_classes.Observations"><code class="docutils literal notranslate"><span class="pre">Observations</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#mlos_core.data_classes.Observations.__eq__"><code class="docutils literal notranslate"><span class="pre">Observations.__eq__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#mlos_core.data_classes.Observations.__iter__"><code class="docutils literal notranslate"><span class="pre">Observations.__iter__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#mlos_core.data_classes.Observations.__len__"><code class="docutils literal notranslate"><span class="pre">Observations.__len__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#mlos_core.data_classes.Observations.__ne__"><code class="docutils literal notranslate"><span class="pre">Observations.__ne__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#mlos_core.data_classes.Observations.__repr__"><code class="docutils literal notranslate"><span class="pre">Observations.__repr__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#mlos_core.data_classes.Observations.append"><code class="docutils literal notranslate"><span class="pre">Observations.append()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#mlos_core.data_classes.Observations.filter_by_index"><code class="docutils literal notranslate"><span class="pre">Observations.filter_by_index()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#mlos_core.data_classes.Observations.configs"><code class="docutils literal notranslate"><span class="pre">Observations.configs</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#mlos_core.data_classes.Observations.contexts"><code class="docutils literal notranslate"><span class="pre">Observations.contexts</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#mlos_core.data_classes.Observations.metadata"><code class="docutils literal notranslate"><span class="pre">Observations.metadata</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#mlos_core.data_classes.Observations.scores"><code class="docutils literal notranslate"><span class="pre">Observations.scores</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#mlos_core.data_classes.Suggestion"><code class="docutils literal notranslate"><span class="pre">Suggestion</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#mlos_core.data_classes.Suggestion.__eq__"><code class="docutils literal notranslate"><span class="pre">Suggestion.__eq__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#mlos_core.data_classes.Suggestion.__ne__"><code class="docutils literal notranslate"><span class="pre">Suggestion.__ne__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#mlos_core.data_classes.Suggestion.__repr__"><code class="docutils literal notranslate"><span class="pre">Suggestion.__repr__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#mlos_core.data_classes.Suggestion.complete"><code class="docutils literal notranslate"><span class="pre">Suggestion.complete()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#mlos_core.data_classes.Suggestion.to_configspace_config"><code class="docutils literal notranslate"><span class="pre">Suggestion.to_configspace_config()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#mlos_core.data_classes.Suggestion.config"><code class="docutils literal notranslate"><span class="pre">Suggestion.config</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#mlos_core.data_classes.Suggestion.context"><code class="docutils literal notranslate"><span class="pre">Suggestion.context</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#mlos_core.data_classes.Suggestion.metadata"><code class="docutils literal notranslate"><span class="pre">Suggestion.metadata</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../optimizers/index.html">mlos_core.optimizers</a></li>
